@@ -1,0 +1,17 @@
+#!/bin/sh
+#------------------------------------------------------------------------------
+
+outPath=../lists
+curDir=`pwd`
+
+# Create the destination directory if it does not exist.
+if [ ! -d $outPath ]
+then
+    mkdir $outPath
+fi
+
+echo "A/parms"	 > $outPath/apx.list
+echo "B1/gfunc" >> $outPath/apx.list
+echo "C/symlin" >> $outPath/apx.list
+
+#------------------------------------------------------------------------------

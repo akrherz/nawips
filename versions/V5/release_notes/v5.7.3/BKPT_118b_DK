@@ -1,0 +1,12 @@
+Hurricane Graphics Improvements for 2004 Season (TPC)
+
+The Kelly graphic creation program, GPKGRF, has been modified to:
+     o prevent storms in the far eastern Atlantic from overplotting
+       the NOAA logo;
+     o allow a variable number of forecast intensity text lines in
+       the legend box;
+     o add an input parameter option for STRMID to bypass creation
+       of the watch/warning text message (default is to create 
+       the message);
+     o update track error tables for the 2004 hurricane season.
+

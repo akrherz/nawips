@@ -1,0 +1,12 @@
+TABLE UPDATES
+
+	A. Update gfsmos.stn ( HPC )
+
+	   As requested by the HPC, changed the priority number from 0 to 94 
+	   for Zanesville OH, Hot Springs, VA, Beckley, WV and Lewisburg, WV.
+
+
+	B. Add upper air station 72391 to the station table ( SDM )
+
+	   Added upper air station 72391, Point Mugu to snstn.tbl as requested 
+	   by the SDM.

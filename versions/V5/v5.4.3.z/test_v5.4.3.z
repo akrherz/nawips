@@ -1,0 +1,675 @@
+		    NAWIPS 5.4.3+  Test Log
+
+						      Delivery
+Log #	Description					Date	Tester	Status
+-----	----------------------------------------------	----	------	------
+021a1f	Made additional necessary changes to properly	4/16/98	??	OPEN
+	account for objects containing more than the
+	maximum allowed.
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+002f	Increased maximum grid size allowable.		1/20/99	TL	OPEN
+
+011ii	Changed the grid time dimension in time arrays	1/21/99	??	OPEN
+	in GRID programs from LLMXTM to LLMXGT.
+
+---------------->  Break:  Insert above in closed log when done.  **************
+ 
+001a1l	Fixed the decoding of the mean sea level 	2/8/99	AH	OPEN
+	pressure for METAR reports in MT_SLP.  PMSL is 
+	compared to the altimeter setting for consistency. 
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+001a	Added a new routine which conducts quality 	2/25/99	??	OPEN
+	checks on synoptic pressure data.		
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+011o	Changed call to SF_SSTN to add priority value.	3/16/99	??	OPEN
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+007d	Added plotting markers as hardware symbols in 	3/19/99	??	OPEN
+	the UTF and RBK device drivers.
+
+=========================== End of Patch 5.4.3.m ===============================
+
+021cc	Increased selected element size from 500 to 	3/23/99	??	OPEN
+	2000.  Increased selecting speed for increment/
+	decrement editing function.
+
+021dd	Always write to end of .DEFAULT.vgf.  Generate 	3/23/99	??	OPEN
+	incremental backups if .DO_BACKUP file exists. 
+
+007e	Fixed the calculation of the number of bytes in	3/24/99	??	OPEN
+	the last block of data for the UTF driver.	
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+007f	Added the ability to construct a single UTF 	3/26/99	??	OPEN
+	string consisting of all station model data 
+	for the Medium Range Temp/POP products.	
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+011q	Added a new parameter, QCNTL, to oabsnd for 	3/31/99	??	OPEN
+	data quality check.  Enabled opening multiple 
+	upper-air files.  Write station IDs discarded 
+	by QC to the terminal.	
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+010cc	Changed NEXP for the # of expected times in 	4/14/99	??	OPEN
+	TI_FIND to the maximum # of times in a file. 
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+006a	Modified the check for possible directions in 	5/11/99 ??	OPEN
+	the contouring algorithm routine CCBOXT.  
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+010xx	Fixed the calculation of the number of 		5/28/99 ??	OPEN
+	intermediate points on a line segment.	
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+011ll.	Fixed use of MAXGRD in GGDRIV.f.		11/10/99  ??	OPEN 
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+001mm.	Modified DCISIG to decode reports from PHNL and	 12/1/99  ??	OPEN
+	PGUM.  Bug fix for decoding areas on "either side 
+	of line", and minor improvements and clean-up 
+	of code.  	
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+021a2u.	If VGF filename can be parsed for parameter 	 12/7/99  ??	OPEN
+	information, put the paramter name into the 
+	GPARM input field.	
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+007s.	Fixed the time in the short header for AWIPS 	12/13/99  ??	OPEN
+	Red Book graphics files.   
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+010a2x.	Wrote new routine GG_LTNG to be used to display	12/15/99  ??	OPEN
+	lightning data in GPMAP using the new GEMPAK 
+	variable LTNG.   
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+018a1k.	Added a color bar to GG_LTNG.  			12/16/99  ??	OPEN
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+021a3i.	Added watch status popup.			12/17/99 
+
+021a3j.	Increase "from" line string size & add text 	12/20/99
+	when WSM lines are associated. 
+
+021a3k.	Fixed watch attribute popup bug.		12/20/99 
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+021a3l.	Fixed the bug that prevented the use of the 	12/21/99
+	LABEL function in nmap. 
+
+---------------->  Break:  Insert above in closed log when done.  **************
+
+010a2z.	Updated N-AWIPS to version 5.4.3.y.		12/27/99  TP	12/27/99
+
+001oo.	The flash flood guidance decoder was modified 	12/27/99
+	to handle either 4 or 2 digit year coding.   
+
+006d.	Modified the drawing of special line and front 	12/27/99
+	patterns.
+	    
+021a3m. Synchronized the product generation files in 	12/27/99  N/A	CM
+	nmap and nmap2 except for nmap_pgpalw.c.   
+
+018a1p.	Fixed an NMAP print problem when prod. gen. 	12/27/99
+	is active.   
+
+018a1q.	Added image display toggle to NMAP2.		12/27/99 
+
+018a1r.	Fixed NMAP to properly sort and load image data 12/28/99
+	from a directory containing files from 12/31/99 
+	and 01/01/00 with only 2 digits for the year in 
+	the file names. 
+
+010a3a.	Y2K bug fix for processing of filenames with 	12/28/99  N/A	obe
+	2-digit years. 
+
+018a1s.	Added functionality to the clear data button in 12/30/99
+	nmap2 and cleared up a positioning problem with 
+	images in the data selection popup. 
+
+010a3b.	Added a new feature to LINUX so that the VG 	12/30/99
+	file created on LINUX can be read on other 
+	platforms, and LINUX can read VG file created
+	     on other platforms. 
+
+006e.	Modified NAWIPS programs to be able to directly 12/30/99
+	read normal GEMPAK map files while on 
+	Little-Endian platforms. 
+
+006f.	Corrected a problem where the labels for the 	12/30/99  MLI	1/31/00
+	latitude lines in the southern hemisphere were 
+	being clipped. 
+
+010a3c.	Fixed FL_MFIL to properly save the minimum time 1/3/00
+	difference for calculating the correct file to 
+	select.	
+
+021a3n.	Moved the NMAP product generation source code 	1/4/00	N/A	CM
+	(/vgf/nmap_pg*) routines to a new common library 
+	in nmaplib/pgen.  	
+
+021a3o.	Correct the problem that the rectangular text 	1/5/00	TP	closed
+	box doesn't show up on AIX4.  Correct Problem  			1/6/00
+	238 (parameters don't align on SGIs in 
+	graph-to-grid advanced info box.	
+
+018a1t.	Added hotkeys to NMAP2 for loop selection.	1/5/00	TP	1/6/00	
+
+010a3d.	Fix to gg_isig routine to ensure that cancel 	1/5/00	MLI	closed
+	time for an international SIGMET is before 			2/7/00
+	original end time.  Fix to gg_wtch routine to 
+	handle watch replacements and cancellations 
+	properly, and to ignore leading zeros in 
+	watch numbers.	
+
+001pp.	Improved validity checks for international 	1/5/00	MLI	closed
+	SIGMET decoder (dcisig) lat/long input values.			2/7/00
+
+007v.	Fixed the cvg_load problem in nmap/nmap2.	1/5/00	TP	1/7/00	
+
+018a1u.	Modified the data attribute structures for MISC 1/5/00
+	data types in the NMS library and NMAP2.  
+	Added Lightning data to NMAP2.	
+
+001qq.	Changed DC_WLOG to check the error number and 	1/7/00	MLI	closed
+	return immediately if the value is zero.  			2/9/00
+	Changed DC_INIT to parse command line option 
+	"-e PARM=value".  	
+
+018a1v.	Added "LEVEL INFO" option menus and text into 	1/7/00	AH	closed
+	"International SIGMET Edit" window.				1/19/00
+
+021a3p.	Correct "States Included" button problem in 	1/10/00	AH	closed
+	"FORMAT WATCH" window.						1/18/00
+
+006g.	Modified and added potental new contour types 	1/10/00
+	for GEMPAK.  Added type "L" which is the GEMPAK 
+	contouring algorithm without sub-boxes.  
+	Eliminated types "I" and "S" which were never 
+	implemented.	
+
+021a3q.	Fixed bugs in NMAP2.				1/10/00	
+
+010a3f.	Removed county plotting from the severe weather	1/10/00	AH	closed
+	watch box display.						1/18/00
+
+018a1w.	Fixed the set time problem in nmap.		1/11/00	TP	1/11/00	
+
+018a1x.	Fixed the timeline related problems with MSC 	1/13/00	AH	closed
+	data (Watch, Warn, Isig, etc) in nmap2.  			1/21/00
+
+021a3r.	Added the directory listing from vgf.nmap to 	1/13/00	MLI	closed
+	the product generation open window.				1/19/00
+
+018a1y.	Add a new type of sounding data in CLOUD 	1/13/00	MLI	closed
+	HEIGHT OPTIONS window.						1/28/00
+
+010a3g.	Fixed bug of UNDO/REDO problems on LINUX2.	1/13/00	TP	2/4/00
+
+018a1z.	Fixed NMAP2's inability to zoom with only a 	1/13/00	AH	closed
+	single frame of data.						1/19/00
+
+020i.	Implemented byte swapping in GSFSSF and SSFGSF 	1/13/00
+	map file conversion programs.  	
+
+009k.	Modified the eta aviation freezing level 	1/13/00
+	restore file and changed the name because the 
+	rh field has been removed.  Added a no-color 
+	fill eta freezing level restore file.	
+
+010a3h.	Made modifications to NMAP and NMAP2 methods 	1/14/00	MLI	closed
+	of displaying the location type menu for both 			1/19/00
+	SEEK and LOCATOR.  	
+
+018a2a.	Replaced the characters with string variables 	1/18/00	N/A	internal
+	while calling gtrans.f. 
+
+010a3i.	Added a new format code in locator.tbl.  	1/18/00	MLI	1/19/00	
+
+001rr.	A modification was made to the marine decoder.	1/19/00	MLI	2/7/00
+
+018a2b. Fixed problem #264, P1.  Fixed the crash in 	1/19/00	MLI	closed
+	nmap2 when changing maps with no data loaded 			1/21/00
+	and product generation active (and element(s) 
+	drawn).  	
+
+010a3j.	Corrected circle drawing problems at the poles 	1/19/00	MLI	closed
+	and on the international dateline.  				1/21/00
+
+010a3k.	Changed the watch element structure to include 	1/19/00	AH	closed
+	county locations.						1/31/00
+
+007w.	Fixed problem with NMAP2 core dumping when 	1/20/00	AH	closed
+	exiting product generation after selecting 			1/20/00
+	'Clear Data'.	
+
+007x.	Renamed the command defines in xmloop.c and 	1/20/00	MLI	closed
+	moved them to xwprm.h.  					1/21/00
+
+018a2c.	Increased the sizes of map overlay toggle 	1/20/00	MLI	closed
+	buttons for Motif 2.1.						1/21/00
+
+018a2d.	Fixed Problem 265.2.  Fixed Problem 265.3.	1/20/00	MLI	1/21/00 
+
+018a2e.	Fixed bug on hpux that occurred when the user 	1/20/00	AH	closed
+	selected and loaded data, then popped the 			1/20/00
+	dataw window back up and selected "Clear".	
+
+014a.	Fixed problem in Ntrans with reporting error 	1/20/00	MLI	closed 
+	of too many files in a directory.				2/1/00
+
+015b.	Fixed bugs of wrong latitude/longitude problems 1/20/00	TP	closed
+	while NSAT/NAFOS main windows were resized and 			2/4/00
+	scrolled.	
+
+010a3l.	Added moist-adiabatic cloud height to the 	1/20/00	MLI	closed
+	cloud-to-height function.  Fixed a bug in the 			1/21/00
+	CAPE computation. 
+
+001ss.	Added the decoding of WSUK31 and WSNT21 intern.	1/20/00	MLI	closed
+	sigmet reports from EGGY to decoder dcisig.  			2/7/00
+	Modified dcisig to handle the new WMO header 
+	and identifier KKCI.  Fixed bug in dcisig when 
+	keyword is 'OBS/FCST' or 'FCST/OBS'.  Decoded 
+	some previously missed flight levels.  Included 
+	'AXIS' as a keyword for either side of line.	
+
+001tt.	Modified intern. SIGMET decoder dcisig to  	1/20/00	MLI	closed
+	handle error condition when calculating 			2/8/00
+	boundary points on either side of a line.	
+
+001uu.	Modified aircraft decoder and character 	1/20/00
+	translation routines to save and display 
+	aircraft type (ACTP) for PIREPS (pilot reports), 
+	and to use the PIREP reporting station id 
+	as the STID. 
+
+018a2f.	Fixed problem #267, P2 in nmap2.		1/20/00	MLI	1/21/00	
+
+018a2g.	Fixed problem when zooming or roaming so that 	1/21/00	MLI	closed
+	any loaded data does not disappear upon 			1/28/00
+	completion (#267:P3).	
+
+021a3s.	Fixed crash when formatting watches and wrong 	1/21/00	AH	closed	
+	county list when re-editing a watch.  Fixed 			1/31/00
+	potential problem w/cloclosest.c.	
+
+018a2h.	Fixed the no ACFT data problem in nmap2.	1/21/00	AH	1/28/00	
+
+018a2i.	Modified nmap_seek to permit more seek/locator	1/21/00	MLI	closed	
+	functions.  							1/28/00
+
+008aa.	Updated the help info for the RBK driver.	1/21/00	N/A	docs
+
+018a2j.	Fixed a bug in zoom under nmap2.  		1/24/00	MLI	1/28/00	
+
+018a2k.	Fixed problem with locator and seek positions 	1/24/00	MLI	closed
+	being incorrect after an autoupdate with 			1/28/00
+	multiple loops.	
+
+018a2l.	Corrected a problem with clearing data in the 	1/27/00	AH	closed
+	data window in nmap2.						1/28/00
+	
+018a2m.	Fixed a seek bug in nmap/nmap2 (#273, P2).	1/27/00	AH	1/28/00	
+
+019ii.	Added Basin map files for the RFCs.		1/27/00	N/A	maps	
+
+021a3t.	Changed the format of tops string for SIGMET 	1/28/00	MLI	closed
+	in order to fix a bug that occurs when 				1/31/00
+	selecting an old SIGMET on Sun.	
+
+010a3m.	Fixed the crash that results from adding 	1/28/00	MLI	closed
+	additional model entries to the datatype.tbl.			2/3/00
+
+008bb.	Update to WhatsNew.hlp for patch 5.4.3.y.	1/28/00	N/A	docs
+
+021a3u.	Rolled back the changes to vg file selection 	1/31/00	AH	closed
+	within product generation.					2/7/00
+
+008cc.	Update to WhatsNew.hlp for patch 5.4.3.y.	1/31/00	N/A	docs 
+
+009l.	Fixed global model restore.			 2/1/00	
+
+021a3v.	Corrected the data and name actions for file 	 2/3/00	AH	closed
+	selection in product generation.				2/7/00
+
+============================ End of Patch 5.4.3.y ==============================
+
+010a3n.	Updated N-AWIPS to version 5.4.3.z.		 2/7/00	
+
+010a3o.	Modified the code so that any combination of 	 2/7/00	MLI	closed
+	rounding, units, distance and display can be 			2/17/00
+	used for SFSTNS, ANCHOR, VOR, COASTAL, and 
+	MARINE.	
+
+018a2n.	Fixed #275, P1 -- crash on sunOS5, irix5, irix6. 2/7/00	MLI	2/8/00	
+
+018a2o.	Fixed #273, P3 -- wrong frame number.		 2/7/00	MLI	2/8/00
+
+001vv.	Corrected how the date/time was being saved in 	 2/7/00	MLI	closed
+	the header portion of an AWIPS file.				2/9/00
+
+018a2p.	Fixed 277.O Seek ghost appears upon selecting 	 2/7/00	MLI	closed
+	cloud height.							2/8/00
+
+008dd.	Removed a marine map file. 			 2/7/00	N/A	obvious	
+
+018a2q.	Fixed a bug in the map window in nmap2.		2/11/00	MLI	2/11/00	
+
+020j.	Corrected the good and bad file counts in 	2/11/00	TP	closed
+	checkSrc.sh.							2/11/00
+
+001ww.	Modified aircraft decoder dcacft to decode 	2/11/00	MLI	closed
+	varying formats of turbulence data reported 			2/15/00
+	in AIREPs (aircraft reports).	
+
+018a2r.	Added locator format edit window into NMAP(2).	2/11/00	AH	2/14/00
+
+018a2s.	Added reload button to NMAP2.			2/14/00	MLI	2/14/00	
+
+021a3w.	Added the ability to add and delete counties 	2/14/00	AH	closed
+	from a watch. 							2/15/00
+
+010a3p.	Modified the return string sizes in CLOFORMAT.	2/14/00	MLI	2/14/00	
+
+007y.	Changed the load sequence for models to load 	2/14/00	MLI/AH	closed
+	the first frame first.						2/16/00
+
+012k.	Changed the location of the color palette 	2/15/00	AH	closed
+	popup to be higher on the screen.				2/17/00
+
+001xx.	Added the decoding of WSJP31 international 	2/15/00	MLI	closed
+	sigmet reports from RJAA to decoder dcisig.			2/16/00
+
+010a3q.	Correct range record calculation for the WBOX 	2/16/00	AH	closed
+	element now that the county locations are part 			2/17/00
+	of the element.	
+
+010a3r.	Fixed a Y2K bug for GINI data.			2/16/00	MLI	2/24/00	
+
+018a2t.	Added a load status indicator to nmap2.		2/16/00	AH	2/16/00
+
+018a2u.	Fixed bugs in NMAP(2) as suggested by Unidata.	2/16/00	N/A	internal	
+
+019jj.	Combined RFC basins map.			2/16/00	N/A	maps 
+
+018a2v.	Added the ability to enter a point in 		2/16/00	MLI	closed
+	degrees-minutes in the SEEK text box.				2/17/00
+
+007z.	Restored the flip action, for the fronts, to 	2/17/00	AH	closed
+	just change the pip direction.					2/23/00
+
+019kk.	Removed the old border between East & West 	2/18/00	N/A	maps
+	Germany in HIPOWO.GSF, MEPOWO.GSF, and 
+	MXPOWO.NCP.	
+
+021a3x.	Added outlooktimes.tbl and made corresponding 	2/18/00
+	changes to nmap_pgofmt.c. 
+
+007aa.	Added the missing declaration of "text" to 	2/18/00	N/A	internal
+	vtext.c.	
+
+010a3s.	Changed GG_CBAR to no longer check for color 0 	2/18/00	MLI	closed
+	being used for the first or last box in the 			2/22/00
+	color bar.	
+
+010a3t.	Added the CCFP (Collaborative Convective 	2/18/00	MLI	closed
+	Forecast Product) to vgstruct.h for new 			3/3/00
+	display routine for this element.	
+
+007bb.	Fixed bug of integer problem in HTXSY.F.	2/18/00	N/A	internal
+
+020k.	Corrected Shapefile processing to work on 	2/22/00
+	both Big-endian and Little-endian machines.	
+
+019ll.	Update to offshore marine zones shapefiles.	2/22/00	N/A	maps	
+
+019mm.	Updated Colorado zones from new Shapefiles.	2/22/00	N/A	maps	
+
+011mm.	Show contours of created grid in NMAP.		2/23/00	AH	3/7/00	
+
+010a3u.	Added a check if the special character is 	2/23/00	MLI	closed
+	equal to zero.							2/24/00
+
+010a3v.	Added two new data sources (NASA/TRMM and 	2/24/00	MLI	closed
+	long-range/offshore) for lightning data display.		4/13/00
+
+001yy.	Increased the length of the county character 	2/25/00	MLI	closed
+	string in the warning decoder, DCWARN.  			2/25/00
+		
+010a3w.	Modified CST_WRAP to allow user to select 	2/28/00	MLI	closed
+	end-of-line character sequence.					4/13/00
+
+021a3y.	Fixes to watch processing - counties handled 	2/28/00	MLI	closed
+	properly under multiple watch scenerio and 			4/6/00
+	status message processing per SPC memo.	
+
+001zz.	Fix problem report 285:P1.  DCWARN no longer 	2/28/00	MLI	closed
+	crashes when 'BULLETIN' is not found within 			2/29/00
+	the file.	
+
+021a3z.	Set watch type and time zone defaults to none, 	2/28/00	MLI	closed
+	added warning message if either of them is not 			2/29/00
+	selected.	
+
+010a3x.	Changed the time displayed in the title for 	2/28/00	MLI	closed	
+	local radars.							4/19/00
+
+006h.	Changed the contour fill and box-fill to treat 	2/29/00
+	CONTUR=1 the same as CONTUR=0.	
+
+021a4a.	Added the CCF element.				2/29/00	MLI	3/3/00	
+
+021a4b.	Did minor changes to the appearance of 		2/29/00	MLI	closed
+	attribute windows.						3/3/00
+
+010a3y.	Fixed the year in the integer array used to 	 3/2/00	MLI	closed
+	create the GDATTIM string used when writing 			4/19/00
+	the data to the output file.	
+
+010a3z.	Fix to gg_wtch routine to process watch and 	 3/2/00
+	status corrections and cancellations properly.	
+
+010a4a.	Extracted the various functions from SPCTXT to 	 3/2/00	MLI	closed
+	create a verification (VF) library.				3/6/00
+
+018a2w.	Fixed the projection related problems in nmap2,  3/3/00	AH	closed
+	including problem reports 227:2-3,6; 270:1; and 		3/14/00
+	273:1.	
+		
+011nn.	Added option to CPYFIL parameter in GDCFIL, 	 3/6/00	AH	closed
+	NAGRIG, and GRPHGD.   						3/8/00
+
+010a4b.	Added the automatic creation of the SEV and SAW  3/7/00	MLI	closed
+	text products in NMAP and NMAP2.				3/16/00
+
+007cc.	Added the ability to set a base date for a 	 3/7/00	MLI	closed
+	product when the RBK driver is used.				3/16/00
+
+009m.	Modified mod_res.tbl.				 3/8/00	
+
+021a4c.	Added the CCF product popup, cleaned up the 	 3/8/00	MLI	closed
+	CCF element, and fixed 287:P1.					3/10/00
+
+018a2x.	Seek changes.					 3/8/00	MLI	3/10/00	
+
+018a2y.	Added the "Set Time" functionality to nmap2.	 3/9/00	MLI	3/10/00
+
+010a4c.	Modified CST_RXBL to assure that the input and 	 3/9/00	AH	closed
+	output are the same variables if there are no 			3/10/00
+	extra spaces.	
+
+010a4d.	Added option to CFL_MNAM to accept the  	3/10/00	AH	closed
+	substring 'FFF' in a template.					3/15/00
+
+001aaa.	Added the decoding of some open areas for EGGY 	3/10/00	MLI	closed
+	sigmet reports to decoder dcisig.				3/16/00
+
+021a4d.	Changed pgutls_prepNew to include an optional 	3/10/00	AH	closed
+	location parameter, in order to make it more 			3/15/00
+	useful and thus reduce various redundant code.	
+
+001bbb.	Changed the metar decoder, dcmetr, to allow an 	3/10/00	MLI	closed
+	AWIPS id (PIL) to follow the WMO header. 			3/17/00
+
+009n.	Changed several wave model Nmap restore files 	3/10/00
+	to change plotting of mean swell to peak swell 
+	information.	
+
+010a4e.	Added the automatic creation of the Watch 	3/10/00	MLI	closed
+	 Coordination List (WCL) text product to NMAP(2).		3/13/00
+
+003a.	Added a GEMPAK program to write gridded data 	3/13/00	N/A	external
+	into GRIB files.	
+
+008ee.	Added 5.4.2 and 5.4.3 release notes to N-AWIPS.	3/13/00	N/A	docs	
+
+010a4f.	Fixed CST_RXBL string-appending problem.	3/13/00	AH	3/14/00	
+
+021a4e.	Added confirmation window when popping up 	3/13/00	MLI	closed
+	Format Watch Window for new watch.				3/13/00
+
+021a4f.	Redelivery of the new file open box for 	3/13/00	MLI	closed
+	opening a VGF file.						3/14/00
+
+010a4g.	Corrected the top three header lines for the 	3/13/00	MLI	closed
+	WCL text product.						3/14/00
+
+021a4g.	Changed GRPHGD processing for NMAP.  		3/13/00	MLI	3/16/00	
+
+018a2z.	Created new popup windows to allow the user to 	3/13/00	AH	closed
+	change the attributes of the miscellaneous 			3/14/00
+	data types (i.e., WTCH, WARN, VGF, etc.).	
+
+001ccc.	Increased the record length storage in the 	3/13/00	MLI	closed
+	RBK driver.							3/16/00
+
+016g.	Fixed NWX string allocation bug found by AWC.	3/15/00	N/A	internal
+
+010a4h.	Created new routine ST_GTST.			3/15/00	MLI	3/16/00	
+
+010a4i.	Added plotting of open (unbounded) 		3/15/00	MLI	closed
+	international SIGMETS.						3/17/00
+
+018a3a.	Fixed the LUT bug that prevented selecting an 	3/15/00	AH	closed
+	enhancement file for a rad/sat image in a loop 			3/15/00
+	following a loop with a rad/sat image.
+	     	
+
+021a4h.	Increased the CCF from one element to a group 	3/15/00	AH	closed
+	of four elements.						3/20/00
+
+018a3b.	Removed the Wipe button from the NMAP2 window.	3/15/00	AH	3/15/00	
+
+018a3c.	Increased the distance between locator type 	3/15/00	AH	closed
+	label and latitude label to allow long city			3/15/00
+	(county) names.	
+
+021a4i.	Added product pulldown menu into 		3/15/00	AH	closed
+	Graph-to-Grid window.						3/16/00
+
+021a4j.	Fixed the range record problem that was 	3/15/00	AH	closed
+	behind the watch crash bug.					3/16/00
+
+001ddd.	Added leading zeroes to the decoded flight 	3/15/00	AH	closed
+	level when it has less than three digits and 			3/16/00
+	truncated the extraneous blanks in decoder
+	dcisig.	
+
+010a4j.	Created new function CST_RPST.			3/16/00	MLI	4/13/00	
+
+010a4k.	Added parameter conversion routines to 		3/16/00	AH	closed
+	calculate the rate of ice accretion for ship 			3/16/00
+	observations, and updated tables for its
+	color-coded display in NMAP.	
+
+001eee.	Bug fix to watch decoder dcwtch to recognize 	3/16/00	AH	closed
+	station names containing the characters 'TO'.			3/20/00
+
+021a4k.	Fixed the length of the "current directory" 	3/16/00	MLI	closed
+	string in nmap_pgfilw.c.					3/17/00
+
+018a3d.	Fixed the 4 digit year auto-update problem 	3/17/00	MLI	closed
+	in NMAP2.							3/17/00
+
+021a4l.	Fixed the crash on a group delete operation.	3/17/00	MLI	3/17/00	 
+
+021a4m.	Fixed watch status message formatting bug - 	3/17/00	AH	closed
+	extra "Z000" in state indicator line.				3/17/00
+
+021a4n.	Graph-to-grid changes.				3/17/00	AH	3/20/00	
+
+021a4o.	Sundry fixes to the CCF grouping delivery 	3/17/00	MLI	closed
+	(#297:P2,5,7-8,10-11,13).					3/20/00
+
+018a3e.	Fixed reload and refresh problems.		3/20/00	MLI	3/20/00	
+
+021a4p.	Fixed Watch Box Hide/Show problem.		3/20/00	MLI	3/20/00	
+
+011oo.	Brett McDonald's changes to the graph-to-grid.	3/20/00	
+
+021a4q.	Further cleanup of the CCF group including 	3/20/00	MLI	closed
+	rotating the arrow updates the CCF element 			3/20/00
+	and a revisit to the International Date Line.	
+
+021a4r.	Changed CCFP text product output filename to 	3/20/00	MLI	closed
+	YYYYMMDD_HH.ccfp.						3/20/00
+
+021a4s.	Fixed the date in graph-to-grid processing.	3/20/00	
+
+021a4t.	Fixed the radius function so that it does not 	3/20/00	AH	closed
+	put addtional labels when modifying a labeled 			3/22/00
+	circle.	
+
+018a3f.	Fixed auto-update bug in NMAP2.			3/21/00	MLI	4/5/00	
+
+021a4u.	Fixed sfc prog filename error.			3/21/00	AH	3/22/00	
+
+021a4v. Fixed CCFP text product filename creation.	3/21/00	MLI	4/6/00 
+
+018a3g.	Fixed the lut problem for image loading in 	3/21/00	MLI	closed 
+	NMAP2.								4/5/00
+	
+019nn.	Removed non-existent islands from the Gulf of 	3/22/00	N/A	maps
+	Mexico.	
+
+021a4w.	Fixed the refresh bug that appears when 	3/22/00	AH	closed
+	HIDE/SHOW is selected after opening a VG file 			3/23/00
+	in product generation.	
+
+021a4x.	Changed VGF file name displayed to the user to 	3/22/00	AH	closed
+	be only the file name without the path. 			3/23/00
+
+018a3h.	Fixed the "continuous" auto-update problem in 	3/22/00	MLI	closed
+	NMAP2.								4/5/00
+
+008ff.	Update to WhatsNew.hlp and the release notes 	3/23/00	N/A	docs
+	for patch 5.4.3.z.	
+
+008gg.	Updated the SEEK help file in NMAP.		3/23/00	N/A	docs
+
+010a4l.	Fixed the speed problem on large work/undo 	3/24/00	AH	closed
+	files.								3/27/00

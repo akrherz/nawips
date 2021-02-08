@@ -1,0 +1,222 @@
+		    NAWIPS 5.5  Test Log
+
+						      Delivery
+Log #	Description					Date	Tester	Status
+-----	----------------------------------------------	-------	------	------
+010a.	Updated N-AWIPS to version 5.5.a.		3/27/00	TP	3/28/00	
+
+001a.	Modified decoders dchrcn, dcisig, dcwarn and 	3/28/00	MLI	closed
+	dcwtch to flag "TEST"reports in decoded output.			3/30/00
+
+009a.	Removed $GEMPAK/install/setup_links, 		3/28/00	TP	closed
+	$GEMPAK/install/remove_links, $STRIP, and 			3/28/00	
+	$RANLIB from all affected scripts.	
+
+010b.	Changed the check for scaling front strength	3/28/00	MLI	closed
+	from >10 to >9 for resetting the value to 9.			3/29/00
+
+010c.	Changed the calling sequence for the each of 	3/28/00	MLI	closed
+	the GG routines that plots miscellaneous data 			3/29/00
+	types, i.e., WTCH, WARN, HRCN, ISIG, LTNG.
+	   	
+018a.	Modified to display full station names instead 	3/28/00	MLI	closed
+	of station ids on seek result window.				3/29/00
+
+018b.	Fixed problem report 299:P1, failure to update 	3/28/00	MLI	closed
+	vg elements after an auto-update (nmap2 only).	 		3/29/00
+
+018c.	Unified maximum search radius unit in 		3/28/00	MLI	closed
+	cloud-to-height option popup window.				3/29/00
+		
+021a.	Fixed problem with deselecting a watch and 	3/28/00	AH	closed
+	then not being able to select one without 			4/3/00
+	clicking the select button.	
+
+010d.	Changed display routines for watches, warnings,  4/3/00	MLI	closed
+	international SIGMETs and hurricane tracks to 			4/10/00
+	indicate TEST events.	
+
+020a.	Added minus sign to marker display in PLOTSYMS.	 4/3/00	MLI	4/10/00	
+
+021b.	Added the ability to place the CCF text box and  4/3/00	MLI	closed
+	rotate the CCF direction arrow when creating a 			4/6/00
+	CCF element.	
+
+021c.	Fixed bug in GRPHGD code dealing with how the 	 4/4/00	MLI	closed
+	product label and restore table names are 			4/6/00
+	handled internally.	
+
+001b.	Modified the marine surface (ship) decoder and 	 4/5/00	MLI	closed
+	the land surface synoptic decoder to save the 			4/10/00
+	raw (undecoded) report.	
+
+001c.	Modified list of WMO headers and originating 	 4/5/00	MLI	closed
+	stations which will be processed by the 			4/10/00
+	international SIGMET decoder (dcisig).	
+
+018d.	Unified the use of font on Seek Results Window.  4/5/00	MLI	closed
+	Reduced the size of Seek Results Window.			4/6/00
+
+021d.	Added a pop-up window to PROD-hurricane track 	 4/5/00	AH	closed
+	to take the information of storm id, issuing 			4/13/00
+	center, the ocean, and date/cycle.	
+
+019a.	Created the Palmer Climate Zone map.		 4/6/00	N/A	maps
+
+010e.	Created the VF files that will create the 	 4/6/00	MLI	closed
+	watch outlook update - initial (WOU), aviation 			4/10/00
+	watch notification (AWN) and the public watch 
+	notification (PWN) the text products.	
+
+021e.	Cleaned up several problems with CCF groups, 	4/10/00	MLI	closed
+	notably storing the arrow direction in the CCF 			4/11/00
+	element, changing the line subtype to not have 
+	the other elements (arrow and text boxes), and 
+	having the CCF displayed as a group when deleting.	
+
+018e.	Fixed a bug where vgf elements drawn in one	4/10/00	MLI	closed
+	loop did not end up in the correct place in 			4/11/00
+	other loops.	
+
+001d.	Corrected the decoding of mean sea level press.	4/10/00	MLI	closed
+	from the remarks section of Mexican reports, in 		4/13/00
+	response to an unannounced format change.	
+
+010f.	Fixed a bug in NAGRIB, reported by the SPC. The 4/10/00	MLI	closed
+	RFC 24-hour Rainfall Accumulation grid was 			4/19/00
+	getting an incorrect time written to the GEMPAK file.	
+
+010g.	Fixed a bug in AWIPS Redbook Graphics, which 	4/10/00	MLI	closed
+	was causing there to be an infinite loop.			4/14/00
+
+021f.	Added a check for string text input to the SFC 	4/10/00	AH	closed
+	PROG, so that it will display as '0000' for a 			4/13/00
+	string text instead of 1000.	
+
+018f.	Modified the pixmap loading in nmap2.  The loop 4/11/00	MLI	closed
+	selected to be in view is loaded first, then all 		4/12/00
+	the other loops are loaded in the background.	
+
+018g.	Added a new font size, GIANT to the TEXT 	4/12/00	MLI	closed
+	parameter and incorporated it into NMAP(2).			4/14/00
+
+018h.	Fixed NMAP2 problem that occurs when a loop is 	4/12/00	AH	closed
+	actively looping and the map window popped up, 			4/14/00
+	selecting a different map results in the map 
+	window oscillating between the previously drawn 
+	map and the newly selected map.	
+
+021g.	Added WMO and AFOS header lines to product 	4/12/00	AH	closed
+	generation for intern'tl sigmets in NMAP.			4/13/00
+
+021h.	Fixed bug in the generation of WMO and AFOS 	4/13/00	AH	closed
+	header lines for international sigmets when 			4/13/00
+	two FIRs are specified.	
+
+021i.	Made new group type table for product gen.	4/14/00	MLI	4/19/00
+
+018i.	Fixed a bug in NMAP2. IF the OBS 'Parm Edit' 	4/14/00	MLI	closed
+	box was up when MISC data was selected, NMAP2 			4/27/00
+	would crash.	
+
+001e.	Modified aircraft decoder dcacft to decode 	4/14/00	AH	closed	
+	more formats of turbulence data reported in 			4/28/00
+	AIREPs (aircraft reports) and PIREPs (pilot 
+	reports), in response to AWC request.	
+
+001f.	Added the decoding of Volcanic Ash reports 	4/14/00	AH	closed
+	(excluding EGGY and RJAA) to dcisig.				4/18/00
+
+010h.	Changes for accomodating multiple forecast 	4/17/00	AH	closed
+	hour grid files.						4/20/00
+
+011a.	Additional change to gdpltb.f for calling 	4/18/00	AH	closed
+	sequence change to DG_MFIL.f.					4/20/00
+
+021j.	Increased MAX_EDITABLE_ELEMS to 5000.		4/18/00	N/A	internal
+
+021k.	Fix problem 306-P1:the HCN track text message 	4/18/00	TL	closed
+	always takes the cycle time from the clock.			4/20/00
+
+018j.	Syncronized the loop selection menu on the 	4/18/00	TL	closed
+	data window with the loop in view.				4/25/00
+
+018k.	Modularized moist-adiabatic cloud height.  	4/18/00	MLI	closed
+	Cloud height resorted to moist-adiabatic 			4/27/00
+	search if needed.	
+
+021l.	Changed the CCFP popup to use two time (issue 	4/18/00	TL	closed
+	and valid) pulldown menus, both of which are 			4/19/00
+	table-driven.	
+
+011b.	Changed gdplot2 for multiple file forecast 	4/18/00	AH	closed
+	hour processing.						4/20/00
+
+011c.	Fixed bug in GRPHGD, where the program 		4/19/00
+	continued when creation of the output grid 
+	failed, or opening output grid failed.	
+
+021m.	Format changes to the CCFP text product.	4/19/00	TL	4/19/00	
+
+021n.	Changed CCF elements movement from direction 	4/19/00	TL	closed
+	from to direction toward.					4/19/00
+
+018l.	Fixed NMAP2 problems 308:2-5,7.  Problems 2-4 	4/19/00	MLI	closed
+	were caused by nmap_zoomw.c which was not 			4/19/00
+	setting the flag that indicates changes have 
+	been made to the data set.  Problem 5 was 
+	corrected by disabling loop selection within 
+	the map window, including selection by the
+	F1-4 keys.  Problem 7 was caused by not storing 
+	the current pixmap pointer in loops not currently 
+	in view.	
+
+021o.	Added forecaster pulldown menu into WATCH 	4/19/00	MLI	closed
+	WARNING ADVISORY Window.					4/19/00
+
+018m.	Fixed fatal error in NMAP after loading data, 	4/20/00	MLI	closed
+	looping, pop-up map window, then hit any button.		4/21/00
+
+021p.	Fixed bug in CCFP for string length exceeeded.	4/21/00	TL	4/25/00	
+
+010i.	Solved 303.P1, which is described as follows:  	4/21/00	MLI	closed
+	Draw a variety of watches. Delete all, then 			4/24/00
+	draw another watch, modify it, click 'UNDO'
+	and NMAP/NMAP2 crashes on Linux.	
+
+021q.	Fixed a bug in NMAP2 with mos data.		4/21/00	MLI	4/24/00	
+
+011d.	Fixed minor bug in gdplot2 where an 		4/21/00	TL	closed
+	unnnecessary warning when gdfile contains 			4/21/00
+	"filename! filename".	
+
+018n.	Modified NGD_DSPL to use the grid file alias 	4/21/00	AH	closed
+	instead of constructing an expicit file name.  			4/25/00
+	Added the ability to override the title line
+	number from the restore file.	
+
+018o.	Fixed a bug in NMAP2 that disabled auto-update.	4/21/00	MLI	4/24/00	
+
+011e.	Fixed bug in gdplot2 where long strings were 	4/24/00	TL	closed
+	entered.							4/24/00
+
+010j.	Fixed problem #316:p1 (#303:p1), which was a 	4/25/00	MLI	closed
+	fatal nmap bug on Linux.					4/25/00
+
+021r.	Solved 317.P1, which is described as follows:  	4/25/00	AH	closed
+	After the user has selected a new label, and 			4/25/00
+	placed it with a line, when the line attribute 
+	box reappears, the text label goes back to the 
+	default.	
+
+018p.	Fixed problem #318:p2.  The line between two 	4/25/00	MLI	closed
+	seek points is redrawn if the user moves to 			4/26/00
+	another frame in the loop sequence.	
+
+008a.	Updated WhatsNew.hlp and release notes for 	4/25/00	N/A	docs
+	patch 5.5.a.	
+
+021s.	Fixed increment/decrement selection problem 	4/26/00	AH	closed
+	with marker elements.						4/27/00
+
+==============================  End of Patch 5.5.a  ==============================

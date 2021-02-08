@@ -1,0 +1,335 @@
+			N-AWIPS 5.6.a Release Notes
+				11/2/00	
+
+Patch 5.6.a covers development from August 25 to November 2, 2000.  
+
+PLEASE NOTE:  Version 5.5.d was released by Unidata to the university
+community as version 5.6.  Therefore, we have designated version 5.5.d 
+as version 5.6.  This patch is thus 5.6.a
+
+PLEASE NOTE:  These release notes summarize the new functionality, 
+enhancements, and bug corrections made for this patch.  The complete
+set of changes with additional details are documented in the following
+NAWIPS logs in $NAWIPS/versions:
+
+	nawips.log
+	changes.log
+	tables.log
+
+********************************************************************
+
+I. Product Generation Changes
+
+    A.	NMAP Product Generation Improvements
+
+	1. Track Function Improvements (SPC, AWC)
+
+	   Several improvements were made to the track function.  The user
+	   can now select or enter the time interval.  A pop-up allows
+	   the selection of pre-defined intervals which are read from the
+	   table: $GEMTBL/config/trkint.tbl.  Alternatively, the value can
+	   be entered in the text box.  Label attributes can now be specified
+	   by clicking on the down arrow that appears in the lower right
+	   corner of the GUI.  Clicking this arrow pops up a pane which
+	   allows the user to select label skip factor, font, size and 
+	   style.
+
+	2. Tropical and Volcanic Ash Sigmets (AWC)
+
+	   Added the capability to generate tropical and volcanic ash 
+	   international SIGMETS.  The international SIGMET GUI and 
+	   message production have been enhanced to generate these
+	   SIGMET types.
+
+	3. Watch Generation Improvements (SPC)
+
+	   Anchor points are now saved as part of the VGF associated with the
+	   watch.  This corrects the problem that occurred where in some
+	   cases the anchor points associated with a watch were incorrect.
+	   The watch area is now calculated in square nautical miles instead
+	   of square statute miles at the request of the SPC.
+
+	   Watch counties are now cleared each time the watch is altered, moved
+	   or copied.  Previously, the original counties associated with the 
+	   watch were not cleared out until the create counties or clear counties
+	   button was clicked.
+
+	4. Modify Function Improvements (HPC)
+
+	   The modify function was rewritten to correct several problems that
+	   have been observed.  The ghosting now always matches the modify action
+	   which follows a well-defined set of rules.  The modify function 
+	   applies to both open and closed lines and may either 
+
+	   1) replace an interior portion of a line (both first and last clicks
+	      are on the original line),
+	   2) replace a portion of a line starting somewhere in the middle and 
+	      continuing to (and replacing) the end (only first click on 
+	      original line), or
+	   3) totally replace the line with a new line having the same 
+	      attributes as the original line (first click off the original line).  
+
+	   In the cases where the first mouse click is on the line, the direction
+	   of modification is controlled by the location of the second clicked
+	   point relative to the first clicked point.
+
+    B.	NMAP Product Generation Bug Corrections    
+
+	1. Label Function (HPC)
+
+	   The label action was corrected so that text is properly grouped
+           with its associated object.
+
+	2. Watch County List Fatal Error
+
+	   NMAP/NMAP2 no longer crashes if any button in the "Watch 
+	   Specifications and County List" GUI is clicked BEFORE a watch is 
+	   drawn.
+
+II. NMAP Display Improvements	
+
+    A.	New AVN MOS and MRF MOS Display (ALL)
+    
+       	Added the capability to display the new AVN MOS and MRF MOS in NMAP and
+       	NMAP2. 
+
+    B. 	AWIPS Satellite Data (RFC, AR, PR)
+
+       	NMAP can now display AWIPS satellite images.  Note that the environment
+	variable SAT should be set to /data/fxa/sat/SBN/netCDF to properly access 
+	the top of the satellite directories on AWIPS.  Also note that the netCDF 
+	libraries and source have been added to the directory tree that are needed 
+	to access the satellite data.  They are located at: $GEMPAK/netcdf-3.4
+
+
+III. NMAP Bug Corrections
+
+    A.  Bad Radar Image Fatal Error (SPC)
+	
+	NMAP, NMAP2 and GPMAP will no longer produce a fatal error when 
+	displaying a incorrectly encoded NIDS image.  Instead, the
+	bad image will not be displayed.
+
+    B.	Bad Frame Auto-Update Problem (TPC)
+
+	NMAP did not properly auto-update if the last frame was set to
+	a bad frame in a loop sequence.  This problem was corrected.
+
+
+IV. Decoder Improvements
+
+    A.  New MOS Decoders (ALL)
+
+	Two new decoders, DCMOSA and DCMOSM, were written to decode the
+	new AVN MOS and new MRF MOS, respectively.
+
+    B.  Correction to Watch Decoder (SPC)
+
+	The maximum number of points allowed in a status line was 
+	increased from 8 to 50 to handle multiple status lines in
+	a watch.
+
+    C.  International SIGMET Decoder (AWC)
+
+	The international SIGMET decoder was modified to properly handle
+	the decoding of a thunderstorm included as a part of a tropical
+	cylone report.
+
+    D.  Non-convective SIGMET Decoder (AWC)
+
+	The non-convective SIGMET decoder was modified to handle additional
+	phenomena abbreviations.
+
+
+V. General Improvements
+
+    A. 	TIFF Driver Enhancements (MPC) 
+
+       	The ability to output satellite images was added to the TIFF
+	device driver.  The output uses 16 grey shades for images.
+	To write an image to a TIFF file, specify the parameter DEVICE to:
+	tiff|prod_name||g, where g flag sets the device to use the grey
+	shades.  See the on-line help on DEVICE for additional details.
+
+    B.  GDGRIB Improvements (HPC)
+
+	The GDGRIB program was modified to allow a constant grid
+	with missing values.  Also, removed redundant success 
+	messages.
+
+    C.	AWIPS Redbook Graphics Driver (HPC)
+
+	The base date/time parameter was modified for the RBK driver
+	to allow the use of the full GEMPAK date/time string.  Any
+	missing parts of the string are supplied by the current system
+	time.
+
+    D.	Updated Mid-Atlantic River Basin Map (RFC)
+
+	The Mid-Atlantic river basin map was updated using the latest
+	shape file from NWS.
+
+    E.	Graph-to-Grid (HPC, RFC)
+
+	Modified program GRPHGD to output a grid of default values if
+	there are no contour values.
+
+    F.  NTRANS (SPC)
+
+	Increased the maximum number of metafiles allowed in a directory
+	from 100 to 200 files. 
+
+    G.  Contour Clipping for VG Files (MPC, HPC)
+
+	Added the ability to clip contours drawn to a VG output file.  The
+	clipping is performed on contours that are outside of the defined
+	graphics area (GAREA).  Contour clipping corrects the problem 
+	reported by the MPC where unnecessary contours were drawn when
+	the graphics area crossed the grid break for CED grids, e.g., the
+	AVN and MRF models.
+
+
+VI. General Bug Corrections
+
+    A.	GIF Driver Background Color (AWC)
+
+	Corrected the GIF driver problem where the background color was
+	improperly set for satellite images.
+
+    B.  AWIPS Redbook Graphics Display (ALL)
+
+	The display of AWIPS Redbook graphics files has been corrected
+	to properly display model products that could not be displayed
+	in previous versions.
+
+    C.	Hash Mark Attribute Problems in VG Driver (AWC)
+
+	Corrected a problem where the hash mark line width and spacing
+	were not consistent when saving a VG file to an output VG file.
+
+    D.  Rectilinear Projection Problem (AWC)
+
+	Corrected a navigation error for the display of McIDAS images
+	in the RECT projection.
+
+    E.  GDPLOT2 Fatal Error (HPC)
+
+	Corrected fatal error in GDPLOT2 if the GAREA parameter is set
+	to be blank.
+
+    F.  SFCHCK String Length Problem (Unidata)
+
+	Modified SFCHCK to handle 20 minute data by increasing the size
+	of array strings from 132 to 512 characters.
+
+
+VII. Known Problems
+
+    A.  Add/Delete Counties 
+
+	If counties are added or deleted, these counties are not saved 
+	correctly to the product text files if either the "Apply" button
+	is clicked on the "FORMAT WATCH" GUI, or the watch is saved and
+	issued later in a session.
+
+    B.	NMAP Clear Zoomed Image Problem
+
+	Clearing a zoomed image clears the data but does not properly
+	reset the map to the default area and projection.  In this case
+	the user must click on the map window to get a proper map area 
+	and projection.  This problem does not occur in NMAP2. 
+
+    C.	NMAP2 Set Time Problem for Observational Data Older Than 2 Days
+
+ 	NMAP2 does not load data older than 2 days for observational data
+	types, e.g., METAR data.
+
+VIII. Calling Sequence Changes
+
+    A.	$GEMPAK/source/cgemlib/cvg/cvgsigsto.c, cvgsvsig.c, cvgsvtrk.c, cvgtrksto.c
+    B.	$GEMPAK/source/gemlib/gg/ggmisc.f
+    C.	$GEMPAK/source/programs/gp/gpmap/gpminp.f
+    D.	$GEMPAK/source/cgemlib/clo/clodddec.c
+    E.	$GEMPAK/source/bridge/is/istc.f
+    F.	$GEMPAK/source/driver/active/tiff/tinita.c
+    G.	$GEMPAK/source/bridge/af/afobdh.f, afrtim.f, afxbif.f
+    H.	$GEMPAK/source/gemlib/cv/cvmdfy.c
+
+
+See the nawips.log and changes.log for additional details concerning
+these routines.
+
+
+IX.  Device Driver Name Change
+
+	IMPORTANT PLEASE NOTE:
+
+       	The GIF driver that does not use X windows has been renamed from
+       	GIF2 to GIF.
+
+X.  Table Format Changes
+
+	IMPORTANT PLEASE NOTE:
+
+	The format of $GEMTBL/nmap/mapovl.nmap has changed with the addition
+	of the DEFAULT column.  This change was done in preparation for 
+	having the capability to turn on/off overlays by default which will be
+	added in a future patch.  The software can read the either the new or 
+	old format.
+
+XI.  NMAP2: Evaluation Version:
+
+**** NOTE THAT NMAP2 SHOULD NOT BE USED TO CREATE OPERATIONAL PRODUCTS. ****  
+
+NMAP2 continues to be made available to obtain user feedback.  Many 
+bug corrections and improvements have been made in response to user 
+feedback and CDB testing.
+
+    A. NMAP functions NOT implemented in NMAP2
+
+	1. The "stop" function is not implemented.
+
+	2. Default data set selections for specific types, e.g, satellite
+	   data are not implemented in NMAP2.
+
+    B. NMAP2 Bug Corrections
+
+	1. Fatal Error With Large Number of Files (SPC) 
+
+	   NMAP2 can now access directories with up to 1000 files.
+	   Previously, the maximum number was set to 200.  Also, previously
+	   if the directory contained more than 200 files, NMAP2 crashed.  Now,
+	   if there are more than 1000 files in the directory, NMAP2 will
+	   only access the most recent 1000 files.
+
+	2. Fatal Error with Roam (ALL)
+
+	   If non-consecutive roam values were entered in the roam table,
+	   ($GEMTBL/nmap/nmap_roam.tbl), NMAP2 would crash after roaming
+	   frames and popping up the data window.  This problem has been
+	   corrected. 
+
+    C. 	NMAP2 Improvements
+
+	1.  Display of Non-Convective SIGMETS (AWC)
+
+	    Added the capability to display non-convective sigmets in NMAP2 
+	    as a miscellaneous data type.  GPMAP can now also display 
+	    non-convective SIGMETS.
+
+
+
+*****************************************************************************
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+	patch_build_5.6.a 
+
+To execute the script and save its output in a file type:
+
+	cd $GEMPAK/build
+	patch_build_5.6.a >&! PATCH_$NA_OS & ; tail -f PATCH_$NA_OS
+
+The output of the script will be written to PATCH_$NA_OS.
+

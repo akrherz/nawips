@@ -1,0 +1,60 @@
+#------------------------------------------------------------------------
+# in.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+#------------------------------------------------------------------------
+
+inaxis.f	- Process AXIS
+inbdta.f	- Initialize Common Blocks
+incbar.f	- Process CLRBAR
+incclr.f	- Process Color Code String
+inccol.f	- Process COLORS (New)
+incint.f	- Process CINT
+incldt.f	- Process CLDT
+incolr.f	- Process COLORS (Old)
+incont.f	- Process CONTUR
+inctyp.f	- Process CTYPE
+infilt.f	- Process FILTER
+inhilo.f	- Process HILO
+inhlsy.f	- Process HLSYM
+inintc.f	- Process CINT With Min/Max
+inline.f	- Process LINE
+inmark.f	- Process MARKER
+inmrgd.f	- Process MRGDAT
+inmrkr.f	- Process Marker For SFPARM
+inoutt.f	- Process OUTPUT
+inparm.f	- Process PARMS
+inprmc.f	- Process PARMS And Conditions
+inprmf.f	- Process Packing Information
+inptnd.f	- Process Pressure Tendency Symbol
+inptyp.f	- Process PTYPE
+inpwnd.f	- Process WIND (New)
+inpwth.f	- Process Past Weather Symbol
+inrvec.f	- Process Reference Vector
+inscal.f	- Process SCALE
+inside.f	- Determine Side Of Axis
+inskip.f	- Process SKIP
+inskyc.f	- Process Sky Coverage Symbol
+instyp.f	- Process STNTYP
+intaxs.f	- Process TAXIS
+intext.f	- Process And Set TEXT
+intitl.f	- Process TITLE
+intxtn.f	- Process TEXT
+intype.f	- Process TYPE
+inwind.f	- Process WIND (Old)
+inwsym.f	- Process Weather Symbol
+# testin.f	- IN Library Test Program
+
+#------------------------------------------------------------------------

@@ -1,0 +1,16 @@
+#!/bin/sh -f
+#--------------------------------------------------------------------------
+# lists
+#
+# Builds *.list files from *.sub files.
+##
+# Log:
+# M. Linda/GSC		11/97	Original
+#--------------------------------------------------------------------------
+
+sharedDir="`dirname $0`/../../shared/tools"
+tablesDir="`dirname $0`/../tables"
+
+$sharedDir/makelist.sh  $tablesDir  '$GEMPAK/source/bridge'
+
+#--------------------------------------------------------------------------

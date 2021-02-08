@@ -1,0 +1,47 @@
+#------------------------------------------------------------------------
+# ip.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		 3/99	Removed ipdfts.f
+#------------------------------------------------------------------------
+
+ipcwin.f	- Close Window
+ipdflt.f	- Get Local Default Parameters
+ipdynm.f	- Enter Dynamic Tutor
+ipexit.f	- Exit From TAE
+ipfvar.f	- Check If Variable In List
+ipgtpt.f	- Get Button Press Points
+iphelp.f	- Display Parameter Or Program Help
+ipidnt.f	- Program Identification
+ipinit.f	- Initialize TAE
+iplctl.f	- Process Loop Control Command
+iplist.f	- Display Parameter Values
+iplog.f		- Receive Logical Variable
+iplutf.f	- Apply Color Look-Up Table
+ipmfil.f	- Get Map File Name
+ipputv.f	- Save Parameter Value In List
+ipresp.f	- Determine If Program Interactive
+iprest.f	- Restore Parameter Values From File
+iprqst.f	- List Program's Parameters
+ipsave.f	- Save Parameter Values To File
+ipsavf.f	- Create Save File Name
+ipstr.f		- Receive String Variable
+ipstrp.f	- Create Parameter List From PDF File
+ipsvar.f	- Set Dynamic Tutor Parameter Value
+ipswin.f	- Set Current Window
+ipvers.f	- Display Version Number
+# testip.f	- IP Library Test Program
+
+#------------------------------------------------------------------------

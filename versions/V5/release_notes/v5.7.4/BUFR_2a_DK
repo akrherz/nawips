@@ -1,0 +1,10 @@
+Converted New Jet Element from ASCII to VGF (AWC)
+
+Program SIGAVGF, which converts SIGWX data from the UKMET browsable
+ASCII format to a VG file, will now create jet elements instead of
+grouped jets.  This means that flight level deltas can now be
+included as part of the output VG file.  For any given jet, the
+VG file will include all maximum winds and all winds with flight
+level deltas as barbs, and will alternate barbs and hash marks for
+the remaining wind points.
+

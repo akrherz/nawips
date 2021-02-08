@@ -1,0 +1,94 @@
+#!/bin/csh -f
+#-------------------------------------------------------------------------------
+#
+# COVERPLOT
+#
+# This script plots the cover graphic for the N-AWIPS User's Guide.
+#
+#
+# Two runs are made, one using the PS driver, and the other using the XW
+# driver.  The result from the PS driver can be printed and used for manual
+# cut-and-paste.  The result from the XW driver, with black and white colors
+# reversed, is intended for electronic cut-and-paste using FrameMaker's
+# "capture" and "import" functions.
+#
+## Log:
+# M. Linda/GSC		10/96   Original
+#-------------------------------------------------------------------------------
+
+$RM gemglb.nts
+$RM last.nts
+$RM coverGraphic.ps
+
+#-------------------------------------------------------------------------------
+
+foreach driver ( ps xw )
+
+    if ( $driver == xw ) then
+	gpcolor << EOF > /dev/null
+		colors = 1=black ; 101=white
+		DEVICE = xw | coverGraphic.xw | 700 ; 600
+		CLRBAR = 1///.97;.15//-3
+		TEXT   = 1/23//hw
+		LINE   = 1//1/0          ! 2/1/1/0
+		PANEL  = .03;.03;.97;.97/26/1/3/plot
+	    run
+	    exit
+EOF
+    else
+	gpcolor << EOF > /dev/null
+		colors = 1=white; 101=black
+		DEVICE = ps | coverGraphic.ps | 8.5 ; 11.0 | C
+		CLRBAR = 1///.97;.27/.32;.011/-3
+		TEXT   = 1.1/23//hw
+		LINE   = 1//1/0          ! 2/1/2/0
+		PANEL  = .03;.03;.97;.97/26/1/10/plot
+	    run
+	    exit
+EOF
+    endif
+
+#-------------------------------------------------------------------------------
+
+gdplot << EOF > /dev/null
+	GDFILE  = eta
+	GDFILE  = eta_96102112
+ 	GDATTIM = LAST
+	GLEVEL  = 0
+	GVCORD  = none
+	SKIP    = 0
+	SCALE   = 0
+	GFUNC   = quo(p06m,25.4) ! sm5s(pmsl)
+	CTYPE   = f/c              ! c
+	CONTUR  = 1
+	CINT    = .01;.1;.25;.5;.75;1;1.25;1.5;1.75;2;2.25;2.5;2.75;3;3.25;3.5;3.75;4!4
+	FINT    = .01;.1;.25;.5;.75;1;1.25;1.5;1.75;2;2.25;2.5;2.75;3;3.25;3.5;3.75;4
+	FLINE   = 0;21-30;14-20;5
+	HILO    = ! 26;2////30;30/y                                                       
+	HLSYM   = 2;1.5//21//hw
+	GVECT   =
+	WIND    =
+	REFVEC  =
+	TITLE   =
+	CLEAR   = yes
+	MAP     = 1//1
+	\$MAPFIL = mepowo.gsf
+	GAREA   = 14.0;-118.4;37.9;-7.5
+	PROJ    = STR/90.0;-90.0;0.0
+    run
+    exit
+EOF
+
+end
+
+#-------------------------------------------------------------------------------
+
+echo "Press RETURN to continue . . .\c"
+set response = $<
+
+gpend
+
+$RM gemglb.nts
+$RM last.nts
+
+#-------------------------------------------------------------------------------

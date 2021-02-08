@@ -1,0 +1,59 @@
+               N-AWIPS 5.6.l.1 Release Notes
+                    7/16/03
+
+Patch 5.6.l.1 covers bug fixes from June 23, 2003 to July 11, 2003.  
+
+******************************************************************************
+
+I.  Bug Corrections 
+
+    A.  QuikScat Data Plotting in NMAP2 on Linux (OPC)
+
+	Fixed problem reported by the OPC where NMAP2 would crash when
+	plotting the QuikScat data with a skip value larger than zero.
+	The problem was that the time stamp was being processed even if 
+	the data was not swapped properly for Linux.
+
+    B.  Grid Data Does Not Load Properly (ALL)
+
+	Fixed a problem first reported by the OPC, then encountered by all
+	of the centers. The problem occurs when plotting GFS model data
+	immediately after plotting data from a grid that has a different
+	navigation. The internal grid navigation was not being set to the GFS
+	navigation.
+
+	This problem was seen in NMAP2 and all of the GD grid plotting programs.
+
+    C.	NWX Print Problem (ALL)
+
+	Fixed a problem with printing text data from NWX. NWX will again print
+	any requested data.
+
+    D.  NMAP2 Crashes When ATCF Data is in an SPF File (ALL)
+
+	This bug was fixed and the ATCF data can be included in a Saved
+	Procedure File for NMAP2.
+
+
+*****************************************************************************
+
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+     patch_build_5.6.l.1
+
+To execute the script and save its output in a file type:
+
+     cd $GEMPAK/build
+     patch_build_5.6.l.1 >&! PATCH_$NA_OS & ; tail -f PATCH_$NA_OS
+
+The output of the script will be written to PATCH_$NA_OS.
+
+Note that the build script removes files that have been eliminated in
+this patch.  These files must be removed by hand if the build script
+is not executed.  A list of removed files for each patch always appears
+in the file: $NAWIPS/versions/remove.log.
+
+Note, also, that version 5.6.l must have been delivered before installing
+version 5.6.l.1.

@@ -1,0 +1,142 @@
+
+                           NAWIPS 5.4 Fixes  Change Description Log
+
+	( * indicates a change that makes this version of NAWIPS
+	    incompatible with the previous version )
+
+
+
+001.	ASCII Decoders
+
+	a.  Changed the function dcb_peekc to return a return code
+	    as well as the data to handle binary data.  In addition,
+	    DC_OSNM was corrected to declare "parms" as a character
+	    array.  Done, JW, (SS), 8/20/96.
+
+	b.  Updated DCHRLY to ignore fractional visibilities that
+	    do not have a unit indicator in METAR reports.  Done,
+	    SC, SJ, (SS), 8/21/96.
+
+	c.  Added a check to DC_GHDR to skip blank header lines.
+	    Done, SJ, (SS), 9/10/96.
+
+	d.  Fixed a typo in dcosnm.f that was causing no stations to 
+	    be added to the decoded dataset.  Done, DK, (SS), 9/11/96.
+
+	e.  Fixed a typed in DCADCD that was causing hourly decoder to 
+	    not store the special reports.  Done, SJ, (SS), 9/12/96.
+
+002.	GRIB Decoder
+
+
+003.	Grid Diagnostics
+
+	a.  Fixed check for invalid grid fields in DG_GETV that was
+	    improperly prohibiting calculations for some valid vector
+	    fields.  Also updated error message.  Done, TL, (SS), 
+	    9/11/96.
+
+
+
+004.	Parameter Calculations
+
+005.	Image Processing
+
+
+006.	GPLT Changes
+
+        a.  Corrected DPWTH and DPTND so that symbols are always plotted 
+	    using solid lines.  Corrected dimension of an array in IWTHR.
+            Cleaned up utility program PLOTSYM.  Added three new weather symbols 
+            to PLOTSYM.  Updated documentation for symbols.  Done,
+            ML, (SS), 9/5/96.
+
+	b.  Corrected GDRMAP to only check for map quadrants when using
+	    CIA maps.  Done, GK, (SS), 9/6/96.  Tested, DK, complete, 
+	    9/9/96.
+
+007.	Device Drivers
+
+
+
+008.	Documentation
+
+	a.  Improved help for LUTFIL.  Done, SM, (SS), 8/21/96.
+
+
+009.	Scripts/NTS files
+
+010.	General GEMLIB/CGEMLIB Changes
+
+	b.  Fixed a problem which caused the non-execution of programs
+	    if $RESPOND is set to NO.  Done, KT, (SS), 8/21/96.  Tested
+	    KT, complete 8/29/96.
+
+	c.  Updated ST_RXBL so that it uses separate buffers for input
+	    and output strings.  Also added the routine to TESTST.  
+	    Also, updated ST_LSTC, ST_LSTF, and ST_LSTI for 
+	    AIX systems.  Done, DK, (SS), 8/21/96.
+
+	d.  Corrected IN_HILO to properly handle case where no semicolons 
+	    are specified for symbol and range input strings.  Done,
+	    GK, (SS), 9/4/96.
+
+	e.  Corrected the size of the IMARK table dimension in the imark
+	    routine.  Done, ML, (SS), 9/4/96.
+
+	f.  Use GEMPAK earth radius instead of reading radius from McIdas 
+	    header.  This change improves the navigation.  Also improved
+	    the precision of navigation equations.  Done, TL, (SS), 8/12/96.
+	    Tested TL, complete, 9/13/96.
+
+
+011.	General GEMPAK Program Changes
+
+	a.  Corrected GDPLOT problem where HI/LO plotting did not properly
+	    function when options were specified.  User input variables
+	    were increased to 72 characters.  Done, GK, (SS), 8/21/96.
+
+	d.  Corrected SFGRAM so that it can handle 8 character station ID's.
+	    Done, KB, (SS), 9/4/96.
+
+012.	General GUI Modifications
+
+013.	NTL
+
+014.	NTRANS
+
+	    
+
+015.	NSAT
+
+
+016.	NWX
+
+
+017.	AFOS
+
+018.	NMAP
+
+019.	MAP FILES
+
+
+
+
+
+	SJ - Scott Jacobs		JA - Jeff Ator
+	DP - Dave Plummer		DKW - Duane Kidwell
+	LS - Larry Sager		RH - Robert Hollern
+	SS - Steve Schotz
+	DK - Dave Keiser		PB - Peggy Bruehl
+	KT - Kevin Tyle			JC - Jim Cowie
+	GK - Gary Krueger		SC - Steve Chiswell
+	TL - Tiros Lee
+	SM - Sarah Maxwell
+	CL - Chien Lin
+	SW - Shanshan Wang
+	ML - Mike Linda
+	EW - Ed Wehner
+
+	KB - Keith Brill
+	JW - Jim Whistler
+

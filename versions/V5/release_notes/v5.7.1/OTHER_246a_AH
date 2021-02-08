@@ -1,0 +1,11 @@
+V.  Bug Corrections
+
+    A.  Color coded AIRMETs plotting
+
+	Corrected the AIRMET color-coded turbulence display problem found by 
+	the AWC. If the top turbulence flight level of one AIRMET was the same 
+	as the lower turbulence flight level of another AIRMET, both AIRMETs 
+	were plotted in the same color when the turbulence filter was set to 
+	the common flight level. This problem has been fixed.
+
+

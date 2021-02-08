@@ -1,0 +1,29 @@
+VII. Map and Table File Updates
+
+
+    A.  Geog.tbl Updates (AWC, HPC)
+
+	Three changes have been made to the $GEMTBL/stns/geog.tbl.
+
+	Several ICAO areas used by the AWC have been modified. Changed
+        ICAO_U1 to ICAO_EU, ICAO_U2 to ICAO_AS and ICAO_U3 to ICAO_ME. 
+
+
+    B.  METAR Station Table Updates (SPC, ALL)
+
+	Added 45 new stations to the METAR surface station table 
+	$GEMTBL/stns/sfstns.tbl including 1F9, PSN and PTT as requested by
+        the SPC.   Also, renamed 3 surface stations 25R -> EBG, 5T5 -> INJ 
+        and T53 -> RBO.
+
+
+    C.  Sounding Station Table Updates (SDM, ALL)
+
+        Corrected the longitude of Cordoba Airport (87344), Argentina in 
+        the sounding table $GEMTBL/stns/snstns.tbl at the request of the SDM. 
+
+
+    D.  Prelim Extended Forecast Discussion added to NWX (OPC)
+
+        The Preliminary Extended Forecast Discussion has been added to NWX as
+        data type "HPC Products" under the "Extended Prelim" category. 

@@ -1,0 +1,1 @@
+$(BINDIR)/testcas: -ltextlib -lgemlib

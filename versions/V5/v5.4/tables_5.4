@@ -1,0 +1,160 @@
+		NAWIPS 5.4 Tables Changes Description Log
+
+t1.	Updated nsat resource file to maximize drawing area for
+	the imagery.  The increased number of lines resulted from
+	removing the graphics colors selection from the bottom
+	of the image.  Done, CL, (SS), 5/16/96
+
+	resource/Nsat
+
+t2.	Added NHC products to LDM and NWX tables.  Added 
+	Severe local storms and Non precipatating warnings
+	to the LDM and NWX tables at the request of the
+	Olympics support office.  Changed FTS from "R" type
+	to "M" type in NWX master.tbl.  Done, SJ, (SS),
+	5/17/96
+
+	tables/nwx/master.tbl
+	tables/nwx/guidata.tbl
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+	NEW:
+	tables/nwx/hurrcn.tbl
+
+t3.	Modified format of GEOG.TBL.  Added default projection and
+	lat/lon for corner points.  This change makes this table
+	imcompatable with previous versions of N-AWIPS.  Done,
+	GK, (SS), 5/31/96.
+
+	gempak/tables/stns/geog.tbl
+
+t4.	Re-included USLCC and USNPS geographic areas.  Fixed USSP
+	geographic area.  Done GK, (SS), 6/3/96.
+
+	gempak/tables/stns/geog.tbl
+
+t5.	Added a new SPC AFOS product, the hazardous weather update 
+	graphic (NMCGPHHRY), to the AFOS Emulator table and the
+	action table for the LDM.  Done, SJ, (SS), 6/4/96.
+
+	tables/afos/graphics/CONVET
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t6.	Added grids 215 and 218 to the grib decoder table GRDNAV.TBL.
+	Done, KB, (SS), 6/5/96.
+
+	gempak/tables/grid/grdnav.tbl
+
+t7.	Eliminated non-operational products from LDM action table.  
+	Also, added CLOSE option to FILE command in LDM action
+	table to reduce the number of open files on the system.
+	Done, SJ, (SS), 6/10/96
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t8.	Added new tables for new METAR decoder (see 001i.).  
+	Done, DK, (SS), 6/11/96
+
+	gempak/tables/stns/metar.tbl
+	gempak/tables/pack/metar.pack
+
+t9.	Added several new AFOS products needed by the Marine Forecast
+	branch.  These products are tropical text products.  Also
+	updated the operational LDM pattern action table to use
+	the CLOSE option.  Also, cleaned up the AFOS Emulator tables
+	for tropical text products.  Done, SS, (SS), 6/12/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+	tables/afos/text/TROALL, TRPMAR, TRPALL
+
+t10.	Added new decoders to LDM pattern action table.  These include
+	the METAR, Flash Flood, and Ship decoder.  Also updated the
+	action table to save all the text data that is input to
+	all the decoders.  Also cleaned up the pattern action table.
+	Swapped DCUAIR with DCUSND.  Done, SS, (SS), 6/13/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t10.	Corrected entry for dcffgu in the pattern action table.  The
+	order of the packing and station tables was incorrect.
+	Done, SS, (SS), 6/17/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t11.	Updated the CLIMO.BULL table for NWX which is used by the
+	climate reports product.  Added several stations and deleted
+	others which no longer isssue this product.  Also sorted
+	the table alphabetically by station identifier.  Done,
+	KT, (SS), 6/24/96.
+
+	tables/nwx/climo.bull
+
+t12.	Added a new product, MKCSTAHRY, to the AFOS emulator table and
+	LDM pattern action table.  Done, SJ, (SS), 6/24/96.
+
+	tables/afos/text/CONVEC
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+	NAWIPS V5.3.2
+-----------------------------------------------------------------------------
+t13.	Made a new surface stations table from the Air Weather Service master
+	table.  Done, SJ, (SS), 6/26/96.
+
+	gempak/tables/stns/sfstns.tbl
+
+	Renamed sfstns.tbl (old table) -> sfstns_old.tbl
+
+t14.	Added AVN MOS decoder to LDM pattern action table.  Removed
+	references to local tables for DCSAO AFOS decoder and
+	the flash flood decoder.  Done, SS, (SS), 6/27/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t15.    Replaced Operational SAO decoder with new version that decodes both
+        SAO and METAR reports.  Also moved new surface station table to
+        the operational area.  Moved new packing table to operational area.
+        Done, SJ, (SS), 6/27/96.
+
+        $GEMEXE/dcsao (copied to ldmas2 account)
+        ldm/ldm-4.1.42/etc/pqact.conf
+        gempak/tables/stns/sfstns.tbl
+        gempak/tables/pack/sao.pack
+
+t16.	Updated LDM pattern action table for AFOS dcsao decoder to
+	parse metar reports instead of sao reports.  Done,
+	SJ, (SS), 7/5/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t17.	Updated LDM pattern action table for decoders which use
+	the updated bridge software that has modified command
+	parameters and options.  Done, SJ, (SS), 7/8/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t18.	Added a new product to the SPC section of NWX called
+	"Hazardous Weather Update".  Also modified LDM
+	pattern action table to process this product.  Done,
+	SM, (SS), 7/8/96
+
+	NEW:tables/nwx/hwu.bull
+
+	tables/nwx/master.tbl, guidata.tbl
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t19.	Updated the table for the METAR decoder so that it matches
+	the DCSAO decoder except that it has the four character
+	station IDs.  Done, SW, (SS), 7/16/96.
+
+	gempak/tables/stns/metar.tbl
+
+t20.	Updated flash flood guidance zone and county entries.  Corrected
+	county and zone locations.  Done, GK, (SS), 7/17/96.
+
+t21.	Added several new stations for nwx state discussion product.  These
+	stations are in the WMO headers FPUS65 and FPUS66.  Also 
+	updated the ldm pattern action table to process these bulletins.
+	Done, SM, (SS), 8/5/96.
+
+	tables/nwx/sfd.bull
+	ldm/etc/pqact.conf

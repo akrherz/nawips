@@ -1,0 +1,99 @@
+#------------------------------------------------------------------------
+# dv.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+#
+# NOTE:	All DV_ subroutines are called only by DF_, DG_, and other DV_
+#	subroutines.  They are not intended to be called by programmers
+#	at large.  Therefore, the DV library does not appear in the 
+#	Programmer's Guide.
+#
+#------------------------------------------------------------------------
+
+# dvadv.f	- 
+# dvage.f	- 
+# dvavor.f	- 
+# dvcirc.f	- 
+# dvcros.f	- 
+# dvdef.f	- 
+# dvdirn.f	- 
+# dvdirr.f	- 
+# dvdiv.f	- 
+# dvdot.f	- 
+# dvdvdx.f	- 
+# dvdvdy.f	- 
+# dvfrnt.f	- 
+# dvgeo.f	- 
+# dvgrad.f	- 
+# dvgwfv.f	- 
+# dvinad.f	- 
+# dvisal.f	- 
+# dvkcrs.f	- 
+# dvkntv.f	- 
+# dvltrn.f	- 
+# dvmag.f	- 
+# dvmdiv.f	- 
+# dvmrad.f	- 
+# dvmsdv.f	- 
+# dvmsfc.f	- 
+# dvmtng.f	- 
+# dvnorm.f	- 
+# dvnrmv.f	- 
+# dvobs.f	- 
+# dvpvor.f	- 
+# dvqvcl.f	- 
+# dvqvec.f	- 
+# dvrad.f	- 
+# dvrich.f	- 
+# dvross.f	- 
+# dvrot.f	- 
+# dvsdiv.f	- 
+# dvshr.f	- 
+# dvsm5v.f	- 
+# dvsmul.f	- 
+# dvsquo.f	- 
+# dvstr.f	- 
+# dvtang.f	- 
+# dvthrm.f	- 
+# dvtng.f	- 
+# dvtngv.f	- 
+# dvun.f	- 
+# dvur.f	- 
+# dvvadd.f	- 
+# dvvasv.f	- 
+# dvvavg.f	- 
+# dvvavs.f	- 
+# dvvbtw.f	- 
+# dvvecn.f	- 
+# dvvecr.f	- 
+# dvvge.f	- 
+# dvvgt.f	- 
+# dvvlav.f	- 
+# dvvldf.f	- 
+# dvvle.f	- 
+# dvvlt.f	- 
+# dvvmsk.f	-
+# dvvmul.f	- 
+# dvvn.f	- 
+# dvvor.f	- 
+# dvvquo.f	- 
+# dvvr.f	- 
+# dvvsub.f	- 
+# dvwnan.f	- 
+# dvwshr.f	- 
+
+#------------------------------------------------------------------------

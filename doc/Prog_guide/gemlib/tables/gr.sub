@@ -1,0 +1,63 @@
+#------------------------------------------------------------------------
+# gr.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+#------------------------------------------------------------------------
+
+gracol.f	- Add Column
+gralgn.f	- Align Grid Corners
+graxlv.f	- Compute Axis Labels
+grclvl.f	- Select Contour Levels
+grcmpv.f	- Compute Contour Levels
+grcnav.f	- Compare Navigation Blocks
+grcval.f	- Select Contour Interval
+grfixa.f	- Fix Area
+grgalm.f	- Find Grid Subset Area
+grgtim.f	- Process Input Time
+grintp.f	- Interpolate Grid Data
+grlabl.f	- Encode Real Numbers As Text
+grlevl.f	- Process Input Levels
+grlist.f	- List Grids In File
+grltln.f	- Get LAT/LON At Grid Points
+grmban.f	- Make Barnes Analysis Block
+grmbn2.f	- Make General Barnes Analysis Block
+grmnav.f	- Make Naviagtion Block
+grmttl.f	- Create Title String
+grndcp.f	- Compute Number Of Decimal Places
+grnlev.f	- Check And Sort Contour Levels
+gropen.f	- Open Grid File
+grpack.f	- Decode Grid Packing Info
+grplin.f	- Get Points For Cross Section
+grploc.f	- Get Input For Grid Point
+grrarg.f	- Re-Arrange Globe-Wrapping Grid
+grrban.f	- Read Barnes Analysis Block
+grrnav.f	- Read Navigation Block
+grrobs.f	- Read Grid Relative Winds
+grscal.f	- Compute Grid Scaling
+grshrt.f	- Create Short Title String
+grsnav.f	- Set Navigation In GEMPLT
+grsscl.f	- Scale A Scalar Grid
+grstat.f	- Compute Grid Statistics
+grsubx.f	- Subset Grid
+grtitl.f	- Create Title And Short Title
+grtlst.f	- Get Times Given File Number
+grtmfl.f	- Get Times Given File Name
+grvscl.f	- Scale A Vector Grid
+grwnmc.f	- Write NMC And GEMPAK Grid Identifier
+grwobs.f	- Get Observed Winds
+grwtrm.f	- Write GEMPAK Grid Identifier
+# testgr.f	- GR Library Test Program
+
+#------------------------------------------------------------------------

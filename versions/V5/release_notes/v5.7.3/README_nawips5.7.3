@@ -1,0 +1,978 @@
+               N-AWIPS 5.7.3 Release Notes
+                   	06/17/04 
+
+
+Version 5.7.3 covers development from March 12, 2004 to June 17, 2004.  
+
+******************************************************************************
+
+I.  Product Generation Changes
+	
+    A.	NMAP2 Product Generation Improvements 
+
+	1. Added Option to Specify Product Generation Palette Width (ALL)
+
+	   The product generation palette column control mechanism has been
+           made accessible to sites in order to support local customization.
+           A new setting, named PGEN_ICON_NCOLUMN, has been added to
+           $GEMTBL/config/prefs.tbl.  This setting controls the number of 
+           columns in which the PGEN palette is displayed.
+
+           The default setting for PGEN_ICON_NCOLUMN is 3, meaning no change
+           from the previous display configuration.  However, changing this
+           value to 4 will enable a four column display.  Sites desiring to
+           move to a 4 column display may use the new btn.tbl files
+           which have been optimized for 4 column displays.  In $GEMTBL/pgen
+           there are many button files (i.e. funcbtn.tbl, linebtn.tbl, etc.).
+           These files control the order in which buttons are positioned on
+           the palette.  In order to use any of the 4 column files, rename the
+           file with a _4 suffix (e.g. cp funcbtn_4.tbl funcbtn.tbl).
+
+           Also a blank button has been added.  This button is a simple
+           non-functioning place holder which can be used to space buttons out
+           on a customized pgen palette.  In order to generate a blank button
+           insert "blank" in the desired *btn.tbl file.
+
+	2. Use Delete key to delete PGEN elements (ALL)
+
+           The delete key can now be used to delete selected elements.  It 
+           works in both select and multi-select modes.  This is a keyboard
+           shortcut that functions the same as the Delete Action on the
+           palette.  It can be undone using the Undo Action button.
+
+	3. Multi-Select Action Enhanced to Operate on Line Types (AWC, ALL)
+
+	   It is now possible to change line/front types when in multi-select.
+           The ability to change line/front types within select has been
+           available for many years (select a line/front, click on another
+           line/front button on the PGEN palette and the type changes).  This
+           functionality has now been added to multi-select.
+
+           To use this feature draw several lines or fronts.  Click on multi-
+           select and select more than one line/front.  Now click on a
+           different line/front button on the PGEN palette.  All selected
+           lines/fronts will change type to match that chosen on the palette.
+
+	4. Preliminary Time Interpolation Tool Added (AWC, ALL)
+
+           An initial version of a time interpolation function has been 
+           added as a product generation action.  The "INTERP" button on 
+           the PGEN palette is used to perform interpolations between two 
+           PGEN elements.
+
+           INTERP can only be used on closed lines, Sigmets, or the new 
+           Airmets/Sigmets or GFA objects (found under class MET).  INTERP 
+           does not function with all other elements. 
+           
+           Click on the INTERP button to invoke the "Interpolation" GUI.  
+	   Select the first element for interpolation by clicking the left
+           mouse button.  Confirm the selected element by left clicking again.
+	   The element turns red.  Use the same sequence to select the
+	   second desired element.  Click the "Interpolate" button on the
+	   the "Interpolation" GUI to perform the interpolation.  Intermediate
+	   element(s) are drawn between the selected elements.
+	
+	   Note that interpolation can only be performed on elements of the
+	   same type, e.g, if the first element is an Airmet, then the second
+	   element must be an Airmet.
+
+           The new Airmets/Sigmets and GFA objects contain an embedded forecast 
+           time.  For these elements the time of the starting and ending 
+           figures are placed in the "Starting Time" and "Ending Time" 
+           text boxes.  For all other valid elements, the user must supply 
+           a starting and ending time in whole hours e.g., 0, 4.  
+           The interval value is also entered in whole hours.  The time 
+           interval determines how many new elements are created between the 
+           starting and ending times associated with the two selected elements.
+
+           The attributes for the interpolated elements are based upon the
+           starting element.  If the new elements have an embedded forecast 
+           time, their forecast time will correspond to the starting time plus 
+           the number of hours they are offset.  For example, if MET/Airmets 
+           are selected and the starting element is hour 0, the ending 
+           element is 3 and the interval is 1, two new Airmets will be 
+           created, one with a forecast time of 1 and one with a forecast 
+           time of 2.
+
+	5. Smear Tool Enhancements (AWC)
+
+	   The smear tool has been enhanced to properly use the time
+	   associated with the Airmet/Sigmet and new GFA objects.  For
+	   example, if a 0 and 3 forecast hour Airmet are selected, then
+	   the resultant smeared AIRMET will have 0-3 as its time stamp
+	   and this time will appear in the text box.  Also, the position
+	   of the text box associated with the smear has been improved in
+	   this release. 
+
+	6. Preliminary GFA GUI Added to NMAP Product Generation (AWC)
+
+	   A preliminary GFA GUI has been added to product generation.  This
+	   release is for testing and evaluation purposes only.  The GFA
+	   GUI allows drawing of a limited set of GFA product elements.  
+	   This first release contains only the non-special case GFAs.  
+           These include: SIGWX, SIG_CLD_CIG, SIG_CLD_TCU, ICE, TURB, MTW
+	   and CLD.  The table $GEMTBL/pgen/gfa.tbl contains the list of 
+           currently available GFA types.  Locally, a site may delete unwanted 
+           GFA types by removing them from this file.  New GFA types may 
+           not be added locally, however.  The complete set of GFA elements 
+           will be added in future releases.  Also, the production of 
+           GAMET messages from NMAP GFA object will be added in the next 
+           release.
+
+	   The smear and time interpolation tools may be applied to  
+	   GFA objects.
+
+	   The GFA object is included under the "MET" class on the product 
+           generation palette.  The GFA objects are drawn in a manner similar 
+           to the new Airmet and Non-convective Sigmet provided in the last
+	   release.  Click the left mouse button to select GFA vertices.  
+	   Click the middle mouse button to complete the GFA figure.  A text
+	   box containing the GFA product elements attributes is then
+	   positioned with the mouse.
+
+	   In order to change the displayed text for a GFA, select it 
+           (click Select on the PGEN palette, then click on the element).  
+           Modify the attributes as desired and click on the "Apply" button.  
+           The text will be updated.  In order to reposition the text, click 
+           the "Move Text" button.  The text box is relocated to center 
+           on the next <L> mouse click location.
+
+           To create the From line, select the GFA.  The attribute window 
+           will be populated with the From line.  Click on the "Save" 
+           button and the From line edit window will open.  
+
+   	   Note that the From line text file name will default to the type of 
+           GFA with a txt extension.  Unlike the new Airmet/Non-convective 
+           Sigmet, there is no GFA sequence number.
+
+	7. Jet Element Enhancements (AWC)
+
+	   The flight level text associated with the wind barb can now be
+	   moved independently of the barb.  Select the desired wind barb 
+           with the left mouse click.  The multi-arrowed widget in the wind 
+           barb "Barb Info" GUI controls the position of the text relative 
+           to wind barb.  Click the desired button to move the text.  
+           Movement is relative to the orientation/rotation of the wind 
+           barb, NOT relative to the screen.  Note that the filled in 
+           circular button at the center of the matrix returns the text to 
+           the default position.  Also note that if the wind barb 
+           is moved, the flight level text returns to its default 
+           relative position.
+
+	   The default colors for the wind barbs and hashes can now be
+	   specified in the $GEMTBL/pgen/setting.tbl with the parameters
+	   "BARB COLR" and "HASH COLR".  These parameters are also
+	   available in the $GEMTBL/pgen/uattribd.tbl to specify the barb
+	   and hash symbol colors for post production purposes. 
+
+	8. VAA Enhancements (NESDIS, AR)
+
+	   The following enhancements have been made to the VAA production.
+	
+		a. All latitudes and longitudes in the VAA text product are 
+                   now in degrees:minutes.
+
+		b. The notification sentence regarding the change from KWBC 
+                   to KNES is inserted into the VAA text product between 
+                   REMARKS and NEXT ADVISORY, but only if the issuing center 
+                   is KWBC.
+
+	9. Change Save/Save As/Save All to be More Consistent. (SPC, ALL)
+
+           When the input and output file names are both specified in a
+           layer product file (LPF), the first Save All now always copies the 
+           contents of each layer to the named output VG file.  In previous 
+           releases, the first time Save All was clicked only layers that 
+           had changes were saved to the output VG files.  This produced
+	   undesirable empty VG files.
+
+           Also, when a VG file is appended, the specified output file name is
+           remembered, so a Save (or Save All) will result in a Save action
+           and not a Save As, i.e., the user will not be prompted to confirm 
+           the output file name.
+
+       10. Allow the Use of "drag" and "shift-click" for the List
+           Element.  (SPC)
+
+           A new area selection mechanism has been added to the List element.
+	   This capability can be used to facilitate the addition or deletion
+	   of counties when creating a watch status product.
+
+           When drawing or editing a list, the list components (i.e. counties,
+           zones, etc.) can be identified by a temporary, rectangular "drag"
+           box or by drawing a temporary, closed figure using the 
+           "shift-click" method.  Selection by single mouse-click is still 
+           available as well.
+
+           The behavior of a list with respect to the list components within 
+           the identified area is controlled in a new panel in the list 
+           attribute window.  Components may be toggled (if they are not 
+           currently included in the list they are added, if they are in the 
+           list they are removed), which is the way the single click select 
+           has always worked.  List components may also be added or deleted.
+
+           To select list components with the "drag" box, click on the List
+           Class on the PGEN palette and then one of the List Objects (i.e.
+           County).  Now click and hold the left mouse button.  Move the 
+           mouse and a temporary white rectangle is drawn from the site of 
+           the first click to the current mouse cursor location.  Drag the 
+           mouse to define the desired rectangle.  When the left mouse button 
+           is released, all the list components within the drag box are 
+           identified and the action (toggle, add, or delete) is applied. 
+           The list is updated accordingly.
+
+           To select list components with the "shift-click" method, click on
+           the List Class and then on one of the List Objects (i.e. County).
+           Press and hold the shift key on the keyboard and click once with
+           the left mouse button (once the mouse button is pressed, 
+           release the shift key).  Move the mouse and a temporary, white 
+           line is drawn from the site of the first mouse click
+           to the current mouse cursor location.  Click again with the left
+           mouse button to identify other points on the closed figure.  When
+           the the desired area is defined, click on the middle mouse button.
+           This click completes the figure.  All the list components within the
+           temporary figure are identified and the appropriate action
+           (toggle, add, or delete) is applied.  The list is updated 
+           accordingly.
+
+	8. Marine Zones Added to Watch Products (SPC)
+
+	   a. NMAP GUI Changes
+
+	   Marine zones have been added to the WCL, WOU initial, 
+           enhanced WSM, the WOU update and WOU final text messages.  The 
+           marine zones may be turned on or off in $GEMTBL/config/prefs.tbl 
+           file with the tag 'ADD_MARZON'.  Currently, they are turned OFF.  
+           The general reference of 'Coastal Waters' and the individual 
+           Great Lakes information remains as it is currently processed in 
+           the SEL, PWN and SAW.
+
+           The marine zones have been combined with the US counties into a 
+	   set of map files, $GEMPAK/maps/??mzcn.nws, where ?? is tp (top), 
+	   hi (high), me (medium) or lo (low) resolution.  In the file 
+	   $GEMTBL/config/mapfil.tbl, a new entry has been added for Marine 
+	   zones/Counties as the alias 'wbcmarine' which sets the NMAP2 map as 
+	   'himzcn.nws'.  In the map overlay table, $GEMTBL/nmap/mapovl.nmap, 
+           the marine zone/county map has been added as 'Marine_Cnty' and it 
+           appears in the NMAP2 map overlay window.  Attributes for the map 
+           may be changed in this table. 
+
+	   In the locator window at the bottom right of the main NMAP2 window,
+	   'MZ_CNTY' has been added to facilitate locating and identifying 
+           counties and marine zones.  It is currently set to display the 
+           station name in the locator window.  This may be changed to show 
+           the station ID in $GEMTBL/nmap/locator.tbl.  If the station name 
+           is selected, the county names will appear in the window, however, 
+           due to the length of the marine zones, their station ID is 
+           displayed as the station name in the locator window.  The marine 
+           zone names file, $GEMTBL/stns/marinenames.tbl, and the marine 
+           zones IDs are listed with the full marine zone names used by 
+           the text products.
+
+	   Note: it might be necessary to switch to COUNTY in the locator for 
+           islands surrounded by a marine zone to determine the county 
+           associated with the island.
+
+	   In NMAP2 PGEN, a new list element has been added 'WBC MZ'.  This 
+           list element functions the same way as the 'COUNTY' List element
+           did in the last release.  However, less mouse clicks are now 
+           necessary when editing watch status counties than were required 
+           in the previous release.  To edit status counties, click on the 
+	   list element and simply select the desired watch to invoke the
+	   "List Attributes GUI"  To exit status message county editing, 
+           click the middle mouse button.
+
+           When creating the enhanced WSM watch product, only the 
+           'WBC MZ' List element is used. The 'COUNTY' List element is 
+           no longer used. Therefore, any changes to the display of the 
+           COUNTY List element will have to be made to the WBC MZ List 
+           element in $GEMTBL/pgen/setting.tbl.
+
+	   *** Important Please Note: ****  
+
+	   VG files containing watches generated from previous versions 
+           of NMAP should NOT be used to generate watch status messages
+	   using this release.  Marine zones will not be generated.  Also,
+	   previous versions of NMAP CANNOT be used to generate watch status
+	   messages created in this release. 
+
+           b. Decoder Changes for DCWOU and DCWCN
+
+	   The WOU decoder, DCWOU, and the WCN decoder, DCWCN have been 
+           modified to used the combined county/marine zone table, 
+           $GEMTBL/stns/mzcntys.tbl, when decoding these two types of reports. 
+           See dcwou.hlp and dcwcn.hlp for details on how the counties and 
+           marine zones will appear in the decoded files.	
+ 
+           c. New bounds files for combined Counties and Marine Zones
+
+	   Two new bounds files have been created in support of the addition of
+	   marine zones to Watch-By-County. They are 
+           $GEMTBL/bounds/mzcntybnds.tbl and 
+           $GEMTBL/bounds/mzcntybnds.tbl.info.  The bounds files, map 
+           files and the marine zone/county tables were derived from the 
+           AWIPS Map Database Coastal Marine Zone shapefile.
+
+  	9. Transfer of Information from WCC Window to Watch Format window (SPC) 
+
+           In the Watch County Coordination window, the storm type, 
+	   expiration time, replacement watch numbers and the forecaster's 
+	   name are transferred to the 'Format Watch' window when the WCC
+	   has been saved. Also, the replacement watch numbers are now
+	   read from previously issued watches and placed in the "Watch
+	   Format" window.
+
+       10. Preliminary Capability to Select Breakpoints (TPC)
+
+	   A new product generation element, the Tropical Cyclone Advisory 
+           (TCA), has been added to NMAP2 to support the graphical selection 
+           of breakpoints.  This product generation tool will eventually 
+           be used to generate the watch warning text product.  In addition, 
+           the resultant VG file will be used as input into a new program,
+	   GPTCWW to generate the Watch/Warning graphic.  This release
+	   is for test and evaluation purposes only.  This initial version 
+           does not include the smaller Caribbean islands
+	   (but does include Cuba, Hispanola and Puerto Rico - all specified
+	   in a clockwise direction), and does not include sounds, bays and 
+	   other small bodies of water.  It uses official breakpoints only.
+
+	   To create a TCA element in PGEN follow these steps:
+
+   		a. In the PGEN palette, click on "MET" in the "Classes" panel 
+       		   and then click on "TCA" in the "Objects" panel; the "TCA 
+                   Attributes" edit dialog pops up.
+
+  		b. Create new TCA elements: 
+
+       		   In the 'TCA Attributes' dialog, enter all information in the 
+		   top panel and select severity and advisory type.  
+
+       		   In the middle panel click on the 'New Segment' button and 
+       		   move the mouse into the main NMAP window.  The breakpoint 
+       		   label drag box should appear with the name of the nearest 
+       		   breakpoint to the current cursor location. 
+
+       		   A left mouse click selects an individual breakpoint and 
+       		   puts it in the middle panel of the TCA attributes window.  A
+       		   second left mouse click will select the second point of the
+       		   segment.  Once the second breakpoint is identified, a new 
+       		   segment will be put in the list box in the bottom panel. 
+
+          To edit a TCA element in PGEN follow these steps:
+
+           	a. In PGEN in the select function, click on an existing TCA
+	           element.  The breakpoints of the segments of this TCA are 
+	           marked with open blue circles and the attributes of the TCA
+	           are loaded into the TCA attribute window.
+
+            	b. To change any items of the TCA attributes in the top panel
+	           (including Storm Type, Advisory Number, etc), make the 
+                   desired changes and click the "Apply" button.
+
+           	c. To change the attributes of a segment follow these steps:
+
+               	   Click on the desired segment in the list at the bottom of 
+    	       	   the window.  This action highlights the selected segment 
+                   within the list (i.e. inverts the colors) and places the 
+	       	   segment's information in the middle panel of the attributes 
+	       	   window.  Also the markers for that segment's breakpoints 
+	       	   change from the open, blue circles to filled, white 
+	       	   circles.  All other segments of the TCA remain unchanged.
+
+	       	   Make the desired changes to the middle panel of the 
+	       	   attributes window (i.e. change Advisory Type or Severity).
+	       	   Click on the "Apply" button. 
+
+	   	d. To change the breakpoints of a segment follow these steps:
+
+	       	   Click on the desired segment in the list at the bottom of 
+	           the window.  This action highlights the selected segment 
+                   within the list (i.e. inverts the colors) and places the 
+	           segment's information in the middle panel of the attributes 
+	           window.  Also the markers for that segment's breakpoints 
+	           will change from the open, blue circles to filled, white 
+	           circles.  All other segments of the TCA will remain 
+	           unchanged.
+
+	           Left click on one of the breakpoints with the white 
+	           circles.  The breakpoint turns red and the breakpoint
+	           drag box appears again.  The drag box contains the
+	           name of the nearest breakpoint to the cursor location.  The
+	           next left click selects a new breakpoint, and a middle
+	           mouse click will cancel the operation without making a change
+	           to the segment's breakpoints.
+
+ 	   	e. To add a new segment to an existing TCA element, click on
+	           the New Segment button and select the two breakpoints using
+	           left mouse clicks.
+
+    B.  Product Generation Pre/Post-Processing Programs
+
+	1. Modified SWH BUFR Files to be Consistent with UKMET Versions (AWC)
+
+	   Changes were made to the programs that process high-level
+	   significant weather (SWH) BUFR files (SIGWXCNV, BUFRENC and
+	   SIGAVGF) to ensure that content of the BUFR files is consistent
+	   with UKMET generated products.  These changes include:
+
+     	   	o specify cloud definition points in counterclockwise order;
+     		o adjust front movement by 180 degrees;
+     		o specify front speed in m/s;
+     		o correct turbulence definition table values;
+     		o use a replication factor of one for volcano points.
+
+	   Note that implementation of the agreed convention for wind and
+	   flight level assignments to hash marks has NOT been made in
+	   this release.  The hash mark encoding will be modified to
+	   follow the convention in the next release. 
+
+	   *** Important Please Note ***
+
+	   In the program BUFRENC, the parameter INFILE has been replaced
+	   with the new parameter UKAFIL.
+
+	2. Added Flight Level Deltas to Jets for SWH (AWC)
+
+	   Processing for flight level deltas, specifying vertical height
+	   information for a jet element at points where a wind barb is
+	   defined, was added to programs SIGWXCNV, BUFRENC and SIGBUFR.
+           Flight level deltas are now included in the SWH BUFR file.
+	
+	3. Re-engineer Library Code for VG to ASCII Conversion (AWC, ALL)
+
+	   A new table-driven VG to ASCII conversion program, VG2UKA, has
+	   been developed which reads user input parameters, tables, and a
+	   VG file to generate an ASCII output file in the UKMET browsable
+	   format.  This program will allow for a more generic means of
+	   creating ASCII files than the current capabilities included in 
+	   program SIGWXCNV.  VG2UKA is being released for TESTING and
+	   EVALUATION purposes ONLY.  The plan is to replace the program
+	   SIGWXCNV in the next release after parallel testing is conducted.
+
+	   VG2UKA is written as a GEMPAK program with the GEMPAK text based
+	   user interface.  Additional help on the program can be obtained by
+	   running the GEMPAK help facility in the program or viewing the
+	   GEMPAK help file $GEMHLP/hlp/vg2uka.hlp.
+
+	4. Four to Two Digit Conversion for Isobars (OPC)
+
+	   The GPMAP uattribute table, $GEMTBL/pgen/uattribd.tbl has been
+	   enhanced to allow Isobar, H and L symbol labels to be modified
+	   from four to two digits for output product creation.  The table 
+           now contains the column 'SPID' for CLASS_TEXT with a default 
+           value of 'NONE' (no special processing).  If SPID is set to 'PMSL', 
+           then integer text labels with values in the range 950-1050 are 
+	   converted to the proper pressure values represented as two digits.
+
+	5. Hurricane Graphics Improvements for 2004 Season (TPC, CPHC)
+
+           The Kelly graphic creation program, GPKGRF, has been modified to:
+
+     		o prevent storms in the far eastern Atlantic from overplotting
+       		  the NOAA logo;
+		o allow a variable number of forecast intensity text lines in
+       		  the legend box;
+     		o add an input parameter option for STRMID to bypass creation
+       		  of the watch/warning text message (default is to create
+                  the message);
+                o use updated track error tables for the 2004 hurricane season.
+
+	   The tropical cyclone danger area graphic was corrected to remove
+	   spurious storm name labels for Central Pacific storms.  (The storm
+	   name was being plotted even if the Pacific storm was outside the
+	   plot area.)
+
+	6. SPC changes to remove "MIDNIGHT" and "NOON" (SPC)
+
+           Modified WOU and SEV text products so that the 'MIDNIGHT' and 'NOON' 
+           phrases have been removed and either local 12:00 or 1200 AM/PM are 
+           used instead.  Modified SEL and PWN text products to remove the 
+           extra blank lines around the discussion portion of the text product.
+           These changes were made at the request of the SPC.
+
+ 	7. Tropical Cyclone Breakpoint Product (TPC)
+
+	   The experimental tropical cyclone watch/warning/advisory text
+	   product generated by the Kelly graphic creation program, GPKGRF,
+	   has been modified to fix a bug which occurred when two or more
+	   breakpoints had identical UGC (county or marine zone) boundaries.
+
+	8. Experimental Hurricane Graphics Program (TPC)
+
+	   A new program, GPTCWW, has been written to generate the Tropical
+	   Cyclone Watch/Warning graphic (previously known as the Kelly
+	   graphic).  This program reads the new VG TCA (tropical cyclone
+	   advisory) element from a VG file of breakpoint information and
+	   plots it in the same way as the Kelly graphic program GPKGRF.  See
+	   the NMAP2 Product Generation Improvements section for information
+	   on creating the VG file, and refer to the help for GPTCWW and
+	   parameter STRMID.
+
+	   This initial version does not include the smaller Caribbean islands
+	   (but does include Cuba, Hispaniola and Puerto Rico - all specified
+	   in a clockwise direction), and does not include sounds, bays and
+	   other small bodies of water.  It uses official breakpoints only.
+
+	   Please note:  GPTCWW is for test and evaluation purposes only.
+	   GPKGRF continues to be the operational program for creating the
+	   watch/warning graphic.
+
+II.  NMAP2 Display Improvements 
+
+    A.  Maximum Number of NMAP Data Loops Increased from 8 to 16 (ALL)
+       
+        The maximum number of available data loops has been increased from 8 
+        to 16.  Note however that the total number of available frames of 
+        data (120) has not changed.  The F1 - F8 keys may be used to select 
+        loops 1 - 8 as in previous versions.  The key combinations of 
+        Shift + F1 to Shift + F8 key have been added to select loops 9 - 16.
+
+    B.  Timeline Improvements (ALL)
+
+	Several enhancements have been made to the NMAP2 timeline.
+
+	The timeline now retains its selections when changing 
+        restore files for models or station models for surface and upper-air 
+        data.  For example, if the eta model is selected and the timeline
+	is adjusted to select forecast hours between 24 and 48 hours, that
+	range will be retained when switching to a different restore file.
+	However, the timeline settings are reset if a different model is 
+	selected or if a different cycle for the same model is selected.
+
+	The reference time in the "Range/Interval Input" GUI is now saved 
+        in Stored Procedure Files (SPFs) for forecast data sets.  This
+	capability allows the user to save the desired forecast hour
+	range by specifying the appropriate range and reference times in
+	the "Range/Interval Input" GUI.  For example, assume the current
+	cycle is 040605/1200 (12Z cycle) and the forecast hours from 
+	24 to 48 hours are desired for saving.  Set the "Ref Time" in
+	the GUI to 040606/1200 and the "Range" to 24 hours.  Click the
+	"Accept" button to apply these values to the timeline.  Click
+	the "Save Data Settings" to save these settings to the desired
+	SPF.  Restoring this SPF with a future cycle will adjust the
+	timeline range to the 24 and 48 hour forecast hours for that cycle.
+	A delta time relative to the reference time is actually saved in
+	the SPF so that it can be properly applied to future cycles.
+
+	The "Set Time" functionality that appeared in the timeline in previous
+	versions has been replaced by the Reference Time in the 
+        "Range/Interval Input" GUI.  The Reference Time allows
+	the user to specify the end time for the timeline, for 
+	observational data, or the start time, for forecast data.
+	The calendar window used by the Set Time function has been 
+	moved to the "Range/Interval Input" GUI.  Therefore, the user may type
+	a date/time string or use the calendar interface to select
+	a Reference Time.
+
+	The "Current Time" below the timeline has been changed to a push 
+        button.  The "Current Time" button updates the tick mark selection
+	outline. For observed data, the Reference Time is erased
+	and the tick marks for the latest data are selected. For
+	forecast data, the Reference Time is erased and the tick
+	marks for the earlier forecasts (the left side of the
+	timeline) are selected.  The other attributes of the timeline
+	are unaffected, i.e., range, interval, number of frames, etc.
+
+    C.  Convective Sigmet Enhanced to Display Extrapolated Times (AWC)
+
+	The capability to display the extrapolated 1-hour and 2-hour 
+        convective Sigmets has been added to NMAP2 and GPMAP.  The
+	extrapolated positions are decoded from the convective Sigmet
+	message.
+
+	In NMAP2, the extrapolated hours can be plotted by clicking on
+	the check boxes for the desired hours in the "CSIG Attributes"
+	GUI that is invoked with the "Edit Source" button in the
+	"Data Selection Window". The color and line attributes are specified
+	in the same manner as the initial convective Sigmet.
+
+	For GPMAP, the option to plot extrapolated convective Sigmets is
+	specified by the parameter CSIG.  See the help $GEMHLP/hlx/csig.hl2
+	or type help csig in GPMAP for information on how to specify the
+	extrapolated times and their display attributes.
+
+	The default plotting attributes for convective Sigmets are specified
+	in the table $GEMTBl/config/miscset.tbl under the CSIG row.
+
+	*** Important Please Note ***
+
+	The entries for CSIG have been modified in this release to support
+	the extrapolated times.  Since all shapes (area, line, and isolated)
+        are always plotted, the three "TYPE" lines for the different shapes 
+        have been replaced in the table for CSIG with "TYPE" lines for 
+        initial (0-hour), 1-hour, and 2-hour.  Each "TYPE" line has an 
+        on/off flag which determines whether it is displayed.  The
+        Sequence ID FLAG line  has been replaced with three Sequence ID
+        FLAG lines, one associated with each of the three hours.  If the 
+        initial hour is plotted, then the original five flags are applied for 
+        the initial hour CSIG.  If the initial hour is not plotted and only 
+        one extrapolated hour is to be plotted, then the original flags 
+        (except for the Sequence ID) are applied.  If the initial hour is not 
+        plotted and both 1-hour and 2 hour CSIGs are to be plotted, then 
+        the original flags (except for the Sequence ID) are applied to the 
+        1-hour CSIG.  The original flags (except for the Sequence ID) will 
+        always be applied to the lowest hour CSIG plotted.  See the
+	miscset.tbl for additional details.
+
+    D.  QuikScat Display Enhancements (OPC, TPC)
+
+	QuikScat data can now be plotted as arrows or directional arrows in 
+	addition to wind barb displays which were available in previous 
+	releases.  Arrows and directional arrows are available as options 
+	in NMAP2 and GPMAP.  
+
+	A type attribute, which specifies the type of wind vector has 
+        been added to the ARRW attribute line (ARRW size/head_size/width/type)
+        in the table $GEMTBL/nmap/miscset.tbl.  The value of type determines 
+        which of three buttons in the NMAP2 user interface will pop up when 
+        the "Edit Source" button is clicked.  The three buttons have the 
+        labels:  (a) "Barb"--only wind barbs can be plotted,  (b) "Arrw"--only 
+        directional arrows can be plotted, and (c) "Arrw/Barb"--the type 
+        of wind vectors (directional arrow, regular arrow, or wind barb) is 
+        selectable.  If type is 1, then the button will be labeled "Arrw".  
+        If type is 2, then the button will be labeled "Barb".  If type is 3, 
+        4, or 5, then the button will be labeled "Arrw/Barb", with the initial 
+        selection being directional arrow, regular arrow, and wind barb 
+        respectively.  If type is missing or 0, then if the arrow head size 
+        is greater than 0, then type is set to 1 for directional arrows, 
+        otherwise it is set to 2 for wind barbs.  All other values of type 
+        are considered invalid and will be set to 5 for user selectable wind 
+        vector with wind barb set initially.  The value of type has been set 
+        to 5 for QSCT and QSCT_HI in miscset.tbl. 
+
+	High resolution QuikScat data can now be displayed properly in NMAP2
+	and GPMAP.  Select "QSCT_HI" in the "Data Source" GUI to select the
+	high resolution data for display in NMAP2.
+
+	A problem in displaying QuikScat data when using the second color for 
+        rain in which circles were being displayed instead of wind barbs has 
+        been corrected.
+
+    E.  Advanced Objective Dvorak Technique (AODT) Added to NMAP (TPC)
+
+	The AODT GUI in NMAP has been completed and is ready for TPC 
+	operational testing, evaluation and use.  The NMAP GUI uses the
+	AODT version 6.3 library in collaboration with the CIMSS at
+	the University of Wisconsin.  The GUI includes the calculation of 
+        deterministic Dvorak scene type and classification as well as AODT 
+        history file management.
+
+	The NMAP AODT GUI is invoked by clicking on the "AODT" button on
+	the NMAP top menu bar.  The algorithm requires an IR image to be
+	loaded in a loop.  The AODT GUI includes options for entering the
+	desired storm center latitude and longitude (in decimal degrees), 
+        or by clicking the desired location with the mouse.  Note that
+	clicking on  "Click Loc" button is required to give mouse control back
+	to the AODT GUI, if other mouse actions, e.g, bringing up the 
+	"Data Selection" GUI are performed while the AODT GUI is active.  
+        After entering other inputs in the GUI, click the "Run AODT" button 
+        to generate the AODT results.  The results are displayed in the GUI.  
+
+	The NMAP GUI includes AODT history file management functions.  The
+	history file must be located in the directory from where NMAP is
+	executed.  The GUI does not assume any naming convention for the
+	file.  However, if the name includes a hst extension, e.g, 
+	storm1.hst, in its file name, then clicking on the downward arrow
+	on the right side of the "Storm/History" file text box, provides
+	a list of history files to select.  Click on the the "History File
+	Management ..." button to invoke the "AODT History File Management"
+	GUI.  This GUI allows operations to be performed on the history file
+	including printing, saving, and deletion of selected history file
+	entries.
+
+	*** Important Please Note ***
+
+	There was a problem discovered late in the release when using the 
+	AODT with 16 or 24 bit graphics settings for the workstation. Please
+	DO NOT use 16 or 24 bit. No problems have been found using an 8 bit
+	color depth. The CDB will be investigating this problem and hope to 
+	have a resolution in the next release.
+
+    F.  Ten Bit Visible Image Display (Unidata)
+
+	Ten bit visible images can now be properly displayed in NMAP2 and
+	GEMPAK programs.
+ 
+III. Decoder Improvements
+
+    A.  Remove duplicate reports in DCACFT (AWC, Unidata)
+
+        Modified the aircraft decoder, DCACFT, to check for and
+        eliminate duplicate reports.  The duplicates are decoded, but
+        are not written to the output GEMPAK file.  This task was done
+	in collaboration with the AWC and Unidata.
+
+    B.  JTWC Product Changes for 2004 Season (ALL)
+
+	The hurricane decoder DCHRCN was modified to decode 64 kt winds
+	from JTWC (Joint Typhoon Warning Center) instead of 100 kt winds,
+	in response to a change they made effective June 1, 2004.  The
+	decoder was also modified to bypass decoding of "repackaged" 
+	advisories from JTWC for eastern and central Pacific storms.  Only
+	the original TPC and CPHC advisories for these storms will be 
+	decoded, along with JTWC advisories for western Pacific storms.
+	Also, corrected the bug in which the year '03' had been hard-coded 
+        into the storm id field (e.g., wp0103) for storms from the JTWC. 
+
+    C.  SLS Decoder Improvements (SPC) 
+        
+        The SLS decoder, DCSVR, has been improved to properly handle the
+	OUTLINE FOR (outline type) line in the MND header of the Areal
+        Outline text Product (SLS).
+
+IV.  General Improvements
+
+    A.  GFS MOS Changes for Sky Cover, Ceiling Height, Visibility (ALL)
+
+	On May 18, 2004, the GFS MOS content was modified for the above
+	three types of data, per Technical Implementation Notice (TIN) 04-09.
+	GEMPAK parameter documentation has been updated accordingly for
+	parameters FCIG and FVSA.  (Required code changes, transparent to
+	the user, were made in release 5.7.2)
+
+    B.  Allowed Specification of "Missing" as a Parameter Value (ALL)
+
+	A specification of "=M" is now permitted as a GEMPAK parameter 
+        condition.  The "=M" condition denotes a missing value, so that, 
+        for example, the specification SFPARM=MARK:16;VSBY=M plots an X when 
+        the visibility value is missing. 
+
+    C.  NWX Color Coding for UV Index (ALL)
+	
+	Updated NWX to use new color coding conventions that became effective
+	on May 18th, 2004.
+
+    D.  NWX Table Handling (AWC, ALL)
+
+	Updated NWX to allow its tables to be accessed from local directories
+	as is true with other N-AWIPS tables. 
+
+    E.  NWX can now accept X server command line options (SPC, ALL)
+
+        NWX has been modified to pass on any window manager command line options
+        to the X server.  The NWX application itself does not have any command
+        line options and does no command line parsing.  It merely passes on
+        what it finds on the command line.
+
+    F.  New Parameters and Grid Diagnostics Added (Unidata)
+
+	New surface parameters and grid diagnostics developed by Unidata
+	have been added in this release.
+
+	Three new surface pressure parameters are available in GEMPAK.
+        They are:
+
+       		PANY - Returns PMSL if available, if not, returns ALTM
+                       if available
+                RANY - Computes the abbreviated three digit display of
+                       pressure
+                SANY - Takes a real and converts the integral part into
+                       a 3 character string
+
+         Two new grid diagnostic parameters for the lifting condensation
+         level are available in GEMPAK.
+
+                PLCL - Computes the pressure of the lifting condensation level 
+                       (LCL)
+                TLCL - Computes the temperature of the LCL 
+ 
+V.  Bug Corrections 
+
+    A.  Problem with DCCSIG error checking (AWC)
+
+        Improved the error checking when searching for convective Sigmets
+        and the outlook Sigmets.  Previously, if a bad outlook was found,
+        incorrect errors were written to the dccsig.log files.
+
+    B.  Fix Underscores in Table cwsu.bull (AWC)
+
+	The AWC reported a problem with the station table, cwsu.bull, for 
+        NWX. The station names contained spaces instead of underscores 
+        between words.  This problem was fixed and the table is now read 
+        correctly by NWX.
+
+    C.  NALARM Problems (NCO)
+
+	Two problems were resolved with NALARM.  The new product button was 
+        not flashing when a new bulletin arrived.  This problem has been 
+        corrected.  There was also a problem with printing bulletins with 
+        control characters to some new printers at the SDM desk.  The control 
+        characters are now stripped from the file before attempting to
+	print.
+
+    D.  Joinvgf Front Joining Problem (OPC)
+
+	The utility program JOINVGF now properly checks the front codes prior 
+        to joining them together.
+
+    E.  Partial Delete with Arrowed Lines (OPC) 
+
+	Corrected the problem with the two arrowed contour lines where the 
+        dialog box that allowed the user to indicate which line(s) were to 
+        have arrow heads did not allow all choices to be made.  This problem
+	occurred on Linux Enterprise platforms.
+
+    F.  Corrected Cancel Watch Number in Watch Format GUI (SPC) 
+
+        Fixed an error when canceling a watch.  It is now possible to cancel a
+        watch number > 999 but less than 10,000.
+
+    G.  Fixed Decoding of WFO String in final WOU (SPC)
+
+        Corrected a problem with the decoding of the final WOU text product.
+        The WFO string was decoded with a dollar sign appended to the WFO IDs 
+        in the data file.  This character has been removed.
+
+    H.  Fixed an Error When Issuing the Same Watch More Than Two Times (SPC)
+
+        Corrected the problem when a watch was issued more than two times which
+        caused the ww####.vgf file to be empty.  This bug was reported by 
+        the SPC on 5/12/04 and a patch correcting the problem was provided.
+
+    I.  Fixed the WCN decoder DCWCN (SPC)
+
+        It was noticed that the raw WCNs occasionally contained extra 
+        lines between the MND and the UGC line.  This line caused the '
+        decoder to hang.  These lines are now being skipped and there are 
+        extra checks for finding and validating the VTEC line.
+
+    J.  Set Time Calendar Year Problem (SPC)
+
+	Corrected the problem in the set time GUI where the user was prevented
+	from going forward after setting the date to years less than 1980.
+
+    K.  Removed check on number of times from GDSTAT (Unidata)
+
+        Removed the check on "ntime > MXLOOP"  This check is not necessary.
+        This bug was reported by Unidata.
+
+VI. Known Bugs  
+
+    A.  Default Button In Custom Map Definition GUI (ALL)
+
+        The "DEF Content" button in the "Custom Map Definition" GUI
+        does not work.  It is supposed to list the default map
+        projection for selected geographic regions.
+
+VII. Map and Table File Updates
+
+    The following summarizes significant table changes.  See 
+    $NAWIPS/versions/tables.log and nawips.log for a complete list of all 
+    table and map file changes. 
+
+    A.  Add Interpolation Type and Direction Flags to GRIB Tables (ALL)
+
+	Two flag value columns (HZREMAP, DIRECTION) have been added to the 
+        tables used by NAGRIB and NDFDG2 for decoding GRIB and GRIB2 data 
+        files.  The flag values are not used at this time.  They have been
+	added in preparation for the addition of the automatic horizontal 
+        remapping in a future release.
+
+	NAWIPS will continue to read the files in their old format.  However,
+	sites should update the tables with the new columns in preparation
+	for the automatic horizontal interpolation capability.  The following
+	tables should be updated in $GEMTBL/grid:  
+	
+	g2vars.tbl, gwcgrib2.tbl, ncepgrib[1, 129, 130].tbl, nmcgrib[1,2].tbl
+	wmogrib[1,2,3,129,130].tbl.
+
+    B.  Corrected NWX Table for CWSUs (AWC)
+
+	The table, $GEMTBL/nwx/cwsu.bull was corrected to add underscores
+	between the two word name entries.
+
+    C.  Updates to Setting and Uattribd tables (AWC, SPC)
+	
+	The tables $GEMTBL/pgen setting.tbl and uattribd.tbl have been
+	modified to support the specification of the jet barb and hash 
+	colors, and the new list element to support marine zones for 
+	watch production.  These tables MUST be updated to properly 
+	support these features. 
+
+    D.  Update gfsmos.stn (HPC)
+
+        As requested by the HPC, changed the priority number from 0 to 94 
+        for Zanesville OH, Hot Springs, VA, Beckley, WV and Lewisburg, WV.
+
+    E.  Add upper air station 72391 to the station table (NCO)
+
+        Added upper air station 72391, Point Mugu to snstns.tbl as requested 
+        by the SDM.
+
+    F.  Update to Table ncepgrib2.tbl (NCO)
+
+	At the request of the Production Management Branch, the entry for 
+        parameter number 180 (surface wind gust) was made active in 
+        ncepgrib2.tbl.  This parameter can now be decoded from GRIB files
+	to the GEMPAK format.
+
+    G.  New Unified Bounds and Map Files (Unified Surface Analysis)
+
+	Created bounds, VGF, and map files for Unified Analysis, including
+        these areas UA_HFO, UA_HPCE, UA_HPCW, UA_TOTAL, UA_TROP.  File
+        UA_bnd.vgf contains all five areas.  The associated new map files, 
+	located in $GEMMAPS, begin with the 'UA' prefix.
+
+VIII.   Calling Sequence Changes
+
+    A.  $GEMPAK/source/cgemlib/css/cssgtim.c, cssdate.c
+    B.  $GEMPAK/source/cgemlib/cgr/cgrrange.c
+    C.  $GEMPAK/source/gemlib/gh/ghbksq.f
+    D.  $GEMPAK/source/nmaplib/pgen/nmap_pgsmear.c
+    E.  $GEMPAK/source/gemlib/gg/ggwcck.f,ggwwtp.f
+    F.  $GEMPAK/source/gemlib/gh/ghkglb.f, ghkglp.f
+    G.  $GEMPAK/source/programs/util/sigwxcnv/sigjtin.c
+    H.  $GEMPAK/source/gemlib/dg/dgglev.f
+    I.  $GEMPAK/source/programs/gd/gdcross/gdxgts.f
+    J.  $GEMPAK/source/nxmlib/NxmGeneric.c
+    K.  $GEMPAK/source/gemlib/dg/dgqtms.f
+    L.  $GEMPAK/source/gemlib/gd/gdtxgl.f, gdtxvv.f
+    M.  $GEMPAK/source/nmaplib/nsf/nsftlst.f, nsfgtim.c
+    N.  $GEMPAK/source/nmaplib/nsn/nsntlst.f, nsngtim.c
+    O.  $GEMPAK/source/nmaplib/ngd/ngdtlst.f, ngdgtim.c
+    P.  $GEMPAK/source/gemlib/ti/titmln.f
+    Q.  $GEMPAK/source/programs/gui/nmap2/nmap_spfw.c (spfw_getRangeIntv)
+    R.  $GEMPAK/source/cgemlib/cvg/cvgrdtca.c (cvg_loadTcaInfo),
+                                cvgwrittca.c (cvg_loadTcaFileInfo)
+    S.  $GEMPAK/source/cgemlib/ctb/ctbg2gnam.c
+    T.  $GEMPAK/source/programs/gd/gddiag/gdginp.f, gdgwrt.f
+    U.	$GEMPAK/source/programs/gd/gdmod/gdoadd.f, gdoinp.f
+    V.  $GEMPAK/source/programs/na/ndfdg2/ndparm.f
+    W.  $GEMPAK/source/gemlib/na/narhdr.f
+    X.  $GEMPAK/source/gemlib/gg/ggqsct.f, ggqsrd.c
+    Y.  $GEMPAK/source/gemlib/im/imgtmp.f
+
+See the nawips.log and changes.log for additional details concerning
+these routines.
+
+IX. Configuration Management Changes 
+
+       ***** Site Administrators Important Please Note ****
+
+    A.  .CSHRC and .PROFILE
+
+	The .cshrc and .profile files were modified in this release to add 
+        a new search path for include files for the AODT programs. Added the
+	flag, -I$GEMPAK/source/aodtlib to $FFLAGS and $ANSI_CFLAGS for each
+	platform. Compile errors will occur without making this update. The
+	files .cshrc_v573 and .profile_v573 are provided as a guide.
+ 
+*****************************************************************************
+
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+     release_build_5.7.3 
+
+To execute the script and save its output in a file type:
+
+     cd $GEMPAK/build
+     release_build_5.7.3 >&! RELEASE_$NA_OS & ; tail -f RELEASE_$NA_OS
+
+The output of the script will be written to RELEASE_$NA_OS.
+
+Note that the build script removes files that have been eliminated in
+this version.  These files must be removed by hand if the build script
+is not executed.  A list of removed files for each release always appears
+in the file: $NAWIPS/versions/remove.log.

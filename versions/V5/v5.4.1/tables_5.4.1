@@ -1,0 +1,162 @@
+		NAWIPS 5.4.1 Tables Changes Description Log
+
+
+t1.	Added the hurricane reconnanisance flight observations for NWX.  Also
+	updated the LDM pattern action table to store these data.
+	Done, SJ, (SS), 9/4/96.
+
+	tables/nwx/guidata.tbl, master.tbl
+	ldm/etc/pqact.conf
+
+t2.	Updated the GEMPAK geography table to include Europe and North
+	Atlantic.  Changed to ocean area identifiers from two to four
+	characters.  Done, GK, (SS), 9/25/96.
+
+	gempak/tables/stns/geog.tbl
+
+t3.	Removed a duplicate occurence of ISW (Wisconsin Rapids, WI) from
+	the SFSTNS.TBL station table.  Done, KT, (SS), 9/25/96.
+
+	gempak/tables/stns/sfstns.tbl
+
+t4.	Modified and removed some of the color look-up tables for 
+	satellite images.  Done, JC, (SS), 9/27/96.
+
+	NEW:gempak/tables/luts/lingradk, ir_grb
+
+	gempak/tables/luts/wv_gree.tbl
+	tables/nsat/enhance.tbl
+
+t5.	Made several updates to LDM pattern action table and cleaned
+	it up.  Added tropical discussion products as requested by
+	HPC.  Removed the Olympic products.  Added new area forecast
+	discussion products.  Added test patterns for DCMETR.
+	Cleaned up FFG patterns.  Cleaned up unnecessary patterns
+	left over from other tests.  NWX tables were also modified
+	for olympics products removal.  Done, SJ, (SS), 10/8/96.
+
+	~ldm/etc/pqact.conf
+	tables/nwx/guidata.tbl, master.tbl
+
+t6.	Updated and corrected flash flood guidance tables.  Done,
+	GK, (SS), 10/8/96.
+
+	tables/nwx/ffg.bull
+	gempak/tables/stns/ffgzon.stn
+
+t7.	Uncommented out helicity grid in NAGRIB table ncepgrib2.tbl so that
+	this field will be decoded.  Done, RS, (SS), 10/28/96.
+
+	gempak/tables/grid/ncepgrib2.tbl
+
+t8.	Added a few more AFOS products to the NAFOS map table.  Done,
+	DK, (SS), 10/29/96.
+
+	gempak/tables/nafos/afosmap.tbl
+
+t9.	Updated stations in NWX state forecast discussions table.  Done,
+	SM, (SS), 10/29/96.
+
+	tables/nwx/sfd.bull
+
+t10.	Added volcano warning and forecast messages to the 
+	aviation group in NWX.  Added two world areas to the NWX
+	mapinfo table.  Done, SJ, (SS), 11/4/96.
+
+	NEW:tables/nwx/vlcsig.bull
+
+	tables/nwx/guidata.tb., mapinfo.tbl, master.tbl
+	~ldm/etc/pqact.conf
+
+t11.	Added several hundred new surface stations to sfstns.tbl.
+	These stations were added as a result of increasing
+	the extra number of stations in the surface decoders and
+	determining the appropriate station information of the
+	extra stations found.  Done, KT, (SS), 11/6/96.
+
+	gempak/tables/stns/sfstns.tbl
+
+t12.	Added Yucca Flats NV to the upper air station table.  This station
+	will be temporarily taking obs for station DRA (72387).  Done, SJ,
+	(SS), 11/14/96.
+
+	gempak/tables/stns/snstns.tbl
+
+t13.	Added nmap to ntl list table so that it appears as an icon.
+	Also changed all buttons to use the same foreground and
+	background colors.  Done, SJ, (SS), 11/15/96.
+
+	tables/ntl/ntl.tbl
+
+t14.	Corrected location of San Juan in NWX table.  Also 
+	eliminated from the product selection GUI, products
+	that are not collected.  Done, SM, (SS), 11/21/96.
+
+	tables/nwx/guidata.tbl, coastal.tbl
+
+t15.	Updated NWX tables to allow display of TAFS.  taf.stn
+	was renamed from fts.stn and modified so that each 
+	station appears with its 4-character ID.  Taf.bull
+	was renamed from fts.bull and modified to add a new
+	WMO header ID (FTAK32) for Alaska TAFS.  Done, KT,
+	(SS), 11/21/96.
+
+	NEW:tables/nwx/taf.stn, taf.bull
+
+	tables/nwx/master.tbl, guidata.tbl
+
+t16.	Added a hurricane model product to the AFOS text dataset.
+	The product is NMCHGHUR.  Done, SJ, (SS), 11/21/96.
+
+	~ldm/etc/pqact.conf
+	tables/afos/text/text.tbl
+
+	NEW:tables/afos/text/TRPMDL
+
+t17.	Removed obsolete tables in gempak/tables/stns.  Done,
+	SS, (SS), 11/22/96.
+
+	gempak/tables/stns/gemstns/*
+	gempak/tables/stns/metar_old.tbl, sfstns_old.tbl,
+	geog_old.tbl
+
+t18.	Added monthly climo reports to NWX.  Changed climo report
+	to daily climate report.  Done, SM, (SS), 11/27/96.
+
+	NEW:/tables/nwx/dclimo.bull, mclimo.bull
+	tables/nwx/guidata.tbl, master.tbl
+
+t19.	Added Torreon, Mexico (TRC< 76382) station to upper-air
+	station table per SDM request in their log.  Also removed
+	blank spaces in names and replaced with under_scores.
+	Done, SJ, (SS), 12/2/96
+
+	gempak/tables/stns/snstns.tbl
+
+t20.	Fixed problems with State Forecast Discussion station table and
+	added new stations to the Zone forecasts.  Made necessary changes
+	to LDM pattern action file.  Renamed dclimo.bull to dclim.bull and
+	mclimo.bull to mclim.bull.  Done, SJ, (SS), 12/3/96.
+
+	tables/nwx/sfd.bull, zone.bull
+
+	NEW:tables/nwx/dclim.bull, mclim.bull
+
+t21.	Added seven new surface stations to SFSTNS.TBL.  Deleted
+	two erroneous tabs in the table.  Removed duplicate occurance
+	of station LWV.  Also updated the METAR specific station table.
+	Done, KT, (SS), 12/3/96
+
+	gempak/tables/stns/sfstns.tbl, metar.tbl
+
+t22.	Updated SFSTNS.TBL with some corrections and added South
+	American stations.  Added world stations to Upper-air station
+	table, SNSTNS.TBL.  Done, SJ, (SS), 12/4/96.
+
+	gempak/tables/stns/sfstns.tbl, snstns.tbl
+
+t23	Deleted three duplicate stations from SFSTNS.TBL.  The
+	METAR.TBL was updated for South American stations.  Done,
+	KT, (SS), 12/5/96.
+
+	gempak/tables/stns/sfstns.tbl, metar.tbl

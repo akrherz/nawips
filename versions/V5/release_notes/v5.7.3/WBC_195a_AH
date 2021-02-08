@@ -1,0 +1,67 @@
+Watch-By-County
+
+    Addition of Marine Zones to Watch text product suite (SPC)
+
+	Added marine zones to the WCL, SEV, WOU initial, enhanced WSM, the 
+	WOU update and WOU final text messages. The marine zones may be turned 
+	on or off in $GEMTBL/config/prefs.tbl file with the tag 'ADD_MARZON'. 
+	Currently, they are turned OFF.  The general reference of 'Coastal Waters'
+	and the individual Great Lakes information remains as it is currently
+	processed in the SEL, PWN and SAW.
+
+        The marine zones have been combined with the US counties into a 
+	set of map files, $GEMPAK/maps/??mzcn.nws, where ?? is tp (top), 
+	hi (high), me (medium) or lo (low) resolution. In the file 
+	$GEMTBL/config/mapfile.tbl, a new entry has been added for Marine 
+	zones/Counties as the alias 'wbcmarine' which sets the NMAP2 map as 
+	'himzcn.nws'. In the map overlay table, $GEMTBL/nmap/mapovl.nmap, the 
+	marine zone/county map has been added as 'Marine_Cnty' and it appears 
+	in the NMAP2 map overlay window. Attributes for the map may be changed 
+	in this table. 
+
+	In the locator window at the bottom right of the main NMAP2 window,
+	'MZ_CNTY' has been added to facilitate locating and identifying counties 
+	and marine zones. It is currently set to display the station id in the
+	locator window. This may be changed to show the station name in 
+	$GEMTBL/nmap/locator.tbl. If the station name is selected, the county 
+	names will appear in the window, however, due to the length of the marine 
+	zones, their station id will still be displayed as the station name in the 
+	locator window. The marine zone names file, $GEMTBL/stns/marinenames.tbl, 
+	the marine zones ids are listed with the full marine zone names used by 
+	the text products.
+
+	Note: it maybe necessary to switch to COUNTY in the locator for islands
+	enveloped by a marine zone to determine which county the island belongs.
+
+	In NMAP2 PGEN, a new list element has been added 'WBC MZ'. This list
+	element functions the same way as the 'COUNTY' List element. When creating
+	the enhanced WSM watch product, it is only this 'WBC MZ' List element 
+	that is used, the 'COUNTY' List element will no longer be used. 
+	Therefore, any changes to the display of the COUNTY List element will 
+	have to be made to the WBC MZ List element in $GEMTBL/pgen/setting.tbl.
+
+    Decoder Changes for DCWOU and DCWCN
+
+	The WOU decoder, DCWOU, and the WCN deocder, DCWCN have been modified to
+	used the combined county/marine zone table, $GEMTBL/stns/mzcntys.tbl, 
+	when decoding these two types of reports. See dcwou.hlp and dcwcn.hlp
+	for details on how the counties and marine zones will appear in the
+	decoded files.	
+ 
+    New bounds files for combined Counties and Marine Zones
+
+	Two new bounds files have been created in support of the addition of
+	marine zones to Watch-By-County. They are $GEMTBL/bounds/mzcntybnds.tbl
+	and $GEMTBL/bounds/mzcntybnds.tbl.info.  The bounds files, all map files
+	and the marine zone/county tables were derived from the AWIPS Map Database 
+	Coastal Marine Zone shapefile.
+
+
+    Transfer of information from WCC window to Watch Format window (SPC) 
+
+        In the Watch County Coordination window, the storm type, 
+	expiration time, replacement watch numbers and the forecaster's 
+	name will be transfered to the 'Format Watch' window when the WCC
+	has been saved. 
+
+

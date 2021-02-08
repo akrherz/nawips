@@ -1,0 +1,78 @@
+
+                             NAWIPS Changed Files Log
+
+001a.	05/19/95	gempak5.2/tables/snstns.tbl
+
+000a.	05/24/95	versions/v5.2/*
+			versions/v5.2.1/*
+			versions/changes.log
+			versions/nawips.log
+			versions/remove.log
+
+000b.	05/31/95	gempak5.2/source/programs/gd/gdwind/gdwind.f
+
+002a.	05/31/95	gempak5.2/help/area.hl2
+			gempak5.2/help/colors.hl2
+			gempak5.2/help/cxstns.hl2
+			gempak5.2/help/garea.hl2
+			gempak5.2/help/gparm.hl2
+			gempak5.2/help/gpoint.hl2
+			gempak5.2/help/gvcord.hl2
+			gempak5.2/help/hilo.hl2
+			gempak5.2/help/hlsym.hl2
+			gempak5.2/help/levels.hl2
+			gempak5.2/help/output.hl2
+			gempak5.2/help/proj.hl2
+			gempak5.2/help/refvec.hl2
+			gempak5.2/help/sfparm.hl2
+			gempak5.2/help/snparm.hl2
+			gempak5.2/help/stnfil.hl2
+			gempak5.2/help/winpos.hl2
+			gempak5.2/nts/examples/*
+			gempak5.2/txt/programs/gdcntr.txt
+			gempak5.2/txt/programs/gdcross.txt
+			gempak5.2/txt/programs/gdinfo.txt
+			gempak5.2/txt/programs/gdlist.txt
+			gempak5.2/txt/programs/gdmap.txt
+			gempak5.2/txt/programs/gdplot.txt
+			gempak5.2/txt/programs/gdprof.txt
+			gempak5.2/txt/programs/gdstream.txt
+			gempak5.2/txt/programs/gdthgt.txt
+			gempak5.2/txt/programs/gdtser.txt
+			gempak5.2/txt/programs/gdwind.txt
+			gempak5.2/txt/programs/gpclose.txt
+			gempak5.2/txt/programs/gpmap.txt
+			gempak5.2/txt/programs/oabsfc.txt
+			gempak5.2/txt/programs/oabsnd.txt
+			gempak5.2/txt/programs/oagrid.txt
+			gempak5.2/txt/programs/sfgram.txt
+			gempak5.2/txt/programs/sfl604.txt
+			gempak5.2/txt/programs/sflist.txt
+			gempak5.2/txt/programs/sfmap.txt
+			gempak5.2/txt/programs/sncross.txt
+			gempak5.2/txt/programs/snhodo.txt
+			gempak5.2/txt/programs/snlist.txt
+			gempak5.2/txt/programs/snmap.txt
+			gempak5.2/txt/programs/snprof.txt
+			gempak5.2/txt/programs/sntser.txt
+
+002b.	05/31/95	gempak5.2/source/gemlib/dv/dvqvcl.f
+			gempak5.2/source/gemlib/dv/dvqvec.f
+
+003a.	06/01/95	gempak5.2/source/driver/active/nc/mopen.c
+
+002c.	06/01/95	gempak5.2/help/notae.hlp
+
+004a.	06/05/95	tables/afos/graphics/OBSGRP
+
+002d.	06/07/95	gempak5.2/help/taxis.hl2
+
+002e.	06/12/95	gempak5.2/txt/programs/gdedit.txt
+			gempak5.2/txt/programs/gdomeg.txt
+			gempak5.2/txt/programs/snedit.txt
+
+000c.	06/13/95	gempak5.2/source/gplt/attribute/gspwth.f
+			gempak5.2/source/device/attribute/dspwth.f
+			gempak5.2/source/device/draw/ipwth.f
+
+002f.	06/14/95	doc/User_guide/*

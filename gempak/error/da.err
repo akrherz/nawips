@@ -1,0 +1,9 @@
+!	DA error file
+!
+ -1     ! Python is not configured and not built into the applications
+ -2     ! Python error: script and function are not callable
+ -3     ! Python error: cannot set command line arguments
+ -4     ! Python error: script failed to execute
+ -6     ! Cannot open XML file: !AS
+ -8     ! File is not a Data Access configuration file
+ -9     ! Incorrect header data request

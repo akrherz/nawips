@@ -1,0 +1,123 @@
+			NAWIPS 5.11.x  Removed Files Log
+
+===============================================================================
+25.21.4.4a 8/21/07 gempak/source/programs/gd/gdprof/gdpdta.f, gdpduv.f
+
+25.21.4.6a 8/21/07 $GEMPAK/source/programs/gd/gdtser/gdtdta.f
+
+25.21.4.2a 8/22/07 $GEMPAK/source/programs/gd/gdcross/gdxdta.f, gdxdvv.f,  gdxgts.f
+
+C1.17a	8/23/07	gempak/help/hlp/GrphGd.hlp
+		extlibs/ncepBUFR/20060414/bufrlib.PRM
+
+N4.7a	9/25/07	$GEMPAK/source/cgemlib/cfl/cflffil.c, cflrscd.c
+		$GEMPAK/source/gemlib/tb/tbnids.f
+		$GEMPAK/source/nmaplib/nim/*.f 
+
+V8.1a	10/17/07 gempak/source/gplt/device/plot/inoaa.f
+
+N4.7c	10/22/07 gempak/source/nmaplib/nms/nmsghrn.c
+
+============================  End of Release 5.11.1  ==========================
+
+C7.2a	11/19/07 extlibs/GPC/v2.32
+		extlibs/GAMET/v1.6
+		extlibs/ncepBUFR/ut
+		gempak/source/cgemlib/cgr/testgpc.c testgpc_link
+		gempak/source/cgemlib/cvg/convcvg.c convcvg_link
+				dumpvgf.c dumpvgf_link
+		gempak/source/device/main
+		gempak/source/gplt/device/*
+		gempak/source/gplt/main
+		gempak/source/programs/gd/gdplot2/gdplot.f testgdp.f testgdp_link
+		gempak/source/programs/gd/gdplot3/gdplot.f testgdp.f testgdp_link
+		gempak/source/programs/gui/nalarm/label.c list.c naltext.c
+				string.c text.c viewfile.c nalarm.h
+		gempak/source/programs/gui/nmap2/nmap.c
+		gempak/source/programs/gui/nsharp/sharp95.c
+		gempak/source/programs/util/fop/rfop.c rfop_link
+		gempak/source/programs/util/mdp/mdpspc.c mdpspc_link
+		gempak/source/programs/util/nesdis/*
+		gempak/source/programs/util/snap/*
+		gempak/source/programs/util/vgftotag/*
+		gempak/source/testprog
+
+C7.2b	12/7/07	gempak/utilities/bounds/createbinfo* vgftobnd* README.maptobnd
+		gempak/utilities/mkelev/*
+
+C7.3a	12/29/07 gempak/build/all_link driver_link gp_link nmaplib_link
+			textlib_link atest_link drvprog_link gplt_link
+			oa_link util_link bridge_link gui_link plotsyms_link
+			cgemlib_link gd_link programs_link contrib_link
+			gemlib_link na_link sf_link dc_link nc_link sn_link
+		 gempak/source/.../*_link
+		 gempak/source/cgemlib/cfl cpg css cst
+		 gempak/source/gemlib/aw de df dg dl dv gd gh gr
+						 jb oa pd sf sn vf
+		 gempak/source/gemlib/gg/ggcwcp.f ggdvgf.c
+		 gempak/source/gemlib/im/imgpix.f imrfax.c
+
+26.1.1a	12/31/07 gempak/source/programs/gui/nwx/auto.c dchk.c dir.c draw.c
+			dslw.c dttm.c fosd.c guid.h guidInit.c
+			gui.h mapw.c nwxcmn.h nwxerr.c nwxtbl.c prf.c
+			qpf.c srchb.c srcho.c srchw.c sstruct.c txtw.c
+			uvi.c wbox.c wwcrnr.c
+
+G40.2a	12/31/07 gempak/source/contrib/tdl
+		 $OS_LIB/libradmap.a
+
+6.18a	1/1/08	gempak/build/melbufr_compile, melbufr_link
+
+C7.4a	1/8/08	gempak/build/all_compile appl_compile bridge_compile cgemlib_compile
+			contrib_compile device_compile driver_compile gametlib_compile
+			gd_compile gemlib_compile gempak_compile gpclib_compile
+			gp_compile gplt_compile gpltdev_compile gui_compile na_compile
+			nceput_compile nmaplib_compile nxmlib_compile oa_compile
+			programs_compile sf_compile sn_compile syslib_compile
+			textlib_compile util_compile vgstruct_compile
+		gempak/source/cgemlib/shp spf xml
+		gempak/source/programs/util/maps/map_ssfgsf.f, shpcv.c, shpssf.c, ssfgsf.c
+
+C7.5a	1/22/08	gempak/source/cgemlib/cas cbf ctb utf g2
+		gempak/source/gemlib/gb gdu grc gu na pc pr ps pt
+		gempak/source/gemlib/fortran_wrappers/cgd*.c gd*.f
+		gempak/source/gemlib/fl/cfl* testcfl*
+		gempak/source/gemlib/ss/css* testcss*
+		gempak/source/gemlib/st/cst* testcst*
+		gempak/source/programs/gd/testgdp
+
+V9.1a	2/5/08	gempak/source/driver/active/gf/x[c,e,o,s,x]*.c
+
+V9.1b	2/11/08	gempak/source/driver/active/xw/xwgui.h
+
+============================  End of Release 5.11.2  ==========================
+
+22.5a	3/31/08	gempak/source/programs/gd/goftxt/g2t_rules.f
+
+G51.35a	4/3/08	gempak/source/gemlib/cmm/cmmmalloc1d.c, cmmfree1d.c
+		gempak/source/gemlib/fortran_wrappers/ctg*.c, tg*.f
+
+25.21.4.7b 5/1/08 gempak/source/programs/gd/gdvint/gdvint_gn.mk
+
+============================  End of Release 5.11.3  ==========================
+M1.29c	7/30/08	gempak/maps/ascii/aschiosou.nws, ascloosou.nws, ascmeosou.nws, 
+								asctposou.nws
+		gempak/maps/hiosou.nws, loosou.nws, meosou.nws, tposou.nws
+
+C3.12a	7/31/08	gempak/source/programs/gd/gdinfo/gdinfo_gn.mk
+
+============================  End of Release 5.11.4  ==========================
+
+12.39a	9/25/08	gempak/source/cgemlib/gh/ghfstn.c
+
+============================  End of Release 5.11.4a  ==========================
+
+============================  End of Release 5.11.4b  ============================
+
+============================  End of Release 5.11.4c  ============================
+
+============================  End of Release 5.11.4d  ============================
+
+D30.4	12/11/09 gempak/source/programs/dc/ltgdecode/dump_lw_ltg.c
+
+============================  End of Release 5.11.4e  ============================

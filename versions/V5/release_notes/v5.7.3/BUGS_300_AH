@@ -1,0 +1,9 @@
+BUGS
+
+	A. Removed check on number of times from GDSTAT (Unidata)
+
+	   Removed the check on 'ntime > MXLOOP'. The check should have 
+	   used LLMXGT instead of MXLOOP, but on returning from GD_FTIM, 
+	   'ntime' cannot be larger than LLMXGT, therefore, this check 
+	   is not necessary.  This bug was reported by Steve Chiswell/
+	   Unidata (3/15/04).

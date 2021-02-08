@@ -1,0 +1,2646 @@
+%!
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%DocumentFonts: (atend)
+%%EndComments
+%
+% FrameMaker PostScript Prolog 3.0, for use with FrameMaker 3.0
+% Copyright (c) 1986,87,89,90,91 by Frame Technology Corporation.
+% All rights reserved.
+%
+% Known Problems:
+%	Due to bugs in Transcript, the 'PS-Adobe-' is omitted from line 1
+/FMversion (3.0) def 
+% Set up Color vs. Black-and-White
+	/FMPrintInColor systemdict /colorimage known
+		systemdict /currentcolortransfer known or def
+% Uncomment this line to force b&w on color printer
+%   /FMPrintInColor false def
+/FrameDict 295 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} def
+	} if
+/FMVERSION {
+	FMversion ne {
+		/Times-Roman findfont 18 scalefont setfont
+		100 100 moveto
+		(FrameMaker version does not match postscript_prolog!)
+		dup =
+		show showpage
+		} if
+	} def 
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/organgle FMLOCAL
+	/orgfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne dup {setmanualfeed} if
+	/manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	/yscale exch def
+	/xscale exch def
+	currenttransfer cvlit /orgxfer exch def
+	currentscreen cvlit /orgproc exch def
+	/organgle exch def /orgfreq exch def
+	setpapername 
+	manualfeed {true} {papersize} ifelse 
+	{manualpapersize} {false} ifelse 
+	{desperatepapersize} if
+	end 
+	} def 
+	/pagesave FMLOCAL
+	/orgmatrix FMLOCAL
+	/landscape FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch neg translate pop 
+		}
+		{pop pop}
+		ifelse
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+	} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin
+	array /fillvals exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fy translate 
+	rotate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	} bind def
+/FMENDEPSF {
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	/FMdicttop countdictstack 1 add def 
+	statusdict begin stopped end 
+	countdictstack -1 FMdicttop {pop end} for 
+	} def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped pop 
+		end
+		} if
+	} def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+/freq dpi 18.75 div 8 div round dup 0 eq {pop 1} if 8 mul dpi exch div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setpattern {
+	 /bwidth  exch def
+	 /bpside  exch def
+	 /bstring exch def
+	 /onbits 0 def  /offbits 0 def
+	 freq sangle landscape {90 add} if 
+		{/y exch def
+		 /x exch def
+		 /xindex x 1 add 2 div bpside mul cvi def
+		 /yindex y 1 add 2 div bpside mul cvi def
+		 bstring yindex bwidth mul xindex 8 idiv add get
+		 1 7 xindex 8 mod sub bitshift and 0 ne
+		 {/onbits  onbits  1 add def 1}
+		 {/offbits offbits 1 add def 0}
+		 ifelse
+		}
+		setscreen
+	 {} settransfer
+	 offbits offbits onbits add div FMsetgray
+	/graymode false def
+	} bind def
+/grayness {
+	FMsetgray
+	graymode not {
+		/graymode true def
+		orgxfer cvx settransfer
+		orgfreq organgle orgproc cvx setscreen
+		} if
+	} bind def
+	/HUE FMLOCAL
+	/SAT FMLOCAL
+	/BRIGHT FMLOCAL
+	/Colors FMLOCAL
+FMPrintInColor 
+	
+	{
+	/HUE 0 def
+	/SAT 0 def
+	/BRIGHT 0 def
+	% array of arrays Hue and Sat values for the separations [HUE BRIGHT]
+	/Colors   
+	[[0    0  ]    % black
+	 [0    0  ]    % white
+	 [0.00 1.0]    % red
+	 [0.37 1.0]    % green
+	 [0.60 1.0]    % blue
+	 [0.50 1.0]    % cyan
+	 [0.83 1.0]    % magenta
+	 [0.16 1.0]    % comment / yellow
+	 ] def
+      
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	/K { 
+		Colors exch get dup
+		0 get /HUE exch store 
+		1 get /BRIGHT exch store
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} def
+	/FMsetgray { 
+		/SAT exch 1.0 exch sub store 
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} bind def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	/FMsetgray {setgray} bind def
+	/K { 
+		pop
+		} def
+	}
+ifelse
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setpattern} 
+	{grayness}
+	ifelse
+	} bind def
+/V { 
+	gsave eofill grestore
+	} bind def
+/N { 
+	stroke
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+	/rad FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+% The following commented out code did not work for tangent lines of zero
+% length.  The code following it was provided by Frame to patch this error.
+%
+%/RR { 
+%	/rad exch def
+%	normalize
+%	/y2 exch def
+%	/x2 exch def
+%	normalize
+%	/y1 exch def
+%	/x1 exch def
+%	newpath
+%	x1 y1 rad add moveto
+%	x1 y2 x2 y2 rad arcto
+%	x2 y2 x2 y1 rad arcto
+%	x2 y1 x1 y1 rad arcto
+%	x1 y1 x1 y2 rad arcto
+%	closepath
+%	16 {pop} repeat
+%	} bind def
+/rarc
+    {rad
+     {arcto} stopped
+    } bind def
+/RR {
+    /rad exch def
+    normalize
+    /y2 exch def
+    /x2 exch def
+    normalize
+    /y1 exch def
+    /x1 exch def
+    mark
+    newpath
+    x1 y1 rad add moveto
+    x1 y2 x2 y2 rarc
+    x2 y2 x2 y1 rarc
+    x2 y1 x1 y1 rarc
+    x2 y1 x1 y1 rarc
+    x1 y1 x1 y2 rarc
+    closepath
+    cleartomark
+    } bind def
+
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath fill
+	grestore
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	stroke
+	grestore
+	} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 4 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/cip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        cris indx placer 255 mul cvi put
+        cgis indx placeg 255 mul cvi put
+        cbis indx placeb 255 mul cvi put
+    } for pop cris
+
+	
+	} bind def
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+	} bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+	dup 
+	8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+	/proc1 FMLOCAL
+	/proc2 FMLOCAL
+	/newproc FMLOCAL
+/Fmcc {
+    /proc2 exch cvlit def
+    /proc1 exch cvlit def
+    /newproc proc1 length proc2 length add array def
+    newproc 0 proc1 putinterval
+    newproc proc1 length proc2 putinterval
+    newproc cvx
+} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+/colorsetup {
+    currentcolortransfer
+    /gryt exch def
+    /blut exch def
+    /grnt exch def
+    /redt exch def
+    0 1 255 {
+        /indx exch def
+        /cynu 1 red indx get 255 div sub def
+        /magu 1 green indx get 255 div sub def
+        /yelu 1 blue indx get 255 div sub def
+        /k cynu magu min yelu min def
+        nredt indx 1 0 cynu max sub redt exec put
+        ngreent indx 1 0 magu max sub grnt exec put
+        nbluet indx 1 0 yelu max sub blut exec put
+        ngrayt indx 1 k sub gryt exec put
+    } for
+	} bind def
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch Fmcc settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	colorsetup
+	/is w d wbytes string def
+    /ris w d wbytes string def
+    /gis w d wbytes string def
+    /bis w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        ris indx placer 255 mul cvi put
+        gis indx placeg 255 mul cvi put
+        bis indx placeb 255 mul cvi put
+    } for pop ris}
+	{gis} {bis} true 3 colorimage 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	colorsetup
+	/is im 0 lb getinterval def 
+    /cris lb string def
+    /cgis lb string def
+    /cbis lb string def
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cip} {cgis} {cbis} true 3 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip} {gip} {bip} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip gip bip w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+%%EndProlog
+%%BeginSetup
+(3.0) FMVERSION
+1 1 612 792 0 1 9 FMDOCUMENT
+0 0 /Helvetica-Bold FMFONTDEFINE
+1 0 /Times-Roman FMFONTDEFINE
+2 0 /Times-Bold FMFONTDEFINE
+3 0 /Helvetica FMFONTDEFINE
+4 0 /Times-Italic FMFONTDEFINE
+5 0 /Times-BoldItalic FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 265.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(D-1) 306.95 36 T
+(October 1996) 458.67 36 T
+0 18 Q
+(APPENDIX D) 260.02 658 T
+0 14 Q
+(GEMPAK Tutorial) 256.69 628.67 T
+1 12 Q
+1.9 (In Chapter 2, we saw a list of the commands available within the GEMPAK user) 108 596 P
+2.54 (interface.  In this appendix, we will actually run, step by step, a few GEMPAK) 108 582 P
+0.53 (programs.  It is very important that as you work through these examples, you use the) 108 568 P
+0.07 (on-line help files and Chapters 3 and 4 in this manual.  Obviously, we will not be able) 108 554 P
+0 (to go through every GEMPAK program in this tutorial, but if you learn how to use the) 108 540 P
+0.66 (on-line help and the manual, you will be able to run any GEMPAK program, just by) 108 526 P
+(reading the available help.) 108 512 T
+-0.45 (To run a GEMPAK program, for example) 108 486 P
+2 F
+-0.45 (SFLIST) 309.36 486 P
+1 F
+-0.45 (, the surface listing program, simply) 350.69 486 P
+0.1 (type the name of the program.  These names are case sensitive, so you must use lower) 108 472 P
+(case:) 108 458 T
+3 10 Q
+(sflist) 162 433.33 T
+1 12 Q
+1.33 (If your path is set up properly the program will run. If it doesn\325t run, try using the) 108 408 P
+($GEMEXE environment variable to point to the proper directory.) 108 394 T
+3 10 Q
+($GEMEXE/sflist) 162 369.33 T
+1 12 Q
+2.61 (Eventually, you\325ll probably want to set up your path to automatically search the) 108 344 P
+(GEMPAK bin directory for GEMPAK executable files.) 108 330 T
+(Once you start SFLIST, you\325ll see the following information on your screen:) 108 304 T
+3 10 Q
+(SFFILE) 162 279.33 T
+(Surface data file) 234 279.33 T
+(AREA) 162 267.33 T
+(Data area) 234 267.33 T
+(DATTIM) 162 255.33 T
+(Date/time) 234 255.33 T
+(SFPARM) 162 243.33 T
+(Surface parameter list) 234 243.33 T
+(OUTPUT) 162 231.33 T
+(Output device/filename) 234 231.33 T
+(IDNTYP) 162 219.33 T
+(STNM or STID) 234 219.33 T
+(Parameters requested: SFFILE,AREA,DATTIM,SFPARM,OUTPUT,IDNTYP.) 162 207.33 T
+(GEMPAK-SFLIST>) 162 195.33 T
+1 12 Q
+0.33 (This is the GEMPAK user interface.  Any GEMPAK program will give you a similar) 108 170 P
+0.06 (looking screen.  When you run your program, there will probably be a list of values to) 108 156 P
+1.02 (the right of the descriptions.  This is because there is a global parameter file, which) 108 142 P
+0.21 (saves the most recent settings of all the variables.  This is rather helpful when you are) 108 128 P
+-0.1 (running GEMPAK in your work.  Often you will find yourself using the same variable) 108 114 P
+0.99 (settings over and over again.  With GEMPAK\325s "memory," you won\325t need to keep) 108 100 P
+(resetting everything.) 108 86 T
+FMENDPAGE
+%%EndPage: "1" 2
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 247.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(D-2) 288.95 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+0.37 (You should now take a look at the help information for the program) 90 712 P
+2 F
+0.37 (SFLIST) 423.62 712 P
+1 F
+0.37 (.  Either) 464.95 712 P
+(type) 90 698 T
+3 10 Q
+(GEMPAK-SFLIST>phelp sflist) 144 673.33 T
+1 12 Q
+-0.34 (or look at the printed version of the SFLIST help in Chapter 4 of this manual.  You will) 90 648 P
+0.81 (see a list of variables, a program description, and some examples.  Read this section) 90 634 P
+(now.) 90 620 T
+0.49 (After displaying help on your screen, you may want to look at the variable list again.) 90 594 P
+(As we learned in Chapter 2,  the) 90 580 T
+4 F
+(display) 247.54 580 T
+1 F
+( or) 282.19 580 T
+4 F
+(list) 298.18 580 T
+1 F
+( commands will do just that.) 312.85 580 T
+3 10 Q
+(GEMPAK-SFLIST>display) 144 555.33 T
+1 12 Q
+(Now let\325s see the variables and run the program.) 90 530 T
+0.25 (There are some sample data files from Hurricane Bob contained in the GEMPAK test) 90 504 P
+-0.21 (data directory.  Choose one \050a surface file ending with sfc\051 and set the) 90 490 P
+2 F
+-0.21 (sffile) 425.81 490 P
+1 F
+-0.21 ( variable to) 450.46 490 P
+(it) 90 476 T
+3 10 Q
+(GEMPAK-SFLIST>sffile=$GEMDATA/nmcbob.sfc) 144 451.33 T
+1 12 Q
+-0.62 (We have used the $GEMDATA environment variable here to point to the data directory) 90 426 P
+1.64 (and save some typing! There are two acceptable formats for using an environment) 90 412 P
+2.38 (variable within a GEMPAK program.  You could have also issued the following) 90 398 P
+(command:) 90 384 T
+3 10 Q
+(GEMPAK-SFLIST>sffile=gemdata:nmcbob.sfc) 144 359.33 T
+1 12 Q
+(You can also use the full path name of the directory.) 90 334 T
+-0.32 (While you\325re at it, take a look at the help information for) 90 308 P
+2 F
+-0.32 (sffile) 362.34 308 P
+1 F
+-0.32 ( \050either) 386.99 308 P
+4 F
+-0.32 (phelp sffile) 423.66 308 P
+1 F
+-0.32 (, or in) 476.32 308 P
+(Chapter 3 in this manual\051.) 90 294 T
+0.29 (Next you should choose the area for which you\325d like to see some data. Don\325t choose) 90 268 P
+-0.54 (the entire US, since the data will all flash across the screen before you can possibly read) 90 254 P
+0.78 (it.  There are various ways of specifying the data area.  Read about them in the help) 90 240 P
+0.44 (information \050) 90 226 P
+4 F
+0.44 (phelp area) 154.07 226 P
+1 F
+0.44 ( or Chapter 3 in this manual\051.  Let\325s choose a simple one, the) 206.14 226 P
+(geographical area around Denver.) 90 212 T
+3 10 Q
+(GEMPAK-SFLIST>area=den) 144 187.33 T
+1 12 Q
+2.08 (\050If you wanted JUST Denver, you would specify) 90 162 P
+2 F
+2.08 (area=@den) 343.44 162 P
+1 F
+2.08 (, but you know that) 402.74 162 P
+(already from reading the help information.\051) 90 148 T
+0.1 (Now set the date and time variable,) 90 122 P
+2 F
+0.1 (dattim) 263.22 122 P
+1 F
+0.1 (.  If you were looking at a current data file,) 297.2 122 P
+1.45 (you would be able to use the standard) 90 108 P
+2 F
+1.45 (dattim) 285.46 108 P
+1 F
+1.45 ( specification on YYMMDD/HHMM) 319.44 108 P
+0.58 (\050year,month,day/hour,min\051.  Since we\325re using a sample data file and we don\325t know) 90 94 P
+2.2 (which dates and times are available in the file, we\325ll have to use a more general) 90 80 P
+FMENDPAGE
+%%EndPage: "2" 3
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 265.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(D-3) 306.95 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+-0.41 (specification. You can read about these \050FIRST, LAST, ALL, LIST\051 in the) 108 712 P
+2 F
+-0.41 (dattim) 464.79 712 P
+1 F
+-0.41 ( help) 498.76 712 P
+(information.) 108 698 T
+3 10 Q
+(GEMPAK-SFLIST>dattim=last) 162 673.33 T
+1 12 Q
+-0.13 (You must now set the) 108 648 P
+2 F
+-0.13 (sfparm) 214.94 648 P
+1 F
+-0.13 (, or surface parameter list.  This is a good time to use the) 251.58 648 P
+0.52 (manual, rather than) 108 634 P
+4 F
+0.52 (phelp) 205.48 634 P
+1 F
+0.52 (, since the listing of available parameters is quite long.  For) 232.13 634 P
+(now, choose something simple like temperature and dewpoint.) 108 620 T
+3 10 Q
+(GEMPAK-SFLIST>sfparm=tmpf;dwpf) 162 595.33 T
+1 12 Q
+(Note the semicolon \050;\051 delimiter.) 108 570 T
+(Finally, set the) 108 544 T
+2 F
+(output) 181.96 544 T
+1 F
+( and) 215.95 544 T
+2 F
+(idntyp) 239.27 544 T
+1 F
+(.  Don\325t forget to read about these variables!) 272.6 544 T
+3 10 Q
+(GEMPAK-SFLIST>output=t) 162 519.33 T
+(GEMPAK-SFLIST>idntyp=stid) 162 507.33 T
+1 12 Q
+0.8 (Now, re-display all your variable settings to be sure you\325ve specified them properly.) 108 482 P
+-0.12 (You know from Chapter 2 that the) 108 468 P
+4 F
+-0.12 (display) 275.41 468 P
+1 F
+-0.12 ( command will do that.  This time, however,) 310.06 468 P
+0.07 (let\325s use an abbreviation.  Remember, GEMPAK will allow you to abbreviate, as long) 108 454 P
+(as your abbreviation is unique.) 108 440 T
+3 10 Q
+(GEMPAK-SFLIST>dis) 162 415.33 T
+(SFFILE) 162 403.33 T
+(Surface data file) 234 403.33 T
+($GEMDATA/nmcbob.sfc) 378 403.33 T
+(AREA) 162 391.33 T
+(Data area) 234 391.33 T
+(den) 378 391.33 T
+(DATTIM) 162 379.33 T
+(Date/time) 234 379.33 T
+(last) 378 379.33 T
+(SFPARM) 162 367.33 T
+(Surface parameter list) 234 367.33 T
+(tmpf;dwpf) 378 367.33 T
+(OUTPUT) 162 355.33 T
+(Output device/filename) 234 355.33 T
+(t) 378 355.33 T
+(IDNTYP) 162 343.33 T
+(STNM or STID) 234 343.33 T
+(stid) 378 343.33 T
+(GEMPAK-SFLIST>) 162 331.33 T
+1 12 Q
+-0.48 (Once you\325ve set all the variables to what you want them to be, type) 108 306 P
+4 F
+-0.48 (run) 427.44 306 P
+1 F
+-0.48 ( \050or just) 444.1 306 P
+4 F
+-0.48 (r) 482.98 306 P
+1 F
+-0.48 (\051 to run) 487.64 306 P
+(the program.  You will get a list of temperatures and dewpoints for the Denver area.) 108 292 T
+3 10 Q
+(GEMPAK-SFLIST>run) 162 267.33 T
+(STN) 162 255.33 T
+(YYMMDD/HHMM) 234 255.33 T
+(TMPF) 360 255.33 T
+(DWPF) 432 255.33 T
+(CAO) 162 243.33 T
+(910820/0600) 234 243.33 T
+(62.96) 360 243.33 T
+(57.02) 432 243.33 T
+(PGA) 162 231.33 T
+(910820/0600) 234 231.33 T
+(78.08) 360 231.33 T
+(39.02) 432 231.33 T
+(DDC) 162 219.33 T
+(910820/0600) 234 219.33 T
+(71.96) 360 219.33 T
+(53.96) 432 219.33 T
+(P28) 162 207.33 T
+(910820/0600) 234 207.33 T
+(75.02) 360 207.33 T
+(51.08) 432 207.33 T
+(1K5) 162 195.33 T
+(910820/0600) 234 195.33 T
+(71.06) 360 195.33 T
+(60.98) 432 195.33 T
+(GLD) 162 183.33 T
+(910820/0600) 234 183.33 T
+(69.98) 360 183.33 T
+(60.98) 432 183.33 T
+(DEN) 162 171.33 T
+(910820/0600) 234 171.33 T
+(60.08) 360 171.33 T
+(50.00) 432 171.33 T
+(PUC) 162 159.33 T
+(910820/0600) 234 159.33 T
+(62.96) 360 159.33 T
+(34.88) 432 159.33 T
+(GJT) 162 147.33 T
+(910820/0600) 234 147.33 T
+(69.98) 360 147.33 T
+(50.00) 432 147.33 T
+(...) 162 135.33 T
+(Parameter requested: SFFILE,AREA,DATTIM,SFPARM,OUTPUT,IDNTYP.) 162 123.33 T
+(GEMPAK-SFLIST>) 162 111.33 T
+FMENDPAGE
+%%EndPage: "3" 4
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 247.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(D-4) 288.95 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+-0.53 (Now you can either exit \050type) 90 712 P
+4 F
+-0.53 (exit) 232.71 712 P
+1 F
+-0.53 (\051 from the program, or you can play around a bit more) 250.03 712 P
+(by listing other kinds of data for other places and times.) 90 698 T
+-0.5 (Eventually you will get bored by the listing program, and so next we will run a graphics) 90 672 P
+4.18 (program.  Let\325s run the surface mapping program) 90 658 P
+2 F
+4.18 (SFMAP) 363.56 658 P
+1 F
+4.18 (.  Remember your) 404.86 658 P
+(assignment, read the help information for each variable as we go along.) 90 644 T
+(To start the) 90 618 T
+2 F
+(SFMAP) 147.63 618 T
+1 F
+( program, type) 188.93 618 T
+3 10 Q
+(sfmap) 144 593.33 T
+1 12 Q
+-0.38 (You will notice a new thing happening.  You get information on your screen about new) 90 568 P
+(processes being started:) 90 554 T
+3 10 Q
+(Creating process: gplt for queue 24581) 144 529.33 T
+1 12 Q
+(You will also get a list of variables:) 90 504 T
+3 10 Q
+(AREA) 144 479.33 T
+(Data area) 216 479.33 T
+(GAREA) 144 467.33 T
+(Graphics area) 216 467.33 T
+(SATFIL) 144 455.33 T
+(Satellite image filename\050s\051) 216 455.33 T
+(RADFIL) 144 443.33 T
+(Radar image filename\050s\051) 216 443.33 T
+(SFPARM) 144 431.33 T
+(Surface parameter list) 216 431.33 T
+(DATTIM) 144 419.33 T
+(Date/time) 216 419.33 T
+(SFFILE) 144 407.33 T
+(Surface data file) 216 407.33 T
+(COLORS) 144 395.33 T
+(Color list) 216 395.33 T
+(MAP) 144 383.33 T
+(Map color/dash/width) 216 383.33 T
+(LATLON) 144 371.33 T
+(Line color/dash/width/label/inc) 216 371.33 T
+(MARKER) 144 359.33 T
+(Marker color/type/size/width/hw) 216 359.33 T
+(TITLE) 144 347.33 T
+(Title color/line/title) 216 347.33 T
+(CLEAR) 144 335.33 T
+(Clear screen flag) 216 335.33 T
+(PANEL) 144 323.33 T
+(Panel loc/color/dash/width/regn) 216 323.33 T
+(DEVICE) 144 311.33 T
+(Device|name) 216 311.33 T
+(PROJ) 144 299.33 T
+(Map projection/angles/margins) 216 299.33 T
+(FILTER) 144 287.33 T
+(Filter data factor) 216 287.33 T
+(TEXT) 144 275.33 T
+(Text size/font/width/hw flag) 216 275.33 T
+(SKPMIS) 144 263.33 T
+(Skip missing data flag) 216 263.33 T
+(Parameters requested: AREA,GAREA,SATFIL,RADFIL,SFPARM,) 144 251.33 T
+(DATTIM,SFFILE,COLORS,MAP,LATLON,MARKER,TITLE,CLEAR,PANEL,) 144 239.33 T
+(DEVICE,PROJ,FILTER,TEXT,SKPMIS.) 144 227.33 T
+1 12 Q
+(Don\325t forget to read about the) 90 202 T
+2 F
+(SFMAP) 235.89 202 T
+1 F
+( program and these variables.) 277.19 202 T
+(Let\325s make a station plot for Colorado.  Set the variables to the following values:) 90 176 T
+3 10 Q
+(GEMPAK-SFMAP>area=co-) 144 151.33 T
+(GEMPAK-SFMAP>garea=co) 144 139.33 T
+(GEMPAK-SFMAP>sfparm=skyc;tmpf;wsym;rmsl;;dwpf;p24i*100;brbk) 144 127.33 T
+(GEMPAK-SFMAP>dattim=last) 144 115.33 T
+(GEMPAK-SFMAP>sffile=$GEMDATA/nmcbob.sfc) 144 103.33 T
+(GEMPAK-SFMAP>colors=1;2;3;5;6;7;11) 144 91.33 T
+(GEMPAK-SFMAP>map=17/1/2) 144 79.33 T
+FMENDPAGE
+%%EndPage: "4" 5
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 265.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(D-5) 306.95 36 T
+(October 1996) 458.67 36 T
+3 F
+(GEMPAK-SFMAP>latlon=) 162 713.33 T
+(GEMPAK-SFMAP>marker=) 162 701.33 T
+(GEMPAK-SFMAP>title=6/-2) 162 689.33 T
+(GEMPAK-SFMAP>clear=yes) 162 677.33 T
+(GEMPAK-SFMAP>panel=0) 162 665.33 T
+(GEMPAK-SFMAP>device=xw) 162 653.33 T
+(GEMPAK-SFMAP>proj=nps) 162 641.33 T
+(GEMPAK-SFMAP>filter=yes) 162 629.33 T
+(GEMPAK-SFMAP>skpmis=no) 162 617.33 T
+1 12 Q
+1.23 (I chose the XW driver for your device.  If you don\325t have X Windows, you should) 108 592 P
+0.18 (choose a different driver.  Read the help information for your choices.  Note the order) 108 578 P
+-0.36 (of the) 108 564 P
+4 F
+-0.36 (sfparm) 137.92 564 P
+1 F
+-0.36 ( variables determine their position around the station plot \050see the help for) 171.24 564 P
+2 F
+(sfmap) 108 550 T
+1 F
+(\051.) 139.32 550 T
+(When you\325re ready to plot, type run.) 108 524 T
+3 10 Q
+(GEMPAK-SFMAP>run) 162 499.33 T
+1 12 Q
+-0.29 (The first thing you should see is an X Window popping up on your screen. Either bring) 108 474 P
+-0.23 (your working window in front of the graphics window, or iconify the graphics window) 108 460 P
+(\050don\325t close it!\051.  On your working window, you should see something like this:) 108 446 T
+3 10 Q
+(SFMAP PARAMETERS:) 126 421.33 T
+(Data area:) 126 409.33 T
+(co-) 225 409.33 T
+(Graphics area name:) 126 397.33 T
+(co) 225 397.33 T
+(Valid parameters:) 126 385.33 T
+(SKYC) 225 385.33 T
+(TMPF) 261 385.33 T
+(WSYM) 297 385.33 T
+(RMSL) 342 385.33 T
+(BLNK) 378 385.33 T
+(DWPF) 414 385.33 T
+(P24I) 450 385.33 T
+(BRBK) 486 385.33 T
+(Parameter colors:) 126 373.33 T
+(1) 225 373.33 T
+(2) 261 373.33 T
+(3) 297 373.33 T
+(4) 342 373.33 T
+(0) 378 373.33 T
+(5) 414 373.33 T
+(6) 450 373.33 T
+(11) 486 373.33 T
+(Time:) 126 361.33 T
+(910820/0600) 225 361.33 T
+(File:) 126 349.33 T
+($GEMDATA/nmcbob.sfc) 225 349.33 T
+(Map:) 126 337.33 T
+(17/1/2) 225 337.33 T
+(Marker:) 126 325.33 T
+(Title:) 126 313.33 T
+(6/-2) 225 313.33 T
+(Device:) 126 301.33 T
+(xw) 225 301.33 T
+(Projection:) 126 289.33 T
+(nps) 225 289.33 T
+(Clear screen:) 126 277.33 T
+(YES) 225 277.33 T
+(Filter:) 126 265.33 T
+(YES) 225 265.33 T
+(Filter factor:) 126 253.33 T
+(1.00) 225 253.33 T
+(Panel:) 126 241.33 T
+(0) 225 241.33 T
+(Enter <cr> to accept parameters or type EXIT:) 126 229.33 T
+1 12 Q
+-0.4 (This summary is your chance to see what will happen, before it actually happens.  Take) 108 204 P
+0.22 (a close look here to be sure the settings you have are the settings you want.  If you\325ve) 108 190 P
+0.64 (made a mistake, that\325s ok, simply type) 108 176 P
+4 F
+0.64 (exit) 300.05 176 P
+1 F
+0.64 ( and you will be returned back to the user) 317.37 176 P
+-0.18 (interface.  Type) 108 162 P
+4 F
+-0.18 (display) 186.06 162 P
+1 F
+-0.18 ( and you can change any of the variables.  On the other hand, if) 220.71 162 P
+(the information above looks good, just hit return \050) 108 148 T
+4 F
+(<cr>) 347.52 148 T
+1 F
+(\051 and your map will plot.) 373.7 148 T
+2.89 (When you\325re done looking at the plot, bring your working window back to the) 108 122 P
+(foreground, and you\325ll see that you\325re back in the user interface of) 108 108 T
+2 F
+(SFMAP) 429.4 108 T
+1 F
+(.) 470.7 108 T
+FMENDPAGE
+%%EndPage: "5" 6
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 247.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(D-6) 288.95 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+-0.65 (If for some reason, you think your plot doesn\325t look right, type) 90 712 P
+4 F
+-0.65 (display) 386.01 712 P
+1 F
+-0.65 ( again to see what) 420.66 712 P
+(values your variables have.  Be sure they are the same as those above.) 90 698 T
+-0.24 (Now, I encourage you to play around with) 90 672 P
+2 F
+-0.24 (SFMAP) 294.25 672 P
+1 F
+-0.24 (.  Remember, this is Hurricane Bob) 335.56 672 P
+0.24 (data and the surface map of Colorado may be interesting, but not nearly as interesting) 90 658 P
+0.37 (as a map of the eastern seaboard.  You may change the values of the variables as you) 90 644 P
+0 (choose and run the program over and over again, without exiting.  The window can be) 90 630 P
+-0.21 (overwritten time and time again, as long as) 90 616 P
+4 F
+-0.21 (clear) 297.87 616 P
+1 F
+-0.21 ( is set to) 322.52 616 P
+4 F
+-0.21 (yes) 364.34 616 P
+1 F
+-0.21 (.  We will talk more about) 379.66 616 P
+4 F
+(clear) 90 602 T
+1 F
+( later.) 114.65 602 T
+1.77 (One other piece of advice: try not to abort GEMPAK programs with a) 90 576 P
+2 F
+1.77 (control-C) 451.71 576 P
+1 F
+1.77 (.) 501 576 P
+-0.44 (GEMPAK doesn\325t have the kind of exception handling that will handle this gracefully.) 90 562 P
+(Try the following things with) 90 536 T
+2 F
+(SFMAP) 234.26 536 T
+1 F
+(:) 275.56 536 T
+4 F
+(DATTIM) 90 510 T
+1 F
+(:) 133.31 510 T
+1.72 (Try using) 180 510 P
+4 F
+1.72 (list, last) 232.74 510 P
+1 F
+1.72 (, and) 272.45 510 P
+4 F
+1.72 (first) 302.19 510 P
+1 F
+1.72 (.  Try using the YYMMDD/HHMM) 321.53 510 P
+(specification.  Try abbreviating it.) 180 497 T
+4 F
+(SFPARM) 90 478 T
+1 F
+(:) 135.3 478 T
+0.2 (Try other parameter lists.  Remember not all surface files will have) 180 478 P
+1.96 (all parameters available.  It depends on what has been decoded.) 180 465 P
+1.66 (Also, remember, if you choose a large area, and a lot of surface) 180 452 P
+(parameters, the program is going to take a long time to draw them.) 180 439 T
+4 F
+(AREA/GAREA) 90 420 T
+1 F
+(:) 160.62 420 T
+3.77 (Discover the difference between the data area \050) 180 420 P
+4 F
+3.77 (area) 432.51 420 P
+1 F
+3.77 (\051 and the) 454.49 420 P
+1.51 (graphics area \050) 180 407 P
+4 F
+1.51 (garea) 253.61 407 P
+1 F
+1.51 (\051.  Experiment with making) 281.59 407 P
+4 F
+1.51 (area) 424.38 407 P
+1 F
+1.51 ( larger than) 446.36 407 P
+4 F
+-0.4 (garea) 180 394 P
+1 F
+-0.4 ( and vice versa.  Experiment with the different ways to specify) 207.98 394 P
+4 F
+0.39 (area) 180 381 P
+1 F
+0.39 ( and) 201.98 381 P
+4 F
+0.39 (garea) 226.09 381 P
+1 F
+0.39 (.  Notice the difference between acceptable ways to) 254.07 381 P
+1.88 (specify) 180 368 P
+4 F
+1.88 (area) 219.51 368 P
+1 F
+1.88 ( and) 241.5 368 P
+4 F
+1.88 (garea) 268.57 368 P
+1 F
+1.88 (.  Try item #8 in Chapter 3 under) 296.55 368 P
+4 F
+1.88 (AREA) 474.69 368 P
+2.21 (\050SHDR:iloval:ihival\051) 180 355 P
+1 F
+2.21 (.  Set) 281.26 355 P
+2 F
+2.21 (area=SELV:1900:5000) 315.2 355 P
+1 F
+2.21 ( for Colorado.) 431.97 355 P
+4.86 (Set) 180 342 P
+4 F
+4.86 (area) 203.19 342 P
+1 F
+4.86 ( and) 225.18 342 P
+4 F
+4.86 (garea) 258.22 342 P
+1 F
+4.86 ( to the east coast entry in the geog.tbl) 286.2 342 P
+(\050) 180 329 T
+2 F
+(area=EAST, garea=East) 183.99 329 T
+1 F
+(\051.) 308.93 329 T
+(Other variables:) 90 310 T
+0.52 (Play with) 180 310 P
+4 F
+0.52 (colors, map, latlon, marker, title, panel, proj, filter, text) 229.68 310 P
+1 F
+0.52 (,) 501 310 P
+(and) 180 297 T
+4 F
+(skpmis) 200.32 297 T
+1 F
+(.) 232.96 297 T
+5 F
+(Note) 108 278 T
+1 F
+(:) 131.32 278 T
+-0.29 (You may change the map \050not the color, but the map itself\051 from the default) 144 278 P
+0.71 (to any of the other available maps, by using the) 144 264 P
+4 F
+0.71 ($MAPFIL) 381.29 264 P
+1 F
+0.71 ( variable.  This) 429.92 264 P
+-0.34 (variable is not displayed by the user interface, however it is available in any) 144 250 P
+2.43 (program that uses a map.  Read the help information on) 144 236 P
+4 F
+2.43 ($MAPFIL) 440.6 236 P
+1 F
+2.43 ( in) 489.23 236 P
+2.12 (Chapter 3.  You can always reset the) 144 222 P
+4 F
+2.12 ($MAPFIL) 339.84 222 P
+1 F
+2.12 ( back to the default as) 388.47 222 P
+(follows:) 144 208 T
+3 10 Q
+(GEMPAK-SFMAP>$MAPFIL=hipowo.cia) 216 189.33 T
+1 12 Q
+-0.69 (After you\325ve tired of playing around with the surface mapping program, it is time to exit) 90 164 P
+(from the program. Type) 90 150 T
+4 F
+(exit) 208.24 150 T
+1 F
+(:) 225.56 150 T
+3 10 Q
+(GEMPAK-SFMAP>exit) 144 125.33 T
+1 12 Q
+0.19 (You\325ll notice that your graphics X Window is still present on your workstation.  With) 90 100 P
+0.89 (GEMPAK, you need to explicitly tell the window that you are done with it.  This is) 90 86 P
+FMENDPAGE
+%%EndPage: "6" 7
+%%Page: "7" 7
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 265.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(D-7) 306.95 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+0.44 (useful when you want to construct overlays.  More about that later.  Use the program) 108 712 P
+2 F
+(GPEND) 108 698 T
+1 F
+( to end the graphics program.) 149.98 698 T
+3 10 Q
+(gpend) 162 673.33 T
+1 12 Q
+0.42 (The window will pop up one last time and then disappear forever.  DO NOT CLOSE) 108 648 P
+1.71 (THE WINDOW ANY OTHER WAY!  If by mistake you do, and you do it often) 108 634 P
+1.32 (enough, eventually you\325ll run out of something called "message queues" and you\325ll) 108 620 P
+-0.19 (have to clean out those message queues or reboot your workstation.  See your software) 108 606 P
+(administrator for more details.) 108 592 T
+(Let\325s move on to an upper air program.  Let\325s plot a skewT diagram using) 108 566 T
+2 F
+(SNPROF) 466.41 566 T
+1 F
+(.) 514.39 566 T
+3 10 Q
+(snprof) 162 541.33 T
+(SNFILE) 162 517.33 T
+(Sounding data file) 234 517.33 T
+(DATTIM) 162 505.33 T
+(Date/time) 234 505.33 T
+(AREA) 162 493.33 T
+(Data area) 234 493.33 T
+(SNPARM) 162 481.33 T
+(Sounding parameter list) 234 481.33 T
+(LINE) 162 469.33 T
+(Line color/dash/width/label) 234 469.33 T
+(PTYPE) 162 457.33 T
+(Plot type/h:w ratio/margins) 234 457.33 T
+(VCOORD) 162 445.33 T
+(Vertical coordinate type) 234 445.33 T
+(STNDEX) 162 433.33 T
+(Stability indices) 234 433.33 T
+(STNCOL) 162 421.33 T
+(Stability index color) 234 421.33 T
+(WIND) 162 409.33 T
+(Wind symbol/siz/wdth/typ/hdsz) 234 409.33 T
+(WINPOS) 162 397.33 T
+(Wind position) 234 397.33 T
+(MARKER) 162 385.33 T
+(Marker color/type/size/width/hw) 234 385.33 T
+(BORDER) 162 373.33 T
+(Background color/dash/width) 234 373.33 T
+(TITLE) 162 361.33 T
+(Title color/line/title) 234 361.33 T
+(DEVICE) 162 349.33 T
+(Device|name) 234 349.33 T
+(YAXIS) 162 337.33 T
+(Ystrt/ystop/yinc/lbl;gln;tck) 234 337.33 T
+(XAXIS) 162 325.33 T
+(Xstrt/xstop/xinc/lbl;gln;tck) 234 325.33 T
+(FILTER) 162 313.33 T
+(Filter data factor) 234 313.33 T
+(CLEAR) 162 301.33 T
+(Clear screen flag) 234 301.33 T
+(PANEL) 162 289.33 T
+(Panel loc/color/dash/width/regn) 234 289.33 T
+(TEXT) 162 277.33 T
+(Text size/font/width/hw flag) 234 277.33 T
+(THTALN) 162 265.33 T
+(THTA color/dash/width/mn/mx/inc) 234 265.33 T
+(THTELN) 162 253.33 T
+(THTE color/dash/width/mn/mx/inc) 234 253.33 T
+(MIXRLN) 162 241.33 T
+(MIXR color/dash/width/mn/mx/inc) 234 241.33 T
+(Parameters requested:SNFILE,DATTIM,AREA,SNPARM,LINE,PTYPE,) 162 229.33 T
+(VCOORD,STNDEX,STNCOL,WIND,WINPOS,MARKER,BORDER,TITLE,) 162 217.33 T
+(DEVICE,YAXIS,XAXIS,FILTER,CLEAR,PANEL,TEXT,THTALN,THTELN,) 162 205.33 T
+(MIXRLN.) 162 193.33 T
+(GEMPAK-SNPROF>) 162 181.33 T
+1 12 Q
+(Set the variables as follows, remembering to read about any unfamiliar ones.) 108 156 T
+3 10 Q
+(GEMPAK-SNPROF>snfile=$GEMDATA/hrcbob.snd) 162 131.33 T
+(GEMPAK-SNPROF>dattim=last) 162 119.33 T
+(GEMPAK-SNPROF>area=@den) 162 107.33 T
+(GEMPAK-SNPROF>snparm=tmpc;dwpc) 162 95.33 T
+(GEMPAK-SNPROF>line=2;3/4;5/6) 162 83.33 T
+FMENDPAGE
+%%EndPage: "7" 8
+%%Page: "8" 8
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 247.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(D-8) 288.95 36 T
+(October 1996) 440.67 36 T
+3 F
+(GEMPAK-SNPROF>ptype=skewt) 144 713.33 T
+(GEMPAK-SNPROF>vcoord=pres) 144 701.33 T
+(GEMPAK-SNPROF>stndex=show;brch) 144 689.33 T
+(GEMPAK-SNPROF>stncol=1) 144 677.33 T
+(GEMPAK-SNPROF>wind=bm3) 144 665.33 T
+(GEMPAK-SNPROF>winpos=3) 144 653.33 T
+(GEMPAK-SNPROF>marker=) 144 641.33 T
+(GEMPAK-SNPROF>border=6) 144 629.33 T
+(GEMPAK-SNPROF>title=6/-1) 144 617.33 T
+(GEMPAK-SNPROF>device=xw) 144 605.33 T
+(GEMPAK-SNPROF>yaxis=) 144 593.33 T
+(GEMPAK-SNPROF>xaxis=) 144 581.33 T
+(GEMPAK-SNPROF>filter=yes) 144 569.33 T
+(GEMPAK-SNPROF>clear=yes) 144 557.33 T
+(GEMPAK-SNPROF>panel=1/14) 144 545.33 T
+(GEMPAK-SNPROF>text=1/2/2) 144 533.33 T
+(GEMPAK-SNPROF>thtaln=3/4/2) 144 521.33 T
+(GEMPAK-SNPROF>thteln=4/4/2) 144 509.33 T
+(GEMPAK-SNPROF>mixrln=5/4/2) 144 497.33 T
+(GEMPAK-SNPROF>dis) 144 473.33 T
+1 12 Q
+0.35 (We have left some variables blank \050e.g.,) 90 448 P
+4 F
+0.35 (yaxis) 288.32 448 P
+1 F
+0.35 (\051.  This allows GEMPAK to choose the) 312.97 448 P
+-0.03 (best value for that variable.  As you become more proficient with GEMPAK, you may) 90 434 P
+(find that sometimes this is fine, and other times you will want to override the default.) 90 420 T
+(Let\325s run the program:) 90 394 T
+3 10 Q
+(GEMPAK-SNPROF>r) 144 369.33 T
+(Next plot - Time:) 144 345.33 T
+(910820/1200) 217.31 345.33 T
+(Station:  72469  DEN) 378 345.33 T
+(Enter <cr> to accept parameters or type EXIT:) 144 333.33 T
+1 12 Q
+(Hit return \050) 90 308 T
+4 F
+(<cr>) 143.96 308 T
+1 F
+(\051 at this prompt to accept the parameters and plot the skewT.) 170.14 308 T
+3 10 Q
+(Parameters requested: SNFILE,DATTIM,AREA,SNPARM,LINE,PTYPE,) 144 283.33 T
+(VCOORD,STNDEX,STNCOL,WIND,WINPOS,MARKER,BORDER,TITLE,) 144 271.33 T
+(DEVICE,YAXIS,XAXIS,FILTER,CLEAR,PANEL,TEXT,THTALN,THTELN,) 144 259.33 T
+(MIXRLN.) 144 247.33 T
+(GEMPAK-SNPROF>) 144 235.33 T
+1 12 Q
+-0.2 (You should have a nice skewT graph of Denver.  Again I encourage you to experiment) 90 210 P
+-0.46 (with) 90 196 P
+2 F
+-0.46 (SNPROF) 113.87 196 P
+1 F
+-0.46 (.  In particular, you may want to try using vertical coordinates other than) 161.84 196 P
+-0.14 (pressure \050read the help information on) 90 182 P
+4 F
+-0.14 (vcoord) 275.67 182 P
+1 F
+-0.14 (\051.  When you\325re finished with) 308.98 182 P
+2 F
+-0.14 (SNPROF) 453.03 182 P
+1 F
+-0.14 (,) 501 182 P
+(exit and don\325t forget to use) 90 168 T
+2 F
+(GPEND) 222.57 168 T
+1 F
+(.) 264.55 168 T
+3 10 Q
+(GEMPAK-SNPROF>exit) 144 143.33 T
+(gpend) 144 131.33 T
+1 12 Q
+-0.04 (Now we\325ve been through an example listing program \050) 90 106 P
+2 F
+-0.04 (SFLIST) 352.86 106 P
+1 F
+-0.04 (\051, an example mapping) 394.18 106 P
+0.28 (program \050) 90 92 P
+2 F
+0.28 (SFMAP) 137.9 92 P
+1 F
+0.28 (\051 and an example plotting program \050) 179.21 92 P
+2 F
+0.28 (SNPROF) 354.06 92 P
+1 F
+0.28 (\051.  Our next and final) 402.04 92 P
+(example will use grid programs.) 90 78 T
+FMENDPAGE
+%%EndPage: "8" 9
+%%Page: "9" 9
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 265.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(D-9) 306.95 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(Let\325s start with the gridded data contouring program) 108 712 T
+2 F
+(GDCNTR) 362.49 712 T
+1 F
+(.) 414.46 712 T
+3 10 Q
+(gdcntr) 162 687.33 T
+(GLEVEL) 162 663.33 T
+(Grid level) 234 663.33 T
+(GVCORD) 162 651.33 T
+(Grid vertical coordinate) 234 651.33 T
+(GFUNC) 162 639.33 T
+(Scalar grid) 234 639.33 T
+(GDFILE) 162 627.33 T
+(Grid file) 234 627.33 T
+(CINT) 162 615.33 T
+(Contour interval/min/max) 234 615.33 T
+(LINE) 162 603.33 T
+(Line color/type/width/label) 234 603.33 T
+(MAP) 162 591.33 T
+(Map color/dash/width) 234 591.33 T
+(TITLE) 162 579.33 T
+(Title color/line/title) 234 579.33 T
+(DEVICE) 162 567.33 T
+(Device|name) 234 567.33 T
+(SATFIL) 162 555.33 T
+(Satellite image filename\050s\051) 234 555.33 T
+(RADFIL) 162 543.33 T
+(Radar image filename\050s\051) 234 543.33 T
+(PROJ) 162 531.33 T
+(Map projection/angles/margins) 234 531.33 T
+(GAREA) 162 519.33 T
+(Graphics area) 234 519.33 T
+(CLEAR) 162 507.33 T
+(Clear screen flag) 234 507.33 T
+(PANEL) 162 495.33 T
+(Panel loc/color/dash/width/regn) 234 495.33 T
+(TEXT) 162 483.33 T
+(Text size/font/width/hw flag) 234 483.33 T
+(SCALE) 162 471.33 T
+(Scalar scale / vector scale) 234 471.33 T
+(LATLON) 162 459.33 T
+(Line color/dash/width/label/inc) 234 459.33 T
+(HILO) 162 447.33 T
+(Color/symbol/rng/rad/cnt/intp) 234 447.33 T
+(HLSYM) 162 435.33 T
+(HILO txt size/posn/font/wdth/hw) 234 435.33 T
+(CLRBAR) 162 423.33 T
+(Color/ornt/anch/x;y/ln;wd/freq) 234 423.33 T
+(CONTUR) 162 411.33 T
+(Subbox/smooth) 234 411.33 T
+(SKIP) 162 399.33 T
+(Skip_cntr/skip_plt_x;skip_plt_y) 234 399.33 T
+(FINT) 162 387.33 T
+(Fill interval/min/max) 234 387.33 T
+(FLINE) 162 375.33 T
+(Fill colors) 234 375.33 T
+(CTYPE) 162 363.33 T
+(Contour type:  C/F) 234 363.33 T
+(Parameters requested: GDATTIM,GLEVEL,GVCORD,GFUNC,GDFILE,CINT,) 162 351.33 T
+(LINE,MAP,TITLE,DEVICE,SATFIL,RADFIL,PROJ,GAREA,CLEAR,PANEL,) 162 339.33 T
+(TEXT,SCALE,LATLON,HILO,HLSYM,CLRBAR,CONTUR,SKIP,FINT,FLINE,) 162 327.33 T
+(CTYPE.) 162 315.33 T
+(GEMPAK-GDCNTR>) 162 303.33 T
+1 12 Q
+0.29 (Here are some new variables that we haven\325t seen before.  Let\325s start by choosing the) 108 278 P
+(sample grid file and the grid date and time of 910819/0000F00.) 108 264 T
+3 10 Q
+(GEMPAK-GDCNTR>gdfile=$GEMDATA/hrcbob.grd) 162 239.33 T
+(GEMPAK-GDCNTR>gdattim=910819/0000F00) 162 227.33 T
+1 12 Q
+(Note that now we are using) 108 202 T
+4 F
+(gdattim) 242.57 202 T
+1 F
+( rather than) 279.22 202 T
+4 F
+(dattim) 336.83 202 T
+1 F
+(.) 367.49 202 T
+(Now let\325s specify the grid and the variable we want to contour.) 108 176 T
+3 10 Q
+(GEMPAK-GDCNTR>glevel=500) 162 151.33 T
+(GEMPAK-GDCNTR>gvcord=pres) 162 139.33 T
+(GEMPAK-GDCNTR>gfunc=hght) 162 127.33 T
+1 12 Q
+0.48 (We\325ve chosen to contour 500 millibar heights \050this grid is present in the data file; try) 108 102 P
+(running) 108 88 T
+2 F
+(gdinfo) 148.31 88 T
+1 F
+(, the grid file information program, to demonstrate this for yourself\051.) 180.97 88 T
+FMENDPAGE
+%%EndPage: "9" 10
+%%Page: "10" 10
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 247.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(D-10) 286.17 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+0.25 (We leave) 90 712 P
+4 F
+0.25 (cint) 138.45 712 P
+1 F
+0.25 ( blank to allow the program to calculate the contour interval for us.  We) 156.44 712 P
+(use standard values for the other variables.) 90 698 T
+3 10 Q
+(GEMPAK-GDCNTR>cint=) 144 679.33 T
+(GEMPAK-GDCNTR>line=5) 144 668.33 T
+(GEMPAK-GDCNTR>map=6/1) 144 657.33 T
+(GEMPAK-GDCNTR>title=6/-1) 144 646.33 T
+(GEMPAK-GDCNTR>device=xw) 144 635.33 T
+(GEMPAK-GDCNTR>proj=nps) 144 624.33 T
+(GEMPAK-GDCNTR>garea=usnps) 144 613.33 T
+(GEMPAK-GDCNTR>clear=yes) 144 602.33 T
+(GEMPAK-GDCNTR>panel=0/6) 144 591.33 T
+(GEMPAK-GDCNTR>text=1/2/2) 144 580.33 T
+1 12 Q
+2.44 (We set) 90 558 P
+4 F
+2.44 (scale) 130.85 558 P
+1 F
+2.44 ( to) 155.49 558 P
+4 F
+2.44 (999) 175.7 558 P
+1 F
+2.44 ( so that the program will automatically scale out data by an) 193.69 558 P
+0.67 (appropriate amount if necessary.  We also chose the contour type to be contour lines) 90 544 P
+(\050) 90 530 T
+4 F
+(c) 93.99 530 T
+1 F
+(\051.  We could choose contour color fill as well \050) 99.32 530 T
+2 F
+(ctype=c/f) 322.82 530 T
+1 F
+(\051.  Try it on your own later.) 369.61 530 T
+3 10 Q
+(GEMPAK-GDCNTR>scale=999) 144 511.33 T
+(GEMPAK-GDCNTR>latlon=) 144 499.33 T
+(GEMPAK-GDCNTR>skip=) 144 487.33 T
+(GEMPAK-GDCNTR>fint=) 144 475.33 T
+(GEMPAK-GDCNTR>fline=) 144 463.33 T
+(GEMPAK-GDCNTR>ctype=c) 144 451.33 T
+1 12 Q
+0.47 (Now let\325s) 90 428 P
+4 F
+0.47 (run) 140.89 428 P
+1 F
+0.47 ( the program.  Notice that the contour levels and interval are chosen by) 157.55 428 P
+0.35 (the program.  You can override this if you\325d like.  Read about) 90 414 P
+4 F
+0.35 (cint) 393.99 414 P
+1 F
+0.35 ( in Chapter 3 or by) 411.98 414 P
+(typing) 90 400 T
+4 F
+(phelp cint) 123.65 400 T
+1 F
+(.) 171.29 400 T
+3 10 Q
+(GEMPAK-GDCNTR>r) 144 381.33 T
+(Grid file: $GEMDATA/hrcbob.grd) 108 361.33 T
+(GRID IDENTIFIER:) 108 341.33 T
+(TIME1) 168.57 329.33 T
+(TIME2) 213.57 329.33 T
+(LEVL1) 321 329.33 T
+(LEVL2) 375 329.33 T
+(VCORD) 422.91 329.33 T
+-2.78 (PARM) 475.13 329.33 P
+(910819/0000F000) 116.87 317.33 T
+(500) 334.33 317.33 T
+(PRES) 431.79 317.33 T
+-2.78 (HGHT) 475.69 317.33 P
+(GAREA: usnps) 108 297.33 T
+(SCALE: 0) 108 285.33 T
+(MINIMUM AND MAXIMUM VALUES  5504.61  5959.61) 108 265.33 T
+(LINE CONTOURS:) 108 245.33 T
+(LEVELS:) 108 233.33 T
+(5550.00) 161.88 233.33 T
+(5600.00) 206.88 233.33 T
+(5650.00) 260.88 233.33 T
+(5700.00) 314.88 233.33 T
+(5750.00) 368.88 233.33 T
+(5800.00) 422.88 233.33 T
+-2.78 (5850.00) 467.88 233.33 P
+(COLORS:) 108 221.33 T
+(5) 192.44 221.33 T
+(5) 237.44 221.33 T
+(5) 291.44 221.33 T
+(5) 345.44 221.33 T
+(5) 399.44 221.33 T
+(5) 453.44 221.33 T
+-2.78 (5) 498.44 221.33 P
+(LINTYP:) 108 209.33 T
+(1) 192.44 209.33 T
+(1) 237.44 209.33 T
+(1) 291.44 209.33 T
+(1) 345.44 209.33 T
+(1) 399.44 209.33 T
+(1) 453.44 209.33 T
+-2.78 (1) 498.44 209.33 P
+(LINWID:) 108 197.33 T
+(1) 192.44 197.33 T
+(1) 237.44 197.33 T
+(1) 291.44 197.33 T
+(1) 345.44 197.33 T
+(1) 399.44 197.33 T
+(1) 453.44 197.33 T
+-2.78 (1) 498.44 197.33 P
+(LABEL:) 108 185.33 T
+(1) 192.44 185.33 T
+(1) 237.44 185.33 T
+(1) 291.44 185.33 T
+(1) 345.44 185.33 T
+(1) 399.44 185.33 T
+(1) 453.44 185.33 T
+-2.78 (1) 498.44 185.33 P
+(LEVELS:) 108 165.33 T
+(5900.00) 161.88 165.33 T
+(5950.00) 206.88 165.33 T
+(COLORS:) 108 153.33 T
+(5) 192.44 153.33 T
+(5) 237.44 153.33 T
+(LINTYP:) 108 141.33 T
+(1) 192.44 141.33 T
+(1) 237.44 141.33 T
+(LINWID:) 108 129.33 T
+(1) 192.44 129.33 T
+(1) 237.44 129.33 T
+(LABEL:) 108 117.33 T
+(1) 192.44 117.33 T
+(1) 237.44 117.33 T
+(Enter <cr> to accept parameters or type EXIT:) 108 97.33 T
+1 12 Q
+(Hit return \050) 90 76 T
+4 F
+(<cr>) 143.96 76 T
+1 F
+(\051 to see the plot.) 170.14 76 T
+FMENDPAGE
+%%EndPage: "10" 11
+%%Page: "11" 11
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 265.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(D-11) 304.17 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+-0.67 (Now, let\325s say that you particularly like this plot.  You like all the colors and the contour) 108 712 P
+-0.38 (intervals. In fact, you may want to look at other data using these same variable settings.) 108 698 P
+-0.4 (You can use the) 108 684 P
+4 F
+-0.4 (save) 186.35 684 P
+1 F
+-0.4 ( and) 207.66 684 P
+4 F
+-0.4 (restore) 230.18 684 P
+1 F
+-0.4 ( commands that you learned in Chapter 2 to save these) 264.16 684 P
+(settings and restore them later.  First) 108 670 T
+4 F
+(save) 285.89 670 T
+1 F
+( these settings.) 307.2 670 T
+3 10 Q
+(Parameters requested: GDATTIM,GLEVEL,GVCORD,GFUNC,GDFILE,CINT,) 162 645.33 T
+(LINE,MAP,TITLE,DEVICE,SATFIL,RADFIL,PROJ,GAREA,CLEAR,PANEL,) 162 633.33 T
+(TEXT,SCALE,LATLON,HILO,HLSYM,CLRBAR,CONTUR,SKIP,FINT,FLINE,) 162 621.33 T
+(CTYPE.) 162 609.33 T
+(GEMPAK-GDCNTR>save gdcntr.settings) 162 597.33 T
+1 12 Q
+-0.42 (An ASCII text file is created with all the settings from this run of GDCNTR.  Since this) 108 572 P
+0.91 (is a text file, you may edit it.  Often this is useful if you use the save/restore file on) 108 558 P
+0.16 (different data sets; you want to keep the settings, but you don\325t want to keep the same) 108 544 P
+(file name or date.  Edit the file and remove the entries for) 108 530 T
+4 F
+(gdfile) 386.45 530 T
+1 F
+( and) 413.77 530 T
+4 F
+(gdattim) 437.09 530 T
+1 F
+(.) 473.74 530 T
+-0.09 (In the example above, I chose to call this text file) 108 504 P
+2 F
+-0.09 (gdcntr.settings) 346.21 504 P
+1 F
+-0.09 (, but you can name it) 421.83 504 P
+0.59 (anything you\325d like.  If you don\325t specify a file name, the file will be given a default) 108 490 P
+0.02 (name of) 108 476 P
+2 F
+0.02 (gdcntr.nts) 150 476 P
+1 F
+0.02 (. You may specify a file name with a path, if you\325d like to store all) 202.3 476 P
+(your save/restore files in a particular directory.) 108 462 T
+3 10 Q
+(GEMPAK-GDCNTR>save restore/gdcntr.settings) 162 437.33 T
+1 12 Q
+0.31 (Later, when you are running) 108 412 P
+2 F
+0.31 (GDCNTR) 248.75 412 P
+1 F
+0.31 ( again and you want to retrieve these settings,) 300.71 412 P
+(simply) 108 398 T
+4 F
+(restore) 143.66 398 T
+1 F
+( the file.) 177.63 398 T
+3 10 Q
+(Parameters requested: GDATTIM,GLEVEL,GVCORD,GFUNC,GDFILE,CINT,) 162 373.33 T
+(LINE,MAP,TITLE,DEVICE,SATFIL,RADFIL,PROJ,GAREA,CLEAR,PANEL,) 162 361.33 T
+(TEXT,SCALE,LATLON,HILO,HLSYM,CLRBAR,CONTUR,SKIP,FINT,FLINE,) 162 349.33 T
+(CTYPE.) 162 337.33 T
+(GEMPAK-GDCNTR>restore restore/gdcntr.settings) 162 325.33 T
+1 12 Q
+1 (You may have heard about the grid diagnostic functionality of GEMPAK. It is very) 108 300 P
+-0.53 (simple to calculate a new grid from an existing grid or grids. GEMPAK comes supplied) 108 286 P
+2.3 (with a wide variety of pre-programmed diagnostic functions for calculating many) 108 272 P
+1.25 (meteorological fields.  You can read about them by typing) 108 258 P
+4 F
+1.25 (phelp gparm) 403.32 258 P
+1 F
+1.25 ( \050instead of) 465.54 258 P
+4 F
+-0.67 (phelp gfunc) 108 244 P
+1 F
+-0.67 ( or) 163.63 244 P
+4 F
+-0.67 (gvect) 178.28 244 P
+1 F
+-0.67 (\051, or you can read about them in more depth by looking at Appendix) 203.58 244 P
+0.26 (B in this manual.  In addition to the pre-programmed diagnostics, there are also many) 108 230 P
+-0.03 (mathematical operators available so you can construct your own diagnostic functions.) 108 216 P
+1.76 (To illustrate this functionality, let\325s run GDCNTR again, but this time, let\325s try to) 108 190 P
+-0.12 (contour a grid that does not exist in the data file hrcbob.grd.  Let\325s choose a simple but) 108 176 P
+-0.43 (useful field, potential temperature.  The diagnostic function for potential temperature is) 108 162 P
+2 F
+1.5 (thta \050tmpc,pres\051) 108 148 P
+1 F
+1.5 ( \050see Appendix B or gparm in Chapter 3\051.  The arguments of this) 192.1 148 P
+3.8 (function,) 108 134 P
+2 F
+3.8 (\050tmpc,pres\051) 157.76 134 P
+1 F
+3.8 (, are the input grids required for calculating the potential) 216.71 134 P
+(temperature.) 108 120 T
+3 10 Q
+(GEMPAK-GDCNTR>gfunc=thta\050tmpc,pres\051) 162 95.33 T
+FMENDPAGE
+%%EndPage: "11" 12
+%%Page: "12" 12
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 247.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(D-12) 286.17 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+0.12 (Let\325s also set the area to a smaller region, choose a level closer to the surface, and use) 90 712 P
+0.12 (color contour fill this time.  Numbers are used to indicate which colors are used in the) 90 698 P
+0.18 (plot \050all colors including) 90 684 P
+4 F
+0.18 (line) 212 684 P
+1 F
+0.18 ( and) 229.99 684 P
+4 F
+0.18 (map) 253.67 684 P
+1 F
+0.18 (, etc., not just those used in contour fill\051.  There) 274.32 684 P
+0 (is a table listing the available colors and their corresponding numbers under the) 90 670 P
+4 F
+0 (colors) 474.02 670 P
+1 F
+(entry in Chapter 3.) 90 656 T
+3 10 Q
+(GEMPAK-GDCNTR>garea=east) 144 631.33 T
+(GEMPAK-GDCNTR>glevel=700) 144 619.33 T
+(GEMPAK-GDCNTR>line=1-15/1/2/1) 144 607.33 T
+(GEMPAK-GDCNTR>ctype=c/f) 144 595.33 T
+(GEMPAK-GDCNTR>fline=32-18--1) 144 583.33 T
+(GEMPAK-GDCNTR>r) 144 559.33 T
+(Grid file: $GEMDATA/hrcbob.grd) 108 535.33 T
+(GRID IDENTIFIER:) 108 511.33 T
+(                 TIME1             TIME2         LEVL1 LEVL2   VCORD  PARM) 108 499.33 T
+(     910819/0000F000                         700                         PRES  THTATMPCPRES) 108 487.33 T
+(GAREA:     east) 108 463.33 T
+(SCALE:  0) 108 451.33 T
+(MINIMUM AND MAXIMUM VALUES   295.67   314.74) 108 427.33 T
+(LINE CONTOURS:) 108 403.33 T
+(LEVELS:) 108 391.33 T
+(296.00) 167.44 391.33 T
+(298.00) 212.44 391.33 T
+(300.00) 266.44 391.33 T
+(302.00) 320.44 391.33 T
+(304.00) 374.44 391.33 T
+(306.00) 428.44 391.33 T
+-2.78 (308.00) 473.44 391.33 P
+(COLORS:) 108 379.33 T
+(1) 192.44 379.33 T
+(2) 237.44 379.33 T
+(3) 291.44 379.33 T
+(4) 345.44 379.33 T
+(5) 399.44 379.33 T
+(6) 453.44 379.33 T
+-2.78 (7) 498.44 379.33 P
+(LINTYP:) 108 367.33 T
+(1) 192.44 367.33 T
+(1) 237.44 367.33 T
+(1) 291.44 367.33 T
+(1) 345.44 367.33 T
+(1) 399.44 367.33 T
+(1) 453.44 367.33 T
+(1) 498.44 367.33 T
+(LINWID:) 108 355.33 T
+(2) 192.44 355.33 T
+(2) 237.44 355.33 T
+(2) 291.44 355.33 T
+(2) 345.44 355.33 T
+(2) 399.44 355.33 T
+(2) 453.44 355.33 T
+(2) 498.44 355.33 T
+(LABEL:) 108 343.33 T
+(1) 192.44 343.33 T
+(1) 237.44 343.33 T
+(1) 291.44 343.33 T
+(1) 345.44 343.33 T
+(1) 399.44 343.33 T
+(1) 453.44 343.33 T
+(1) 498.44 343.33 T
+(LEVELS:) 108 319.33 T
+(310.00) 167.44 319.33 T
+(312.00) 212.44 319.33 T
+(314.00) 266.44 319.33 T
+(COLORS:) 108 307.33 T
+(8) 192.44 307.33 T
+(9) 237.44 307.33 T
+(10) 285.89 307.33 T
+(LINTYP:) 108 295.33 T
+(1) 192.44 295.33 T
+(1) 237.44 295.33 T
+(1) 291.44 295.33 T
+(LINWID:) 108 283.33 T
+(2) 192.44 283.33 T
+(2) 237.44 283.33 T
+(2) 291.44 283.33 T
+(LABEL:) 108 271.33 T
+(1) 192.44 271.33 T
+(1) 237.44 271.33 T
+(1) 291.44 271.33 T
+(FILLED CONTOURS:) 108 247.33 T
+(LEVELS:) 108 235.33 T
+(296.00) 167.44 235.33 T
+(298.00) 212.44 235.33 T
+(300.00) 266.44 235.33 T
+(302.00) 320.44 235.33 T
+(304.00) 374.44 235.33 T
+(306.00) 428.44 235.33 T
+-1.39 ( 308.00) 470.66 235.33 P
+(COLORS: 32) 108 223.33 T
+(31) 203 223.33 T
+(30) 253.01 223.33 T
+(29) 305.8 223.33 T
+(28) 358.59 223.33 T
+(27) 414.16 223.33 T
+(26) 461.4 223.33 T
+(LEVELS:) 108 199.33 T
+(310.00) 167.44 199.33 T
+(312.00) 212.44 199.33 T
+(314.00) 266.44 199.33 T
+(COLORS:  25) 108 187.33 T
+(24) 203 187.33 T
+(23) 250.23 187.33 T
+(22) 297.47 187.33 T
+(Enter <cr> to accept parameters or type EXIT:) 108 163.33 T
+1 12 Q
+1.06 (Hit return \050) 90 138 P
+4 F
+1.06 (<cr>) 146.08 138 P
+1 F
+1.06 (\051 and take a look at the plot.  This graphic will take a bit longer to) 172.26 138 P
+-0.1 (produce, since it must fill in the colors.  To shorten the drawing time, you may want to) 90 124 P
+0.19 (set the) 90 110 P
+4 F
+0.19 (skip) 124.36 110 P
+1 F
+0.19 ( variable to a value of 1 or 2.) 143.68 110 P
+4 F
+0.19 (Skip) 289.8 110 P
+1 F
+0.19 ( will cause) 310.45 110 P
+2 F
+0.19 (GDCNTR) 365.32 110 P
+1 F
+0.19 ( to skip some grid) 417.28 110 P
+-0.67 (points when calculating the contours.  This will shorten the compute and drawing times,) 90 96 P
+FMENDPAGE
+%%EndPage: "12" 13
+%%Page: "13" 13
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 265.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(D-13) 304.17 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+-0.44 (and usually still provides a nice looking plot.  In cases with extremely noisy data, or the) 108 712 P
+(need for very precise contours,) 108 698 T
+4 F
+(skip) 259.2 698 T
+1 F
+( should remain at 0.) 278.52 698 T
+0.14 (Now let\325s overlay some wind barbs on top of the potential temperature contours.) 108 672 P
+4 F
+0.14 (Exit) 502.68 672 P
+1 F
+0.45 (from) 108 658 P
+2 F
+0.45 (GDCNTR) 134.76 658 P
+1 F
+0.45 (, but this time, do not use) 186.73 658 P
+2 F
+0.45 (GPEND) 314.13 658 P
+1 F
+0.45 (.  Instead, start the vector drawing) 356.11 658 P
+(program,) 108 644 T
+2 F
+(GDWIND) 154.63 644 T
+1 F
+(.) 206.6 644 T
+3 10 Q
+(gdwind) 162 619.33 T
+(GDATTIM) 162 595.33 T
+(Grid date/time) 234 595.33 T
+(910819/0000F00) 414 595.33 T
+(GLEVEL) 162 583.33 T
+(Grid level) 234 583.33 T
+(700) 414 583.33 T
+(GVCORD) 162 571.33 T
+(Grid vertical coordinate) 234 571.33 T
+(pres) 414 571.33 T
+(GVECT) 162 559.33 T
+(Vector grid) 234 559.33 T
+(GDFILE) 162 547.33 T
+(Grid file) 234 547.33 T
+-0.31 ($GEMDATA/hrcbob.grd) 414 547.33 P
+(GAREA) 162 535.33 T
+(Graphics area) 234 535.33 T
+(east) 414 535.33 T
+(SATFIL) 162 523.33 T
+(Satellite image filename\050s\051) 234 523.33 T
+(RADFIL) 162 511.33 T
+(Radar image filename\050s\051) 234 511.33 T
+(SKIP) 162 499.33 T
+(Skip_cntr/skip_plt_x;skip_plt_y) 234 499.33 T
+(WIND) 162 487.33 T
+(Wind symbol/siz/wdth/typ/hdsz) 234 487.33 T
+(REFVEC) 162 475.33 T
+(Mag;x;y;txtsiz/font/wdth/HW;labl) 234 475.33 T
+(MAP) 162 463.33 T
+(Map color/dash/width) 234 463.33 T
+(6/1) 414 463.33 T
+(LATLON) 162 451.33 T
+(Line color/dash/width/label/inc) 234 451.33 T
+(PANEL) 162 439.33 T
+(Panel loc/color/dash/width/regn) 234 439.33 T
+(0/6) 414 439.33 T
+(TITLE) 162 427.33 T
+(Title color/line/title) 234 427.33 T
+(6/-1) 414 427.33 T
+(DEVICE) 162 415.33 T
+(Device|name) 234 415.33 T
+(xw) 414 415.33 T
+(PROJ) 162 403.33 T
+(Map projection/angles/margins) 234 403.33 T
+( nps) 414 403.33 T
+(CLEAR) 162 391.33 T
+(Clear screen flag) 234 391.33 T
+(yes) 414 391.33 T
+(SCALE) 162 379.33 T
+(Scalar scale / vector scale) 234 379.33 T
+(999) 414 379.33 T
+(TEXT) 162 367.33 T
+(Text size/font/width/hw flag) 234 367.33 T
+(1/2/2) 414 367.33 T
+(Parameters requested:GDATTIM,GLEVEL,GVCORD,GVECT,GDFILE,) 162 355.33 T
+(GAREA,SATFIL,RADFIL,SKIP,WIND,REFVEC,MAP,LATLON,PANEL,) 162 343.33 T
+(TITLE,DEVICE,PROJ,CLEAR,SCALE,TEXT.) 162 331.33 T
+(GEMPAK-GDWIND>) 162 319.33 T
+1 12 Q
+0.14 (Note that many of the variables we set in the last run of) 108 294 P
+2 F
+0.14 (GDCNTR) 378.67 294 P
+1 F
+0.14 ( are still applicable) 430.64 294 P
+3.4 (here.  This is an example of the advantage of GEMPAK\325s "memory" between) 108 280 P
+(programs.) 108 266 T
+-0.12 (Let\325s set up the variables to overlay wind barbs in knots over the potential temperature) 108 240 P
+0.2 (contours at 700 mb.  Since this is the vector drawing program \050wind barbs are vectors) 108 226 P
+0.92 (because they have magnitude and direction\051 the) 108 212 P
+4 F
+0.92 (gfunc) 345.9 212 P
+1 F
+0.92 ( variable has been replaced by) 372.55 212 P
+4 F
+1.07 (gvect) 108 198 P
+1 F
+1.07 (.  You can read about the options for specifying) 133.31 198 P
+4 F
+1.07 (gvect) 375.49 198 P
+1 F
+1.07 ( under) 400.8 198 P
+4 F
+1.07 (gparm) 436.24 198 P
+1 F
+1.07 ( on-line, in) 467.56 198 P
+1.47 (Chapter 3, or in Appendix B.  Specify the representation of the wind barbs \050barbs,) 108 184 P
+(knots, color #2\051 with the wind variable.) 108 170 T
+3 10 Q
+(GEMPAK-GDWIND>gvect=wind) 162 145.33 T
+(GEMPAK-GDWIND>wind=bk2//2) 162 133.33 T
+(GEMPAK-GDWIND>title=6/-1/700 mb Winds) 162 121.33 T
+1 12 Q
+-0.16 (Pay special attention to the) 108 96 P
+4 F
+-0.16 (clear) 239.46 96 P
+1 F
+-0.16 ( variable.  This is what determines whether a new plot) 264.11 96 P
+0.2 (is laid on top of \050overlay\051 the old plot, or replaces the old plot.  Each time we\325ve used) 108 82 P
+FMENDPAGE
+%%EndPage: "13" 14
+%%Page: "14" 14
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Tutorial) 247.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(D-14) 286.17 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+-0.47 (this variable in the past, we\325ve set it to) 90 712 P
+4 F
+-0.47 (yes) 273.6 712 P
+1 F
+-0.47 (, since we wanted a new plot each time.  Now) 288.92 712 P
+1.05 (we set it to) 90 698 P
+4 F
+1.05 (no) 149.52 698 P
+1 F
+1.05 ( so the wind barbs will be plotted on top of the potential temperature) 161.51 698 P
+(contours.) 90 684 T
+3 10 Q
+(GEMPAK-GDWIND>clear=no) 144 659.33 T
+1 12 Q
+(Now let\325s) 90 634 T
+4 F
+(run) 139.96 634 T
+1 F
+( the program.) 156.62 634 T
+3 10 Q
+(GEMPAK-GDWIND>r) 144 609.33 T
+(PARAMETERS FOR GDWIND:) 108 585.33 T
+(Grid file: $GEMDATA/hrcbob.grd) 108 561.33 T
+(GRID IDENTIFIER:) 108 537.33 T
+(                 TIME1             TIME2         LEVL1 LEVL2   VCORD  PARM) 108 525.33 T
+(     910819/0000F000                         700                         PRES  UREL) 108 513.33 T
+(GAREA:  east) 108 489.33 T
+(SCALE:    0) 108 477.33 T
+(MINIMUM AND MAXIMUM VECTOR MAGNITUDE     0.09    52.41) 108 453.33 T
+(Wind type: bk2//2) 108 429.33 T
+(Enter <cr> to accept parameters or type EXIT:) 108 405.33 T
+1 12 Q
+(Hit return \050) 90 380 T
+4 F
+(<cr>) 143.96 380 T
+1 F
+(\051 to see the overlay plot .) 170.14 380 T
+(Now you\325ve generated a wind barb plot overlaid on contour of potential temperature!) 90 354 T
+1.27 (You may use this technique for constructing overlays from any GEMPAK graphics) 90 328 P
+-0.72 (programs.  You may overlay plots using the same program \050overlay line contours of 500) 90 314 P
+1.07 (mb heights on top of color fill contours of vorticity, for example\051, or from different) 90 300 P
+(programs \050overlay station data on top of lifted index contours\051.) 90 286 T
+1.3 (Take some time now to experiment with creating overlays and using the diagnostic) 90 260 P
+(functions listed in Appendix B.) 90 246 T
+(When you are all finished running GEMPAK, be sure to use) 90 220 T
+2 F
+(GPEND) 382.46 220 T
+1 F
+(.) 424.44 220 T
+-0.44 (In the course of this Appendix we\325ve learned how to run surface, upper air, and gridded) 90 194 P
+-0.12 (programs, to list, map, plot, contour, and overlay data. This was not an exhaustive tour) 90 180 P
+1.72 (through GEMPAK.  In fact there are many GEMPAK programs that weren\325t even) 90 166 P
+0.83 (mentioned here.  However, now that you know how to run a sampling of GEMPAK) 90 152 P
+-0.69 (programs, and you know how to use the on-line help and the manual, you should be able) 90 138 P
+(to find your way through any GEMPAK program.) 90 124 T
+FMENDPAGE
+%%EndPage: "14" 15
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%Pages: 14 1
+%%DocumentFonts: Helvetica-Bold
+%%+ Times-Roman
+%%+ Times-Bold
+%%+ Helvetica
+%%+ Times-Italic
+%%+ Times-BoldItalic

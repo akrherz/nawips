@@ -1,0 +1,43 @@
+#------------------------------------------------------------------------
+# im.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 9/97	Original
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+imar2gm.f	- Read McIdas Area Header
+imbtot.f	- Compute Temperature From Brightness
+imcbar.f	- Draw Imagery Color Bar
+imdrop.f	- Drop (Display) Image
+imgi2gm.f	- Read AWIPS GINI Header
+imgm2gi.f	- GEMPAK Navigation To AWIPS GINI File
+imisub.f	- Subset Current Projection Area
+imlutf.f	- Define & Apply Image LUT File
+imnihd.f	- Read Raw NIDS Header
+imnohd.f	- Read NOWrad Header
+imqlut.f	- Get Lookup Table Filename
+imqsiz.f	- Get Original Image Size
+imqtim.f	- Get Original Image Date
+imrgin.c	- Read AWIPS GINI Image Data
+imrtbl.f	- Read Image Type Table File
+imsbgn.c	- Subset GINI Image 
+imsimg.f	- Read Image File Header
+imttob.f	- Compute Brightness From Temperature
+imunhd.f	- Read UNISYS NIDS Header
+imwgin.c	- Write AWIPS GINI Image Data
+prnlnr.f	- Convert Radians To Pi/-Pi
+prnlon.f	- Convert Degrees To 180/-180
+# testim.f	- IM Library Test Program
+
+#------------------------------------------------------------------------

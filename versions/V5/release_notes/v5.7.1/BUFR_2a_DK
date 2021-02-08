@@ -1,0 +1,9 @@
+Re-engineer library code for ASCII to BUFR conversion (ALL)
+
+A new table-driven BUFR encoder program, BUFRENC, has been developed
+which reads user input parameters, tables, and an ASCII file to
+generate one or more BUFR output files.  New BUFR descriptor tables and
+a master table were developed to support this code.  This program is
+currently an experimental version of the code, which will eventually
+replace program SIGBENC.  There is a known bug when the code attempts
+to process more than one event of type storm, volcano, or radiation.

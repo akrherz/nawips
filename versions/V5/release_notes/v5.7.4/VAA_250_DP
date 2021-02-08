@@ -1,0 +1,9 @@
+VAA (Volcanic Ash Advisory) Updates
+
+	A. Corrected dropped zero prefix in volcano longitude.
+	B. Removed OTHERS choices from VAA ash cloud gui.
+	C. Allowed editing of the 6, 12 and 18 hour forecast information. 
+	   Users may now change the information presented in the 'Observed and 
+	   Forecast Ash Cloud Information...' popup labeled 'VAA Ash Cloud 
+	   Info'. These changes will be reflected in the final text product.
+

@@ -1,0 +1,8 @@
+Sea ice graphic pre-processing (emc,nco)
+
+A new program was written to convert the TRAN text format, used on the 
+CCS to send text products to the NWS Telecommunications Gateway, to
+the Family of Services format, used by the NAWIPS decoders. For the
+program, tran2fos, the user must specify the input file and the output
+file on the command line. The output file may then be used as input
+to the Sea Ice Drift decoder, dcidft.

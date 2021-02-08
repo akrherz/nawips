@@ -1,0 +1,11 @@
+Task Title:    13.1  Allow plotting of ambiguity data as new data type
+Track Number:  249
+
+NMAP2 and GPMAP have been enhanced to allow plotting of the four QuikScat
+ambiguity files.  Each ambiguity file is treated as a separate miscellaneous
+data type:  AMBG1, AMBG2, AMBG3, and AMBG4.  Each ambiguity has been defaulted
+to a different color in NMAP2, so that each can be selected one at a time
+using the New Source button (MISC) in the Data Selection Window and be
+displayed together.  After this is done initially and desired attribute
+settings have been selected, these data settings can be saved to an SPF file
+and be easily restored for future displays. 

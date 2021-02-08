@@ -1,0 +1,112 @@
+			N-AWIPS 5.4.2+ Changes for the LDM 
+
+		( d - Development account 
+		  o - Operational account
+		  b - Both accounts )
+
+b1.	Updated LDM pattern action table for FFG header
+	changes.  Done, KT, (SS), 3/17/97.
+
+	ldm/etc/pqact.conf
+
+============================== Patch 5.4.2.a ===================================
+
+============================== Patch 5.4.2.b ===================================
+
+d2.	Updated LDM pattern action table for SCD decoder.
+	Done, SJ, (SS), 4/02/97.
+
+	ldm/etc/pqact.conf
+
+d3.	Updated LDM pattern action table to that all bulletins
+	beginning with "SA" or "SP" are piped to DCMETR.
+	Done, KT, (SS), 4/07/97.
+
+	ldm/etc/pqact.conf
+
+b4.	Updated LDM pattern action table to reflect updated to
+	some Marine AFOS text products (see t5).  Done, SJ, (SS),
+	4/10/97.
+
+	ldm/etc/pqact.conf
+
+b5.	Updated LDM pattern action table for new ANCPLSANC marine
+	text product for AFOS (see t7).  Done, JP, (SS),
+	4/16/97.
+
+	ldm/etc/pqact.conf
+
+d6.	Updated LDM pattern action table for new ship decoder.
+	Done, KT, (SS), 4/17/97.
+
+	ldm/etc/pqact.conf
+
+
+============================== Patch 5.4.2.c ===================================
+b7.	Updated LDM pattern action table.  Removed unused patterns
+	and re-arranged groupings.  Done, SJ, (SS), 5/6/97.
+
+	ldm/etc/pqact.conf
+
+b8.	Updated LDM pattern action table to replace products that
+	were mistakenly removed.  Done, SJ, (SS), 5/13/97.
+
+	ldm/etc/pqact.conf
+
+=========================== Patch 5.4.2.d ==============================
+
+=========================== Patch 5.4.2.e ==============================
+
+d9.	Updated LDM pattern action table for new MPC products.
+	Also added some new AFOS alarms requested by HPC.  Done,
+	JP, SJ, (SS), 5/27/97.
+
+	ldm/etc/pqact.conf
+
+d10.	Updated LDM pattern action table for San Juan corrections.
+	(See t20).  Done GK, (KT), 6/2/97.
+
+	ldm/etc/pqact.conf
+
+=========================== Patch 5.4.2.f ==============================
+
+b11.	Updated LDM pattern action table for new Marine products,
+	(See t24.).  Also added more prodcuts for AFOS alarm for
+	the HPC.  Also updated for additional zone and agricultural
+	stations (see t23.).  Done, JP, SJ, (SS), 6/9/97.
+
+	ldm/etc/pqact.conf
+
+b12.	Removed bulletin id FPUS54 from Coded Cities Forecast pattern.
+	This was causing zone forecasts to be written to Coded Cities 
+	files for NWX.  Done, SS, (SS), 6/11/97
+
+	ldm/etc/pqact.conf
+
+=========================== Patch 5.4.2.g ==============================
+
+b13.	Added products to nalarm for HPC.  Also removed the San Juan
+	Coded Cities Forecast code because it was causing  problems for
+	some of the other CCF products.  Hurricane model forecast
+	made more generic.  Done, JYC, (SS), 7/3/97.
+
+	ldm/etc/pqact.conf
+
+=========================== Patch 5.4.2.h ==============================
+
+=========================== Patch 5.4.2.i ==============================
+
+=========================== Patch 5.4.2.j ==============================
+b14.	Added HPC storm summaries to the LDM (see t43).  Done, SJ, (SS),
+	9/3/97.
+
+	ldm/etc/pqact.conf
+
+b15.	Added Special Marine Warning and Marine Weather Statement from
+	all coastal and Great Lakes offices (see t44).  Done, JP, (SS),
+	9/3/97.
+
+	ldm/etc/pqact.conf, scour.conf
+=========================== Patch 5.4.2.k ==============================
+
+=========================== Patch 5.4.2.l ==============================

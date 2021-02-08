@@ -1,0 +1,23 @@
+TRACK 148:  OTHER
+TASK NAME:  Unassociated Tasks--Use GG_CSIG to display the extrapolated 1 and 2
+	    hour forecasts
+
+The capability to display the extrapolated 1-hour and 2-hour convective SIGMETs
+has been added to NMAP2 and GPMAP.  Since all shapes (area, line, and isolated)
+are to be plotted, the three "TYPE" lines for the different shapes have been
+replaced in miscset.tbl for CSIG with "TYPE" lines for initial (0-hour), 1-hour,
+and 2-hour.  The "TYPE" lines has an on/off flag which determines whether that
+type (which hour) will be plotted and a color number.  The on/off flag and color
+can also be changed in the "CSIG Attributes" box which pops up when the
+"Edit Source" button in NMAP2 is clicked.  In release 5.7.3 there were five
+flags:  Sequence ID, time, Direction/speed, Flight Level, and Intensity.  The
+Sequence ID FLAG line in miscset.tbl has been replaced with three Sequence ID
+FLAG lines, one associated with each of the three hours.  If the initial hour is
+plotted, then the original five flags will be applied for the initial hour
+CSIG.  If the initial hour is not plotted and only one extrapolated hour is
+to be plotted, then the original flags (except for the Sequence ID) will be
+applied.  If the initial hour is not plotted and both 1-hour and 2 hour CSIGs
+are to be plotted, then the original flags (except for the Sequence ID) will be
+applied to the 1-hour CSIG.  The original flags (except for the Sequence ID)
+will always be applied to the lowest hour CSIG plotted).
+

@@ -1,0 +1,7 @@
+External Project:  OTHER
+Track:  304
+Task:  18.4
+
+GD programs use the CPF file points
+
+A new option, cursor point file (CPF) name, has been added to the GEMPAK parameters GPOINT and CXSTNS for use by the GD programs gdcross, gdprof, gdthgt, and gdtser.  This allows the exact latitude and longitude of a point specified within the seek program to be used by these programs without the user having to write down the values and then entering them in the above mentioned GD programs.  For more information, view the help giles for GPOINT and CXSTNS at $GEMHLP/hlx/<name>.hl2.  The CPF file can be created by simply clicking the "Save CPF" button from within seek. 

@@ -1,0 +1,50 @@
+------------------------------------------------------------------------
+r180 | jacobs | 2010-07-16 01:01:22 +0000 (Fri, 16 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gemlib/ss/ssvers.f
+
+Update the version to 6.1.1
+------------------------------------------------------------------------
+r179 | jacobs | 2010-07-15 17:55:24 +0000 (Thu, 15 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gemlib/gg/ggency.f
+
+Changed the Cyclone Tracker plotting routine in response to a format change in the files. Two extra characters were added, so changed the routine to use the comma delimiters to parse a record. This will work with the old and new formats.
+------------------------------------------------------------------------
+r178 | jacobs | 2010-07-15 14:47:03 +0000 (Thu, 15 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/sfstns.tbl
+
+Added Canadian station CWLS at the request of the SPC.
+------------------------------------------------------------------------
+r177 | jacobs | 2010-07-12 19:32:30 +0000 (Mon, 12 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/permclust.tbl
+
+At the request of the SPC, modified the permanent cluster table to modify the marine zones associated with Calvert County, Maryland.
+------------------------------------------------------------------------
+r176 | jacobs | 2010-07-12 19:31:05 +0000 (Mon, 12 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/sat/imgtyp.tbl
+
+Added MTSAT2 (satid=85) to the imgtyp.tbl. Changed MTS (satid=84) to MTSAT1.
+------------------------------------------------------------------------
+r175 | jacobs | 2010-07-12 19:29:45 +0000 (Mon, 12 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gridlib/gr/grvnav.f
+
+At the request of Harry Edmon, Univ. of Washington, (via Unidata) - modified the check in GR_VNAV to check if angflg is true before checking the value of the angle 3. 
+------------------------------------------------------------------------
+r174 | jacobs | 2010-06-18 20:57:01 +0000 (Fri, 18 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/uscore.h
+   M /trunk/nawips/gempak/source/gemlib/gg/ggrtrk.c
+
+Removed the underscore from the function name of gg_rtrk. The underscore prevented building the software on the CCS (AIX5) since the trailing underscore is not needed on that operating system. 
+------------------------------------------------------------------------
+r173 | jacobs | 2010-06-18 11:43:37 +0000 (Fri, 18 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/snstns_land.tbl
+
+Updated the land radiosonde station table to be consistent with the CCS version of the table.
+------------------------------------------------------------------------

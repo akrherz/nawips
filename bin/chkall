@@ -1,0 +1,21 @@
+#!/bin/csh
+#
+# CHKALL
+#
+# This script checks the ALL_* files for warnings and errors
+#
+##
+# Log:
+# T. Piper/SAIC		02/04	created
+
+cd $NAWIPS/gempak/build
+# these three are unique to AIX 
+fgrep "(E)" ALL* GEMPAK_COMP_*
+fgrep "(S)" ALL* GEMPAK_COMP_*
+fgrep "(W)" ALL* GEMPAK_COMP_*
+# these are more generic tests
+fgrep -i error	ALL* GEMPAK_COMP_*
+fgrep -i fatal	ALL* GEMPAK_COMP_*
+fgrep -i stale	ALL* GEMPAK_COMP_*
+fgrep -i warning ALL* GEMPAK_COMP_*
+

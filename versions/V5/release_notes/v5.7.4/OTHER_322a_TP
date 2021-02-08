@@ -1,0 +1,9 @@
+External Project:  OTHER
+Track:  322
+Task:  18.1.1
+
+Distance Scale Legend
+
+A new GEMPAK parameter, MSCALE, has been added to gemglb.nts for use by GEMPAK programs that display maps.  Specifically, gdcntr, gdmap, gdplot, gdplot2, gdstream, gdwind, gpltln, gpmap, sfmap, and snmap can now display a distance scale legend anywhere within the view region of a map using any "true" latitude.  The distances can be displayed in nautical miles, kilometers, or statute miles.  The utility is extremely versitile.  The user can specify the text attributes, including font, size, and style.  The exact distance values to be displayed can be specified and need not be whole numbers or equally spaced.  For more details on the available options and the precise syntax read the help file $GEMHLP/hlx/mscale.hl2.
+
+

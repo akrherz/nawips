@@ -1,0 +1,104 @@
+#------------------------------------------------------------------------
+# dg.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+#
+# NOTE: Some of the DG_ subroutines are called only by DV_, DF_, and
+#	other DG_ subroutines.  They are not intended to be called by 
+#	programmers at large.  Therefore, many of the DG library 
+#	routines do not appear in the Programmer's Guide.
+#
+#------------------------------------------------------------------------
+
+dgarea.f	- Set Area For Diagnostics
+# dgazst.f	- 
+# dgcdeg.f	- 
+# dgchck.f	- 
+dgclal.f	- Close All Grid Files
+dgclcn.f	- Find Closest Pt. To Center Of Gravity
+dgclmp.f	- Find Cluster Of Equal Relative Extrema
+dgclos.f	- Close A Grid File
+dgcola.f	- Discard All Rows
+dgcwbt.f	- Compute Wetbulb Temperature
+# dgdriv.f	- 
+# dgdwpt.f	- 
+dgfclp.f	- Determine Whether Cluster Exists
+dgfile.f	- Open Grid File
+dgflno.f	- Retrieve File Number GFUNC
+# dgfnds.f	- 
+# dgfndv.f	- 
+# dggetl.f	- 
+# dggets.f	- 
+# dggett.f	- 
+# dggetv.f	- 
+# dggobs.f	- 
+# dggrdr.f	- 
+dggrel.f	- Convert North-Relative Into Grid-Relative
+dggrid.f	- Compute Scalar Grid
+# dggrot.f	- 
+# dggtmp.f	- 
+# dggtvl.f	- 
+dghilo.f	- Locate Relative Extrema In Grid
+dginit.f	- Initialize Diagnostic Package
+dgkxky.f	- Get Grid Dimensions
+dglncr.f	- Read Land-Sea Array
+dglncx.f	- Set-up Land-Sea Array
+# dgltln.f	- 
+# dgmerr.f	- 
+dgmfil.f	- Open Multiple Grid Files
+# dgmhdr.f	- 
+# dgmnam.f	- 
+# dgmscl.f	- 
+# dgmxnt.f	- 
+dgnrel.f	- Convert Grid-Relative Into North-Relative
+# dgnxts.f	- 
+# dgnxtv.f	- 
+dgoang.f	- Set Orientation Angle
+dgofil.f	- Open Multiple Grid Files
+dgorgn.f	- Set Origin Position
+# dgpcll.f	- 
+# dgpfun.f	- 
+# dgplll.f	- 
+# dgprcp.f	- 
+# dgprdr.f	- 
+# dgprft.f	- 
+# dgputs.f	- 
+# dgputv.f	- 
+dgpwts.f	- Determine Whether Pole Exists
+dgrdat.f	- Read Grid From File
+# dgreal.f	- 
+# dgrgrd.f	- 
+# dgrpls.f	- 
+# dgrplv.f	- 
+# dgsare.f	- 
+# dgscal.f	- 
+# dgstlv.f	- 
+# dgtemp.f	- 
+# dgtops.f	- 
+# dgtopv.f	- 
+dgufil.f	- Open Grid Pointed To By Index
+# dguhdr.f	- 
+# dgupdh.f	- 
+# dgupdv.f	- 
+# dgupsg.f	- 
+# dgupvg.f	- 
+# dgvcrd.f	- 
+dgvecr.f	- Compute Grid Relative Vector
+dgvect.f	- Compute Vector Grid
+# testdg.f	- DG Library Test Program
+
+#------------------------------------------------------------------------

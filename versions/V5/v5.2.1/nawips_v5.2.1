@@ -1,0 +1,329 @@
+
+                           NAWIPS 5.2.1 Change Description Log
+
+   000. Miscellaneous
+
+	a. Removed GQMFIL from the GEMLIB/GG directory. Done, SJ 12/6/94.
+
+	b. Added a call to GEPLOT in GPCLOSE to set the requested
+	   window to the active window before closing it.
+	   Done, SJ 1/24/95.
+
+	c. Fixed a typo in GDPLOT. The coding error was not allowing
+	   the vector scale factor to be set properly. (From PB)
+	   Done, SJ 1/24/95.
+
+	d. Fixed the calling sequence for GGTPNT in ATEST.
+	   Done, SJ 1/24/95.
+
+	e. Fixed computation of the x-direction grid spacing in GDXDXY,
+	   for GDCROSS, for Cylindrical grids which wrap around the
+	   globe. Done, SJ 1/25/95.
+
+	f. Small fixes to NTRANS. Removed the file cssenvr.c from the
+	   NTRANS source directory. The routine is no longer used in
+	   NTRANS. Added more error checking to NxmBxmButtonCreate.c
+	   for the IBM workstations. In NxmColorTable.c, changed the
+	   variable for the location of the help file. Fixed variable
+	   types in NxmColorInit.c. Done, CL 1/26/95.
+
+	g. Fixed flag for southern hemisphere wind barbs. The error
+	   caused missing data to be plotted. Done, PB 1/31/95.
+
+	h. Added a call to DG_RDAT to TESTDG. Also fixed the output
+	   for the DGGRID common block in TESTDG. Done, SJ 2/1/95.
+
+	i. Added the TEXT parameter to the program SNTSER.
+	   Done, SJ 2/17/95.
+
+	j. Changed the size of the input string to 72 characters in
+	   GG_PROJ. Done, SJ 2/17/95.
+
+	k. Changed the number of characters read in GB_GIDS from 4 to 8.
+	   Done, SJ 3/1/95.
+
+	l. Removed a check for only one time returned from GR_TLST in
+	   GDCNTR, GDMAP, GDSTREAM and GDWIND. This should not have been
+	   added, since it eliminated the use of GDATTIM=LIST by
+	   resetting a single time back to the user input.
+	   From PB. SJ 3/16/95.
+
+	m. Added centering of text for the postscript output of NTRANS.
+	   Done, JW 4/3/95.
+
+	n. Changed the search method in DM_SRCH to stop looping over
+	   the header info once a non-match occurs. Done, JW 4/5/95.
+
+	o. Changed the occurrences of the `pow' function in GB_UNPK
+	   to left shift functions. Done, L. Oolman 4/5/95.
+
+	p. Fixed a bug in XTEXTC for left justification of the text
+	   string. Done, CL 4/12/95.
+
+	q. Updated help files for GAREA, RADFIL and SATFIL. Also,
+	   modified NOTAE.HLP to include new commands -- LUTS, LUTR
+	   and WINDOW. Done, SS 4/12/95.
+
+	r. Increased the number of pixmaps per window (MAX_PIXMAP)
+	   from 30 to 50. Also modified NSAT and NTRANS to use
+	   MAX_PIXMAP instead of locally set parameters.
+	   Done, CL 4/13/95.
+
+   001.	GOES-8 updates
+
+	a. Update to NSAT to add new IR images from GOES-8. The new
+	   files are from different image channels than the images
+	   from GOES-7. Also, update satimg.tbl for the min/max for
+	   the new images. Done, CL 11/16/94
+
+   002.	Test data
+
+	a. Added satellite imagery to accompany the gridded and
+	   observed data for Hurricane Bob test data set.
+	   Done, SJ 11/16/94.
+
+	b. Added sample satellite imagery for the Mid West.
+	   Done, SJ 11/16/94.
+
+   003.	Grid Diagnostics
+
+	a. Reset the grid header information to blanks and zeros 
+	   for scratch grids in the internal grid table.
+	   Done, SJ 11/28/94.
+
+   004.	Decoding Observations
+
+	a. Update to the SAO decoding routines to ignore all remarks
+	   and extract useful information from the end of a report.
+	   Done, PB 11/21/94. Added 11/28/94.
+   
+   005. Afos Tables
+
+	a. Added new products for marine desks. Done, LW 12/5/94.
+
+	b. Added new products for CAC. Done, LW 1/24/95.
+
+   006.	Data Display
+
+	a. Fixed date calculation in TI_JTOI to compute dates in 
+	   December correctly. Done, PB 12/5/94. Fixed potential
+	   problem with leap year computation. Added TI_JTOI to 
+	   TESTTI. Done, SJ 12/5/94.
+
+	b. Changed the contouring to not compute the subbox coefficients
+	   if the user has requested no subboxing. Changed how the
+	   checking is handled to find the crossing point of a
+	   contour in a box. Done, GK 1/24/95.
+
+	c. Added radar images as a valid image type and projection.
+	   Done, JC 1/24/95.
+
+	d. Added a check to eliminate interpolation of winds from
+	   below 100 mb to above 100 mb to MR_MISS. This eliminates
+	   interpoation to very high level winds. Done, SJ 3/7/95.
+
+	e. Fixed scaling of data in GDPROF. The data was only being
+	   scaled on the first pass. Added a call to GR_SSCL to
+	   compute the scaling for subsequent frames.
+	   Done, PB 1/13/95. Added, SJ 3/20/95.
+
+	f. Removed a check for the last plottable row of data in
+	   GDCROSS. The routine GDXDVV computed the last row based on
+	   mapping the vectors to the regular grid used for scalar
+	   data. The remapping was removed and only the vectors for 
+	   the levels with data are now plotted. Therefore, the check
+	   is no longer needed. Done, SJ 3/20/95.
+
+	g. Added the symbols SKYM and SKYK to SFMPRM for SFMAP. These
+	   symbols may now be used in place of SKYC/BRB[KM].
+	   Done, PB 1/12/95. Added, SJ 3/20/95.
+
+	h. Added ability to plot cross sections in SGMA coordinates to
+	   GDCROSS. Done, KB 3/21/95.
+
+	i. Added a flag to the user input for LEVELS. The flag /MAN
+	   will allow the user to specify the use of only mandatory
+	   level data for interpolation or display. This required
+	   a change to the calling sequence for LV_INPT and to all
+	   of the level parsing routines for the SN programs. Also
+	   added a call to SN_MAND to process the user input for the
+	   new flag. Done, SJ 3/27/95.
+
+	j. Modified the checks for valid data in MR_MAND to look for 
+	   pressure AND temperature AND height at each mandatory level.
+	   Also, added a check for manflg to SN_MERG before calling
+	   the routine to merge the data. This limits the output data
+	   to what was read from the file when the user sets the flag.
+	   Done, SJ 4/10/95.
+
+   007.	GRIB Decoding
+
+	a. Changed the check for equality of the angles in the GRIB
+	   Lambert projection to use integers instead of floating
+	   point numbers. (From Larry Oolman.) Done, SJ 12/7/94.
+
+	b. Added subsetting to NAGRIB. The user enters the subset
+	   region as GAREA. The program then computes the closest
+	   grid points to the lat/lon bounds and extracts the correct
+	   subset area. Done, KB & SJ 5/9/95.
+
+   008. NWX tables
+
+	a. Fixed the Flash Flood Guidance location table.
+	   Done, SJ 12/28/94.
+
+   009.	Color allocation and setting
+
+	a. Added color look-up tables for satellite and radar images.
+	   Also added the ability to change the LUT from the GEMPAK
+	   command line. Done, JC 1/24/95.
+	   Changed the color setting routines to choose a set of radar
+	   colors, if requested. Changed the color allocation to
+	   use 3 color arrays for graphics, satellite and radar color
+	   entries. Done, SJ 1/24/95.
+
+	b. Added the radar color set to NuiColorInit.c for use in
+	   the user interface programs. Done, CL 1/26/95.
+
+	c. Removed the allocation of the colors for button shadows, on
+	   the color bar and palette, in the user interface programs.
+	   Done, CL 1/26/95.
+
+	d. See 014a. Done, CL 3/24/95.
+
+	e. Updated color allocation for the NXM library based on the
+	   changes made to the XW library. Done, CL 3/28/95.
+
+	f. Updated the programs: AFOS, NWX, NTRANS and NTL to access and
+	   allocate colors using the new mechanism in the XW library.
+	   Done, CL 3/28/95.
+
+	g. Added a new routine to query the color banks -- XQCLRS. 
+	   Made corresponding changes to NuiColorInit to use XQCLRS.
+	   Done, CL 4/12/95.
+
+   010.	Window manipulation
+
+	a. Added the ability to select a given window and make it the 
+	   active window. Added a new common block to allow the
+	   projection information to be reset for the active window.
+	   Done, SJ 1/24/95.
+
+	b. Changed the margin setting in order to make returning to a
+	   previous window consistent with the case when the user only
+	   has a single window. Also, moved the call to IN_TEXT in all
+	   of the mapping programs to before the call to GG_MAPS, so
+	   that the correct text size is used to create the margins.
+	   Done, SJ 2/17/95.
+
+   011.	GEMPAK station tables
+
+	a. Changed Waycross, GA (AYS, 72213) to Jacksonville, FL
+	   (JAX, 72206). Done, SJ 1/25/95.
+
+	b. Changed Peoria, IL (72532) to Davenport, IA (74455).
+	   Changed Paducah, KY (72435) to Lincoln, IL (74560).
+	   Changed Monett, MO (72349) to Springfield, MO (72440).
+	   Done, SJ 2/16/95.
+
+	c. Added Shreveport, LA (72248). Done, SJ 2/24/95.
+
+	d. Updated information for Denver/Stapleton and Denver
+	   International Airports. Done, SJ 3/2/95.
+
+	e. Checked information for Denver airports. Added
+	   information for Chicago/Wheeling, IL. Added station IDs
+	   for Lincoln, IL and Davenport, IA. Updated information
+	   for Shreveport, LA, Jacksonville, FL and
+	   Denver/Stapleton, CO. Done, SJ 3/16/95.
+
+   012.	User help files
+
+	a. Added viewframe.hlp for NTRANS. Updated the source code
+	   to access the new help file. Done, CL 1/26/95.
+
+	b. Added preference.hlp for NSAT. Done, CL 4/4/95.
+
+	c. Updated access to the help files for NTRANS and NSAT.
+	   Updated the help files for NTRANS. Done, CL/DP 4/19/95.
+
+   013. Image Display
+
+	a. Changed the satellite navigation routines to handle the
+	   GOES-8 un-remapped projection. Changed the names of the
+	   routines in WISNAV and renamed the file to MCNAV. Added 
+	   the projection type GVAR. Done, JC 2/95. Added, SJ 3/1/95.
+
+	b. Added image subsetting support. Added the parameters
+	   SATFIL and RADFIL to specify the image files to display.
+	   GAREA now determines the geographic viewing area. 
+	   (GAREA=DSET will display the entire image.)
+	   Also, added a warning in case the sub-area displayed had
+	   no part of the image viewable.
+	   Done, JC 2/6/95. Added, SJ 3/1/95.
+
+	c. Added MCGOES and MCGVAR to be valid satellite projections
+	   in GDRGRD, for drawing lat/lon lines. Done, JC 3/17/95.
+
+	d. Updated XSATIM in the XW2 driver to clear the pixmap before
+	   dropping an image, drop images faster and use less memory
+	   in the process. Also set up the arrays to be globally 
+	   allocated once to a large size and only reallocated if the
+	   new image size is larger. Also, saved the image in memory
+	   in case the user wishes to load the same image again. 
+	   Done, CL 3/24/95.
+
+	e. Modified NSAT to:
+		- use the new color allocation scheme in the XW library.
+		- have an Auto Update capability.
+		- use GSLUTF to load a look up table for images.
+		- include additions to the Preferences pop-up window:
+			- auto-update time
+			- `quick' buttons for lat/lon, map, etc.
+			- APPLY, CANCEL and DEFAULT buttons
+		- use "scandir" to determine the number of files in
+		  a directory instead of setting a hard limit.
+	   Made a new directory for NSAT1.2 since almost all of the
+	   code was changed. Done, CL 3/28/95.
+
+	f. Added COLORMB, ROYGBV and WATVAP LUTs to the set of tables.
+	   Also added the new color LUTs to enhance.tbl for NSAT.
+	   Done, SJ 4/4/95.
+
+   014.	Device Drivers
+
+	a. Changed the color allocation scheme of the XW driver and
+	   all of the user interface programs to be more consistent
+	   and flexible. (Temporarily installed as XW2.) Added new
+	   structures to accomodate the different color banks.
+	   Done, CL 3/24/95. Moved XW2 to XW, SJ 3/28/95.
+
+	b. Added better error handling to the XW2 device driver. Return
+	   codes were added to GEMPLT.ERR and ERROR.PRM. Also updated
+	   the coding style of all of the C routines.
+	   Done, CL 3/24/95. Moved XW2 to XW, SJ 3/28/95.
+
+	c. Fixed XSATIM to drop multi-byte images. A bug was introduced
+	   in the last set of changes. Done, CL 4/3/95.
+
+   015.	GUI Programs
+
+	a. Rewrote NTRANS to use the general XW library rather than
+	   a local copy. Updated NTRANS to use the new color allocation
+	   scheme. (See 009f and 009g.) Created NTRANS2.2 and removed
+	   NTRANS2.1. Done, CL 4/12/95.
+
+	b. Fixed plotting of dotted lines to the screen in NTRANS.
+	   Also, fixed the plotting of text to a PostScript file for
+	   NTRANS. Neither was working after the updates made earlier.
+	   Done, CL 4/14/95.
+
+	c. Fixed a bug in NSAT, and NXMLIB, associated with freeing
+	   character strings. The problem would cause crashes if the
+	   value of the string was not as expected. Fixed four files
+	   which freed the string when it is not necessary.
+	   Done, CL 4/19/95.
+
+	d. Fixed the ability to resize the window for NSAT. The program
+	   would not load the image to fit the window, and would not
+	   properly set the new window size. Done, CL 4/19/95.

@@ -1,0 +1,74 @@
+#------------------------------------------------------------------------
+# sf.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+sfacny.f 	- Add County Stations To Surface File
+sfastn.f	- Add Stations
+sfatim.f	- Add Time
+sfbegs.f	- Reset Search
+sfcacny.f	- Add County Stations To Surface File
+sfcclf.f	- Create Climate File
+sfcclp.f	- Create Packed Climate File
+sfcgtim.f	- Get Available Times From Surface File
+sfcopnf.f	- Open Existing Surface Data File
+sfchkf.f	- Check Surface File Open
+sfclos.f	- Close Surface File
+sfcrcn.f 	- Create Watch-By-County File
+sfcref.f	- Create Standard File
+sfcrfp.f	- Create Packed Standard File
+sfcsdf.f	- Create Ship File
+sfcsdp.f	- Create Packed Ship File
+#sfcstn.f	- Check For Station In Surface File
+#sfctim.f	- Check For Date/Time In Surface File
+sfddat.f	- Delete Data
+sfdstn.f	- Delete Station
+sfdtim.f	- Delete Time
+sffstn.f	- Find Station
+sfftim.f	- Find Time
+sfftyp.f	- Determine Surface Data File Type
+sfgtim.f	- Get List Of Times
+#sfofil.f	- Open Existing Surafce Data File
+sfopnf.f	- Open Surface File
+sfopnr.f	- Open Real-Time Surface File
+sfqdat.f	- Chack For Data
+sfqspc.f	- Set Text Specials Flag
+sfqstn.f	- Get Station Information
+sfqtxt.f	- Set Text Reports Flag
+sfrbox.f 	- Read Watch-By_County File
+sfrdat.f	- Read Data
+sfrspc.f	- Read Special Reports
+sfrstr.f	- Read String Of Data 
+sfsnxt.f	- Set Next Station
+sfsstn.f	- Set Particular Station
+sfstat.f	- Set A State/Country
+sfstid.f	- Convert Station ID To Number
+sfstim.f	- Set Time With Quick Search
+sfstst.f	- Get Stations In State
+sftnxt.f	- Set Next Time
+sftstn.f	- Set Station
+sfttim.f	- Set Time
+sfuare.f	- Set Station Search
+sfustn.f	- Update Station Information
+sfwbox.f	- Write Data To Watch-By-County File
+sfwdat.f	- Write Data
+sfwsdd.f	- Write To Ship File
+sfwspc.f	- Write Special Data To Surface File
+sfwstr.f	- Write String Of Data To Surface Data File
+# testsf.f	- ST Library Test Program
+
+#------------------------------------------------------------------------

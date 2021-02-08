@@ -1,0 +1,10 @@
+JTWC Product Changes for 2004 Season (ALL)
+
+The hurricane decoder DCHRCN was modified to decode 64 kt winds
+from JTWC (Joint Typhoon Warning Center) instead of 100 kt winds,
+in response to a change they made effective June 1, 2004.  The
+decoder was also modified to bypass decoding of "repackaged" 
+advisories from JTWC for eastern and central Pacific storms.  Only
+the original TPC and CPHC advisories for these storms will be 
+decoded, along with JTWC advisories for western Pacific storms.
+

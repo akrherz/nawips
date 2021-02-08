@@ -1,0 +1,10 @@
+Track 073:  Maps
+
+Many maps provided by AWIPS were updated in this release including new Public and
+Marine zones, and the County map.  A new bounds file for the Fire Weather Zones was
+created at the request of the SPC.  At the request of OPC, a map was created that covers
+all SSA bounds.  In addition, two new SSA bounds, opc_atl and opc_pac, were created for 
+the OPC east and west of 105W.  The TPC had the opc215_atl SSA bound region increased to 
+go to 20E from its previous value of 0 longitude.  A new SSA bound, tpchpc, was also 
+created for the TPC that was the union of the hpcsfc and tpc050.  Finally, a new
+map and bound file, cpcus, was created for the CPC.

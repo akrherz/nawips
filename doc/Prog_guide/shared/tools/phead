@@ -1,0 +1,55 @@
+#!/bin/sh
+#-----------------------------------------------------------------------
+# phead
+#
+# Given one or more file names, displays the prologue of the file.
+#
+# Command-line options:
+#
+#  -p	When this option is given, individual routines are separated
+#	in the output with form-feeds.  This is useful when the
+#	output is directed to a printer.
+#
+# Example:
+#
+#	phead  $GEMPAK/source/gemlib/er/*
+#	phead  -p $GEMPAK/source/gemlib/er/*
+##
+# M. Linda/GSC		10/97	Based on PCODE
+#-----------------------------------------------------------------------
+
+#-----------------------------------------------------------------------
+# Get command line options.
+
+if  [ "$1" = "-p" ] ; then
+    OPTp="$1"
+    shift 1
+fi
+
+#-----------------------------------------------------------------------
+# Get a list of all of the files from the command line.
+
+while [ "$1" != "" ] ; do
+    files="$files $1"
+    shift 1
+done
+
+#-----------------------------------------------------------------------
+# Process one file at a time extracting comment lines.
+
+for oneFile in $files ; do
+
+    frstLin=`egrep -n '^[C\/]\*\*\*' $oneFile | awk 'NR==1' | \
+	     cut -f1 -d":" `
+    lastLin=`egrep -n '^[C ]\*\*[	 ]+' $oneFile | cut -f1 -d":" `
+
+    if  [ "$frstLin" != "" -a "$lastLin" != "" ] ; then
+	awk "NR==$frstLin,NR==$lastLin" $oneFile
+    fi
+
+    if  [ "$OPTp" = "-p" ] ; then
+	echo "\f"
+    fi
+done
+
+#-----------------------------------------------------------------------

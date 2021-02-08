@@ -1,0 +1,22 @@
+I.  Product Generation Changes
+
+    A.  NMAP2 Product Generation Improvements
+
+	1. Allow user selection for TEST products (SPC)
+
+	   When 'TEST' is selected in the Watch Format window, Test will be
+           inserted into AWN, PWN, SAW, SAW cancel, SEL, SEL cancel and  SEV
+           text message products. The WOU initial will continue to have 'TEST'
+           hard coded into the text message. 
+
+	2. Fixed wind speed rounding in SEL text message product (SPC)
+            
+           Fixed a wind speed rounding error noted by the SPC. A 50 kt wind
+	   will now be rounded to 60 mph when it is converted from kts to mph.
+
+	3. Fixed status message bug (SPC)
+            
+	   Fixed a bug found by the SPC where selecting 'Final Status' in the 
+	   'WATCH STATUS' popup box and then 'FORMAT' would cause NMAP2 to 
+	   hang or crash on LINUX2.4.
+

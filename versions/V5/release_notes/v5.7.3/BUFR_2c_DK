@@ -1,0 +1,16 @@
+Re-engineer Library Code for VG to ASCII Conversion (AWC, ALL)
+
+A new table-driven VG to ASCII conversion program, VG2UKA, has
+been developed which reads user input parameters, tables, and a
+VG file to generate an ASCII output file in the UKMET browsable
+format.  This program will allow for a more generic means of
+creating ASCII files than the current capabilities included in 
+program SIGWXCNV.  VG2UKA is being released for TESTING and
+EVALUATION purposes ONLY.  The plan is to replace the program
+SIGWXCNV in the next release after parallel testing is conducted.
+
+VG2UKA is written as a GEMPAK program with the GEMPAK text based
+user interface.  Additional help on the program can be obtained by
+running the GEMPAK help facility in the program or viewing the
+GEMPAK help file $GEMHLP/hlp/vg2uka.hlp.
+

@@ -1,0 +1,21 @@
+
+MPDWPC
+
+  MPDWPC generates a text file with lat-lon points from an enclosed area (line),
+  the list of WFOs and RFCs in or touching the enclosed area and a list of state
+  names in or touching the area.
+
+INPUT PARAMETERS
+
+  mpdwpc vgf_filename
+
+  mpdwpc	Program name
+  vgf_filename	VGF file containing line element
+
+PROGRAM DESCRIPTION
+
+  mpdwpc scans a VGF file and generates a set of lat-lon points from any scalloped
+  line in the file. The points of the line are ordered to progress clockwise
+  from the northernmost point. A list of WFOs, RFCs and states touched or inside
+  the enclosed area is also included.
+

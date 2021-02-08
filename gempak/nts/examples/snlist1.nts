@@ -1,0 +1,9 @@
+SNFILE  $GEMDATA/HRCBOB.SND                                                     
+AREA    @iad;acy                                                                
+DATTIM  last                                                                    
+SNPARM  dset                                                                    
+STNDEX  show;lift;kinx                                                          
+LEVELS  man                                                                     
+VCOORD  pres                                                                    
+OUTPUT  t                                                                       
+MRGDAT  YES                                                                     

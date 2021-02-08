@@ -1,0 +1,34 @@
+#------------------------------------------------------------------------
+# utf.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 8/97	Original
+#------------------------------------------------------------------------
+
+# testutf.c	- UTF Library Test Program
+utfclos.c	- Close UTF File
+utfdtext.c	- Decode UTF Text Character Header
+utfdump.c	- Display UTF File Record
+utfdvctr.c	- Decode UTF Relative Vector Header
+utfdvev.c	- Decode UTF VEV Vector Header
+utfgphgd.c	- Decode UTF Graphic Product Header
+utfopen.c	- Open UTF File
+utfplot.c	- Plot UTF File Contents
+utfptext.c	- Plot UTF Text
+utfpvctr.c	- Plot UTF Relative Vector
+utfpvev.c	- Plot UTF VEV Vector
+utfread.c	- Read UTF File
+utfsize.c	- Get UTF File Size
+utfstrip.c	- Strip UTF File Header
+
+#------------------------------------------------------------------------

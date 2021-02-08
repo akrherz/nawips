@@ -1,0 +1,236 @@
+#!/bin/csh
+#
+#  cpGNUmakefiles
+#
+
+#
+#  $NAWIPS
+#
+cp $GEMPAK/build/GNUmakefile_nawips $NAWIPS/GNUmakefile
+
+#
+#  $NAWIPS/extlibs/GAMET
+#
+cp $GEMPAK/build/GNUmakefile_library $NAWIPS/extlibs/GAMET/GNUmakefile
+
+#
+#  $NAWIPS/extlibs/GPC
+#
+cp $GEMPAK/build/GNUmakefile_library $NAWIPS/extlibs/GPC/GNUmakefile
+
+#
+#  $GEMPAK
+#
+cp $GEMPAK/build/GNUmakefile_gempak $GEMPAK/GNUmakefile
+
+#
+#  $GEMPAK/source
+#
+cp $GEMPAK/build/GNUmakefile_subdir $GEMPAK/source/GNUmakefile
+
+#
+#  $GEMPAK/source/appl
+#
+cd $GEMPAK/source/appl
+cplibsub1
+
+#
+#  bridge
+#
+cd ../bridge
+cplibsub1
+
+#
+#  cgemlib
+#
+cd ../cgemlib
+cplibsub1
+
+#
+#  cgemlib/css/
+#
+cd css
+cplibsub2
+
+#
+#  $GEMPAK/source/contrib
+#
+cp $GEMPAK/build/GNUmakefile_subdir $GEMPAK/source/contrib/GNUmakefile
+
+#
+#  contrib/awc
+#
+cd $GEMPAK/source/contrib/awc
+cplibrary
+
+#
+#  contrib/cpc
+#
+cd ../cpc
+cplibrary
+
+#
+#  contrib/tdl
+#
+cd ../tdl
+cplibrary
+
+
+#
+#  device
+#
+cd $GEMPAK/source/device
+cplibsub1
+
+#
+#  $GEMPAK/source/driver
+#
+cp $GEMPAK/build/GNUmakefile_subdir $GEMPAK/source/driver/GNUmakefile
+
+#
+#  $GEMPAK/source/driver/active
+#
+cd $GEMPAK/source/driver/active
+cplibrary
+
+#
+#  gemlib
+#
+cd $GEMPAK/source/gemlib
+cplibsub1
+
+#
+#  gemlib/mv
+#
+cd mv
+cplibsub2
+
+
+#
+#  $GEMPAK/source/gplt
+#
+cd $GEMPAK/source/gplt
+cplibsub1
+
+#
+#  $GEMPAK/source/gplt/access
+#
+cp $GEMPAK/build/GNUmakefile_libsub1 $GEMPAK/source/gplt/access/GNUmakefile
+
+#
+#  $GEMPAK/source/gplt/access/alt
+#
+cp $GEMPAK/build/GNUmakefile_obj $GEMPAK/source/gplt/access/alt/GNUmakefile
+
+#
+#  $GEMPAK/source/gplt/transform
+#
+cp $GEMPAK/build/GNUmakefile_libsub1 $GEMPAK/source/gplt/transform/GNUmakefile
+
+#
+#  $GEMPAK/source/gplt/transform/mcidas
+#
+cp $GEMPAK/build/GNUmakefile_libsub2 $GEMPAK/source/gplt/transform/mcidas/GNUmakefile
+
+
+#
+#  $GEMPAK/source/gpltdev
+#
+cd $GEMPAK/source/gpltdev
+cplibsub1
+
+#
+#  $GEMPAK/source/ncepUT
+#
+cp $GEMPAK/build/GNUmakefile_library $GEMPAK/source/ncepUT/GNUmakefile
+
+#
+#  $GEMPAK/source/nmaplib
+#
+cd $GEMPAK/source/nmaplib
+cplibsub1
+
+#
+#  $GEMPAK/source/nxmlib
+#
+cp $GEMPAK/build/GNUmakefile_library $GEMPAK/source/nxmlib/GNUmakefile
+
+#
+#  $GEMPAK/source/programs
+#
+cp $GEMPAK/build/GNUmakefile_subdir $GEMPAK/source/programs/GNUmakefile
+
+#
+#  programs/dc
+#
+cd $GEMPAK/source/programs/dc
+cplibrary
+
+#
+#  programs/gd
+#
+cd ../gd
+cplibrary
+
+#
+#  programs/gp
+#
+cd ../gp
+cplibrary
+
+#
+#  programs/gui
+#
+cd ../gui
+cplibrary
+
+#
+#  programs/na
+#
+cd ../na
+cplibrary
+
+#
+#  programs/oa
+#
+cd ../oa
+cplibrary
+
+#
+#  programs/sf
+#
+cd ../sf
+cplibrary
+
+#
+#  programs/sn
+#
+cd ../sn
+cplibrary
+
+#
+#  programs/util
+#
+cd ../util
+cplibrary
+
+#
+#  End of $GEMPAK/source/programs/...
+#
+
+#
+#  $GEMPAK/source/syslib
+#
+cp $GEMPAK/build/GNUmakefile_library $GEMPAK/source/syslib/GNUmakefile
+
+#
+#  $GEMPAK/source/textlib
+#
+cd $GEMPAK/source/textlib
+cplibsub1
+
+#
+#  $GEMPAK/utilities/mkelev
+#
+cp $GEMPAK/build/GNUmakefile_library $GEMPAK/utilities/mkelev/GNUmakefile
+

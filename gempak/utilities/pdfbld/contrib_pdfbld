@@ -1,0 +1,9 @@
+export GEMPARM=$GEMPAK/parm
+
+pdfbld $GEMPDF CPCGSTN
+###########################
+pdfbld $GEMPDF GPANOT
+###########################
+pdfbld $GEMPDF GPLTLN
+###########################
+echo ALL THE CONTRIB PDFs ARE BUILT.

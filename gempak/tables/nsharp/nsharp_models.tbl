@@ -1,0 +1,10 @@
+!
+! models listed in NSHARP pull down widget
+! Use "BROWSE" as the last item
+!
+GFS
+NAM
+NGM
+RAP
+UKMET
+BROWSE

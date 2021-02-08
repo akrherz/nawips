@@ -1,0 +1,323 @@
+------------------------------------------------------------------------
+r171 | jacobs | 2010-06-07 16:59:39 +0000 (Mon, 07 Jun 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/maps/ascii/aschifzus.nws
+   M /trunk/nawips/gempak/maps/ascii/aschiosuo.nws
+   M /trunk/nawips/gempak/maps/ascii/aschiznus.nws
+   M /trunk/nawips/gempak/maps/ascii/asclofzus.nws
+   M /trunk/nawips/gempak/maps/ascii/ascloosuo.nws
+   M /trunk/nawips/gempak/maps/ascii/ascloznus.nws
+   M /trunk/nawips/gempak/maps/ascii/ascmefzus.nws
+   M /trunk/nawips/gempak/maps/ascii/ascmeosuo.nws
+   M /trunk/nawips/gempak/maps/ascii/ascmeznus.nws
+   M /trunk/nawips/gempak/maps/ascii/asctpfzus.nws
+   M /trunk/nawips/gempak/maps/ascii/asctposuo.nws
+   M /trunk/nawips/gempak/maps/ascii/asctpznus.nws
+   M /trunk/nawips/gempak/maps/hifzus.nws
+   M /trunk/nawips/gempak/maps/hiosuo.nws
+   M /trunk/nawips/gempak/maps/hiznus.nws
+   M /trunk/nawips/gempak/maps/lofzus.nws
+   M /trunk/nawips/gempak/maps/loosuo.nws
+   M /trunk/nawips/gempak/maps/loznus.nws
+   M /trunk/nawips/gempak/maps/mefzus.nws
+   M /trunk/nawips/gempak/maps/meosuo.nws
+   M /trunk/nawips/gempak/maps/meznus.nws
+   M /trunk/nawips/gempak/maps/tpfzus.nws
+   M /trunk/nawips/gempak/maps/tposuo.nws
+   M /trunk/nawips/gempak/maps/tpznus.nws
+   M /trunk/nawips/gempak/tables/bounds/countybnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/countybnds.tbl.info
+   M /trunk/nawips/gempak/tables/bounds/firebnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/firebnds.tbl.info
+   M /trunk/nawips/gempak/tables/bounds/mzbnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/mzbnds.tbl.info
+   M /trunk/nawips/gempak/tables/bounds/pfzbnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/pfzbnds.tbl.info
+   M /trunk/nawips/gempak/tables/stns/firezones.tbl
+   M /trunk/nawips/gempak/tables/stns/marinenames.tbl
+   M /trunk/nawips/gempak/tables/stns/mzcntys.tbl
+   M /trunk/nawips/gempak/tables/stns/zones.tbl
+
+Applied updates to the maps, bound tables and station tables. The updates involved the Marine Zones, Public (Land) Zones and Fire Weather Zones.
+------------------------------------------------------------------------
+r170 | jacobs | 2010-05-28 20:05:35 +0000 (Fri, 28 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghrdad.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtc2vg.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtclb.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtcww.f
+   M /trunk/nawips/gempak/source/programs/gp/gptcww/gptcww.f
+
+The TPC reported a problem with GPTCWW, that the user could not turn OFF the distance scale. During the modification of the legend box, the flag that controls plotting of the scale was accidentally removed. This delivery restores this ability.
+------------------------------------------------------------------------
+r169 | jacobs | 2010-05-28 13:58:37 +0000 (Fri, 28 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gemlib/ss/ssvers.f
+
+Update the version number to 6.1.0.
+------------------------------------------------------------------------
+r168 | jacobs | 2010-05-21 17:38:43 +0000 (Fri, 21 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/sfstns.tbl
+
+Added Panama City, FL and a number of automated platforms in the Gulf of Mexico to the METAR station table.
+------------------------------------------------------------------------
+r167 | xguo | 2010-05-20 21:24:18 +0000 (Thu, 20 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/cvg/cvgv2x.c
+   M /trunk/nawips/gempak/source/cgemlib/cvg/vgf2xml.c
+
+checkin qZhuo's codes
+------------------------------------------------------------------------
+r165 | xguo | 2010-05-19 19:58:13 +0000 (Wed, 19 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/util/sigavgf/sigatur.c
+
+checkin AWC's code
+------------------------------------------------------------------------
+r164 | jacobs | 2010-05-19 00:47:20 +0000 (Wed, 19 May 2010) | 1 line
+Changed paths:
+   D /trunk/nawips/environ/.gemenv.csh.swp
+   M /trunk/nawips/environ/gemenv.csh
+   M /trunk/nawips/environ/gemenv.sh
+
+Updated FFLAGS environment variable for gfortran. The dlines-as-comments flag is no valid.
+------------------------------------------------------------------------
+r163 | jacobs | 2010-05-19 00:44:21 +0000 (Wed, 19 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/timpr.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_azimuth.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_cylinder.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_equator.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_lambert.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_mercator.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_orthographic.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_polster.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_sect0.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_temp40.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_temp41.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_temp42.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_temp420.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_temp430.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_temp48.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpk_temp49.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpkcmbm.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpklx.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpkoo.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpkps.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2dec/unpksecdif.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/length.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pack_gp.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pack_opt.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_azimuth.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_c7.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_cmplx.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_cylinder.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_equator.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_grib2.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_lambert.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_mercator.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_missp.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_nomiss.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_orthographic.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_polster.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_s7.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_sect7.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_smple.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_temp41.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_temp42.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_temp420.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_temp430.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_temp48.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/pk_temp49.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/prep_flt.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/prep_int.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/prepr.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/reduce.f
+   M /trunk/nawips/extlibs/NDFD/mdlg2enc/timpr.f
+
+Modified all of the NDFD routines that used a D to denote a comment used for debugging. This comment indicator is not valid in gfortran. 
+------------------------------------------------------------------------
+r162 | jacobs | 2010-05-19 00:39:49 +0000 (Wed, 19 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/device/draw/itxccf.f
+
+Fix a problem where a floating point value was used to index into a string when drawing the text for the CCF object. 
+------------------------------------------------------------------------
+r159 | xguo | 2010-05-18 20:49:36 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gp/gptcww/gptcww.f
+
+check ndays to determinate whether display 4-5 days forecast legend
+------------------------------------------------------------------------
+r158 | xguo | 2010-05-18 20:46:30 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtclb.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtcww.f
+
+based on the days to determinate whether display 4-5 day forecast legend
+------------------------------------------------------------------------
+r157 | xguo | 2010-05-18 20:39:37 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/rad/nidprd.tbl
+
+add 99,135 and 135 products entries
+------------------------------------------------------------------------
+r156 | xguo | 2010-05-18 20:36:59 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/sat/imgtyp.tbl
+
+add 99,134 and 135 products entries
+------------------------------------------------------------------------
+r155 | xguo | 2010-05-18 20:33:22 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/GEMPRM.PRM
+   M /trunk/nawips/gempak/include/gemprm.h
+   M /trunk/nawips/gempak/include/gemprm.log
+
+add IFHINIDS flag and increase uncompressed buffer size
+------------------------------------------------------------------------
+r154 | xguo | 2010-05-18 20:29:12 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/xw/xsatim.c
+   M /trunk/nawips/gempak/source/driver/active/xw/xsatpx.c
+
+add IFHINIDS flag to process all higher resolution products
+------------------------------------------------------------------------
+r153 | xguo | 2010-05-18 20:26:10 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/tiff/tsatim.c
+
+add IFHINIDS flag to process all higher resolution products
+------------------------------------------------------------------------
+r152 | xguo | 2010-05-18 20:23:13 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/gif/wsatim.c
+
+add IFHINIDS flag to process all higher resolution products
+------------------------------------------------------------------------
+r151 | xguo | 2010-05-18 20:20:42 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/ps/psatim.c
+
+add IFHINIDS flag to process higher resolution products
+------------------------------------------------------------------------
+r150 | xguo | 2010-05-18 20:17:45 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/gn/crnexbz.c
+
+code changes for all higher resolution products
+------------------------------------------------------------------------
+r149 | xguo | 2010-05-18 20:14:13 +0000 (Tue, 18 May 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/gemlib/im/imhrnidh.f
+   M /trunk/nawips/gempak/source/gemlib/im/imnexbz.c
+   M /trunk/nawips/gempak/source/gemlib/im/imnexbzwmo.c
+   M /trunk/nawips/gempak/source/gemlib/im/imnexz.c
+   M /trunk/nawips/gempak/source/gemlib/im/imnidh.f
+   M /trunk/nawips/gempak/source/gemlib/im/imsimg.f
+
+changes for product 94,99,134 and 135
+------------------------------------------------------------------------
+r148 | jacobs | 2010-05-07 16:32:31 +0000 (Fri, 07 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/hcnadv/altker.tbl
+   M /trunk/nawips/gempak/tables/stns/tcabkpt.tbl
+   M /trunk/nawips/gempak/tables/stns/tcabkpt_water.tbl
+   M /trunk/nawips/gempak/tables/stns/tcabkptlz.tbl
+
+The TPC updated some of the hurricane tables for the 2010 season.
+------------------------------------------------------------------------
+r147 | jacobs | 2010-05-07 15:16:45 +0000 (Fri, 07 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/device/draw/ispcl.f
+
+Updated the B symbol to draw the cut-out areas in the proper direction. On the PS driver, the order of the polygon path matters when determining "in" and "out" for the filled symbol.
+------------------------------------------------------------------------
+r146 | jacobs | 2010-05-07 12:53:43 +0000 (Fri, 07 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/sfstns.tbl
+
+Beginning with the 5/5/2010 00Z ingest of data, new AWOS-III sites located in the Gulf of Mexico started sending METAR reports. The SPC provided the updated information for the surface station table.
+------------------------------------------------------------------------
+r141 | jacobs | 2010-05-05 17:52:59 +0000 (Wed, 05 May 2010) | 1 line
+Changed paths:
+   D /trunk/nawips/gempak/source/contrib/swpc
+
+New branch working directory for SWPC ASCII grids. Made a mistake.
+------------------------------------------------------------------------
+r139 | jacobs | 2010-05-05 17:48:29 +0000 (Wed, 05 May 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/contrib/swpc
+   A /trunk/nawips/gempak/source/contrib/swpc/GNUmakefile
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/GNUmakefile
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/drap2gem.f
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/drap2gem.mk
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/drpdat.c
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/drpdatf.f
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/drpdsp.f
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/drpgdt.f
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/drpinp.f
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/stldspg.f
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/strlstg.f
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/strmblg.f
+   A /trunk/nawips/gempak/source/contrib/swpc/drap2gem/strxblg.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/GNUmakefile
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/stldspg.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/strlstg.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/strmblg.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/strxblg.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/tec2gem.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/tec2gem.mk
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/tecdat.c
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/tecdatf.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/tecdsp.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/tecgdt.f
+   A /trunk/nawips/gempak/source/contrib/swpc/tec2gem/tecinp.f
+
+New branch working directory for SWPC ASCII grids
+------------------------------------------------------------------------
+r118 | xguo | 2010-05-04 19:27:07 +0000 (Tue, 04 May 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghkgar.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghkglc.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtclb.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtcww.f
+
+fixed Cone Graphic problems
+------------------------------------------------------------------------
+r115 | xguo | 2010-04-30 19:32:34 +0000 (Fri, 30 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtcww.f
+
+fixed POST-TROP point display problem
+------------------------------------------------------------------------
+r114 | xguo | 2010-04-30 19:29:49 +0000 (Fri, 30 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghrdad.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtc2vg.f
+
+checkin TPC'codes to produce GIS products
+------------------------------------------------------------------------
+r113 | xguo | 2010-04-30 19:27:08 +0000 (Fri, 30 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/util/tpc2shp/tpc2shp.c
+
+checkin TPC'code to produce GIS products
+------------------------------------------------------------------------
+r112 | xguo | 2010-04-30 19:24:40 +0000 (Fri, 30 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gp/gptcww/gptcww.f
+
+checkin TPC's code to produce GIS products
+------------------------------------------------------------------------
+r109 | xguo | 2010-04-27 13:14:50 +0000 (Tue, 27 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/cvg/cvgt2v.c
+   M /trunk/nawips/gempak/source/cgemlib/cvg/cvgv2x.c
+   M /trunk/nawips/gempak/source/cgemlib/cvg/vgf2xml.c
+
+checkin qzhou's codes
+------------------------------------------------------------------------

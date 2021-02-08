@@ -1,0 +1,7 @@
+Allowed Specification of "Missing" as a Parameter Value (ALL)
+
+A specification of "=M" is now permitted as a parameter condition.
+This will denote a missing value, so that, for example, the 
+specification SFPARM=MARK:16;VSBY=M will plot an X when the 
+visibility value is missing.  
+

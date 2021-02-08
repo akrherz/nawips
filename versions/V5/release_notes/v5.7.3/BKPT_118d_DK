@@ -1,0 +1,16 @@
+Experimental Hurricane Graphics Program (TPC)
+
+A new program, GPTCWW, has been written to generate the Tropical 
+Cyclone Watch/Warning graphic (previously known as the Kelly 
+graphic).  This program reads the new VG TCA (tropical cyclone
+advisory) element from a VG file of breakpoint information and 
+plots it in the same way as the Kelly graphic program GPKGRF.  See
+the NMAP2 Product Generation Improvements section for information 
+on creating the VG file, and refer to the help for GPTCWW and 
+parameter STRMID.
+
+This initial version does not include the smaller Caribbean islands
+(but does include Cuba, Hispaniola and Puerto Rico - all specified
+in a clockwise direction), and does not include sounds, bays and 
+other small bodies of water.  It uses official breakpoints only.
+

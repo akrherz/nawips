@@ -1,0 +1,15 @@
+TASK: 8.7    TRACK: 290      EXT PROJ:  GFA
+AIRMET valid time decoding
+
+The AIRMET decoder DCAIRM has been modified to provide three times instead of
+two: the issue time, actual beginning valid time, and actual ending valid time.
+See dcairm.hlp for the new format of the decoded file.  NMAP2 and GPMAP have
+been modified to process the new decoded AIRMET files as well as files in the
+old format.  A new flag has been added to allow the user to select whether to
+plot based on the issue time or the beginning valid time.  Do a "help airm" in
+GPMAP for instructions on using the new flag.  To use the flag in NMAP2 see the
+AIRM Attributes window that pops up when the Edit Source button is clicked in
+the Data Selection Window of NMAP2 for MISC/AIRM data.
+
+Since miscset.tbl was modified, old SPF files using AIRMET data should be
+recreated.

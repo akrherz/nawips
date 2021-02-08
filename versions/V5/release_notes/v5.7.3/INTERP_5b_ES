@@ -1,0 +1,39 @@
+I.  Product Generation Changes
+
+    A.  NMAP2 Product Generation Improvements
+
+    	1.  A time interpolation function has been added.  The Interp button on 
+	    the PGEN palette can be used to perform interpolations between two 
+ 	    PGEN elements.
+
+	    Interp can only be used on closed lines, sigmets, or the new 
+	    airmets/sigmets (found under class MET).  Interp will not function 
+	    with all other elements. 
+	   
+	    Clicking on the interp button starts the interpolation window.  The
+	    user selects the first element for interpolation, then selects a 
+	    second element of the same type.  No element type mismatch is 
+	    permitted -- if the first element was an airmet, the second element 
+	    must be an airmet as well.
+
+	    The new airmets/sigmets contain an embedded forecast time.  For 
+	    these elements the time of the starting and ending figures will be 
+	    placed in the Starting Time and Ending Time windows.  For all other 
+	    valid elements, the user will have to supply a starting and ending 
+	    time.  This should be just the hour (i.e. "3", not "3Z").  The user 
+	    may then set the interval value.  This is time interval for which 
+	    new elements will be created.  A value of 1 means a new element will
+	    be added for every hour between the starting and ending elements.
+
+	    Clicking on the Interpolate button triggers the actual interpolation.
+	    The new elements will be drawn between the starting and ending
+	    elements.  The attributes for the new elements will be based upon
+	    the starting element.  If the new elements have an embedded forecast 
+	    time, their forecast time will correspond to the staring time plus 
+	    the number of hours they are offset.  So if MET/airmets are selected 
+	    and the starting element is hour 0, the ending element is 3 and the 
+	    interval is 1, two new airmets will be created, one with a forecast 
+	    time of 1 and one with a forecast time of 2.
+	    
+	    
+	    

@@ -1,0 +1,12 @@
+Watch-By-County
+
+	D. Added 'TEST' wording to the WOU update text product (SPC)
+
+	Added logic so that if a test watch is issued, the WOU update text
+	product will read in the MND line, 
+	       "TORNADO WATCH OUTLINE UPDATE FOR WT 138...TEST"
+	Also, the product code in the VTEC line will be changed from the 
+	current setting in $GEMTBL/txtprd/woudef.tbl to the character 'T'.
+	If the watch is not a test watch, then the MND line will read,
+	       "EXPERIMENTAL...TORNADO WATCH OUTLINE UPDATE FOR WT 138"
+	and the product code that will be used is the one set in the table.

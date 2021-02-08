@@ -1,0 +1,57 @@
+Version Description for GEMPAK 5.3 Product Generation Related Files
+
+This version of GEMPAK will support the creation and inspection of 
+fax charts from the GEMPAK system.  The fax charts are provided in
+an NMC-6 bit Run Length Encoded format.  A capability has also been 
+provided to view fax product files on any workstation running 
+GEMPAK 5.3, and to print any fax chart to a Postscript printer.
+
+The following components are required to support product generation
+from GEMPAK 5.3
+
+FAX DRIVER
+ - This separately operating process will be used much like
+the current post script and X windows drivers.  The driver functions 
+as follows:
+
+1.  User/script enters the product wheel number and subset number in
+the format "FAX | yyyX;zzzz" where yyy represents the wheel number, and
+zzzz represents the subset number.
+
+2.  A product table ($NAWIPS_TABLES/product.tbl) is consulted to 
+determine the configuration of the product matching the desired 
+wheel and subset number.  This tells the software the dimensions
+of the outbound product.
+
+3.  A raster bitmap copy of the data is created in memory.  This 
+data is then scan converted into a bitmap format.  The product
+is a single plane bitmap with 8 pixels per byte.
+
+4.  The raster bitmap is stored in a temporary directory ( $FAX_TEMP), and
+a secondary process is invoked to convert the raster bitmap to a
+compressed NMC 6 bit formatted file.   The file remains in this directory
+pending integration with DBNET.
+
+FAX VIEWER (viewfax)
+
+1.  This utility lets the analyst review a created fax product.  There
+are four places from which the operator can view a created product:
+	a. Local Pre NMC 6 bit - This is the raster version of the
+				uncompressed product as it was before it
+				was sent to OSO.
+	b. Local NMC 6 bit - 	This is the compressed raster version of 
+				the product before it was sent to OSO.
+	c. OSO NMC 6 bit (not yet implemented)
+	d. Plot server NMC 6 bit - This is any NMC 6 bit product which is
+				int storage on the NCEP plot servers.
+
+2.  The analyst can also create a postscript representation of a fax
+product by selecting the "print" button from the viewfax menubar.  This
+creates a local postscript file titled $FAX_TEMP/xxxx.ras.ps where 
+"xxxx" is the subset number of the requested product.  The product will
+be scaled to either 8.5x11 or 11x17 paper depending on which size 
+option was selected on the print dialog box.
+
+
+
+

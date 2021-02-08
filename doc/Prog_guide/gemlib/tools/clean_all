@@ -1,0 +1,15 @@
+#!/bin/sh
+
+$RM dxmain
+$RM dxtext
+$RM *.o
+$RM *.a
+$RM *.err
+$RM core
+
+curDir=`pwd`
+cd ../../shared/dx ; clean_exe ; cd $curDir
+
+$RM ../tables/*.list
+$RM ../out/*.out
+rmdir ../out

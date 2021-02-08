@@ -1,0 +1,33 @@
+The following object files are needed to make a shared object for 
+converting VG files to XML
+
+cflinqr.o  
+cfliret.o 
+cflread.o  
+cflropn.o
+cflseek.o  
+cfluopn.o 
+cflwopn.o  
+cflwrit.o 
+cssenvr.o  
+cstclst.o 
+cstcrnm.o  
+cstgtag.o 
+cstncpy.o  
+cstnocc.o 
+cstrmbl.o 
+cstrpst.o  
+cstrxbl.o    
+cstuclc.o   
+cvgallocgfablock.o   
+cvgopenj.o          
+cvgrdgfa.o  
+cvgrdjele.o 
+cvgrdjhdr.o  
+cvgrdjrecnoc.o  
+cvgrdtca.o  
+cvgrdtc.o  
+cvgswap.o 
+cvgv2x.o
+mvcswp4.o
+vgf2xml.o

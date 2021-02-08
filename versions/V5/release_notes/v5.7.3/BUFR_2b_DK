@@ -1,0 +1,7 @@
+Added Flight Level Deltas to Jets for SWH (AWC)
+
+Processing for flight level deltas, specifying vertical height
+information for a jet element at points where a wind barb is
+defined, was added to programs SIGWXCNV, BUFRENC and SIGBUFR.
+Flight level deltas are now included in the SWH BUFR file.
+

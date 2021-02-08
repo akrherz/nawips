@@ -1,0 +1,35 @@
+Timeline enhancements
+
+A few changes have been made to the timeline in NMAP2. The
+most visible is that the "Set Time" selection has been removed
+and the "Current Time" has been changed to a push button.
+
+The "Set Time" functionality has been replaced by the Reference
+Time in the Range/Interval window. The Reference Time allows
+the user to specify the end time for the timeline, for 
+observational data, or the start time, for forecast data.
+The calendar window used by the Set Time function has been 
+moved to the Reference Time. Therefore, the user may type
+a date/time string or use the calendar interface to select
+a Reference Time.
+
+The "Current Time" button updates the tick mark selection
+outline. For observed data, the Reference Time is erased
+and the tick marks for the latest data are selected. For
+forecast data, the Reference Time is erased and the tick
+marks for the earlier forecasts (the left side of the
+timeline) are selected. The other attributes of the timeline
+are unaffected, i.e., range, interval, number of frames, etc.
+
+Another enhancement is that if the user selects only a new
+restore file, for grids, or a new station model, for surface
+or upper air data, then the timeline will not be updated. 
+Previously any new data selection would update the entire
+timeline.
+
+Finally, the Reference Time information is now saved to the
+SPF files for forecast data. Since saving absolute times would
+not work for real time data, a delta relative to the current
+cycle time is saved. That is, the difference between the 
+forecast cycle and the user input reference time is stored
+in the SPF.

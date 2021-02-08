@@ -1,0 +1,157 @@
+#!/bin/sh
+#------------------------------------------------------------------------------
+# run
+#
+# Runs the 'dxmain' and 'dxtext' utilities.
+##
+# Log:
+# M. Linda/GSC		11/97	Based on glibmif
+#------------------------------------------------------------------------------
+
+#------------------------------------------------------------------------------
+# Define various paths and file names.
+
+outPath=../out					# path to output files
+lstPath=../tables				# path to lists files
+
+txtFilPth=$GEMGTXT				# path to text files
+txtFilPt2=$GEMPAK/txt/cgemlib			# path to text files
+errFilPth=$GEMERR				# path to error files
+tocTxtPth=../toc				# path to TOC text files
+
+tmpFilNam=tmp.txt				# temporary file for text
+tocTmpFil=$outPath/toc.tmp			# temporary file for TOC
+
+#------------------------------------------------------------------------------
+# Create the output directory.
+
+if  [ ! -d $outPath ] ; then
+    mkdir $outPath
+fi
+
+#------------------------------------------------------------------------------
+# Initialize the Table Of Contents with first chapter's TOC.
+
+$RM $tocTmpFil
+cp $tocTxtPth/Chap1.toc $tocTmpFil
+
+#------------------------------------------------------------------------------
+# Generate the initial chapter(s): fixed text.
+
+pg1num=1
+for chapNum in 01
+do
+    outFilNam=$outPath/ch$chapNum.out
+    inpFilNam=$txtFilPth/Chap$chapNum.txt
+    dxtext $inpFilNam $outFilNam $chapNum $pg1num
+done
+
+#------------------------------------------------------------------------------
+# Calculate the next chapter number.
+
+chapNum=`expr $chapNum + 1`
+if  [ $chapNum -le 9 ] ; then
+    chapNum="0$chapNum"
+fi
+
+#------------------------------------------------------------------------------
+# Generate the middle chapters: libraries documentation.
+
+ln -s ../../shared/dx/dx.err .
+
+# Step through all lists files.
+list=`ls $lstPath/*.list`
+for lstFilNam in $list
+do
+   # Extract the library name from the lists file name.
+   oneItem=`basename $lstFilNam .list `
+
+   # Get all descriptions out of lists file.
+   descriptions=`grep -v '^#' $lstFilNam | grep -v '^[ 	]*$' | \
+		 cut -d"-" -f2 | tr -d " "`
+
+   # Test if there are any files to process.
+   # Only those files that have descriptions in the lists file are processed.
+   # Are there any descriptions?
+   if [ "$descriptions" != "" ]
+   then
+      # There are some descriptions, so process this lists file.
+
+      echo "Processing $oneItem..."
+
+      # Set text file name.
+      txtFilNam=""
+      for path in $txtFilPth $txtFilPt2
+      do
+         if [ ! -f "$txtFilNam" ] ; then
+            txtFilNam=$path/${oneItem}lib.txt
+         fi
+      done
+
+      # Set errors file name.
+      errFilNam=$errFilPth/${oneItem}.err
+
+      # Set output file name.
+      outFilNam=$outPath/ch$chapNum.${oneItem}.out
+
+      # Set TOC file name.
+      tocFilNam=$outPath/ch$chapNum.${oneItem}.toc
+
+      # Execute the utility.
+      dxmain $lstFilNam $txtFilNam $errFilNam $outFilNam $tocFilNam $chapNum
+
+      # Add this chapter's TOC to the whole TOC.
+      cat $tocFilNam >> $tocTmpFil
+      $RM $tocFilNam
+
+      # Calculate the next chapter number.
+      chapNum=`expr $chapNum + 1`
+      if  [ $chapNum -le 9 ] ; then
+	  chapNum="0$chapNum"
+      fi
+   else
+      # There are no descriptions, so skip this file.
+      echo "Skipping   $oneItem... no routines have descriptions."
+   fi
+done
+
+$RM dx.err
+
+#------------------------------------------------------------------------------
+# Add the TOC for the end chapters in the book.
+
+cat $tocTxtPth/ChapN.toc >> $tocTmpFil
+
+#------------------------------------------------------------------------------
+# Generate the final chapters and appendices: fixed text.
+
+chnm=A
+cp $txtFilPth/Appx$chnm.txt $tmpFilNam
+cat $GEMINC/gemprm.HPUX >> $tmpFilNam
+outFilNam=$outPath/appx$chnm.out
+inpFilNam=$tmpFilNam
+pg1num=1
+dxtext $inpFilNam $outFilNam $chnm $pg1num
+$RM $tmpFilNam
+
+pg1num=1
+for chnm in B
+do
+    outFilNam=$outPath/appx$chnm.out
+    inpFilNam=$txtFilPth/Appx$chnm.txt
+    dxtext $inpFilNam $outFilNam $chnm $pg1num
+done
+
+#------------------------------------------------------------------------------
+# Paginate the TOC file.
+
+inpFilNam=$tocTmpFil
+outFilNam=$outPath/toc.out
+chnm=0
+pg1num=3
+dxtext $inpFilNam $outFilNam $chnm $pg1num
+
+$RM $tocTmpFil
+mv $outPath/toc.out $outPath/TOC.out
+
+#------------------------------------------------------------------------------

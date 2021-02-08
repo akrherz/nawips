@@ -1,0 +1,28 @@
+#------------------------------------------------------------------------
+# er.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+#------------------------------------------------------------------------
+
+erinit.c	- Initialize Error Logging
+erlmsg.f	- Filter Error Message
+ermmsg.f	- Create Error Message
+ersmsg.c	- Write Error Message To Buffer
+erstat.f	- Set Error Reporting Level
+erwbuf.c	- Write Error Buffer To Screen
+erwmsg.f	- Write Error Message To Terminal
+# tester.f	- ER Library Test Program
+
+#------------------------------------------------------------------------

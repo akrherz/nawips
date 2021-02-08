@@ -1,0 +1,40 @@
+#------------------------------------------------------------------------
+# plot.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+#------------------------------------------------------------------------
+
+garrw.f		- Plot Wind Arrows
+gbarb.f		- Plot Wind Barbs
+gcircl.f	- Draw Circle
+gctyp.f		- Plot Cloud Type Symbols
+gfill.f		- Draw Filled Polygon
+gfrnt.f		- Draw Front
+gicng.f		- Plot Icing Symbols
+gline.f		- Draw Simple Line
+glogo.f		- Plot Logo
+gmark.f		- Plot Markers
+gptnd.f		- Plot Pressure Tendency Symbols
+gpwth.f		- Plot Past Weather Symbols
+gsky.f		- Plot Sky Coverage Symbols
+gspcl.f		- Plot Special Symbols
+gspln.f		- Draw Special Line
+gtext.f		- Plot Text
+gtextc.f	- Plot Justified Text
+gturb.f		- Plot Turbulence Symbols
+gtxsy.f		- Plot Special Symbol With Text
+gwthr.f		- Plot Weather Symbols
+
+#------------------------------------------------------------------------

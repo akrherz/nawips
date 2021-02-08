@@ -1,0 +1,24 @@
+New Surface parameters
+
+	A.  Added 3 new surface pressure parameters: PANY, RANY and SANY 
+
+            Three new surface pressure parameters are available in GEMPAK.
+            They are:
+
+		PANY - Returns PMSL if available, if not, returns ALTM 
+		       if available
+		RANY - Computes the abbreviated 3 digit display of 
+		       pressure
+		SANY - Takes a real and converts the integral part into 
+		       a 3 character string.
+
+
+New Grid Diagnostic Parameters
+
+	A. Added two new grid diagnostic parameters: PLCL and TLCL
+
+           Two new grid diagnostic parameters for the lifting condensation
+	   level are available in GEMPAK.
+
+		PLCL - Computes the pressure of the lifting condensation level (LCL)
+		TLCL - Computes the temperature of the lifting condensation level

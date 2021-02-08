@@ -1,0 +1,33 @@
+#------------------------------------------------------------------------
+# tm.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+# testtm.f	- TM Library Test Program
+tmaccp.f	- Wait For User To Accept Values
+tmchar.f	- Read Strings From The Terminal
+tmint.f		- Read Integers From The Terminal
+tmpage.f	- Clear The Terminal Screen
+tmprom.f	- Write Message To The Terminal
+tmrchr.f	- Read User Terminal Input
+tmreal.f	- Read Reals From The Terminal
+tmstr.f		- Read A String From The Terminal
+tmwait.f	- Wait For Specified Time Interval
+tmwcr.f		- Write Message And Wait For A <CR> 
+tmwlin.f	- Write Message Without Response
+
+#------------------------------------------------------------------------

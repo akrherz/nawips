@@ -1,0 +1,47 @@
+#------------------------------------------------------------------------
+# ps.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 9/97	Updated
+#------------------------------------------------------------------------
+
+psbrch.f	- Compute Bulk Richardson Number
+psbvfq.f	- Compute Brunt-Vaisala Frequency
+psbvpd.f	- Compute Brunt-Vaisala Period
+psbvsq.f	- Compute Brunt-Vaisala Frequency Squared
+pscape.f	- Compute Convective Available Potential Energy
+pscins.f	- Compute Convective Inhibition
+psctot.f	- Compute Cross Totals Index
+pseqlv.f	- Compute Equilibrium Level
+pskinx.f	- Compute K Index
+pslaps.f	- Compute Temperature Lapes Rate
+pslcll.f	- Compute Lifted Condensation Level
+pslfcv.f	- Compute Level Of Free Convection
+pslift.f	- Compute Lifted Index
+psmlmr.f	- Compute Mean Mixed Layer MIXR
+psmlth.f	- Compute Mean Mixed Layer THTA
+psprcl.f	- Compute All Stn. Parm. Pressure Weighted Avg. 
+psrich.f	- Compute Richardson Number In Layer
+pssepa.f	- Compute Isentropic Layer Pressure Thickness
+psshow.f	- Compute Showalter Index
+psshrd.f	- Compute Wind Shear Direction In Layer
+psshrm.f	- Compute Wind Shear Magnitude In Layer
+psstab.f	- Compute THTA Lapse Rate In Layer
+psstap.f	- Compute THTA Change With Pressure
+psswet.f	- Compute SWEAT Index
+pstotl.f	- Compute Total Totals Index
+psvtot.f	- Compute Vertical Totals Index
+# testps.f	- PS Library Test Program
+
+#------------------------------------------------------------------------

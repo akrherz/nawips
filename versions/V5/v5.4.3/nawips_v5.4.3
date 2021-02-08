@@ -1,0 +1,1319 @@
+
+                           NAWIPS 5.4.3 Change Description Log
+
+	( * indicates a change that makes this version of NAWIPS
+	    incompatible with the previous version )
+
+
+
+001.	ASCII Decoders
+
+a	a.  Added two error messages to DCMETR.ERR for invalid
+	    bulletins and invalid bulletin times.  Done, KT, (SS),
+	    3/12/97.  Testing complete, KT, 3/18/97.
+
+a	b.  Added code to metar decoder to use altimeter setting
+	    as a guide for properly assigning hundreds' digit to
+	    sea-level pressure.  A range of 880-1080mb is now 
+	    supported.  Also added a check for estimated altimeter
+	    settings for stations that still report in SAO format.
+	    Done, KT, (SS), 3/14/97.  Testing complete, KT, 3/18/97.
+
+c	c.  Wrote new decoder for Supplemental Climatological Data (SCD),
+	    bulletins.  The code is based on the METAR decoder.  Done,
+	    DWK, (SS), 4/2/97.
+
+c	d.  Revised the Flash Flood Guidance decoder.  A single routine
+	    is now used to decode all bulletin types.  Improved
+	    error and logging processing.  Done, KT, (SS), 4/2/97.
+
+c	e.  Adapted ship/buoy/c-man decoder written by NCO decoder
+	    group.  Done, KT, DKW, (SS), 4/18/97.
+
+d	f.  Updated flash flood decoder to handle bulletins from
+	    Sacramento.  Also added logic to handle situations where
+	    the report line does not contain a county identifier.
+	    Done, KT, (SS), 4/28/97.
+
+d	g.  Made some improvements and small corrections to the METAR 
+	    decoder.  Increased the size of the station id to 8 characters.
+	    Improved the writing of specials and improved logging.  No longer
+	    write NIL reports to the GEMPAK file.  Done, KT, (SS), 4/29/97.
+
+d	h.  Made some improvements to the Flash Flood Decoder.  Added 
+	    capability to decode bulletins from AFOS.  Added decoding of
+	    issuance time to eliminate duplicates.  Also updated station
+	    table to include additional zones.  Done, KT, (SS), 5/2/97.
+
+d	i.  Made some improvements to the marine decoder.  Also, updated
+	    parameter conversion table for sea-surface temperature in
+	    Fahrenheit and wave height in feet.  Added SFPARM alias
+	    "SHIP" to prmlst.tbl.  Updated help files and packing table.
+	    Done, KT, (SS), 5/5/97.
+
+d	j.  Corrected problem in flash flood decoder routine which 
+	    was not properly handling the translation of report time 
+	    strings issued by Salt Lake City.  Done, KT, (SS),
+     	    05/07/97.
+
+e	k.  Made improvements to the marine decoder.  Added logic to
+	    calculate significant wave height from wind wave and swell
+	    wave heights; updated some parameters to meet MPC 
+	    requirements; updated packing table.  Done, DKW, (SS), 
+	    5/21/97.
+
+f	l.  Modified marine decoder so that station's elevation,
+	    latitude, and longitude are initialized to missing
+	    rather than zero.  Done, KT, (SS), 5/27/97.
+
+f	m.  Made parameter conversion changes for marine decoder.
+	    Added visibility in nautical miles to parameter conversion
+	    table and conversion routine to convert from kilometers to
+	    nautical miles.  Updated documentation.  Done, DKW, (SS),
+	    5/30/97.
+
+f	n.  Modified metar decoder routines to correct compilation
+	    errors that occur on AIX systems.  Removed reference to
+	    ERMISS function for integer checks used IMISS instead.
+	    Done, DKW, (SS), 6/2/97.
+
+g	o.  Made several changes to the metar decoder to improve its
+	    speed.  Replaced calls to ST_LSTR with function references
+	    to INDEX and LENS.  Replaced call to ST_CRNM with calls to
+	    ST_INTG.  Used explicit character length specification for
+	    bulletin and report instead of default value of 16384.
+	    Done, DKW, (SS), 6/17/97.
+
+g	p.  Modified upper-air decoder and SFCHCK so that a stations
+	    elevation, lat, lon, and station number are intialized to
+	    missing instead of zero.  Done, KT, (SS), 6/17/97.
+
+h	q.  Removed current ldm directory from NAWIPS.  Added ulog.c,
+	    and ulog.h to GEMPAK source directory.  These are the
+	    only ldm files needed for bridge software.  Done, SJ, (SS),
+	    6/23/97. 
+
+h	r.  Fixed a bug in the METAR decoder introduced as a result of
+	    changes made in 001o. delivery.  The problem occured where
+	    reports have long strings of bad characters with no blanks
+	    causing the decoder to core dump.  This problem has now
+	    been fixed.  Done, DKW, (SS), 6/25/97.
+
+l	s.  Added printing of NAWIPS version number to decoders in
+	    the "-h" option.  Also corrected an error in the header
+	    file ulog.h.  Done, DKW, (SS), 9/22/97.
+
+
+
+
+002.	GRIB Decoder
+
+
+
+003.	Grid Diagnostics
+
+
+
+004.	Parameter Calculations
+
+
+005.	Image Processing
+
+a	a.  Changed the names of the IMGDEF common variables to be more 
+	    distinctive and consistent.  Done, SJ, JC, 3/12/97.  Testing,
+	    complete, DK, 3/18/97.
+
+c	b.  Corrected problem where color luts were not being properly
+	    loaded for radar images.  Default color table is now used
+	    when LUTFIL=' '.  Added a check to IM_LUTF for the PS driver
+	    in order to change the "background" color from black to 
+	    white.  Done, SJ, (SS), 4/17/97.
+
+d	c.  Fixed problem where the image title was not updated in NMAP
+	    when switching from IR to VIS images.  Done, SJ, (SS), 
+	    4/25/97.  Testing complete, SM, 4/29/97.
+
+l	d.  Added a new function (IM_QSIZ) to query the dimensions of
+	    a satellite or radar image. Done, CL, (SJ), 8/22/97.
+
+
+
+006.	GPLT Changes
+
+b	a.  Changed the turbulence symbols to plot the flight level text
+	    under the symbol.  Also, added the ability to plot two
+	    symbols at once.  Done, SJ, (SS), 3/27/97.  Testing complete,
+	    KT, 3/27/97.
+
+b	b.  Fixed bugs with offsets for turbulence symbol found as a result
+	    of CDB testing.  Done, SJ, (SS), 3/28/97.  Testing complete, 
+	    KT, 3/28/97.
+
+b	c.  Changed the shape of the volcano symbol.  Changed the dash
+	    pattern of line type 9 to be the squall line pattern.  Done,
+	    SJ, (SS), 3/28/97.
+
+c	d.  Added attribute setting and query routines for special line
+	    types such as ball and chain.  Done, DK, (SS), 4/7/97.
+
+c	e.  Changed the turbulence symbols to not plot the flight
+	    level text under the symbol.  Done, SJ, (SS), 4/7/97.  Testing
+	    complete, SS, 4/14/97.
+
+c	f.  Added G and D levels for the special text, and text and symbol
+	    command (GTXSY) for GPLT.  Done, ES, (SS), 4/16/97.
+
+g	g.  Removed 'carray' array from GEMPRM.PRM in (gemprm.$OS) files.
+	    Added 'S' into coordinate character array 'sysup' and
+	    'syslo' defined in GEMPRM.PRM.  Updated necessary routines in
+	    GPLT.  Done, CL, (SS), 6/13/97.
+
+g	h.  Added nine special text types (for AWC) to GPLT.  Done,
+	    ES, (SS), 6/13/97.
+
+h	i.  Implement roaming function in ATEST and TESTIM programs.
+	    Supporting GPLT, DEVICE and drivers modified.  Done, 
+	    CL, (SS), 6/27/97.
+
+h	j.  Modified groam.f to calculate the delta type roam relative
+	    to the center of the screen instead of the upper left corner.
+	    Done, DP, (SS), 7/1/97.
+
+h	k.  Updated font size calculations for the xw and utf drivers.
+	    Modified NAFOS to use the new sizes from the UTF driver.
+	    Added software fonts to DTEXTC.  Updated all headers.
+	    Added multi-lines to DTEXT.   Updated all headers.  Done,
+	    SJ, (SS), 7/2/97.
+
+h	l.  Corrected name of parameter in gtxsy from sym to isym.  This
+	    was causing problems with the turbulence symbol plotting.
+	    Done, ES, (SS), 7/3/97.
+
+h	m.  Created new FIL and GRP routines to set polygon fill attributes,
+	    and start and end new drawing element groups.  Done, SM, (SS),
+	    7/9/97.
+
+h	n.  Added filled arrow head capability to special line plotting
+	    routine, DSPLN.F.  Line type 6 is filled arrow heads.  Done,
+	    DP, (SS), 7/9/97.
+
+h	o.  Created a inverse function to GAZDRM.  The new function transforms
+	    a wind direction in N coordinates to the correct direction
+	    to plot in M coordinates.  Done, DP, (SS), 7/14/97. 
+
+h	p.  Fixed the pip intersection problem which caused giant pips
+	    to be drawn for vertical fronts in some cases.  Removed
+	    arrow drawing code from ipatln.c.  Done, DK, (SS), 7/15/97.
+
+i	q.  Removed a debug write statement in a GPLTDEV routine.  Done,
+	    ML, (SS), 7/21/97.
+
+i	r.  Added justification, xoffset, yoffset, and rotation to
+	    GTXSY (special text) functions.  Done, ES, (SS), 7/22/97.
+
+i	s.  Wrote a utility function to get polygon locations from
+	    GEMPAK map files.  Done, GK, (SS), 7/23/97.
+
+l	t.  Created GLOGO and supporting subroutines to plot a
+	    monochrome version of the NOAA Seagull emblem.  Done,
+	    ML, (SS), 8/11/97.
+
+l	u.  Removed GSAVE and GREST and associated routines.
+	    Done, ML, (SJ), 8/14/97.
+
+l	v.  Fixed labelling bugs in polar coordinate routines.  Done, 
+	    TL, (SS), 9/29/97.
+
+
+
+007.	Device Drivers
+
+a	a.  Corrected FAX driver to properly handle rotation of products.  Also
+	    corrected VIEWFAX to properly handle rotated products.  Updated
+	    product table to have NHC products with the correct size.  Done,
+	    EW, (SS), 3/17/97.  Testing complete, ES, 3/18/97.
+
+a	b.  Changed the values of the text size coefficients for the PostScript
+	    driver to correct the problem plotting titles.  Done, SJ, (SS),
+	    3/17/97.  Testing complete, SJ, 3/18/97.
+
+a	c.  Fixed a bug in Pressure tendancy plotting where number was not
+	    plotted in correct location.  Done, ML, (SS), 3/16/97.  Testing
+	    complete, SM, 3/18/97.
+
+b	d.  Created a new device driver (VG) to produce VGF output.  Also
+	    added a new parameter to GPMAP to specify VGF file to display.
+	    Done, SJ, DK, ES, (SS), 3/25/97.  Testing complete, TL, 3/27/97.
+
+b	e.  Added scaling factors for front pips and strokes to the hinit
+	    routines for XWP driver.  Done, SJ, (SS), 3/27/97.  Testing
+	    complete, KT, 3/27/97.
+
+b	f.  Corrected bugs in VG driver found during CDB testing.  Done,
+	    SJ, (SS), 3/28/97.  Testing complete, KT, 3/28/97.
+
+c	g.  Added a check for case where NIDS product is one byte too short.
+	    Done, JW, (SS), 4/17/97.
+
+c	h.  Changed PQCLRS to set the number of colors for the specified
+	    bank in the common variable.  Changed PSCRGB to not set the
+	    common variable.  Done, SJ, (SS), 4/22/97.
+
+c	i.  Fixed a problem with saving display size that was causing
+	    fatal errors in printing images for some situations.
+	    Done, SJ, (SS), 4/22/97.
+
+g	j.  Added a fix to allow line width setting in the FAX driver.
+	    Done, JW, (SS), 6/18/97.
+
+h	k.  Fixed stationary front flipping bug in DEVICE code.   Also
+	    fixed spurious hooks when drawing fronts that sometimes
+	    occur.  Also corrected front drawing so that front lines
+	    are displayed for cases where there is less than one
+	    pip (short front segments).  Done, DK, (SS), 6/23/97.
+	    Testing complete, SS, ML, 6/24/97.
+
+h	l.  Made documentation changes to all FORTRAN h routines in all
+	    active device drivers.  Also removed SAVRES where appropriate.
+	    Done, SM, (SS), 6/30/97.
+
+h	m.  Changed hardware width 1 for lines in the PS driver.  Done,
+	    SJ, (SS), 7/2/97.
+
+h	n.  Removed AFOS Offset Text option from the UTF driver.  Added computation
+	    of new x and y  with offsets applied.  Added check for text outside
+	    clipping bounds.  Adjusted scaling factors for software and hardware
+	    text.  Done, SJ, (SS), 7/8/97.
+
+i	o.  Reworked the FAX driver to eliminate problems and add new
+	    functionality.  Updated and added other functions to 
+	    accomodate the FAX driver.  Created new table, faxprod.tbl
+	    for FAX product characteristics.  Done, SJ, (SS), 7/22/97.
+
+i	p.  Fixed error in VG driver caused by calling sequence 
+	    changes that were not being accounted for properly.  
+	    Also fixed bug for special text display in monocolor.
+	    Done, CL, DP, (SS), 7/24/97.
+
+j	q.  Cleaned up code in FAX driver that converts raster to 6 bit
+	    format.  Also, fixed a potential problem in CTB_PROD.  
+	    Corrected typo in the FAXPROD.TBL file.  Done, SJ, (SS),
+	    7/31/97.
+
+j	r.  Added start and end group functionality to the VG driver.
+	    Also, added VFILL to the VG driver.
+
+j	s.  Added capability to handle fax products with an indent value.
+	    Added indent value column to the faxprod.tbl.  Added 180
+	    and 270 degree rotation to the FAX driver.  Done, SJ, (SS),
+	    8/4/97.
+
+	*   (The table faxprod.tbl is incompatible with previous versions
+	     because of the addition of the column for indent value )
+
+j	t.  Updated scaling factors in HINIT for FAX driver.  Done,
+	    JW, SJ, (SS), 8/4/97.
+
+l	u.  Moved the device drivers HP, VC and VT to an "inactive"
+	    directory. Remove the libraries and executables. Remove
+	    them from the compile and link scripts.
+	    Done, SJ, (SJ), 8/14/97.
+
+k	v.  Added capability to handle fax products with an "reserved"
+	    value in the file footer. Added indent value column to the
+	    faxprod.tbl. Done, SJ, (SJ), 8/15/97.
+
+k	w.  Modified the file algorithm used by the FAX driver. Changed
+	    the fill from solid to a pattern. Done, DP, (SJ), 8/15/97.
+
+k	x.  Made several modifications and improvements to the UTF driver.
+	    Modified the driver to handle text offsets as a series of 
+	    up/down/left/right cursor movements.  Modified the symbols
+	    to be stored as AFOS text characters to save space in the
+	    AFOS file.  Modified the file naming conventions.  Created
+	    a new product table for the UTF driver, gempak/tables/pgen/
+	    afosprod.tbl.  Also made corrections to NAFOS to display
+	    symbols properly.  Done, SJ, (SS), 8/28/97.
+
+k	y.  Modified the front, symbol, marker, and logo routines to 
+	    set the fill type to solid before drawing.  Done, SJ, (SS),
+	    9/3/97.
+
+k	z.  Fixed bug in UTF driver to reset byte 2 and 3 of the block
+	    header for the first block of a product.  Done, SJ, (SS),
+	    9/11/97.
+
+k	aa. Made changes to reduce the size of the AFOS file for
+	    basic weather low-level significant weather chart.  Changed
+	    the number of points in a circle in the ball and chain
+	    pattern from 60 to 8.  Also, increased the default
+	    stroke size from 1 to 2 for the ball and chain in the
+	    drawing table.  Changed IDRAW to not draw multiple line
+	    widths for the UTF device driver.  Changed the fill in
+	    the UTF driver to have wider spacing for areas that
+	    are larger in the Y direction.  Done, SJ, (SS), 9/15/97.
+
+k	bb. Corrected time-stamp date error.  Done, SJ, (SS), 9/16/97.
+
+l	cc. Removed extraneous lines in the AFOS fill.  Done, SJ, (SS),
+	    9/18/97.
+
+l	dd. Corrected MAX_PTS to MAXPTS declaration in vg driver routine.
+	    Done, DP, (SS), 9/18/97.
+
+l	ee. Corrected bug where gridded winds and multiple symbols were
+	    not being saved properly to a vg file.  Done, DP, (SS), 9/22/97.
+
+l	ff. Corrected the header bytes that specify the product priority and
+	    date/time.  Done, SJ, (SS), 9/25/97.
+
+l	gg. Changed the arraw of weather symbols for the UTF driver to better
+	    accomodate combination symbols, e.g., thunderstorm w/rain.  Also,
+	    updated PLOTSYMS to output to the UTF driver.  Done, SJ, (SS),
+	    9/29/97.
+
+m	hh. Additional corrections to computation of AFOS file creation 
+	    time were done.  Done, SJ, (SS), 10/3/97.
+
+008.	Documentation
+
+a	a.  Added help to VIEWFAX program and the fax driver.  Done, EW,
+	    (SS), 3/26/97.  Testing complete, SS, 4/2/97.
+
+b	b.  Added fronts to the utilities that are used to generate Appendix
+	    C of the Users Guide.  Done, ML, (SS), 3/26/97.
+
+c	c.  Added help for Supplemental Climatological Data decoder.
+	    Done, DKW, (SS), 4/8/97.
+
+c	d.  Updated NMAP help for new features in data selection and
+	    station model editing.  Done, SS, (SS), 4/21/97.
+
+d	e.  Updated NMAP help for new product generation features and
+	    addition of ship data.  Done, SS, (SS), 5/13/97.
+
+h	f.  Updated prologs of GPLT and APPL routines with the addition of
+	    the 'S' screen coordinate system.  Done, SS, (SS), 7/3/97.
+
+i	g.  Updated GDPLOT2 help file for addition of filter parameter.
+	    Done, DP, (SS), 7/22/97.
+
+k	h.  Updated documentation to include new parameters added
+	    when marine decoder was implemented.  Done, DKW, (SS),
+	    8/7/97.
+
+l	i.  Corrected prolog typos in several APPL routines.  Done, ML,
+	    (SS), 9/16/97.
+
+l	j.  Corrected prolog typos throughout NAWIPS routines.  Corrections
+	    were primarily typo for the '*' character and replacing 
+	    Input Parameter with Input Parameters.  Done, ML, (SS),
+	    9/22/97.
+
+
+
+009.	Scripts/NTS files
+
+a	a.  Made several improvements to print scripts.  Added UKMET and
+	    ECMWF products.  Added 850mb products.  Added capability
+	    to increment forecast times.  Improved on-line help.
+	    Done, DP, (SS), 3/14/97.  Testing Complete, DP, 3/18/97.
+
+b	b.  Created script to build all the GUI programs.  Done, SS,
+	    (SS), 3/19/97.
+
+c	c.  Updated NMAP restore files.  Removed LATLON and MAP parameters
+	    because they are now controled by user in NMAP.  Done, DP,
+	    (SS), 4/18/97.
+
+f	d.  Updated NMAP restore files to improve some of the products.
+	    Done, JYC, (SS), 5/27/97.
+
+g	e.  Made several changes to improve in clean-uup NMAP restore
+	    files for model products.  Fixed several of the file names.
+	    Added UKMET and RSM products.  Added products for MPC.
+	    Removed commas from file names for most files.  A complete
+	    update to the nmap NTS directory tree was done.
+	    Done, JYC, (SS), 6/11/97.
+
+g	f.  Corrected Makefile for Busy to remove 'null' warning on IRIX4.
+	    Done, CL, (SS), 6/16/97.
+
+h	g.  Updated NMAP restore files to reflect recent changes made by
+	    the EMC for eta and meso-eta postprocessing.  Done, JC, (SS),
+	    6/26/97.
+
+h	h.  Updated the text size to one in all NMAP restore files to
+	    account for new text size base sizes in the device drivers.
+	    Done, DP, (SS), 7/16/97.
+
+l	i.  The NMAP restore files have been re-modified back to their
+	    original configuration, i.e., subdirectories, stnd, prcp, etc.
+	    Also, FILTER has been set to "Yes" has been added to accomodate
+	    the new gridded wind filtering.  Done, DP, (SS), 9/4/97.
+
+l	j.  Additional corrections to the NMAP restore files and the table
+	    that points to them have been done.  Done, DP, (SS), 9/16/97.
+
+l	k.  Updated cgemlib_link script to include testcss, testcrg, and
+	    testcvq programs.  Done, SS, (SS), 9/24/97.
+
+
+010.	General GEMLIB/CGEMLIB Changes
+
+b	a.  Corrected calculation of wet-bulb temperature in PC
+	    conversion table.  It now uses PALT instead of PMSL.
+	    Also added PR_TMWB to TESTPR routine.  Done, KT, 
+	    (SS), 3/24/97.
+
+b	b.  Updated version number to 5.4.2.b.  Done, SS, (SS),
+	    3/31/97.
+
+c	c.  Updated version number to 5.4.2.c.  Done, SS, (SS),
+	    4/1/97.
+
+c	d.  Renamed IP_ULOC to IP_PUTV.  Cleaned up TESTIP.
+	    Updated routines to reflect name change.  Done,
+	    SJ, (SS), 4/11/97.
+
+d	e.  Updated version number to 5.4.2.d.  Done, SS, (SS),
+	    4/24/97
+
+d	f.  Modified ST_RPST to make it more robust and use temporary
+	    strings to avoid possible problems on some platforms.   Also
+	    added ST_NULL to AIX directory.  Done, SJ, (SS), 4/30/97.
+
+d	g.  Modified GG_STTL so that image title has leading zeros in
+	    time string, when appropriate.  Also added a "Z" to end
+	    of time string.  Done, DP, (SS), 5/5/97.
+
+e	h.  Updated version number to 5.4.2.e.  Done, SS, (SS),
+	    5/15/97.
+
+f	i.  Updated version number to 5.4.2.f.  Done, SS, (SS),
+	    5/22/97.
+
+f       j.  Added routines and modified test routines for parsing
+	    user input for color coding information.  Done, SM, 
+            (SS), 5/23/97.
+
+f	k.  Fixed header and program inconsistency in surface lifted
+	    temperature computation.  Added parameters LTMC, LTMF, LTMK
+	    to pcconv.tbl.  Updataed documentation and tables.  Done,
+	    TL, (SS), 5/29/97.
+
+f	l.  Added TVRC to the output parameter list (splist) in PC 
+	    tables.  Done, TL, (SS), 5/29/97.
+
+g	m.  Updated version number to 5.4.2.g.  Done, SS, (SS),
+	    6/4/97.
+
+g	n.  Added a flag to CVG_LOAD to allow a VG file to be opened
+	    for read access only.  Also updated routines which call
+	    this function adding the new parameter.  Done, SJ, (SS),
+	    6/6/97.
+
+g	o.  Fixed missing parameter in call to cfl_ropn in cvg_load.
+	    Done, CL, (SS), 6/12/97.
+
+g	p.  Several functions in the IP library have been modified to
+	    handle larger GEMPAK input strings.  In most cases, strings
+	    were increased from 72 to 128.  Done, DP, (SS), 6/16/97.
+
+g	q.  Modified format of alias table, prmlst.tbl.  Added additional
+	    strings after the alias name to be used by NMAP program in its
+	    GUI.  Strings delimited by a | character.  Made changes
+	    in FORTRAN and wrote a new C function to read the alias table.
+	    Updated alias information in the help.  Done, SM, GK, (SS),
+	    6/16/97.
+
+*	    ( Alias table format is incompatible with previous versions.)
+
+h	r.  Updated version number to 5.4.2.h.  Done, SS, (SS),
+	    6/23/97.
+
+h	s.  Updated documentation in the ER library.  Done, SM, (SS),
+	    6/30/97.
+
+h	t.  Improved efficiency of function CGR_INPOLY, which determines
+	    whether a point is contained in a polygon.  A test program
+	    for the routine, TESTCGR, was also created.  Modified
+	    routines which call CGR_INPOLY to account for calling 
+	    sequence change.  Done, DP, (SS), 7/2/97.
+
+h	u.  Changed GG_MAPS to set margins after projection is read from GEOG.TBL.
+	    This change allows the table to include margin settings in the projection
+	    value.  Added no margins to the AFOS tables in GEOG.TBL to facilitate
+	    making AFOS products.  Done, SJ, (SS), 7/7/97.
+
+h	v.  Rewrote function which computes distance to a series of line
+	    segments and finds the nearest vertex.  Trig functions were
+	    removed.  Done, DP, (SS), 7/14/97.
+
+i	w.  Updated version number to 5.4.2.i.  Done, SS, (SS), 7/17/97.
+
+i	x.  Corrected table routine CTBASTN.C to not skip records that
+	    have blank state fields.  Cleaned up the TESTCTB program.
+	    Done, GK, (SS), 7/21/97.
+
+i	y.  Moved the table product.tbl from $GEMTBL/parms to 
+	    $GEMTBL/pgen.  Updated table reading routine.  Done,
+	    SJ, (SS), 7/22/97.
+
+i	z.  Wrote new CGR routines that test the intersection of
+	    polygons and test the intersection of lines.  Done,
+	    DP, (SS), 7/23/97.
+
+i	aa. Updated testcvg and testcvq to handle special text
+	    changes.  Done, ES, (SS), 7/24/97.
+
+i	bb. Added null to VG file name string and intialized values
+	    for group type and number for the file header element.
+	    Done, SJ, (SS), 7/25/97.
+
+j	cc. Updated verson number to 5.4.2.j.  Done, SS, (SS), 7/31/97.
+
+j	dd. Added file close to CVQ functions where applicable.  Created
+	    new function, (cvq_higrp) to return the highest used group
+	    number in a particular VG file.  Done, EW, (SS), 7/31/97.
+
+j	ee. Added error processing to cpg_fndgrp and testcpg.  Replaced
+	    atoi with cst_numb in cpgfndgrp.  Done, DK, (SS), 7/31/97.
+
+k	ff. Updated version number to 5.4.2.k.  Done, SS, (SS), 8/7/97.
+
+k	gg. Created new grid diagnostic functions to select values from
+	    grids that are < <= > >= or between other values for scalar and
+	    vectors.  Done, SM, (SS), 8/7/97.
+
+l	hh. Updated version number to 5.4.2.l.  Done, SS, (SS), 8/11/97.
+
+l	ii. Modified GG_SPLT to allow multiple STNPLT entries, separated
+	    by a "+". Done, DP, (SJ), 8/12/97.
+
+l	jj. Corrected documentation and expanded some checking for diagnostics
+	    for < <= > >= and between. Done, SM, (SJ), 8/22/97.
+
+l	kk. Corrected index error in CFL_TBOP that sometimes causes serious
+	    errors.  Done, CL, (SS), 8/26/97.
+
+l	ll. Several changes were made to the PC, PS and PR libraries.  The
+	    changes include:  Added virtual temperature as the 7th parameter
+	    in the PC table.  Cleaned up the station parameter routines;
+	    added new algorithms that allow the selection of temperature
+	    or virtual temperature in computing parcel stability.  Added
+	    new routine, pcfltop to find highest sounding level that 
+	    reports temperature and pressure data.  Rearranged equation
+	    arguements to improve computational accuracy in pcphgt and
+	    prtlcl.  Changed default mixing depth from 0 to RMISSD for layer
+	    parameters so that air parcel is able to be lifted from the
+	    surface for station parameters.  Updated documentation.  Done,
+	    TL, (SS), 8/28/97.
+
+l	mm. Removed LTMC, LTMF, and LTMK from pcconv.tbl.  Changed 
+	    latent heat calculation in PD_TMWB to be consistent with
+	    that in PR_LHVP.  Improved latent heat calculation algorithm.
+	    Changed lifted surface air temperature from K -> C.  Updated
+	    documentation.  Done, TL, (SS), 8/28/97.
+
+l	nn. Cleaned up testpc program.  Allow lower case for station and
+	    level parameters input.  Use one line instead of separate
+	    lines for station and layer parameter input.  Updated error
+	    messages.  Included three more routines in the testing program.
+	    Removed typos and bugs.  Done, TL, (SS), 9/10/97.
+
+l	oo. Cleaned up some of the CGEMLIB test programs, testctb, 
+	    testcst, testcfl.  Added testcss.  Done, GK, (SS), 
+	    9/10/97.
+
+l	pp. Updated version to 5.4.3.  Done, SS, (SS), 9/29/97.
+
+
+
+011.	General GEMPAK Program Changes
+
+a	a.  Updated N-AWIPS version number to 5.4.2a.  Done, SS,
+	    (SS), 3/12/97.
+
+b	b.  Added parameter aliases capability to SFMAP and SNMAP.  Done,
+	    SM, (SS), 3/24/97.  Testing complete, KT, 3/25/97.
+
+b	c.  Added marker variable to GEMPAK.  This variable will eventually
+	    be used for color coding parameters.  Done, SM, (SS), 3/24/97.
+
+b	d.  Updated documentation for routines that use new marker variable.
+	    Changed default value from 0 to 1 for new marker variable
+	    parameters.  Done, SM, (SS), 3/26/97.
+
+c	e.  Removed references to marker and skpmis parameters in SFMAP
+	    and SNMAP.  Markder are now plotted using the SFPARM, 
+	    SNPARM = mark.  Done, SM, (SS), 4/2/97.
+
+*	    ( Incompatible with previous versions because the MARKER and
+	      SKPMIS variables have been removed).
+
+c	f.  Wrote a new program, SFCHCK.  This program reads a surface file
+	    and lists stations indicating whether they have reported.  It
+	    also lists stations that have reported but are not in the
+	    station table.  Done, KT, (SS), 4/3/97.
+
+c	g.  GDPLOT2 was modified to process MAPFIL in a way that
+	    NMAP can properly handle map file changes.  Done, DP,
+	    (SS), 4/10/97.
+
+c	h.  GDPLOT2 changes made in 011g. were incorrect and have
+	    been removed.  Done, DP, (SS), 4/15/97.
+
+c	i.  Updated and corrected some routines in the SYSLIB source
+	    directory, primarily in the AIX sub-directory.  Done, SJ,
+	    (SS), 4/16/97.
+
+c	j.  Corrected call to GR_VSCL in gdplot.f.  Done, SM, (SS),
+	    4/17/97.  Testing complete, SM, 4/17/97.
+
+d	k.  Corrected bugs in SFCHCK found as a result of CDB testing.
+	    Done, KT, (SS), 4/29/97.
+
+d	l.  Added call to IM_LUTF when the device is PS.  Done, DP, (SS),
+	    05/05/97.
+
+f       m.  Wrote two new SF library routines to query surface file 
+	    to see if special reports or text data exist at a 
+            particular time and station.  Added these routines to
+	    SFCHCK so that it will not tag stations that report
+	    only specials as non-reporting stations.  Done, KT, (SS),
+	    5/23/97.
+
+f	n.  Updated AREA information for single station list in SFLIST
+	    and SFL604.  Modified header format for SFLIST to make it
+	    right justified.  Done, TL, (SS), 5/30/97.  Testing complete,
+	    SS, 5/30/97.
+
+h	o.  Corrected G_NINT function in gemprm.h include file.  This
+	    function did not handle negative values properly.  Done,
+	    DP, (SS), 7/1/97.
+
+h	p.  The maximum number of grid times in GDPLOT2/NMAP has been
+	    increased to 500.  Done, DP, (SS), 7/9/97.
+
+h	q.  Increased the input string sizes in GDPLOT2 main program.
+	    Done, DP, (SS), 7/14/97.
+
+i	r.  GDPLOT2 was modified to perform automatic wind barb/arrow
+	    filtering.  A bug in the WIND input processing was also
+	    fixed.  Done, DP, (SS), 7/21/97.
+
+k	s.  Set the string length for user input variables to a parameter
+	    LLMXLN, in all GEMPAK main programs.  Done, SM, (SS), 8/7/97.
+
+l	t.  Modified GDPLTB to plot the map, latlon lines and the station
+	    locations (STNPLT) after the contour fill and prior to normal
+	    contour lines. Done, DP, (SJ), 8/12/97.
+
+l	u.  Corrected bug preventing display of VG files in GPMAP.
+	    Done, EW, (SS), 9/8/97.
+
+l	v.  Corrected several routines that had typos and intialization 
+	    errors found as a result of AWC using a special compiler 
+	    option.  Done, TL, (SS), 9/23/97.
+
+
+012.	General GUI Modifications
+
+c	a.  Renamed GUI help table file names to *Hlp.index and modified
+	    source code to reflect this change.  Done, SW, (SS), 04/02/97.
+	    Testing complete, SS, 4/2/97.
+
+c     	b.  Swapped the position of the OK and Cancel buttons on the
+	    print panel for consistency.  Done, SW, (SS), 4/11/97.
+	    Testing complete, SS, 4/11/97.
+
+d	c.  Added Motif declaration to Nxmlib header file.  Done,
+	    CL, (SS), 5/12/97.
+
+d	d.  Updated GUI Makefiles to use environmental variables.  Done,
+	    CL, (SS), 5/13/97.
+
+f	e.  Added labelling of icons in NMAP.  Modified Nxm library routine
+	    and other GUI programs that call it.  Some clean up of Nxm 
+	    library print routine and the printer table.  Done, SW, (SS),
+	    5/22/97.
+
+*	    ( The print table format has changed and is incompatible with
+	      the previous version. )
+
+g	f.  Cleaned up code in NxmPrt.c and made necessary corrections
+	    in applications.  Done, SW, (SS), 6/6/97.
+
+g	g.  Added stop/busy buttons to NSAT and NTRANS.  Added print
+	    capability to NAFOS.  Cleaned up NXM dwell and loop functions.
+	    Moved the loop_speed table to gempak/tables/loop and cleaned 
+	    up.  Made appropriate modifications to GUI applications.  Done,
+	    SW, (SS), 6/12/97.
+
+l	h.  Eliminated UTIL.C from NxmLib.  UTIL.C was being used in NTRANS
+	    for reading a help file that no longer exists.  The help file
+	    was associated with the "Color Table Load" help button.  This
+	    change eliminates that help button. Done, GK, (SJ), 8/22/97.
+
+l	i.  Created Nxm library functions, NxmLineA.c and NxmColrP.c from
+	    attrw.c and colrw.c.  Modified Nxm.h and Nxmlib.h files.
+	    Updated NMAP, NSAT and NAFOS to reflect these changes.  Done,
+	    SW, (SS), 9/8/97.
+
+l	j.  Renamed NxmExitDialog.c to NxmExit.c.  Also cleaned up the 
+	    function.  Corrected a typo in the exit confirmation statement.  
+	    Modified affected GUI applications for these changes.  Done, 
+	    GK, (SS), 9/11/97.
+
+l	k.  Renamed NxmWarning.c to NxmWarn.c  Also cleaned up the 
+	    function and renamed NxmWarning to NxmWarn_show.  Modified
+	    affected GUI applications for these changes.  Done, GK,
+	    (SS), 9/12/97.
+
+l	l.  Renamed NxmMclose.c to NxmClose.c.  Moved the contents of
+	    NxmCallbacks.c into NxmClose.c.  Renamed the functions and
+	    cleaned up.  Done, GK, (SS), 9/23/97.
+
+
+
+013.	NTL
+
+
+014.	NTRANS
+
+b	a.  Corrected resizing problem in NTRANS.  Done, SW, (SS), 3/27/97.
+	    Testing complete SM, 3/27/97.
+
+f	b.  Increased the maximum number of groups from 50 to 100.
+	    Done, SW, (SS), 5/23/97.
+
+h	c.  Corrected the bug where color editing bar was not being displayed
+	    for products with no fill.  Done, CL, (SS), 7/14/97.
+
+k	d.  Corrected bug in time matching if number of frames exceeds 40.
+	    Done, CL, (SS), 9/2/97.
+
+
+
+015.	NSAT
+
+c	a.  Initilized lutfile to grey so that if no lut is selected,
+	    the program properly prints the image.  Done, CL, (SS),
+	    4/22/97.
+
+d	b.  Corrected problem with loading the proper lookup table for
+	    radar images reported by SPC.  Also cleaned up print related
+	    code. Also, always plot title at the bottom.  Done, CL, (SS),
+	    5/2/97.
+
+
+
+
+016.	NWX
+
+a	a.  Modified NWX for processing Flash Flood Guidance products.  Changed
+	    searching to use the station ID and added new search category, 
+	    "F".  Done, KT, (SS), 3/17/97.  Testing complete, KT, 3/18/97.
+
+c	b.  Modified routine that reads the "STATION.TBL" file so that
+	    it sorts alphabetically the table before it does the search.
+	    This change eliminates the need for the table to be listed
+	    in alphabetical order.  Done, DP, (SS), 4/10/97.  Testing,
+	    complete, SM, 4/11/97.
+
+
+017.	AFOS
+
+c	a.  Fixed bug in plotting turbulence symbol in NAFOS as a result
+	    of changes in GTURB.  Done, DK, (SS), 4/3/97.
+
+h	b.  Corrected a few bugs in the NAFOS and UTF library.  Corrected
+	    intialization of a variable problem and inproper variable
+	    declaration.  Done, DK, (SS), 6/26/97.  Testing complete, 
+	    SS, 6/26/97.
+
+i	c.  Increased string size so that lighting detection product
+	    is visible.  Done, DK, (SS), 7/24/97.
+
+
+018.	NMAP
+
+a	a.  Corrected problem that occurs if a one frame model product is
+	    selected.  Also corrected problem where the program does not
+	    properly handle zero size surface and upper-air files.  Added
+            routine to get N-AWIPS version number to nxm library.  Done,
+	    CL, SW, (SS), 3/12/97.  Testing complete, TL, 3/18/97.
+
+c	b.  Updated NMAP for removal marker and skpmis variables.  Done,
+	    SJ, (SS), 4/2/97.  Testing complete, SS, 4/2/97.
+
+c	c.  Added print capability to NMAP.  Done, SW, (SS), 4/8/97.
+	    Testing complete, SM, 4/10/97.
+
+c	d.  Several significant modifications have been made to improve
+	    the data access for observational data.  Also several other
+	    improvements have been made to the program to make it more
+	    table driven.  Surface and upper-air station models for
+	    plotting are now table driven using GEMPAK aliases.  The
+	    data selection method has been improved to use the data
+	    category method.  In station model editing, GEMPAK parameters
+	    available for editing are table driven now.  Also weather
+	    symbol size has been added.  Map and lat/lon attributes
+	    are now accepted for model data plotting.  The total number
+	    of frames for each selected data type is now remembered.
+	    Some small bug fixes are also included.  Done, CL, SW, DP,
+	    (SS), 4/18/96.
+
+c	e.  Fixed a bug in the printing where the look-up table was not
+	    be properly handled.  Done, CL, (SS), 4/22/97.
+
+c	f.  Fixed a bug in printing VGF contents in NMAP.  Done, CL,
+	    (SS), 4/23/97.
+
+d	g.  Fixed a bug in the labelling of lat/lon lines.  Done, CL,
+	    (SS), 4/25/97.  Testing complete, SM, 4/29/97.
+
+d	h.  Fixed a few bugs in NMAP.  Corrected image display problem 
+	    when the first image selected is missing.  Corrected fatal
+	    bug, when the stop button is clicked immediately after program
+	    intialization.  Done, CL, (SS), 5/2/97.
+
+d	i.  Corrected problem printing satellite data with model data.
+	    Done, CL, (SS), 5/5/97.
+
+d	j.  Added marine data to NMAP.  Improved station editing pop-up
+	    operation.  Improved title for upper-air data.  Done,
+	    CL, (SS), 5/12/97.
+
+d	k.  Corrected minor bug when the frame definition window is
+	    popped up and the previously disabled data bar(s) are
+	    not properly disabled.  Done, CL, (SS), 5/13/97.
+
+e	l.  Fixed problem after stop button is clicked and product
+	    generation is executed.  Done, Cl, (SS), 5/21/97.
+
+g	m.  Added the display of VG files into NMAP as another category
+	    of data.  This function is outside of product generation.
+	    Increased the maximum number of overlay layers from 4 to
+	    6.   Done, CL, (SS), 6/16/97.
+
+g	n.  Corrected problem where margins were improperly set if the
+	    text size is changed within product generation.  Done, CL, 
+	    (SS), 6/18/97.
+
+h	o.  Improved the logic dealing with reading the table vgf.nmap
+	    to allow for a no entry table.  If there are no vg files
+	    locally and the table has no entries, the vg data
+	    selection button is greyed out.  Done, CL, (SS), 6/23/97.
+	    Testing complete, SS, 6/24/97.
+
+h	p.  Several routines were modified to allow loading of VG files
+	    without consideration of editing the contents.  Currently,
+	    watch boxes are ignored.  Done, DP, (SS), 6/25/97.  Testing
+	    complete, SS, 6/26/97.
+
+h	q.  Corrected problem when the getlogin function used to obtain
+	    the user login returns NULL.  Done, CL, (SS), 6/30/97.  Testing
+	    complete, SS, 6/30/97.
+
+h	r.  Replaced Roads with Marine regional map background in the
+	    map selection panel.  Done, SS, (SS), 7/1/97.
+
+h       s.  The NMAP/VGF watch-by-county table (county.tbl) has been
+	    presorted and renamed to county_sort.tbl to improve 
+	    efficiency.  The insertion sort has been removed from read
+	    and sort routine.  Done, DP, (SS), 7/3/97.
+
+h	t.  Added monochromatic display of VGF file in NMAP.  Also added
+	    color editing capability for monochromatic display.  Done,
+	    CL, DP, (SS), 7/9/97.
+
+h	u.  Added clear data functionality to NMAP.  Also now allow
+	    printing without having background data displayed.  Done,
+	    CL, (SS), 7/10/97.
+
+h	v.  Added capability to display more than one VG file.  Added
+	    capability to display a VG file created in product generation
+	    mode as background data without having to exit NMAP.  Done,
+	    CL, (SS), 7/14/97.
+
+h	w.  Fixed a bug in NMAP where if the data window is invoked,
+	    then cancelled, then invoked again, the program would
+	    hang.  Done, CL, (SS), 7/15/97.
+
+j	x.  Made the map overlay feature table driven.  Improved layout of
+	    the map window.  Done, CL, (SS), 8/4/97.
+
+l	y.  Corrected bug where the "Accept" button was not updating the
+	    map overlay options specified by the user.  Done, CL, (SS),
+	    8/11/97.
+
+l	z.  Added the centroids to the background list. Saved the last
+	    accepted map overlay choices. If the user chooses "Cancel"
+	    on the map edit window, the saved values are restored.
+	    Done, CL, (SJ), 8/12/97.
+
+l	aa. Added the CPC verification stations to the map overlay list.
+	    Done, JH, (SJ), 8/12/97.
+	    
+l	bb. Updated the time line widget to better handle model data.
+	    Done, CL&SW, (SJ), 8/21/97.
+
+l	cc. Added roam to NMAP.  Corrected calling sequence problem
+	    as result of calling sequence change to cds_dspvg.  Done,
+	    CL, (SS), 8/27/97.
+
+l	dd. Corrected problem where NMAP was not finding a data file
+	    if there is only one data file in the data directory.  Done,
+	    CL, (SS), 8/29/97.
+
+l	ee. Corrected problem where NMAP does not display the map 
+	    background the first time if the load button is invoked
+	    from the map selection popup.  Done, CL, (SS), 9/3/97.
+
+l	ff. Modified to allow tabs in restore files for model products.
+	    Done, CL, (SS), 9/12/97.
+
+l	gg. Corrected problem where vgf files were not being displayed in
+	    monochrome.  Done, DP, (SS), 9/25/97.
+
+l	hh. Corrected fatal error when group button is clicked.  Done, 
+	    CL, (SS), 9/30/97.
+
+m	ii. Corrected lat/lon display when in the roam mode.  Done, 
+	    CL, (SS), 10/3/97.
+
+
+019.	MAP FILES
+
+c	a.  Added NWS zone map files.  Also updated the county map files.
+	    Done, GK, (SS), 4/10/97.
+
+g	b.  Added map files and tables to support the MPC.  Maps include
+	    the high seas, regional, and offshore forecast areas.
+	    Also added a station table that includes 6 buoys.  Done,
+	    GK, (SS), 6/9/97.
+
+i	c.  Added significant weather map background map.  Done,
+	    GK, (SS), 7/21/97.
+
+
+020.	UTILITIES 
+
+a	a.  Wrote a new utility program and scripts to execute to count
+	    lines of source code.  Done, ML, (SS), 3/24/97.
+
+b	b.  Updated code counting program to have flags to count FORTRAN
+	    or C source code only.  Done, SJ, (SS), 4/02/97.
+
+h	c.  Created a new utility program and scripts to create X bitmaps.
+	    All GEMPAK symbols can be made into bitmaps.  Done, ML, (SS),
+	    7/3/97.
+
+021.	PRODUCT GENERATION
+
+c	a.  Several new capabilities have been added.  Added file 
+  	    open and close for VGF.  Added contour lines.  Added new
+	    buttons to NMAP product generation palette.  Modified
+	    user/function selection dialog.  Added error processing
+	    for VGF file open/close.  Renamed several cpg files from
+	    "pg" to "cpg".  Added element "move" to VGF and GUI.  Corrected
+	    front drawing problem where the length of the front was wrong.
+	    Done, EW, DK, (SS), 4/11/97.
+
+d	b.  Added special line drawing to all device and VG driver routines
+	    in GEMPAK.  Also, corrected direction bug in front drawing.  
+	    Done, DK, (SS), 4/25/97.
+
+d	c.  Several new capabilities have been added.  Divide pallettes
+	    into actions, classes and objects in NMAP.  Added GUI in
+	    NMAP for placing text.  Added GUI in NMAP for placing
+	    special line types.  Fixed file scanning to correctly
+	    redraw elements that have been written over by other
+	    actions.  Added fill contours to NMAP GUI.  Done,
+	    EW, ES, DK, (SS), 5/7/97.
+
+*	    ( NOTE: This version of the VGF file is NOT compatible with
+	     previous versions. )
+
+e	d.  Made several corrections to product generation software.
+	    Check for divide by zero when calculating line slopes
+	    in cgr_intrsct.  Provide error handling and bound checking
+	    when loading a vgf file that has more elements than allowed
+	    which has been increased to 2000.  Put in error check for
+	    ignoring elements that are unknown in the VGF file.
+	    Added move and slide functions for regular lines.  Properly
+	    set device ranges for all known displayable elements and
+	    added lines and symbols.  Change reference from Nxmlib.h
+	    to Nxm.h for all nmap vgf routines.  Done, EW, DK, (SS),
+	    5/20/97.
+
+e	e.  Removed unnecessary GEPLOT calls in NMAP which improves
+	    performance signicantly.  Corrected re-initiation of 
+	    range records when exiting product generation.  Done, EW,
+	    (SS), 5/21/97.
+
+f	f.  Check for returned error codes when calculating the 
+	    distance to an unknown element type.  Also corrected
+	    range record setting for lines and contours.  Done, EW,
+	    (SS), 5/22/97.
+
+f	g.  Added capability to handle mutiple text lines in GPLT
+	    and NMAP GUI.  Done, ES, (SS), 5/23/97.
+
+f	h.  Cleaned up multiple line logic in dtextc function and
+	    added documention about multiple text line capability
+	    to all GEMPLT textc routines.  Done, ES, (SS), 5/27/97.
+	    Testing complete, SJ, 5/29/97.
+
+f	i.  Created new CGEMLIB library CDS which contains VG display
+	    functions.  Replaced remaing cpg_mpstg calls with calls
+	    to cpg_getset.  Moved free calls inside if blocks in 
+	    several cvg_*sto functions.  Done, DK, (SS), 5/28/97.
+
+f	j.  Fixed problem with moving elements that was causing crashes
+	    on the HP platform.  Updated to correct version of NxmPalette.c.
+	    Corrected include file references in NxmStoDspVg.c.  Prevent
+	    saving backup pixmaps when product generation is not active
+	    in NMAP.  Done, EW, DK, (SS), 5/29/97.
+
+g	k.  Added new icons for symbols and added symbol information to
+	    the PG tables.  This delivery is done in preparation for
+	    testing.  Done, DK, (SS), 6/5/97.
+
+g	l.  Added symbol drawing capability.  Cleaned up and added
+	    maxbtn to cpg_getmnuid.  Done, DK, (SS), 6/10/97.
+
+g	m.  Added function to mark all records in a VG file as deleted.
+	    Added function and GUI to clear VG elements from the drawing
+	    area.  Done, DK, (SS), 6/16/97.
+
+g	n.  Fixed special line direction variable bug in GPLT attribute
+	    setting routine, gsspln.f.  Done, DK, (SS), 6/16/97.
+
+g	o.  Added wind barbs and arrows to NMAP and VG files.  Done,
+	    EW, (SS), 6/16/97.
+
+g	p.  Changed the way VG files are opened in NMAP product generation.
+	    Now, when a VG file is opened, its contents are copied into
+	    .DEFAULT.vgf.  Saving changes to a named file is accomplished
+	    by the "save" button.  Also replaced cvg_save with cvg_cp to
+	    improve efficiency of file read and writing.  Done, EW, (SS),
+	    6/18/97.
+
+g	q.  Added flip function to the product generation palette in NMAP.
+	    This function flips fronts and a scallop special lines.  Also
+	    added volcano symbol.  Done, DK, (SS), 6/18/97.
+
+g	r.  Corrected warm front flipping error.  Done, DK, (SS), 6/19/97.
+
+h	s.  Added capability to write special text/symbols to the VG 
+	    device driver and and capability to display these using
+	    cvg and cds routines.  Done, ES, (SS), 6/24/97.
+
+h	t.  Made several enhancements to product generation.  Added header
+	    element to VGF files.  Added group type and group number to
+	    VGF files.  Provided conversion utility, vgfcvt to convert
+	    from old (non-header) version of VGF file to new version.
+	    Added error processing for invalid versions of VGF files.
+	    Incorporated error handling and file creation in CVG_OPEN.
+	    Began phasing out cfl_xopn calls and replacing with
+	    cvg_open calls.  Added continous file scanning feature
+	    to TESTCVG.  Created CVQ library.  The intent of this library
+	    is to provide a callabel set of VG file query functions.
+	    Updated loadx routines to handle special text.  Done, EW, 
+	    (SS), 7/2/97.
+
+*	    (VG file is incompatible with previous version.  Must run new
+	     program vgfcvt to convert an old VG file to the new version.)
+
+h	u.  Added GUI in NMAP to draw and manipulate special text types
+	    1 and 2.  It contains changes to teh cvg routines and the
+	    NMAP vgf routines.  Done, ES, (SS), 7/2/97.
+
+h	v.  Added grouping GUI to NMAP and necessary supporting library
+	    functions.  Done, EW, (SS), 7/9/97.
+
+h	w.  Fixed bug to allow proper refresh of the data window when exiting
+	    product generation.  Done, CL, (SS), 7/10/97.
+
+h	x.  Added capability to rotate text and winds in NMAP product
+	    generation.  Removed texted offsets when moving or rotating.
+	    Done, EW, (SS), 7/14/97.
+
+h	y.  Corrected some bugs in special symbol drawing that were 
+	    causing the map to be improperly drawn.  Removed color
+	    setting for lines, text and fill for special text.  The
+	    text and lines are drawn in a single color, and the fill
+	    is done with the background color.  Done, SJ, (SS), 7/15/97.
+
+h	z.  Properly handle old versions of .DEFAULT.vgf file when
+	    NMAP product generation is initiated.  Done, EW, (SS),
+	    7/15/97.
+
+i	aa. Added remaining 7 special text types to NMAP GUI.  Also
+	    corrected error in vg driver routine, VTXSY.C where lat and
+	    lon were swappped in a calling sequence.  Done, ES, (SS),
+	    7/17/97.
+
+i	bb. Added a dialog box when drawing lines in NMAP that allows
+	    for closing and/or filling.  Also improved the drawing
+	    mode for lines and fronts so that the drawing for an
+	    element remains active after it is drawn.  That is,
+	    it is no longer necessary to go back to the paleltte
+	    after drawing one item to draw it again.  Done, EW, 
+	    (SS), 7/17/97.  
+
+i	cc. Added filled arrowheads and dashed line to NMAP product
+	    generation code.  Done, DP, (SS), 7/22/97.
+
+i	dd. Moved all product generation tables from $GEMTBL/parms to
+	    $GEMTBL/pgen and made associate routine changes.  Also,
+	    reformatted drawing.tbl table and improved documentation.
+	    Improved technique for obtaining information from the
+	    wind editor widget.  Done, DK, (SS), 7/23/97.
+
+*	    (The drawing.tbl file is incompatible with previous 
+	     versions of this file).
+
+i	ee. Updated NMAP GUI and cvg functions for changes made to
+	    the special text including software text, and adding
+	    additional attributes.  Done, ES, (SS), 7/23/97.
+
+i	ff. Corrected problem in moving special text in NMAP.  Done,
+	    ES, (SS), 7/23/97.
+
+i	gg. Recoded ITXSY to use the offsets and rotation.  The
+	    bounding boxes now match the software text sizes and
+	    the points are computed correctly.  Done, SJ, (SS),
+	    7/23/97.
+
+i	hh. Activated left and right justification for special text.
+	    Also fixed bug for low-level turbulence symbol.  Done, SJ,
+	    (SS), 7/23/97.
+
+i	ii. Added capability to rotate special text after it has
+	    been drawn.  Done, EW, (SS), 7/30/97.
+
+j	jj  Wrote new program avnbul, that creates aviation high-level
+	    significant weather text bulletins from a VG file.  Done,
+	    FY, (SS), 7/31/97.
+
+j	kk. Updated avnbul to handle special text for cloud types and
+	    to use contour lines instead of frontal lines for turbulence.
+	    Done, FY, (SS), 8/5/97.
+
+j	ll. Corrected an indexing problem in cgrpolyint.c. Also, removed
+	    nulls from the end of the bulletin text produced by avnbul.
+	    Done, FY, (SS), 8/6/97.
+
+l	mm. Added front settings palette to NMAP.  Added sliders to set
+	    line thickness to NMAP's line setting dialog box.  Done, EW,
+	    (SS), 8/11/97.
+
+l	nn. Modified NMAP product generation text widgets attribute 
+	    handling to be more consistent with other nmap popups.
+	    Also, removed all calls using the grp->pltextFormW and 
+	    grP_>colorPalW widgets.  Done, ES, (SS), 8/11/97.
+
+k	oo. Modified avnbul to handle the graphics type "line" for 
+	    turbulence that is generated automatically. Also added
+	    "-XXX" to the turbulence string when only one level is
+	    given. Done, FY, (SJ), 8/14/97.
+
+l	pp. Fixed the call to DTURB in NxmPlaceText to send the correct
+	    value of the turbulence symbol when trying to plot a 
+	    combination of two symbols. Done, ES, (SJ), 8/14/97.
+
+l	qq. Made VG file selection box more generic for opening and
+	    saving VG files. Major cleanup of NxmFileDlg.
+	    Done, DK, (SJ), 8/14/97.
+
+l	rr. First part of restructuring and cleanup of the product
+	    generation data structures.  Done, EW, (SS), 8/25/97.
+
+l	ss. Second part of restructuring and cleanup of the product
+	    generation data structures and code.  Created new crg
+	    library to handle range calculations.  Removed range
+	    data from the Graphics Info Record.  Removed inclusion
+	    of xwdrawcmn.h from routines that no longer use the
+	    graphics info record.  Remove cvg_loadx and update 
+	    cvg_load to have a flag for loading elements that
+	    are not editable.  Done, EW, (SS), 9/4/97.
+
+l	tt. Removed CmdInfo record and structure from the GrInfoRec
+	    structure in xwdrawcmn.h.  Its functionality is repaced with
+	    a new library under cgemlib call cmd.  All affected routines
+	    in NMAP and CGEMLIB have been updated to reflect this change.
+	    Done, ES, (SS), 9/9/97.
+
+l	uu. Corrected bug in the cmd library that was causing the last
+	    class (usually winds) to be unavailable to the user.  Done,
+	    ES, (SS), 9/11/97.
+
+l	vv. Changes were made to the vgstruct header file which affect
+	    all product generation libraries under cgemlib and NMAP routines.
+	    The latlon and Pt data structures were removed.  Coordinate
+	    arrays are now referenced as entire arrays of individual 
+	    coordinates rather than as arrays of coordinate pairs.  Also
+	    the ghost line problem which affected some platforms was fixed.
+	    Done, DP, (SS), 9/17/97.
+
+l	ww. Corrected bug where winds and weather symbols were not being
+	    properly saved to the VG file.  Done, DP, (SS), 9/19/97.
+
+l	xx. Third phase of the product generation cleanup.  Final phase of
+	    removal of the Graphics Info record.  Also, allow null name
+	    at upper levels for VF file name.  Properly handle missing
+	    file names in low-level cvg routines.  Done, EW, (SS), 9/23/97.
+
+l	yy. Added turbulence level 4/6 to the NMAP pulldown and removed
+	    levels that are not used.  Done, ES, (SS), 9/29/97.
+
+l	zz. Removed references to old drawing table, drawing.tbl in
+	    cesrstng.c and updated testces.  Also removed cpgrstng
+	    which is no longer used.  Done, CL, (SS), 9/29/97.
+
+l	aaa. Modified AVNBUL to be compatible with new version of vgstruct.h.
+	     Also modified it to use the new drawing table, newdraw.tbl.
+	     (Removed old drawing table from system, drawtbl.tbl).  Done,
+	     FY, (SS), 9/30/97.
+
+	    
+022.	VIEWFAX
+
+d	a.  Corrected VIEWFAX to extract fax cut from the proper
+	    files.  Done, EW, (SS), 5/7/97.
+
+d	b.  Corrected VIEWFAX to properly handle fax cuts that have
+	    been rotated.  Also the product sizes have been corrected
+	    in the product table.  Done, EW, (SS), 5/13/97.
+
+h	c.  Corrected CPG 6 bit extraction utility so that VIEWFAX properly
+	    displays products with long scan lines.  Done, EW, (SS), 6/30/97.
+
+023.	Icons
+
+h	a.  Generated icons (32 x 32 bitmaps) for all gempak symbols using 
+	    utility program plotxbms.  There are 232 symbols total.  Done,
+	    ML, (SS), 7/7/97.
+
+
+	SJ - Scott Jacobs		JA - Jeff Ator
+	DP - Dave Plummer		
+	SS - Steve Schotz
+	DK - Dave Keiser		PB - Peggy Bruehl
+	KT - Kevin Tyle			JC - Jim Cowie
+	GK - Gary Krueger		SC - Steve Chiswell
+	TL - Tiros Lee			
+	SM - Sarah Maxwell		RS - Russ Schneider
+	CL - Chien Lin			KB - Keith Brill
+	SW - Shanshan Wang		JW - Jim Whistler
+	ML - Mike Linda			RL - Robert Lindsay
+	EW - Ed Wehner			JYC - Joey Carr
+	ES - Edward Safford		JP - James Partain
+	DKW - Duane Kidwell		JH - Jon Hoopingarner
+	FY - Fee-Jing Yen
+
+

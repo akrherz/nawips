@@ -1,0 +1,2372 @@
+%!
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%DocumentFonts: (atend)
+%%EndComments
+%
+% FrameMaker PostScript Prolog 3.0, for use with FrameMaker 3.0
+% Copyright (c) 1986,87,89,90,91 by Frame Technology Corporation.
+% All rights reserved.
+%
+% Known Problems:
+%	Due to bugs in Transcript, the 'PS-Adobe-' is omitted from line 1
+/FMversion (3.0) def 
+% Set up Color vs. Black-and-White
+	/FMPrintInColor systemdict /colorimage known
+		systemdict /currentcolortransfer known or def
+% Uncomment this line to force b&w on color printer
+%   /FMPrintInColor false def
+/FrameDict 295 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} def
+	} if
+/FMVERSION {
+	FMversion ne {
+		/Times-Roman findfont 18 scalefont setfont
+		100 100 moveto
+		(FrameMaker version does not match postscript_prolog!)
+		dup =
+		show showpage
+		} if
+	} def 
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/organgle FMLOCAL
+	/orgfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne dup {setmanualfeed} if
+	/manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	/yscale exch def
+	/xscale exch def
+	currenttransfer cvlit /orgxfer exch def
+	currentscreen cvlit /orgproc exch def
+	/organgle exch def /orgfreq exch def
+	setpapername 
+	manualfeed {true} {papersize} ifelse 
+	{manualpapersize} {false} ifelse 
+	{desperatepapersize} if
+	end 
+	} def 
+	/pagesave FMLOCAL
+	/orgmatrix FMLOCAL
+	/landscape FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch neg translate pop 
+		}
+		{pop pop}
+		ifelse
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+	} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin
+	array /fillvals exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fy translate 
+	rotate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	} bind def
+/FMENDEPSF {
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	/FMdicttop countdictstack 1 add def 
+	statusdict begin stopped end 
+	countdictstack -1 FMdicttop {pop end} for 
+	} def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped pop 
+		end
+		} if
+	} def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+/freq dpi 18.75 div 8 div round dup 0 eq {pop 1} if 8 mul dpi exch div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setpattern {
+	 /bwidth  exch def
+	 /bpside  exch def
+	 /bstring exch def
+	 /onbits 0 def  /offbits 0 def
+	 freq sangle landscape {90 add} if 
+		{/y exch def
+		 /x exch def
+		 /xindex x 1 add 2 div bpside mul cvi def
+		 /yindex y 1 add 2 div bpside mul cvi def
+		 bstring yindex bwidth mul xindex 8 idiv add get
+		 1 7 xindex 8 mod sub bitshift and 0 ne
+		 {/onbits  onbits  1 add def 1}
+		 {/offbits offbits 1 add def 0}
+		 ifelse
+		}
+		setscreen
+	 {} settransfer
+	 offbits offbits onbits add div FMsetgray
+	/graymode false def
+	} bind def
+/grayness {
+	FMsetgray
+	graymode not {
+		/graymode true def
+		orgxfer cvx settransfer
+		orgfreq organgle orgproc cvx setscreen
+		} if
+	} bind def
+	/HUE FMLOCAL
+	/SAT FMLOCAL
+	/BRIGHT FMLOCAL
+	/Colors FMLOCAL
+FMPrintInColor 
+	
+	{
+	/HUE 0 def
+	/SAT 0 def
+	/BRIGHT 0 def
+	% array of arrays Hue and Sat values for the separations [HUE BRIGHT]
+	/Colors   
+	[[0    0  ]    % black
+	 [0    0  ]    % white
+	 [0.00 1.0]    % red
+	 [0.37 1.0]    % green
+	 [0.60 1.0]    % blue
+	 [0.50 1.0]    % cyan
+	 [0.83 1.0]    % magenta
+	 [0.16 1.0]    % comment / yellow
+	 ] def
+      
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	/K { 
+		Colors exch get dup
+		0 get /HUE exch store 
+		1 get /BRIGHT exch store
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} def
+	/FMsetgray { 
+		/SAT exch 1.0 exch sub store 
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} bind def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	/FMsetgray {setgray} bind def
+	/K { 
+		pop
+		} def
+	}
+ifelse
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setpattern} 
+	{grayness}
+	ifelse
+	} bind def
+/V { 
+	gsave eofill grestore
+	} bind def
+/N { 
+	stroke
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+	/rad FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+% The following commented out code did not work for tangent lines of zero
+% length.  The code following it was provided by Frame to patch this error.
+%
+%/RR { 
+%	/rad exch def
+%	normalize
+%	/y2 exch def
+%	/x2 exch def
+%	normalize
+%	/y1 exch def
+%	/x1 exch def
+%	newpath
+%	x1 y1 rad add moveto
+%	x1 y2 x2 y2 rad arcto
+%	x2 y2 x2 y1 rad arcto
+%	x2 y1 x1 y1 rad arcto
+%	x1 y1 x1 y2 rad arcto
+%	closepath
+%	16 {pop} repeat
+%	} bind def
+/rarc
+    {rad
+     {arcto} stopped
+    } bind def
+/RR {
+    /rad exch def
+    normalize
+    /y2 exch def
+    /x2 exch def
+    normalize
+    /y1 exch def
+    /x1 exch def
+    mark
+    newpath
+    x1 y1 rad add moveto
+    x1 y2 x2 y2 rarc
+    x2 y2 x2 y1 rarc
+    x2 y1 x1 y1 rarc
+    x2 y1 x1 y1 rarc
+    x1 y1 x1 y2 rarc
+    closepath
+    cleartomark
+    } bind def
+
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath fill
+	grestore
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	stroke
+	grestore
+	} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 4 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/cip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        cris indx placer 255 mul cvi put
+        cgis indx placeg 255 mul cvi put
+        cbis indx placeb 255 mul cvi put
+    } for pop cris
+
+	
+	} bind def
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+	} bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+	dup 
+	8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+	/proc1 FMLOCAL
+	/proc2 FMLOCAL
+	/newproc FMLOCAL
+/Fmcc {
+    /proc2 exch cvlit def
+    /proc1 exch cvlit def
+    /newproc proc1 length proc2 length add array def
+    newproc 0 proc1 putinterval
+    newproc proc1 length proc2 putinterval
+    newproc cvx
+} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+/colorsetup {
+    currentcolortransfer
+    /gryt exch def
+    /blut exch def
+    /grnt exch def
+    /redt exch def
+    0 1 255 {
+        /indx exch def
+        /cynu 1 red indx get 255 div sub def
+        /magu 1 green indx get 255 div sub def
+        /yelu 1 blue indx get 255 div sub def
+        /k cynu magu min yelu min def
+        nredt indx 1 0 cynu max sub redt exec put
+        ngreent indx 1 0 magu max sub grnt exec put
+        nbluet indx 1 0 yelu max sub blut exec put
+        ngrayt indx 1 k sub gryt exec put
+    } for
+	} bind def
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch Fmcc settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	colorsetup
+	/is w d wbytes string def
+    /ris w d wbytes string def
+    /gis w d wbytes string def
+    /bis w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        ris indx placer 255 mul cvi put
+        gis indx placeg 255 mul cvi put
+        bis indx placeb 255 mul cvi put
+    } for pop ris}
+	{gis} {bis} true 3 colorimage 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	colorsetup
+	/is im 0 lb getinterval def 
+    /cris lb string def
+    /cgis lb string def
+    /cbis lb string def
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cip} {cgis} {cbis} true 3 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip} {gip} {bip} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip gip bip w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+%%EndProlog
+%%BeginSetup
+(3.0) FMVERSION
+1 1 612 792 0 1 7 FMDOCUMENT
+0 0 /Helvetica-Bold FMFONTDEFINE
+1 0 /Times-Roman FMFONTDEFINE
+2 0 /Helvetica FMFONTDEFINE
+3 0 /Times-Bold FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 212.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(B1-1) 304.17 36 T
+(October 1996) 458.67 36 T
+0 18 Q
+(APPENDIX B1) 255.02 684 T
+0 14 Q
+(GRID DIAGNOSTIC FUNCTIONS) 208.89 656.67 T
+1 12 Q
+(The following describes the computation of GEMPAK grid diagnostic functions.) 108 612 T
+1.58 (Each grid in a grid file is identified by a parameter name, time, level, and vertical) 108 584 P
+-0.04 (coordinate.  A scalar grid is a single grid, while a vector grid is composed of two grids) 108 570 P
+(containing the u and v components.) 108 556 T
+1.31 (The parameter name is used to retrieve a grid from the file, with a few exceptions:) 108 528 P
+1.74 (Certain special parameters will be computed from other data in the grid file if the) 108 514 P
+-0.17 (parameter name itself is not found in the grid file.  These special scalar parameters are) 108 500 P
+2 10 Q
+(TMPK) 126 476.33 T
+( DWPK) 180 476.33 T
+( TVRK) 234 476.33 T
+( MIXR*) 288 476.33 T
+( THT) 342 476.33 T
+(A*) 363.47 476.33 T
+( DRCT) 396 476.33 T
+( TMWK*) 450 476.33 T
+(TMPC) 126 465.33 T
+( DWPC) 180 465.33 T
+( TVRC) 234 465.33 T
+( SMXR) 288 465.33 T
+( STHA) 342 465.33 T
+( SPED) 396 465.33 T
+( TMWC) 450 465.33 T
+(TMPF) 126 454.33 T
+( DWPF) 180 454.33 T
+( TVRF) 234 454.33 T
+( MIXS) 288 454.33 T
+( THTE*) 342 454.33 T
+( RELH) 396 454.33 T
+( TMWF) 450 454.33 T
+( THES*) 234 443.33 T
+( SMXS) 288 443.33 T
+( STHE) 342 443.33 T
+1 12 Q
+0.86 (where * indicates names which also may be used as operators.  Mixing ratio will be) 108 420 P
+3.91 (computed automatically from dewpoint temperature, specific humidity or vapor) 108 406 P
+(pressure, if a pressure grid exists.) 108 392 T
+2.77 (The stability indices will be computed automatically from temperature, dewpoint) 108 364 P
+(temperature, and wind speed and direction.  These special scalar parameters are) 108 350 T
+2 10 Q
+(CT) 126 324.33 T
+(OT) 139.14 324.33 T
+( VT) 180 324.33 T
+(OT) 195.37 324.33 T
+( T) 234 324.33 T
+(OTL) 242.71 324.33 T
+( KINX) 288 324.33 T
+( SWET) 342 324.33 T
+1 12 Q
+-0.08 (In addition, precipitation will be converted from inches \050I\051 to millimeters \050M\051 and vice) 108 299 P
+0.53 (versa, if the grids are named P__M or P__I.  The middle numeric characters give the) 108 285 P
+0.92 (time interval over which the precipitaion accumulated.  For example, P24M is a 24-) 108 271 P
+(hour precipitation total.) 108 257 T
+1.93 (The units for sea surface temperature \050SST_\051, maximum temperature \050TMX_\051 and) 108 229 P
+0.2 (minimum temperature \050TMN_\051 will be converted automatically.  The underscore may) 108 215 P
+(be K, C or F.) 108 201 T
+(These special scalar parameter names denote constant value grids:) 108 174 T
+2 10 Q
+( DTR) 129.6 150.33 T
+(Conversion factor for degrees to radians) 198 150.33 T
+(=) 396 150.33 T
+(PI / 180) 414 150.33 T
+( E) 129.6 138.33 T
+(Base of natural logarithms) 198 138.33 T
+(=) 396 138.33 T
+(2.71828182) 414 138.33 T
+( GRA) 129.6 126.33 T
+(VTY) 153.3 126.33 T
+(Gravitational constant) 198 126.33 T
+(=) 396 126.33 T
+(9.80616 \050note spelling\051) 414 126.33 T
+( KAPP) 129.6 114.33 T
+(A) 158.3 114.33 T
+(Gas constant/speci\336c heat) 198 114.33 T
+(=) 396 114.33 T
+(2/7) 414 114.33 T
+( PI) 129.6 102.33 T
+(3.14159265) 198 102.33 T
+( R) 129.6 90.33 T
+(TD) 139.41 90.33 T
+(Conversion factor for radians to degrees) 198 90.33 T
+(=) 396 90.33 T
+(180 / PI) 414 90.33 T
+( nnn) 129.6 78.33 T
+(Any number \050i.e., 2, -10.2, ...  \051) 198 78.33 T
+FMENDPAGE
+%%EndPage: "1" 2
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 194.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(B1-2) 286.17 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+4.43 (Another class of special parameter names provides information at grid points) 90 700 P
+(depending on the navigation of the grid file:) 90 686 T
+2 10 Q
+( CORL) 111.6 661.33 T
+( Coriolis force = 2.  * OMEGA * SIN \050 LA) 180 661.33 T
+(TR \051) 356.72 661.33 T
+( LA) 111.6 649.33 T
+(TR) 125.86 649.33 T
+( Latitude in radians) 180 649.33 T
+( LONR) 111.6 637.33 T
+( Longitude in radians) 180 637.33 T
+( XV) 111.6 625.33 T
+(AL) 126.97 625.33 T
+( V) 180 625.33 T
+(alue of the x coordinate in graph coordinates) 188.71 625.33 T
+( YV) 111.6 613.33 T
+(AL) 126.97 613.33 T
+( V) 180 613.33 T
+(alue of the y coordinate in graph coordinates) 188.71 613.33 T
+( MSFX) 111.6 601.33 T
+( Map scale factor in the x direction) 180 601.33 T
+( MSFY) 111.6 589.33 T
+( Map scale factor in the y direction) 180 589.33 T
+1 12 Q
+0.53 (Finally, scalar grids may be identified by their location within the grid file.  The grid) 90 564 P
+0.86 (number must be prefixed with the symbol #.  Note that grids may be renumbered as) 90 550 P
+(grids are added to or deleted from the file.) 90 536 T
+-0.1 (Vector grids are two separate grids containing the u and v components.  Special vector) 90 508 P
+(parameter names may be used to identify the following vectors:) 90 494 T
+2 10 Q
+( WND) 111.6 469.33 T
+( T) 180 469.33 T
+(otal wind) 187.78 469.33 T
+( GEO*) 111.6 457.33 T
+( Geostrophic wind) 180 457.33 T
+( AGE*) 111.6 445.33 T
+( Ageostrophic wind) 180 445.33 T
+( ISAL*) 111.6 433.33 T
+( Isallobaric wind) 180 433.33 T
+( THRM*) 111.6 421.33 T
+( Thermal wind) 180 421.33 T
+1 12 Q
+-0.37 (where * indicates names that also may be used as operators.  Note that all of these wind) 90 396 P
+0.7 (vectors will have u and v components in meters per second.  The total wind must be) 90 382 P
+0.35 (stored as UWND and VWND in the grid file if the components are north relative and) 90 368 P
+(as UREL and VREL if the components are grid relative.) 90 354 T
+1.42 (Time, level, and vertical coordinate may be specified in GDATTIM, GLEVEL and) 90 326 P
+1.23 (GVCORD.  However, any of these values may be overridden by in line parameters) 90 312 P
+0.94 (appended to an operand in the form of ^time@level%ivcord.  In-line parameters are) 90 298 P
+0.1 (only allowed for operands, since they modify parameters for individual grids.  The in-) 90 284 P
+(line parameters may be entered individually or in combinations in any order.) 90 270 T
+-0.28 (If more than one file is opened, +n may also be used as an in-line parameter, where n is) 90 242 P
+-0.13 (the number corresponding to the position of the file name entered in GDFILE.  If +n is) 90 228 P
+(omitted, the first file is used.) 90 214 T
+2.99 (Grid operators may be nested, allowing a complicated diagnostic function to be) 90 186 P
+1.28 (computed.  One limitation is that layer and time range operators expect to work on) 90 172 P
+(operands read directly from the grid file or computed from special names.) 90 158 T
+0.54 (In the following list of diagnostic operators, scalar operands are named Si and vector) 90 130 P
+0.04 (operands are Vi.  Lower case u and v refer to the grid relative components of a vector.) 90 116 P
+0.97 (All meteorological output grids are in MKS units, except as noted.  Operators using) 90 102 P
+0.21 (PR_ functions are described in the GEMPAK PARAMETER APPENDIX.  All scalar) 90 88 P
+FMENDPAGE
+%%EndPage: "2" 3
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 212.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(B1-3) 304.17 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+-0.74 (and vector differential operators are valid in any map projection for which the map scale) 108 712 P
+-0.13 (factors can be computed.  At present, this applies for the stereographic, cylindrical and) 108 698 P
+0.47 (conic projections available in GEMPAK.  In the definitions below, only the cartesian) 108 684 P
+-0.39 (form of the operators is shown.  The general curvilinear coordinate forms involving the) 108 670 P
+(scale factors are not given.) 108 656 T
+1.38 (The operators which are designated for use in polar coordinates are specific to that) 108 628 P
+(coordinate system.) 108 614 T
+0 10 Q
+2.78 (SCALAR OUTPUT GRID) 171 551.33 P
+1 12 Q
+(Algebraic and trignometric functions \050angles are expressed in radians\051:) 108 524 T
+2 10 Q
+(ABS) 126 499.33 T
+(Absolute value) 180 499.33 T
+(ABS \050S\051) 288 499.33 T
+(ACOS) 126 487.33 T
+(Arc cosine function) 180 487.33 T
+(ACOS \050S\051) 288 487.33 T
+(ASIN) 126 475.33 T
+(Arc sine function) 180 475.33 T
+(ASIN \050S\051) 288 475.33 T
+(A) 126 463.33 T
+(T) 131.93 463.33 T
+(AN) 137.29 463.33 T
+(Arc tangent function) 180 463.33 T
+(A) 288 463.33 T
+(T) 293.93 463.33 T
+(AN \050S\051) 299.29 463.33 T
+(A) 126 451.33 T
+(TN2) 131.93 451.33 T
+(Arc tangent function) 180 451.33 T
+(A) 288 451.33 T
+(TN2 \050S1, S2\051 = A) 293.93 451.33 T
+(T) 369.57 451.33 T
+(AN \050 S1 / S2 \051) 374.93 451.33 T
+(COS) 126 439.33 T
+(Cosine function) 180 439.33 T
+(COS \050S\051) 288 439.33 T
+(EXP) 126 427.33 T
+(Exponential to real) 180 427.33 T
+(EXP \050S1, S2\051 = S1 ** S2) 288 427.33 T
+(EXPI) 126 415.33 T
+(Exponential to integer) 180 415.33 T
+(EXP \050S1, S2\051 = S1 ** NINT \050 S2 \051) 288 415.33 T
+(LN) 126 403.33 T
+(Natural logarithm) 180 403.33 T
+(LN \050S\051 = LOG \050S\051) 288 403.33 T
+(LOG) 126 391.33 T
+(Base 10 logarithm) 180 391.33 T
+(LOG \050S\051 = LOG10 \050S\051) 288 391.33 T
+(SIN) 126 379.33 T
+(Sine function) 180 379.33 T
+(SIN \050S\051) 288 379.33 T
+(SQR) 126 367.33 T
+(T) 147.48 367.33 T
+(Square root) 180 367.33 T
+(SQR) 288 367.33 T
+(T \050S\051) 309.48 367.33 T
+(T) 126 355.33 T
+(AN) 131.37 355.33 T
+(T) 180 355.33 T
+(angent function) 185 355.33 T
+(T) 288 355.33 T
+(AN \050S\051) 293.37 355.33 T
+(ADD) 126 331.33 T
+(Addition) 180 331.33 T
+(ADD \050S1, S2\051 = S1 + S2) 288 331.33 T
+(MUL) 126 319.33 T
+(Multiplication) 180 319.33 T
+(MUL \050S1, S2\051 = S1 * S2) 288 319.33 T
+(QUO) 126 307.33 T
+(Division) 180 307.33 T
+(QUO \050S1, S2\051 = S1 / S2) 288 307.33 T
+(SUB) 126 295.33 T
+(Subtraction) 180 295.33 T
+(SUB \050S1, S2\051 = S1 - S2) 288 295.33 T
+3 12 Q
+(ADV) 108 258 T
+(Advection) 158.4 258 T
+2 10 Q
+(ADV \050 S, V \051 = - \050 u * DDX \050S\051 + v * DDY \050S\051 \051) 129.6 245.33 T
+3 12 Q
+(A) 108 218 T
+(VG) 115.11 218 T
+(A) 158.4 218 T
+(verage) 166.17 218 T
+2 10 Q
+(A) 129.6 205.33 T
+(VG \050S1, S2\051 = \050 S1 + S2 \051 / 2) 135.53 205.33 T
+3 12 Q
+(A) 108 178 T
+(V) 115.11 178 T
+(OR) 123.53 178 T
+(Absolute vorticity) 158.4 178 T
+2 10 Q
+(A) 129.6 165.33 T
+(VOR \050 V \051 = VOR \050 V \051 + CORL) 135.53 165.33 T
+3 12 Q
+(BVSQ) 108 138 T
+(Brunt-V) 158.4 138 T
+(aisala fr) 200.6 138 T
+(equency squar) 242.03 138 T
+(ed in a layer) 316.11 138 T
+2 10 Q
+(BVSQ \050 THT) 129.6 125.33 T
+(A \051 = [ GRA) 184.95 125.33 T
+(VTY * LDF \050THT) 235.59 125.33 T
+(A\051 ] / [ LA) 308.15 125.33 T
+(V \050THT) 349.08 125.33 T
+(A\051 * DZ ]) 380.54 125.33 T
+(DZ = change in height across the layer) 129.6 113.33 T
+(= -\050RDGAS/GRA) 129.6 101.33 T
+(VTY\051*LA) 204.11 101.33 T
+(V\050THT) 242.25 101.33 T
+(A\051*\050LA) 270.93 101.33 T
+(V\050PRES\051/1000\051**KAPP) 299.63 101.33 T
+(A*LDF\050PRES\051/LA) 402.2 101.33 T
+(V\050PRES\051) 479.77 101.33 T
+(in THT) 129.6 89.33 T
+(A coordinates) 158.84 89.33 T
+FMENDPAGE
+%%EndPage: "3" 4
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 194.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(B1-4) 286.17 36 T
+(October 1996) 440.67 36 T
+3 12 Q
+(CROS) 90 712 T
+(V) 140.4 712 T
+(ector cr) 147.96 712 T
+(oss pr) 187.35 712 T
+(oduct magnitude) 217.46 712 T
+2 10 Q
+(CROS \050 V1, V2 \051 = u1 * v2 - u2 * v1) 111.6 699.33 T
+3 12 Q
+(DDEN) 90 672 T
+(Density of dry air \050 kg / m**3 \051) 140.4 672 T
+2 10 Q
+(DDEN \050 PRES, TMPC \051 = PR_DDEN \050 PRES, TMPC \051) 111.6 659.33 T
+3 12 Q
+(DDR) 90 632 T
+(Partial derivative with r) 140.4 632 T
+(espect to R) 263.76 632 T
+2 10 Q
+0.28 (DDR \050 S \051 is computed using centered \336nite dif) 111.6 619.33 P
+0.28 (ferences, with backward or forward dif) 319.48 619.33 P
+0.28 (fer-) 489.01 619.33 P
+0.07 (ences at the boundary) 111.6 607.33 P
+0.07 (.  Polar coordinates are assumed, and \050 R, THET) 209.96 607.33 P
+0.07 (A \051 maps into \050 X,) 426.45 607.33 P
+(Y \051.) 111.6 595.33 T
+3 12 Q
+(DDT) 90 568 T
+(T) 140.4 568 T
+(ime derivative) 148.18 568 T
+2 10 Q
+0.05 (DDT \050 S \051 = \050 S \050time1\051 - S \050time2\051 \051 / \050 time1 - time2 \051 where the time dif) 111.6 555.33 P
+0.05 (ference is in sec-) 428.3 555.33 P
+(onds.) 111.6 543.33 T
+3 12 Q
+(DDX) 90 516 T
+(Partial derivative with r) 140.4 516 T
+(espect to X) 263.76 516 T
+2 10 Q
+0.32 (DDX \050 S \051 is computed using centered \336nite dif) 111.6 503.33 P
+0.32 (ferences, with backward or forward dif) 319.28 503.33 P
+0.32 (fer-) 489.01 503.33 P
+(ences at the boundary) 111.6 491.33 T
+(.) 209.76 491.33 T
+3 12 Q
+(DDY) 90 464 T
+(Partial derivative with r) 140.4 464 T
+(espect to Y) 263.76 464 T
+2 10 Q
+0.32 (DDX \050 S \051 is computed using centered \336nite dif) 111.6 451.33 P
+0.32 (ferences, with backward or forward dif) 319.28 451.33 P
+0.32 (fer-) 489.01 451.33 P
+(ences at the boundary) 111.6 439.33 T
+(.) 209.76 439.33 T
+3 12 Q
+(DEF) 90 412 T
+(T) 140.4 412 T
+(otal deformation) 147.3 412 T
+2 10 Q
+(DEF \050 V \051 = \050 STR \050V\051 ** 2 + SHR \050V\051 ** 2 \051 ** .5) 111.6 399.33 T
+3 12 Q
+(DIRN) 90 372 T
+(North r) 140.4 372 T
+(elative dir) 179.15 372 T
+(ection of a vector) 230.57 372 T
+2 10 Q
+(DIRN \050 V \051 = PR_DRCT \050 UN \050V\051, VN \050V\051 \051) 111.6 359.33 T
+3 12 Q
+(DIRR) 90 332 T
+(Grid r) 140.4 332 T
+(elative dir) 173.17 332 T
+(ection of a vector) 224.58 332 T
+2 10 Q
+(DIRR \050 V \051 = PR_DRCT \050 u, v \051) 111.6 319.33 T
+3 12 Q
+(DIV) 90 292 T
+(Divergence) 140.4 292 T
+2 10 Q
+(DIV \050 V \051 = DDX \050 u \051 + DDY \050 v \051) 111.6 279.33 T
+3 12 Q
+(DOT) 90 252 T
+(V) 140.4 252 T
+(ector dot pr) 147.96 252 T
+(oduct) 208.35 252 T
+2 10 Q
+(DOT \050 V1, V2 \051 = u1 * u2 + v1 * v2) 111.6 239.33 T
+3 12 Q
+(DTH) 90 212 T
+(Partial derivative with r) 140.4 212 T
+(espect to THET) 263.76 212 T
+(A) 343.5 212 T
+2 10 Q
+0.36 (DTH \050 S \051 is computed using centered \336nite dif) 111.6 199.33 P
+0.36 (ferences, with backward or forward dif) 319.08 199.33 P
+0.36 (fer-) 489.01 199.33 P
+0.07 (ences at the boundary) 111.6 187.33 P
+0.07 (.  Polar coordinates are assumed, and \050 R, THET) 209.96 187.33 P
+0.07 (A \051 maps into \050 X,) 426.45 187.33 P
+(Y \051.) 111.6 175.33 T
+3 12 Q
+(EPV) 90 148 T
+(Saturated equivalent geostr) 140.4 148 T
+(ophic potential vorticity in a layer) 281.43 148 T
+2 10 Q
+(EPV \050 HGHT \051 = [k DOT GRAD\050THES\051 CROSS VLDF\050GEO\050HGHT\051\051 -) 111.6 135.33 T
+(A) 216 123.33 T
+(VOR\050VLA) 221.93 123.33 T
+(V\050GEO\050HGHT\051\051\051 * LDF\050THES\051] / \050100*LDF\050PRES\051\051) 265.06 123.33 T
+0.7 (The 100 converts millibars to Pascals.  Units are K / \050Pa * s\051 \050note that GRA) 111.6 111.33 P
+0.7 (VTY is not) 456.49 111.33 P
+0.93 (included\051.  EPV works on a layer in PRES coordinates only) 111.6 99.33 P
+0.93 (.  Multiplying by GRA) 380.67 99.33 P
+0.93 (VTY *) 476.96 99.33 P
+(10**6 gives standard PV units.) 111.6 87.33 T
+FMENDPAGE
+%%EndPage: "4" 5
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 212.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(B1-5) 304.17 36 T
+(October 1996) 458.67 36 T
+3 12 Q
+(FCNT) 108 698 T
+(Coriolis for) 158.4 698 T
+(ce at the center of a polar coordinate grid) 217.14 698 T
+2 10 Q
+1.4 (FCNT \050 S \051 can be computed only for lat/lon grids which have been mapped to polar) 129.6 685.33 P
+-0.16 (\050R,THET) 129.6 673.33 P
+-0.16 (A\051 coordinates and for which the center lat/lon have been stored with each grid.) 168.28 673.33 P
+3 12 Q
+(FRNT) 108 646 T
+(Fr) 158.4 646 T
+(ontogenesis \050 K / 100 km / 3 h \051) 170.84 646 T
+2 10 Q
+-0.28 (FRNT \050THT) 129.6 633.33 P
+-0.28 (A, V\051 = CONV * 1/2 * MAG \050 GRAD \050THT) 180.77 633.33 P
+-0.28 (A\051 \051 * \050 DEF * COS \0502 * BET) 358.6 633.33 P
+-0.28 (A\051 - DIV \051) 478.68 633.33 P
+(CONV) 144 610.33 T
+(=) 189 610.33 T
+2.78 (unit conversion factor = 1.08E4 * 1.E5) 207 610.33 P
+(BETA) 144 599.33 T
+(=) 189 599.33 T
+2.78 (ASIN \050 \050 - DDX \050 THTA \051 * COS \050 PSI \051 -) 207 599.33 P
+2.56 (   DDY \050 THTA \051 * SIN \050 PSI \051 \051 / MAG \050 GRAD \050 THTA \051 \051 \051) 207 588.33 P
+2.78 (PSI) 144 577.33 P
+2.78 (=) 189 577.33 P
+2.78 (1/2 ATAN \050 SHR / STR \051) 207 577.33 P
+3 12 Q
+(GWFS) 108 551 T
+(Horizontal smoothing using normally distributed weights) 158.4 551 T
+2 10 Q
+2.91 (GWFS \050S,N\051 with theoretical response of 1/e for N * delta-x wave.  Increasing N) 129.6 538.33 P
+(increases the smoothing.) 129.6 526.33 T
+3 12 Q
+(HIGH) 108 499 T
+(Relative maxima over a grid) 158.4 499 T
+2 10 Q
+-0.08 (HIGH \050 S, RADIUS \051 where RADIUS de\336nes a square region of grid points.  The region is) 129.6 486.33 P
+(a moving search area in which all points are compared to derive a relative maximum.) 129.6 474.33 T
+3 12 Q
+(JCBN) 108 447 T
+(Jacobian determinant) 158.4 447 T
+2 10 Q
+(JCBN \050 S1, S2 \051 = DDX \050S1\051 * DDY \050S2\051 - DDY \050S1\051 * DDX \050S2\051) 129.6 434.33 T
+3 12 Q
+(KNTS) 108 407 T
+(Convert meters / second to knots) 158.4 407 T
+2 10 Q
+(KNTS \050 S \051 = PR_MSKN \050S\051 = S * 1.9438) 129.6 394.33 T
+3 12 Q
+(LAP) 108 367 T
+(Laplacian operator) 158.4 367 T
+2 10 Q
+(LAP \050 S \051 = DIV \050 GRAD \050S\051 \051) 129.6 354.33 T
+3 12 Q
+(LA) 108 327 T
+(V) 123.11 327 T
+(Layer average \0502 levels\051) 158.4 327 T
+2 10 Q
+(LA) 129.6 314.33 T
+(V \050 S \051 = \050 S \050level1\051 + S \050level2\051 \051 / 2.) 141.08 314.33 T
+3 12 Q
+(LDF) 108 287 T
+(Layer differ) 158.4 287 T
+(ence \0502 levels\051) 220.47 287 T
+2 10 Q
+(LDF \050 S \051 = S \050level1\051 - S \050level2\051) 129.6 274.33 T
+3 12 Q
+(LOWS) 108 247 T
+(Relative minima over a grid) 158.4 247 T
+2 10 Q
+0.26 (LOWS \050 S, RADIUS \051 where RADIUS de\336nes a square region of grid points.  The region) 129.6 234.33 P
+(is a moving search area in which all points are compared to derive a relative minimum.) 129.6 222.33 T
+3 12 Q
+(MAG) 108 195 T
+(Magnitude of a vector) 158.4 195 T
+2 10 Q
+(MAG \050 V \051 = PR_SPED \050 u, v \051) 129.6 182.33 T
+3 12 Q
+(MASS) 108 155 T
+(Mass per unit volume in a layer) 158.4 155 T
+2 10 Q
+(MASS = 100 * LDF \050PRES\051 / \050 GRA) 129.6 142.33 T
+(VTY * \050level1 - level2\051 \051) 286.32 142.33 T
+0.2 (The 100 converts mb to Pascals.  Level1 and level2 are also converted to Pascals when) 129.6 118.33 P
+0 (VCOORD=PRES.  The volume is expressed in units of m * m * \050units of the vertical coor-) 129.6 106.33 P
+(dinate\051.  This is an operand.) 129.6 94.33 T
+FMENDPAGE
+%%EndPage: "5" 6
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 194.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(B1-6) 286.17 36 T
+(October 1996) 440.67 36 T
+3 12 Q
+(MDIV) 90 712 T
+(Layer) 140.4 712 T
+(-average mass divergence) 170.6 712 T
+2 10 Q
+(MDIV \050 V \051 = DIV \050 [ MASS * LA) 111.6 699.33 T
+(V \050u\051, MASS * LA) 249.99 699.33 T
+(V \050v\051 ] \051) 326.46 699.33 T
+3 12 Q
+(MIXR) 90 672 T
+(Mixing ratio) 140.4 672 T
+2 10 Q
+(MIXR \050 DWPC, PRES \051 = PR_MIXR \050 DWPC, PRES \051) 111.6 659.33 T
+(The units are g/g internally) 111.6 635.33 T
+(, but g/kg on output.) 228.63 635.33 T
+3 12 Q
+(MRAD) 90 608 T
+(Magnitude of storm r) 140.4 608 T
+(elative radial wind) 250.44 608 T
+2 10 Q
+(MRAD \050 V) 111.6 595.33 T
+(, LA) 155.66 595.33 T
+(T) 172.7 595.33 T
+(, LON, DIR, SPD \051 = DOT \050 V) 177.69 595.33 T
+(rel, R \051) 306.45 595.33 T
+0.34 (where V) 111.6 571.33 P
+0.34 (rel is the velocity minus the storm motion vector speci\336ed by DIR and SPD, and) 148.23 571.33 P
+-0.25 (R is a unit vector tangent to a great circle arc from the storm center speci\336ed by LA) 111.6 559.33 P
+-0.25 (T) 473.15 559.33 P
+-0.25 (, LON) 478.15 559.33 P
+(to a grid point.) 111.6 547.33 T
+3 12 Q
+(MSDV) 90 520 T
+(Layer) 140.4 520 T
+(-average mass-scalar \337ux divergence) 170.6 520 T
+2 10 Q
+(MSDV \050 S, V \051 = DIV \050 [ MASS * LA) 111.6 507.33 T
+(V \050S\051 * LA) 266.11 507.33 T
+(V \050u\051, MASS * LA) 309.8 507.33 T
+(V \050S\051 * LA) 386.27 507.33 T
+(V \050v\051 ] \051) 429.96 507.33 T
+(Note:) 111.6 483.33 T
+(MASS is computed using the in-line parameter values for V rather than those) 144 483.33 T
+(for S.) 144 471.33 T
+3 12 Q
+(MSFC) 90 444 T
+(Psuedo angular momentum \050for cr) 140.4 444 T
+(oss sections\051) 317.4 444 T
+2 10 Q
+(MSFC \050 V \051 = NORMV \050 V \051 + CORL * DIST) 111.6 431.33 T
+0.57 (DIST is the distance along the cross section in meters.  The units for the M-surface are) 111.6 407.33 P
+(expressed in m/s.) 111.6 395.33 T
+3 12 Q
+(MTNG) 90 368 T
+(Magnitude of storm r) 140.4 368 T
+(elative tangential wind) 250.44 368 T
+2 10 Q
+(MTNG \050 V) 111.6 355.33 T
+(, LA) 155.66 355.33 T
+(T) 172.7 355.33 T
+(, LON, DIR, SPD \051 = DOT \050 V) 177.69 355.33 T
+(rel, k X R \051) 306.45 355.33 T
+0.34 (where V) 111.6 331.33 P
+0.34 (rel is the velocity minus the storm motion vector speci\336ed by DIR and SPD, and) 148.23 331.33 P
+-0.25 (R is a unit vector tangent to a great circle arc from the storm center speci\336ed by LA) 111.6 319.33 P
+-0.25 (T) 473.15 319.33 P
+-0.25 (, LON) 478.15 319.33 P
+(to a grid point.  k denotes the local vertical unit vector) 111.6 307.33 T
+(.) 346.59 307.33 T
+3 12 Q
+(NORM) 90 280 T
+(Scalar vector component normal to a cr) 140.4 280 T
+(oss section) 343.36 280 T
+2 10 Q
+(NORM \050 V \051 = DOT \050 V) 111.6 267.33 T
+(, unit normal vector \051) 210.91 267.33 T
+0.67 (If the starting point for the cross section is on the left, the unit normal vector points into) 111.6 243.33 P
+(the cross section plane.) 111.6 231.33 T
+3 12 Q
+(PLA) 90 204 T
+(T) 113.1 204 T
+(Latitude at each point in polar coordinates) 140.4 204 T
+2 10 Q
+(PLA) 111.6 191.33 T
+(T \050 S \051) 129.75 191.33 T
+(Note:) 111.6 167.33 T
+(only the header) 144 167.33 T
+(, which contains the center latitude and longitude, is used.) 212.34 167.33 T
+3 12 Q
+(PLON) 90 140 T
+(Longitude at each point in polar coordinates) 140.4 140 T
+2 10 Q
+(PLON \050 S \051) 111.6 127.33 T
+(Note:) 111.6 103.33 T
+(only the header) 144 103.33 T
+(, which contains the center latitude and longitude, is used.) 212.34 103.33 T
+FMENDPAGE
+%%EndPage: "6" 7
+%%Page: "7" 7
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 212.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(B1-7) 304.17 36 T
+(October 1996) 458.67 36 T
+3 12 Q
+(POIS) 108 712 T
+-0.46 (Solve Poisson eqn.  of a for) 158.4 712 P
+-0.46 (cing function with the given boundary values) 292.34 712 P
+2 10 Q
+(POIS \050 S1, S2 \051) 129.6 699.33 T
+(where S1 is the forcing function grid and S2 is the boundary value.) 129.6 675.33 T
+(The equation LAP \050POIS\051 = S1 is solved for POIS.) 129.6 663.33 T
+3 12 Q
+(POLF) 108 636 T
+(Coriolis for) 158.4 636 T
+(ce at each point in polar coordinates) 217.14 636 T
+2 10 Q
+(POLF \050 S \051) 129.6 623.33 T
+(Note:) 129.6 599.33 T
+(only the header) 162 599.33 T
+(, which contains the center latitude and longitude, is used.) 230.34 599.33 T
+3 12 Q
+(PV) 108 572 T
+(OR) 123.75 572 T
+(Potential vorticity in a layer) 158.4 572 T
+2 10 Q
+(PVOR \050 S, V \051 = - GRA) 129.6 559.33 T
+(VTY * A) 230.23 559.33 T
+(VOR \050 VLA) 265.04 559.33 T
+(V \050V\051 \051 * LDF \050 THT) 313.73 559.33 T
+(A \051 / \050 100 * LDF \050 PRES \051 \051) 398.5 559.33 T
+0.17 (The 100 converts millibars to Pascals.  Units are Kelvins / meters / Pascals / seconds**3) 129.6 535.33 P
+0.26 (\050note that GRA) 129.6 523.33 P
+0.26 (VTY is included\051.  PVOR works on a layer in PRES or THT) 196.05 523.33 P
+0.26 (A coordinates.) 457.85 523.33 P
+(Multiplying by 10**6 gives standard PV units.) 129.6 511.33 T
+3 12 Q
+(RELH) 108 484 T
+(Relative humidity) 158.4 484 T
+2 10 Q
+(RELH \050 TEMP) 129.6 471.33 T
+(, DWPT \051 = PR_RELH \050 TEMP) 191.62 471.33 T
+(, DWPT \051) 325.55 471.33 T
+3 12 Q
+(RICH) 108 444 T
+(Richardson stability number in a layer) 158.4 444 T
+2 10 Q
+(RICH \050 V \051 = GRA) 129.6 431.33 T
+(VTY * DZ * LDF \050THT) 208 431.33 T
+(A\051 / \050 LA) 303.33 431.33 T
+(V \050THT) 339.24 431.33 T
+(A\051 * MAG \050 VLDF \050V\051 \051 ** 2 \051) 370.71 431.33 T
+(Note:) 129.6 407.33 T
+(DZ = change in height across the layer) 162 407.33 T
+(.) 332.83 407.33 T
+(RICH can be evaluated in PRES, THT) 162 395.33 T
+(A or HGHT vertical coordinate.) 330.12 395.33 T
+3 12 Q
+(ROSS) 108 368 T
+(Rossby number) 158.4 368 T
+2 10 Q
+(ROSS \050 V1, V2 \051 = MAG \050 INAD \050 V1, V2 \051 \051 / \050 CORL * MAG \050 V1 \051 \051) 129.6 355.33 T
+3 12 Q
+(SA) 108 328 T
+(VG) 121.78 328 T
+(A) 158.4 328 T
+(verage over whole grid) 166.17 328 T
+2 10 Q
+(SA) 129.6 315.33 T
+(VG \050 S \051 = average of all non-missing grid point values) 142.19 315.33 T
+3 12 Q
+(SA) 108 288 T
+(VS) 121.78 288 T
+(A) 158.4 288 T
+(verage over subset grid) 166.17 288 T
+2 10 Q
+(SA) 129.6 275.33 T
+(VS \050 S \051 = average of all non-missing grid point values in the subset area) 142.19 275.33 T
+3 12 Q
+(SDIV) 108 248 T
+(Flux divergence of a scalar) 158.4 248 T
+2 10 Q
+(SDIV \050 S, V \051 = S * DIV \050 V \051 + DOT \050 V) 129.6 235.33 T
+(, GRAD \050 S \051 \051) 299.76 235.33 T
+3 12 Q
+(SHR) 108 208 T
+(Shear deformation) 158.4 208 T
+2 10 Q
+(SHR \050 V \051 = DDX \050 v \051 + DDY \050 u \051) 129.6 195.33 T
+3 12 Q
+(SM5S) 108 168 T
+(Smooth scalar grid using a 5-point smoother) 158.4 168 T
+2 10 Q
+(SM5S \050 S \051 = .5 * S \050i,j\051 + .125 * \050 S \050i+1,j\051 + S \050i,j+1\051 + S \050i-1,j\051 + S \050i,j-1\051 \051) 129.6 155.33 T
+3 12 Q
+(SM9S) 108 128 T
+(Smooth scalar grid using a 9-point smoother) 158.4 128 T
+2 10 Q
+(SM5S \050 S \051 = .25 * S \050i,j\051 + .125 * \050 S \050i+1,j\051 + S \050i,j+1\051 + S \050i-1,j\051 + S \050i,j-1\051 \051 +) 129.6 115.33 T
+(.0625 * \050 S \050i+1,j+1\051 + S \050i+1,j-1\051 + S \050i-1,j+1\051 + S \050i-1,j-1\051 \051) 162 103.33 T
+FMENDPAGE
+%%EndPage: "7" 8
+%%Page: "8" 8
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 194.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(B1-8) 286.17 36 T
+(October 1996) 440.67 36 T
+3 12 Q
+(ST) 90 712 T
+(AB) 103.78 712 T
+(Thermodynamic stability within a layer \050lapse rate\051) 140.4 712 T
+2 10 Q
+(ST) 111.6 700.33 T
+(AB \050 TMPC \051 = LDF \050 TMPC \051 / DZ) 123.63 700.33 T
+(DZ) 126 677.33 T
+2.78 (= change in height across the layer) 171 677.33 P
+(DZ) 126 666.33 T
+2.78 (= - \050 RDGAS / GRAVTY \051 * LAV \050THTA\051 * \050 LAV \050PRES\051 /) 171 666.33 P
+2.78 (      1000 \051 ** KAPPA * LDF \050PRES\051 / LAV \050PRES\051) 189 655.33 P
+2.78 (in THTA coordinates) 171 644.33 P
+2.78 (The units are degrees / kilometer.) 126 622.33 P
+3 12 Q
+(STR) 90 599 T
+(Str) 140.4 599 T
+(etching deformation) 156.17 599 T
+2 10 Q
+(STR \050 V \051 = DDX \050 u \051 - DDY \050 v \051) 111.6 586.33 T
+3 12 Q
+(T) 90 559 T
+(ANG) 97.11 559 T
+(Scalar vector component tangential to a cr) 140.4 559 T
+(oss section) 357.36 559 T
+2 10 Q
+(T) 111.6 546.33 T
+(ANG \050 V \051 = DOT \050 V) 116.97 546.33 T
+(, unit tangent vector \051) 207.41 546.33 T
+-0.02 (If the starting point for the cross section is on the left, the unit tangent vector points to the) 111.6 524.33 P
+(right.) 111.6 514.33 T
+3 12 Q
+(T) 90 491 T
+(A) 97.11 491 T
+(V) 104.22 491 T
+(T) 140.4 491 T
+(ime average \0502 times\051) 148.18 491 T
+2 10 Q
+(T) 111.6 478.33 T
+(A) 116.97 478.33 T
+(V \050S\051 = \050 S \050time1\051 + S \050time2\051 \051 / 2.) 122.89 478.33 T
+3 12 Q
+(TDF) 90 451 T
+(T) 140.4 451 T
+(ime differ) 148.18 451 T
+(ence \0502 times\051) 198.26 451 T
+2 10 Q
+(TDF \050S\051 = S \050time1\051 - S \050time2\051) 111.6 438.33 T
+3 12 Q
+(THES) 90 413 T
+(Saturated equivalent potential temperatur) 140.4 413 T
+(e in Kelvin) 357.05 413 T
+2 10 Q
+(THES \050PRES, TMPC\051 = PR_THTE \050PRES, TMPC, TMPC\051) 111.6 400.33 T
+3 12 Q
+(THT) 90 373 T
+(A) 114.44 373 T
+(Potential temperatur) 140.4 373 T
+(e in Kelvin) 247.76 373 T
+2 10 Q
+(THT) 111.6 360.33 T
+(A \050 TMPC, PRES \051 = PR_THT) 130.29 360.33 T
+(A \050 TMPC, PRES \051) 262.56 360.33 T
+3 12 Q
+(THTE) 90 333 T
+(Equivalent potential temperatur) 140.4 333 T
+(e in Kelvin) 306.09 333 T
+2 10 Q
+(THTE \050PRES, TMPC, DWPC\051 = PR_THTE \050PRES, TMPC, DWPC\051) 111.6 320.33 T
+3 12 Q
+(TMST) 90 293 T
+(Par) 140.4 293 T
+(cel temperatur) 158.83 293 T
+(e in Kelvin along a moist adiabat) 234.21 293 T
+2 10 Q
+(TMST \050THTE, PRES\051 = PR_TMST \050THTE, PRES, GUESS\051) 111.6 280.33 T
+0.83 (where THTE is the equivalent potential temperature at the input GLEVEL, PRES is the) 111.6 256.33 P
+0.41 (pressure level at which the parcel temperature is valid, and GUESS is a guess-\336eld cal-) 111.6 245.33 P
+(culated automatically) 111.6 234.33 T
+(.) 204.18 234.33 T
+3 12 Q
+(TMWK) 90 208 T
+(W) 140.4 208 T
+(et bulb temperatur) 151.73 208 T
+(e in Kelvin) 248.78 208 T
+2 10 Q
+(TMWK \050PRES, TMPK, RMIX\051 = PR_TMWK \050PRES, TMPK, RMIX\051) 111.6 195.33 T
+3 12 Q
+(UN) 90 168 T
+(North r) 140.4 168 T
+(elative u component) 179.15 168 T
+2 10 Q
+(UN \050 V \051 = zonal wind component) 111.6 155.33 T
+3 12 Q
+(UR) 90 128 T
+(Grid r) 140.4 128 T
+(elative u component) 173.17 128 T
+2 10 Q
+(UR \050 V \051 = u) 111.6 115.33 T
+3 12 Q
+(VN) 90 88 T
+(North r) 140.4 88 T
+(elative v component) 179.15 88 T
+2 10 Q
+(VN \050 V \051 = meridional wind component) 111.6 76.33 T
+FMENDPAGE
+%%EndPage: "8" 9
+%%Page: "9" 9
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 212.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(B1-9) 304.17 36 T
+(October 1996) 458.67 36 T
+3 12 Q
+(V) 108 700 T
+(OR) 116.42 700 T
+(V) 158.4 700 T
+(orticity) 165.96 700 T
+2 10 Q
+(VOR \050 V \051 = DDX \050 v \051 - DDY \050 u \051) 129.6 687.33 T
+3 12 Q
+(VR) 108 662 T
+(Grid r) 158.4 662 T
+(elative v component) 191.17 662 T
+2 10 Q
+(VR \050 V \051 = v) 129.6 649.33 T
+3 12 Q
+(WNDX) 108 624 T
+(WINDEX \050index for micr) 158.4 624 T
+(oburst potential\051) 289.09 624 T
+2 10 Q
+(WNDX \050S1, S2, S3, S4\051) 129.6 611.33 T
+(= 2.5 * SQR) 162 599.33 T
+(T \050HGHTF * RA) 215.43 599.33 T
+(TIO * \050GAMMA**2 - 30 + MIXRS - 2 * MIXRF \051 \051) 284.65 599.33 T
+2.78 (TMPCS) 144 575.33 P
+2.78 (=) 189 575.33 P
+2.78 (surface temperature) 207 575.33 P
+2.78 (= S1) 360 575.33 P
+2.78 (HGHTF) 144 564.33 P
+2.78 (=) 189 564.33 P
+2.78 (AGL Height of Freezing level) 207 564.33 P
+2.78 (= S2) 360 564.33 P
+2.78 (MIXRS) 144 553.33 P
+2.78 (=) 189 553.33 P
+2.78 (surface mixing ratio) 207 553.33 P
+2.78 (= S3) 360 553.33 P
+2.78 (MIXRF) 144 542.33 P
+2.78 (=) 189 542.33 P
+2.78 (freezing level mixing ratio) 207 542.33 P
+2.78 (= S4) 360 542.33 P
+2.78 (RATIO) 144 531.33 P
+2.78 (=) 189 531.33 P
+2.78 (MIXRS / 12 if MIXRS < 12, = 1 otherwise) 207 531.33 P
+2.78 (GAMMA) 144 520.33 P
+2.78 (=) 189 520.33 P
+2.78 (TMPCS / HGHTF) 207 520.33 P
+3 12 Q
+(WSHR) 108 496 T
+(Magnitude of the vertical wind shear in a layer) 158.4 496 T
+2 10 Q
+(WSHR \050 V \051 = MAG [ VLDF \050V\051 ] / DZ) 129.6 483.33 T
+2.78 (DZ) 144 459.33 P
+2.78 (=) 189 459.33 P
+2.78 (change in height across the layer) 207 459.33 P
+2.78 (=) 189 448.33 P
+2.78 (-\050 RDGAS / GRAVTY \051 * LAV \050THTA\051 *) 207 448.33 P
+2.6 (  LAV \050PRES\051 / 1000 \051 ** KAPPA * LDF \050PRES\051 / LAV \050PRES\051) 207 437.33 P
+2.78 (in THTA coordinates.) 189 426.33 P
+2.78 (WSHR can be evaluated in PRES, THTA, or HGHT vertical coordinate.) 144 404.33 P
+3 12 Q
+(XA) 108 380 T
+(V) 123.77 380 T
+(A) 158.4 380 T
+(verage along a grid r) 166.17 380 T
+(ow) 272.55 380 T
+2 10 Q
+(XA) 129.6 367.33 T
+(V \050S\051 = \050 S \050X1\051 + S \050X2\051 + ...  + S \050KXD\051 \051 / KNT) 142.19 367.33 T
+2.78 (KXD) 144 343.33 P
+2.78 (=) 189 343.33 P
+2.78 (number of points in row) 207 343.33 P
+2.78 (KNT) 144 332.33 P
+2.78 (=) 189 332.33 P
+2.78 (number of non-missing points in row) 207 332.33 P
+3.32 (XAV for a row is stored at every point in that row.  In polar coord., XAV is) 144 310.33 P
+2.78 (the average along a radial.) 144 299.33 P
+3 12 Q
+(XSUM) 108 275 T
+(Sum along a grid r) 158.4 275 T
+(ow) 254.14 275 T
+2 10 Q
+(XSUM \050S\051 = \050 S \050X1\051 + S \050X2\051 + ...  + S \050KXD\051 \051) 129.6 262.33 T
+2.78 (KXD) 144 238.33 P
+2.78 (=) 189 238.33 P
+2.78 (number of points in row) 207 238.33 P
+5.35 (XSUM for a row is stored at every point in that row.  In polar coord.,) 144 216.33 P
+2.78 (XSUM is the sum along a radial.) 144 205.33 P
+3 12 Q
+(Y) 108 181 T
+(A) 115.56 181 T
+(V) 122.67 181 T
+(A) 158.4 181 T
+(verage value along a grid column) 166.17 181 T
+2 10 Q
+(Y) 129.6 168.33 T
+(A) 135.53 168.33 T
+(V \050S\051 = \050 S \050Y1\051 + S \050Y2\051 + ...  + S \050KYD\051 \051 / KNT) 141.45 168.33 T
+2.78 (KYD) 144 144.33 P
+2.78 (=) 189 144.33 P
+2.78 (number of points in column) 207 144.33 P
+2.78 (KNT) 144 133.33 P
+2.78 (=) 189 133.33 P
+2.78 (number of non-missing points in column) 207 133.33 P
+3.35 (YAV for a column is stored at every point in that column.  For polar coordi-) 144 111.33 P
+3.63 (nates, YAV is the average around a circle.  If the theta coordinate starts at) 144 100.33 P
+3.87 (0 degrees and ends at 360 degrees, the first radial is not used in comput-) 144 89.33 P
+2.78 (ing the average.) 144 78.33 P
+FMENDPAGE
+%%EndPage: "9" 10
+%%Page: "10" 10
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 194.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(B1-10) 283.39 36 T
+(October 1996) 440.67 36 T
+3 12 Q
+(YSUM) 90 699 T
+(Sum along a grid column) 140.4 699 T
+2 10 Q
+(YSUM \050S\051 = \050 S \050Y1\051 + S \050Y2\051 + ...  + S \050KYD\051 \051) 111.6 687.33 T
+2.78 (KYD) 126 665.33 P
+2.78 (=) 171 665.33 P
+2.78 (number of points in column) 189 665.33 P
+3.28 (YSUM for a column is stored at every point in that column.  For polar coor-) 126 645.33 P
+3.67 (dinates, YSUM is the sum around a circle.  If the theta coordinate starts at) 126 635.33 P
+3.87 (0 degrees and ends at 360 degrees, the first radial is not used in comput-) 126 625.33 P
+2.78 (ing the sum.) 126 615.33 P
+0 F
+2.78 (VECTOR OUTPUT GRID) 153 569.33 P
+3 12 Q
+(AGE) 90 542 T
+(Ageostr) 140.4 542 T
+(ophic wind) 180.15 542 T
+2 10 Q
+(AGE \050 S \051 = [ u \050OBS\051 - u \050GEO\050S\051\051, v \050OBS\051 - v \050GEO\050S\051\051 ]) 111.6 529.33 T
+3 12 Q
+(CIRC) 90 502 T
+(Cir) 140.4 502 T
+(culation \050for cr) 157.5 502 T
+(oss sections\051) 234.56 502 T
+2 10 Q
+(CIRC \050 V) 111.6 489.33 T
+(, S \051 = [ T) 150.66 489.33 T
+(ANG \050V\051, S ]) 191.31 489.33 T
+3 12 Q
+(DVDX) 90 462 T
+(Partial x derivative of a vector) 140.4 462 T
+2 10 Q
+(DVDX \050 V \051 = [ DDX \050u\051, DDX \050v\051 ]) 111.6 449.33 T
+3 12 Q
+(DVDY) 90 422 T
+(Partial y derivative of a vector) 140.4 422 T
+2 10 Q
+(DVDY \050 V \051 = [ DDY \050u\051, DDY \050v\051 ]) 111.6 409.33 T
+3 12 Q
+(GEO) 90 382 T
+(Geostr) 140.4 382 T
+(ophic wind) 174.82 382 T
+2 10 Q
+(GEO \050 S \051 = [ - DDY \050S\051 * const / CORL, DDX \050S\051 * const / CORL ]) 111.6 369.33 T
+(RO = PR_DDEN \050 PRES, TMPC \051) 111.6 207.33 T
+3 12 Q
+(GRAD) 90 180 T
+(Gradient of a scalar) 140.4 180 T
+2 10 Q
+(GRAD \050 S \051 = [ DDX \050 S \051, DDY \050 S \051 ]) 111.6 167.33 T
+3 12 Q
+(GWFV) 90 140 T
+(Horizontal smoothing using normally distributed weights) 140.4 140 T
+2 10 Q
+1.96 (GWFV \050 V) 111.6 127.33 P
+1.96 (, N \051 with theoretical response of 1/e for N * delta-x wave.  Increasing N) 160.14 127.33 P
+(increases the smoothing.) 111.6 115.33 T
+3 12 Q
+(INAD) 90 88 T
+(Inertial advective wind) 140.4 88 T
+2 10 Q
+(INAD \050 V1, V2 \051 = [ DOT \050 V1, GRAD \050u2\051 \051, DOT \050 V1, GRAD \050v2\051 \051 ]) 111.6 75.33 T
+0 F
+(const) 211.67 327.33 T
+( S) 292.28 327.33 T
+( vert coord) 343.17 327.33 T
+2 F
+(GRA) 204.82 305.33 T
+(VTY) 225.74 305.33 T
+(ZMSL) 283.67 305.33 T
+(none) 357.89 305.33 T
+(GRA) 204.82 285.33 T
+(VTY) 225.74 285.33 T
+(HGHT) 282.84 285.33 T
+(PRES) 355.39 285.33 T
+(1) 222.22 265.33 T
+( PSYM) 281.45 265.33 T
+( THT) 354.93 265.33 T
+(A) 376.4 265.33 T
+(100/RO) 207.78 245.33 T
+( PRES) 282 245.33 T
+(HGHT) 354.84 245.33 T
+189 341 189 239 2 L
+V
+2 H
+0 Z
+N
+261 343 261 237 2 L
+V
+0.5 H
+N
+333 343 333 237 2 L
+V
+N
+405 341 405 239 2 L
+V
+2 H
+N
+188 342 406 342 2 L
+V
+N
+188 318 406 318 2 L
+V
+N
+188 298 406 298 2 L
+V
+0.5 H
+N
+188 278 406 278 2 L
+V
+N
+188 258 406 258 2 L
+V
+N
+188 238 406 238 2 L
+V
+2 H
+N
+FMENDPAGE
+%%EndPage: "10" 11
+%%Page: "11" 11
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 212.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(B1-11) 301.39 36 T
+(October 1996) 458.67 36 T
+3 12 Q
+(ISAL) 108 698 T
+(Isallobaric wind) 158.4 698 T
+2 10 Q
+(ISAL \050 S \051 = [ - DDT \050 v \050GEO\050S\051\051 \051 / CORL, DDT \050 u \050GEO\050S\051\051 \051 / CORL ]) 129.6 685.33 T
+3 12 Q
+(KCRS) 108 658 T
+(Unit vector k cr) 158.4 658 T
+(oss a vector) 239.12 658 T
+2 10 Q
+(KCRS \050 V \051 = [ -v) 129.6 645.33 T
+(, u ]) 203.56 645.33 T
+3 12 Q
+(KNTV) 108 618 T
+(Convert meters / second to knots) 158.4 618 T
+2 10 Q
+(KNTV \050 V \051 = [ PR_MSKN \050u\051, PR_MSKN \050v\051 ]) 129.6 605.33 T
+3 12 Q
+(L) 108 578 T
+(TRN) 114.9 578 T
+(Layer) 158.4 578 T
+(-averaged transport of a scalar) 188.6 578 T
+2 10 Q
+(L) 129.6 565.33 T
+(TRN \050 S, V \051 = [ MASS * LA) 134.42 565.33 T
+(V \050S\051 * LA) 255.04 565.33 T
+(V \050u\051, MASS * LA) 298.74 565.33 T
+(V \050S\051 * LA) 375.2 565.33 T
+(V \050v\051 ]) 418.9 565.33 T
+(Note:) 129.6 545.33 T
+(MASS is computed using the in-line parameter values for V rather than those) 162 545.33 T
+(for S.) 162 535.33 T
+3 12 Q
+(NORMV) 108 510 T
+(V) 158.4 510 T
+(ector component normal to a cr) 165.96 510 T
+(oss section.) 327.28 510 T
+2 10 Q
+(NORMV \050 V \051 = NORM \050 V \051 * unit normal vector) 129.6 497.33 T
+3 12 Q
+(QVEC) 108 470 T
+(Q-vector at a level \050 K / m / s \051) 158.4 470 T
+2 10 Q
+(QVEC \050 S, V \051 = [ - \050 DOT \050 DVDX \050V\051, GRAD \050S\051 \051 \051, - \050 DOT \050 DVDY \050V\051, GRAD \050S\051 \051 \051 ]) 129.6 457.33 T
+3 12 Q
+(QVCL) 108 430 T
+(Q-vector of a layer \050 mb / m / s \051) 158.4 430 T
+2 10 Q
+(QVEC \050 S, V \051 = \050 1/\050 D\050S\051/DP \051 \051 * [ \050 DOT \050 DVDX \050V\051, GRAD \050S\051 \051 \051,) 129.6 417.33 T
+(\050 DOT \050 DVDY \050V\051, GRAD \050S\051 \051 \051 ]) 234 405.33 T
+3 12 Q
+(RAD) 108 379 T
+(Storm r) 158.4 379 T
+(elative radial wind) 198.48 379 T
+2 10 Q
+(RAD \050 V) 129.6 367.33 T
+(, LA) 165.33 367.33 T
+(T) 182.37 367.33 T
+(, LON, DIR, SPD \051 = SMUL \050 DOT \050 V) 187.37 367.33 T
+(rel, R \051, R \051) 352.78 367.33 T
+5.49 (where Vrel is the velocity minus the storm motion specified by DIR and) 144 345.33 P
+2.8 (SPD, and R is a unit vector tangent to a great circle arc from the storm cen-) 144 335.33 P
+2.78 (ter specified by LAT, LON to a grid point.) 144 325.33 P
+3 12 Q
+(ROT) 108 302 T
+(Coordinate r) 158.4 302 T
+(otation) 224.47 302 T
+2 10 Q
+-0.32 (ROT \050 angle, V \051 = [ u * COS \050angle\051 + v * SIN \050angle\051, -u * SIN \050angle\051 + v * COS \050angle\051 ]) 129.6 289.33 P
+3 12 Q
+(SMUL) 108 262 T
+(Multiply a scalar with each component of a vector) 158.4 262 T
+2 10 Q
+(SMUL \050 S, V \051 = [ S * u, S * v ]) 129.6 249.33 T
+3 12 Q
+(SM5V) 108 222 T
+(Smooth vector grid using a 5-point smoother) 158.4 222 T
+2 10 Q
+(SM5V \050 V \051 = .5 * V \050i,j\051 + .125 * \050 V \050i+1,j\051 + V \050i,j+1\051 + V \050i-1,j\051 + V \050i,j-1\051 \051) 129.6 209.33 T
+3 12 Q
+(SQUO) 108 182 T
+(V) 158.4 182 T
+(ector division by a scalar) 165.96 182 T
+(.) 292.11 182 T
+2 10 Q
+(SQUO \050 S, V \051 = [ u / s, v / s ]) 129.6 169.33 T
+3 12 Q
+(T) 108 142 T
+(ANGV) 115.11 142 T
+(V) 158.4 142 T
+(ector component tangential to a cr) 165.96 142 T
+(oss section.) 341.27 142 T
+2 10 Q
+(T) 129.6 129.33 T
+(ANGV \050 V \051 = T) 134.97 129.33 T
+(ANG \050 V \051 * unit tangent vector) 201.71 129.33 T
+3 12 Q
+(THRM) 108 102 T
+(Thermal wind) 158.4 102 T
+2 10 Q
+(THRM \050 S \051 = [ u \050 GEO \050 S \051 \051 \050 level1 \051 - u \050 GEO \050 S \051 \051 \050 level2 \051,) 129.6 89.33 T
+(v \050 GEO \050 S \051 \051 \050 level1 \051 - v \050 GEO \050 S \051 \051 \050 level2 \051 ]) 234 77.33 T
+FMENDPAGE
+%%EndPage: "11" 12
+%%Page: "12" 12
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Grid Diagnostic Functions) 194.04 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(B1-12) 283.39 36 T
+(October 1996) 440.67 36 T
+3 12 Q
+(TNG) 90 698 T
+(Storm r) 140.4 698 T
+(elative tangential wind) 180.48 698 T
+2 10 Q
+(TNG \050 V) 111.6 685.33 T
+(, LA) 147.33 685.33 T
+(T) 164.37 685.33 T
+(, LON, DIR, SPD \051 = SMUL \050 DOT \050 V) 169.37 685.33 T
+(rel, k X R \051, k X R \051) 334.78 685.33 T
+0.34 (where V) 111.6 661.33 P
+0.34 (rel is the velocity minus the storm motion vector speci\336ed by DIR and SPD, and) 148.23 661.33 P
+-0.25 (R is a unit vector tangent to a great circle arc from the storm center speci\336ed by LA) 111.6 649.33 P
+-0.25 (T) 473.15 649.33 P
+-0.25 (, LON) 478.15 649.33 P
+(to a grid point.  k denotes the local vertical unit vector) 111.6 637.33 T
+(.) 346.59 637.33 T
+3 12 Q
+(V) 90 610 T
+(ADD) 97.11 610 T
+(Add the components of two vectors) 140.4 610 T
+2 10 Q
+(V) 111.6 597.33 T
+(ADD \050 V1, V2 \051 = [ u1+u2, v1+v2 ]) 117.53 597.33 T
+3 12 Q
+(V) 90 570 T
+(ASV) 97.11 570 T
+(V) 140.4 570 T
+(ector component of V1 along V2) 147.96 570 T
+2 10 Q
+(V) 111.6 557.33 T
+(ASV \050 V1, V2 \051 = [ DOT \050V1,V2\051 / MAG \050V2\051 ** 2 ] * V2) 117.53 557.33 T
+3 12 Q
+(V) 90 530 T
+(A) 97.11 530 T
+(VG) 104.22 530 T
+(A) 140.4 530 T
+(verage over whole grid) 148.17 530 T
+2 10 Q
+(V) 111.6 517.33 T
+(A) 117.53 517.33 T
+(VG \050 V \051 = average of all non-missing grid point values) 123.45 517.33 T
+3 12 Q
+(V) 90 490 T
+(A) 97.11 490 T
+(VS) 104.22 490 T
+(A) 140.4 490 T
+(verage over subset grid) 148.17 490 T
+2 10 Q
+(V) 111.6 477.33 T
+(A) 117.53 477.33 T
+(VS \050 V \051 = average of all non-missing grid point values in the subset area) 123.45 477.33 T
+3 12 Q
+(VECN) 90 450 T
+(Cr) 140.4 450 T
+(eate a vector grid fr) 154.17 450 T
+(om two north r) 255.19 450 T
+(elative scalar components) 332.58 450 T
+2 10 Q
+(VECN \050 S1, S2 \051 = [ S1, S2 ]) 111.6 437.33 T
+3 12 Q
+(VECR) 90 410 T
+(Cr) 140.4 410 T
+(eate a vector grid fr) 154.17 410 T
+(om two grid r) 255.19 410 T
+(elative scalar components) 325.25 410 T
+2 10 Q
+(VECR \050 S1, S2 \051 = [ S1, S2 ]) 111.6 397.33 T
+3 12 Q
+(VLA) 90 370 T
+(V) 113.77 370 T
+(Layer average for a vector) 140.4 370 T
+2 10 Q
+(VLA) 111.6 357.33 T
+(V \050 V \051 = [ \050 u \050level1\051 + u \050level2\051 \051 / 2., \050 v \050level1\051 + v \050level2\051 \051 / 2.  ]) 129.75 357.33 T
+3 12 Q
+(VLDF) 90 330 T
+(Layer differ) 140.4 330 T
+(ence for a vector) 202.47 330 T
+2 10 Q
+(VLDF \050 V \051 = [ u \050level1\051 - u \050level1\051, v \050level1\051 - v \050level2\051 ]) 111.6 317.33 T
+3 12 Q
+(VMUL) 90 290 T
+(Multiply the components of two vectors) 140.4 290 T
+2 10 Q
+(VMUL \050 V1, V2 \051 = [ u1*u2, v1*v2 ]) 111.6 277.33 T
+3 12 Q
+(VQUO) 90 250 T
+(Divide the components of two vectors) 140.4 250 T
+2 10 Q
+(VQUO \050 V1, V2 \051 = [ u1/u2, v1/v2 ]) 111.6 237.33 T
+3 12 Q
+(VSUB) 90 210 T
+(Subtract the components of two vectors) 140.4 210 T
+2 10 Q
+(VSUB \050 V1, V2 \051 = [ u1-u2, v1-v2 ]) 111.6 197.33 T
+FMENDPAGE
+%%EndPage: "12" 13
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%Pages: 12 1
+%%DocumentFonts: Helvetica-Bold
+%%+ Times-Roman
+%%+ Helvetica
+%%+ Times-Bold

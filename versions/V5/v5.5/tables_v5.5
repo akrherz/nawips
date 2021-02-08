@@ -1,0 +1,464 @@
+		NAWIPS 5.5 Tables Changes Description Log
+
+t1.	Part of 010c.  Done, SJ, (TP), 3/28/00.
+
+	gempak/tables/config/miscset.tbl
+
+t2.	Updated table zones.tbl according to NWS change notices (SCN 00-33).
+	Done, MLI, (TP), 3/29/00.
+
+	gempak/tables/stns/zones.tbl
+
+t3.	Added KKCI to the NWX table for International Sigmets.  Done, SJ, (TP),
+	4/4/00.
+
+	tables/nwx/intsig.tbl
+
+t4.	Updated tables county.tbl and countynam.tbl according to the SPC.  Done,
+	MLI, (TP), 4/4/00.
+
+	gempak/tables/stns/county.tbl, countynam.tbl
+
+t5.	Updated tables offsh.bull according to NWS change notices (SCN 00-34).
+	Done, MLI, (TP), 4/4/00.
+
+	tables/nwx/offsh.bull
+
+t6.	Part of 001b.  Done, DKW, (TP), 4/5/00.
+
+	gempak/tables/nmap/metar_parms.tbl
+
+t7.	Part of 019a.  Done, TP, (TP), 4/6/00.
+
+	gempak/tables/config/mapfil.tbl
+
+t8.	Added STPNJ to the tmppcp.stn table and RTPMHX and RTPSHV to the
+	rgtmpc.stn table.  Done, MLI, (TP), 4/11/00.
+
+	tables/nwx/tmppcp.stn, rgtmpc.stn
+
+
+t9.	Part 0f 018g.  Done, AH, SJ, (TP), 4/12/00.
+	
+	gempak/tables/config/fontsz.tbl
+
+t10.	Part of 021g.  Done, DKW, (TP), 4/12/00.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t11.	Part of 021i.  Done, HZ, (TP), 4/14/00.
+
+	gempak/tables/pgen/grptyp.tbl
+
+t12.	Part of 010h.  Done, DP, (TP), 4/17/00.
+
+	gempak/tables/config/datatype.tbl
+
+t13.	Part of 018k.  Done, TL, (TP), 4/18/00.
+
+	NEW:	gempak/tables/nmap/nmap_cldhgt.tbl
+
+t14.	Part of 021l.  Done, SL, (TP), 4/18/00
+
+	NEW:	gempak/tables/pgen/ccfp.tbl
+
+t15.	To sfstns.tbl, 9 stations were added and changed the wmo number and
+	elevation for ATIKIKAN (WCH).  3 stations were added to the inactive.tbl
+	and corrected the elevation for RAE LAKES (WYH).  5 stations were added
+	to xrainsort.tbl and changed the wmo number and elevation for ATIKIKAN 
+	(WCH).  1 new station, PMOT1, was added to msfstns.tbl.  Done, AH,
+	(TP), 4/18/00.
+
+	gempak/tables/stns/inactive.tbl, msfstns.tbl, sfstns.tbl, xrainsort.tbl
+
+t16.	Updated tables sfd.bull and pubtrpc.bull according to NWS change
+	notice SCN 00-38.  Part of LDM b1.  Done, MLI, (TP), 4/18/00.
+
+	tables/nwx/pubtrpc.bull, sfd.bull
+
+t17.	Created and added 9 RFC areas for use by RFCs when generating QPFs
+	in NMAP.  Also created and added 9 RFC grid #218 subset areas.
+	Done, BM, (TP), 4/19/00,
+
+	gempak/tables/stns/geog.tbl
+
+t18.	Added 2 parameter station models to NMAP2.  Added SCD standard and
+	cloud cover.  Done, AH, (TP), 4/21/00.
+
+	gempak/tables/config/prmlst.tbl
+	NEW:	gempak/tables/nmap/scd_parms.tbl
+
+=============================  End of Patch 5.5.a  =============================
+
+t19.	Added sizing to the cloud symbols in SCD CLOUD_COVER.  Done, AH, (TP),
+	4/28/00.
+
+	gempak/tables/config/prmlst.tbl
+
+t20.	Part of 019b.  Done, TP, (TP), 4/28/00.
+
+	gempak/tables/config/mapfil.tbl
+
+t21.	Corrected Northern Hemisphere maps for MPC.  Done, JP, (TP), 5/1/00.
+
+	gempak/tables/pgen/awdef.tbl
+
+t22.	Updated table now.bull according to NWS change notice SCN 00-44.
+	Done, MLI, (TP), 5/2/00.
+
+	tables/nwx/now.bull
+
+t23.	Updated table grdnav.tbl by adding more grids into the table.
+	Done, MLI, (TP), 5/3/00.
+
+	gempak/tables/grid/grdnav.tbl
+
+t24.	Part of 011i.  Done, DP, (TP), 5/15/00.
+
+	gempak/tables/grphgd/gpf.tbl
+
+t25.	Part of 010s.  Done, AH, (TP), 5/16/00.
+
+	gempak/tables/pgen/prodbtn.tbl
+
+t26.	Sixteen site identifiers for severe thunderstorm and tornado watch
+	bulletins (WWUS40) will be changed effective June 7, 2000 at 1300UTC.
+	Done, DKW, (TP), 5/16/00.
+
+	gempak/tables/stns/spcwatch.tbl_0006071300
+
+t27.	Part of 010t.  Done, TL, (TP), 5/16/00.
+
+	NEW:	gempak/tables/config/climate.tbl
+
+t28.	Part of 012a.  Done, HZ, (TP), 5/16/00.
+
+	NEW:	gempak/tables/config/cursortyp.tbl, cursorref.tbl,
+							cursorsymb.tbl
+
+t29.	Part of 018x.  Done, AH, (TP), 5/17/00.
+
+	gempak/tables/config/miscset.tbl
+
+t30.	Added 43 stations to the sfstns.tbl.  Added 7 stations to the 
+	inactive.tbl and the xrainsort.tbl.  Done, AH, (TP), 5/17/00.
+
+	gempak/tables/stns/inactive.tbl, sfstns.tbl, xrainsort.tbl
+
+t31.	Added 22 more islands to island.tbl.  Done, FY, (TP), 5/17/00.
+
+	gempak/tables/stns/island.tbl
+
+t32.	Part of 018aa.  Done, SJ, (TP), 5/19/00.
+
+	NEW:  gempak/tables/nmap/logo.tbl
+
+t33.	Updates to tables from the SPC.  Done, SJ, (TP), 5/19/00.
+
+	gempak/tables/pgen/awdef.tbl, outlook.tbl, outlooktimes.tbl, grptyp.tbl
+	gempak/tables/config/forecasters.tbl
+	gempak/tables/nmap/nmap_pgw.tbl
+
+t34.	Removed NAFOS and AFTEXT from ntl.tbl.  NAWDV & HPC/MPC only.
+	Done, TP, (TP), 5/19/00.
+
+	tables/ntl/ntl.tbl
+
+t35.	Part of 010u.  Done, DKW, (TP), 5/22/00.
+
+	gempak/tables/config/miscset.tbl
+
+t36.	Part of 018kk.  Done, DKW, (TP), 5/23/00.
+
+	gempak/tables/config/datatype.tbl, prmlst.tbl
+	gempak/tables/nmap/dcatg.nmap, dsrc.nmap, master.nmap, master.nmap.Y2K,
+					master.nmap.NON_Y2K
+	NEW:	gempak/tables/nmap/ship6hr_parms.tbl
+
+t37.	In sfstns.tbl and xrainsort.tbl, changed the station ID HGB to HBG.
+	In snstns.tbl, changed the elevation for 70273 40m -> 50m.  Done,
+	AH, (TP), 5/24/00.
+
+	gempak/tables/stns/sfstns.tbl, xrainsort.tbl, snstns.tbl
+
+t38.	Part of 021ff.  Done, RC, (TP), 5/25/00.
+
+	gempak/tables/nmap/nmap_pgw.tbl
+	gempak/tables/config/forecasters.tbl
+
+t39.	The default timeline in NMAP2 for data type HRCN is being changed to
+	a range of 48 hours and an interval of 6 hours.  Done, DKW, (TP),
+	5/25/00.
+
+	gempak/tables/config/datatype.tbl
+
+t40.	Added new CPC Heat Index products the the Redbook definition table.
+	Done, SJ, (TP), 5/31/00.
+
+	gempak/tables/pgen/awdef.tbl
+
+t41.	Added the LDS lightning product for the AWC to the AWIPS product
+	definition table.  Done, SJ, (TP), 6/1/00.
+
+	gempak/tables/pgen/awdef.tbl
+
+=============================  End of Patch 5.5.b  =============================
+
+t42.	Fixed a typo the time range for SAT data in datatype.tbl.  Done, SJ,
+	(TP), 6/13/00.
+
+	gempak/tables/config/datatype.tbl
+
+t43.	Updated 6 NWX tables and the pqact.conf files according to NWS change 
+	notice SCN 00-41, DMM 05-00.3, SCN 00-40, and DMM 05-00.4.  Updated
+	tables dclim.stn and rgtmpc.stn according to current data.
+	Done, MLI, (TP), 6/13/00.
+
+	tables/nwx/hseas.bull, ago.bull, mws.bull, plship.bull, stsum.bull,
+					tmppcp.bull, dclim.stn, rgtmpc.stn
+
+t44.	Fixed entries for the CPC Heat Index products in awdef.tbl.  Done, SJ,
+	(TP), 6/13/00.
+
+	gempak/tables/pgen/awdef.tbl
+
+t45.	Part of 010z.  Done, DKW, (TP), 6/13/00.
+
+	gempak/tables/config/datatype.tbl, miscset.tbl
+
+t46.	Added the new AVN model data files. Each file has a single forecast
+	hour.  The tables datatype.tbl and mod_res.tbl were changed to add a new
+	type "avn_SP" to the list of models.  Done, SJ, (TP), 6/15/00.
+
+	gempak/tables/nmap/mod_res.tbl
+	gempak/tables/config/datatype.tbl
+
+
+t47.	Part of 009b.  Done, JP, SJ, (TP), 6/15/00.
+
+	gempak/tables/nmap/mod_res.tbl
+	gempak/tables/pgen/awdef.tbl
+
+t48.	Added more forecaster names to forecasters.tbl.  Done, GG, SJ, (TP),
+	6/19/00.
+
+	gempak/tables/config/forecasters.tbl
+
+t49.	Updated table prog.bull and 3 pqact.conf files according to NWS
+	change notice DMM 06-00.06 and DMM 06-00.07.  Done, MLI, (TP), 6/20/00.
+
+	tables/nwx/prog.bull
+
+t50.	Part of 019c.  Done, TP, (TP), 6/24/00.
+
+	gempak/tables/bounds/countybnds.tbl, countybnds.tbl.info
+	gempak/tables/stns/county.tbl, zones.tbl
+
+t51.	Part of 011n.  Done, SJ, (TP), 6/24/00.
+
+	NEW:	gempak/tables/stns/climreg.tbl
+
+t52.	Updated pirep navaids table with 371 new stations and corrections to
+	numerous existing station locations and elevations.  Source - airnav 
+	ftp site.  Done, DKW, JA, (TP), 6/26/00.
+
+	gempak/tables/stns/pirep_navaids.tbl
+
+t53.	Added  50 new stations to sfstns.tbl. Also, appended ASOS ids to 2
+	stations and changed the id for APALACHICOLA from AQQ to AAF.  Added 2
+	stations to inactive.tbl.  Added 6 stations to xrainsort.tbl.  Changed
+	the id of MOORHEAD MUNICIPAL from 99M to JKJ and changed AQQ to AAF.
+	Done, AH, (TP), 6/27/00.
+
+	gempak/tables/stns/sfstns.tbl, xrainsort.tbl, inactive.tbl
+
+t54.	Part of 101ff. Done, AH, (TP), 6/28/00.
+
+	gempak/tables/config/miscset.tbl
+
+t55.	Updated HPC products in the Redbook Graphics tables, awdef.tbl.  Done,
+	JC, SJ, (TP), 7/5/00.
+
+	gempak/tables/pgen/awdef.tbl
+
+=============================  End of Patch 5.5.c  =============================
+
+t56.	In taf.stn replaced a white space in the name field for KASE.  In
+	sfstns.tbl, sfmetar_sa.tbl, and xrainsort.tbl changed the elevation 
+	for FST, FORT_STOCKTON, from 0 to 917 meters.  Done, AH, (TP), 7/12/00.
+
+	tables/nwx/taf.stn
+	gempak/tables/stns/sfstns.tbl, xrainsort.tbl
+	gempak/source/contrib/tdl/radmap/sfmetar_sa.tbl
+
+t57.	Incorporated TPC addition of 670 islands and corrected locations
+	for St. Thomas, Great Tobago, and Little Tobago islands.  Also
+	added Hans Lollik Island to the table.  Done, AH, (SS), 7/17/00.
+
+	gempak/tables/stns/island.tbl
+
+t58.	Updated the zones table with new marine boundary name descriptions
+	and Puerto Rican zone boundary names.  Updated the Public Forecast
+	Zones (SCN 00-67, effective 7/18/00) maps for zone boundaries in
+	SJU.  Done, AH, (SS), 7/17/00.
+
+	gempak/tables/stns/zones.tbl
+	gempak/maps/hiznus.nws, loznus.nws, meznus.nws, tpznus.nws
+	gempak/maps/ascii/aschiznus.nws, ascloznus.nws, ascmeznus.nws,
+	asctpznus.nws
+
+t59.	Added a new help file to NMAP/NMAP2 that describes the available
+	hot keys.  Done, SJ, (SS), 7/18/00.
+
+	NEW:help/nmap/HotKeys.hlp
+
+	help/nmap/nmapHlp.index
+
+t60.	Removed tabs from Bowling Green, Flagstaff, and Moline station 
+	entries.  This problem was reported by Unidata.  Done, SJ, (SS),
+	7/18/00.
+
+	tables/nwx/dclim.stn
+
+t61.	Updated NWX tables to use PHFO ID for Hawaii.  Done, ML, (SS),
+	7/18/00.
+
+	tables/nwx/hurrcn.tbl, intsig.tbl, osarea.bull, sigmet.tbl,
+	stations.tbl
+
+t62.	Part of 010pp.  Done, DKW, (TP), 7/27/00.
+
+	gempak/tables/config/datatype.tbl, miscset.tbl
+
+t63.	Updated table countynam.tbl based on county.tbl.  
+	Done, MLI, (TP), 7/27/00.
+
+	gempak/tables/stns/countynam.tbl
+
+t64.	Added 3 buoys for use in the National Marine Verification program.
+	Done, JP, (TP), 7/28/00.
+
+	gempak/tables/stns/buoys.tbl
+
+t65.	Removed all references to 'avn_SP' from table mod_res.tbl.  Done,
+	MLI, (TP), 8/2/00.
+
+	gempak/tables/nmap/mod_res.tbl
+
+t66.	Product updates in the AWIPS/RedBook, FAX and TIFF tables for the
+	HPC and MPC.  Done, SJ, (TP), 8/2/00.
+
+	gempak/tables/pgen/awdef.tbl, faxprod.tbl, tiffprod.tbl
+
+t67.	Part of 010rr.  Done, DP, (TP), 8/2/00.
+
+	gempak/tables/config/clo.tbl
+	gempak/tables/nmap/locator.tbl
+	gempak/tables/bounds/countybnds.tbl, countybnds.tbl.info
+
+	NEW:  gempak/tables/stns/cities.tbl (was $GEMTBL/cities/citiesloc.tbl)
+	      gempak/tables/bounds/statebnds.tbl, statebnds.tbl.info
+
+t68.	Part of 001s.  Done, AH, (TP), 8/3/00.
+
+	gempak/tables/config/miscset.tbl
+
+t69.	Added Guam coastal waters forecasts and fixed the offshore and high seas
+	entries for ANC and HFO.   Done, JP, SS, (TP), 8/9/00.
+
+	tables/nwx/coastal.bull, hseas.bull, offsh.bull
+
+t70.	Updated tables dclim.stn and mclim.bull, and pqact.conf according to
+	NWS change notice DMM 06-00.10 (effective 08/06/00).  Done, MLI, (TP), 
+	8/9/00.
+
+	tables/nwx/dclim.stn, mclim.bull
+
+t71.	Added new CPC 8-14 day products to the Redbook identifier table.
+	Done, SJ, (SJ), 8/10/00.
+
+	gempak/tables/pgen/awdef.tbl
+
+t72.	Added 32 new stations to sfstns.tbl.  Added 8 stations to inactive.tbl.
+	Added 16 stations to xrainsort.tbl.  Done, AH, (TP), 8/14/00.
+
+	gempak/tables/stns/sfstns.tbl, xrainsort.tbl, inactive.tbl
+
+t73.	Part of 021zz.  Done, HZ, (TP), 8/14/00.
+
+	gempak/tables/pgen/setting.tbl
+
+t74.	Added new printers for HPC to the printer.tbl file.  Done, JC, SJ,
+	(TP), 8/17/00.
+
+	gempak/tables/config/printer.tbl
+
+t75.	Created a new station table, newmos.stn.  It has the same format as
+	the other GEMPAK surface station tables.  Added 6 new stations to 
+	msfstns.tbl.  Done, AH, (TP), 8/18/00.
+
+		gempak/tables/stns/msfstns.tbl
+	NEW:	gempak/tables/stns/newmos.stn
+
+t76.	Added NEW_MRF and NEW_AVN to MOS in NWX.  Done, AH, (TP), 8/18/00.
+
+	tables/nwx/guidata.tbl, master.tbl
+
+t77.	Cleaned up nexrad.tbl; added nexrad.tbl to CLO and LOCATOR tables.
+	Done, DP, (TP), 8/21/00.
+
+	gempak/tables/config/clo.tbl
+	gempak/tables/nmap/locator.tbl
+	gempak/tables/stns/nexrad.tbl
+
+t78.	Part of 021ddd.  Done, DP, (TP), 8/21/00.
+
+	gempak/tables/grphgd/qpf.tbl
+
+t79.	Part of 019f.  Done, TP, (TP), 8/22/00.
+
+	gempak/tables/config/mapfil.tbl
+
+t80.	Added two and fixed one RFC geographical areas.  Done, BM, SJ, (TP),
+	8/22/00.
+
+	gempak/tables/stns/geog.tbl
+
+t81.	Created new CWA boundary information file.  Done, TP, (TP), 8/23/00.
+
+		gempak/tables/config/clo.tbl
+		gempak/tables/nmap/locator.tbl
+	NEW:	gempak/tables/bounds/cwabnds.tbl, cwabnds.tbl.info
+
+t82.	Updated the MOS station tables for AVN, MRF and NGM which are used by
+	NWX and the MOS decoders.  Removed stations there were not reporting
+	and duplicate stations.  Done, AH, (TP), 8/23/00.
+
+	gempak/tables/stns/avnmos.stn, mrfmos.stn, newmos.stn, ngmmos.stn
+	NOTE:  logical links to these four tables is needed in ~nawdv/tables/nwx.
+
+t83.	MPC table changes/fixes.  Done, JP, SJ, (TP), 8/24/00.
+
+	gempak/tables/config/datatype.tbl
+	gempak/tables/nmap/mod_res.tbl
+	gempak/tables/pgen/faxprod.tbl, product.tbl, tiffprod.tbl
+
+t84.	Added ASOS identifiers to 12 stations in sfstns.tbl.  Done, AH, (TP),
+	8/25/00.
+
+	gempak/tables/stns/sfstns.tbl
+
+t85.	Part of 018a1m.  Done, DP, (TP), 8/29/00.
+
+	gempak/tables/nmap/locator.tbl
+
+t86.	Removed 18 duplicate stations.  Done, AH, (TP), 8/29/00.
+
+	gempak/tables/stns/sfstns.tbl
+
+t87.	Added new Mexican upper air station, 76526, Guadalupe.  Done, AH, (TP),
+	8/31/00.
+
+	gempak/tables/stns/snstns.tbl
+
+=============================  End of Patch 5.5.d  =============================

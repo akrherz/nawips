@@ -1,0 +1,1374 @@
+		NAWIPS 5.4.3k+ Tables Changes Description Log
+
+t1.	Added documentation explaining reserved character
+	combinations for templates.  Done, DP, (TP), 2/18/99.
+
+	gempak/tables/config/data.tbl
+
+t2.	Corrected Alaskan Marine Zones per NOUS41 KWBC 051424 COR.
+	Done, GK, (TP), 2/18/99.
+
+	gempak/tables/stns/zones.tbl
+
+t3.	Removed KHVR from the NWX stations.tbl.  Changed forecast 
+	responsibility for Davenport/Quad Cities, IA (KDVN). 
+	Done, GK, (TP), 2/18/99.
+
+	tables/nwx/stations.tbl, tmppcp.bull, zone.bull
+
+t4.	Generated a county boundaries table.  Done, GK, (TP), 
+	2/18/99.
+
+	NEW:  gempak/tables/bounds/countybnds.tbl
+
+t5.	Updated sfstns.tbl, xrainsort.tbl, & inactive.tbl.
+	Done, AH, (TP), 2/22/99.
+
+	gempak/tables/stns/sfstns.tbl, xrainsort.tbl, inactive.tbl
+
+t6.	Added the (3-hr emsl and pcpn) &  (6-hr emsl and pcpn) to 
+	the eta model; Added 3-hr pcpn to the eta model; and Added 
+	lifted index to the basic weather group under the eta, 
+	ngm, and global.  Done, JC, (TP), 2/23/99.
+
+	gempak/tables/nmap/mod_res.tbl
+	gempak/tables/config/prmlst.tbl
+	gempak/nts/nmap/restore/misc/pmsl_thkn
+	gempak/nts/nmap/restore/modl/eta/bl_thte_wind,
+	850mb_h2o_transport, precip_type_vv
+	gempak/nts/nmap/restore/modl/global/pmsl_1000-850_thk
+	gempak/nts/nmap/restore/prcp/precip_12hr, precip_12hr_mm, 
+	precip_24hr, precip_24hr_mm, precip_3-day, precip_3hr, 
+	precip_3hr_emsl, precip_4-day, precip_48hr, precip_5-day,
+	precip_54hr, precip_60hr, precip_66hr, precip_6hr,
+	precip_6hr_1000-500_thkn, precip_6hr_emsl, precip_6hr_mslp,
+	precip_6hr_mslp_sfchght, precip_6hr_mslphilo, precip_72hr, 
+	precip_78hr
+	gempak/nts/nmap/restore/stnd/250mb_wind_and_rel_vort
+
+t7.	Modify nmap restore files to existing models and to add 
+	NEW model nww3.  Done, JP, (TP), 2/23/99.
+		
+	gempak/tables/config/data.tbl
+	gempak/tables/nmap/mod_res.tbl
+	gempak/nts/nmap/restore/modl/NEWwave/
+	sig_wave_gridded_dir_only, sig_wave_gridded_feet_dir,
+	sig_wave_gridded_feet_only, sig_wave_gridded_meters_only,
+	sig_wave_gridded_mslp_feet_nw, 
+	sig_wave_gridded_mslp_meters_nw
+	gempak/nts/nmap/restore/modl/global/pmsl_1000-500thk
+	gempak/nts/nmap/restore/modl/nogaps/bl_winds_only
+	
+	NEW: gempak/nts/nmap/restore/modl/nww3/
+	sig_wave_and_mslp_feet, sig_wave_and_mslp_meters,
+	sig_wave_cont_fill_feet, sig_wave_cont_fill_meters,
+	sig_wave_gridded_dir_only, sig_wave_gridded_feet,
+	sig_wave_gridded_feet_dir, sig_wave_gridded_feet_only, 
+	sig_wave_gridded_meters, sig_wave_gridded_meters_dir,
+	sig_wave_gridded_meters_only, sig_wave_gridded_mslp_feet, 
+	sig_wave_gridded_mslp_feet_nw, sig_wave_gridded_mslp_meters,
+	sig_wave_gridded_mslp_meters_nw
+	gempak/nts/nmap/restore/modl/ukmet/bl_winds_only
+	gempak/nts/nmap/restore/modl/wam/
+	sig_wave_gridded_dir_only, sig_wave_gridded_feet_dir,
+	sig_wave_gridded_feet_only, sig_wave_gridded_meters_only,
+	sig_wave_gridded_mslp_feet_nw, 
+	sig_wave_gridded_mslp_meters_nw
+
+t8.	Updated tables fo the SPC.  Numerous changes were made to 
+	the outlook product table.  Added 2 national precip products 
+	for UNISYS radar data.  Added the Marine_US overlay map.  
+	Done, SS, GG, (TP), 2/24/99.
+
+	gempak/tables/sat/imgtyp.tbl
+	gempak/tables/nmap/mapovl.nmap, outlook.tbl
+
+t9.	Changed elevation, location of Guam upper air station 91217
+	per information received from Brad Ballish.  Done, DKW, (TP),
+	2/24/99.
+
+	gempak/tables/stns/snstns.tbl
+
+t10.	Added new station models for the MRF MOS data.  Changed the
+	marker from a plus to a dot for the MRF MOS data.  Done,
+	SJ, (TP), 2/24/99.
+
+	gempak/tables/config/prmlst.tbl
+
+t11.	Updated the TIFF product table with more WMO ids obtained
+	from the OSO.  Done, SJ, (TP), 2/25/99.
+
+	gempak/tables/pgen/tiffprod.tbl
+
+=========================== Patch 5.4.3.l ============================
+
+t12.	Changed Guam upper air station id from 91217 to 91212
+	effective 00Z March 1, 1999.  Done, DKW, (TP), 3/2/99.
+
+	gempak/tables/stns/snstns.tbl
+
+t13.	New VOR (Aviation Reference Points) table as reported in
+	the PUBLIC INFO STATEMENT - TECH IMPLEMENTATION NOTICES 
+	99-01 & 99-03 effective March 1, 1999.  Done, GK, (TP),
+	3/2/99.
+
+	gempak/tables/stns/vors.tbl
+
+t14.	Modified the nwx zone.bull for the MN, IA, & WI zone 
+	reconfiguration noted in PUBLIC INFORMATION STATEMENT
+	SERVICE CHANGE NOTICES 99-01, 99-02, 99-03, and 99-04.
+	Also removed Grand Forks and Davenport from tmppcp.bull 
+	because they are regional products, not state products.
+	Done, GK, (TP), 3/2/99.
+
+	tables/nwx/tmppcp.bull, zone.bull
+
+t15.	Added new Indiana county, Benton, to the flash flood 
+	guidance.  Done, GK, (TP), 3/2/99.
+
+	gempak/tables/stns/ffgzon.stn
+
+t16.	Modified sfstns.tbl, lsfstns.tbl, and mrfmos.stn with a 
+	priority number.  Done, AH, (TP), 3/2/99.
+
+	gempak/tables/stns/sfstns.tbl, mrfmos.stn, lsfstns.tbl
+
+t17.	Changed the rotation for the Alaskan surface products in 
+	the FAXPROD and TIFFPROD tables.  Done, SJ, (TP), 3/2/99.
+
+	gempak/tables/pgen/faxprod.tbl, tiffprod.tbl
+
+t18.	Corrected location of table delivery t7 from patch l.
+	Done, TP, (TP), 3/3/99.
+
+	gempak/nts/nmap/retore/modl/... (See t7 above.)
+
+t19.	Added new Arizona Flash Flood Guidance zones AZZ032-040 to
+	ffgzon.stn.  Done, GK, (TP), 3/3/99.
+
+	gempak/tables/stns/ffgzon.stn
+
+t20.	Changed NWX tables to accomodate WFO zone transfers 
+	effective 3/15/99.  Done, GK, (TP), 3/5/99.
+
+	gempak/tables/stns/zones.tbl
+	tables/nwx/coastal.bull, zones.bull
+
+t21.	Changed NWX zone bulletin table to accomodate upcoming
+	zone transfers; effective March 29, 1999.  Done, GK, (TP),
+	3/5/99.
+
+	tables/nwx/zone.bull
+
+t22.	Corected KAKQ (Wakefield, VA) station information.  Done,
+	GK, (TP), 3/8/99.
+
+	tables/nwx/stf.bull, smw.bull, omrdata.bull, now.bull, 
+		   mws.bull, afd.bull
+
+t23.	Made table changes to use 4-digit year template for
+	GEMPAK output files created by the decoders.  Done,
+	DKW, (TP), 3/9/99.
+
+	gempak/tables/config/data.tbl.Y2K
+	gempak/tables/nmap/master.nmap.Y2K
+
+	NOTE:  The Y2K extension is so that users can make the 
+	change at their convenience.  Making the change involves 
+	stopping the decoders, changing an LDM configuration file, 
+	renaming some files, and restarting the decoders.
+
+t24.	Added the anomaly parameters to the MMFCST packing table.
+	Added the surface parameter TCHK for checking the edited
+	values of max and min temperature from the medium range
+	forecasters.  Done, SJ, (TP), 3/10/99.
+
+	gempak/tables/pack/mmfcst.pack
+	gempak/tables/parms/pcconv.tbl
+
+t25.	Added AFOS product 95E to the AFOS product table.  Done,
+	SJ, (TP), 3/15/99.
+
+	gempak/tables/pgen/afosprod.tbl
+
+t26.	Added State College, PA to the NWX zone.bull.  Done, GK,
+	(TP), 3/16/99.
+
+	tables/nwx/zone.bull
+
+t27.	Added two new satellite images (est-rain & pwat) to the
+	imgtyp.tbl.  Done, JC, SJ, (TP), 3/16/99.
+
+	gempak/tables/sat/imgtyp.tbl
+
+t28.	Changed NATLMED area for the Saudi desk.  Done, JC, (TP),
+	3/18/99.
+
+	gempak/tables/stns/geog.tbl
+
+t29.	Updated tables with 2 new ASOS stations and corrected the
+	lat/lon for Pearson_Airpark.  Done, AH, (TP), 3/18/99.
+
+	gempak/tables/stns/sfstns.tbl, xrainsort.tbl
+
+t30.	Updated vgf.nmap for the Daily Wx Map and International
+	Desks.  Changed the priority for selected stations in the
+	mrfmos.stn table.  Done, SJ, JC, (TP), 3/19/99.
+
+	gempak/tables/nmap/vgf.nmap
+	gempak/tables/stns/mrfmos.stn
+
+=========================== Patch 5.4.3.m ============================
+
+t31.	Changed the rotation for the Alaskan surface analysis products 
+	for the fax and tiff output.  Done, SJ, (TP), 3/22/99.
+
+	gempak/tables/pgen/tiffprod.tbl, faxprod.tbl
+
+t32.	Modified MRF MOS station models.  Added Daily Weather Map
+	station models.  Done, JC, SJ, (TP), 3/23/99.
+
+	gempak/tables/config/prmlst.tbl
+
+t33.	Created a new station table to be used as an NMAP map 
+	overlay for the Daily Weather Map stations.  Done, SJ,
+	(TP), 3/24/99.
+
+	gempak/tables/nmap/mapovl.nmap
+	NEW:  gempak/tables/stns/dlwx.stn
+
+t34.	Updated sfstns.tbl with 7 new stations, added 18 stations to 
+	inactive.tbl and appended ASOS to 2 stations.  Done, AH,
+	(TP), 3/24/99.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl
+
+t35.	Updated sfstns.tbl by changing somerville, NJ station id
+	from SJB to SMQ.  Done, AH, (TP), 3/25/99.
+
+	gempak/tables/stns/sfstns.tbl
+
+t36.	Fixed the sizes of TPC Gulf Analysis products in the FAXPROD
+	and TIFFPROD tables.  Done, SJ, (TP), 3/25/99.
+
+	gempak/tables/pgen/tiffprod.tbl, faxprod.tbl
+
+t37.	Added HPC Medium Range products (93P, 94P, 95P) to the 
+	AFOSPROD table.  Done, JC, SJ, (TP), 3/26/99.
+
+	gempak/tables/pgen/afosprod.tbl
+
+t38.	Changed the priority values for the MRF MOS stastions so 
+	that they will be plotted correctly by AFOS.  Done, SJ,
+	(TP), 3/26/99.
+
+	gempak/tables/stns/mrfmos.stn
+
+t39.	Added and fixed HPC products in AFOSPROD and FAXPROD tables.
+	Done, SJ, (TP), 3/29/99.
+
+	gempak/tables/pgen/afosprod.tbl, faxprod.tbl
+
+t40.	WYC560 (Yellowstone Park) is restored.  MAPOVL.NMAP updated 
+	to reflect the change from county_sort.tbl to county.tbl.
+	Done, GK, (TP), 3/29/99.
+
+	gempak/tables/nmap/mapovl.nmap
+	gempak/tables/stns/county.tbl, countynam.tbl
+
+t41.	Added Fargo, ND and Albany, NY to the tmppcp table for NWX.
+	Moved Washington, DC from the State Forecast Disc table to 
+	the Area Forecast Disc table.  Fixed the home directory of 
+	the dwm account in the table vgf.nmap.  Done, SJ, (TP), 
+	3/31/99.
+
+	gempak/tables/nmap/vgf.nmap
+	tables/nwx/tmppcp.bull, afd.bull, sfd.bull
+
+t42.	Added the mrf1, mrf2, ukmet and ukmet2 models to the entry
+	for the 700mb_HGHT_RH_OMEGA_NCF product in MOD_RES.TBL.
+	Done, SJ, (TP), 4/1/99.
+
+	gempak/tables/nmap/mod_res.tbl
+
+t43.	Fixed entries for the HPC Medium Range products in 
+	faxprod.tbl.
+
+	gempak/tables/pgen/faxprod.tbl
+
+t44.	Changed the priority values for 17 MRF MOS stations. These
+	stations will now be included in the HPC products.  Done, SJ,
+	(SJ), 4/6/99.
+
+	gempak/tables/stns/mrfmos.stn
+
+t45.	WFO to WFO zone transfers for Colorado, Utah, Wyoming, and
+	Kentucky.  Done, GK, (TP), 4/7/99.
+
+	tables/nwx/zone.bull
+	gempak/tables/stns/ffgzon.stn, zones.tbl, county.tbl, 
+				countynam.tbl
+
+t46.	Added new Flash Flood Guidance stations in California.
+	Done, GK, (TP), 4/7/99.
+
+	gempak/tables/stns/ffgzon.stn
+
+t47.	Updated tables based upon SPC info.  Done, GK, (TP), 4/12/99.
+
+	tables/nwx/zone.bull, guidata.tbl, city.stn
+	
+=========================== Patch 5.4.3.n ============================
+
+t48.	Updated sfstns.tbl and inactive.tbl.  Done, AH, (TP), 4/14/99.
+
+	gempak/tables/stns/inactive.tbl, sfstns.tbl
+
+t49.	Added underscores to station names.  Done, AH, (TP), 4/23/99.
+
+	gempak/tables/stns/buoys.tbl, msfstns.tbl
+
+t50.	Added the new HPC account id5.  Done, SJ, (TP), 4/23/99.
+
+	gempak/tables/nmap/vgf.nmap
+
+t51.	Added a new HPC printer to PRINTER.TBL.  Done, SJ, (TP),
+	4/27/99.
+
+	gempak/tables/config/printer.tbl
+
+t52.	New table for CLO functions.  Done, DP, (TP), 4/27/99.
+
+	gempak/tables/stns/coastal.tbl
+
+t53.	Updated the NWX zone table and added a new area in the
+	geog.tbl for the SPC.  Done, SJ, (SS), 4/29/99.
+
+	tables/nwx/zone.bull
+	gempak/tables/stns/geog.tbl
+
+t54.	Updated tables.  Done, AH, (TP), 5/3/99.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl, xrainsort.tbl,
+					lsfstns.tbl
+
+t55.	Fixed the "Time" column entries in the AFOSPROD table for the
+	HPC Medium Range products - 93P, 94P, 95P, 96P and 97P.
+	Done, SJ, (TP), 5/4/99.
+
+	gempak/tables/pgen/afosprod.tbl
+
+=========================== Patch 5.4.3.o ============================
+
+t56.	Added entries for 95A and 95B in the AFOSPROD table.  Done,
+	SJ, (TP), 5/14/99.
+
+	gempak/tables/pgen/afosprod.tbl
+
+t57.	West Coast Marine Forecast zone transfer per Service Change
+	Notice 99-27.  Done, GK, (TP), 5/14/99.
+
+	gempak/tables/stns/zones.tbl
+	tables/nwx/coastal.bull
+
+t58.	Added thetae to editable list of parameters.  Done, GG, SS,
+	(TP), 5/19/99.
+
+	gempak/tables/nmap/uair_parms.tbl
+
+t59.	Updated the copies of DATA.TBL for Y2K and non-Y2K.  Done,
+	SJ, (TP), 5/21/99.
+
+	gempak/tables/config/data.tbl.Y2K, data.tbl.NON_Y2K
+
+t60.	Updated the sfstns.tbl with 5 new stations.  Added 5 stations 
+	to the inactive.tbl.  Added 1 new station to xrainsort.tbl.
+	Done, AH, (TP), 5/21/99.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl, xrainsort.tbl
+
+t61.	Eight State Forecast Discussion headers are being changed to 
+	Area Forecast Discussion headers as specified in Service
+	Change Notice 99-34.  Done, GK, (TP), 5/21/99.
+
+	tables/nwx/afd.bull
+
+t62.	Responsibility for several GA and AL zones is being transferred
+	from the Birminham (BHM) WFO to the Atlanta (FFC/ATL), Mobile 
+	(MOB), and Tallahassee (TAE/TLH) WFOs.  Done, GK, (TP), 
+	5/21/99.
+
+	ldm/etc/pqact.conf
+	tables/nwx/now.bull
+
+t63.	Added t6xf and t6nf parameters to metar station model editing
+	table.  Done, GG, SS, (TP), 5/21/99.
+
+	gempak/tables/nmap/metar_parms.tbl
+
+t64.	Removed the DEL_OBJ from the product generation pallette.
+	Done, SJ, (TP), 5/25/99.
+
+	gempak/tables/pgen/funcbtn.tbl
+
+=========================== Patch 5.4.3.p ============================
+
+t65.	Effective 5/26/99 at 12Z, station name Y26 (Mobridge, SD)
+	was changed to MBG for the ngm MOS data.  Done, DKW, (TP),
+	6/2/99.
+
+	gempak/tables/stns/ngmmos.stn
+
+t66.	Corrected a bug in which if a plotted wind barb, with the
+	background fill on, was on a satellite map, the METAR simple
+	model, METAR press_check model and SHIP press_check2 model
+	would show the station model's wind barbs with a background 
+	fill.  Done, AH, (TP), 6/2/99.
+
+	gempak/tables/config/prmlst.tbl
+
+t67.	Effective 5/26/99 at 12Z, station name Y26 (Mobridge, SD)
+	was changed to MBG for the ngm MOS data.  Done, DKW, (TP),
+	6/3/99.
+
+	tables/nwx/ngmmos.stn
+
+t68.	Reversal of previous delivery.  Responsibility for several GA 
+	and AL zones was going to be transferred from the Birmingham
+	(BHM) WFO to the Atlanta (FFC/ATL), Mobile (MOB), and Tallahassee
+	(TAE/TLH) WFOs, but the AMENDMENT TO SERVICE CHANGE NOTICES
+	99-38, 99-39, and 99-40 indicates that this will be postponed
+	until further notice, which is expected in early fall.  Done,
+	GK, (TP), 6/3/99.
+
+	tables/nwx/now.bull
+	ldm/etc/pqact.conf
+
+t69.	New NWX and AFTEXT products (tropical depression statements 
+	from TPC); new NMAP restore files (for NOGAPS and UKMET models); 
+	and miscellaneous table changes for TIFF and FAX products.  
+	Done, JP, SS, (TP), 6/3/99.
+
+	gempak/tables/nmap/mod_res.tbl
+	gempak/tables/pgen/faxprod.tbl, tiffprod.tbl
+	gempak/tables/config/prmlst.tbl
+	ldm/etc/pqact.conf
+	tables/afos/text/TRPALL
+NEW:	gempak/nts/nmap/restore/modl/nogaps/pmsl_1000-850thk,
+						pmsl_and_bl_wind
+	gempak/nts/nmap/restore/modl/ukmet/pmsl_1000-850thk, 
+						pmsl_and_bl_wind
+
+=========================== Patch 5.4.3.q ============================
+
+t70.	Added AIRMETs and International Sigmets from the AWC to NWX.
+	Done, SJ, (TP), 6/18/99.
+
+	tables/nwx/sigmet.bull, master.tbl, guidata.tbl
+	NEW:  tables/nwx/airmet.bull, intsig.bull
+
+t71.	Added the station id OEDF to station 40417 for snstns.tbl and
+	sfstns.tbl.  Done, SJ, (TP), 6/18/99.
+
+	gempak/tables/stns/snstns.tbl, sfstns.tbl
+
+t72.	Changed Key West, FL (KEYW) per Service Change Notice 99-32.
+	Removed two COASTAL MARINE FORECAST headers from MWS.BULL.
+	Changed EUREKA, OR in COASTAL.BULL to EUREKA, CA.
+	Done, GK, (TP), 6/21/99.
+
+	tables/nwx/coastal.bull, dclim.bull, local.bull, mclim.bull,
+				mws.bull, now.bull, smw.bull
+	ldm/etc/pqact.conf
+
+t73.	NMAP tables are being changed to display observed aircraft
+	reconnaissance data.  WATCH data type being removed.  UA
+	station 74626 (Phoenix, AZ) added to station table.  Done,
+	DKW, (TP), 6/23/99.
+
+	gempak/tables/config/data.tbl, data.tbl.NON_Y2K, data.tbl.Y2K,
+							prmlst.tbl
+	gempak/tables/nmap/acft_parms.tbl
+	gempak/tables/stns/snstns.tbl
+
+t74.	Updated sfstns.tbl with 20 new stations and 6 ASOS identifiers.
+	Added 5 stations to inactive.tbl and added 13 stations to 
+	xrainsort.tbl.  Done, AH, (TP), 6/28/99.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl, xrainsort.tbl
+
+======================= Patch 5.4.3.r =============================
+
+t75.	Added QPF verification boundary map to NMAP.  Done, BM, (SS),
+	7/6/99.
+
+	gempak/tables/nmap/mapovl.nmap
+
+t76.	Added the SPC watch product WWUS40 to NWX.  This product is
+	the watch definition without the public discussion.
+	Done, SJ, (SS), 7/6/99.
+
+	NEW:tables/nwx/watndsc.bull
+
+	tables/nwx/master.tbl, guidata.tbl
+
+t77.	Updated the SPC watch table.  Changed station ID 3O1 to OYZ.
+	Done, GG, (SS), 7/6/99.
+
+	gempak/tables/stns/spcwatch.tbl
+
+t78.	Corrected WMO and station ids for Alpena, MI and El Paso, TX
+	for the NOWcast products in NWX.  Done, SJ, (SS), 7/6/99.
+
+	tables/nwx/now.bull
+
+t79.	Added the Regional Temp/Precip product to NWX.  Removed station
+	KFGF from state product table because it is a regional product.
+	Done, SS, (SS), 7/7/99.
+
+	NEW:tables/nwx/rgtmpc.bull
+
+	tables/nwx/master.tbl, guidata.tbl, tmppcp.bull
+
+t80.	Added changes from SPC for the zone.bull table for NWX.  
+	Merged the Area Forecast Discussion and the State Forcast
+	Discussion products in NWX and the LDM (from the SPC).
+	Done, SJ, (TP), 7/12/99.
+
+	ldm/etc/pqact.conf
+	tables/nwx/master.tbl, guidata.tbl, sfd.bull, zone.bull
+
+t81.	Updated sfstns.tbl with 7 new stations.  Added 18 stations to
+	the inactive.tbl.  Added 5 stations to xrainsort.tbl.  Changed
+	station id PHNA -> PHJR and corrected station lat & elevation.
+	Done, AH, (TP), 7/13/99.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl, xrainsort.tbl
+
+======================= Patch 5.4.3.s =============================
+
+t82.	Added all international stations that report sigmets to a new
+	NWX table - intsig.tbl. Modified the master.tbl to use this 
+	new table.  Done, SJ, (TP), 7/19/99.
+
+	ldm/etc/pqact.conf
+	tables/nwx/master.tbl, NEW: tables/nwx/intsig.tbl
+
+t83.	Made updates to the fax and tiff product tables for the AWC
+	ICAO maps.  Done, SJ, (TP), 7/19/99.
+
+	gempak/tables/pgen/tiffprod.tbl, faxprod.tbl
+
+t84.	Changed 8 entries from State Forecast Discussion Headers to
+	Area Forecast Discussion Headers.  This change is described
+	in Service Change Notices 99-41 & 99-48.  Also eliminated 
+	AFD.BULL, which is no longer used.  Done, GK, (TP), 7/19/99.
+
+	tables/nwx/sfd.bull
+
+t85.	Corrected the latitude and longitude for the station, SUW, in
+	sfstns.tbl and xrainsort.tbl.  The error was brought to our
+	attention by the SPC.  Done, AH, (TP), 7/19/99.
+
+	gempak/tables/stns/sfstns.tbl, xrainsort.tbl
+
+t86.	Changed CLIMO_MM, MAX_MM, MIN_MM, & POP_MM for medium range desk.
+	Done, JYC, (TP), 7/22/99.
+
+	gempak/tables/config/prmlst.tbl
+
+t87.	Added products 9EE and 9FE to the Redbook product definition 
+	table.  Done, SJ, (TP), 8/5/99.
+
+	gempak/tables/pgen/awdef.tbl
+
+t88.	Modified the mod_res.tbl for rsetore files.  Added the ensembles
+	to the model choices in the mod_res.tbl file.  Modified the three
+	data tables to add the ensemble models.  Done JC, (TP), 8/10/99.
+
+	gempak/tables/nmap/mod_res.tbl
+	gempak/tables/config/data.tbl, data.tbl.NON_Y2K, data.tbl.Y2K
+
+t89.	Created a new table for decoding GRIB 3 data using NAGRIB.
+	Done, SJ, (TP), 8/10/99.
+
+	NEW:  gempak/tables/grid/wmogrib3.tbl
+
+t90.	Added LAKES map to NMAP.  Done, HZ, (SJ), 8/13/99.
+
+	gempak/tables/nmap/mapovl.nmap
+
+t91.	New symbols and flight phenomena parameters were
+	added to the parm table used by nmap to display
+	aircraft data.  Flight conditions parameter XVFR
+	was added to the parm table used by nmap to display
+	metar data.  Done, DKW, (SJ), 8/16/99.
+
+	gempak/tables/nmap/acft_parms.tbl, metar_parms.tbl
+
+t92.	Station WST was removed from the metar station table 
+	because as of July 28 there are two stations, one in 
+	Rhode Island and one in Quebec, Canada, with the 
+	same last three letters in the station id.  Done, DKW, 
+	(SJ), 8/16/99.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl
+
+t93.	Added products 90F and 91E to the Redbook product definition 
+	table.  Done, SJ, (SJ), 8/17/99.
+
+	gempak/tables/pgen/awdef.tbl
+
+t94.	Backed out of t88 mod_res.tbl and then removed reference to
+	RUC LI.  Done, SJ, (SJ), 8/18/99.
+
+	gempak/tables/nmap/mod_res.tbl
+
+======================= Patch 5.4.3.t =============================
+
+t95.	Fixed the rotation for AWC products 261X-264X in faxprod.tbl and
+	PGAE07 in the tiffprod.tbl.  Done, SJ, (TP), 8/25/99.
+
+	gempak/tables/pgen/tiffprod.tbl, faxprod.tbl
+
+t96.	Updated sfstns.tbl with 18 new stations.  Added 5 stations to the
+	inactive.tbl.  Added 8 stations to xrainsort.tbl.  Also, changed
+	the station id for W44->HBI and 37W->HRJ and changed the
+	station information for OLS and PHBK.  Done, AH, (TP), 8/25/99.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl, xrainsort.tbl
+
+t97.	Added Flight Information Region (FIR).  Done, TP, (TP), 8/25/99.
+
+	gempak/tables/nmap/mapovl.nmap
+
+t98.	Reorganized the SIGMET product groupings for NWX.  Done,
+	SJ, (TP), 8/25/99.
+
+	ldm/etc/pqact.conf
+	tables/nwx/intsig.tbl, master.tbl
+	NEW:  tables/nwx/sigmet.tbl
+
+t99.	Modified the mod_res.tbl to include 500 mb height and wind 
+	product in the standard group including all models.  Added the 
+	corresponding restore file in the standard directory.  Modified 
+	vgf.nmap to change the machine name of user "id0."  Modified 
+	geog.tbl to add second South American area on a polar 
+	stereographic projection.  Done, JYC, (TP), 8/25/99.
+
+	gempak/tables/nmap/mod_res.tbl, vgf.nmap
+	gempak/tables/stns/geog.tbl
+	NEW:  gempak/nts/nmap/restore/stnd/500mb_hght_wind
+
+t100.	Added new drought threats assessment products to the appropriate
+	tables.  Done, SJ, (TP), 8/30/99.
+
+	gempak/tables/nafos/nafosmap.tbl
+	gempak/tables/pgen/awdef.tbl, afosprod.tbl
+
+t101.	Modified the mod_res.tbl to add ruc2 to some of the 6-hr pcpn 
+	choices.  Modified the precip_6hr file to include all times so 
+	that forecasters can see 3-hr increments on the ETA and RUC2.  
+	Done, JYC, (TP), 8/30/99.
+
+	gempak/tables/nmap/mod_res.tbl
+	gempak/nts/nmap/restore/prcp/precip_6hr
+
+t102.	Removed the watch-by-county button from NMAP.  Done, AH, (TP),
+	8/30/99,
+
+	gempak/tables/pgen/watchbtn.tbl
+
+t103.	Removed FXUS21 from NOWCAST.  Added Threats Assessment Discussion
+	(FXUS21 KWNC).  Added U.S. Drought Monitor Analysis Discussion 
+	(FXUS25 KWNC).  Added Model Bias Discussion (FXUS10 KWNH).
+	Done, GK, (TP), 9/2/99.
+
+	tables/nwx/master.tbl, guidata.tbl
+	ldm/etc/scour.conf, pqact.conf
+	NEW: tables/nwx/threats.bull, modbias.bull, drought.bull
+
+t104.	Updated and improved documentation for the SIGMET information
+	table.  Done, SS, (TP), 9/2/99.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t105.	Changed the WMO ids for products L4P and 94F.  Done, JYC, SJ, 
+	(TP), 9/8/99.
+
+	gempak/tables/pgen/awdef.tbl
+
+t106.	Updated the entry for product 454X in the faxprod table.  Done,
+	SJ, (TP), 9/8/99.
+
+	gempak/tables/pgen/faxprod.tbl
+
+======================= Patch 5.4.3.u =============================
+
+t107.	Added the Saudi stations to the TAF group in NWX.  Included with
+	ldm b6.  Done, SJ, (TP), 9/14/99.
+
+	tables/nwx/taf.stn
+
+t108.	Fixed the WMO id for the Air Stagnation product in NWX.  Done,
+	SJ, (TP), 9/14/99.
+
+	tables/nwx/stag.bull
+
+t109.	30 JUL County maps and tables.  A part of 019n.  Done, GK, (TP),
+	9/14/99.
+
+	gempak/tables/bounds/countybnds.tbl.info, countybnds.tbl
+	gempak/tables/stns/county.tbl, countynam.tbl
+
+t110.	Changed a station name in spc watch decoder station table.  Added
+	two stations and deleted one from marine surface decoder station
+	table.  Done, BH, GG, DKW, (TP), 9/17/99.
+
+	gempak/tables/stns/msfstns.tbl, spcwatch.tbl
+
+t111.	Generated a new table for outlook generation.  See 021a1y.  
+	Done, HZ, (TP), 9/17/99.
+
+	NEW:  gempak/tables/config/forecasters.tbl
+
+t112.	Added the Travelers' and Selected Cities forecast bulletins to
+	NWX.  Done, SJ, (TP), 9/20/99.
+
+	tables/nwx/master.tbl, guidata.tbl
+	NEW:  tables/nwx/travel.bull, selcity.bull
+
+t113.	Implementation of several change notices:  99-{47,49,50,51,53,54,
+	55,56,57}.  These changes affect products in NWX primarily over 
+	Louisiana, Texas, and Tennesee.  Done, GK, (TP), 9/22/99.
+
+	gempak/tables/stns/zones.tbl
+	tables/nwx/zone.bull, coastal.bull
+
+t114.	Added more details to the International SIGMETs.  Part of
+	021a2b.  Done, SL, (TP), 9/23/99.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t115.	Added more formatting to the International SIGMET product.  Part
+	of 021a2c.  Done, DP, (TP), 9/23/99.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t116.	Fixes to the International SIGMETs.  Part of 021a2d.  Done, SL,
+	(TP), 9/24/99.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t117.	Convective Sigmet boundary map (WST Regions).  Part of 019o.
+	Done, GK, (TP), 9/24/99.
+
+	gempak/tables/config/mapfil.tbl
+
+t118.	Implementation of Service Change Notice 99-46.  Done, GK, (TP),
+	9/24/99.
+
+	tables/nwx/smw.bull
+
+t119.	Modified remarks for International SIGMETs.  Done, SS, (TP),
+	9/24/99.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t120.	Added FIR informational string to formatted SIGMET.  Part of
+	021a2e.  Done, DP, (TP), 9/27/99.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t121.	Updated sfstns.tbl with 2 new stations, and added ASOS flag to 9 
+	stations.  Added 2 stations to snstns.tbl and removed 2 inactive 
+	stations.  Added 2 stations to xrainsort.tbl.  Done, AH, (TP), 
+	9/27/99.
+
+	gempak/tables/stns/sfstns.tbl, snstns.tbl, xrainsort.tbl
+
+t122.	Added two new RUC2 CAPEs products.  Part of 009g.  Done, JYC, 
+	(TP), 9/28/99.
+
+	gempak/tables/nmap/mod_res.tbl
+
+t123.	Changes to NWX tables submitted by the SPC.  Done GK, (TP),
+	9/29/99.
+
+	tables/nwx/tmppcp.bull, sfd.bull, rgtmpc.bull, now.bull,
+						mws.bull, city.stn
+
+======================= Patch 5.4.3.v =============================
+
+t124.	Added hurricane data type.  Part of 001z.  Done, AH, (TP),
+	10/4/99.
+
+	gempak/tables/config/data.tbl, data.tbl.NON_Y2K
+
+
+t125.	W 15 SEP 1999 County Warning Area map and table set update.  Part
+	of 019p.  Done, GK, (TP), 10/4/99.
+
+	gempak/tables/stns/cwa.tbl
+	gempak/tables/config/mapfil.tbl
+
+t126.	Added the ability to change the sizes of the icing and the
+	turbulence symbols, ICSY and TBSY, in SFMAP and NMAP.  Part of
+	010a1l.  Done, AH, (TP), 10/4/99.
+
+	gempak/tables/config/prmlst.tbl
+	gempak/tables/nmap/acft_parms.tbl
+
+t127.	Modified the mod_res.tbl to add the MM5 model and to add various 
+	model entries to various products.  Also added ensemble members 
+	to various products.  Modified the data.tbl to introduce the MM5 
+	model.  Done, JYC, TL, (TP), 10/7/99.
+
+	gempak/tables/nmap/mod_res.tbl
+	gempak/tables/config/data.tbl, data.tbl.NON_Y2K, data.tbl.Y2K
+
+t128.	Added GRIB decoding table for Global Weather Central.  Done, DP, 
+	(TP), 10/7/99.
+
+	gempak/tables/grid/gwcgrib2.tbl
+
+t129.	W 15 JUL 1999 Marine Zone map and table set update.  Part of 019q.
+	Done, GK, (TP), 10/7/99.
+
+	gempak/tables/stns/zones.tbl
+
+t130.	Added CRP - CORPUS CHRISTI to dlwx.stn and changed its priority
+	number to 99 in sfstns.tbl and lsfstns.tbl.  Done, AH, (TP), 
+	10/7/99.
+
+	gempak/tables/stns/sfstns.tbl, dlwx.stn, lsfstns.tbl
+
+t131.	Several new parameters of minor importance are now being decoded
+	in the marine decoder (from drifting buoys), but are not being
+	output to Gempak.  Part of 001bb.  Done, DWK, (TP), 10/7/99.
+
+	gempak/tables/pack/lsfc.pack, msfc.pack
+
+t132.	Updated sfstns.tbl with 12 new stations and added ASOS flag to 1
+	station.  Corrected the station information to TOR in sfstns.tbl
+	and xrainsort.tbl.  Added 8 stations to xrainsort.tbl.  Changed 1 
+	station in snstns.tbl.  Added 25 stations to the inactive.tbl.
+	Done, AH, (TP), 10/12/99.
+
+	gempak/tables/stns/sfstns.tbl, snstns.tbl, inactive.tbl, 
+							xrainsort.tbl
+
+t133.	New table for attribute changes.  Part of 010a1o.  Done, FY, (TP),
+	10/14/99.
+
+	gempak/tables/pgen/uattribd.tbl
+
+t134.	Zones reconfigured as part of 019r.  Done, GK, (TP), 10/18/99.
+
+	gempak/tables/stns/zones.tbl
+
+t135.	New tables for nmap2.  Part of 018lll.  Done, ES, (TP), 10/19/99.
+
+	gempak/tables/nmap/dcatg.nmap2, dsrc.nmap2, misc.nmap2
+
+t136.	New Western Region boundary map file.  Part of 019s.  Done,
+	GK, (TP), 10/20/99.
+
+	gempak/tables/config/mapfil.tbl
+
+t137.	Updated documentation in uattribd.tbl.  Done, SS, TP, (TP),
+	10/21/99.
+
+	gempak/tables/pgen/uattribd.tbl
+
+t138.	Updates for delivery 001ff.  Done, DKW, (TP), 10/22/99.
+
+	gempak/tables/config/data.tbl, data.tbl.NON_Y2K, datatype.tbl
+					data.tbl.Y2K
+
+t139.	5 Oct 1999 Marine Zone Shapefile update.  Part of 019u.  
+	Done GK, (TP), 10/27/99.
+
+	gempak/tables/stns/zones.tbl
+
+t140.	Boundary map files for the Tropical Prediction Center.  Part of
+	019v.  Done, GK, (TP), 10/27/99.
+
+	gempak/tables/config/mapfil.tbl
+
+t141.	Changes for 010a2a.  Done, GG, SJ, (YP), 11/2/99.
+
+	gempak/tables/parms/pcconv.tbl
+	gempak/tables/nmap/metar_parms.tbl
+
+t142.	Tropical Prediction Center (National Hurricane Center) breakpoint
+	table.  Done, GK, (TP), 11/4/99.
+
+	NEW:	gempak/tables/stns/nhcbreaks.tbl
+
+t143.	Fixed the HPC/QPF product entries in awdef.tbl.  Done, JYC, SJ, (TP),
+	11/4/99.
+
+	gempak/tables/pgen/awdef.tbl
+
+t144.	Changed Monthly and Daily Climatological Report NWX bulletin tables
+	submitted by the SPC.  Done, GK, (TP), 11/5/99.
+
+	tables/nwx/mclim.bull, dclim.bull
+
+t145.	Changed the priority value for stations ESC and LKV to 99 for the
+	Daily Weather Map group in sfstns.tbl.  Added ESC and LKV to dlwx.stn.
+	Done, SJ, (TP), 11/8/99.
+
+	gempak/tables/stns/sfstns.tbl, dlwx.stn
+
+t146.	Part of 001jj to modify aircraft obs.  Done, DKW, (TP), 11/8/99.
+
+	gempak/tables/config/prmlst.tbl
+	gempak/tables/nmap/acft_parms.tbl
+
+t147.	Added MM5 entry to datatype.tbl.  Done, SJ, (TP), 11/10/99.
+
+	gempak/tables/config/datatype.tbl
+
+t148.	Updated sfstns.tbl with 10 new stations and added ASOS flag to 
+	1 station.  Added 6 stations to xrainsort.tbl.  Added 40 stations
+	to the inactive.tbl.  Added 1 station (AUGA2) and corrected the 
+	latitude for LPOI1 in msfstns.tbl.  Done, AH, DKW, (TP), 11/15/99.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl, xrainsort.tbl,
+							msfstns.tbl
+
+t149.	Numerous changes from many change notices valid 1 SEP through
+	15 NOV 1999.  These changes reflect the following change notices:
+	Service Change Notices:   99-38, 99-59, 99-63, 99-64, 99-65,
+				  99-68, 99-69, 99-71, 99-73, 99-75,
+				  99-76, 99-77, 99-79, 99-80, 99-81,
+				  99-83, 99-84, 99-88
+	FOS/NOAAPORT Notices:	  1528, 1541, 1545, 1546, 1560
+	Data Management Messages: 5 AUG 1999 15:39, 2 SEP 1999 9:25
+	Done, GK, (TP), 11/17/99.
+
+	gempak/tables/stns/zones.tbl, county.tbl
+	tables/nwx/zone.bull, stf.bull, sfd.bull, rgtmpc.bull, offsh.bull,
+		   now.bull, mclim.bull, local.bull, dclim.bull, coastal.bull
+
+t150.	New Area Forecast Products for the State Forecast Products section
+	in NWX.  These changes are EFFECTIVE 8 Oct 1999.  Done, GK, (TP),
+	11/17/99.
+
+	tables/nwx/stf.bull
+
+t151.	Part of 020g.  Done, AH, (TP), 11/17/99.
+
+	gempak/tables/stns/state.tbl
+
+t152.	Updated the SIGMET product table at ther request of the AWC.  Added
+	new phenomena for the international SIGMET.  Also added new
+	remarks.  Done, SS, (TP), 11/17/99.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t153.	Part of 010a2h.  Done, SJ, (TP), 11/17/99.
+
+	      gempak/tables/nmap/misc.nmap2
+	NEW:  gempak/tables/config/miscset.tbl
+
+t154.	Changed "Watch_Corner" to "Anchor_Points" in overlay table.
+	Done, ES, (TP), 11/18/99.
+
+	gempak/tables/nmap/mapovl.nmap
+
+t155.	Various changes valid 16,17 NOV 1999.  These changes result from the
+	the following notices:  FOS/NOAAPORT Notices:  1565-1568, and 1599.
+	Done, GK, (TP), 11/19/99.
+
+	tables/nwx/stations.tbl, zone.bull, tmppcp.bull, stsum.bull, stf.bull,
+		sfd.bull, rgtmpc.bull, prog.bull, mclim.bull, dclim.bull
+
+t156.	Part of 009h.  Done, TL, (TP), 11/22/99.
+
+	gempak/tables/nmap/mod_res.tbl
+	
+t157.	Added 99Q and 98S.  Done, JC, SJ, (TP), 11/22/99.
+
+	gempak/tables/pgen/afosprod.tbl, awdef.tbl
+
+t158.	Part of 019y.  Done, GK, (TP), 11/24/99.
+
+	gempak/tables/config/mapfil.tbl
+
+t159.	Corrected NMAP restore file table.  TL, (TP), 11/29/99.
+
+	gempak/tables/nmap/mod_res.tbl
+	
+t160.	Updated necessary tables for new products and data to display.
+	Done, JP, SJ, (TP), 11/29/99.
+	
+	gempak/tables/sat/imgtyp.tbl
+	gempak/tables/pgen/tiffprod.tbl, product.tbl, faxprod.tbl
+	
+============================== Patch 5.4.3.w ==================================
+
+t161.	Added appropriate entries to the NWX and AFTEXT Offshore tables to 
+	allow viewing new text products from the MPC and TPC.  Done, JP, 
+	(TP), 11/30/99.
+
+	tables/afos/text/COAOFF
+	tables/nwx/offsh.bull
+
+t162.	Modified mod_res.tbl for new restore file.  Part of 009i.
+	Done, JC, (TP), 11/30/99.
+
+	gempak/tables/nmap/mod_res.tbl
+
+t163.	Part of 018a1a.  Done, SL, (TP), 12/1/99.
+
+	gempak/tables/config/datatype.tbl
+
+t164.	Part of 019z.  Done, GK, (TP), 12/2/99.
+
+	gempak/tables/stns/zones.tbl
+
+t165.	Part of 021a2t.  Done, HZ, (TP), 12/2/99.
+
+	gempak/tables/nmap/nmap_pgw.tbl
+
+t166.	NWX table changes valid 30 NOV 1999 & 1 DEC 1999.  These changes
+	include changes recommended in Service Change Notices:  99-86,
+	99-87, 99-89, 99-90, 99-91, 99-102 and FOS/NOAAPORT Notices: 
+	1569, 1570, 1572.  Done, GK, (TP), 12/6/99.
+
+	gempak/tables/stns/zones.tbl, county.tbl
+	tables/nwx/zone.bull, smw.bull, sfd.bull
+
+t167.	Corrected areas for SIGMET outlook product.  Done, SS, (TP), 12/7/99.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t168.	Part of 018a1c.  Done, TL, (TP), 12/8/99.
+
+	NEW:	gempak/tables/config/stdsnd.tbl
+
+t169.	Part of 021a2z.  Done, TP, (TP), 12/9/99.
+
+	gempak/tables/pgen/symbolbtn.tbl
+
+t170.	Removed SELV from the aircraft parameter edit list as requested
+	by the AWC.  Done, AH, (TP), 12/13/99.
+
+	gempak/tables/nmap/acft_parms.tbl
+
+t171.	Part of 019gg.  Done, GK, (TP), 12/14/99.
+
+	gempak/tables/config/mapfil.tbl
+
+t172.	Added a new CMAN station, PILA2, to msfstns.tbl. Added a new German
+	station, 10028, to lsfstns.tbl.  Done, AH, (TP), 12/14/99.
+
+	gempak/tables/stns/lsfstns.tbl, msfstns.tbl
+
+t173.	Part of 010a2x.  Done, DKW, (TP), 12/15/99.
+
+	gempak/tables/config/datatype.tbl
+
+t174.	Fixed imgtyp.tbl to accommodate new header info for GMS satellite
+	images.  Done, SJ, (TP), 12/16/99.
+
+	gempak/tables/sat/imgtyp.tbl
+
+t175.	Updated and fixed typos in the table spcwatch.tbl.  Done, GG, SJ, 
+	(TP), 12/16/99.
+
+	gempak/tables/stns/spcwatch.tbl
+
+t176.	Removed the Air Stagnation Discussion per Technical Implementation 
+	Notice 99-19.  Done, GK, (TP), 12/16/99.
+
+	tables/nwx/master.tbl, guidata.tbl
+
+t177.	Part of 021a3h.  Done, ES, (TP), 12/17/99.
+
+	gempak/tables/pgen/watchbtn.tbl
+
+t178.	Part of 021a3i.  Done, SL, (TP), 12/17/99.
+
+	gempak/tables/pgen/prodbtn.tbl
+
+============================== Patch 5.4.3.x ===============================
+
+t179.	Updated qpf bulletin table for NWX. Done, SJ, (SJ), 12/28/99.
+
+	tables/nwx/qpf.bull
+
+t180.	Added nmap2 to the icons in ntl.  Done, SJ, TP, 12/30/99.
+
+	tables/ntl/ntl.tbl
+
+t181.	Table changes for NWX.  These changes are mentioned in Service
+	Change Notice 99-101.  There are 10 new Alaskan Daily Climate
+	Products as a result of SCN 99-101.  Done, GK, (TP), 12/30/99.
+
+	tables/nwx/dclim.bull
+
+t182.	Added the following zones to ZONES.TBL:  CAZ011,  CAZ012,  CAZ020,
+	CAZ021,  CAZ022,  CAZ023,, CAZ024,  CAZ0708, CAZ1314, CAZ1516, 
+	CAZ1719, CAZ02021, CAZ2223, CAZ3451, CAZ4045, CAZ4350, CAZ6364,
+	CAZ6668, CAZ6769.  Added the following zones to FFGZON.STN:  PRZ011,
+	PRZ012, PRZ013, PRZ020, PRZ031, PRZ032, PRZ033, PRZ040, PRZ051,
+	PRZ052, PRZ053, PRZ060, PRZ070.  Made numerous updates to the FFGZON.STN
+	table.  In particular, WFO changes, Name changes, and Lat/Lon changes.
+	Done, GK, (TP), 12/30/99.
+
+	gempak/tables/stns/zones.tbl, ffgzon.stn
+
+t183.	Updated sfstns.tbl with 19 new stations and added ASOS flag to 3.
+	Added 6 stations and modified 2 station in xrainsort.tbl.  Added
+	31 stations to the inactive.tbl.  Done, AH, (TP), 1/3/00.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl, xrainsort.tbl
+
+t184.	Table changes as specified in Service Change Notices 00-01 and 00-03.
+	Done, GK, (TP), 1/3/00.
+
+	tables/nwx/rgtmpc.bull
+	gempak/tables/stns/zones.tbl, ffgzon.stn
+
+t185.	Added the Japanese International Sigmets to the patterns for the LDM
+	and to the table for NWX.  Also fixed the LDM entry for the Record
+	Event Statements.  Done, SJ, (TP), 1/5/00.
+
+	tables/nwx/intsig.tbl
+
+t186.	Part of 018a1u.  Changed the format of the miscset.tbl table for the
+	MISC data type plotting attributes.  Done, SJ, (TP), 1/5/00.
+
+t187.	Volcano locations table.  Done, GK, (TP), 1/7/00.
+
+	NEW:  gempak/tables/stns/volcano.tbl
+
+t188.	Part of 009k.  Done, JC, (TP), 1/13/00.
+
+	gempak/tables/nmap/mod_res.tbl
+	
+t189.	Added entry for Marine_Interpreation_Messages (guidata.tbl).
+	Added entry for intrpt type data in marine section (master.tbl).
+	Added entries for hght_tmp_wind restore file in standard levels
+	(mod_res.tbl).  Corrected WMO ID for RP1, RP2, RA1, RA2 (KWBC to KWNM)
+	(awdef.tbl).  Correct lines/rotation for PYAA01/PYAA02 (tiffprod.tbl)
+	Added entries for new NAVTEX products being produced at MPC/TPC
+	(coastal.bull).  Added entries for TPC's high seas fcsts; added entry 
+	for MPC EPI fcst (hseas.bull).  New intrpt.bull table for displaying
+	intrpt-type data in NWX.  Done, JP, (SS), (TP), 1/14/00.
+
+	gempak/tables/nmap/mod_res.tbl
+	gempak/tables/pgen/awdef.tbl, tiffprod.tbl
+	tables/nwx/coastal.bull, hseas.bull, guidata.tbl, master.tbl
+	NEW:  tables/nwx/intrpt.bull
+
+t190.	Part of 010a3h.  Done, AH, (TP), 1/14/00.
+
+	NEW:	gempak/tables/config/clo.tbl
+		gempak/tables/nmap/locator.tbl
+
+t191.	Part of 010a3i.  Done, AH, (TP), 1/18/00.
+
+	gempak/tables/nmap/locator.tbl
+
+t192.	Part of 001uu.  Done, DKW, (TP), 1/20/00.
+
+	gempak/tables/nmap/acft_parms.tbl
+	gempak/tables/pack/acft.pack
+	gempak/tables/parms/pcconv.tbl
+
+t193.	Updated sfstns.tbl with 3 new stations and added ASOS flag to 3
+	stations.  Added 21 stations to the inactive.tbl.  Added 1 station
+	((89002) and corrected the wind units for Kursk in lsfstns.tbl.
+	Done, AH, (TP), 1/20/00.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl, lsfstns.tbl
+
+t194.	Part of 021a3s.  Done, DP, (TP), 1/21/00.
+
+	gempak/tables/pgen/sigmetinfo.tbl
+
+t195.	Added the volcano table to locator.tbl and clo.tbl.  Part of 
+	018a2i.  Done, AH, DP, (TP), 1/21/00.
+
+	gempak/tables/config/clo.tbl
+	gempak/tables/nmap/locator.tbl
+
+t196.	Modified awdef.tbl and afosprod.tbl.  Done, JC, SJ, (TP), 1/27/00.
+	
+	gempak/tables/pgen/awdef.tbl, afosprod.tbl
+
+t197.	Part of 019ii.  Done, GK, (TP), 1/27/00.
+
+	gempak/tables/config/mapfil.tbl
+
+============================== Patch 5.4.3.y ==============================
+
+t198.	Corrections to NWX table for the STATE FORECAST PRODUCT.  Done,
+	GK, (TP), 2/7/00.
+
+	tables/nwx/stf.bull
+
+t199.	Part of 018a2r.  Done, HZ, (TP), 2/11/00.
+
+	gempak/tables/nmap/locator.tbl
+
+t200.	Changes to NWX tables that result from the following change notices:
+	Service Change Notice 00-23 and Communications Identifier Message 
+	02-00.01.  Done, GK, (TP), 2/14/00.
+
+	tables/nwx/tmppcp.bull, plship.bull, mclim.bull, dclim.bull, ago.bull
+
+t201.	Changed the direction of the pips for stationary fronts in splpat.tbl.
+	Done, SJ, (TP), 2/15/00.
+
+	gempak/tables/draw/splpat.tbl
+
+t202.	Part of 007z.  Done, SJ, (TP), 2/17/00.
+
+	gempak/tables/draw/splpat.tbl
+
+t203.	Part of 021a3x.  Done, HZ, (TP), 2/18/00.
+
+  NEW:	gempak/tables/pgen/outlooktimes.tbl
+  NEW:  gempak/tables/pgen/outlook.tbl [moved from gempak/tables/nmap]
+
+t204.	Part of 010a3v.  Done, DKW, (TP), 2/24/00.
+
+	gempak/tables/config/datatype.tbl
+
+t205.	Changed the Honolulu High Seas Forecast in NWX.  FZPN10 PHNL --> 
+	FZPN40 PHFO; FZPS10 PHNL --> FZPS40 PHFO.  Done, SJ, (TP), 2/25/00.
+
+	tables/nwx/hseas.bull
+
+t206.	Added a new table dclim.stn to NWX. This fixed the bug of not
+	displaying Daily Climo Reports data on NWX.  Done, MLI, (TP), 2/28/00.
+
+		tables/nwx/master.tbl
+	NEW:	tables/nwx/dclim.stn
+
+t207.	Added county FIPS code to locator table.  Done, DP, (TP), 2/28/00.
+
+	gempak/tables/nmap/locator.tbl
+
+t208.	Part of 010a3x.  Done, SJ, (TP), 2/28/00.
+
+	gempak/tables/config/datatype.tbl
+
+t209.	Added 41 stations to inactive.tbl.  Added 6 stations to scdstn.tbl.
+	Added 12 stations to xrainsort.tbl.  Deleted 1 station in
+	snstns.tbl.  Added 12 stations in sfstns.tbl.  Done, AH, (TP), 2/29/00.
+
+	gempak/tables/stns/inactive.tbl, sfstns.tbl, xrainsort.tbl,
+						scdstn.tbl, snstns.tbl
+
+t210.	Part of 021a4a.  Done SL, (TP), 2/29/00.
+
+	gempak/tables/pgen/setting.tbl, sigmetbtn.tbl
+
+t211.	NWX header updates for 15 FEB 2000 from CID 01-00.02 and FNN 1593,
+	FNN 1593 CORR, and FNN 1600.
+
+	tables/nwx/zone.bull, tmppcp.bull, stf.bull, sfd.bull, offsh.bull,
+			now.bull, local.bull, hseas.bull, consig.bull,
+			coastal.bull, areaf.bull, airmet.bull, 
+			stations.tbl, master.tbl, guidata.tbl
+	NEW:  tables/nwx/unnumdp.bull, trpwxsu.bull, trpwxou.bull, 
+				trpwxdi.bull, trpcycu.bull, trpcycp.bull,
+				trpcycd.bull, pubtrpc.bull, maravnt.bull
+
+t212.	NWX table changes for 28 FEB 2000 from SCN 00-28, 00-29 COR, 00-30,
+	00-36 and DMM dated 2/18/00.  Done, GK, (TP), 3/6/00.
+
+	gempak/tables/stns/ffgzon.stn, zones.tbl
+	tables/nwx/ago.bull, mclim.bull
+
+t213.	Added two new table tmppcp.stn and rgtmpc.stn to NWX.  This fixes the
+	bug of not displaying Regional and State Temp/Precip data on NWX.
+	Done, MLI, (TP), 3/7/00.
+
+		tables/nwx/master.tbl
+	NEW:	tables/nwx/rgtmpc.stn, tmppcp.stn
+
+t214.	Part of 009m.  Done JC, (TP), 3/8/00.
+
+	gempak/tables/nmap/mod_res.tbl
+
+t215.	Part of 021a4c.  Done, SL, (TP), 3/8/00.
+
+	gempak/tables/pgen/prodbtn.tbl
+
+t216.	Reordered the buttons for the combination symbols and products
+	into a more logical arrangement.  Removed csymb07 and csymb09 buttons.
+	Done, AH, (TP), 3/10/00.
+
+	gempak/tables/pgen/combsymbbtn.tbl, prodbtn.tbl
+
+t217.	Created a table containing major islands and island groups in the
+	tropical Atlantic Ocean.  Added the ISLAND option to CLO.TBL and
+	LOCATOR.TBL so that NMAP and NMAP2 can use the table in the locator and
+	seek functions.  Done, AH, (TP), 3/10/00.
+
+		gempak/tables/nmap/locator.tbl
+		gempak/tables/config/clo.tbl
+	NEW:	gempak/tables/stns/island.tbl
+
+t218.	New packing tables for the upgraded eta sounding output.  
+	Done, KB, (TP), 3/13/00.
+
+	NEW:  gempak/tables/pack/sfeta.prm, sfeta.prm_aux, sneta.prm
+
+t219.	New grap-to-grid tables.  Part 0f 021a4g.  Done, DP, (TP), 3/13/00.
+
+	NEW:  gempak/tables/grphgd/grphgd.tbl, qpf.tbl
+
+t220.	Part of 018a2z.  Done, SJ, (TP), 3/13/00.
+
+	gempak/tables/config/miscset.tbl
+
+t221.	Updated tables according to NWS change notices (SCN 00-35 & SCN 00-37).
+
+	gempak/tables/stns/county.tbl
+	tables/nwx/dclim.bull, mclim.bull
+
+t222.	Part of 010a4k.  Done, DKW, (TP), 3/16/00.
+
+	gempak/tables/config/prmlst.tbl
+	gempak/tables/nmap/ship_parms.tbl
+	gempak/tables/parms/pcconv.tbl
+
+t223.	Part of 021a4n.  Done, DP, (TP), 3/17/00.
+
+	gempak/tables/grphgd/qpf.tbl
+
+t224.	Removed product 'FLUS82 KEYW' from local.bull per SCN 00-27.
+	Done, AH, (TP), 3/17/00.
+
+	tables/nwx/local.bull
+
+t225.	Added five CMAN stations to marine surface decoder station table.
+	Done, DKW, (TP), 3/17/00.
+
+	gempak/tables/stns/msfstns.tbl
+
+t226.	Organized the table - awdef.tbl - for use by the RBK device driver.
+	The table is now organized by National Center and type of product,
+	or desk.  Only products generated by the forecasters are in the table.
+	All automated products not done by the National Centers have been 
+	removed.  New products for some Centers have also be added.
+	Done, SJ, (TP), 3/20/00.
+
+	gempak/tables/pgen/awdef.tbl
+
+t227.	Added 12 stations to the inactive.tbl.  Added 3 stations to the
+	xrainsort.tbl.  Added 14 stations to the sfstns.tbl.  Done, AH, 
+	(TP), 3/20/00.
+
+	gempak/tables/stns/inactive.tbl, sfstns.tbl, xrainsort.tbl
+
+

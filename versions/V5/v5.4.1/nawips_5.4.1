@@ -1,0 +1,584 @@
+
+                           NAWIPS 5.4.1 Change Description Log
+
+	( * indicates a change that makes this version of NAWIPS
+	    incompatible with the previous version )
+
+
+
+001.	ASCII Decoders
+
+	a.  Changed the function dcb_peekc to return a return code
+	    as well as the data to handle binary data.  In addition,
+	    DC_OSNM was corrected to declare "parms" as a character
+	    array.  Done, JW, (SS), 8/20/96.
+
+	b.  Updated DCHRLY to ignore fractional visibilities that
+	    do not have a unit indicator in METAR reports.  Done,
+	    SC, SJ, (SS), 8/21/96.
+
+	c.  Added a check to DC_GHDR to skip blank header lines.
+	    Done, SJ, (SS), 9/10/96.
+
+	d.  Fixed a typo in dcosnm.f that was causing no stations to
+	    be added to the decoded dataset.  Done, DK, (SS), 9/11/96.
+
+	e.  Fixed a typo in DCADCD that was causing hourly decoder to 
+	    not store the special reports.  Done, SJ, (SS), 9/12/96.
+
+	f.  Added a declaration for the variable bbb in DCFFCD.
+	    This variable must be declared a character.  This error
+	    was causing a fatal error on the Solaris platform.
+	    Done, SC, (SS), 10/2/96.
+
+	g.  Added a check for "NOSPECI" in METAR bulletins.  
+	    Previously, any report that contained this string
+	    resulted in every report in the bulleting being
+	    mistaken for a SPECI.  Done, SC, (SS), 10/17/96.
+	    Tested complete, KT, 10/18/96.
+
+	h.  Changed empty string to blank string in FFDECD.
+	    Done, SJ, (SS), 10/29/96.
+
+	i.  Corrected type casting needed for debug statements in
+	    dcb.c.  Done, SJ, (SS), 10/29/96.
+
+	j.  Fixed return code in DC_STNS which was causing table information
+	    not to be written to the GEMPAK file.  Done, KT, (SS), 11/7/96.
+
+	k.  Made corrections to OSO METAR decoder routines to eliminate core
+	    dumps occurance in certain situations.  Done, SC, SJ, (SS),
+	    11/20/96.
+
+	l.  Made corrections to hourly decoder to properly decode those
+	    few Canadian stations that continue with the SAO format.
+	    In addition, the check for SAO reports is now down only for
+	    the first ten characters in the report.  Previously, the entire
+	    report was checked which sometimes caused METAR reports to
+	    be mistaken for SAO's.  Done, KT, (SS), 12/4/96.  Testing 
+	    complete, KT, 12/4/96.
+
+002.	GRIB Decoder
+
+	a.  Made minor improvements to NAGRIB.  For vertical coordinate
+	    118, set the LEVEL1 variable to the combined values of PDS
+	    bytes 11-12.  Improved the format of the print out of the
+	    grid navigation when GDOUTF=list.  Added option when 
+	    cpyfil=0, the user can override the GDS grid navigation
+	    values.  Increased the size of grids before subsetting to
+	    12 * LLMXGD.  Done, KB, (SS), 9/26/96.
+
+	b.  Added more valid vertical coordinates to GRIB decoder and
+	    table.  Done, DP, (SS), 10/8/96.
+
+	c.  Removed the updates made to NAGRIB in delivery 002a.
+	    The increased array sizes were causing the program
+	    to fail.  Also removed the "o" option that allowed
+	    the user to have the program ignore the GDS.  (Rolled
+	    back to the operational version of nagrib.f) Done,
+	    SS, (SS), 10/15/96.  Tested complete, SJ, 10/15/96.
+
+	d.  Added a check for bds length <= 0.  Previously, a core
+	    dump would occur if the length was not positive.  Done,
+	    DP, (SS), 12/04/96.
+
+
+003.	Grid Diagnostics
+
+	a.  Fixed check for invalid grid fields in DG_GETV that was
+	    improperly prohibiting calculations of some valid vector
+	    fields.  Also updated error message.  Done, TL, (SS),
+	    9/11/96
+
+
+
+004.	Parameter Calculations
+
+005.	Image Processing
+
+	a.  Fixed typos and problems with the brightness temperature 
+	    in IM_DROP.  Added the units to the NIDS products 
+	    parameter file.  Done, JC, (SS), 10/8/96.
+
+	b.  Added declaration for logical variable "negflg" in
+	    im_gm2gi.  Done, SJ, (SS), 10/29/96.
+
+	c.  Added declaration for widget variable "parent" in
+	    NuiCursor.c.  Done, SJ, (SS), 10/29/96.
+
+	d.  Corrected error in radius units for radar projection.
+	    Done, TL, DP, (SS), 10/29/96.
+
+	e.  Declared a dummy character variable that was not declared
+	    previously.  Also, made length unit meters for calculations
+	    in routine IM_AR2GM.  Done, TL, (SS), 11/14/96.
+
+	f.  Corrected image navigation for GINI mercator images.  Done,
+	    JC, SJ, (SS), 12/5/96.
+
+
+006.	GPLT Changes
+
+	a.  Corrected DPWTH and DPTND so that symbols are always plotted 
+	    using solid lines.  Corrected dimension of an array in IWTHR.
+	    Cleaned up utility program PLOTSYM.  Added three new weather symbols 
+	    to PLOTSYM.  Updated documentation for symbols.  Done,
+	    ML, (SS), 9/5/96.  Tested ML, complete, 9/6/96.
+
+     	b.  Corrected GDRMAP to only check for map quadrants when
+	    using CIA maps.  Done, GK, (SS), 9/6/96.  Tested, DK, complete
+	    9/9/96.
+
+	c.  Corrected header block "star" alignment in DSWTHR, DSPTND,
+	    and DSCTYP routines.  Done, SS, (SS), 9/6/96.
+
+	d.  Consolidated code in I-level routines for symbols.  Added
+	    to special symbols plotting routine.  Added plotting of
+	    frames around each symbol for utility program PLOTSYMS.
+	    Done, ML, (SS), 9/11/96.
+
+	e.  Modified PTND symbol drawing logic to use offsets in 
+	    a consistent fashion with other symbol drawing routines.
+	    Done, ML, (SS), 9/11/96.
+
+	f.  Corrected DPTND to merge updates from 006a and 006e.  Done,
+	    ML, (SS), 9/12/96.
+
+	g.  Modified barb drawing routine to allow drawing barbs on
+	    the opposite side of where they are normally plotted.
+	    This capability allows a way to compare wind fields.
+	    A digit has been added to the wind type parameter to
+	    implement this feature.  Done, DP, (SS), 9/17/96. Tested,
+	    DK, complete 9/19/96.
+
+	h.  Corrected error which was that icing, special symbols,
+	    and turbulence attributes were not being intialized in
+	    ginit.f.  Done, ML, (SS), 10/2/96.
+
+	i.  Modified map drawing routine to check latitude distance
+	    of a line segment for unmapped satellite projection.
+	    This change improves the accuracy of map lines plotted
+	    on unmapped satellite images.   Done, JC, (SS), 10/8/96.
+	    Tested, GK, complete, 10/8/96.
+
+	j.  Provided GPLT level and DEVICE level routines to
+	    draw fronts to any graphics devices.  Done, EW, (SS),
+	    10/18/96.
+
+	k.  Put pip size and stroke variables in devchr.cmn to properly
+	    scale them.  Also intialize front attributes properly.
+	    Done, EW, (SS), 10/25/96.
+
+	l.  Added variable curdev to DEVCHR common in preparation for
+	    unified device driver.  Done, SJ, (SS), 10/28/96.
+
+	m.  Changed GTEXT and GTEXTC to return if the length of the
+	    string is zero.  Done, SJ, (SS), 11/5/96.
+
+	n.  Corrected problems in front drawing routines.  Done, EW,
+	    (SS), 11/7/96.
+
+	o.  Removed restore and save graphics functions from GPLT.
+	    Done, SM, (SS), 11/13/96.
+
+	p.  Added color reset to GCIRCL. Suggestion from Jim Cowie.
+	    Done, SJ, (SJ), 11/29/96.
+
+	q.  Fixed error in GPLT. The call to GQMPRJ should use ST_STOI
+	    to convert "cprj" to integers for the message queue. The code
+	    had a call to ST_ITOS. This was clearly wrong, but somehow
+	    worked on all machines at NCEP. (Submitted by Steve Chiswell)
+	    Done, SJ, (SJ), 11/29/96.
+
+	r.  Corrected problems in front drawing routines.  Done, EW,
+	    (SJ), 11/29/96.
+
+007.	Device Drivers
+
+	a.  Moved the calculations for ISPANX and ISPANY from HINIT
+	    to HINITA in the PS device driver.  This was done since
+	    the calculations for the left, right, top, and bottom
+	    bounds was taken out of HINIT as part of an earlier
+	    device driver modification and ISPANX and ISPANY need
+	    the bounds' values.  Done, SJ, (SS), 10/2/96.
+
+	b.  Added new AFOS special symbols.  Done, SM, (SS), 10/2/96.
+
+	c.  Corrected declaration of lenstr in xtextc routine.  Done
+	    SJ, (SS), 10/29/96.
+
+	d.  Created a new device driver XWP.  This driver allows 
+	    plotting to an X window and creating a PostScript file 
+	    for printing.  The driver can also be used by GUI
+	    programs for printing without destroying the display
+	    window.  Done, SJ, (SS), 11/1/96.
+
+	e.  Made corrections to eliminate fatal errors in fax driver and
+	    Viewfax program.  Done, EW, (SS), 11/12/96.
+
+	f.  Several corrections to the device drivers were made.  Added
+	    the ability to change the colors in the PS driver by 
+	    specifying the GEMPAK name.  Fixed a problem in the PS driver
+	    when setting the RGB components, color name or using INIT.
+	    Fixed a problem in the XWP driver when using color 1 and 
+	    switching from XW to PS.  Done, SJ, (SS), 11/13/96.  
+	    Tested, DK, complete, 11/21/96.
+
+	g.  Corrected problems in fax driver and Viewfax in response
+	    to testing.  Corrected fax driver to correctly handle
+	    bit shifting on HPs.  Removed unused menus in Viewfax
+	    program.  Added products for Miami ATOLL analysis.
+	    Done, EW, (SS), 11/27/96.
+
+	h.  Corrected several problems in fax driver and Viewfax.
+	    Corrrected fax production on IRIX5 and SUN platforms.
+	    Correctly view fax products created on IRIX4 on all
+	    platforms.  Correctly view all 6 bity files on the SUN.
+	    Done, EW, (SS), 12/5/96.
+
+008.	Documentation
+
+	a.  Improved help for LUTFIL.  Done, SM, (SS), 8/21/96.
+
+	b.  Move the 3 appendices text files from the 
+	    /doc/User_guide/apx directory to gempak/txt/apx.
+	    Done, ML, (SS), 10/17/96.
+
+	c.  New version of NAWIPS Users Guide (version 5.4).  Done,
+	    ML, (SS), 10/29/96.
+
+	d.  Updated device help to include information about the XWP 
+	    driver.  Done, SJ, (SS), 11/19/96.
+
+	e.  Removed EPV function from documentation to be consistent
+	    with earlier update to the software.  Also, some clean
+	    up of the documentation for the grid diagnostics.
+	    Done, TL, (SS), 11/22/96.
+
+	f.  Made fonts for NWX and NAFOS consistent.  Done,
+	    CL, (SS), 11/27/96.
+
+	g.  Made help fonts for NTRANS and NSAT consistent.  Done,
+	    CL, (SS), 11/27/96.
+
+	h.  Updated installation guide for NMAP and VIEWFAX.  Done,
+	    SS, (SS), 12/6/96.
+
+	i.  Updated NMAP helps and made other helps consistent.  Done,
+	    ML, (SS), 12/6/96.
+
+	j.  Fixed NMAP error pop-up problem when error button is pressed
+	    with no error message present.  Done, CL, (SS), 12/6/96.
+
+
+009.	Scripts/NTS files
+
+	a.  Updated compile scripts to remove main programs from
+	    object libraries.  Done, SJ, (SS), 12/5/96.
+
+
+010.	General GEMLIB/CGEMLIB Changes
+
+	a.  Updated version number to 5.4.1 in IP_VERS routine.
+	    Done, SJ, (SS), 8/19/96.  Tested SS, complete,
+	    8/19/96.
+
+	b.  Fixed a problem which caused the non-execution of programs
+	    if $RESPOND is set to NO.  Done, KT, (SS), 8/21/96.  Tested
+	    KT, complete 8/29/96.
+
+	c.  Updated ST_RXBL so that it uses separate buffers for input
+	    and output strings.  Also added the routine to TESTST.  
+	    Also, updated ST_LSTC, ST_LSTF, and ST_LSTI for 
+	    AIX systems.  Done, DK, (SS), 8/21/96.
+
+	d.  Corrected IN_HILO to properly handle case where no semicolons 
+	    are specified for symbol and range input strings.  Done,
+	    GK, (SS), 9/4/96.
+
+	e.  Corrected the size of the IMARK table dimension in the imark
+	    routine.  Done, ML, (SS), 9/4/96.
+
+	f.  Use GEMPAK earth radius instead of reading radius from McIdas
+	    header.  This change improves the navigation.  Also improved
+	    precision of navigation equations.  Done, TL, (SS), 9/12/96.
+	    Tested TL, complete, 9/13/96.
+
+	g.  Modified GG_SPLT to eliminate the station information
+	    arrays.  Changed the looping over the stations in the
+	    table.  Done, SJ, (SS), 11/05/96.
+
+	h.  Modified TB_RSTN to call TB_ASTN.  Added station name
+	    to calling sequence of TB_ASTN.  Done, SJ, (SS), 11/05/96.
+
+	i.  Corrected DG_VECR to properly return diagnostic error message.
+	    Done, DP, (SS), 11/07/96.
+
+	j.  Modified conversions of character and numerical weather codes
+	    and added conversion for METAR characters to the GEMPAK WNUM
+	    parameter for storage.  Removed conversions involving FAA 604
+	    and Ashville datasets.  Done, SJ, (SS), 11/20/96.
+
+	k.  Corrected parameter order in the wet-bulb temperature routines 
+	    to be consistent with documentation.  Refined latent heat of
+	    vaporization and specific heat constants based on Bolton's
+	    formulation.  Done, TL, (SS), 11/20/96.
+
+	l.  Use virtual temperature instead of temperature for several
+	    stability parameter calculations.  Also, enabled surface-
+	    based integration in the thermodynamic functions.  Done,
+	    TL, (SS), 11/20/96.
+
+	m.  Fixed GDU_GINP to parse for GDDATIM with two grid times, 
+	    i.e, times separated by a colon.  Corrected calling sequence
+	    in TESTGR for GR_LIST.  Done, SJ, (SS), 11/20/96.
+
+	n.  Corrections to weather code routines for METAR problems
+	    detected as a result of testing.  Done, SJ, (SS),
+	    11/25/96.
+
+	o.  Changed ST_RNAN and ST_RMNM to use temporary character
+	    variables for modifying the contents of the output string.
+	    Added ST_RMNM to TESTST. Done, SJ, (SJ), 11/29/96.
+	    Testing complete, TL, 12/2/96.
+
+	p.  Modified CST_RMBL and CST_RXBL to remove the use of STRTOK.
+	    Fixed typo in TESTCST. Replaced TESTCST_LINK with a form
+	    that is consistent with other GEMPAK link scripts.
+	    Done, GK, (SJ), 11/29/96.
+
+	q.  Corrections to stability calculations. (010l)
+	    Done, TL, (SJ), 11/29/96.
+
+	r.  Improved algorithm for LFCT as a result of testing.  
+	    Updated stndex.hl2 documentation.  Done, TL, (SS), 12/3/96.
+	    Testing complete, GK, 12/3/96.
+
+011.	General GEMPAK Program Changes
+
+	a.  Corrected GDPLOT problem where HI/LO plotting did not properly
+	    function when options were specified.  User input variables
+	    were increased to 72 characters.  Done, GK, (SS), 8/12/96.
+
+	b.  Added new capability to specify file name by file type, e.g,
+	    HRLY for observed surface data.  This capability builds the
+	    appropriate file name and path for the corresponding data
+	    type.  Several programs have been updated to use this feature.
+	    Done, DK, (SS), 8/22/96.
+
+	c.  Redelivred 011a with 011b changes incorportated.  Done, GK,
+	    (SS), 8/23/96.
+
+	d.  Corrected SFGRAM so that it can handle 8 character station ID's.
+	    Done, KB, (SS), 9/4/96.
+
+	e.  Corrected utility map program SSFGSF so that it does not 
+	    introduce erroneous line breaks at intermediate map file record
+	    boundaries.  Done, GK, (SS), 9/9/96.
+
+	f.  Added capability to specify file name by file type to remaining
+	    programs.  Also, made some minor corrections related to this
+	    change to all programs.  Done, KT, (SS), 9/9/96.
+
+	g.  Corrected the template for the MRFX model in the table that
+	    is used for file types (datchr.tbl).  Done, KT, (SS), 9/11/96
+
+	h.  Removed all Makefiles from GEMPAK source directories and 
+	    Gemenviron from the home directory.  Done, SJ, (SS), 9/25/96.
+
+	i.  Modified GDMOD to accept input for time, vertical coordinate,
+	    levels, and grid name for extraction of grids from one file
+	    to another.  GDNUM was removed.  Done, SM, (SS), 10/4/96.
+
+	j.  Modified GDWIND to allow thinning of winds as a function
+	    of latitude.  This is a useful feature for plotting 
+	    winds from a cylindrical grid when the meridians converge.
+	    Done, DP, (SS), 10/7/96.  Testing complete, DK, 11/1/96.
+
+	k.  Corrected problems found in testing for GDMOD update (011i.).
+	    Done, SM, (SS), 10/24/96.
+
+	l.  Corrected SNSBOR to eliminate an extra line drawn in the
+	    surface pressure border in SNCROSS.  Done, SJ, (SS),
+	    10/29/96. 
+
+	m.  Modified GDDELT to accept input for time, vertical coordinate,
+	    levels, and grid name for deletion.  GDNUM was removed.
+	    Done, SM, (SS), 11/5/96.
+
+	n.  Modified GDINFO to accept input for time, vertical coordinate,
+	    levels, and grid name for listing.  Done, SM, (SS),
+	    11/5/96.
+
+	o.  Corrected problems found in testing GDMOD, GDDELT and GDINFO.
+	    (011i,k,m,n) Done, SJ, (SJ), 11/29/96.
+
+	p.  Corrected additional problems found in testing GDMOD, GDDELT,
+	    and GDINFO.  Done, SJ, (SS), 12/3/96.  Testing complete,
+	    KT, 12/3/96.
+
+012.	General GUI Modifications
+
+	a.  Modified background color of NMAP and NTL in the corresponding
+	    resource files. Done, CL, (SJ), 11/29/96.
+
+013.	NTL
+
+	a.  Modified appearance of NTL icons.  Made icons closer together.
+	    Changed the color of the buttons to a darker green.  Done,
+	    CL, (SS), 11/25/96.
+
+014.	NTRANS
+
+	a.  Modified NTRANS so that it will swap bytes of metafiles created
+	    on machines where byte swapping is done, e.g., DEC/Alpha.  Done,
+	    SC, (SS), 11/12/96.  Tested SS complete, 11/13/96.
+
+	b.  Fixed problem where NTRANS was not trapping case where there
+	    are too many files in one meta file directory.  Done,
+	    CL, (SS), 11/27/96.
+
+	c.  Changed the size of the help window from 60 characters to 75.
+	    CL, (SJ), 11/29/96.
+
+015.	NSAT
+
+	a.  Removed tabs and spaces in front of preprocessor commands
+	    in some NSAT and NWX routines.  Done, SJ, (SS), 10/29/96.
+
+
+016.	NWX
+
+	a.  Added the capability to display hourly METAR observations in 
+	    undecoded format.  Specials are also displayed.  Also changed 
+  	    time selection option from "today, yesterday, day-2" to "Hours
+            Covered" (1, 3, 12, 24, 48). This specifies the number of hours
+	    back from the current time to search. Done, DP, (SS), 9/12/96
+
+	b.  Corrected display of hourlies so that specials are displayed.
+	    Done, DP, (SS), 10/8/96.
+
+	c.  Added bug fixes to some NWX routines made by Steve Chiswell.
+	    Done, DK, (SS), 10/31/96.
+
+	d.  Corrected grammatical errors in NWX helps.  Done, SM,
+	    (SS), 11/21/96.
+
+	e.  Removed time limit checking for scheduled products. 
+	    For METAR observations, now use the appropriate surface
+	    stations table, sfstns.tbl.  Grayed out previous and
+	    next buttons for observational data listing.  Corrected
+	    array size declaration for number of stations in 
+	    gemprm.h.  Removed blanks from station names in
+	    sfstns.tbl.  Done, DP, (SS), 11/26/96.
+
+	f.  Made corrections as a result of testing.  Moved the data
+	    selection pop-up slightly so that the top of the text
+	    can be seen.  Added a check for the maximum number of files
+	    that can be in a directory.  Done, DP, (SS), 12/2/96.
+
+	g.  Fixed fatal error when user specifies a search time upon
+	    entering the programming before selecting a product.  Done,
+	    DP, (SS), 12/6/96.
+
+017.	AFOS
+
+	a.  Developed a new version of the AFOS emulator that has a user
+	    interface based on NSAT.  Developed AFOS UTF file decoders.
+	    The AFOS emulator utilizes these decoders.  Done, DK, (SS),
+	    10/21/96.
+
+	b.  Developed a version of the AFOS emulator, called aftext,
+	    that displays AFOS text as a separate program.  Done,
+	    DK, (SS), 10/28/96.
+
+	c.  Fixed several bugs in NAFOS and rewrote gmpk_gpmap
+	    in nafgmpk.c.  Done, DK, (SS), 10/31/96.
+
+	d.  Fixed several problems in NAFOS and AFTEXT in response
+	    to CDB testing.  Done, DK, (SS), 11/27/96.
+
+	e.  Fixed several problems in NAFOS in response
+	    to CDB testing.  Done, DK, (SS), 12/2/96.
+
+	f.  Fixed several additional problems to NAFOS and AFTEXT
+	    in response to CDB testing.  Done, DK, (SS), 12/4/96.
+
+	g.  Fixed fatal bug due to incorrect array declaration in
+	    AFTEXT.  Done, DK, (SS), 12/5/96.
+
+	h.  Fixed problem with overlays with multiple frames.  Corrected
+	    problem on IRIX 4.  Done, DK, (SS), 12/9/96.
+
+018.	NMAP
+
+	a.  Version 0 of the NMAP program.  Done, CL, SW, (SS),
+	    10/22/96.
+
+	b.  Corrections and modifications to NMAP as result of testing.
+	    Done, CL, SW, (SS), 11/15/96.
+
+	c.  Several corrections to NMAP were made.  An error in the
+	    time line was corrected.  Apply button were changed to
+	    Accept and Apply/Load to Load.  Corrected bug in getting
+	    dominant time.  Changed Help topic list widget name.
+	    Done, CL, SW, (SS), 11/27/96.
+
+	d.  Corrections to NMAP were made as a result of CDB testing.
+	    Corrected problem with warning messages; large time intervals
+	    causing crashes; and surface hourly title (SAO to METAR).
+	    Done, CL, (SS), 12/2/96.
+
+	e.  Additional corrections to NMAP made as a result of CDB testing.
+	    Corrected zoom problem in NMAP and NSAT where zooming area minimum
+	    lat/lon does not correspond to the lower left corner.  Fixed
+	    problem in NMAP where right mouse button closing of data
+	    selection window produced errors.  Also fixed a problem where
+	    a warning pop-up was hidden from the user.  Done, CL, (SS),
+	    12/5/96.
+
+	f.  Corrected data selection problem when there is one frame and
+	    switch to a different satellite image.  Done, CL, SW, (SS),
+	    12/5/96.
+
+	g.  Modified the Makefile to properly create the SUN OS executable.
+	    Done, SJ, (SS), 12/6/96.
+
+019.	MAP FILES
+
+	a.  Generated new county map files using NWS generated Shapefiles.
+	    Done, GK, (SS), 9/26/96.
+
+	b.  Created a mixed resolution map with high resolution over
+	    the U.S. and medium resolution map over the rest of
+	    the world.  This was done to increase performance of
+	    map drawing in the NAFOS program.  Done, GK, (SS),
+	    11/27/96.
+
+	c.  Added the Great Salt Lake, Lake Pontchartrain, La, and
+	    Lake Okeechobee, Fl to HIPOWO.CIA map file.  Done, GK,
+	    (SS), 12/4/96.
+
+
+
+
+
+	SJ - Scott Jacobs		JA - Jeff Ator
+	DP - Dave Plummer		DKW - Duane Kidwell
+	LS - Larry Sager		RH - Robert Hollern
+	SS - Steve Schotz
+	DK - Dave Keiser		PB - Peggy Bruehl
+	KT - Kevin Tyle			JC - Jim Cowie
+	GK - Gary Krueger		SC - Steve Chiswell
+	TL - Tiros Lee
+	SM - Sarah Maxwell
+	CL - Chien Lin
+	SW - Shanshan Wang
+	ML - Mike Linda
+	EW - Ed Wehner
+	ES - Edward Safford
+
+	RS - Russ Schneider
+	KB - Keith Brill
+	JW - Jim Whistler
+

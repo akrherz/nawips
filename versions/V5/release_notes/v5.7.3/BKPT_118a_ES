@@ -1,0 +1,83 @@
+The Tropical Cyclone Advisory (TCA) element in PGEN.
+
+The TCA element is a new addition to PGEN to support the TPC's
+Tropical Storm and Hurricane forecasts.  The TCA is the graphical
+interface to the generation of the Tropical Cyclone Watch/Warning
+graphic (formerly the Kelly graphic).
+
+To create a TCA element in PGEN follow these steps:
+
+   a.  Start NMAP2, and click on the product generation icon; the 
+       PGEN palette pops up. 
+	       
+   b.  In the PGEN palette, click on 'MET' in the 'Classes' panel 
+       and then click on 'TCA' in the 'Objects' panel; the TCA 
+       attributes edit dialog pops up.
+
+   c.  Create new TCA elements: 
+
+       In the 'TCA Attributes' dialog, give all information in the 
+       top panel and select severity and advisory type.  
+
+       In the middle panel click on the 'New Segment' button and 
+       move the mouse into the main NMAP window.  The break point 
+       label drag box should appear with the name of the nearest 
+       break point to the current cursor location. 
+
+       A left mouse click will select an individual break point and 
+       put it in the middle panel of the TCA attributes window.  A
+       second left mouse click will select the second point of the
+       segment.  Once the second break point is identified, a new 
+       segment will be put in the list box in the bottom panel. 
+
+       To edit a TCA element in PGEN follow these steps:
+
+           1.  In PGEN in the select function, click on an existing TCA
+	       element.  The breakpoints of the segments of this TCA will be
+	       marked with open blue circles and the attributes of the TCA
+	       will be loaded into the TCA attribute window.
+
+           2.  To change any items of the TCA attributes in the top panel
+	       (including Storm Type, Advisory Number, etc), make the desired 
+	       changes and click the Apply button.
+
+           3.  To change the attributes of a segment follow these steps:
+
+               Click on the desired segment in the list at the bottom of 
+    	       the window.  This will highlight that segment within the
+	       list (i.e. invert the colors).  This will place that 
+	       segment's information in the middle panel of the attributes 
+	       window.  Also the markers for that segment's breakpoints 
+	       will change from the open, blue circles to filled, white 
+	       circles.  All other segments of the TCA will remain 
+	       unchanged.
+
+	       Make the desired changes to the middle panel of the 
+	       attributes window (i.e. change Advisory Type or Severity).
+	       Click on the Apply button. 
+
+	   4.  To change the breakpoints of a segment follow these steps:
+
+	       Click on the desired segment in the list at the bottom of 
+	       the window.  This will highlight that segment within the
+	       list (i.e. invert the colors).  This will place that 
+	       segment's information in the middle panel of the attributes 
+	       window.  Also the markers for that segment's breakpoints 
+	       will change from the open, blue circles to filled, white 
+	       circles.  All other segments of the TCA will remain 
+	       unchanged.
+
+	       Left click on one of the breakpoints with the white 
+	       circles.  The breakpoint will turn red and the breakpoint
+	       drag box will appear again.  The drag box will contain the
+	       name of the nearest breakpoint to the cursor location.  The
+	       next left click will select a new breakpoint, and a middle
+	       mouse click will cancel the operation without making a change
+	       to the segment's  breakpoints.
+
+ 	   5.  To add a new segment to an existing TCA element, click on
+	       the New Segment button and select the two breakpoints using
+	       left mouse clicks.
+
+
+	   

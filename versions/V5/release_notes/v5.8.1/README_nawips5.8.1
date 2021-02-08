@@ -1,0 +1,883 @@
+               N-AWIPS 5.8.1 Release Notes
+                   	12/3/04 
+
+Version 5.8.1 covers development from September 13th to December 2, 2004.  
+
+
+******************************************************************************
+
+I.  Product Generation Changes
+	
+    A.	NMAP2 Product Generation Improvements 
+
+	1. GFA/AIRMET (AWC)
+
+	Several new features and enhancements have been added to the GFA
+	element in support of creating the Graphical AIRMET (GAIRMET) and
+	the derived text AIRMET product.  
+
+	In this release, preliminary capabilities have been added for TEST 
+        AND EVALUATION PURPOSES only.	
+
+    	   a. GFA GUI Improvements and Redesigned gfa.tbl (AWC)
+
+	      The GFA GUI and associated table $GEMTBL/pgen/gfa.tbl have
+	      been enhanced to support Graphical AIRMET Production and the
+	      creation of AIRMET text from the graphics.    
+	      purposes.  
+
+	      The "GFA Create/Edit" GUI works in tandem with the "Filter 
+              Control" and "Layer Control" GUIs as in the previous version.
+	      Each hazard is placed on a separate layer and filtering controls
+	      the display and editing of desired forecast times.
+
+	      To create a Graphical AIRMET (GAIRMET), load the appropriate
+	      Layer Product File (LPF) to specify the appropriate hazard
+	      for each layer.  A sample LPF, $GEMTBL/pgen/gfa.lpf is provided
+	      as guidance.  Click on the "Filter" action and the GFA object
+	      under the "MET" class to invoke the "Filter Control" and "GFA
+	      Create" GUIs, respectively.  Select the desired hazard by 
+              clicking on the matching layer name.   Draw the set of snapshots
+	      for each hazard area.  For each hazard area it is important
+	      to uniquely identify it with the "Tag" and "Upd" so that
+	      the smear all will properly create all the smears.  Set the
+	      appropriate hazard attributes using the widgets on the
+	      "GFA Create" GUI.  Note that attributes are "remembered" between
+	      snapshots so they need not be edited more than once unless they
+              need to change among the snapshots.  The "Filter Control" GUI 
+              can be used to display or cycle through desired forecast times 
+              or smears.  When a particular hazard is complete, click the 
+              "Smear" action and click "Smear All" to create all the smears 
+              and outlook smears for that hazard.  See the Smear All 
+              description for additional details.  When all hazards types are 
+              completed, click the "Save All" action to save all the output 
+              VG files.  Then the airmet_format program can be executed on the 
+              VG files to create the AIRMET message.  See that program's 
+              description below for additional details.
+
+	      The "GFA Create/Edit" GUI has been modified to reflect necessary 
+              changes per forecast process definition.  The table 
+              $GEMTBL/pgen/gfa.tbl drives this highly-dynamic GUI.  Hazards, 
+              tags, forecast hours and hazard-specific meta-information choices 
+              are all specified by this table. 
+
+	      The gfa.tbl table specifies items relating to the GFA element 
+              including:
+
+	      'HAZARD'	List of hazards and their associated AIRMET
+			designation (Sierra, Tango, or Zulu). This
+			list appears on the GFA GUI.
+
+	      'FCSTHR'	Valid forecast hours. This list appears on
+			the GFA GUI.
+
+	      'TAG'	These values are used to associate time
+			sequence snapshots of hazards.  As delivered,
+			the list of tags is 1W through 9W ('W'
+			indicating Western FA Region).  Additions
+			of 1C through 9C and 1E through 9E may be
+			added for the Central and Eastern FA Regions.
+			This list appears on the GFA GUI.
+
+	      Each hazard listed under 'HAZARD' may have its own set of 
+              ancillary information.  For instance, the TURB hazard has options 
+              for 'Frequency', 'Severity', 'Top/Bottom', and 'DUE_TO' 
+              conditions.  These options appear automatically on the GFA GUI 
+              and the selected information is saved in the GFA element 
+              accordingly.  The site administrator should modify the table
+	      to add the appropriate ancillary information for each hazard.
+	      Ancillary information has been included in the table for
+	      TURB, ICE and MT_OBSC as guidance.
+
+	      *** Important - Please Note ***
+
+	      The internal storage mechanisms for the GFA element have been
+	      redesigned in this release.  As a result of this redesign,
+	      VG files containing earlier versions of the GFA element are not
+	      compatible with 5.8.1 and cannot be loaded successfully.
+	      Because this is not yet an operational element/product, no
+	      conversion mechanism is provided.  
+
+	   b. Preliminary AIRMET Formatter (AWC)
+
+              A preliminary AIRMET formatter has been added for TESTING AND 
+	      EVALUATION purposes.  This formatter includes the capability to 
+              generate most of the Tango AIRMET from the VG files created 
+              from the "GFA Create/Edit" GUI.  The formatter does not
+              create the outlook section and does not yet encode Sigmet
+              references.  These capabilities will be added in future releases.
+
+	      For this release, the formatter is delivered as an independent
+	      application, called airmet_format.  The formatter will be 
+              incorporated directly into NMAP as a GUI in the next release. 
+
+	      To create the Tango AIRMET, create turbulence and low-level wind
+              shear VG files using the NMAP "GFA Create/Edit" GUI and layers.  
+              Type 'airmet_format" with the following command arguments:
+
+	      FA_Area[:FA_Area] cycle_time flag VGF_file[ VGF_file ] where,
+
+
+		FA_Area is any combination of SFO, SLC, CHI, DFW, BOS, and 
+                MIA separated by ':'
+
+		cycle_time is cycle time (00, 06 or other values)
+
+		flag is 0 (Normal) or 1 (Test)
+
+		VGF_files is VG file names separated by white space.
+
+	     The AIRMET text will be sent to the standard output by the program.
+             Type 'airmet_format -h' to get help on the program.
+
+	   c. Added text box pointer to GFA Label Box (AWC)
+
+              In an effort to improve the visual connection between a GFA 
+              object and its text box, two changes have been made.  First, 
+              the text box is now back filled, so objects underneath are not 
+              visible.  Second a pointing arrow has been added, pointing from 
+              the text box to the center of the GFA figure.  This pointing 
+              arrow is drawn if the center of the text box is outside of the 
+              GFA figure.  No user interaction is required to draw the arrow. 
+              It is part of the way GFA elements are displayed in product 
+              generation.  The color of the pointing line is the same as  
+              the GFA figure.
+
+	   d. Smear Algorithm (AWC)
+
+	      The smear function now employs a simpler algorithm to
+	      accomplish a 'smear' of arbitrary polygons. Referred to as the
+	      'rubber band' technique, the resulting polygon is essentially
+	      that of placing/stretching a rubber band around both polygons. 
+	      Worst case flight levels from the snapshots are now assigned to 
+              the resultant smeared polygon. 
+
+	   e. Smear All (AWC)
+
+              A "Smear All" button has been added to the Smear Control 
+              window.  This button creates both Smear and Outlook elements 
+              for every unique combination of hazard type, update and tag 
+              number on the current layer.  Thus, multiple sets of hazard snap-
+              shots can be smeared automatically on the active layer.  Smear 
+              all does not perform smears on non-active layers.  Note that 
+              the smear all function deletes all existing smears on the active 
+              layer before creating a new set of smears.  This feature 
+              eliminates the possibility of duplicate smears for a given 
+              hazard area if the "Smear All" is applied more than once.  A 
+              second color picker, controlling the color of the Outlook, has 
+              also been added to the Smear Control window.
+
+              Open the Smear tool by clicking on the product generation 
+              palette.  The Smear Control window appears.  When the user 
+              clicks the "Smear All" button the current layer is searched 
+              for GFA elements.  Elements that have the same hazard type 
+              tag, and update number are examined.  Note that it is critical that
+	      each set of snapshots for a hazard type have a unique 
+              combination of tag and update numbers for the smear all function 
+              to work properly.  If there is an element with 
+              a forecast hour of 0, 3, and/or 6, then a Smear is created.  
+              If there are additional elements of a forecast hour of 9 and/or 
+              12, then an Outlook element is created.  Note that at the
+	      request of the AWC, the Outlook element smear is defined to be 
+              the difference between 0 through 12 hour smear minus the area 
+              encompassed by the 0 through 6 hour smear.
+
+	   f. Point Reduction (AWC)
+
+              A point reduction algorithm has been added to the Smear 
+              function.  If the user smears GFA elements, then the number of 
+              points in the resulting smear element is reduced to meet the 
+              specified threshold value.  This value is stored in 
+              the $GEMTBL/config/prefs.tbl file as the SMEAR_REDUCE_THRESHOLD 
+              value.  The points are removed in such a way as to preserve 
+              as much of the general shape of the figure as possible.
+
+	      This point reduction is applied to GFA elements only 
+              (i.e., not to closed lines).  It cannot be turned off in the 
+              "Smear Control" GUI.
+
+	   g. Add interpolation level rounding  (AWC)
+
+              The flight levels for interpolated GFA elements are now rounded 
+              to the nearest 100 feet.  In version 5.7.4 these flight levels 
+              were not rounded so the linear interpolation algorithm expressed 
+              the flight levels to the nearest foot.  The user interface for 
+              interpolation has not been changed.
+
+	   h. New bounds file for use in text product creation (AWC)
+
+	      A new bounds file depicting the 6 FA Areas (BOS, MIA, CHI, DFW,
+	      SLC, and SFO) with the alias  'FA_AREA_BNDS' is now available. 
+
+	2. Addition of Dual Level Clustering to Watch Processing (SPC)
+
+	Dual level clustering functionality has been added to watch processing
+        to discriminate between permanent clusters, e.g., independent cities,
+        and event-driven clusters, e.g., Metro areas.  There are now two levels 
+        of clustering: (1) Transient clustering  these are clusters that can be 
+        turned on and off by the "Watch Specification and County List" GUI 
+        and in the "List Attribute" GUI.  These clusters are listed in the 
+        table, $GEMTBL/stns/countyclust.tbl. (2) Permanent clusters are 
+        clustered counties/marine zones that are non-negotiable and therefore, 
+        they are not affected by the on/off toggle in the GUIs.  If the 
+        county/marine zone is in(out), then the clustered counties/marine 
+        zones associated with it will ALWAYS be in (out). 
+
+        A new tag, PERM_CLUST has been added to $GEMTBL/config/prefs.tbl. 
+        This tag allows the permanent clustering to be turned on or off 
+        by setting the tag to TRUE or FALSE.  The default has been set to 
+        TRUE.  Permanent clusters should be carefully selected.  It is 
+        recommended that clusters including independent cities within 
+        counties or small marine zones be included as permanent clusters.
+
+	A new permanent cluster table $GEMTBL/stns/permclust.tbl MUST be
+	created by the site administrator.  The new table has the same
+	format as the $GEMTBL/stns/countyclust.tbl.
+
+	When modifying the $GEMTBL/stns/countyclust.tbl and the 
+        $GEMTBL/stns/permclust.tbl there are several rules that must be 
+        followed.  Otherwise, unexpected results may occur.  
+
+	a. There shall not be overlaps between the two tables.  This means 
+           that the same county or marine zone clustering cannot appear in 
+           both tables.  For example, the cluster group Fairfax county and 
+	   Fairfax City, cannot appear in both tables.
+
+        b. A given county, city or marine zone MUST not appear more than
+	   once within each table.  For example, if Fairfax county is in
+	   the D.C metropolitan area cluster in the table, countyclust.tbl,
+	   it cannot appear in another cluster group in this table.  This
+	   rule prevents the "chain reaction" that can occur when clicking
+	   on/off counties within a cluster.  
+
+	   *** Important - Please Note ***
+
+	   The current countyclust.tbl MUST be edited to remove duplicate
+	   occurrences of counties, cities and marine zones before implementing
+	   this release.  Again, a new permanent cluster table, 
+           $GEMTBL/stns/permclust.tbl, MUST be created by the site 
+           administrator.
+
+	c. In $GEMTBL/stns/permclust.tbl, the types of grouping allowed are:
+
+	   County + city1 + city2 + ...
+	   County + small marine zone1 + small marine zone2 + ...
+	   Large marine zone + small marine zone1 + small marine zone2 + ...
+
+	d. In $GEMTBL/stns/countyclust.tbl, the types of grouping allowed are:
+
+	   County + county1 + county2 + ...
+	   County + large marine zone1 + large marine zone2+ ...
+	   County + city1 + city2 + ...
+	   Large marine zone + large marine zone1 + large marine zone2 +...
+	   Small marine zone + small marine zone1 + small marine zone2 +...
+
+	3. WBC County Fill Option (SPC)
+
+	   A WBC County Fill Option has been added to NMAP2 PGEN to enhance
+           quality control with respect to county selection.  A Fill
+	   widget has been added to the "Watch Attributes" GUI.  The new 
+           Fill widget has a "Use Fill" toggle button and Color selection GUI.  
+           Initially, the "Use Fill" button is not set, which means markers 
+           are used as in the previous release.  If county fill is desired, 
+           click the "Use Fill" button.  The fill color can be selected using 
+           the new fill Color GUI.  The watch (not fill) Color GUI that is at 
+           the top of the "Watch Attribute" GUI specifies the outline color when 
+           using county fill and continues to be used for the marker, watch 
+           box, and anchor point color when using markers.  Default colors for 
+           the county fill are obtained from the minor color in setting.tbl 
+           for the w_type of watch box having vgclass of CLASS_WATCHES.   
+
+	4. WBC Create WOU Final for Replaced Watches (SPC)
+
+	   The capability to automatically generate a final WOU update text 
+           message for replacement watches has been added to NMAP2.  When 
+           the new watch is issued, those watch numbers which appear in the 
+           "Replaced Watches" text box in the "Format Watch" GUI have a final 
+           WOU update text message created for each replaced watch number. 
+	   Note that the final WOU text message is created from the
+	   appropriate ww####.txt file.
+
+	5. WBC Change Wording in SAW and SEL (SPC)
+
+           Minor wording changes were made to the SAW and SEL product in
+	   collaboration with the SPC. 	   
+
+	   For the SEL text product, the word, APPROXIMATELY was added in the 
+           description of the watch area.  Also at the end of the watch area 
+           description, the sentence, FOR A COMPLETE DEPICTION OF THE 
+           WATCH SEE THE ASSOCIATED WATCH OUTLINE UPDATE (WOUS64 KWNS WOU#)
+	   was added.
+
+	   For the SAW, the following statement was appended at the end of 
+           the text product, THIS IS AN APPROXIMATION TO THE WATCH AREA. 
+           FOR A COMPLETE DEPICTION OF THE WATCH SEE WOUS64 KWNS FOR WOU#.
+
+	   The appearance of these additions in the text products is 
+           controlled by the preference flag, ADD_WATCH_APPROX located in 
+           $GEMTBL/config/prefs.tbl.  If the flag is set to TRUE, then the 
+           statements appear in the text products.  Otherwise, all of the 
+           additional statements are omitted from the text products. 
+
+	6. Status Content initialized w/previous WOU/WCN (SPC)
+
+	   When creating the enhanced watch status message (WSM) active 
+           county listing, the user now has the option of using the current 
+           WCNs to update the WSM LIST element.  Updating the WSM LIST 
+           element before drawing the status line will help make the 
+           status message more consistent with the previous WSM and more 
+           consistent with the watch outline update message (WOU-update) as 
+           WFO offices clear or add counties.
+
+	   The tag which controls whether or not the forecaster has the 
+           option to use WCNs is USE_WCN_WSM and it is set in the table 
+           $GEMTBL/config/prefs.tbl.  It is set to FALSE as its default.  
+
+	   If the USE_WCN_WSM flag is set to true, the following procedure 
+           applies.  Select the status line object and then select the watch 
+           to update.  A dialog pop up appears allowing the user to use WCNs 
+           to update the LIST element.  If Yes is selected, then the LIST 
+           element is updated through two methods: 
+
+           (1) If the LIST element county is not in the WCN county list, that 
+           county is removed from the LIST element. 
+ 
+	   (2) If a new WCN county is not in the original watch county list, 
+           it is added to the current LIST element. 
+
+	   After the LIST element has been updated, the modified LIST element 
+           is displayed for the forecaster and the ww####.vgf is updated 
+           before the status message line is drawn.  If No is selected, then 
+           WSM creation proceeds as it currently does; meaning the user 
+           selects and turns on/off counties as necessary.
+
+	7. Modifications to the CCFP User Interface and Display (AWC)
+
+	   Two minor changes have been made to the CCFP GUI at the request of
+           the AWC:
+
+		1) Renamed the label "Probability" to "Confidence".
+		2) Reduced the number of confidence categories from 3 to 2.
+		   The two categories are now:
+		      1. Low Confidence    25-49%
+		      2. High Confidence   50-100%
+
+	8. Modified Display of JET Elements (AWC)
+
+	   The JET element was modified to display a "+" prepended to positive
+	   flight level deviations.
+
+    B.  Product Generation Pre/Post-Processing Programs
+
+	1. Create Mid-level SIGWX (SWM) BUFR Files (AWC)
+
+        Mid-level SIGWX BUFR files can now be created by first making a VG 
+        file with SWM elements, then running program VG2UKA to convert the VG 
+        file to an interim ASCII format, and finally running program BUFRENC 
+        to create the BUFR file.  With the exception of clouds, all elements 
+        of a mid-level SIGWX chart (SWM) are created in product generation in 
+        the same way as for a high-level chart (SWH).  For SWM charts only, 
+        section 2 of the BUFR message is used to specify, in plain text, 
+        the geographic area(s) to which the data applies.  See the NMAP2 help 
+        for Product Generation-BUFR and the help for VG2UKA and BUFRENC for 
+        more information.
+
+        2. New BUFR prefs table implemented (AWC)
+
+        A BUFR prefs table, $GEMTBL/bufr/bufrprefs.tbl, has been introduced 
+        to allow the user to specify some data values (e.g., BUFR edition 
+        number) for the encoding of BUFR message sections 0, 1 and 3, as well 
+        as the plain text strings to be used in section 2 of an SWM message.  
+        Refer to the WAFC London document "Representing WAFS Significant 
+        Weather (SIGWX) Data in BUFR" for a description of the meaning of the 
+        plain text strings.
+
+	3. Updated MELBUFR Library (AWC)
+
+        The MELBUFR library and the associated tables are used to encode and 
+        decode NCEP products in the BUFR format.  A new version of the library 
+        was released by NRL and was added to the NAWIPS distribution.
+
+	4. Use new extended degree of turbulence BUFR table (AWC)
+
+        *** Important - Please Note ***
+
+        To handle the turbulence category "MOD OCNL SEV" (moderate, occasional 
+        severe) used in both SWH and SWM charts, the WMO approved a new BUFR 
+        table, "Extended Degree of Turbulence", using BUFR descriptor 011030.  
+        This table is now used when encoding BUFR messages, instead of the 
+        "Degree of Turbulence" table, descriptor 011031, which had been used 
+        prior to this release.  BUFR decoders for data types SWH turbulence, 
+        SWM turbulence and SWM clouds will need to be modified to recognize 
+        this new descriptor.
+
+        5. New Programs Replacing Old for SIGWX Processing (AWC)
+
+        Program SIGWXCNV no longer exists, having been replaced by program 
+        VG2UKA (introduced in release 5.7.3).  Program SIGBENC no longer 
+        exists, having been replaced by program BUFRENC (introduced in 
+        release 5.7.1).
+
+	6. Allow JET Elements to be Clipped by CLIPVGF (AWC)
+
+        The program CLIPVGF has been modified to allow JET elements to be
+        clipped using the given boundary.
+
+	7. Enhancement to Categorical Outlook Products (SPC) 
+
+        The SPC Outlook Points Product Program DAT2PTS has been enhanced to 
+        add station relative point information  for categorical outlooks at 
+        the bottom of the PTSDY1, PTSDY2, and PTSDY3. 
+
+II.  NMAP2 Display Improvements 
+
+    A.  Added SP file name to NMAP2 icon  (OPC, ALL)
+
+ 	The SPF name is now included in the nmap2 icon.  If the user has 
+        loaded data using an SP file, that file name 
+        (minus the .spf extension) is included in the icon name that is 
+        displayed when the user iconifies nmap2 (e.g. nmap2:myFileName).  
+        In this way, desks that have more than one instance of nmap2 running 
+        at a single time can quickly determine which data set is loaded in 
+        which nmap2 instance without having to open up any of the nmap2 
+        instances. 
+
+	Please note that some window managers require the user to move the 
+        mouse over the icon or single click the icon before the full icon 
+        name is displayed. 
+
+    B.  AODT Enhancements (TPC)
+
+	Enhancements have been made to the history file GUI and printing
+	functions.	
+
+	The history file management GUI has been expanded to fit the data.
+
+        The AODT history file printing was enhanced with the following 
+        additions: 
+
+	Column labels are added to the printed history file. 
+
+        Lines are no longer merged together and the history file may now be 
+        printed in landscape mode.
+
+	**** Important Site Administrators Please Note ***
+
+	Two new environment variables (LPAODT and LPAODTFLAG) have been 
+        created to support the landscape printing of the history file.  
+        These new variables MUST be added and properly defined in the N-AWIPS 
+        .cshrc file to avoid NMAP2 failure during AODT history file printing.  
+        These variables parallel the LP and LPFLAG environment variables 
+        already defined in the .cshrc for other text file printing.  
+        LPAODTFLAG is reserved for specifying the valid option for the 
+        printer name for the print utility being used.  For example, for the 
+        mpage print utility, the LPAODTFLAG should be set to "-P".  LPAODT  
+        specifies the print utility to be used along with any other 
+        optional flags that the print utility requires.  For the mpage 
+        example, LPAODT is set to "mpage -lo1 -z$LP -Z$LPFLAG".
+
+	NOTE:  mpage is not provided by NAWIPS but is freely available from 
+        the internet.  Linux users should already have mpage as part of the 
+        operating system.
+
+III. Decoder Improvements
+
+    A.  Added Decode and Display of CB and TCU for TAFs (AWC)
+
+	The TAF (terminal aerodrome forecast) decode and display software 
+        and tables have been modified to display the symbols for low level 
+        cloud types TCU (CL=2) and CB (CL=9).  The symbols are displayed in 
+        NMAP2, SFMAP and SFGRAM by selecting parameter CSYL for prevailing 
+        low cloud type symbol or the new parameter TCSL for 
+        temporary/probability low cloud type symbol.  The parameter table
+	$GEMTBL/nmap/taf_parms.tbl has been updated accordingly.  
+
+IV.  General Improvements
+    
+    A.  Grid Library Enhancements (ALL)
+
+    	The CDB has entered the final phases of a long-term project to
+	overhaul and enhance the access of gridded data.  In this release, new
+	DG and GD library functions are included and have been incorporated
+	into some of the GD programs (See Section F below). These new 
+        functions affect the opening and closing of files and the reading and 
+        writing of data.  The functions also represent a change in the paradigm 
+        used for accessing grid files.  The file and time entries are now 
+        parsed and saved first, then while there are still times to process, 
+        the main program continues to plot new frames of data. 
+
+	The valid user input for GDATTIM has been standardized and defined.
+	The following summarizes the main enhancements:
+
+	    The cycle time may be entered in the GDFILE parameter
+	    If the cycle is missing from GDFILE, then the cycle is
+	    	interpreted from GDATTIM
+	    If the cycle cannot be interpreted from GDATTIM, then
+	    	the last cycle from the data set is used
+
+	    The only time type descriptors allowed are:
+	    	A=Analysis, F=Forecast, G=Guess and I=Initial
+	    The descriptor V=Valid is no longer allowed in the user
+	    	input, but may appear in the display
+
+	    The keywords FIRST, LAST and ALL may be used in either
+	    	the cycle time position or the forecast time position
+
+	    Dual times are still valid, however ALL is not valid
+	    	inside of a dual time entry
+	    Ranges of times are valid, but the cycle and forecast
+	    	times cannot both vary in the same entry
+
+	See the help for GDATTIM and GDFILE for more information.
+
+	For users who have written their own applications, the following
+	explains how to replace the old functions with the new functions in
+	the DG and GD libraries.
+
+	Although the old subroutines will continue to work after this delivery,
+	you may want to begin to migrate private code to the new DG/GD library
+	calls.  The following describes the necessary modifications.
+
+	All private codes that use the DG library must now call
+	DG_INTL before doing anything.  Calling DG_NFIL will assure use of the
+	new DG and GD software.  Calling GD_OPEN will assure use of the new GD
+	software.
+
+	If your private code contains calls to DG_FILE or DG_INIT, then remove
+	these as well as any calls to GD_OPNF, GD_OFIL, GR_OPEN, DG_MFIL or
+	DG_OFIL.  Remove calls to GR_FTIM and use the new date-time server
+	software in the DG library.  The following sequence of calls should
+	be used to access gridded data for diagnostic calculations to be
+	displayed:
+
+	    CALL DG_NFIL ( gdfile, ' ', iret ) to process GDFILE user input
+	    CALL DG_NDTM ( gdattim, iret ) to process GDATTIM user input
+	    nxttm=.true.
+	    DO WHILE ( nxttm )
+	      	CALL DG_NTIM ( .true., .true., time, nxttm, ier ) to get the 
+								  next time
+		CALL DG_FIXA ( garea, proj, garut, prjut, ier )   to process 
+                                                                  GAREA & PROJ
+		CALL GG_MAPS ( prjut, garut, imgfl, idrpfl, ier ) to set 
+                                                                  display map
+		CALL DG_SUBG ( ijskp, ix1, iy1, ix2, iy2, iret )  to set grid 
+                                                                  subset
+		CALL DG_GRID ( ....) to get the grid of data
+		<insert data processing and display function here>
+	    END DO
+	    CALL DG_NEND ( ier ) to make sure all grid files are closed
+
+	Note that all calls to GD_ subroutines including GD_CLOS should
+	be removed.
+
+	The new GD library code is invoked by calling the new subroutine GD_OPEN.
+	This new code manages the files for you.  You do not need to close files
+	during processing.  All private codes that use only the GD library
+	should call GD_OPEN with the file name before any operation using the
+	file access number.  When all operations are done, use
+		CALL GD_CLOS ( -1, ier )
+	to close any open files.
+
+    B.  Apply Grid Library Changes to GD Programs (ALL)
+
+    	Work has begun on updating the grid programs to use the new functions
+	in the DG and GD libraries.  In this release, the following programs
+	contain calls to the new functions:
+
+		GDCNTR, GDLIST, GDMAP, GDPLOT, GDSTREAM, GDWIND
+		GDCROSS, GDPROF
+		GDTHGT, GDTSER
+
+	The remaining grid programs will be updated in future releases.
+
+    C.  Horizontal Remapping of Grid Data (ALL)
+
+    	NAWIPS now has the ability to remap grid data as part of the diagnostic
+	calculations.  Previous versions required that all grids involved in a
+	calculation be on the same projection and area.  With this release,
+	any grid on any navigation can be used in the same diagnostic 
+        calculation.
+
+	For example, a difference can be computed between the 500 mb height
+	field from the ETA and GFS models.  Multiple grid files may be listed
+	in the GDFILE parameter.  The first grid file in the list defines the
+	internal navigation used for the computation of the diagnostic.  So,
+	an entry of "GDFILE = eta + gfs" is remapped to the eta navigation,
+	while "gfs + eta" is remapped to the gfs.  
+
+	The implementation of the grid remapping is tied to the grid
+	library changes, also included in this release.  Only those
+	programs that use the new DG and GD library functions have access to
+	the remapping functionality.  See the previous section for the list
+	of programs.  Also, see the help files for GDFILE and GRDHDR for more 
+        information on the parameters.
+
+	Two existing bugs have been discovered as a result of adding the
+	horizontal interpolation capability.  These bugs will be corrected
+	in the next release.  First, there is a problem with accumulating 
+        precipitation across a change in temporal resolution of a model.  For 
+        example, the GFS has 3-hour increments from F000 to F180 and 12-hour 
+        increments from F192 to F384.  At F204 and F216, the accumulation 
+        must change from collecting 12-hour precipitation values to collecting 
+        3-hour values.  The accumulation algorithm does not handle this case
+	correctly.  Second, GDTSER and GDTHGT have a problem plotting data 
+        that has a change in temporal resolution.  That is, a model with a 
+        variable increment between time steps will not be plotted correctly in 
+        either program if the larger increment is more than 3 times the smaller 
+        increment.  For example, the GFS model starts with an increment 
+        of 3 hours between times.  After F180, the increment is 12 hours.  
+        Since this is more than 3 times the first increment, data are not 
+        plotted after F180.  If the user selects only times after F180, then 
+        the data are plotted.
+
+    D.  Distance Scale Legend Added to GEMPAK and NMAP2 (ALL)
+
+	A new GEMPAK parameter, MSCALE, has been added for use by GEMPAK 
+        programs that display maps.  Specifically, gdcntr, gdmap, gdplot, 
+        gdplot2, gdstream, gdwind, gpltln, gpmap, sfmap and snmap can now 
+        display a distance scale legend anywhere within the view region of a 
+        map using any "true" latitude.  The distances can be displayed in 
+        nautical miles, kilometers, or statute miles.  The user can specify 
+        the text attributes, including font, size and style.  The exact 
+        distance values to be displayed can be specified and need not be 
+        whole numbers or equally spaced.  For more details on the available 
+        options and the precise syntax, see the help file 
+        $GEMHLP/hlx/mscale.hl2.
+
+	The distance scale can also be plotted in NMAP.  A "Scale" check box
+	has been added to the "Map Selection" GUI to control the plotting
+	and attributes of the legend.  Click the "Scale" check box to
+	plot the distance scale.  Click the "Scale" button to invoke the
+	"Scale Attribute" GUI to specify scale legend attributes including
+	position, true latitude, units, distance values, text attributes
+	and color.
+
+	The distance scale plotting and attributes can be specified for
+	each display loop like other map attributes and can be applied or 
+        inherited from other loops using the "Apply Settings" and "Get
+	Settings" buttons, respectively.  Distance scale plotting and
+	attributes can also be saved and restored from Stored Procedure
+	Files (SPFs).  
+
+	The default legend attributes for NMAP are specified in the table
+	$GEMTBL/nmap/mapovl.nmap.  Default attributes include an on/off
+	flag, color, distance units, screen position, true latitude and
+	distance values.  See this table for additional details.     
+
+    E.  Added Support for Tilda '~' for Path Names (ALL)
+
+	The tilda '~' can now be used to specify file path names in N-AWIPS
+	tables, e.g., $GEMTBL/nmap/vgf.nmap.  A file pathname can either be 
+        a full pathname (/dir/sdir1/sdir2), or include the use of an 
+        environmental variable ($HOME/sdir1/sdir2), or include the use of 
+        tilda (~/sdir1/sdir2).
+
+    F.  Added Ability to Control Line Width For Winter Weather (HPC)
+
+	The line width can now be controlled when outlining winter storm 
+        warnings, watches, and advisories in GPMAP.  The new parameter line 
+        for WSTM is:
+
+	End time|WN;WT;AD clrs|Tm|Lb|Outline/WN;WT;AD lwidth
+
+	The line widths follow the / after the Outline flag.  If any 
+        line width value is missing or less than 1 or greater than 10, a 
+        default line width of 3 is used.  See $GEMHLP/hlx/wstm.hl2 for
+	additional details. 
+
+	The line width can now be controlled in NMAP2 displays of winter
+	weather advisories, watches and warnings (WSTM).  Click the "Line"
+	button in the "WSTM Attributes" GUI to specify the desired line
+	width using a slider bar.  The width is applied if the "Outline"
+	check box is on.   The default line width is specified in the table
+	$GEMTBL/config/miscset.tbl.  See this table for additional details.
+	Since miscset.tbl has been modified, old SPF files using WSTM data 
+        should be recreated to use the new attribute.
+
+    G.  QuikScat Display Improvements for GPMAP (OPC)
+	
+	QSCT data can now be displayed in GPMAP even when no second group of 
+        colors for rain is given.  It is also no longer required to provide 
+        a first group of colors.  When colors are missing from either of the two 
+        groups, default colors are obtained from the table 
+        $GEMTBL/config/miscset.tbl.
+
+V.  Bug Corrections 
+
+    A.  Corrected two problems with the WCN decoder, DCWCN (SPC)
+
+        Corrected two errors with the DCWCN decoder. The first occurred if 
+        two VTEC lines followed one another in a WCN text message. The 
+        message was not decoded due to an incorrectly determined error code.  
+        Now both VTEC lines are decoded and the associated counties are 
+        decoded as well.  The second error occurred for the case when only the 
+        purge time of the UGC line is present.  For this case, the decoder 
+        went into an infinite loop.  This problem has been corrected so that 
+        an appropriate error message is given in the decoder log file.
+
+    B.  Corrected Checks for 4 digit Watch Numbers (SPC)
+
+        Fixed the watch number check for the continuing watch sections of the 
+        PWN and SEL products.  The check has been modified to allow watch 
+        numbers from 1 to 9999. 
+
+    C.  Corrected NTRANS Printing Problem (SPC)
+
+	Fixed a problem with printing a group in NTRANS with a large number 
+        of frames.  Specifically, if a group contained more than 80 frames, 
+        printing of that group would fail.
+
+    D.  Corrected Panel Border Problem (Unidata)
+
+	Fixed a bug, which was present in many GD programs, where the panel 
+        border for a new plot was erased when the clear parameter was set to 
+        yes.  In some device drivers this translated into a new page being 
+        sent.
+
+VI. Map and Table File Updates
+
+    The following summarizes significant table changes.  See 
+    $NAWIPS/versions/tables.log and nawips.log for a complete list of all 
+    table and map file changes. 
+
+    A.  Updated NWX tables, pqact.conf and scour.conf tables for updated 
+        Communications Ids (CID) (ALL)
+
+        Current NWX tables were updated and many new tables were added for 
+        dealing with the standardization of the communication identifiers for 
+        NWS text products.  The new NWX tables are named after the three 
+        character product identifier (NNN).  All of the new NWX tables are not 
+        listed in the new guidata.tbl and the new master.tbl, but are made 
+        available for the users. The full listing of all new NWX tables can 
+        be found at: versions/release_notes/v5.8.1/README_nwx_tbls.txt.  Also, 
+        the LDMs' pqact.conf and scour.conf tables have been modified to
+	account for the new data type names and data directories used by 
+        $GEMTBL/nwx/master.tbl.  
+
+	These CID changes went into effect on November 9, 2004 and they meet 
+        the NWS and WMO CID policies.  More CID information is found at: 
+
+        http://www.nws.noaa.gov/datamgmt/commsid.html
+	
+    B.  Time Binning Column Added to Datatype Table (ALL)
+
+	A new column has been added to the table, $GEMTBL/config/datatype.tbl
+	in preparation for data time binning.  Time binning is currently
+	not implemented.  Therefore, the addition of the time binning 
+	column is NOT required for this release.
+  
+    C.  Updated the marine zones, county and public forecast zones maps 
+        and tables (SPC, ALL)
+
+	Numerous changes were made to marine zones, counties, and forecast
+	zones in response to NWS changes, especially those in support of Watch
+	By County.
+
+        Updated the public forecast zone map and table files with zone names 
+        corrected for WFO ABQ for the following zones: NM006, NM020, NM013, 
+        NM021, NM018, NM012, NM010, NM008 and NM016.  Also, islands in Lake 
+        Erie were added to WFO CLE.  The affected zones are OH003, OH007 
+        and OH009.
+
+        Updated the county maps and table files with changes to the islands 
+        in Lake Erie.  They were added to CLE counties Lucas, Ottawa and Erie. 
+        Also, Hyde and Dare Counties NC in MHX are now a single polygon.  The 
+        extraneous polygon with erroneous FIPS 01000 was removed from Alaska.
+
+        Updated the marine zone maps and table files by bringing the naming 
+        of the marine zones in line with NWS Directive 10-1701; all commas 
+        were removed from marine zone names using the following rules:
+
+        1. All commas that preceded a state abbreviation were removed 
+           (e.g. Cape Blanco, OR --> Cape Blanco OR).
+        2. All other commas were changed to a forward slash ("/").
+
+        Zone GMZ530 in LIX was changed to read "Lake Pontchartrain and 
+        Lake Maurepas".  Zone PKZ132 in AFC was corrected to "Shuyak Island 
+        to Sitkinak".  Zone AMZ354 in CHS had an extra space removed from 
+        its name.  A segment of marine zone PHZ115 was corrected to 
+        properly follow the coastline.
+
+        The two westernmost marine Zones in Alaska (PKZ175 and PKZ176) were 
+        modified to conform in size with the other islands in the Aleutian 
+        chain; PKZ175 was broken into two segments - one east and one west 
+        of the 180 degree line. 
+
+        Also, the combination county/marine zone maps and tables were updated 
+        with these changes.
+
+    D.  Updated the AWIPS product definition table (SPC)
+
+        The AWIPS product definition table, $GEMTBL/pgen/awdef.tbl, has been 
+        updated to include the MD summary graphic information.  This change 
+        was done at the request of the SPC.
+
+VII.   Calling Sequence Changes
+
+    A.  $GEMPAK/source/cgemlib/spf/spfread.c
+    B.	$GEMPAK/source/textlib/uka/ukaptfrt.c, ukaptjet.c, ukapttrp.c,
+                                   ukapttur.c
+    C.  $GEMPAK/source/cgemlib/cas/caswrfrt.c, caswrjets.c, caswrtrop.c,
+                                   caswrturb.c
+    D.	$GEMPAK/source/cgemlib/ctb/ctbdtget.c
+    E.  $GEMPAK/source/cgemlib/cgr/cgrpolysmear.c
+    F.  $GEMPAK/source/cgemlib/cas/casrdhdr.c
+    G.  $GEMPAK/source/textlib/bfr/bfrcld.c, bfrfrt.c, bfrjet.c, bfrtrp.c,
+                                   bfrtur.c, bfrvts.c, bfrmake.c, bfrmcld.c
+    H.	$GEMPAK/source/gemlib/gg/ggwstm.f
+    I.  $GEMPAK/source/gemlib/gg/ggmisc.f
+    J.  $GEMPAK/source/programs/gd/gdcross/gdxgts.f 
+    K.  $GEMPAK/source/programs/gd/gdthgt/gdtxda.f, gdtxvv.f
+    L.  $GEMPAK/source/gemlib/ss/csleep.c, sswait.f
+    M.  $GEMPAK/source/programs/util/dat2pts/d2pfil.f 
+
+See the nawips.log and changes.log for additional details concerning
+these routines.
+
+VIII. Configuration Management Changes 
+
+    A.  Removed Inactive Device Drivers (ALL)
+
+	The inactive directory under gempak/source/driver has been removed 
+        from the N-AWIPS distribution.  These drivers have not been built for 
+        many years and their removal has no impact.
+
+    B.  Added check for RHEL multiprocessor type (ALL)
+
+	Red Hat Enterprise Linux has a different version number/name for 
+        multiprocessor systems.  The c-shell resource file (.cshrc), which is 
+        run at login, checks the type and version of OS being used.  The 
+        workstation version of RHEL returns an OS version with el appended to 
+        the version number.  The multiprocessor version returns a value with 
+        elsmp appended to the end.  A change was made to equate el and elsmp 
+        for the purposes of compiling and running the NAWIPS system on both
+	types of configurations.
+
+IX. Supported Platform Changes
+
+    A.  IRIX Support for Versions Previous to 6.5 Dropped
+
+	N-AWIPS is no longer supported for versions of the IRIX OS earlier 
+        than 6.5.  Therefore, the flag -o32 is no longer needed for compiling 
+        on IRIX systems and has been removed from the compiler flags set at 
+        login.
+ 
+*****************************************************************************
+
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+     release_build_5.8.1 
+
+To execute the script and save its output in a file type:
+
+     cd $GEMPAK/build
+     release_build_5.8.1 >&! RELEASE_$NA_OS & ; tail -f RELEASE_$NA_OS
+
+The output of the script will be written to RELEASE_$NA_OS.
+
+Note that the build script removes files that have been eliminated in
+this version.  These files must be removed by hand if the build script
+is not executed.  A list of removed files for each release always appears
+in the file: $NAWIPS/versions/remove.log.

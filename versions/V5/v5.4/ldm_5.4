@@ -1,0 +1,108 @@
+			N-AWIPS 5.4 Changes for the LDM 
+
+		( d - Development account 
+		  o - Operational account
+		  b - Both accounts )
+
+
+
+d1.	Added new AVN MOS decoder to LDM pattern action table.  Removed
+	references to local tables for DCSAO, AFOS, and DCFFG. (See
+	t14).  Done, SS, (SS), 6/27/96
+
+	ldm/etc/pqact.conf
+
+b2.     Replaced operational SAO decoder with new version that decodes
+	both SAO and METAR reports.  (See t15.)  Done, SJ, (SS), 
+	6/27/96.
+
+	ldm/etc/pqact.conf
+	ldm/bin/dcsao*
+
+d3.	Updated DCSAO AFOS decoder pattern to parse metar reports instead 
+	of sao reports.  (See t16).  Done, SJ, (SS), 7/5/96
+
+	ldm/etc/pqact.conf
+
+d4.	Relinked all CDB decoders to account for new bridge software (See 001q.).
+	Updated LDM pattern action table to account for new bridge software.
+	Command line parameters and options have changed.  (See t17).
+	Done, SJ, (SS), 7/8/96.
+
+	ldm/etc/pqact.conf
+
+d5.	Added Hazardous Weather Update product to LDM pattern action table.
+	(See t18).  Done, SM, (SS), 7/8/96.
+
+	ldm/etc/pqact.conf
+
+d6.	Corrected log name problem.  See (001r.) Done, SJ, (SS),
+	7/11/96.  All CDB decoders relinked.
+
+
+o7.	Updated operational SAO/METAR decoder with new version to
+	eliminate problem of multiple dcsao processes.  Done, SJ,
+	(SJ), 7/11/96.
+
+	ldm/bin/dcsao*
+
+d8.	Relinked all decoders to to use new table reading routine,
+	tb_astn.  (See 010l.). Done, LS, (SS), 7/12/96.
+
+d9.	Updated the station table for the METAR decoder.  See 
+	t19.  Done, SE, (SS), 7/16/95.
+
+	~ldm/tables/metar.tbl
+
+d10.	Updated LDM pattern action table for the METAR decoder so
+	that it feeds in the same data as the DCSAO decoder.
+	Done, SS, (SS), 7/16/95.
+
+d11.	Updated SAO/METAR decoder with a new version that corrected
+	some of the problems found.  Also, added improved debugging
+	statements.  Also updated the LDM pattern action table for
+	decoding upper-air data from the AFOS feed.  Also updated
+	the LDM pattern action table to put ship data into hourly
+	files.  Done, SJ, (SS), 7/22/96.
+
+	~ldm/etc/pqact.conf
+	~ldm/bin/dcsao*
+
+d12.	Updated LDM pattern action table to store undecoded AFOS METAR
+	and upper-air reports for testing purposes.  Also updated the
+	LDM clean-up file to purge these AFOS data files.  Done, SJ,
+	(SS), 7/23/96
+
+	~ldm/etc/pqact.conf
+	~ldm/etc/scour.conf
+
+d13.	Updated debug logging for decoders.  Delivered new version of
+	DCSAO to ldm account.  (See 001t.).  Done, SJ, (SJ), 7/31/96.
+
+	~ldm/bin/dcsao*
+
+d14.	Added GUAM zone and Hawaii nowcast products to ldm pattern
+	action table.  Done, SS, (SS), 7/31/96.
+
+	~ldm/etc/pqact.conf
+
+d15.	Updated dcsao for corrections of blank file name and special
+	reports problem (see 001u.).  Removed local version of
+	dcsao from ldm/bin.  Done, SJ, (SS), 8/2/96.
+
+b16.	Updated state forecast discussions for nwx.  Updated
+	ldm pattern action table to process FPUS65 and FPUS66,
+	(see t21). Done, SM, (SS), 8/5/96.
+
+	~ldm/etc/pqact.conf
+
+d17.	Renamed dcsao to dchrly in LDM pattern action file,
+	(see 001w).  Done, SJ, (SS), 8/6/96
+
+	~ldm1/etc/pqact.conf
+
+d18.	Renamed sao directories to hrly in LDM pattern action
+	file.  Done, SJ, (SS), 8/8/96.
+
+	~ldm1/etc/pqact.conf
+

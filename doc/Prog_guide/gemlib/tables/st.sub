@@ -1,0 +1,73 @@
+#------------------------------------------------------------------------
+# st.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Added stunp1.f
+#------------------------------------------------------------------------
+
+stabbr.f	- Check For Abbreviation
+stalnm.f	- Check For Alphanumeric Character
+statoe.f	- Convert ASCII to EBCDIC
+stc2c.f		- Convert String To Character Array
+stc2i.f		- Convert String To Integer Array
+stc2r.f		- Convert String To Real Array
+stcls2.f	- Convert String Into Array Of Strings
+stclsl.f	- Convert String Into Array Of Strings
+stclst.f	- Convert Character List To Array
+stcrnd.f	- Convert String To Real Number
+stcrnm.f	- Decode Real 
+stctoi.f	- Store Characters In Integers
+stetoa.f	- Convert EBCDIC To ASCII
+stfind.f	- Find A String In A List
+stflst.f	- Convert Character To File Name List
+stftlt.f	- Return First And Last Characters
+stfwrd.f	- Find NTH Word In A String
+stilst.f	- Convert Integer List To Array
+stilsr.f	- Convert Integer String To Integer Array
+stinch.f	- Encode Integer
+stinln.f	- Encode Integer And Return Length
+stintg.f	- Decode Integer
+stitoc.f	- Recover Strings From Integers
+stitos.f	- Recover String From Integer Array
+stlcuc.f	- Convert String To Upper Case
+stldsp.f	- Remove Leading Spaces
+stlstc.f	- Convert Array Of Strings To String
+stlstf.f	- Convert Array Of Reals To String
+stlsti.f	- Convert Array Of Integers To String
+stlstr.f	- Find Length Of String
+stnocc.f	- Find Nth Occurence Of Character
+stnull.f	- Append NULL To End Of String
+stnumb.f	- Decode Integer (General)
+stnxts.f	- Search String For Substring List
+stpelt.f	- Get Plot Specification
+strang.f	- Get Range Limits
+strlch.f	- Encode Real Number
+strlst.f	- Convert Real List To Array
+strmbl.f	- Remove Blanks
+strmnm.f	- Remove Numbers From A String
+strmst.f	- Find A Substring A String
+strnan.f	- Remove Non-Alphanumerics
+strnul.f	- Remove NULL Characters
+strpst.f	- Find Substring Within String
+strxbl.f	- Remove Extra Blanks
+ststoi.f	- Store String In Integer Array
+stuclc.f	- Convert String To Lower Case
+stunp1.f	- Remove Control Characters Except LF
+stunpr.f	- Remove Control Characters
+stutab.f	- Replace Tabs With Spaces
+# testst.f	- ST Library Test Program
+
+#------------------------------------------------------------------------

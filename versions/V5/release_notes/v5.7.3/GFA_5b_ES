@@ -1,0 +1,29 @@
+
+   Added a new GFA element and interface to PGEN.
+
+   The new GFA element is found under class MET.  These elements are drawn in a 
+   manner similar to the new Airmet and Non-convective Sigmet.  The user must 
+   specify the points of the GFA using <L> mouse clicks.  A <M> mouse click 
+   completes the figure.  The user must then position the text box for the GFA.  
+   The text is generated from the element's attribute settings.  
+
+   In order to change the displayed text for a GFA, select it (click Select on 
+   the PGEN palette, then click on the element).  Modify the attributes as 
+   desired and click on the Apply button.  The text will be updated.  In order 
+   to reposition the text, click on the Move Text button.  The text box will be 
+   relocated to center on the next <L> mouse click location.
+
+   To create the From line, select the GFA.  The attribute window will be 
+   populated with the From line.  Click on the Save button and the From line 
+   edit window will open.  
+
+   Note that the From line text file name will default to the type of GFA with a
+   txt extension.  Unlike the new Airmet/Non-convective Sigmet, there is no GFA 
+   sequence number.
+
+   Also please note that the list of GFA types is not yet complete.  This first
+   release contains only the non-special case GFAs.  The gfa.tbl contains the 
+   list of currently available GFA types.  Locally a site may delete unwanted
+   GFA types by removing them from this file.  New GFA types may not be added 
+   locally, however.
+	    

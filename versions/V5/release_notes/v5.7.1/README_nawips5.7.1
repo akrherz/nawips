@@ -1,0 +1,612 @@
+               N-AWIPS 5.7.1 Release Notes
+                   	12/15/03 
+
+Version 5.7.1 covers development from September 25 to December 12, 2003.  
+
+******************************************************************************
+
+********* VERSION NAMING CONVENTION CHANGE --- PLEASE NOTE *********
+
+This release begins a new naming convention for N-AWIPS versions.  The version
+numbering scheme now corresponds to the fiscal year (FY) quarterly release 
+cycle.  Thus this release is 5.7.1 and the remaining quarterly releases for 
+FY04 will will be 5.7.2, 5.7.3 and 5.7.4.  Patches, if required, will add a 
+lower case letter to the release name, e.g., 5.7.1.a.  Releases scheduled for 
+FY05 will be named as 5.8.1, 5.8.2, 5.8.3 and 5.8.4.
+
+Please also note that all logs, e.g., nawips.log have been started over for this
+release.  The plan is to start over the logs at the beginning of each fiscal 
+year.
+
+
+******* NSAT AND NMAP REMOVED FROM N-AWIPS --- IMPORTANT PLEASE NOTE *******
+
+This release marks the end of support for NSAT and NMAP.  The executables
+and source for these programs have been removed from the distribution.  NMAP2
+has all the functionality associated with these programs.
+
+******************************************************************************
+
+I.  Product Generation Changes
+	
+    A.	NMAP2 Product Generation Improvements 
+
+	1. Output VG File (VGF) Name Added to Layer Product Files (LPFs) (ALL)
+
+	   An output file name can now be specified in the LPF for each layer.  
+           It is specified using the tag <layern_output_file> in the LPF.  
+           See the example LPF $GEMTBL/pgen/example.lpf for details.  If an 
+           output file is specified for a layer, then when the LPF is opened 
+           the contents of the input VGF (tagged <layern_file>) is read into 
+           the layer as in previous versions of NMAP2.  However all saves are 
+           written to the layer output VGF.
+
+	2. Added Save All Action for Layers (ALL)
+
+	   A new action, "SAVE ALL" has been added to the "Controls" section of 
+           the product generation palette.  This action is available when 
+	   layering is active.  It performs a save on all layers that have had 
+           changes made since the last save.
+
+	   If the LPF contains output VG file names (See item 1 above), 
+	   then clicking the "SAVE ALL" action will save changes to output
+	   VFFs on all layers without stepping through any confirmation 
+           windows.  If the LPF does not have output VG file names specified, 
+           then the "SAVE ALL" action will prompt the user the first time it 
+           is invoked with the save as confirmation window.  Subsequent clicks 
+           of the "SAVE ALL" action will not invoke the confirmation window.
+
+	3. Comment Handling for Layer Product Files (LPFs) (ALL)
+
+	   Comments, lines beginning with "!", can now be contained
+	   within the body of a LPF.  Previously, comments containing
+	   the "<" or ">" delimiters were not properly handled. 
+
+	4. Increased Maximum Number of Layers (AWC, ALL)
+
+	   The maximum number of layers has been increased from ten to
+	   twenty.  The additional layers are available either manually
+	   (via "ADD LAYER") or by adding entries for layers eleven 
+	   through twenty in a Layer Product File (LPF).
+
+	5. Smear Action Added (AWC) 
+
+	   The smear action takes one or more closed figures (sigmets, airmets, 
+           or closed lines) and creates a new element combining the selected 
+           figures.  To use the function, draw several closed figures.  Click on
+           the "SMEAR" button on the product generation palette.  Now select a 
+           figure with <L> mouse button.  Click <L> mouse button again to 
+           confirm this selection or <M> mouse button to de-select.  Once the 
+           selection is confirmed, the handlebars on the figure will turn to 
+           red squares.  Select as many figures as desired.  Once all desired 
+           figures have red squares for handlebars, click the <M> mouse button.  
+           The smear figure will be added as a new element, and will have all 
+           the attributes (color, line type, etc.) as the first selected figure.
+
+           Note that only objects of the same class and type can be smeared.  
+           That is, Sigmets may only be smeared with other Sigmets, and closed 
+           lines only with other closed lines.  
+
+	   The smear action will be used for combining forecast snap shots
+	   into a time smeared polygon.  This capability will be used for
+	   enhancing AIRMET, SIGMET and eventually GFA production.  For
+	   this release, this tool should ONLY be used for TEST and 
+	   EVALUATION purposes.
+
+	6. New Jet Object Added (AWC)
+
+	   A new jet object has been added to product generation to facilitate
+	   the drawing of jets for significant weather charts.  Currently,
+	   jets are created by drawing the jet elements separately, e.g., arrow
+	   line, hash marks, wind barbs, and then grouping the elements together.
+	   The new jet object contains all the jet elements, automatically
+	   rotates and "snaps" wind barbs and hash marks to the jet line, and
+	   eliminates the need for grouping.  
+
+	   Important please note:  The new jet object is being made available in
+	   this release for TEST and EVALUATION purposes ONLY.  It should NOT 
+	   be used to create operational products.  It does not create a BUFR 
+           message at this time.  BUFR message creation for the new object
+	   will be added in the next release.
+
+	   Click on the "MET" class on the product generation palette and 
+	   click on the "JET" object to create the jet.  Click the left mouse
+	   button to place the vertices of the jet line.  Click the middle
+	   mouse button to terminate the jet.  Then click the left mouse
+	   button to invoke the "JET" GUI that allows the addition, movement
+	   or deletion of barbs or hash marks.  For example, to place barbs
+	   click on the "Barb" button.  The buttons change color to indicate
+           that barb editing is active.  Then click the "ADD" button.  A
+	   "Barb Info" GUI appears allowing the specification of speed
+	   and level.  Click the left mouse button along or near the desired
+	   location and the wind barb and flight level text will automatically 
+           "snap" to the nearest point on the jet properly rotated.  Subsequent
+	   wind barbs are placed in the same manner.  Wind barbs can be
+	   moved along the jet by clicking the "MOVE" button on the "JET"
+	   GUI.  Then left mouse click to select the desired wind barb and
+           move the cursor to the new position.  Click the left mouse button to
+	   place the wind barb at the new position.  The wind barb and text 
+           will move and automatically snap and rotate properly to the new 
+           position.  The addition and movement of hash marks operates in the 
+           same fashion.  Click the "Show Attributes" button to change the 
+           color or line width of the jet line, barb or hash mark.  If the 
+           jet object is modified or moved, with the "Mov", "Mod", or 
+           vertex select and drag actions, the wind barbs and hash marks are 
+           automatically snapped and properly rotated on the modified jet line.  
+
+	7. Default Values for Icing and Turbulence in Mid-level Cloud Box (AWC)
+
+	   The default values for icing and turbulence in the Mid-level Cloud 
+           Text Box have been changed.  The AWC requested that the initial 
+           values for icing and turbulence indicate moderate levels of each 
+           phenomenon, instead of light levels.
+
+	8. Specify Location of .DEFAULT.vgf in a Table (HPC/OPC, ALL)
+
+ 	   The location of the product generation work file, .DEFAULT.vgf, may
+	   now be specified.  The entry "WORK_FILE_DIR" in the table 
+           $GEMTBL/config/prefs.tbl specifies the path to the directory to be 
+           used for the work file.  The default value as delivered is the 
+           current directory, ".".  The value of this preference may be any 
+           directory for which the user has write permission.  The path may 
+           include an environment variable. 
+
+	9. Volcanic Ash Advisory Added (NESDIS, AR)
+
+	   NMAP product generation now allows for the graphical generation of the 
+           VAA text product as well as an associated graphic.  Generally 
+           creating the product involves three steps that are described below.
+
+    	   Step 1: Create Volcano Element 
+
+   	   In order for the VAA text product to be generated, a volcano element 
+           must be created.  Under the SIGMETs class, click the "VOL" button.  
+           Either select the volcano name via the pull-down menu (which fills 
+           in all pertinent information) or type in the volcano name and 
+           manually fill in the remaining information.  Click "Create VAA 
+           Volcano" to place the volcano element at the volcano location.  Note 
+           that if a volcano element has already been created 
+           (and issued/saved), simply select and open the VGF for the 
+           volcano.  Important note: only ONE volcano should be saved in a 
+           single VGF.
+
+	   Step 2: Create Volcanic Ash Clouds
+
+   	   Volcanic ash clouds indicate the area coverage, vertical 
+   	   extent and movement of ash.  The behavior is similar to that of 
+           SIGMETs, AIRMETs, etc.  Click "VAC" under the SIGMETs class. Choose 
+           either "Area" or "Line", assign a vertical extent and movement, 
+           and draw the object by clicking the left mouse button to select 
+           vertices.  Use the middle mouse button to end the figure.  The ash 
+           object may then be selected and edited.  If no ash is seen (as in 
+           the case of cloud obscuration or dissipation), then choose 'Not 
+           Seen' and place a text box with that information.  Important note: 
+           only ash clouds associated with the current volcano should be drawn 
+           in the VGF.  Ash from other volcanoes should be drawn in their 
+           respective VG files.
+
+	   Step 3: Create the Text Product
+
+   	   To create the VAA text product, select the volcano element.  A form 
+           will appear allowing input of various pieces of information. If the 
+           volcano has been previously edited then that information will have 
+           been saved and filled in.  All ash cloud earth coordinate locations, 
+           flight levels and movements will also be automatically filled in.  
+           Note that the following section's choices are table driven 
+           using the table $GEMTBL/pgen/vaa.tbl and can be controlled locally: 
+           Header Information, Information Source, Aviation Color Code, 
+           Fcst Ash Cloud +6hr, Next Advisory, Forecaster(s).  When all 
+           information is filled in, click "Format VAA".  The final product 
+           will appear; if changes are needed, click "Cancel" to return to 
+           the "VAA Volcano Edit" form. Clicking "Save" will save the VAA 
+           text product in the filename shown as well as in the generic 
+           filename "VAA.txt".  The corresponding VG file name is 
+	   also saved and may be used to create a graphical VAA product using 
+           a post-processing program such as GPMAP.
+
+        10. Watch Improvements (SPC)
+
+	   The insertion of the "test" string into watch products is now
+	   controlled by an NMAP GUI.  Click on the "Test" button in the 
+           "Format Watch" GUI to insert the "test" strings into the WOU
+	   initial, SAW, SAW cancel, SEL, SEL cancel, SEV, AWN and PWN
+	   text products.
+
+	   At the request of the SPC, the list of replaced watches is cleared
+           every time the "Watch Coordination" GUI is invoked.
+
+	   A wind speed rounding error for the SEL text message has been
+	   corrected.  A 50 kt wind is now rounded to 60 mph when it is 
+           converted from kts to mph.
+
+	   A problem discovered on LINUX2.4 platforms was corrected for the
+	   watch status message creation.  This problem occurred when selecting
+           "FINAL STATUS" in the "WATCH STATUS" GUI and then clicking on the
+	   "FORMAT" button.
+	   
+	11. New Outlook Group Type Added (SPC)
+
+	   A new outlook group type, TSTMOLK, has been added at the request
+	   of the SPC.  Its attributes can be modified in the table,
+	   $GEMTBL/pgen/grptyp.tbl.
+
+    B.  Product Generation Pre/Post-Processing Programs
+
+	1. Re-engineer Library Code for ASCII to BUFR Conversion (AWC, ALL)
+
+	   A new table-driven BUFR encoder program, BUFRENC, has been developed
+	   which reads user input parameters, tables, and an ASCII file to
+	   generate one or more BUFR output files.  This program will allow 
+	   for a more generic means of creating BUFR files than the current
+	   capabilities.  Note that BUFRENC is being released for TESTING and 
+           EVALUATION purposes ONLY.  The plan is to replace the program 
+           SIGBENC in the next release after parallel testing is conducted.  
+
+	   BUFRENC is written as a GEMPAK program with the GEMPAK text based 
+           user interface.  Additional help on the program can be obtained by 
+           running the GEMPAK help facility in the program or viewing the 
+	   GEMPAK help file $GEMHLP/bufrenc.hlp.
+
+	   New BUFR descriptor tables and a master table were developed to 
+           support BUFRENC.  These tables are located in the $GEMTBL/bufr 
+           directory.
+
+	2. Tropical Cyclone Breakpoint Product (TPC)
+
+	   The Kelly graphic creation program, GPKGRF, has been modified to
+	   generate an experimental tropical cyclone watch/warning/advisory text
+	   product which indicates which counties and marine zones are under
+	   a hurricane or tropical storm warning or watch.  The product includes
+	   VTEC lines and breakpoint names and locations and will be used as 
+           input for AWIPS WWA program for WFO product generation.  At this 
+           time, the product is generated only for Atlantic storms affecting the 
+	   continental U.S.  Product generation is automatic, based on a 
+           comparison of the previous and current breakpoint information.  It 
+           is in a file named KNHCTCVATn, where n varies from 1 to 5 depending 
+           on the storm number.  For this release, the text product is created
+	   for MDL testing purposes, only.
+
+	   ***Important please note: ***
+           In order to do the comparison, the breakpoint file processing has 
+           been changed.  Rather than having a single breakpoint file which 
+           exists over the life of the storm, each advisory will now have its 
+           own breakpoint file.  See the GPKGRF program help or 
+           $GEMHLP/gpkgrf.hlp for additional details.
+
+II.  NMAP2 Display Improvements 
+
+    A.  Added Display of High Resolution QuikScat Data (OPC)
+
+	NMAP2 has been enhanced to display the new high resolution (12.5 km)
+	QuikScat data sets in addition to the existing 25 km data sets.  Select
+	the "QSCT_HI" under the "MISC" data source to display the high resolution
+	data sets.  The high resolution data are displayed in the same manner 
+        as the lower resolution data with the same display attribute options 
+        available.  The higher resolution data sets include more points per 
+        scan line and more scan lines.  A new entry, QSCT_HI, has been added 
+        to the table $GEMTBL/config/datatype.tbl to allow access to the new data 
+        set.
+
+III. Decoder Improvements
+
+    A.  Added Decoding of Canadian Land and Marine Sigmets (AWC, AR)
+
+	The Sigmet decoder, DCISIG, has been enhanced to decode Canadian land 
+        and marine SIGMETS.  The low level wind shear parameters LLWS, WNDSHR, 
+        and WV/SHR have been added to the phenomenon list that DCISIG decodes.  
+        Note that there are some cases where the Canadian Sigmets include more
+	than one phenomenon in a message.  In these cases, the decoder currently
+	only decodes the first phenomenon. 
+
+	NMAP2 displays Canadian SIGMETs along with other types by selecting
+	the "ISIG" data type under the "MISC" category.
+
+    B.  Miscellaneous Sigmet Decoder Improvements (AWC, AR)
+
+	DCISIG has been modified to decode max winds and pressure fields
+	for hurricanes, tropical storms, and typhoons.  For tropical
+	cyclones and tropical depressions, the direction and speed of
+	movement from the associated thunderstorm will no longer be repeated
+	in the tropical disturbance decoded line.
+ 
+	NMAP2 and GPMAP have been modified to plot low level wind shear (WS).
+	Height levels SFC (surface) and FZLVL (freezing level) are plotted
+        as text strings.
+
+    C.  Added JTWC Advisories to Hurricane Decoder Improvements (PR, TPC)
+ 
+	The hurricane decoder has been enhanced to decode Joint Typhoon
+	Weather Center (JTWC) hurricane advisories with the WMO header
+	"WTPN3[1-5] PGTW".  See the hurricane decoder help file, 
+	$GEMHLP/dchrcn.hlp, for additional details.
+
+	The JTWC advisories can now also be displayed in NMAP2 by selecting 
+        "HRCN" under the "MISC" data category.  This selection displays both 
+        the TPC and JTWC advisories.             
+
+IV.  General Improvements
+
+    A.  Color Bar for Radar and Satellite Images (ALL)
+
+	A new parameter, IMCBAR, has been added to GEMPAK display programs
+	to specify the attributes of the color bar for imagery.  The color
+	bar attributes include its position, size, label color, and 
+        orientation.  See the GEMPAK help, $GEMHLP/imcbar.hl2 for additional
+	information on this parameter.  The default value for this parameter
+	in GEMPAK programs is not to plot the color bar.  Note that in NMAP2, 
+        the position and other color bar attributes cannot be modified.
+
+	In addition, a color bar has been added for satellite images. The 
+   	color bar displays a temperature scale, in Celsius, for IR images. 
+        All other images (e.g., Water Vapor, Visible, etc.) display a 
+    	scale of pixel values.  The color bar also reflects the enhancement 
+        table in use for the current image or loop of images.
+
+    B.  One-hour Precipitation Accumulation (ALL)
+
+	The precipitation accumulation grid diagnostic was modified to 
+	accommodate data from the ETA at 1-hour intervals. The ETA model will 
+	be changed to output 1-hour time steps out to F36, in the near future.
+	The precipitation grids from this output are named with the forecast
+	hours for the grids from F01 to F12 -- P01M, P02M ... P11M, P12M. Then
+	at F13, the naming convention repeats starting again with P01M. The 
+	accumulation algorithm was modified to account for the new precipitation
+	grids.
+
+    C.  Auto-update for NWX (ALL)
+
+	An auto-update feature has been added to NWX. The user must first select
+	a data type and a location.  If auto-update is on, the data are 
+	reloaded at 5 minute intervals.  If new data have arrived, they are 
+	displayed in the text window.  The current default value for auto-update
+	is off.  Click on "Auto" pull down on the "NWX" GUI to turn on the 
+        auto-update feature.
+
+    D.  GFS MOS Replaces AVN MOS and MRF MOS (ALL)
+
+	Directory, file and source code nomenclature and documentation have
+	been changed in NMAP2, NWX, the decoders and the LDM to support the
+	scheduled December 16, 2003 switch from separate AVN- and MRF-based
+	MOS systems to a unified GFS-based MOS system.  All MOS data are now
+	classified as type 'MOS' in NMAP2 and NWX, and no distinction is made
+	between what was formerly differentiated as 'MOS' and 'New MOS'.
+	References to 'New AVN MOS' have been changed to 'GFS MOS', and
+	references to 'New MRF MOS' have been changed to 'GFSX MOS'.  Obsolete
+	references to the "old" AVN and MRF MOS codes, which have not run for
+	months, have been removed.  Finally, the GFS MOS station table has
+	been updated with 145 new stations, 4 deleted stations, and 3 changed
+	station names.  Note that the previous release will continue to
+	handle the MOS data sets.  Therefore, v5.7.1 does not have to be 
+	installed by December 16, 2003.
+
+    E.  GPMAP_GIF Program Added (AWC)
+
+	The program GPMAP has been linked with the GIF device driver at the
+	request of the AWC.  The gpmap_gif executables are available for all
+	supported platforms.
+
+    F.  Sea Ice Graphic Pre-processing (EMC, NCO)
+
+	A new program, tran2fos, was written to convert the TRAN text format, 
+        used on the CCS to send text products to the NWS Telecommunications 
+	Gateway, to the Family of Services format, used by the NAWIPS decoders. 
+        The program, tran2fos, requires the input file and the output file to be
+        specified on the command line.  The output file may then be used as 
+        input to the Sea Ice Drift decoder, dcidft.
+
+    G.  Remove Data Type ATCO from Tables and Code (HPC, TPC)
+
+	The miscellaneous data type ATCO, the ATCF tropical cyclone forecast 
+        tracks in the old format, has been removed from NMAP2 and GPMAP.  This 
+        old format was replaced by a new format in 2001, and had been kept for
+	backward compatibility only.
+
+    H.  Preliminary Extended Forecast Discussion Added to NWX (OPC)
+
+        The Preliminary Extended Forecast Discussion has been added to NWX as
+        data type "HPC Products" under the "Extended Prelim" category. 
+
+V.  Bug Corrections 
+
+    A.  Color Coded AIRMETs Plotting (AWC)
+
+        Corrected the AIRMET color-coded turbulence display problem found by 
+        the AWC.  If the top turbulence flight level of one AIRMET was the same 
+        as the lower turbulence flight level of another AIRMET, both AIRMETs 
+        were plotted in the same color when the turbulence filter was set to 
+        the common flight level.  This problem has been fixed.
+
+    B.  Volcano Selection GUI (AWC)
+
+	Corrected the problem where some volcano names could not be selected
+	because the pull down extended beyond the bottom of the screen.
+
+    C.  Zoom Does Not Work Until Mouse is Moved (HPC)
+
+	The HPC found that a previous correction to the zoom function caused 
+        a new problem.  After starting the zoom action, expanding the rubber-band
+	box, and releasing the mouse button, the zoom did not take effect
+	until the mouse was moved.  This problem has now been fixed.
+
+    D.  Small (400x320) GIF Images Hang the GF Device Driver (HPC)
+
+	The HPC discovered that small (400x320) GIF images hang the GF device 
+        driver on Linux platforms.  This problem has been corrected.
+
+    E.  NDFD Decoder Problem with Precipitation Probability (HPC)
+
+	Corrected the NDFD decoder to properly handle NDFD grids of
+	precipitation probability.
+
+    F.  "Turn Source Off" Feature not Consistent with Imagery (OPC)
+
+	The OPC found that when using the "Turn Source Off" feature on the "Data
+	Selection Window" with imagery data, the map projection remained SAT.  
+        This caused problems when switching geographic areas in the Map 
+        interface.  This problem has been corrected.  The projection no longer 
+        remains SAT.  However, one cannot select another image type in this 
+	case.  The image file must be removed.
+
+    G.  Looping Delay at End of Loop with LOOP_STOP Set to Current (SPC)
+
+        The SPC observed a looping delay if the loop was stopped at the
+	last frame in the loop and restarted with the new feature introduced in 
+        the last release, LOOP_STOP = Current.  The delay has been eliminated for
+	this case.
+
+    H.  Slow Refresh of TPC VG Files, with Offset Text, on MER Proj (TPC)
+
+	The TPC reported a problem where VG files were loading and refreshing
+	slowly.  After further investigation, the problem was traced to 
+	text objects with X and Y offsets displayed on a cylindrical projection, 
+        e.g. Mercator.  This problem has now been corrected and all TPC VG files 
+        load much more quickly.
+
+VI. Known Bugs  
+
+    A.  Default Button In Custom Map Definition GUI (ALL)
+
+        The "DEF Content" button in the "Custom Map Definition" GUI
+        does not work.  It is supposed to list the default map
+        projection for selected geographic regions.
+
+VII. Map and Table File Updates
+
+    The following summarizes significant table changes.  See 
+    $NAWIPS/versions/tables.log and nawips.log for a complete list of all 
+    table and map file changes. 
+
+    A.  Preferences Table Change for Addition of .DEFAULT.vgf Location (ALL)
+	
+	A new entry, WORK_FILE_DIR, has been added to the table 
+	$GEMTBL/config/prefs.tbl to specify the path to the directory that
+	contains the NMAP2 product generation working directory.  Site versions
+	of the prefs.tbl MUST be updated to include this entry for proper
+	product generation operations. 
+
+    B.  Settings Table Change for New Jet Object (AWC, ALL)
+
+	A new entry has been added to the table $GEMTBL/pgen/setting.tbl for
+	the jet element under the MET class.  This entry MUST be added to
+	site versions of this table to properly access the jet.
+
+    C.  Geog.tbl Updates (AWC)
+
+        The following three ICAO areas have been modified at the request of
+	the AWC in the table $GEMTBL/stns/geog.tbl.  Changed ICAO_U1 to ICAO_EU, 
+        ICAO_U2 to ICAO_AS and ICAO_U3 to ICAO_ME. 
+
+    D.  CPC Forecast Bounds File (CPC)
+
+	New map and bound files, named cpcus.ncp and cpcus_bnd.tbl, respectively,
+        were created for the CPC.
+
+    E.  OPC Map and Bounds Files Updates (OPC)
+
+        A new map file was created that covers all Seamless Surface Analysis 
+        (SSA) areas.  The map file is called allssa.ncp.  In addition, two new 
+        SSA bounds, opc_atl and opc_pac, were created for the OPC east and 
+        west of 105W.
+
+    F.  Datatype Table Update for High Resolution QuikScat Data (OPC)
+
+	A new entry, QSCT_HI, has been added to the table 
+        $GEMTBL/config/datatype.tbl to allow access to the high resolution
+	QuikScat data sets.
+
+    G.  Sounding Station Table Updates (SDM, ALL)
+
+        Corrected the longitude of Cordoba Airport (87344), Argentina in 
+        the sounding table $GEMTBL/stns/snstns.tbl at the request of the SDM.
+
+    H.  Bounds File Created For Fire Weather Zones (SPC)
+
+	A new bounds file for the Fire Weather Zones was created at the request 
+        of the SPC.  It is named $GEMTBL/bounds/firebnds.tbl.
+
+    I.  County Table and Bounds Files Corrected for Dare, Hyde, and Monroe 
+        Counties (SPC)
+
+	County table and bounds files have been corrected to properly handle
+	Dare and Hyde counties in North Carolina, and Monroe county in Florida.
+
+    J.  METAR Station Table Updates (SPC, ALL)
+
+        Added 45 new stations to the METAR surface station table 
+        $GEMTBL/stns/sfstns.tbl including 1F9, PSN and PTT as requested by
+        the SPC.  Also, renamed 3 surface stations 25R to EBG, 5T5 to INJ 
+        and T53 to RBO.
+
+    K.  TPC Bounds Files Updates for SSA (TPC)
+
+	The TPC requested that the opc215_atl SSA bound region be extended from 
+        0 longitude to 20 East. 
+ 
+	A new SSA bound, tpchpc, was also created for the TPC that is the union 
+        of the hpcsfc and tpc050. 
+
+VIII.   Calling Sequence Changes
+
+    A.  $GEMPAK/source/gemlib/gg/ggqsct.f, ggqsrd.c  
+
+    B.	$GEMPAK/source/nmaplib/nim/nimdspl.f, nimftot.f, nimgfil.c,
+                        nimgfln.f, nimgtim.c, nimplot.c, nimtlst.f
+
+    C.  $GEMPAK/source/bridge/is/isphen.f
+
+    D.  $GEMPAK/source/contrib/awc/gpltln/gptinp.f
+
+    E.  $GEMPAK/source/bridge/hc/hcghdr.f
+
+    F.  $GEMPAK/source/textlib/wbc/wbcdhdl.c
+
+    G.  $GEMPAK/source/gemlib/gh/ghkglb.f, ghkgph.f
+
+See the nawips.log and changes.log for additional details concerning
+these routines.
+
+IX. Configuration Management Changes 
+
+       ***** Site Administrators Important Please Note ****
+
+Several important configuration management changes occurred in this release.
+As noted at the beginning of these release notes, NMAP and NSAT are no longer 
+supported.  As such, NMAP and NSAT have been removed from NTL.  The environmental 
+variable $NSAT has been removed and $NMAP now points to 
+$NAWIPS/gempak/source/programs/gui/nmap2.  
+
+Two environmental variables $NAWIPS_LIB and $NAWIPS_EXE have been removed.  If 
+you have local scripts depending upon these, please change them to $GEMOLB and 
+$GEMEXE, respectively.
+
+The NXM library, Nxmlib.a, has been renamed libnxm.a.  Makefiles have been 
+modified to reflect this change.  
+
+The environmental variable pointing to the object library, $GEMOLB, has been 
+added to the $LDFLAGS variable in the .cshrc.  Site administrators MUST make 
+this change to their local dot files to ensure that NAWIPS will build 
+properly.  Sample .cshrc, .login and .profile files are provided with this 
+release which include the necessary changes.  They are named with the 
+"_5.7.1 extension.
+
+Compile warnings found by Unidata were also addressed in this release.  
+
+*****************************************************************************
+
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+     release_build_5.7.1 
+
+To execute the script and save its output in a file type:
+
+     cd $GEMPAK/build
+     release_build_5.7.1 >&! RELEASE_$NA_OS & ; tail -f RELEASE_$NA_OS
+
+The output of the script will be written to RELEASE_$NA_OS.
+
+Note that the build script removes files that have been eliminated in
+this version.  These files must be removed by hand if the build script
+is not executed.  A list of removed files for each release always appears
+in the file: $NAWIPS/versions/remove.log.

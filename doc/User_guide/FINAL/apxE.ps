@@ -1,0 +1,2423 @@
+%!
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%DocumentFonts: (atend)
+%%EndComments
+%
+% FrameMaker PostScript Prolog 3.0, for use with FrameMaker 3.0
+% Copyright (c) 1986,87,89,90,91 by Frame Technology Corporation.
+% All rights reserved.
+%
+% Known Problems:
+%	Due to bugs in Transcript, the 'PS-Adobe-' is omitted from line 1
+/FMversion (3.0) def 
+% Set up Color vs. Black-and-White
+	/FMPrintInColor systemdict /colorimage known
+		systemdict /currentcolortransfer known or def
+% Uncomment this line to force b&w on color printer
+%   /FMPrintInColor false def
+/FrameDict 295 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} def
+	} if
+/FMVERSION {
+	FMversion ne {
+		/Times-Roman findfont 18 scalefont setfont
+		100 100 moveto
+		(FrameMaker version does not match postscript_prolog!)
+		dup =
+		show showpage
+		} if
+	} def 
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/organgle FMLOCAL
+	/orgfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne dup {setmanualfeed} if
+	/manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	/yscale exch def
+	/xscale exch def
+	currenttransfer cvlit /orgxfer exch def
+	currentscreen cvlit /orgproc exch def
+	/organgle exch def /orgfreq exch def
+	setpapername 
+	manualfeed {true} {papersize} ifelse 
+	{manualpapersize} {false} ifelse 
+	{desperatepapersize} if
+	end 
+	} def 
+	/pagesave FMLOCAL
+	/orgmatrix FMLOCAL
+	/landscape FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch neg translate pop 
+		}
+		{pop pop}
+		ifelse
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+	} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin
+	array /fillvals exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fy translate 
+	rotate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	} bind def
+/FMENDEPSF {
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	/FMdicttop countdictstack 1 add def 
+	statusdict begin stopped end 
+	countdictstack -1 FMdicttop {pop end} for 
+	} def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped pop 
+		end
+		} if
+	} def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+/freq dpi 18.75 div 8 div round dup 0 eq {pop 1} if 8 mul dpi exch div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setpattern {
+	 /bwidth  exch def
+	 /bpside  exch def
+	 /bstring exch def
+	 /onbits 0 def  /offbits 0 def
+	 freq sangle landscape {90 add} if 
+		{/y exch def
+		 /x exch def
+		 /xindex x 1 add 2 div bpside mul cvi def
+		 /yindex y 1 add 2 div bpside mul cvi def
+		 bstring yindex bwidth mul xindex 8 idiv add get
+		 1 7 xindex 8 mod sub bitshift and 0 ne
+		 {/onbits  onbits  1 add def 1}
+		 {/offbits offbits 1 add def 0}
+		 ifelse
+		}
+		setscreen
+	 {} settransfer
+	 offbits offbits onbits add div FMsetgray
+	/graymode false def
+	} bind def
+/grayness {
+	FMsetgray
+	graymode not {
+		/graymode true def
+		orgxfer cvx settransfer
+		orgfreq organgle orgproc cvx setscreen
+		} if
+	} bind def
+	/HUE FMLOCAL
+	/SAT FMLOCAL
+	/BRIGHT FMLOCAL
+	/Colors FMLOCAL
+FMPrintInColor 
+	
+	{
+	/HUE 0 def
+	/SAT 0 def
+	/BRIGHT 0 def
+	% array of arrays Hue and Sat values for the separations [HUE BRIGHT]
+	/Colors   
+	[[0    0  ]    % black
+	 [0    0  ]    % white
+	 [0.00 1.0]    % red
+	 [0.37 1.0]    % green
+	 [0.60 1.0]    % blue
+	 [0.50 1.0]    % cyan
+	 [0.83 1.0]    % magenta
+	 [0.16 1.0]    % comment / yellow
+	 ] def
+      
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	/K { 
+		Colors exch get dup
+		0 get /HUE exch store 
+		1 get /BRIGHT exch store
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} def
+	/FMsetgray { 
+		/SAT exch 1.0 exch sub store 
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} bind def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	/FMsetgray {setgray} bind def
+	/K { 
+		pop
+		} def
+	}
+ifelse
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setpattern} 
+	{grayness}
+	ifelse
+	} bind def
+/V { 
+	gsave eofill grestore
+	} bind def
+/N { 
+	stroke
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+	/rad FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+% The following commented out code did not work for tangent lines of zero
+% length.  The code following it was provided by Frame to patch this error.
+%
+%/RR { 
+%	/rad exch def
+%	normalize
+%	/y2 exch def
+%	/x2 exch def
+%	normalize
+%	/y1 exch def
+%	/x1 exch def
+%	newpath
+%	x1 y1 rad add moveto
+%	x1 y2 x2 y2 rad arcto
+%	x2 y2 x2 y1 rad arcto
+%	x2 y1 x1 y1 rad arcto
+%	x1 y1 x1 y2 rad arcto
+%	closepath
+%	16 {pop} repeat
+%	} bind def
+/rarc
+    {rad
+     {arcto} stopped
+    } bind def
+/RR {
+    /rad exch def
+    normalize
+    /y2 exch def
+    /x2 exch def
+    normalize
+    /y1 exch def
+    /x1 exch def
+    mark
+    newpath
+    x1 y1 rad add moveto
+    x1 y2 x2 y2 rarc
+    x2 y2 x2 y1 rarc
+    x2 y1 x1 y1 rarc
+    x2 y1 x1 y1 rarc
+    x1 y1 x1 y2 rarc
+    closepath
+    cleartomark
+    } bind def
+
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath fill
+	grestore
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	stroke
+	grestore
+	} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 4 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/cip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        cris indx placer 255 mul cvi put
+        cgis indx placeg 255 mul cvi put
+        cbis indx placeb 255 mul cvi put
+    } for pop cris
+
+	
+	} bind def
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+	} bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+	dup 
+	8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+	/proc1 FMLOCAL
+	/proc2 FMLOCAL
+	/newproc FMLOCAL
+/Fmcc {
+    /proc2 exch cvlit def
+    /proc1 exch cvlit def
+    /newproc proc1 length proc2 length add array def
+    newproc 0 proc1 putinterval
+    newproc proc1 length proc2 putinterval
+    newproc cvx
+} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+/colorsetup {
+    currentcolortransfer
+    /gryt exch def
+    /blut exch def
+    /grnt exch def
+    /redt exch def
+    0 1 255 {
+        /indx exch def
+        /cynu 1 red indx get 255 div sub def
+        /magu 1 green indx get 255 div sub def
+        /yelu 1 blue indx get 255 div sub def
+        /k cynu magu min yelu min def
+        nredt indx 1 0 cynu max sub redt exec put
+        ngreent indx 1 0 magu max sub grnt exec put
+        nbluet indx 1 0 yelu max sub blut exec put
+        ngrayt indx 1 k sub gryt exec put
+    } for
+	} bind def
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch Fmcc settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	colorsetup
+	/is w d wbytes string def
+    /ris w d wbytes string def
+    /gis w d wbytes string def
+    /bis w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        ris indx placer 255 mul cvi put
+        gis indx placeg 255 mul cvi put
+        bis indx placeb 255 mul cvi put
+    } for pop ris}
+	{gis} {bis} true 3 colorimage 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	colorsetup
+	/is im 0 lb getinterval def 
+    /cris lb string def
+    /cgis lb string def
+    /cbis lb string def
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cip} {cgis} {cbis} true 3 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip} {gip} {bip} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip gip bip w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+%%EndProlog
+%%BeginSetup
+(3.0) FMVERSION
+1 1 612 792 0 1 9 FMDOCUMENT
+0 0 /Helvetica-Bold FMFONTDEFINE
+1 0 /Times-Roman FMFONTDEFINE
+2 0 /Times-Bold FMFONTDEFINE
+3 0 /Helvetica FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-1) 307.22 36 T
+(October 1996) 458.67 36 T
+0 18 Q
+(APPENDIX E) 260.52 658 T
+0 14 Q
+(Restore Files and Scripts) 231.02 628.67 T
+1 12 Q
+3.57 (This appendix describes the restore files and scripts included in the N-AWIPS) 108 596 P
+(distribution.) 108 582 T
+0 14 Q
+(E.1) 108 530.67 T
+(Restore Files) 151.2 530.67 T
+1 12 Q
+0.41 (Restore files contain the GEMPAK variables and their values which have been saved) 108 504 P
+0.05 (from an individual execution of a GEMPAK program. These files can be used to store) 108 490 P
+-0.74 (and retrieve the user inputs for any GEMPAK program by using the GEMPAK save and) 108 476 P
+0.61 (restore commands, respectively. A few sets of restore files have been included in the) 108 462 P
+-0.16 (distribution. By convention the restore files have an extension of) 108 448 P
+2 F
+-0.16 (.nts) 419.9 448 P
+1 F
+-0.16 ( and therefore are) 438.23 448 P
+(also called NTS files.) 108 434 T
+0 F
+(E.1.1) 108 396 T
+(Restore Files for Program Examples) 153 396 T
+1 F
+-0.09 (Most of the program examples presented in Chapter 4 have corresponding restore files) 108 370 P
+-0.5 (in the) 108 356 P
+2 F
+-0.5 ($GEMNTS/examples) 136.97 356 P
+1 F
+-0.5 ( directory. For each program the NTS filename is given by) 245.59 356 P
+-0.37 (the program name plus the example number. For instance, the following command will) 108 342 P
+(restore the first example for SFMAP:) 108 328 T
+3 10 Q
+(GEMPAK-SFMAP> restore examples/sfmap1) 144 303.33 T
+0 12 Q
+(E.1.2) 108 266 T
+(Metafile Generation Restore Files) 153 266 T
+1 F
+0.28 (The sample metafile generation script provided uses restore files in its execution. The) 108 240 P
+1.42 (settings for each frame of the metafile are stored in individual NTS files. The files) 108 226 P
+(reside in the) 108 212 T
+2 F
+($GEMNTS/nawips) 169.62 212 T
+1 F
+( directory.) 266.92 212 T
+0 F
+(E.1.3) 108 174 T
+(EZ Script Restore Files) 153 174 T
+1 F
+-0.4 (Some of the EZ Scripts \050described in more detail below\051 require restore files in order to) 108 148 P
+(run. These NTS files are stored in the) 108 134 T
+2 F
+($GEMNTS/ez) 290.86 134 T
+1 F
+( directory.) 362.82 134 T
+FMENDPAGE
+%%EndPage: "1" 2
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-2) 289.22 36 T
+(October 1996) 440.67 36 T
+0 14 Q
+(E.2) 90 710.67 T
+(Meta\336le Generation Scripts) 133.2 710.67 T
+1 12 Q
+1.14 (A metafile generation script is provided in the) 90 684 P
+2 F
+1.14 ($NAWIPS/scripts/nawips) 322.96 684 P
+1 F
+1.14 ( directory.) 453.57 684 P
+-0.25 (This script creates a metafile for display in) 90 670 P
+2 F
+-0.25 (NTRANS) 295.83 670 P
+1 F
+-0.25 (. It is included as an example of a) 345.14 670 P
+1.73 (UNIX script for use as a batch job to be run after the model has been completely) 90 656 P
+0 (ingested into the workstation environment. The script uses the saved restore files from) 90 642 P
+(the) 90 628 T
+2 F
+($GEMNTS/nawips) 107.65 628 T
+1 F
+( directory to create a metafile with standard levels and fields.) 204.96 628 T
+0.53 (The script is run by entering the script name followed by two parameters: the date as) 90 602 P
+(yymmdd, and the cycle time of the model run \05000 or 12\051.) 90 588 T
+3 10 Q
+(eta_meta_grid   950530   12) 126 563.33 T
+0 14 Q
+(E.3) 90 484.67 T
+(EZ Scripts) 133.2 484.67 T
+1 12 Q
+0.66 (This section describes how to set up and run the GEMPAK EZ scripts. These scripts) 90 458 P
+1.19 (allow the user to quickly produce a GEMPAK plot of various meteorological fields) 90 444 P
+(from gridded data sets. The EZ scripts reside in the) 90 430 T
+2 F
+($NAWIPS/scripts/ez) 338.16 430 T
+1 F
+( directory.) 443.42 430 T
+1.4 (There are two \322set up\323 programs, ezset and ezarea, that should be executed first to) 90 404 P
+1.11 (specify the gridded data file and the area of interest to use. Once set, the remaining) 90 390 P
+(scripts may be run as often as desired.) 90 376 T
+-0.5 (To run any of the EZ scripts, type the name of the script at the UNIX prompt. The script) 90 350 P
+1.84 (will prompt for all necessary parameters. Shortcut the prompting by supplying the) 90 336 P
+-0.55 (necessary parameters on the command line. That is, after typing the name of the desired) 90 322 P
+0.41 (script, but BEFORE hitting the enter key, type the necessary parameters separated by) 90 308 P
+(spaces. For example:) 90 294 T
+3 10 Q
+(ezrelh 700) 126 269.33 T
+1 12 Q
+0.29 (Most of the EZ scripts display the data in plan view. Some require a level or levels to) 90 240 P
+0.94 (be input by the user. There are also cross section, time-height section, and sounding) 90 226 P
+-0.65 (scripts which require the user to input the location of the section or sounding. See below) 90 212 P
+(for more information.) 90 198 T
+2 F
+0.41 (IMPORTANT:) 90 172 P
+1 F
+0.41 ( ALWAYS run the GEMPAK command gpend at the end of the user) 168.62 172 P
+-0.31 (session.) 90 158 P
+2 F
+-0.31 (Gpend) 130.33 158 P
+1 F
+-0.31 ( removes the GEMPAK X window from the screen.) 164.99 158 P
+2 F
+-0.31 (DO NOT CLOSE) 413.99 158 P
+-0.01 (THIS WINDOW WITH THE X-WINDOW WIDGET) 90 144 P
+1 F
+-0.01 ( \050the button on the upper left) 366.83 144 P
+(corner of the window\051.) 90 130 T
+FMENDPAGE
+%%EndPage: "2" 3
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-3) 307.22 36 T
+(October 1996) 458.67 36 T
+0 12 Q
+(E.3.1) 108 712 T
+(VERTICAL Scripts) 153 712 T
+1 F
+1.46 (Vertical EZ scripts require that the user specify the location of the sounding, time-) 108 686 P
+(height section, or spatial cross section. There are two ways to accomplish this.) 108 672 T
+(\245) 144 646 T
+(Enter the 3-character station identifier\050s\051 or) 153 646 T
+(\245) 144 620 T
+0.2 (Graphically select the locations using the mouse on a map/field window that) 153 620 P
+(has already been generated using a different EZ script.) 153 606 T
+-0.04 (In the first case, run the desired vertical EZ script, such as ezprof, and enter the station) 108 580 P
+-0.31 (ID\050s\051 when prompted. The station ID\050s\051 can also be supplied on the command line. See) 108 566 P
+-0.36 (below for the syntax and examples. In the second case, run a plan-view \050horizontal\051 EZ) 108 552 P
+2.18 (script such as ezfront and have a display on the screen of frontogenesis. Without) 108 538 P
+0.25 (removing that graphic, run ezprof to generate a sounding from the gridded data. Once) 108 524 P
+0.62 (the script is running and all required parameters have been input, place the cursor on) 108 510 P
+1.28 (the graphics screen. When the cursor changes from an arrow to a + sign, select the) 108 496 P
+0.62 (location\050s\051 with the mouse. For a single point, just click the left button at the desired) 108 482 P
+0.48 (location. For a line \050spatial cross section\051, press and hold the left mouse button at the) 108 468 P
+0.45 (location where the left side of the cross section is to start. Then \322drag\323 the line to the) 108 454 P
+(desired ending location and release the left mouse button to select the cross section.) 108 440 T
+0 F
+(E.3.2) 108 402 T
+(List of scripts and descriptions) 153 402 T
+0 10 Q
+(E.3.2.1) 108 371.33 T
+(EZ250) 162 371.33 T
+1 12 Q
+0.13 (This script will plot the 250 mb isotachs, heights and winds for all of the times for the) 108 346 P
+(given model.) 108 332 T
+3 10 Q
+(Syntax) 144 307.33 T
+( ez250) 216 307.33 T
+0 F
+(E.3.2.2) 108 277.33 T
+(EZ500) 162 277.33 T
+1 12 Q
+-0.48 (This script will plot the 500 mb absolute vorticity and heights for all of the times for the) 108 252 P
+(given model.) 108 238 T
+3 10 Q
+(Syntax:) 144 213.33 T
+(ez500) 216 213.33 T
+0 F
+(E.3.2.3) 108 183.33 T
+(EZ700) 162 183.33 T
+1 12 Q
+-0.42 (This script will plot the 700 mb vertical motions, RH and heights for all of the times for) 108 158 P
+(the given model.) 108 144 T
+3 10 Q
+(Syntax:) 144 119.33 T
+(ez700) 216 119.33 T
+FMENDPAGE
+%%EndPage: "3" 4
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-4) 289.22 36 T
+(October 1996) 440.67 36 T
+(E.3.2.4) 90 713.33 T
+(EZ850) 144 713.33 T
+1 12 Q
+-0.21 (This script will plot the 850 mb temperatures, heights and winds for all of the times for) 90 688 P
+(the given model.) 90 674 T
+3 10 Q
+(Syntax:) 126 649.33 T
+(ez850) 198 649.33 T
+0 F
+(E.3.2.5) 90 619.33 T
+(EZAREA) 144 619.33 T
+1 12 Q
+2.25 (This script graphically defines the geographic area to view for all subsequent EZ) 90 594 P
+0.38 (scripts. By default, the script displays a map of North America in medium resolution.) 90 580 P
+3.33 (The user may also specify the projection, graphics area and map resolution by) 90 566 P
+(answering the script\325s prompts.) 90 552 T
+-0.56 (When the mouse cursor becomes a + sign while on the graphics window, press and hold) 90 526 P
+2.05 (down the left button on one corner of the desired area. Then \322stretch\323 the rubber) 90 512 P
+-0.08 (rectangle to the desired size and release the left button to select the area. This area will) 90 498 P
+(now be used for ALL EZ scripts until EZAREA is run again.) 90 484 T
+( EZAREA does not take any command line arguments.) 90 458 T
+3 10 Q
+(Syntax:) 126 433.33 T
+(ezarea) 198 433.33 T
+0 F
+(E.3.2.6) 90 403.33 T
+(EZCROSS.CSI) 144 403.33 T
+1 12 Q
+(This script displays a spatial cross section of theta-e, rh and momentum surfaces.) 90 378 T
+0.31 (The end points for the cross section may be chosen by \0501\051 entering the station IDs for) 90 352 P
+0.25 (two stations; or \0502\051 graphically selecting the locations using the mouse on a map/field) 90 338 P
+(window that has already been generated using a different EZ script.) 90 324 T
+(The user must enter the fcst_hour and the left and right stations, as above.) 90 298 T
+3 10 Q
+(Syntax:) 126 273.33 T
+(ezcross.csi fcst_hour [left_stn right_stn]) 198 273.33 T
+(Examples:) 126 259.33 T
+2.28 (ezcross.csi 00 \050The script will prompt for station IDs or graphical) 198 259.33 P
+(selection.\051) 198 247.33 T
+(ezcross.csi 18 GEG ELP) 198 233.33 T
+0 F
+(E.3.2.7) 90 203.33 T
+(EZCROSS.IPV) 144 203.33 T
+1 12 Q
+(This script displays a cross section of theta, isotachs and potential vorticity.) 90 178 T
+0.31 (The end points for the cross section may be chosen by \0501\051 entering the station IDs for) 90 152 P
+0.25 (two stations; or \0502\051 graphically selecting the locations using the mouse on a map/field) 90 138 P
+(window that has already been generated using a different EZ script.) 90 124 T
+FMENDPAGE
+%%EndPage: "4" 5
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-5) 307.22 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(The user must enter the fcst_hour and the left and right stations, as above.) 108 712 T
+3 10 Q
+(Syntax:) 144 687.33 T
+(ezcross.ipv fcst_hour [left_stn right_stn]) 216 687.33 T
+(Examples:) 144 673.33 T
+2.22 (ezcross.ipv 00 \050The script will prompt for station IDs or graphical) 216 673.33 P
+(selection.\051) 216 661.33 T
+(ezcross.ipv 18 GEG ELP) 216 647.33 T
+0 F
+(E.3.2.8) 108 603.33 T
+(EZCROSS.KINEM) 162 603.33 T
+1 12 Q
+-0.09 (This script displays a cross section of circulation vectors, vertical motion and isotachs.) 108 578 P
+0.31 (The end points for the cross section may be chosen by \0501\051 entering the station IDs for) 108 552 P
+0.25 (two stations; or \0502\051 graphically selecting the locations using the mouse on a map/field) 108 538 P
+(window that has already been generated using a different EZ script.) 108 524 T
+(The user must enter the fcst_hour and the left and right stations, as above.) 108 498 T
+3 10 Q
+(Syntax:) 144 473.33 T
+(ezcross.kinem fcst_hour [left_stn right_stn]) 216 473.33 T
+(Examples:) 144 459.33 T
+0.83 (ezcross.kinem 00 \050The script will prompt for station IDs or graphical) 216 459.33 P
+(selection.\051) 216 447.33 T
+(ezcross.kinem 18 GEG ELP) 216 433.33 T
+0 F
+(E.3.2.9) 108 389.33 T
+(EZCROSS.THTA) 162 389.33 T
+1 12 Q
+(This script plots a cross section of circulation vectors, rh, theta and isotachs.) 108 364 T
+0.31 (The end points for the cross section may be chosen by \0501\051 entering the station IDs for) 108 338 P
+0.25 (two stations; or \0502\051 graphically selecting the locations using the mouse on a map/field) 108 324 P
+(window that has already been generated using a different EZ script.) 108 310 T
+(The user must enter the fcst_hour and the left and right stations, as above.) 108 284 T
+3 10 Q
+(Syntax:) 144 259.33 T
+(ezcross.thta fcst_hour [left_stn right_stn]) 216 259.33 T
+(Examples:) 144 245.33 T
+1.83 (ezcross.thta 00 \050The script will prompt for station IDs or graphical) 216 245.33 P
+(selection.\051) 216 233.33 T
+(ezcross.thta 18 GEG ELP) 216 219.33 T
+0 F
+(E.3.2.10) 108 175.33 T
+(EZDELTA) 162 175.33 T
+1 12 Q
+-0.3 (This script displays the 12 hour change of a given field along with the field itself. If the) 108 150 P
+1.09 (user asks for the change in 700 mb temperature at 24-h, the script will compute the) 108 136 P
+0.62 (change between the 12- and 24-h 700 mb temperatures and display it, along with the) 108 122 P
+(24-h temperature field.) 108 108 T
+FMENDPAGE
+%%EndPage: "5" 6
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-6) 289.22 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+2.3 (The user must supply the forecast time \050from which 12 hrs will be subtracted to) 90 712 P
+(compute the difference\051, level, and a field.) 90 698 T
+3 10 Q
+(Syntax:) 126 673.33 T
+(ezdelta fcst_hour level field) 198 673.33 T
+(Examples:) 126 659.33 T
+(ezdelta 24 700 temp) 198 659.33 T
+( ezdelta 36 500 hght) 198 645.33 T
+0 F
+(E.3.2.11) 90 615.33 T
+(EZDIVQ) 144 615.33 T
+1 12 Q
+-0.72 (This script displays the divergence of layer averaged Q-vectors along with the lapse rate) 90 590 P
+(through the same layer.) 90 576 T
+0.77 (The user must supply the script with the bottom and top pressure levels of the layer.) 90 550 P
+(Note that the order is important.) 90 536 T
+3 10 Q
+(Syntax:) 126 511.33 T
+(ezdivq lower_level upper_level) 198 511.33 T
+(Example:) 126 497.33 T
+(ezdivq 500 300) 198 497.33 T
+0 F
+(E.3.2.12) 90 467.33 T
+(EZDOC) 144 467.33 T
+1 12 Q
+0.35 (This script creates a document from the README file including the headers of all of) 90 442 P
+(the scripts.) 90 428 T
+3 10 Q
+(Syntax:) 126 403.33 T
+(ezdoc) 198 403.33 T
+0 F
+(E.3.2.13) 90 359.33 T
+(EZFRONT) 144 359.33 T
+1 12 Q
+-0.42 (This script displays the frontogenesis function, wind barbs, and temperature for a given) 90 334 P
+(level.) 90 320 T
+(The user must supply the level.) 90 294 T
+3 10 Q
+(Syntax:) 126 269.33 T
+(ezfront level) 198 269.33 T
+(Example:) 126 255.33 T
+(ezfront 850) 198 255.33 T
+0 F
+(E.3.2.14) 90 211.33 T
+(EZLOOP) 144 211.33 T
+1 12 Q
+(This script allows the user to loop the graphics previously created.) 90 186 T
+0.39 (Note that the user can loop the plan view graphics so long as he/she has not yet run a) 90 160 P
+-0.61 (vertical \050skew-T, time-height section, or cross-section\051 EZ script. Once one of these has) 90 146 P
+1.95 (been run, the existing graphics in the plan view window can no longer be looped) 90 132 P
+0.58 (without re-running the plan view EZ script to regenerate them. However, the vertical) 90 118 P
+(graphics generated for the Skew-T may be looped by the user.) 90 104 T
+FMENDPAGE
+%%EndPage: "6" 7
+%%Page: "7" 7
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-7) 307.22 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(The following are the looping commands:) 108 712 T
+3 10 Q
+(;l = begin looping forward) 144 687.33 T
+(;r = begin looping backward) 144 673.33 T
+(;s = step forward one frame) 144 659.33 T
+(;b = step backward one frame) 144 645.33 T
+(;N = change loop speed, where N = 1 \050slowest\051 to 5 \050fastest\051.) 144 631.33 T
+1 12 Q
+0.62 (To stop loop, click the left mouse button on the graphic window. To end the looping) 108 602 P
+(script, enter \322exit\323 in the text window.) 108 588 T
+0 10 Q
+(E.3.2.15) 108 557.33 T
+(EZMSLP) 162 557.33 T
+1 12 Q
+(This script displays the mean sea level pressure, winds, and 1000-500 thickness.) 108 532 T
+(No command line parameters are necessary.) 108 506 T
+3 10 Q
+(Syntax:) 144 481.33 T
+(ezmslp) 216 481.33 T
+0 F
+(E.3.2.16) 108 451.33 T
+(EZPCPN) 162 451.33 T
+1 12 Q
+1.85 (This script will plot the precipitation for the shortest interval in the grid file, then) 108 426 P
+(overlay the mean sea level pressure.) 108 412 T
+3 10 Q
+(Syntax:) 144 387.33 T
+(ezpcpn) 216 387.33 T
+0 F
+(E.3.2.17) 108 357.33 T
+(EZPIVA) 162 357.33 T
+1 12 Q
+-0.37 (This script displays the vorticity advection by the 700-300 mb thermal wind along with) 108 332 P
+(the 500 mb winds and 850-500 mb lapse rate.) 108 318 T
+(No command line parameters are required.) 108 292 T
+3 10 Q
+(Syntax:) 144 267.33 T
+(ezpiva) 216 267.33 T
+0 F
+(E.3.2.18) 108 237.33 T
+(EZPMSL) 162 237.33 T
+1 12 Q
+0.35 (This script plots the mean sea level pressure and the 1000-500 thickness for all of the) 108 212 P
+(times in the given model.) 108 198 T
+3 10 Q
+(Syntax:) 144 173.33 T
+(ezpmsl) 216 173.33 T
+0 F
+(E.3.2.19) 108 143.33 T
+(EZPRINT) 162 143.33 T
+1 12 Q
+-0.18 (This script will print any X windows graphic on a laser printer. It uses the xwd and xpr) 108 118 P
+0.79 (programs to accomplish this. Both have man pages if you need more information on) 108 104 P
+-0.48 (them. To use, type EZPRINT after you have a window of graphics displayed. When the) 108 90 P
+-0.64 (mouse cursor changes to a + sign, click the mouse on the window you want to print. The) 108 76 P
+FMENDPAGE
+%%EndPage: "7" 8
+%%Page: "8" 8
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-8) 289.22 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+0.82 (script is set up to print on laser jet printers by default but can be easily modified for) 90 712 P
+(postscript or other drivers.) 90 698 T
+3 10 Q
+(Syntax:) 126 673.33 T
+(ezprint) 198 673.33 T
+0 F
+(E.3.2.20) 90 643.33 T
+(EZPROF) 144 643.33 T
+1 12 Q
+(This script will plot a Skew-T diagram for a given location.) 90 618 T
+-0.15 (The location for the Skew-T may be chosen by \0501\051 entering the station ID for a station;) 90 592 P
+0.71 (or \0502\051 graphically selecting the location using the mouse on a map/field window that) 90 578 P
+(has already been generated using a different EZ script.) 90 564 T
+(The user must enter the location, as above.) 90 538 T
+3 10 Q
+(Syntax:) 126 513.33 T
+(ezprof [station_id]) 198 513.33 T
+(Examples:) 126 499.33 T
+(ezprof \050The script will prompt for station ID) 198 499.33 T
+( or graphical selection.\051) 385.73 499.33 T
+(ezprof GLD) 198 485.33 T
+0 F
+(E.3.2.21) 90 455.33 T
+(EZQVEC) 144 455.33 T
+1 12 Q
+1.3 (This script displays the layer averaged Q-vectors with the layer thickness and layer) 90 430 P
+(averaged isotachs.) 90 416 T
+0.77 (The user must supply the script with the bottom and top pressure levels of the layer.) 90 390 P
+(Note that the order is important.) 90 376 T
+3 10 Q
+(Syntax:) 126 351.33 T
+(ezqvec lower_level upper_level) 198 351.33 T
+(Example:) 126 337.33 T
+(ezqvec 500 300) 198 337.33 T
+0 F
+(E.3.2.22) 90 307.33 T
+(EZRELH) 144 307.33 T
+1 12 Q
+(This script displays the relative humidity, winds and temperature at a given level.) 90 282 T
+(The user must supply the level.) 90 256 T
+3 10 Q
+(Syntax:) 126 231.33 T
+(ezrelh level) 198 231.33 T
+(Example:) 126 217.33 T
+(ezrelh 750) 198 217.33 T
+0 F
+(E.3.2.23) 90 187.33 T
+(EZSET) 144 187.33 T
+1 12 Q
+0.25 (This script allows the user to select the model and the date/time of the model run. For) 90 162 P
+-0.17 (the date/time, the user can enter the full yymmddhh \050year, month, day, hour\051 or merely) 90 148 P
+(a 00 or 12 for the current date. The model can be eta, ruc, ngm, avn, or mrf.) 90 134 T
+-0.08 (EZSET assumes a file naming convention and location. The location is set through the) 90 108 P
+1.27 (MODEL environment variable, which is defined by the .cshrc file. The file naming) 90 94 P
+FMENDPAGE
+%%EndPage: "8" 9
+%%Page: "9" 9
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-9) 307.22 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+1.43 (convention by default is mdl_yymmddhh, where yymmddhh is the year/month/day/) 108 712 P
+(hour of the model run and mdl is the lowercase 3 letter id of the model.) 108 698 T
+3 10 Q
+(Syntax:) 144 673.33 T
+(ezset yymmddhh|hh model) 216 673.33 T
+(Examples:) 144 659.33 T
+(ezset 94052612 eta) 216 659.33 T
+(ezset 00 ngm) 216 645.33 T
+0 F
+(E.3.2.24) 108 615.33 T
+(EZTHETAE) 162 615.33 T
+1 12 Q
+0.47 (This script displays theta-e, wind barbs, Lifted Index, and convergence. Note that the) 108 590 P
+(LI is the \322most unstable\323 LI from the four lowest levels of the model.) 108 576 T
+(The user must supply the level.) 108 550 T
+3 10 Q
+(Syntax:) 144 525.33 T
+(ezthetae level) 216 525.33 T
+(Example:) 144 511.33 T
+(ezthetae 850) 216 511.33 T
+0 F
+(E.3.2.25) 108 481.33 T
+(EZTHGT.OMEGA) 162 481.33 T
+1 12 Q
+(This script will plot a time-height section of omega and zero-divergence.) 108 456 T
+0.5 (The location for the time-height section may be chosen by \0501\051 entering the station ID) 108 430 P
+0.59 (for a station; or \0502\051 graphically selecting the location using the mouse on a map/field) 108 416 P
+(window that has already been generated using a different EZ script.) 108 402 T
+(The user must enter the location, as above.) 108 376 T
+3 10 Q
+(Syntax:) 144 351.33 T
+(ezthgt.omega [station_id]) 216 351.33 T
+(Examples:) 144 337.33 T
+3.39 (ezthgt.omega \050The script will prompt for station ID or graphical) 216 337.33 P
+(selection.\051) 216 325.33 T
+(ezthgt.omega GLD) 216 311.33 T
+0 F
+(E.3.2.26) 108 281.33 T
+(EZTHGT.RHOM) 162 281.33 T
+1 12 Q
+(This script will plot a time-height section of omega, freezing level and rh.) 108 256 T
+0.5 (The location for the time-height section may be chosen by \0501\051 entering the station ID) 108 230 P
+0.59 (for a station; or \0502\051 graphically selecting the location using the mouse on a map/field) 108 216 P
+(window that has already been generated using a different EZ script.) 108 202 T
+(The user must enter the location, as above.) 108 176 T
+3 10 Q
+(Syntax:) 144 151.33 T
+(ezthgt.rhom [station_id]) 216 151.33 T
+(Examples:) 144 137.33 T
+4.25 (ezthgt.rhom \050The script will prompt for station ID or graphical) 216 137.33 P
+(selection.\051) 216 125.33 T
+(ezthgt.rhom GLD) 216 111.33 T
+FMENDPAGE
+%%EndPage: "9" 10
+%%Page: "10" 10
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-10) 286.45 36 T
+(October 1996) 440.67 36 T
+(E.3.2.27) 90 713.33 T
+(EZTHGT.WIND) 144 713.33 T
+1 12 Q
+(This script will plot a time-height section of wind freezing level and rh.) 90 688 T
+0.5 (The location for the time-height section may be chosen by \0501\051 entering the station ID) 90 662 P
+0.59 (for a station; or \0502\051 graphically selecting the location using the mouse on a map/field) 90 648 P
+(window that has already been generated using a different EZ script.) 90 634 T
+(The user must enter the location, as above.) 90 608 T
+3 10 Q
+(Syntax:) 126 583.33 T
+(ezthgt.wind [station_id]) 198 583.33 T
+(Examples:) 126 569.33 T
+4.5 (ezthgt.wind \050The script will prompt for station ID or graphical) 198 569.33 P
+(selection.\051) 198 557.33 T
+(ezthgt.wind GLD) 198 543.33 T
+FMENDPAGE
+%%EndPage: "10" 11
+%%Page: "11" 11
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-11) 304.45 36 T
+(October 1996) 458.67 36 T
+0 14 Q
+(E.4) 108 710.67 T
+(HPC Scripts) 151.2 710.67 T
+1 12 Q
+-0.67 (The following set of scripts demonstrates a possible use of the UNIX scripting language) 108 684 P
+(to display observational and gridded data in an operational environment.) 108 670 T
+2 F
+(Note: The scripts are provided by the HPC for internal use only.) 108 644 T
+1 F
+(cleanup) 144 618 T
+0.03 (Remove unneeded processes and message queues that can) 207 618 P
+1.85 (clutter the workstation. This command is best used just) 207 604 P
+-0.02 (before logging out or just after logging on. This command) 207 590 P
+(will kill all active GEMPAK processes.) 207 576 T
+(gpend) 144 550 T
+3.98 (To close a GEMPAK window, always run gpend!!!!) 207 550 P
+0.26 (\050Type: gpend < enter >\051. Closing a GEMPAK window by) 207 536 P
+1.07 (any other method clutters the workstation with orphaned) 207 522 P
+2.88 (processes. Run cleanup to remove them. A GEMPAK) 207 508 P
+(window is labeled GEMPAK on the top window bar.) 207 494 T
+0 F
+(E.4.1) 108 456 T
+(Data Plotting GEMPAK scripts) 153 456 T
+0 10 Q
+(E.4.1.1) 108 425.33 T
+(SAMAP) 162 425.33 T
+1 12 Q
+(Plot a standard surface map from surface airways observations.) 108 400 T
+3 10 Q
+(samap [area] [hour] [filter] [yymmdd] < print >) 144 375.33 T
+(default:) 144 361.33 T
+(wv current .45 current) 216 361.33 T
+0 F
+(E.4.1.2) 108 331.33 T
+(SAMORE) 162 331.33 T
+1 12 Q
+(Plot a map of extra surface parameters from surface airways observations.) 108 306 T
+3 10 Q
+(samore [area] [hour] [filter] [yymmdd] < print >) 144 281.33 T
+(default:) 144 267.33 T
+(wv current .45 current) 216 267.33 T
+0 F
+(E.4.1.3) 108 237.33 T
+(SAZOOM / UAZOOM) 162 237.33 T
+1 12 Q
+-0.09 (Zoom in on a surface \050upper air\051 map. Cursor turns into a \322+\323. Select one corner of the) 108 212 P
+0.45 (new area by positioning the cursor in the desired location and clicking the left mouse) 108 198 P
+0.28 (button. Release the mouse button and drag the cursor so the box describes the desired) 108 184 P
+(area and click the left mouse button again.) 108 170 T
+3 10 Q
+(sazoom) 144 145.33 T
+(uazoom) 144 131.33 T
+FMENDPAGE
+%%EndPage: "11" 12
+%%Page: "12" 12
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-12) 286.45 36 T
+(October 1996) 440.67 36 T
+(E.4.1.4) 90 713.33 T
+(SFC) 144 713.33 T
+1 12 Q
+1.61 (Display a Rapid Update Cycle surface analysis for the requested area, product and) 90 688 P
+-0.21 (observation hour \050or most recent available\051 combined with a plot of the current surface) 90 674 P
+(airways observations.) 90 660 T
+3 10 Q
+(sfc [product] [area] [hour] [filter] [yymmdd] < print >) 126 635.33 T
+([product]:) 126 621.33 T
+0.47 (tmp dwp the rlh qdv qtr fnt div prf dwpc tmpc: Temperature \050F\051, Dew) 198 621.33 P
+1.82 (point \050F\051, Equivalent Potential Temperature \050K\051, Relative Humidity,) 198 609.33 P
+11.1 (Moisture Convergence, Moisture Transport, Frontogenesis,) 198 597.33 P
+-0.13 (Divergence, 3-hr Pressure Change, Dew Point \050C\051, Temperature \050C\051.) 198 585.33 P
+(default:) 126 571.33 T
+(tmp usa current .40 current) 198 571.33 T
+0 F
+(E.4.1.5) 90 541.33 T
+(UAMAP) 144 541.33 T
+1 12 Q
+(Plot a map of standard upper air radiosonde observations.) 90 516 T
+3 10 Q
+(uamap [level] [area] [hour] [filter] [yymmdd] < print >) 126 491.33 T
+(default:) 126 477.33 T
+(850 usa current .40 current) 198 477.33 T
+0 F
+(E.4.1.6) 90 447.33 T
+(UAMORE) 144 447.33 T
+1 12 Q
+(Plot a map of indices and misc. parameters from radiosonde observations.) 90 422 T
+3 10 Q
+(uamore [area] [hour] [filter] [yymmdd] < print >) 126 397.33 T
+(default:) 126 383.33 T
+(usa current .40 current) 198 383.33 T
+0 F
+(E.4.1.7) 90 353.33 T
+(ANL) 144 353.33 T
+1 12 Q
+1.14 (Display an analysis of the requested mandatory pressure level and product from the) 90 328 P
+-0.16 (specified model initial analysis \050must be available\051 combined with a plot of the current) 90 314 P
+(upper air observations.) 90 300 T
+3 10 Q
+(anl [level-product] [area] [model] [filter] [yymmddhh] < print >) 126 275.33 T
+(default:) 126 261.33 T
+(850dwp usa eta .40 current) 198 261.33 T
+([level-product]:) 126 247.33 T
+2.84 (sfcpwt sfctmp sfclft sfckin 850dwp 850tmp 850spd 850qtr 850rlh) 198 247.33 P
+0.47 (850all 700rlh 700tmp 500htf 500tmp 500spd 500abv 400spd 300spd) 198 235.33 P
+(250spd 200spd 150spd 100spd) 198 223.33 T
+0 F
+(E.4.1.8) 90 193.33 T
+(SKEWT) 144 193.33 T
+1 12 Q
+(Plot a Skew-T-ln p diagram for a radiosonde station.) 90 168 T
+3 10 Q
+(skewt [stnid] [hour] [yymmdd] < print >) 126 143.33 T
+(default:) 126 129.33 T
+(iad current current) 198 129.33 T
+FMENDPAGE
+%%EndPage: "12" 13
+%%Page: "13" 13
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-13) 304.45 36 T
+(October 1996) 458.67 36 T
+(E.4.1.9) 108 713.33 T
+(HODO) 162 713.33 T
+1 12 Q
+(Plot a hodograph for a radiosonde station.) 108 688 T
+3 10 Q
+(hodo [stnid] [hour] [yymmdd] < print >) 144 669.33 T
+(default:) 144 655.33 T
+(iad current current) 216 655.33 T
+0 12 Q
+(E.4.2) 108 618 T
+(Additional GEMPAK scripts) 153 618 T
+0 10 Q
+(E.4.2.1) 108 587.33 T
+(UAPRINT) 162 587.33 T
+1 12 Q
+-0.34 (Print upper air maps for 925, 850, 700, 500, 300, and 250 mb and stability indices from) 108 562 P
+(rawinsonde) 108 548 T
+3 10 Q
+(uaprint [area] [hour] [filter] [yymmdd]) 144 529.33 T
+(default:) 144 515.33 T
+2.07 (afos-usa current .40 current observations. Uses the same plotting) 216 515.33 P
+(model as uamap.) 216 503.33 T
+0 12 Q
+(E.4.3) 108 466 T
+(Local Product Metafiles) 153 466 T
+1 F
+1.22 (\050View created metafiles as a Local Product under) 108 440 P
+2 F
+1.22 (ntrans) 357.55 440 P
+1 F
+1.22 (, Select: File; Open: Local) 390.87 440 P
+1.18 (Products\051 These scripts create a metafile on your local workstation that can then be) 108 426 P
+4.45 (viewed with ntrans. Production of the metafile will take between 1/2 minute) 108 412 P
+(\050skewtmeta\051 and up to 5 minutes \050qlmeta\051.) 108 398 T
+0 10 Q
+(E.4.3.1) 108 367.33 T
+(SAMETA) 162 367.33 T
+1 12 Q
+-0.06 (Plot a time sequence of surface maps using the SAMAP and SAMORE station models) 108 342 P
+-0.32 (from surface) 108 328 P
+1 10 Q
+-0.27 (airways observations and place them in a metafile labeled SA_META. The default is the) 171.29 328 P
+(last six hours for the area specified and ending at the current time.) 108 315.33 T
+3 F
+(sameta [area] [frames] [final hour] [tinc] [filter] [yymmdd]) 144 295.33 T
+(default:) 144 281.33 T
+(wv 6 current 1 .45 current) 216 281.33 T
+0 F
+(E.4.3.2) 108 251.33 T
+(QLMETA) 162 251.33 T
+1 12 Q
+-0.31 (Creates a metafile file containing a time-sequence of Sea-level Pressure & 100-500 mb) 108 226 P
+-0.46 (Thickness and of 500 mb Height & Absolute Vorticity for every forecast time available) 108 212 P
+1.52 (for the selected numerical model. This script can be run before the entire model is) 108 198 P
+0.53 (complete to get a \322quick look\323 at the model output \050esp. for the AVN\051. The resulting) 108 184 P
+(metafile is labeled QL_[model]_[mdlarea]_META in the ntrans local product list.) 108 170 T
+3 10 Q
+(qlmeta [model] [mdlarea] [yymmddhh]) 144 145.33 T
+(default:) 144 131.33 T
+(avn usa current) 216 131.33 T
+(mdlarea can be:) 144 117.33 T
+2.82 (usa can car pac atl epa wat nam sam \050United States, Canada,) 216 117.33 P
+1.6 (Caribbean, Pacific, Atlantic, East Pac., West Atl., North and South) 216 105.33 P
+(America.) 216 93.33 T
+FMENDPAGE
+%%EndPage: "13" 14
+%%Page: "14" 14
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-14) 286.45 36 T
+(October 1996) 440.67 36 T
+(E.4.3.3) 90 713.33 T
+(SKEWTMETA) 144 713.33 T
+1 12 Q
+1.36 (Plot a Skew-T-ln p diagram for every radiosonde station listed or every radiosonde) 90 688 P
+(station in the listed states and place them in a metafile labeled SKEWT_META.) 90 674 T
+3 10 Q
+(skewtmeta [stn or state] [stn or st] ........ [stn or st]) 126 649.33 T
+(default:) 126 635.33 T
+(none) 198 635.33 T
+0 12 Q
+(E.4.4) 90 596 T
+(Command Station Models) 135 596 T
+1 F
+(samap) 90 556 T
+(TMPF) 216 556 T
+(PMSL) 270 556 T
+(WSYM) 198 538 T
+(O) 252 538 T
+(PTND) 288 538 T
+(DWPF) 216 520 T
+(STNID) 270 520 T
+(Visibility \050.1 mi\051) 216 502 T
+(samore \050winter\051) 90 466 T
+(GUST \050kt\051) 234 466 T
+(WCIF) 216 448 T
+(TMWF) 270 448 T
+(WSYM) 198 430 T
+(O) 252 430 T
+(3-hr Precip \050.01\323\051) 288 430 T
+(THTE) 216 412 T
+(STNID) 270 412 T
+(Snow Cover \050inches\051) 234 394 T
+(samore \050summer\051) 90 358 T
+(GUST \050kt\051) 234 358 T
+(HEAT) 216 340 T
+(TMWF) 270 340 T
+(WSYM) 198 322 T
+(O) 252 322 T
+(3-hr Precip \050.01\323\051) 288 322 T
+(THTE) 216 304 T
+(STNID) 270 304 T
+(LTMP) 234 286 T
+(uamap) 90 250 T
+(TMPC) 216 250 T
+(STDZ) 270 250 T
+(O) 252 232 T
+(DWPC) 216 214 T
+(STNID) 270 214 T
+(uamore) 90 176.67 T
+(CAPE \050J kg) 234 176.67 T
+1 8 Q
+(-1) 294.3 180.67 T
+1 12 Q
+(\051) 300.96 176.67 T
+(LIFT) 216 158.67 T
+(KINX) 270 158.67 T
+(STNID) 234 140.67 T
+(TOTL) 216 122.67 T
+(PWTR \050.01\323\051) 270 122.67 T
+(CINS \050J kg) 234 103.33 T
+1 8 Q
+(-1) 290.97 107.33 T
+1 12 Q
+(\051) 297.63 103.33 T
+FMENDPAGE
+%%EndPage: "14" 15
+%%Page: "15" 15
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-15) 304.45 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(TMPF & C:) 162 712 T
+(Temperature \050\373F & \373C\051) 234 712 T
+(PMSL:) 162 698 T
+(Sea-level Pressure) 234 698 T
+(WCIF:) 162 684 T
+(Wind Chill Index \050\373F\051) 234 684 T
+(HEAT:) 162 670 T
+(Heat Index Temperature \050\373F\051) 234 670 T
+(LTMP:) 162 656 T
+(Temperature of Surface Air Lifted to 500 mb \050\373C\051) 234 656 T
+(DWPF & C:) 162 642 T
+(Dew Point \050\373F & \373C\051) 234 642 T
+(PTND:) 162 628 T
+(3-hr Pressure Tendency) 234 628 T
+(THTE:) 162 614 T
+(Equivalent Potential Temperature \050K\051) 234 614 T
+(WSYM:) 162 600 T
+(Weather Symbols) 234 600 T
+(STNID:) 162 586 T
+(3-letter Station ID) 234 586 T
+(STDZ:) 162 572 T
+(Geopotential Height \050dm\051) 234 572 T
+0 F
+(E.4.5) 108 534 T
+(Command Legend) 153 534 T
+1 F
+(area:) 144 508 T
+0.57 (Center map on a state \050two letter ID\051 or station ID. A \322-\323) 207 508 P
+0.44 (sign will zoom out \050e.g. wv-\051 For upper air maps you can) 207 494 P
+10.86 (also specify: usa \050USA\051 can \050CANADA\051 car) 207 480 P
+7.69 (\050CARRIBEAN\051 afos \050AFOS size USA\051 nam \050N.) 207 466 P
+(AMERICA\051) 207 452 T
+(hour:) 144 426 T
+(Hour, hh, in GMT for plot \050e.g. 12 = 1200 UTC\051) 207 426 T
+(filter:) 144 400 T
+0.88 (Determines Data Density: 0 = plot all data, 1 = avoid all) 207 400 P
+(overplots of data \050enter any rational number, 0 or greater\051) 207 386 T
+(yymmdd:) 144 360 T
+-0.27 (Date within last two weeks you want to plot. \050940126 = 26) 207 360 P
+(January 1994\051) 207 346 T
+(level:) 144 320 T
+1.81 (Mandatory isobaric level for plot \0501000, 925, 850, 700,) 207 320 P
+(500, 400, 300, 250, 200, 150, 100\051) 207 306 T
+(stnid:) 144 280 T
+-0.61 (Radiosonde station ID for a vertical profile. Can be entered) 207 280 P
+1.44 (as a number \050e.g. 72403 = Dulles\051 or 3-letter station ID) 207 266 P
+(\050e.g. IAD = Dulles\051) 207 252 T
+(< help >) 144 226 T
+3.53 (To get help on a command type help or h after the) 207 226 P
+0.51 (command name on press <enter> \050e.g. samap help = help) 207 212 P
+(on the command samap\051) 207 198 T
+(< print >) 144 172 T
+-0.45 (Optional: Can be placed at the end of any of the above data) 207 172 P
+1.9 (plotting scripts to get a B&W printout. Printer must be) 207 158 P
+(attached to the workstation!!!!) 207 144 T
+FMENDPAGE
+%%EndPage: "15" 16
+%%Page: "16" 16
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-16) 286.45 36 T
+(October 1996) 440.67 36 T
+0 12 Q
+(E.4.6) 90 712 T
+(Model Diagnostic [md] GEMPAK script series) 135 712 T
+0 10 Q
+(E.4.6.1) 90 687.33 T
+(MDSET) 144 687.33 T
+1 12 Q
+(Initialize the md sequence by setting the model, area and forecast hour \050f## e.g. f120\051.) 90 662 T
+3 10 Q
+(mdset [model] [mdlarea] [fhour] [yymmddhh]) 126 643.33 T
+(default:) 126 629.33 T
+(avn usa f00 present) 198 629.33 T
+0 F
+(E.4.6.2) 90 599.33 T
+(MDPLOT) 144 599.33 T
+1 12 Q
+(Plot the selected product for the default level or when applicable the level specified.) 90 574 T
+3 10 Q
+(mdplot [mdproduct] [level]) 126 555.33 T
+0 F
+(E.4.6.3) 90 525.33 T
+(MDMDL) 144 525.33 T
+1 12 Q
+(Plot the current product for the specified numerical model.) 90 500 T
+3 10 Q
+(mdmdl [model] [yymmddhh]) 126 481.33 T
+0 F
+(E.4.6.4) 90 451.33 T
+(MDTIME) 144 451.33 T
+1 12 Q
+(Plot the current product for the specified forecast hour \050f## e.g. f120\051.) 90 426 T
+3 10 Q
+(mdtime [fhour]) 126 407.33 T
+0 F
+(E.4.6.5) 90 377.33 T
+(MDAREA) 144 377.33 T
+1 12 Q
+(Plot the current product for the specified area.) 90 352 T
+3 10 Q
+(mdarea [mdlarea]) 126 327.33 T
+0 F
+(E.4.6.6) 90 297.33 T
+(MDZOOM) 144 297.33 T
+1 12 Q
+-0.69 (Zoom in on an area and recreate the current product with full data resolution. The cursor) 90 272 P
+1.32 (turns into a \322+\323. Select one corner of the new area by positioning the cursor in the) 90 258 P
+-0.18 (desired location and clicking the left mouse button. Release the mouse button and drag) 90 244 P
+(the cursor so the box describes the desired area and click the left mouse button again.) 90 230 T
+3 10 Q
+(mdzoom) 126 205.33 T
+0 F
+(E.4.6.7) 90 175.33 T
+(VP) 144 175.33 T
+1 12 Q
+0.38 (Plot a vertical profile for the location specified. To choose the location of the vertical) 90 150 P
+1.19 (profile move the cursor to the location desired and click the left mouse button. The) 90 136 P
+-0.46 (default vertical profile is a Skew-T ln P diagram with temperature, dew point and wind.) 90 122 P
+3 10 Q
+(vp [vpproduct]) 126 97.33 T
+FMENDPAGE
+%%EndPage: "16" 17
+%%Page: "17" 17
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-17) 304.45 36 T
+(October 1996) 458.67 36 T
+(E.4.6.8) 108 713.33 T
+(XS) 162 713.33 T
+1 12 Q
+0.57 (Create a vertical cross section at the location specified. To choose the location of the) 108 688 P
+0.26 (cross section, move the cursor to the desired location for one end point of the section.) 108 674 P
+0.44 (Click the left mouse button. Move the cursor to the other section end point. Click the) 108 660 P
+-0.12 (left mouse button again. The default cross section is of potential temperature, isotachs,) 108 646 P
+(mixing ratio, and ageostrophic wind arrows.) 108 632 T
+3 10 Q
+(xs [xsproduct]) 144 607.33 T
+0 F
+(E.4.6.9) 108 577.33 T
+(TS) 162 577.33 T
+2 12 Q
+0.24 (** Not yet available **) 108 552 P
+1 F
+0.24 ( Create a time section at the location specified. To choose the) 224.89 552 P
+0.51 (location of the time section, move the cursor to the desired location and click the left) 108 538 P
+-0.59 (mouse button. The default time section is of temperature, relative humidity, omega, and) 108 524 P
+(wind barbs.) 108 510 T
+3 10 Q
+(ts [tsproduct]) 144 485.33 T
+0 F
+(E.4.6.10) 108 455.33 T
+(MDMETA) 162 455.33 T
+1 12 Q
+-0.42 (Creates a metafile file containing a time-sequence of the forecast products specified for) 108 430 P
+(every forecast time available for the selected numerical model \050use mdset\051. To specify) 108 416 T
+3.4 (a product and a specific pressure level enter [mdproduct]_[level]. The resulting) 108 402 P
+(metafile is labeled MD_[model]_[mdlarea]_META in the ntrans local product list.) 108 388 T
+3 10 Q
+(mdmeta [mdproduct1] [mdproduct2] ..... [mdproduct6]) 144 363.33 T
+(default: bwdspd none none) 144 349.33 T
+0 F
+(E.4.6.11) 108 319.33 T
+(Parameter Definitions) 162 319.33 T
+1 12 Q
+(model:) 144 294 T
+1.08 (lfm eta ngm avn mrf meso fnl ruc rucs \050etal, etay, mrfx,) 207 294 P
+(rdas, edas, mass when available\051) 207 280 T
+(mdlarea:) 144 254 T
+0.58 (usa can car nam sam pac \050or npa\051 atl \050or nat\051 wat epa tpa) 207 254 P
+-0.45 (spa sat ind eur afr aus mde eas sas ant nhm shm psatl pspac) 207 240 P
+0.2 ([United States, Canada, Caribbean, North America, South) 207 226 P
+0.09 (America, \050North\051 Pacific, \050North\051 Atlantic, West Atlantic,) 207 212 P
+5.8 (East Pacific, Tropical Pacific, South Pacific, South) 207 198 P
+0.37 (Atlantic, Indian Ocean, Europe, Africa, Australia, Middle) 207 184 P
+7.08 (East, East Asia, South Asia, Antarctica, Northern) 207 170 P
+0.71 (Hemisphere, Southern Hemisphere, North Atlantic \050polar) 207 156 P
+(stereographic\051 and North Pacific \050Polar Stereographic\051].) 207 142 T
+(level:) 144 116 T
+4.28 (Every 50mb for lfm, eta, ngm, meso and ruc; only) 207 116 P
+-0.35 (mandatory levels for avn, mrf and fnl \0501000, 925, 850 etc.\051) 207 102 P
+(mdproduct:) 144 76 T
+-0.35 (\050These products are independent of the level specification\051) 207 76 P
+FMENDPAGE
+%%EndPage: "17" 18
+%%Page: "18" 18
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-18) 286.45 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+(slpthk) 198 712 T
+7.95 (Sea-level pressure and 1000-500 mb) 279 712 P
+(Thickness) 279 698 T
+(bliwnd) 198 680 T
+(Best lifted index and boundary layer wind) 279 680 T
+(btmslp) 198 662 T
+13.71 (Sea-level pressure, boundary layer) 279 662 P
+(temperature and winds) 279 648 T
+(btdqdv) 198 630 T
+4.7 (Boundary layer dew point temperature,) 279 630 P
+(moisture convergence, and winds) 279 616 T
+(btewnd) 198 598 T
+11.6 (Boundary layer equivalent potential) 279 598 P
+(temperature and winds) 279 584 T
+(bteqdv) 198 566 T
+11.6 (Boundary layer equivalent potential) 279 566 P
+4.94 (temperature, moisture convergence, and) 279 552 P
+(winds) 279 538 T
+(bteq85) 198 520 T
+11.6 (Boundary layer equivalent potential) 279 520 P
+(temperature, 850 mb water vapor transport) 279 506 T
+(bqttop) 198 488 T
+1.37 (Boundary layer water vapor transport and) 279 488 P
+(surface topography \050m\051) 279 474 T
+(bwnspd) 198 456 T
+2.16 (Boundary layer winds, isotachs, and sea-) 279 456 P
+(level pressure) 279 442 T
+(brhwnd) 198 424 T
+4.11 (Boundary Layer Relative Humidity and) 279 424 P
+(winds.) 279 410 T
+(10mspd) 198 392 T
+2.56 (Estimated 10m winds, isotachs, and sea-) 279 392 P
+(level pressure) 279 378 T
+(pwtslp) 198 360 T
+16.37 (Sea-level pressure, 1000-500 mb) 279 360 P
+(Thickness, and Precipitable Water) 279 346 T
+(pwtv85) 198 328 T
+(Precipitable Water and 850 mb winds) 279 328 T
+(tpislp) 198 310 T
+9.95 (Sea-level pressure and 6-hour total) 279 310 P
+(precipitation \050inches\051) 279 296 T
+(tpithk) 198 278 T
+16.37 (Sea-level pressure, 1000-500 mb) 279 278 P
+3.03 (Thickness, and 6-hour total precipitation) 279 264 P
+(\050inches\051) 279 250 T
+(tpi12h) 198 232 T
+5.82 (12-hour total accumulated precipitation) 279 232 P
+(\050inches\051) 279 218 T
+(tpi24h) 198 200 T
+5.82 (24-hour total accumulated precipitation) 279 200 P
+(\050inches\051) 279 186 T
+(tpi48h) 198 168 T
+5.82 (48-hour total accumulated precipitation) 279 168 P
+(\050inches\051) 279 154 T
+(tpz06h) 198 136 T
+5.82 (06-hour total accumulated precipitation) 279 136 P
+3.96 (\050inches\051, sea-level pressure, and surface) 279 122 P
+(topography \050m\051) 279 108 T
+(tpz12h) 198 90 T
+5.82 (12-hour total accumulated precipitation) 279 90 P
+(\050inches\051 and surface topography \050m\051) 279 76 T
+FMENDPAGE
+%%EndPage: "18" 19
+%%Page: "19" 19
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-19) 304.45 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(tpz24h) 216 712 T
+5.82 (24-hour total accumulated precipitation) 297 712 P
+(\050inches\051 and surface topography \050m\051) 297 698 T
+(tpz48h) 216 680 T
+5.82 (48-hour total accumulated precipitation) 297 680 P
+(\050inches\051 and surface topography \050m\051) 297 666 T
+(upvwnd) 216 648 T
+0.03 (500-300 mb mean-layer potential vorticity,) 297 648 P
+1.56 (400 mb winds, boundary layer equivalent) 297 634 P
+11.94 (potential temperature, and sea-level) 297 620 P
+(pressure) 297 606 T
+(upvhgt) 216 588 T
+0.03 (500-300 mb mean-layer potential vorticity,) 297 588 P
+0.36 (400 mb heights, boundary layer equivalent) 297 574 P
+11.94 (potential temperature, and sea-level) 297 560 P
+(pressure) 297 546 T
+(ransno) 216 528 T
+2.76 (700 mb relative humidity, and near-zero) 297 528 P
+0.37 (temperatures from the boundary layer, 850) 297 514 P
+(mb, and 700 mb) 297 500 T
+(frzrlh) 216 482 T
+4.3 (Freezing level Height \050ft\051 and Relative) 297 482 P
+(Humidity) 297 468 T
+(bwntad) 216 450 T
+1.95 (Boundary layer winds, isotachs, sea-level) 297 450 P
+11.03 (pressure, and 850 mb temperature) 297 436 P
+(advection) 297 422 T
+(slpkin) 216 404 T
+7.61 (Sea-level pressure, K-index, boundary) 297 404 P
+(layer dew point, and 700mb temperature) 297 390 T
+(slptti) 216 372 T
+5.45 (Sea-level pressure, Total Totals Index,) 297 372 P
+4.89 (boundary layer dew point, and 700mb) 297 358 P
+(temperature) 297 344 T
+(slpcti) 216 326 T
+5.45 (Sea-level pressure, Total Totals Index,) 297 326 P
+4.89 (boundary layer dew point, and 700mb) 297 312 P
+(temperature) 297 298 T
+(slpsvr) 216 280 T
+4.54 (Sea-level pressure, boundary layer dew) 297 280 P
+9.29 (point and wind barbs, and 700mb) 297 266 P
+(temperature and wind vectors) 297 252 T
+0.56 (These mdproducts can be specified for any available pressure level \05050 mb levels for) 108 234 P
+(regional models, Mandatory levels for global models\051) 108 220 T
+(tmphgt [ level ]) 216 194 T
+(Height, wind, temperature.) 297 194 T
+(tmphgt [ level ]) 216 176 T
+(Height and temperature.) 297 176 T
+(tdwhgt [ level ]) 216 158 T
+(Height and dew point temperature) 297 158 T
+(tdwwnd [ level ]) 216 140 T
+(Height, wind, and dew point temperature) 297 140 T
+(qtrthe [ level ]) 216 122 T
+1.37 (Height, moisture transport and Equivalent) 297 122 P
+(potential temperature) 297 108 T
+(tmpfnt [ level ]) 216 90 T
+20.26 (Height, wind, temperature and) 297 90 P
+(frontogenesis.) 297 76 T
+FMENDPAGE
+%%EndPage: "19" 20
+%%Page: "20" 20
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-20) 286.45 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+(tmptad [ level ]) 198 712 T
+0.12 (Height, wind, temperature and temperature) 279 712 P
+(advection.) 279 698 T
+(omgrlh [ level ]) 198 680 T
+6.7 (Height, relative humidity and vertical) 279 680 P
+(motion) 279 666 T
+(rlhomg [ level ]) 198 648 T
+6.7 (Height, relative humidity and vertical) 279 648 P
+(motion \050less detail\051) 279 634 T
+(spdhgt [ level ]) 198 616 T
+(Height and isotachs) 279 616 T
+(spdwnd [ level ]) 198 598 T
+(Height, isotachs, and winds) 279 598 T
+(divspd [ level ]) 198 580 T
+16.93 (Height, isotachs, and divergence) 279 580 P
+(\050convergence\051) 279 566 T
+(divvag [ level ]) 198 548 T
+-0.16 (Height, isotachs, divergence \050convergence\051) 279 548 P
+(and ageostrophic winds \050arrows\051) 279 534 T
+(divvia [ level ]) 198 516 T
+-0.16 (Height, isotachs, divergence \050convergence\051) 279 516 P
+1.95 (and inertial advective ageostrophic winds) 279 502 P
+(\050arrows\051) 279 488 T
+(divvdv [ level ]) 198 470 T
+-0.16 (Height, isotachs, divergence \050convergence\051) 279 470 P
+(and divergent wind \050arrows\051) 279 456 T
+(divbag [ level ]) 198 438 T
+-0.16 (Height, isotachs, divergence \050convergence\051) 279 438 P
+(and ageostrophic winds \050barbs\051) 279 424 T
+(divbia [ level ]) 198 406 T
+-0.16 (Height, isotachs, divergence \050convergence\051) 279 406 P
+1.95 (and inertial advective ageostrophic winds) 279 392 P
+(\050barbs\051) 279 378 T
+(divbdv [ level ]) 198 360 T
+-0.16 (Height, isotachs, divergence \050convergence\051) 279 360 P
+(and divergent wind \050barbs\051) 279 346 T
+(abvhgt [ level ]) 198 328 T
+(Height and absolute vorticity) 279 328 T
+(abvdiv [ level ]) 198 310 T
+(Height, absolute vorticity and divergence) 279 310 T
+(abvtad [ level ]) 198 292 T
+5.02 (Height, absolute vorticity and 850 mb) 279 292 P
+(temperature advection) 279 278 T
+(vpproduct:) 126 260 T
+(\050additional vp products are not yet available\051) 189 260 T
+(xsproduct:) 126 234 T
+4.97 (\050all circulation vectors only include horizontal wind) 189 234 P
+2.98 (components tangent to \050within\051 the plane of the cross) 189 220 P
+(section\051) 189 206 T
+(nsptha) 198 180 T
+2.37 (Potential temperature, isotachs of normal) 279 180 P
+(wind speed, and ageostrophic circulation) 279 166 T
+(nspdiv) 198 148 T
+2.37 (Potential temperature, isotachs of normal) 279 148 P
+1.62 (wind speed, divergence, and ageostrophic) 279 134 P
+(circulation) 279 120 T
+(tsptha) 198 102 T
+5.53 (Potential temperature, isotachs of total) 279 102 P
+(wind speed, and ageostrophic circulation) 279 88 T
+FMENDPAGE
+%%EndPage: "20" 21
+%%Page: "21" 21
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 243.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(E-21) 304.45 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(omgtha) 216 712 T
+0.45 (Potential temperature, vertical motion, and) 297 712 P
+(ageostrophic circulation) 297 698 T
+(omgtmp) 216 680 T
+14.49 (Temperature, vertical motion, and) 297 680 P
+(ageostrophic circulation) 297 666 T
+(mxrtha) 216 648 T
+1.04 (Potential temperature, water vapor mixing) 297 648 P
+(ratio, and total circulation) 297 634 T
+(rlhtmp) 216 616 T
+11.38 (Temperature, relative humidity, and) 297 616 P
+(ageostrophic circulation) 297 602 T
+(rlhthe) 216 584 T
+2.6 (Equivalent potential temperature, relative) 297 584 P
+(humidity, and total circulation) 297 570 T
+(msftha) 216 552 T
+6.94 (Potential temperature, M-surfaces, and) 297 552 P
+(ageostrophic circulation) 297 538 T
+(msfthe) 216 520 T
+9.71 (Equivalent potential temperature, M-) 297 520 P
+(surfaces, and total circulation) 297 506 T
+(ipvtha) 216 488 T
+3.15 (Potential temperature, potential vorticity,) 297 488 P
+12.37 (relative humidity, and ageostrophic) 297 474 P
+(circulation) 297 460 T
+(ipvthe) 216 442 T
+0.6 (Equivalent potential temperature, potential) 297 442 P
+7.61 (vorticity, relative humidity, and total) 297 428 P
+(circulation) 297 414 T
+(tsproduct:) 144 396 T
+(\050ts products are not yet available\051) 207 396 T
+FMENDPAGE
+%%EndPage: "21" 22
+%%Page: "22" 22
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(Restore Files and Scripts) 225.02 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(E-22) 286.45 36 T
+(October 1996) 440.67 36 T
+FMENDPAGE
+%%EndPage: "22" 23
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%Pages: 22 1
+%%DocumentFonts: Helvetica-Bold
+%%+ Times-Roman
+%%+ Times-Bold
+%%+ Helvetica

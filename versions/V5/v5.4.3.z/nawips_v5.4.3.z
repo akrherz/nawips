@@ -1,0 +1,3061 @@
+                       
+		     NAWIPS 5.4.3.k+ CHANGE DESCRIPTION LOG
+
+	( * indicates a change that makes this version of NAWIPS
+	    incompatible with the previous version )
+
+
+
+001.	ASCII Decoders
+
+l	a. Added a new routine which conducts quality checks on 
+	    synoptic pressure data.  Done, TL, (TP), 2/25/99.
+
+m	b. Changed calling sequence of dc_stns and sf_ldta to add
+	   priority parameter, ispri.  Done, AH, (TP), 3/17/99.
+
+n	c. Add check for invalid report identifier in marine decoder.
+	   Corrected elevations for several stations based upon 
+	   information from the EMC.  Done, DKW, (TP), 4/7/99.
+
+o	d. Created subroutine affarp.f to handle reports from
+	   UAXX10 EGRR aircraft bulletins.  Done, AH, (TP), 4/14/99.
+
+o	e. Fix to process watch cancellation time correctly,
+	   improve positioning of labels, Y2K.  Done, DKW, (TP), 
+	   4/23/99.
+
+o	f. Modified watch box decode to allow issue time for a
+	   correction to be up to 30 minutes after watch start
+	   time, and to remove trailing blanks from time labels.
+	   Done, DKW, (TP), 4/27/99.
+
+p	g. Modified watch box decode to allow issue time for a watch
+	   to be up to 9 minutes after watch start time.  Done, DKW,
+	   (TP), 5/13/99.
+
+p	h. Wrote decoder driver for real-time or batch mode
+	   processing for tornado and severe thunderstorm watch box
+	   reports (WWUS9 bulletins).  The output from this decoder is 
+	   an ASCII file.  Done, DKW, (TP), 5/17/99.
+
+p	i. Created a new decoder that decodes the severe thunderstorm
+	   warning, tornado warning, and flash flood warning text
+	   reports.  Done, AH, (TP), 5/19/99.
+
+p	j. Modified the warning decoder subroutines such that:
+	   1. if an empty filename is returned, the file is not created
+	   2. if the warning type, start/stop times, station id, or the
+	      correction indicator is missing, nothing from that 
+	      bulletin is written to the file.
+	   3. corrected an indexing problem with the start time string
+	   Done, AH, (TP), 5/20/99.
+
+p	k. Modified the warning decoder subroutines such that: 
+
+	   1. if only eight lines are in the header, the time line is
+	      still found and it wtype is used to call the right
+	      subroutine.
+	   2. if any part of the ending time array is missing, the 
+	      entire array is set to missing.
+	   Done, AH, (TP), 5/24/99.
+
+q	l. Fixed watch box decoder dcwtch to treat replaced watches
+	   as watch cancellations.  Revised watch number decoding 
+	   scheme.  Done, DKW, (TP), 5/28/99.
+
+q	m. Modified a calling parameter to ST_ALNM in the flash flood
+	   tornado and severe thunderstorm warning subroutines.  Also
+	   corrected a logical IF statement.  Done, AH, (TP), 6/3/99.
+
+q	n. Reworked and simplified the warning decoder, DCWARN.  This
+	   version gets all of the warning information from the first
+	   four lines of the warning's header.  Created a new 
+	   subroutine that writes out the ASCII information in one 
+	   place.  Done, AH, (TP), 6/8/99.
+
+r	o. Modified the metar decoder to decode off-time reports.  
+	   Done, FY, (TP), 6/25/99.
+
+s	p. Modified watch box decoder dcwtch to decode WWUS40 
+	   bulletins instead of WWUS9 bulletins.  WWUS40 gives more
+	   accurate values for the watch box corner points.  Done,
+	   DKW, SJ, (TP), 7/12/99.
+
+s	q. Modified aircraft decoder dcacft to handle more groups of
+	   PIREP data (pilot reports).  The sky cover group will now
+	   be decoded, as well as more fields in the icing and 
+	   turbulence groups.  Done, DKW, (TP), 7/13/99.
+
+t	r. Modified aircraft decoder dcacft to output text (report string)
+	   to Gempak file, and to output all base and top heights in feet
+	   instead of meters.  Cleaned up code, internal call sequences,
+	   and documentation.  Done, DKW, JA, (TP), 7/28/99.
+
+u	s. Replaced RA_RTIM with DC_GTIM in the ngm mos, mrf mos, avn
+	   mos, and scd decoders.  Done, FY, (TP), 8/24/99.
+
+u	t. Modified watch box decoder dcwtch to also decode WWUS8
+	   (watch status) bulletins.  Cleaned up code.  Done, DKW,
+	   (TP), 8/25/99.
+
+u	u. Several changes were made to the marine surface decoder, 
+	   DCMSFC, and to the land surface decoder, DCLSFC.  Done, FY, 
+	   BH, (TP), 8/27/99.
+
+u	v. Modified aircraft decoder dcacft (at the request of AWC) to
+	   improve decoding of haze and haze tops.  Also minor bug fixes
+	   and change to interface mnemonics for consistency across
+	   decoders.  Modfied watch decoder dcwtch to correctly decode
+	   status reports which specify two lines, rather than the usual
+	   one.  Minor bug fix to land synoptic decoder dclsfc.  Done,
+	   DKW, (TP), 9/3/99.
+
+v	w. Modified aircraft decoder, dcacft, to allow decoding of PIREP
+	   temperatures that are reported as a single digit.  Done, JA,
+	   (TP), 9/16/99.
+
+w	x. Modified aircraft decoder to explicitly initialize several 
+	   interface "counter" variables to zero and to add an array bounds
+	   check for decoding of turbulence.  Done, JA, (TP), 10/4/99.
+
+w	y. Modfied watch decoder dcwtch to handle variations in status
+	   message format.  Specification of two status lines is now
+	   decoded correctly, and status message format changes scheduled
+	   to take effect on Oct. 18 should be handled properly.  Done,
+	   DKW, (TP), 10/4/99.
+
+w	z. Created a new decoder that decodes forecast/advisory reports
+	   for tropical depressions, tropical storms and hurricanes.
+	   These reports are the WTNT23, WTNT24 and WTPZ23.  Done,
+	   AH, (TP), 10/4/99.
+
+w	aa. Made corrections to the hurricane decoder and display in
+	    GPMAP.  Corrected for stationary storms, cleaned up
+	    placements of storms in the Atlantic, shifted the labels
+	    so that they don't overwrite symbols.  Allow for decoding
+	    of WTNT21-25 and WTPZ21-25 reports.  Done, AH, (TP), 10/6/99.
+
+w	bb. The synoptic decoder, dclsfc, and the marine decoder, dcmsfc,
+	    are being modified to fix a bug which prevented weather
+	    symbols from being plotted when the observation came from an
+	    automated station.  Also, ships which report from the Great
+	    Lakes will now use the elevation of the lake as the ship's 
+	    elevation (instead of 0).  Done, DWK, (TP), 10/7/99.
+
+w	cc. In DCHRCN decoder, check for missing central pressure values
+	    and position accuracy distances.  Done, AH, (TP), 10/8/99.
+
+w	dd. Corrected the watch status message format (WWUS8 bulletins) for
+	    change scheduled to take effect on Oct. 18.  Done, DKW, (TP), 
+	    10/8/99.
+
+w	ee. Created a new decoder, DCISIG, that decodes international
+	    SIGMET reports.  Initially, the decoder handles bulletins from
+	    KMKC (with bulletin header WS..0. ) and report types of
+	    thunderstorm, hurricane and turbulence only.  The output is
+	    written to an ASCII file.  Done, DKW, (TP), 10/14/99.
+
+w	ff. Modified DCISIG, which decodes international SIGMET reports,
+	    with several minor improvements, bug fixes, and output
+	    format changes.  Wrote new routine GG_ISIG to be used to
+	    display international SIGMETs in GPMAP using the new
+	    GEMPAK variable ISIG.  Done, DKW, (TP), 10/22/99.
+
+w	gg. Moved "field" declaration out of afcmn.cmn.  Done, JA, (TP),
+	    11/2/99.
+
+w	hh. Bug fix to watch decoder dcwtch to handle case where status
+	    line definition is the last thing in the bulletin.  Done,
+	    DKW, (TP), 11/3/99.
+
+w	ii. Modified DCISIG, which decodes international SIGMET reports, to
+	    decode reports from KNHC and to decode tropical storms and
+	    tropical depressions.  Modified routine GG_ISIG which displays
+	    international SIGMETs in GPMAP to include tropical storm and
+	    tropical depression symbols.  Fixed bug in symbol position when
+	    SIGMET crosses the dateline.  Done, DKW, (TP), 11/5/99.
+
+w	jj. At the request of the AWC, several changes are being made to the
+	    display of aircraft obs in NMAP: 1) a simpler standard parameter
+	    matrix will be used for the default display; 2) the "heat" parameter 
+	    is being removed from the display list, and all acft flight levels
+	    will be shown in 100s of feet, instead of meters; 3) XX999 (military
+	    aircraft) reports have been removed from the GEMPAK output file
+	    (note - we don't see these reports here via FOS, but they get them 
+	    on their X.25 line.)  Done, DKW, (TP), 11/8/99.
+
+w	kk. Modified hurricane decoder, DCHCRN, to find the advisory number
+	    if the word 'SPECIAL' is in the storm name line.  Done, AH,
+	    (TP), 11/15/99.
+
+x	ll. Replaced the error code group argument 'RA' with 'DC' in call to
+	    dc_wlog after invoking dc_gtim in the avn mos, ngm mos, mrf mos,
+	    and scd decoders.  Done, FY, (TP), 12/1/99.
+
+x	mm. Modified DCISIG, which decodes international SIGMET reports, to
+	    decode reports from PHNL and PGUM.  Bug fix for decoding areas
+	    on "either side of line", and minor improvements and clean-up
+	    of code.  Modified to handle new format for lat/longs (degrees
+	    and minutes), which becomes effective 1/3/00.  (Both current
+	    (degrees and tenths) and new formats are acceptable.)  Added
+	    new routine PR_HGNM to convert nautical miles to meters.
+	    Done, DKW, (TP), 12/1/99.
+
+x	nn. Modified decoder dcisig to handle case when there is no keyword
+	    to start an area definition.  Done, FY, (TP), 12/7/99.
+
+y	oo. The flash flood guidance decoder has been modified to handle
+	    either 4 or 2 digit year coding.  Some RFCs are now using
+	    the 4 digit code.  Done, DKW, (SS), 12/27/99.
+
+y	pp. Improved validity checks for international SIGMET decoder
+	    (dcisig) lat/long input values.  Done, DKW, (TP), 1/5/00.
+
+y	qq. Changed DC_WLOG to check the error number and return immediately
+	    if the value is zero.  Changed DC_INIT to parse command line
+	    option "-e PARM=value".  This allows the user to set the value
+	    of an environment variable that may be necessary for running a 
+	    decoder.  These changes were suggested by Unidata.  Done, SJ,
+	    (TP), 1/7/00.
+
+y	rr. A modification was made to the marine decoder, dcmsfc, to
+	    check for an invalid report time of 24 hours in a ship
+	    report.  This change was made in response to a problem
+	    noted by the MPC.  Done, DKW, (SS), 1/19/00.
+
+y	ss. Added the decoding of WSUK31 and WSNT21 international sigmet
+	    reports from EGGY to decoder dcisig.  Modified dcisig to handle
+	    the new WMO header and identifier KKCI.  Fixed bug in dcisig
+	    when keyword is 'OBS/FCST' or 'FCST/OBS'.  Decoded some
+	    previously missed flight levels.  Included 'AXIS' as a keyword
+	    for either side of line.  Done, FY, (TP), 1/20/00.
+
+y	tt. Modified international SIGMET decoder dcisig to handle error
+	    condition when calculating boundary points on either side of a line.
+	    Done, DKW, (TP), 1/20/00.
+
+y	uu. Modified aircraft decoder dcacft and character translation routines
+	    to save and display aircraft type (ACTP) for PIREPS (pilot reports), 
+	    and to use the PIREP reporting station id as the STID.  Done, DKW,
+	    (TP), 1/20/00.
+
+z	vv. Corrected how the date/time was being saved in the header
+	    portion of an AWIPS file.  Increased the file size for the number
+	    of bytes from 20000 to 80000.  Done, AH, (TP), 2/7/00.
+
+z	ww. Modified aircraft decoder dcacft to decode varying formats of
+	    turbulence data reported in AIREPs (aircraft reports), in
+	    response to AWC request.  Done, DKW, (TP), 2/11/00.
+
+z	xx. Added the decoding of WSJP31 international sigmet reports from
+	    RJAA to decoder dcisig.  Done, FY, (TP), 2/15/00.
+
+z	yy. Increased the length of the county character string in the
+	    warning decoder, DCWARN.  With these changes, the county listing
+	    which continue on to additional lines, will be read as one
+	    continuous line.  Done, AH, (TP), 2/25/00.
+
+z	zz. Fix problem report 285:P1.  DCWARN no longer crashes when
+	    'BULLETIN' is not found within the file.  If it is not found and
+	    it is a new report hour, the output file is not created.  
+	    Done, AH, (TP), 2/28/00.
+
+z	aaa. Added the decoding of some open areas for EGGY sigmet reports to
+	     decoder dcisig.  Expanded to include EGGY cancel reports. Picked
+	     up flight level in long reports.  Done, FY, (TP), 3/10/00.
+
+z	bbb. This change to the metar decoder, dcmetr, allows an AWIPS id (PIL)
+	     to follow the WMO header, fixes a bug which caused a segmentation
+	     fault on a Solaris machine when attempting to decode pressure 
+	     tendency, and decodes mean sea level pressure from the remarks
+	     section of Mexican reports.  Done, DKW, (TP), 3/10/00.
+
+z	ccc. Increased the record length storage in the RBK driver.  Adjusted
+	     the record read for the AWIPS files that are read in in GPMAP.
+	     Added a check if the special character is equal to zero.
+	     Done, AH, (TP), 3/13/00.
+
+z	ddd. Added leading zeroes to the decoded flight level when it has less
+	     than three digits and truncated the extraneous blanks in decoder
+	     dcisig.  Added EGGY cancel reports indicated by only "CNL".
+	     Done, FY, (TP), 3/15/00.
+	     
+z	eee. Bug fix to watch decoder dcwtch to recognize station names
+	     containing the characters 'TO'.  Done, DKW, (TP), 3/16/00.
+
+
+002.	GRIB Decoder
+
+
+
+003.	Grid Diagnostics
+
+z	a. Added a GEMPAK program to write gridded data into GRIB files.
+	   Done, KB, (TP), 3/13/00.
+
+
+004.	Parameter Calculations
+
+
+
+005.	Image Processing
+
+v	a. Added new routines to get the pixel value on an image file.
+	   TL, (TP), 9/22/99.
+
+v	b. Checked image bounds for the pixel retrieval algorithm.  Fixed
+	   return code for cloud height search routine.  Done, TL, (TP),
+	   9/24/99.
+
+
+006.	GPLT Changes
+
+p	a. Modified the check for possible directions in the contouring
+	   algorithm routine CCBOXT.  If the grid box is entered from the
+ 	   top or bottom, the line turns left of the direction of motion.
+	   If the box is entered from the left or right, the line turns
+	   right.  This eliminates a problem where a direction cannot be
+	   chosen and the line is redrawn from a different starting point,
+	   thus overlapping the center of the contour.  Done, SJ, (TP),
+	   5/11/99.
+
+q	b. Y2K fix for MCIDAS code.  Done, DKW, (TP), 5/28/99.
+
+q	c. Fixed drawing lat/lon lines for satellite projection
+	   (un-remapped) images.  The lines would plot in the Easterna
+	   Hemisphere and stop at 180 degrees.  Fixed drawing lon lines
+	   for the MCD (McIDAS RECT) projection.  The lines would not
+	   appear for a global topography image used by the AWC.
+	   Done, SD, SJ, (TP), 6/7/99.
+
+y	d. Modified the drawing of special line and front patterns.
+	   The direction flag now re-orders the array of points.  Also,
+	   pattern number 15 has been mofified to draw a center line
+	   for the arrow head.  Updated the pattern list for special
+	   line type 22 in the table splpat.tlb.  Done, SJ, (SS),
+	   12/27/99.
+
+y	e. Modified NAWIPS programs to be able to directly read normal
+	   GEMPAK map files while on Little-Endian platforms.  Done,
+	   GK, (TP), 12/30/99.
+
+y	f. Corrected a problem where the labels for the latitude lines in
+	   the southern hemisphere were being clipped.  Done, TP, (TP),
+	   12/30/99.
+
+y	g. Modified and added potental new contour types for GEMPAK.
+	   Added type "L" which is the GEMPAK contouring algorithm
+	   without sub-boxes.  Eliminated types "I" and "S" which
+	   were never implemented.  Done, MLI, (TP), 1/10/00.
+
+z	h. Changed the contour fill and box-fill to treat CONTUR=1 the same
+	   as CONTUR=0. This now matches the behavior for the contour lines.
+	   Done, SJ, (TP), 2/29/00.
+
+
+007.	Device Drivers
+
+l	a. Created a form-fitting blank background fill for arrows 
+	   and barbs.  Changed all software lines to have rounded
+	   ends the same as hardware lines in the XW and PS drivers.
+	   Added the TIFF driver to PLOTSYMS.  Done, SJ, (TP), 
+	   2/24/99.
+	   
+m	b. Fixed a bug in the postscript driver to maintain the use
+	   of the background color for drawing when the user has 
+	   requested the monochrome option.  Fixed cds_wind to change
+	   any wind type theat ends in "4" to the new form-fitting 
+	   background blank.  Done, SJ, (TP), 3/2/99.
+
+m	c. Added background blank-out to symbol plotting.  Done,
+	   DP, (TP), 3/4/99.
+
+m	d. Added plotting markers as hardware symbols in the UTF and 
+	   RBK device drivers.  Done, SJ, (TP), 3/19/99.
+
+n	e. Fixed the calculation of the number of bytes in the last
+	   block of data for the UTF driver.  Done, SJ, (TP), 3/24/99.
+
+n	f. Added the ability to construct a single UTF string 
+	   consisting of all station model data for the Medium Range 
+	   Temp/POP products.  Done, SJ, (TP), 3/26/99.
+
+n	g. Allow flipping of streamlines.  Done, SJ, (TP), 4/2/99.
+
+o	h. Added the routing information "ALL" to the PIL header for
+	   AFOS graphics products created with the "||c" option for 
+	   the DEVICE parameter.  (This was requested by the SPC.)
+	   Done, SJ, (TP), 4/16/99.
+
+o	i. Fixed the size of the background arrow head for clearing
+	   data behind an arrow.  Done, SJ, (TP), 4/21/99.
+
+p	j. Increased value of MXRWCL to fix problem with roam of 
+	   US 1km VIS in 'image size' case.  Done, TP, (TP), 5/12/99.
+
+q	k. Added the AFOS end-of-file string "NNNN" to the format
+	   is readable by NAFOS and GPMAP.  Done, SJ, (TP), 5/28/99.
+
+u	l. Fixed RBK driver to handle the Medium Range products, and fixed
+	   other bugs in the header of the file.  Changed the scale factor
+	   for the curve smoothing.  Done, SJ, (TP), 8/24/99.
+
+v	m. Changed the PostScript commands to select the paper size to
+	   use the Level 3 syntax. Changed the large page size from
+	   24x36 to 20x32. Added a new larger page size, 32x42.  Done,
+	   SJ, (TP), 9/13/99.
+
+v	n. Added a check for parts of a circle outside of the clip area.
+	   If part of the circle is outside, the circle is drawn using
+	   the software method. If the circle is completely in the clip
+	   area, and the driver has the ability to draw a circle using
+	   hardware commands, that option is used.  Done, SJ, (TP),
+	   9/23/99.
+
+w	o. New xw driver routines for nmap2 and modifications to ensure
+	   existing version unaffected.  Done, ES, (TP), 10/6/99.
+
+w	p. Fixed bugs affecting nmap in XW driver.  After selecting "show" 
+	   following  "hide" the current frame number was reported as 1
+	   less than it actually is.  Secondly, the rock button often
+	   resulted in the loop freezing.  Modified xclear so NMAP2 can
+	   call gclear now instead of the work-around routine xmclear.
+	   In NMAP2, the load routine has been broken down into a
+	   separate loop load routine.  Roam is now working, but only with
+	   one (1) loop.  It crashes with more than 1 loop of data loaded.
+	   Done, ES, (TP), 10/25/99.
+
+w	q. Made extensive changes to the xwdriver to accomplish seperate roaming
+	   in each loop.  Added auto-update to nmap2.  Done, ES, (TP), 11/3/99.
+
+w	r. Modified mtext.c in the nc driver to correct problem with plotting 
+	   negative latitudes in NTRANS.  Done, TP, (TP), 11/22/99.
+
+x	s. Fixed the time in the short header for AWIPS Red Book graphics
+	   files.  The byte for the hour was incorrectly assigned the value
+	   for the month.  Done, SJ, (TP), 12/13/99.
+
+x	t. Modified xwcmn.h for NMAP2.  Fixed image jump problem and 
+	   product generation refresh problems on zoom/roamed frames.  Loop
+	   selection is now allowed from product generation.  Done, ES, (TP),
+	   12/13/99.
+
+x	u. Restore mtext.c back to original.  This undoes delivery 007r
+	   dated 11/22/99 of patch w.  Done, TP, (TP), 12/14/99.
+
+y	v. Fixed the cvg_load problem in nmap/nmap2.  Done, ES, (TP), 1/5/00.
+
+y	w. Fixed problem with NMAP2 core dumping when exiting product generation
+	   after selecting 'Clear Data'.  Done, SL, (TP), 1/20/00.
+
+y	x. Renamed the command defines in xmloop.c and moved them to xwprm.h.
+	   Changed nmap_loopw.c to use these defines rather than hard-coded
+	   numbers.  Cleaned up the code in nmap_loopw.o for NMAP2.  Done,
+	   SL, (TP), 1/20/00.
+
+z	y. Changed the load sequence for models to load the first frame first.
+	   Changed the current pixmap variable to an array so that it would
+	   keep track between loops.  Did other cleanup of the xdriver, including
+	   moving several calls to copy the current pixmap to the screen to a
+	   seperate function (xpxm2win).  Done, SL, (TP), 2/14/00.
+
+z	z. Restored the flip action, for the fronts, to just change the pip
+	   direction. For special lines, the flip reverses the order of the
+	   vertices.  Done, SJ, (TP), 2/17/00.
+
+z	aa. Added the missing declaration of "text" to vtext.c.  Done, MLI,
+	    (TP), 2/18/00.
+
+z	bb. Fixed bug of integer problem in HTXSY.F.  Fixed txtstr length
+	    bug in nmap_stnmw.c.  Done, MLI, (TP), 2/18/00.
+
+z	cc. Added the ability to set a base date for a product when the RBK
+	    driver is used.  Done, AH, (TP), 3/7/00.
+
+
+008.	Documentation
+
+l	a. Updated documentation for oabsfc for multiple files.
+	   Done, TL, (SS), 2/25/99.
+
+l	b. Updated What's New Help for version l.  Done, SS, (TP),
+	   3/1/99.
+
+m	c. Corrected prologs in gemlib routines.  Done, TP, (TP),
+	   3/16/99.
+
+m	d. Updated SFPARM and AREA help files for the new priority
+	   value.  Done, SJ, (TP), 3/18/99.
+
+m	e. Updated What's New Help for version m.  Done, SS, (TP),
+	   3/22/99.
+
+n	f. Corrected prologs in cgemlib routines.  Done, TP, (TP),
+	   3/25/99.
+
+n	g. Updated book generation files.  Done, TP, (TP), 3/25/99.
+
+n	h. Added text files for new gemlib/cgemlib libraries.  Done
+	   TP, (TP), 3/29/99.
+
+n	i. Corrected prologs in the AW library subroutines.  Done,
+	   AH, (TP), 3/29/99.
+
+n	j. Corrected more prologs in gemlib/cgemlib and appl.  
+	   Done, TP, (TP), 3/29/99.
+
+n	k. Corrected prologs in bridge libraries.  Done, TP, (TP),
+	   4/1/99.
+
+n	l. Updated What's New Help for version n.  Done, SS, (TP),
+	   4/12/99.
+
+o	m. Updated What's New Help for version o.  Done, SS, (SS),
+	   5/5/99.
+
+p	n. Updated What's New Help for version p.  Done, SS, (TP),
+	   5/24/99.
+
+q	o. Updated the product generation help in NMAP.  Renamed
+	   cursor help to seek help and wrote a more detailed 
+	   description on how to use the seek function.  Done,
+	   AH, (SS), 6/10/99.
+
+q	p. Updated What's New Help for version q.  Done, SS, (SS),
+	   6/11/99.
+
+s	q. Updated What's New Help for version s.  Done, SS, (SS),
+	   7/15/99.
+
+u	r. Updated What's New Help for version u.  Done, SS, (TP),
+	   9/9/99.
+
+v	s. Updated What's New Help for version v.  Done, SS, (TP),
+           9/29/99.
+
+w	t. Updated gpmap.txt for post-processing capabilities.  Done,
+	   SS, TP, (TP), 10/21/99.
+
+w	u. Updated gpmap.txt for the new ISIG variable.  Done, DKW, (TP),
+	   10/25/99.
+
+w	v. Corrected the default colors for tropical storms.  Done,
+	   AH, (TP), 11/18/99.
+
+w	w. Added SMPH and BRBS to the help and appendix documentation.
+	   Done, SJ, (TP), 11/19/99.
+
+w	x. Update to WhatsNew.hlp for patch 5.4.3.w.  Done, SS, (TP), 11/23/99.
+
+x	y. Updated seek help and added cloud height help.  Done, SS, AH, (TP),
+	   12/16/99.
+
+x	z. Update to WhatsNew.hlp for patch 5.4.3.x.  Done, SS, (TP), 12/20/99.
+
+y	aa. Updated the help information for the RBK driver in device.hl2.
+	    Done, AH, (TP), 1/21/00.
+
+y	bb. Update to WhatsNew.hlp for patch 5.4.3.y.  Done, SS, (TP), 1/28/00.
+
+y	cc. Update to WhatsNew.hlp for patch 5.4.3.y.  Done, SS, (TP), 1/31/00.
+
+z	dd. Remove a marine map file that will no longer be used.  Done,
+	    GK, (TP), 2/7/00.
+
+z	ee. Added 5.4.2 and 5.4.3 release notes to N-AWIPS.  Done, SS,
+	    (TP), 3/13/00.
+
+z	ff. Update to WhatsNew.hlp and the release notes for patch 5.4.3.z.
+	    Done, SS, (TP), 3/23/00.
+
+z	gg. Updated the SEEK help file in NMAP.  Done, AH, (TP), 3/23/00.
+
+
+009.	Scripts/NTS files
+
+l	a. Updated pdfbld and helpbld scripts so they work on HPUX.
+	   Done, SS, (TP), 2/24/99.
+
+o	b. Added link scripts for gdplot_ps and gdplot2_ps.  Done,
+	   SJ, (TP), 4/28/99.
+
+p	c. Modified and created modl/global restore files.  Done, JC,
+	   (TP), 5/14/99.
+
+r	d. Modified Makefiles or link scripts to eliminate link 
+	   warnings on aix4.  Done, TP, (TP), 6/23/99.
+
+r	e. Made several corrections to NMAP restore files per users'
+	   requests.  Increased max upward motion contour from -15 to 
+	   -25 microbar/sec.  Changed potential vorticity (PVOR)
+	   contour interval to 1/1/4 if PVU <=4; 2/6 if PVU > 4.
+	   Changed contour skip point to 0 to improve contour
+	   smoothness for low resolution grids.  Done, TL, (TP),
+	   6/23/99.
+
+t	f. Modified a large group of restore files for the ruc2 and 
+	   ensembles to make the products more aesthetically pleasing.  
+	   Done, JC, (TP), 8/10/99.
+
+v	g. Added two new RUC2 CAPEs for color fill and non-color fill 
+	   products.  Done, JYC, (TP), 9/28/99.
+
+w	h. New restore files per MPC's request.  Done, JP, TL, (TP), 11/22/99.
+
+x	i. Modified the 5-day precip restore file so that anytime after 120 
+	   hours could be viewed, not just f144.  Added a pcpn type restore 
+	   file for the global model.  Done, JC, (TP), 11/30/99.
+
+x	j. Modified the pcpn type restore file for the global model.  
+	   Done, JC, (TP), 12/2/99.
+
+y	k. Modified the eta aviation freezing level restore file and changed the
+	   name because the rh field has been removed.  Added a no-color fill
+	   eta freezing level restore file.  Done, JC, (TP), 1/13/00.
+
+y	l. Fixed global model restore.  Done, DP, SS, (TP), 2/1/00.
+
+z	m. Modified mod_res.tbl.  Added 700, 500, and 250 mb streamlines.
+	   Added more Great Lake snow products for the eta and avn models.  
+	   Added pcpn type product for avn and eta.  Done, JC, (TP), 3/8/00.
+
+z	n. Changed to several wave model Nmap restore files to change plotting
+	   of mean swell to peak swell information.  Done, JP, TL, (TP), 3/10/00.
+
+
+010.	General GEMLIB/CGEMLIB Changes
+
+l	a. Updated N-AWIPS to version 5.4.3.l.  Done, SS, (SS),
+	   2/18/99.
+
+l	b. Additions to clocmn.h for future county boundaries 
+	   information.  Done, DP, (TP), 2/18/99.
+	   
+l	c. Added parameter conversion routines to generate the 
+	   5- and 6-digit ship codes containg assorted wave data.
+	   Three new parameters:  WPHM, WVSW, and SWEL were added.
+	   Done, DKW, (TP), 2/18/99.
+
+l	d. Added two new routines for accessing the new county
+	   bounds table.  Done, DP, (TP), 2/19/99.
+
+l	e. Changed the default border type from 0 to 111 in
+	   cds_text.  Done, SJ, (TP), 2/19/99.
+
+l	f. Fixes bug where users could select deleted elements.
+	   Done, ES, (TP), 2/22/99.
+
+l	g. New routines to sort and access county bounds info.
+	   Done, DP, (TP), 2/24/99.
+
+l	h. Fix to report 145, problem #1.  Done, ES, (TP), 2/24/99.
+
+l	i. Made corrections to codes for problems discovered during 
+	   Y2K testing.  Done, DKW, (TP), 2/24/99.
+
+l	j. clo_cntybinply.c was considering too many counties, hence
+           affecting performance.  Done, DP, (TP), 2/25/99.
+
+m	k. Updated to Patch5.4.3.m.  Done, TP, (TP), 3/2/99.
+
+m	l. Fixed group problem with file copy operation.  Done, ES,
+	   (TP), 3/2/99.
+
+m	m. **===> Changed the calling sequence of pc_sstn by adding
+	   a priority parameter, ispri.  Done, AH, (TP), 3/5/99.
+
+m	n. Added parameter conversion routine to generate a character
+	   string containing 24 hour precip. for use in creating the
+	   daily weather map.  Done, DKW, (TP), 3/10/99.
+
+m	o. Made corrections to codes for problems discovered during
+	   Y2K testing of range and increment processing for the
+	   GEMPAK variable DATTIM.  Also fixed routine TI_SORT to 
+	   return GEMPAK times ordered correctly (year 99 preceding 
+	   year 00).  New routine TI_YY24 converts a 2-digit integer 
+	   year to 4 digits; TI_YYMD converts an integer 2-digit year, 
+	   month, and day to a 4-digit year, month, and day; TI_DTM4 
+	   modifies a standard gempak time to include a 4-digit year.
+	   Done, DKW, (TP), 3/17/99.
+
+m	p. Changed the character data in the PC library to allow 12 
+	   characters.  Added new surface parameters for the medium 
+	   range desk.  The new parameters, TPFC and TPAC, allow 
+	   plotting of the min/max/pop data in the format needed for
+	   AFOS.  Done, SJ, (TP), 3/17/99.
+
+m	q. Added a format statement for the output of PR_TPFR in
+	   TESTPR.  Done, SJ, (TP), 3/18/99.
+
+m	r. Added Version 5.4.3.m to the CVG conversion program.
+	   Done, SJ, (TP), 3/18/99.
+
+n	s. Changes to allow searching for counties and stations in 
+	   the CLO structures.  Done, DP, (TP), 3/24/99.
+
+n	t. Updated N-AWIPS to version 5.4.3.n.  Done, TP, (TP),
+	   3/24/99.
+
+n	u. Added a check for the width values that indicate using the
+	   blank background for symbols to CDS_SYMB when applying
+	   the scale factor.  Added symbols to the display level that
+	   includes text and vectors in CVG_LOAD.  Reduced the size 
+	   of the rounded end points when drawing a line in IDRAW.
+	   Done, SJ, (TP), 3/25/99.
+
+n	v. Modified code to eliminate IRIX6.5 warning messages.  
+	   Done, DKW, (TP), 3/30/99.
+
+n	w. Modified code to eliminate IRIX6.5 warning messages.
+	   Done, DP, (TP), 3/30/99.
+
+n	x. Made corrections to grid lib routines for Y2K.  Upper air
+	   decoder changed to prevent decoding erroneously encoded
+	   mandatory levels consisting of a zero height and all 
+	   slashes in the temp and wind fields.  Marine decoder
+	   changed to limit number of stations read.  DKW, BH, (TP),
+	   3/31/99.
+
+n	y. Made corrections to codes for problems discovered during
+	   Y2K testing of ti library routines.  Fixes ensure that
+	   various GEMPAK date/time functions work correctly for
+	   both 2- and 4- digit years when going from 1999 to 2000.
+	   Done, DKW, (TP), 4/6/99.
+
+n	z. Added uppercase month and day-of-week abbreviations to 
+	   FL_MNAM and CFL_MNAM for creating file names from date/time
+	   and template strings.  Done, SJ, (TP), 4/6/99.
+
+n	aa. Update 'j' conversion program to accept version 5.4.3.n.
+	    Done, AH, (TP), 4/8/99.
+
+o	bb. Updated N-AWIPS to Patch5.4.3.o.  Done, TP, (TP), 4/14/99.
+
+o	cc. Changed NEXP for the # of expected times in TI_FIND to the
+	    maximum # of times in a file, LLMXTM.  Done, SJ, (TP), 
+	    4/14/99.
+
+o	dd. Modified the decoding of the grid time from GRIB files
+	    created by the RFC observed precipitation analysis.  The
+	    times are now observed rather than forecast.  Done,
+	    SJ, (TP), 4/15/99.
+
+o	ee. Made corrections to ensure that time axis (TAXIS) will
+	    plot correctly for Y2K.  Done, DKW, (TP), 4/16/99.
+
+o	ff. Renamed FL_FFIL to FL_MFIL.  Done, TL, (TP), 4/19/99.
+
+o	gg. Modified SCANDIR to allow Linux to read directories.
+	    Done, SJ, (TP), 4/19/99.
+
+o	hh. Changed NEXP for the # of expected times in tg_find to
+	    the maximum # of times in a file, LLMXTM.  Done, TL,
+	    (TP), 4/21/99.
+
+o	ii. Added a new character visibility parameter, VSBF.
+	    Modified the calculation for rainfall parameter, DPRC.
+	    Done, AH, (TP), 4/27/99.
+
+o	jj. Added marine and coastal location tables.  Done, DP,
+	    (TP), 4/27/99.
+
+o	kk. Added new marine and coastal types.  Bug fix in
+	    CLOFINDSTN.c that caused function to hang.  Fix to 
+	    SEEK to handle more than 8 cities of same name.
+	    Done, DP, (TP), 4/30/99.
+
+p	ll. Initialized month/date on the template to be first
+	    of January to rationalize the Gempak time for climo
+	    data.  Done, TL, (TP), 5/11/99.
+
+p	mm. Created CLO_TRACK function which accepts two points in 
+	    space/time and computes future points.  Done, DP (TP),
+	    5/12/99.
+
+p	nn. Updated N-AWIPS to Patch5.4.3.p.  Done, TP, (TP), 5/12/99.
+
+p	oo. Removed IRIX6.5 compiler warnings.  Done, FY, (TP), 5/12/99.
+
+p	pp. Added a new routine (CV_RDUC) to reduce the number of
+	    points on a line.  To access the functionality of CV_RDUC, 
+	    added user inputto the LINE and MAP parameters.  Therefore,
+	    updated IN_LINE and GG_MAP to parse the input for the
+	    point filter in both parameters.  Added new functions to
+	    set the point filter value in GPLT and the device drivers.
+	    Added a scaling factor for the point reduction to each device
+	    driver.  Changed the calling sequence to IN_LINE in each
+	    routine that calls it.  Added calls to GSRDUC in GDCNTR, GDPLTB,
+	    GDPLOT and GG_DMAP.  Updated the help files and the common
+	    block files as needed.  Done, SJ, (TP), 5/13/99.
+
+p	qq. Interpretation of the /MAN flag in the GEMPAK variable
+	    LEVELS has been changed so that when /MAN is specified,
+	    any application will use only mandatory level data with
+	    NO interpolation.  (Formerly, interpolation would occur.)
+	    Replaced references to PC_DSET with PC_INIT.  Done, DKW,
+	    (TP), 5/14/99.
+
+p	rr. Modified GG_WTCH to read the files created by the decoder
+	    (DCWTCH) instead of the Family of Services raw file.
+	    Created GG_WARN to read the output of the decoder DCWARN.
+	    Added a call to GG_WARN to GPMAP.  Added the WARN 
+	    parameter and its help files.  Modified the path to the 
+	    watch data in DATA.TBL. Also added the information for
+	    the warning data.  Removed the reference to the BRIDGE
+	    library in gpmap_link. Changed the constant representing
+	    10 minutes of lat/lon from 0.167 to 0.17. (from DKW).
+	    Done, SJ, (TP), 5/18/99.
+
+p	ss. Moved the color bar labels for radar images to the center
+	    of each color box.  Done, SJ, (TP), 5/19/99.
+
+p	tt. Increased the array size for the number of file names
+	    possible in GG_WARN to 500.  Done, SJ, (TP), 5/20/99.
+
+p	uu. Added CLASS_TRACKS and TRKSTORM_ELM to the appropriate
+	    CGEMLIB test programs.  Done, SJ, (TP), 5/21/99.
+
+q	vv. Fixed print statements in TESTCES. Swapped classes CIRCLE 
+	    and TRACK for items 10 and 11.  Done, SJ, (TP), 5/28/99.
+
+q	ww. Added OUTLOOK, LABEL, TROPICL, STNMDL and MRFSTN to
+	    Key to Types - Group Type in dumpvgf.  Increased indicies
+	    for KEY TO TYPES so that vg type STRM TRCK would appear
+	    in the list.  Done, AH, (TP), 5/28/99.
+
+q	xx. Fixed the calculation of the number of intermediate points
+	    on a line segment.  Done, SJ, (TP), 5/28/99.
+
+q	yy. Added byte swapping to the functions for displaying radar
+	    imagery.  The byte swapping is needed for plotting the
+	    radar images on Linux.  Done, SJ, (TP), 5/28/99.
+
+q	zz. Changed maximum number of stations in file from 3800 to
+	    4800, and maximum number of headers from 4000 to 5000.
+	    Added 635 European stations to the surface synoptic station
+	    table.  Changed a parameter in nwx for consistency.  
+	    Done, DKW, (TP), 5/28/99.
+
+q	aaa. Implemented changes to DM_RFLT and DM_WFLT suggested by 
+	     users in the field.  The users share data files between 
+	     Linux and DEC Alpha workstations.  The fix allows data to 
+	     be read if written by another workstation type that uses
+	     the VAX-like byte order for reals.  Done, SJ, (TP), 
+	     6/1/99.
+
+q	bbb. Modified display of watch and warnings to have the option
+	     to not label them.  It is now possible to display the watch
+	     box information without the box number and the warning
+	     information without the county names.  The defaults for
+	     the WATCH_WARN in NMAP have been changed so that only the
+	     boxes for watches and diamonds for warnings are displayed.
+	     No label information is given.  For now, the user cannot
+	     change these options.  Done, AH, (SS), 6/4/99. 
+
+q	ccc. Updated N-AWIPS to Patch5.4.3.q.  Done, TP, (TP), 5/28/99.
+
+q	ddd. Fixed problems of inconsistent contour plotting when
+	     the contour level is out of the data range.  Done,
+	     TL, (TP), 6/8/99.
+
+q	eee. Increased array sizes for plotting watches and warnings.
+	     Added a suggested fix from the AWC for setting the 
+	     longitude range of the satellite navigation.  This is used
+	     for selecting station data to plot.  Done, SJ, (TP),
+	     6/9/99.
+
+q	fff. Added edge checking and setting of incoming points and 
+	     polygons in M coordinates to a precision of 1/100th of a
+	     degree in CGR_INPOLY.  Done, DP, (TP), 6/9/99.
+	     
+r	ggg. Updated N-AWIPS to Patch5.4.3.r.  Done, TP, (TP), 6/18/99.
+
+r	hhh. Undo part of circle delivery, 021a1c.  Done, TP, (TP),
+	     6/29/99.		
+
+s	iii. Updated to version 5.4.3.s.  Done, SS, (SS), 7/6/99.
+
+s	jjj. Modified GPMAP to save text attributes and reset them
+	     after a VG file is displayed.  This prevents the problem
+	     of text attributes from the VG file being used in subsequent
+	     GEMPAK programs, like GPTEXT, when they are not explicitly
+	     set.  Done, TL, (SS), 7/6/99.
+
+t	kkk. Updated N-AWIPS to Patch5.4.3.t.  Done, TP, (TP), 7/19/99.
+
+t	lll. Made numerous enhancements to gdplot2:  Implemented cycle
+	     information to GDPLOT2 so that it works the same way as
+	     the rest of the GD programs.  Also, fixed problems so that
+	     GDPLOT2 will plot the data correctly for non-standard grid
+	     time, e.g., first, f24, fall, first-last-6, when grid file
+	     is etaf.  Cleaned up flmfls.f and unified single file
+	     retrieval algorithms. Added cycle in the calling sequence.
+	     Enabled FL_MFIL to compare files with forecast times.  
+	     Increased # of file names to be searched from 200 to 300.
+	     Uppercased terminal output for gdplot2.  Done, TL, (TP),
+	     7/20/99.
+
+t	mmm. Added the start of the SIGMET class functions.  Currently,
+	     it allows initial creation of an international SIGMET. 
+	     Only the isolated, line and area can be drawn.  No other
+	     functions are available with this initial delivery.
+	     Done, SL, (TP), 7/23/99.
+
+t	nnn. Added new routine, clo_from, which returns a sigemt "from"
+	     line given a set of lat/lon points. Done, DP, (SS), 
+	     7/28/99.
+
+t	ooo. Added a new aircraft character parameters: ITSY, TTSY and
+	     TFSY.  The new parameters display the character description
+	     of icing type, turbulence type and frequency of turbulence.
+	     Done, AH, (TP), 7/30/99.
+
+t	ppp. Added function to calculate flight conditions (instrument
+	     flight rules, visual flight rules, or marginal VFR) from
+	     ceiling and visibility.  Done, JG, DKW, (TP), 7/30/99.
+
+t	qqq. Add functionality to CLO_FROM for non-convective sigmets,
+	     convective sigmets, convective outlooks, and airmets.
+	     Done, DP, (TP), 8/9/99.
+
+t	rrr. Changed calculation in CLO_DIRECT from simple cartesian to
+	     spherical trig calculations.  Done, DP, (TP), 8/11/99.
+
+t	sss. Modifications to the sigmet display code. Added VGTYPEs
+	     for non-convective sigmets, convective sigmets, convective
+	     outlooks and airmets to the setting.tbl.
+	     Done, DP, (SJ), 8/13/99.
+
+u       ttt. Updated N-AWIPS to Patch5.4.3.u.  Done, TP, (TP), 8/25/99.
+
+u	uuu. Added several new routines which compute the pressures and 
+	     heights of specific temperatures from a sounding station 
+	     which is closest to a given point.  Done, TL, (TP),
+	     8/30/99.
+
+u	vvv. Added watch status lines to GG_WTCH. Changed all routines
+	     that reference GG_WTCH to send a color for the status lines.
+	     Modified the Watch/Warn edit popup in NMAP to include the
+	     status line color.  Done, SJ, (TP), 8/31/99.
+
+u	www. Changed calling sequence to CGR_SEGINT.c to return the actual
+	     intersection point of the two lines defined by the segments, 
+	     regardless of whether the segments themselves intersect.  
+	     Done, DP, (TP), 8/31/99.
+
+u	xxx. Changes for international sigmets:  1) use actual element 
+	     distance when drawing circle around isolated type; also use 
+	     distance when plotting implementation of different line types
+	     (ESOL, NOF, etc.); 2) make "from" line to nearest 1/10th 
+	     degree; 3) properly sort "from" line coordinates starting 
+	     from northern-most and clockwise.  Bug fix for clo_direct.c -
+	     undefined results when both points have the same longitude.  
+	     Minor addition to cgr_segint.c - only return undefined 
+	     intersecton point if both lines have same slope AND 
+	     intercept.  Done, DP, (TP), 9/1/99.
+
+u	yyy. Fixed problems reported by SPC in the data file search
+	     routine.  Done, TL, (TP), 9/2/99.
+
+u	zzz. Corrected problems when reading watch status lines when 
+	     no other reports have been processed yet in GG_WTCH. These
+	     problems sometimes caused fatal errors when displaying
+	     watches.  Done, SJ, (SS), 9/3/99.
+
+v	a1a. Updated N-AWIPS to Patch5.4.3.v.  Done, TP, (TP), 9/13/99. 
+
+v	a1b. Changed the calling sequence of FL_MDAT and CFL_MDAT to pass
+	     in a default date/time string.  This fixes a bug reported by
+	     the SPC when trying to load data from a file that does not 
+	     have the date/time in the file name template.  Done, SJ,
+	     (TP), 9/13/99.
+
+v	a1c. Increased length of mapfil and mparr strings in ggmap.f to
+	     be consistent with increased size of these strings in ipcmn.
+	     This has the benefit of fixing a problem in NMAP when many
+	     map overlays are requested.  Done, TP, (TP), 9/13/99.
+
+v	a1d. Fixed bug which was causing watch status line labels to be
+	     plotted in wrong location, or not at all.  Done, DKW, (TP),
+	     9/13/99.
+
+v	a1e. Bug fix for SUN:  changed fmodf to fmod and added check to 
+	     solve Greenwich Meridian problem.  Done, DP, (TP), 9/14/99.
+
+v	a1f. Yet another change to CDSSIG.c, hopefully this will finally 
+	     fix all problems with the ESOL SIGMET line display.  Done, 
+	     DP. (TP), 9/16/99.
+
+v	a1g. Fix in CLO_DIRECT.c for when the difference of the long. is
+	     > 180 deg.  Done, DP, (TP), 9/16/99.
+
+v	a1h. Improved the robustness of sounding temperature interpolation.
+	     Checked number of intersections and invoked warning message if
+	     the number exceeds the maximum.  Done, TL, (TP), 9/28/99.
+
+w	a1i. Updated N-AWIPS to Patch5.4.3.w.  Done, TP, (TP), 10/4/99.
+
+w	a1j. Fixed problem 221.2:  When using delete point, if an isolated 
+	     SIGMET is plotted then an area SIGMET without closing the 
+	     convective SIGMET edit box, the red delete symbol changes from 
+	     a dot to a plus.  Done, HZ, (TP), 10/4/99.
+
+w	a1k. Corrected the VG element display functions so that they do not
+	     propagate attribute settings to other parts of NMAP, such as
+	     the map dialog box.  Done, GK, (TP), 10/4/99.
+
+w	a1l. Added the ability to change the sizes of the icing and the
+	     turbulence symbols, ICSY and TBSY, in SFMAP and NMAP.  Done,
+	     AH, (TP), 10/4/99.
+
+w	a1m. Fixed NAGRIB bug, the date information was being 
+	     decoded/encoded erroneously when a non-precip analysis 
+	     grid was being decoded.  Also inserted check for AFWA MM5 
+	     model; 00-hr fields (labeled as analyses) will be treated 
+	     as 00-hr forecasts.  Done, DP, (TP), 10/5/99.
+
+w	a1n. Added new libraries of routines to set and store the
+	     attributes for data types accessed by NMAP.  Modified and 
+	     created necessary GEMLIB and CGEMLIB routines to support 
+	     the new libraries.  Done, SJ, (TP), 10/6/99.
+
+w	a1o. Added capability to change the attributes of the elements of
+	     a VG file in GPMAP using a user attribute table, 
+	     $GEMTBL/pgen/uattribd.tbl.  Done, FY, (TP), 10/14/99.
+
+w	a1p. Added a return value to clo_direct and clo_cmpwds to check for
+	     input out of range.  Changed all parameters to pointers for 
+	     clo_dist, clo_direct, clo_dltln, clo_compass, and clo_cmpwds
+	     so that they can be called by FORTRAN.  Added a new function
+	     clo_cmpdir which takes a 16-point compass direction (N, NNE,
+	     NE, etc.) and computes the direction (degrees from N).  Done,
+	     MLi, (TP), 10/15/99.
+
+w	a1q. Made an enhancement to the cloud height display algorithm.
+	     If no sounding station is found for a given pixel temperature,
+	     NMAP will still display the temperature and pixel values.
+	     Done, TL, (TP), 10/19/99.
+
+w	a1r. Replaced reading of default user attribute table with hard
+	     coded values in the CDS global attribute structure.  Changed
+	     error level in cds_rtbl from 2 to 0.  Ignored file header in
+	     cds_dspelm.  Done, FY, (TP), 10/19/99.
+
+w	a1s. Created a new function, CSS_GTIM, to return a GEMPAK
+	     date/time string for the current time.  Done, SJ, (TP),
+	     10/19/99.
+
+w	a1t. Updated help file, vgfile.hl1, for gpmap.  Done, FY, (TP),
+	     10/21/99.
+
+w	a1u. Added sigmets to dumpvgf.  Done, FY, (TP), 10/21/99.
+
+w	a1v. Fixed a problem in PC table setup for stability computation.
+	     The problem occurred when trying to compute stability indices
+	     and using MAN flag in the level parameter.  If the MAN flag
+	     used first, the PC interpolation table won't get set up.
+	     Done, TL, (TP), 10/22/99.
+
+w	a1w. Adjusted the size of the middle panel when the device is
+	     split into thirds.  The middle panel was significantly
+	     smaller than the other two.  Done, SJ, (TP), 10/22/99.
+
+w	a1x. Fixed a bug in IM_GPIX encountered in nmap2.  Added a call to
+	     GSICMN before the call to GSATPX to have the image info
+	     updated in the XW device driver code.  Done, SJ, (TP),
+	     10/26/99.
+
+w	a1y. Modified clodist.c to calculate distances between multiple
+	     points.  Done, MLi, (TP), 10/28/99.
+
+w	a1z. Changed table designation for SFSTN type in CLO common from
+	     xrainsort.tbl to sfstns.tbl.  Done, DP, (TP), 10/28/99.
+
+w	a2a. Added BRBS (barb in miles/hour) and SMPH to the available
+	     parameters for the surface data conversions.  Done, GG, SJ, (TP),
+	     11/2/99.
+
+w	a2b. Removed a check for a requested future time in FL_MFIL.  The
+	     HPC has started creating grid files with a future base time
+	     and NMAP cannot display these grids.  Done, SJ, (TP), 11/4/99.
+
+w	a2c. Fixed a problem in the surface objective analysis (OA) routine.
+	     Set the station difference to missing when the difference is
+	     greater than the QC threshold.  Done, TL, (TP), 11/5/99.
+
+w	a2d. Modified calling sequence for GG_ISIG in TESTGG to add color
+	     specification for tropical storms and tropical depressions.
+	     Done, DKW, (TP), 11/8/99.
+
+w	a2e. Increased the directory file number size to allow reading
+	     of a greater number of files in the $OBS/isig directory.
+	     Done, AH, (TP), 11/15/99.
+
+w	a2f. Improved the sorting algorithm in station searching routines.
+	     Added maximum search distance to cloud-height routines.
+	     Done, TL, (TP), 11/17/99.
+
+w	a2g. Added another check for a valid second standard latitude
+	     within the aw library.  This came at the request of Unidata
+	     User Support.  Several AWIPS products that they receive
+	     required this change.  Done, AH, (TP), 11/17/99.
+
+w	a2h. Added a new function, NMS_RTBL, to read a table of attributes
+	     for plotting MISC data types in NMAP2.  Changed the variable
+	     in the call to CDS_SFILL to a pointer so that the function can
+	     be called from fortran.  Changed nmap_dsp.c to use a pointer 
+	     in the call to CDS_SFILL.  Added new functions CFL_PATH and
+	     FL_PATH to split a full path name into a directory and file name.
+	     Modified default attributes in GG_HRCN.  Fixed a string length 
+	     in GG_WARN.  Changed GG_WTCH to allow plotting of watches up
+	     to one hour before they are valid.  Done, SJ, (TP), 11/17/99.
+
+w	a2i. Created a new function, css_mtyp, to determine the byte order
+	     for integers and floating point numbers on the current
+	     workstation.  Done, SJ, (TP), 11/18/99.
+
+w	a2j. Modified (C)FL_MDAT to return error code if date/time cannot be 
+	     decoded from the filename.  Process forecast hour information, 
+	     if necessary.  Done, DP, (TP), 11/18/99.
+
+w	a2k. Improved time-matching algorithm in cloud height function.  Added
+	     12h backward data searching for cloud height function.  Done,
+	     TL, (TP), 11/19/99.
+
+x	a2l. Updated N-AWIPS to version 5.4.3.x.  Done, TP, (TP), 11/30/99.
+
+x	a2m. Simplified the calculation of the day of the week in TI_DAYW.
+	     Added a new routine to determine whether a given date occurs
+	     during Daylight Saving Time (TI_DST).  SJ, (TP), 11/30/99.
+
+x	a2n. Used TMCK to convert temperature from Celsius to Kelvin.
+	     Added a routine to TESTPR.  Done, TL, (TP), 12/2/99.
+
+x	a2o. Added more information to the VG watch element.  Added the VG 
+	     watch status element.  Set the "unused2" value to 1 when 
+	     creating a watch.  Created new routine cvgrdwbx.c for reading 
+	     watch boxes for backward compatibility.  Done, DP, (TP), 12/2/99.
+
+x	a2p. Created a new string function for cst library to wrap long strings.
+	     Added new function, cst_wrap, to testcst.c.  Done, TP, (TP), 
+	     12/3/99.
+
+x	a2q. Refixed a problem in FL_MFLS where spaces were included in a string
+	     for comparison with the file template. (SPC)  Fixed a problem in 
+	     FL_MFIL where the model cycle was not being checked when the
+	     data is in "forecast files". (HPC)  Done, SJ, (TP), 12/8/99.
+
+x	a2r. Updated necessary routines to standardize the size of the 
+	     extra information string in station tables at 20 characters.
+	     Done, SJ, (TP), 12/8/99.
+
+x	a2s. Added watch status message "from" line processing to CLO_FROM.
+	     Also added more comments.  Done, DP, (TP), 12/9/99.
+
+x	a2t. Fixed time range check in GG_WTCH.  Done, SJ, (TP), 12/10/99.
+
+x	a2u. Modify the dumpvgf program to print out the new watch format
+	     and watch status information.  Done, DP, (TP), 12/10/99.
+
+x	a2v. Removed the macro THETA from the distance and direction
+	     functions in the CLO library.  Done, SJ, (TP), 12/13/99.
+
+x	a2w. For CDS_WBOX.c:  removed code to plot counties from GEMPAK
+	     surface file.  Adjusted code to plot watch number (if > 0) outside
+	     watch box at southernmost/westernmost location.  Done, DP, (TP),
+	     12/15/99.
+
+x	a2x. Wrote new routine GG_LTNG to be used to display lightning data
+	     in GPMAP using the new GEMPAK variable LTNG.  Added new marker
+	     - a minus sign.  Updated help files.  Bug fixes for line width 
+	     restore and international SIGMET duplicate checking.  Done,
+	     DKW, (TP), 12/15/99.
+
+x	a2y. Bug fix in cvgcp.c for wbox_elm processing.  Done, DP, (TP), 
+	     12/16/99.
+
+y	a2z. Updated N-AWIPS to version 5.4.3.y.  Done, TP, (SS), 12/27/99.
+
+y	a3a. Y2K bug fix for processing of filenames with 2-digit years.
+	     Done, DP, (SJ), 12/28/99.
+
+y	a3b. Added a new feature to LINUX so that the VG file created on LINUX
+	     can be read on other platforms, and LINUX can read VG file created
+	     on other platforms.  Done, MLI, (TP), 12/30/99.
+
+y	a3c. Fixed FL_MFIL to properly save the minimum time difference for
+	     calculating the correct file to select.  Done, SJ, (TP), 1/3/00.
+
+y	a3d. Fix to gg_isig routine to ensure that cancel time for an 
+	     international SIGMET is before original end time.  Fix to gg_wtch
+	     routine to handle watch replacements and cancellations properly, and
+	     to ignore leading zeros in watch numbers.  Done, DKW, 1/5/00.
+
+y	a3e. Removed cvgctddel.c since it is for the obsolete centroid element
+	     type.  Done, DP, (TP), 1/7/00.
+
+y	a3f. Removed county plotting from the severe weather watch box display.
+	     Done, DP, (TP), 1/10/00
+
+y	a3g. Fixed bug of UNDO/REDO problems on LINUX2.  Done, MLI, (TP), 1/13/00.
+y	a3h. Made modifications to NMAP and NMAP2 methods of displaying the
+	     location type menu for both SEEK and LOCATOR.  These two
+	     functions are now table driven. Modified and created new clo
+	     functions that reads tables and based upon what the user selected
+	     the appropriate information is returned.  Done, AH, (TP), 1/14/00.
+
+y	a3i. Added a new format code in locator.tbl.  Adjusted cloformat for
+	     the additional code.  Done, AH, (TP), 1/18/00.
+
+y	a3j. Corrected circle drawing problems at the poles and on the
+	     international dateline.  Done, GK, (TP), 1/19/00.
+
+y	a3k. Changed the watch element structure to include county locations.
+	     Done, DP, (TP), 1/19/00.
+
+y	a3l. Added moist-adiabatic cloud height to the cloud-to-height function.
+	     Fixed a bug in the CAPE computation.  Done, TL, (TP), 1/20/00.
+
+y	a3m. Fixed the crash that results from adding additional model
+	     entries to the datatype.tbl.  Done, ES, (TP), 1/28/00.
+
+z	a3n. Updated N-AWIPS to version 5.4.3.z.  Done, TP, (TP), 2/7/00.
+
+z	a3o. Modified the code so that any combination of rounding, units,
+	     distance and display can be used for SFSTNS, ANCHOR, VOR, COASTAL,
+	     and MARINE.  The COUNTY can display either the county name or the
+	     FIPS code.  No changes were made for the LATLON or the DEGMIN 
+	     displays.  Done, AH, (TP), 2/7/00.
+
+z	a3p. Modified the return string sizes in CLOFORMAT.  If a station name
+	     is used, fill out the locator box space with as much of the name 
+	     as possible.  Allow the CITY location to have distance and
+	     direction to be displayed with the name.  Done, AH, (TP), 2/14/00.
+
+z	a3q. Correct range record calculation for the WBOX element now that
+	     the county locations are part of the element.  Done, DP, (TP),
+	     2/16/00.
+
+z	a3r. Fixed a Y2K bug for GINI data.  Used image type information from 
+	     the common block for cloud-to-height function.  Done, TL, (TP),
+	     2/16/00.
+
+z	a3s. Changed GG_CBAR to no longer check for color 0 being used for the
+	     first or last box in the color bar.  Done, SJ, (TP), 2/18/00.
+
+z	a3t. Added the CCFP (Collaborative Convective Forecast Product) to
+	     vgstruct.h for new display routine for this element.  Done, 
+	     DP, (TP), 2/18/00.
+
+z	a3u. Added a check if the special character is equal to zero.  This
+	     prevents an infinite loop from occuring in AW_APLT found by
+	     UNIDATA.  Done, AH, (TP), 2/23/00.
+
+z	a3v. Added two new data sources (long-range/offshore and NASA/TRMM)
+	     for lightning data display.  Done, DKW, (TP), 2/24/00.
+
+z	a3w. Modified CST_WRAP to allow user to select end-of-line character
+	     sequence.   Done, DP, (TP), 2/28/00.
+
+z	a3x. Changed the time displayed in the title for local radars.  The
+	     first time in the file header is now used, instead of the 
+	     second.  Changed the necessary NIM routines to accomodate the data
+	     directory trees and the file names for the imagery at the SPC and
+	     AWC.  Done, SJ, (TP), 2/28/00.
+
+z	a3y. Fixed the year in the integer array used to create the GDATTIM
+	     string used when writing the data to the output file.  Done,
+	     SJ, (TP), 3/2/00.
+
+z	a3z. Fix to gg_wtch routine to process watch and status corrections
+	     and cancellations properly.  Done, DKW, (TP), 3/2/00.
+
+z	a4a. Extracted the various functions from SPCTXT to create a verification
+	     (VF) library.  These functions create the SPC text products: SAW, 
+	     SEL, SEV, cancelled SAW and the cancelled SEL.  List full names of 
+	     the states in the SEL and removed a line break after 'LIGHTNING' in 
+	     the paragraph following the valid watch time.  Removed a line break 
+	     after 'ISSUED' in the SEV.  Done, AH, (TP), 3/2/00.
+
+z	a4b. Added the automatic creation of the SEV and SAW text products
+	     in NMAP and NMAP2.  These two products are created when the
+	     ww*.txt file is saved in product generation.  For the SAW product,
+	     added a check for *.txt files which do not exist.  This check
+	     prevents NMAP from seg. faulting.  Fixed line lengths in the SEL 
+	     product.  Fixed the general time of day string for the SEV
+	     product.  Done, AH, (TP), 3/7/00.
+
+z	a4c. Modified CST_RXBL to assure that the input and output are the
+	     same variables if there are no extra spaces.  Done, MLI, (YP), 
+	     3/9/00.
+
+z	a4d. Added option to CFL_MNAM to accep the substring 'FFF' in a 
+	     template.  Done, DP, (TP), 3/10/00.
+
+z	a4e. Added the automatic creation of the WCL (Watch Coordination List)
+	     text product to NMAP and NMAP2.  For the SEV product, added
+	     watch number calculation.  Done, AH, (TP), 3/10/00.
+
+z	a4f. Fixed big of string-appending problem for CST_RXBL.  Done, MLI,
+	     (TP), 3/13/00.
+
+z	a4g. Corrected the top three header lines for the WCL text product.
+	     Done, AH, (TP), 3/13/00.
+
+z	a4h. Created new routine ST_GTST which takes a template string, a
+	     string pattern expected to be within the template, a delimeter
+	     character and a string whose pattern is expected to match the
+	     template and return that part of the string which matches up
+	     the string pattern.  Done, DP, (TP), 3/15/00.
+
+z	a4i. Added plotting of open (unbounded) international SIGMETS;
+	     improved duplicate checking.  Done, DKW, (TP), 3/15/00.
+
+z	a4j. Created new function CST_RPST ( same as ST_RPST).  Done, DP,
+	     (TP), 3/16/00.
+
+z	a4k. Added parameter conversion routines to calculate the rate of ice
+	     accretion for ship observations, and updated tables for its
+	     color-coded display in NMAP.  Two new parameters, IGRO and DIGR, 
+	     have been added.  Done, DKW, (TP), 3/16/00.
+
+z.1	a4l. Fixed the speed problem on large work/undo files.  Done, ES, 
+	     (TP), 3/24/00.
+
+
+011.	General GEMPAK Program Changes
+
+l	a. Allow multiple files to be processed by surface OA
+	   program.  Done, TL, (TP), 2/22/99.
+
+l	b. Added 14 more paramters to the surface station model.
+	   Done, AH, (TP), 2/22/99.
+
+l	c. Fixed a bug when trying to print to the "DEFAULT" printer
+	   from the printer dialog box in any NPROG program.  Done,
+	   SJ, (TP), 2/24/99.
+
+l	d. Allow grphgd to consider a contour's color when 
+	   processing.  Minor bug fixes: prevent consideration of
+	   intersections off the grid, smooth only those points
+	   which are not assigned an exact contour value, prohibit
+	   radial search assignment if all gradients are zero.
+	   Done, DP, (TP), 2/24/99.
+
+m	e. Added an option to apply the break values for color coding
+	   in sfmap to the lower range of data values or the upper
+	   range of data values.  Done, SJ, (TP), 3/3/99.
+
+m	f. Added a new parameter, qcntl, in surface OA program to
+	   check data quality.  Done, TL, (TP), 3/4/99.
+
+m	g. Parameter sfparm was added to sfmod to allow only some
+	   of the surface file output to be written.  Done, DKW,
+	   (TP), 3/5/99.
+
+m	h. Created a new program, SFVGSF, to read a VG file and
+	   write the data values to a GEMPAK surface file.  Done,
+	   SJ, (TP), 3/8/99.
+
+m	i. Modified sfcsplt to create fronts2.vgf.  Done, FY, (TP), 3/8/99.
+
+m	j. Changed plotsyms.f for linux compiler.  Done, DP, (TP), 3/8/99.
+
+m	k. Fixed bugs found in SFVGSF.  Done, SJ, (TP), 3/9/99.
+
+m	l. Corrected bug where nskp not initialized causing core
+	   dump.  Done, TL, (TP), 3/11/99.
+
+m	m. Change the calling sequences of SF_QSTN, SF_SNXT, SF_SSTN,
+	   and SF_USTN by adding a priority paramter, ispri.  Done,
+	   AH, (TP), 3/12/99.
+
+m	n. Made several enhancements to the surface OA routines.
+	   Done, TL, (TP), 3/16/99.
+
+m	o. Changed variable gpnum to integer.  Changed call to
+	   SF_SSTN to add priority value.  Done, SJ, (TP), 3/16/99.
+
+n	p. Change length of time string.  Done, AH, (TP), 3/25/99.
+
+n	q. Added a new parameter, QCNTL, to oabsnd for data quality 
+	   check.  Enabled opening multiple upper-air files.  Write 
+	   station IDs discarded by QC to the terminal.  Done, TL, 
+	   (TP), 3/31/99.
+
+p	r. Added CLRBAR to SFMAP to control the appearance of the
+	   color bar displayed for color-coded parameters.  Done,
+	   SJ, (TP), 5/17/99.
+
+p	s. Bug fix for GDPLTB to stop a crash when loading streamlines.
+	   Done, SJ, (TP), 5/21/99.
+
+q	t. This version makes two changes to program NAMSND:
+		1.  Allow character station identifiers to be read
+			and written to the GEMPAK output files.
+		2.  Corrects a problem that occurred when parameters
+			destined for the auxilliary file had missing
+			values---previous non-missing values would be
+			written to the GEMPAK file rather than the
+			GEMPAK missing value.
+	    Done, KB, DKW, (TP), 6/1/99.
+
+q	u. Added IN_SKIP to GDPLOT.  Done, AH, (TP), 6/3/99.
+
+q	v. Removed y-direction offset for map coordinates in GPTEXT.
+	   Done, TL, (TP), 6/8/99.
+
+r	w. Corrected aix4 compiler warnings.  Call to sf_sstn in 
+	   sfvstn.f missing new ispri argument.  Done, TP, (TP),
+	   6/23/99.
+
+s	x. Corrected grid spacing calculation in program GDCFIL for
+	   CED grid.  Done, TL, (SS), 7/6/99.
+
+t	y. Improved logic with cpyfil; previously, gdcfil tried to
+	   locate a navigation file even if the file name was blank.
+	   Done, TL, (TP), 7/29/99.
+
+t	z. Added latitudinal thinning of vector plots in GDPLOT.
+	   Previously, if y-direction skip is set to -1, segmentation
+	   fault occurred. Fixed vector thinning indices in GDWIND
+	   and GDPLOT2. Done, TL, (SJ), 8/13/99.
+
+v	aa. Increased maximum # of lines to 200 in grphgd.cmn.
+	    Done, DP, (TP), 9/13/99.
+
+v	bb. GRPHGD changes per HPC:  1) Eliminate problems w/smoothing of
+	    missing data; 2) Apply limits to computed grid point values 
+	    (to be used initially for the QPF grids - grid points assigned
+	    negative values would be set to 0).  Done, DP, (TP), 9/14/99.
+
+w	cc. Added calls to GSTANM and GENANM to sfgram so that the 'gf'
+	    driver can be used as an output device.  Reported by the SPC.
+	    Done, SJ, (TP), 10/4/99.
+
+w	dd. Added parameter option HISTGRD to control writing history grid 
+	    in GRPHGD.  Split out main section of GRPHGD.f into an 
+	    abbreviated main program and the essential graph-to-grid 
+	    driver, GGDRIV.f.  Done, DP, (TP), 10/14/99.
+
+w	ee. Modified GPMAP to allow for a single selection of a tropical
+	    storm to be plotted for a given time period.  Done, AH, (TP),
+	    10/14/99.
+
+w	ff. Added option to GRPHGD program to allow user to specify a 
+	    default grid value if no contours are in the info file.
+	    Done, DP, (TP), 10/20/99.
+
+w	gg. Modified output format of spctxt.c per the SPC.  Done, MLi,
+	    (TP), 10/21/99.
+
+w	hh. Removed user response code from ggdriv.f and removed 
+	    diagnostic print statements.  Done, DP, (TP), 10/25/99.
+
+w	ii. Created a new application program which computes grid data and
+	    interpolates to stations in an existing GEMPAK surface field.
+	    Done, SJ, TL, JH, (TP), 11/2/99.
+
+w	jj. Changed the call to GSMPRJ to GSGPRJ in GGDRIV. This fixes problems
+	    with the Graph-to-grid routine when used in NMAP.  Done, SJ, (TP),
+	    11/2/99.
+
+w	kk. Added loop specific reloads to speed roam/zoom loading.  Fixed
+	    lost roam values when loading from data window; only 9 satellite
+	    images at start; and auto update not updating the first frame 
+	    (oldest) in sequence.  Done, ES, (TP), 11/5/99.
+
+w	ll. Fixed use of MAXGRD in GGDRIV.f.  Done, DP, (TP), 11/10/99.
+
+z	mm. Show contours of created grid in NMAP.  Done, DP, (TP), 2/23/00.
+
+z	nn. Added option to CPYFIL parameter in GDCFIL, NAGRIG, and GRPHGD.
+	    Option appears as a '|' followed by a desired subarea (GARAEA),
+	    i.e., CPYFIL = ETA | 20;-90;50;-50 or CPYFIL = #A211 | stl.
+	    Done, DP, (TP), 3/6/00.
+
+z	oo. Brett McDonald's changes to the graph-to-grid processing.  Done,
+	    DP, (TP), 3/20/00.
+
+
+012.	General GUI Modifications
+
+l	a. Changed dwell rate pop-up to be sensitive even when 
+	   frames are looping.  Done, SL, (TP), 2/19/99.
+
+n	b. Corrected compile warnings from IRIX6.5.  Done, AH, (TP),
+	   3/30/99.
+
+n	c. Corrected compile warnings from IRIX6.5.  Done, SJ, (TP),
+	   3/31/99.
+
+u	d. Make "Exit" button insensitive when "New Product" button is
+	   clicked in NALARM.  List alarmed afos product files in 
+	   alphabetical order in NALTXT.  Get rid of "done" button and
+	   reorganize other buttons in NALTXT.  Done, HZ, (TP), 8/31/99.
+
+w	e. Fixed AFTEXT to recognize files with the 4-digit year in the 
+	   file name.  Done, SJ, (TP), 10/4/99.
+
+w	f. Added function to the NxmLabel package to return the displayed 
+	   string from a created label.  Done, ES, (TP), 10/15/99.
+
+w	g. Modified progWait in prog.c and its prototype in prog.h to 
+	   eliminate compiler warnings.  Done, TP, (TP), 10/27/99.
+
+w	h. Fixed initialization bug in busy.c.  Done, TP, (TP), 10/27/99.
+
+w	i. Fixed bug in LUT enhancement popup when loading only radar images
+	   in NMAP2.  Done, SJ, (TP), 11/2/99.
+
+w	j. Fixed the title string when plotting upper air data in NMAP2.
+	   Done, SJ, (TP), 11/15/99.
+
+z	k. Changed the location of the color palette popup to be higher on the
+	   screen.  Changed the Nmap resource file to raise all of  the 
+	   product generation popups higher on the screen.  Done, SJ, (TP),
+	   2/15/00.
+
+
+014.	NTRANS
+
+y	a. Fixed problem in Ntrans with reporting error of too many files in a 
+	   directory.  Done, TP, (TP), 1/20/00.
+
+
+
+015.	NSAT
+
+m	a. Fixed a bug in NSAT when creating the date and time labels
+	   in the product ID line of the user interface.  Done, SJ,
+	   (TP), 3/15/99.
+
+y	b. Fixed bugs of wrong latitude/longitude problems while NSAT/NAFOS
+	   main windows were resized and scrolled.  Done, MLI, (TP), 1/20/00.
+
+
+016.	NWX
+
+m	a. Modified srchw.c to display a slightly more informative
+	   message when the user attempts to display too much data.
+	   Done, GK, (TP), 3/2/99.
+
+m	b. Bug fix for NWX... for text data of type "B" (bulletin),
+	   force search for beginning of bulletin to look for ^A,
+	   instead of just the PIL and station ID.  Done, DP, (TP),
+	   3/10/99.
+
+m	c. Corrected duplicate bulletin problem.  Done, GK, (TP),
+	   3/18/99.
+
+n	d. Fixed NWX for Y2K.  Done, SJ, (TP), 4/2/99.
+
+q	e. Changed color of severe thunderstorm watch box in NWX
+	   from yellow to cyan.  Done, DKW, (TP), 6/9/99.
+
+t	f. Modified watch box decode and display in NWX to use WWUS40
+	   bulletins instead of WWUS9, and to treat replaced watches
+	   as watch cancellations.  Done, DKW, (TP), 7/22/99.
+
+z	g. Fixed bugs of string allocation for NWX found by AWC.  Done,
+	   MLI, (TP), 3/15/00.
+
+
+017.	AFOS
+
+
+
+018.	NMAP
+
+l	a. Next generation auto-update.  Latest data is now loaded
+	   into the frame sequence without re-loading the entire
+	   set of frames.  Done, ES, (TP), 2/18/99.
+
+l	b. Locator box in bottom right corner now displays various 
+	   information based upon choices in options menu.  Done,
+	   SL, (TP), 2/18/99.
+
+l	c. Update timeline during auto update.  Done, ES, (TP),
+	   2/19/99.
+	   
+l	d. Modified to use new county bounds table instead of 
+	   centroid when determining county.  Done, SL, (TP), 
+	   2/22/99.
+
+l	e. Corrected auto-update problem where auto-update did
+	   not work properly with maximum number of frames.
+	   Done, ES, (SS), 2/25/99.
+
+l	f. Fix auto-update roam bug.  Done, ES, (TP), 2/26/99.
+
+m	g. Fix the seek function when in zoom or roam.  Done,
+	   ES, (TP), 3/3/99.
+
+m	h. Fixed nmap_sfmap to call sfmprm and sfmplt properly.
+	   Done, SJ, (TP), 3/4/99.
+
+m	i. For NMAP cursor locator types ANCHOR and VOR, add distance
+	   and direction information as they would be seen in the 
+	   outlook product.  Done, DP, (TP), 3/10/99.
+
+m	j. Fixed current time and set time buttons on the time line.
+	   Also, changed file open default to "by name."  Done,
+	   ES, (TP), 3/15/99.
+
+n	k. Changed the seek function to display county names rather 
+	   than the county ids.  Also fixed the vector refresh sizes 
+	   to fix 150:P1.  Done, SL, (TP), 3/24/99.
+
+n	l. This release makes the following changes/fixes:
+
+		1)  Loop animation speed is improved when in product
+		    generation.  The vgf file is no longer reloaded 
+		    with each frame -- only if a change to the vgf 
+		    file has occured.
+
+		2)  Auto-update loads more efficiently, particularly 
+		    in cases where more than one frame is to be 
+		    loaded into to a loop. 
+
+		3)  Drawing in product generation (with a frame loop 
+		    loaded) no longer results in "burn-in" (vgf 
+		    elements drawn to the background frame) to the 
+		    frames when in roam or zoom.
+
+		4)  A copy pixmap operation (done during frame 
+		    replacement) now copies the master pixmap when 
+		    product generation is active.
+
+		5)  The watch box display list no longer tries to 
+		    update when moving to a different frame in a 
+		    frame loop.
+
+	   Done, ES, (TP), 3/31/99.
+
+n	m. Moved auto-update control from data window to the main
+	    window.  Done, ES, (TP), 4/5/99.
+
+n	n. Disabled the auto-update button when the data-clear button is
+	   selected.  Also the handlebar for the Inc/Dec function is 
+	   wider and the color is magenta.  Done, ES, (TP), 4/6/99.
+
+n	o. Added to the seek function the ability to find the distance 
+	   between two points when you click and drag.  Done, SL, (TP),
+	   4/7/99.
+
+n	p. Fixed the intermittent problem with being unable to select 
+	   some or all vgf elements after performing a restore.  Fixed
+	   problem where pushbuttons created with more than one pixmap 
+	   collapsed on some OSes when made insensitive.  Made 
+	   modifications to Nxm library functions to address IRIX 6.5 
+	   compiler warnings.  Done, ES, (TP), 4/7/99.
+
+n	q. Capitalize name of program and remove NAWIPS from title bar.
+	   Have the base map overlay last on user selected overlays.
+	   Done, AH, (TP), 4/7/99.
+
+n	r. Add reload button to main nmap window.  Done, ES, (TP),
+	   4/8/99.
+
+n	s. Add locator selection button at bottom frame of main window.
+	   Done, WL, (TP), 4/8/99.
+
+n	t. Change default for auto-update to ON.  Done, ES, (TP), 
+	   4/8/99.
+
+o	u. Fixed #171.O2 -- single frame loops are not looped any 
+	   longer.  And, now skip is considered during auto-update.
+	   Done, ES, (TP), 4/14/99.
+
+o	v. Fixed #174.P1 -- timeline now properly updated for 
+	   auto-update on local radar images.  Done, ES, (TP),
+	   4/15/99.
+
+o	w. Changed satellite and radar imagery title location and
+	   format.  Done, AH, (TP), 4/20/99.
+
+o	x. Corrected title placements for imagery data and surface data
+	   when they are all overlayed onto model data.  Done, AH,
+	   (TP), 4/27/99.
+
+o	y. Added a button to the seek widget to toggle between statute
+	   miles and nautical miles.  Done, SL, (TP), 4/27/99.
+
+o	z. Added Marine and Coastal types to the SEEK and LOCATOR functions
+	   at the request of the MPC.  Done, DP, (SS), 4/29/99.
+
+o	aa. Fixed memory leak in auto-update.  Done, ES, (TP),
+	    4/30/99.
+
+o	bb. Fixed the seek function's ghosting problem.  Done,
+	    SL, (TP), 5/4/99.
+
+p	cc. Fixed auto update bug with 'clear data' button.  Done,
+	    TP, (TP), 5/12/99.
+
+p	dd. Removed offsets from seek distance popup so that it works 
+	    in roam.  Done, SL, (TP), 5/12/99.
+
+p	ee. Fixed numerous problems with the Look-up Tables when model
+	    data is in the sequence.  The following sequences fail in 
+	    the current operational software:
+
+		1.  sat/rad/model/rad
+		2.  sat/model-rad/sat
+		3.  rad-fade/model/rad
+		4.  rad/model-sat-fade/rad
+
+	    Also, the color enhancement pop-up window did not always
+	    reflect the actual Look-up Table applied.  Two known
+	    occurrences are:
+
+		1.  Any time the LUT is modified between a non-model 
+	   		image and a model-image combination.
+
+		2.  If the radar enhancement is modified, say to
+			osf_rad8, then load satellite, then return
+			to radar.
+
+	    Done, TP, (TP), 5/12/99.
+
+p	ff. Bug fix -- the locator had VOR and Anchor points 
+	    reversed.  Done, DP, (TP), 5/13/99.
+
+p	gg. Fixed problems with images with century in the file name.
+	    Done, TP, (TP), 5/18/99.
+
+p	hh. Added the ability to plot current watches and warnings.
+	    Done, SJ, (TP), 5/18/99.
+
+p	ii. Allow model data to be non-dominant.  Done, ES, (TP),
+	    5/19/99.
+
+p	jj. This release treats (not cures) a fatal bug in Nmap on
+	    HPUX platforms.  The bug occurs when image and model data 
+	    are loaded (image dominant).  After an auto-update, if the
+	    model data is toggled to dominant, the application crashes.
+	    Done, ES, (TP), 5/21/99.
+
+p	kk. Removed unnecessary logic as a result of loading all images
+	    via image_loadData as opposed to previously where if model 
+	    data existed, images were loaded via mdl_loadData.  Done,
+	    TP, (TP), 5/21/99.
+
+p	ll. Added a check for when GDFILE is set in a restore file.
+	    If GDFILE is in the restore file, the value in the file is
+	    used.  Otherwise the model name is used as GDFILE.  Also,
+	    modified all restore files for wam, nww3, and NEWwave to
+	    add -1 line position for TITLE parameter.  Done, SJ, (TP), 
+	    5/25/99.
+
+q	mm. Fixed MODEL title when more than one GDFILE present in
+	    restore file.  Done, TP, (TP), 5/28/99.
+
+q	nn. Fixed some LUT problems.  If a user swithed between 
+	    reflectivity and another radar type the wrong LUT would be 
+	    applied.  Also, if the user faded the second radar image 
+	    type the previous LUT would be reapplied.  Done, TP, (TP),
+	    6/1/99.
+
+q	oo. This release fixes two print bugs in nmap.  When printing 
+	    "All" frames, model data was printing all the frames on the
+	    same page, and all other data was printing an extra page.
+	    Done, ES, (TP), 6/1/99.
+
+q	pp. Some clean up to the auto-update.  Removed check on the file
+	    modification time and now relies on the file name only to 
+	    establish chronological order.  Done, ES, (SS), 6/4/99.
+
+q	qq. Created a title for WATCH_WARN.  The title time is the
+	    current time in GEMPAK format.  Done, AH, (TP), 6/7/99.
+
+q	rr. Fix watch/warn title plot from delivery 018qq.  Done,
+	    AH, (TP), 6/8/99.
+
+r	ss. Added a table for the roam function to allow the user to
+	     set the multiplier.  Done, SL, (TP), 6/18/99.
+
+r	tt. Fixed fatal bug in auto-update when map window up.  Done,
+	    ES, (TP), 6/18/99.
+
+r	uu. Fixed bug (197:P1) with watch/warn title.  Done, TP, (TP),
+	    6/18/99.
+
+r	vv. Changed reading the roam table to allow roam levels to be 
+	    in any order.  Done, SL, (TP), 6/28/99.
+
+s	ww. Added a button to the MAP pop-up to toggle on and off
+	    the display of the image.  The default is set to off.
+	    Done, SL, (SS), 7/6/99.
+
+s	xx. Added ability to edit the attributes of the Watch/Warn
+	    data type.  The user can change colors, labeling, and
+	    warning marker type by clicking on the edit button in
+	    the data (Frame Set Definition) window.  Also, changed
+	    the data dialog to only allow one instance of the
+	    Watch/Warn data type.  Done, SJ, (SS), 7/6/99.
+
+s	yy. Increased max # of groups from 25 to 50 and the max # of
+	    products from 50 to 75 for NMAP model display access.
+	    Done, GG, SS, (TP), 7/12/99.
+
+u	zz. Change "ovlflag" to "ovlflag[2]" in order to allow up to
+	    64 overlays in the NMAP map window.  Done, HZ, (TP), 9/2/99.
+
+u	aaa. Set the icon tips to off by default.  Done, ES, (TP), 9/2/99.
+
+u	bbb. Fixed the bug that occurs when no map file is selected in the
+	     nmap map window. (Problem 82.3)  Changed the default name
+	     for the hurricane track product to vgf file name.  Done,
+	     HZ, (TP), 9/3/99.
+
+v	ccc. Increased the number of models allowed in the user interface
+	     for NMAP from 30 to 60.  Done, SJ, (TP), 9/13/99.
+
+v	ddd. Modified the plot order of data sources to ensure that model
+	     data is always plotted first, or immediately after any image
+	     source.  This ensures that the model does not overwrite any
+	     sources such as obs.  Done, ES, (TP), 9/13/99.
+
+v	eee. Added cloud height button in nmap main window.  Built cloud 
+	     height window.  Done, HZ, (TP), 9/24/99.
+
+v	fff. Clean-up of cloud height delivery 018eee.  Done, HZ, (TP), 
+	     9/27/99.
+
+w	ggg. Added setting of $MAPFILE in IP common for Model display.
+	     This fixed a problem when map overlays were loaded with
+	     model data for the first time.  Done, TP, (TP), 10/4/99.
+
+w	hhh. Added new routines to perform the time match for image data
+	     and return the resulting file name.  Done, SJ, (TP), 10/14/99.
+
+w	iii. Added a check for optionally executing a program specific
+	     function when choosing a LUT from the enhancement selection
+	     window. (This is in support of the new NMAP2 and has no
+	     effect on running the current NMAP.)  Done, SJ, (TP), 10/14/99.
+
+w	jjj. Reorganized the two control buttons in cloud height window.
+	     Fixed Problem 221.S1.  Done, HZ, (TP), 10/14/99.
+
+w	kkk. Added a new function to the NMS library to get all of the
+	     storm names from the decoded hurricane advisory data files.
+	     Done, SJ, AH, (TP), 10/19/99.
+
+w	lll. This is the first cut at nmap2.  It introduces multiple loop 
+	     capability to nmap and loads the frames from the latest to
+	     the earliest, keeping the latest in view while all other
+	     pixmaps are loading (out of sight to the user).  Done,
+	     ES, (TP), 10/19/99.
+
+w	mmm. Added cloud height to nmap2.  Also added the frame time 
+	     display (lower left of main window).  Done, ES, (TP), 
+	     10/19/99.
+
+w	nnn. Fixed bugs in NMAP2 and NGD_DSPL to better load the grid
+	     data.  Done, SJ, (TP), 10/21/99.
+
+w	ooo. Fixed a bug in map widget for nmap2 when trying to use the
+	     "Custom" map garea/proj window.  Done, SJ, (TP), 10/21/99.
+
+w	ppp. Fixed the SEEK function in NMAP when using the marine and
+	     coastal station tables.  Done, SJ, SL, (TP), 11/2/99.
+
+w	qqq. Visually enhanced pgpalette window for Motif 2.1 on Linux
+	     and AIX.  Changed size of the dominant toggle buttons on frame
+	     set definition window.  Done, HZ, (TP), 11/3/99.
+
+w	rrr. Added timeline updating to auto-update.  Fixed a bug in the 
+	     timeline that resulted in unselected frame times being displayed
+	     on some platforms ((aix4, linux2, irixX).  Done, ES, (TP), 
+	     11/9/99.
+
+w	sss. Fixed fatal bug in Nmap2 when roaming with no data.  Done, ES,
+	     (TP), 11/10/99.
+
+w	ttt. Built graph-to-grid popup window for nmap2.  Done, HZ, (TP),
+	     11/10/99.
+
+w	uuu. Added roam value option menu into Data Selection Window.  Done,
+	     HZ, (TP), 11/10/99.
+
+w	vvv. Added OBS and MOS parameter editing to nmap 2.  Done, SL, (TP),
+	     11/15/99.
+
+w	www. Added new display type into Watch/Warn Parm Edit window.
+	     Done, HZ, (TP), 11/16/99.
+
+w	xxx. Improved loading in NMAP2, only those loops that have been changed
+	     in the data window are reloaded.  This is true too if the # of
+	     frames in a specific loop is changed.  Also included is a fix
+	     for report #239 P1 and P2.  Done, ES, (TP), 11/17/99.
+
+w	yyy. Added degrees Celsius to the display for the cloud height 
+	     function in NMAP/NMAP2.  Done, SJ, (TP), 11/22/99.
+
+w	zzz. Reactivated the print functionality in NMAP2.  Reactivated the
+	     reload frame functionality in NMAP2.  Done, SJ, (TP), 11/23/99.
+
+x	a1a. Replaced references to the dcatg, dsrc, and master tables with
+	     the datatype table.  Changed references to model with grid.
+	     Changed CAT_MISC to CAT_MSC for consistency.  Done, SL, (TP),
+	     12/1/99.
+
+x	a1b. Added '-1' to index into _sTime.mon since this array indexes
+	     months beginning at zero.  Done, TP, (TP), 12/7/99.
+
+x	a1c. Added a sounding table flag to cloud-to-height function.  This
+	     allows user to retrieve cloud height from a sounding table.
+	     A standard atmospheric sounding file is provided.  Done, TL,
+	     (TP), 12/8/99.
+
+x	a1d. Added latitude and longitude in degrees:minutes to the locator
+	     menu in NMAP.  Done, SJ, (TP), 12/9/99.
+
+x	a1e. Removed 100sm check from locator code and added check for valid
+	     lat/lon.  Done, DP, (TP), 12/9/99.
+
+x	a1f. Augemented the seek function to use two points.  Done, SL, (TP),
+	     12/13/99.
+
+x	a1g. Added the lat/lon type to the seek function along with fixing
+	     a problem with the search list form resizing itself on irix5.
+	     Also restricted Outlook SIGMETS to the area type.  Done, SL, 
+	     (TP), 12/15/99.
+
+x	a1h. Added pixel area and mode retrievals to the cloud-to-height
+	     function.  Done, TL, (TP), 12/15/99.
+
+x	a1i. Modified the cloud height dialog box in NMAP to allow the user
+	     to select options about the data display.  The user can change
+	     the units for some of the output, the type of sounding data to
+	     use and the type of pixel value to use. Changes to the Options
+	     box do not require the user to re-click on the image, the new 
+	     data is automatically recomputed.  Done, SJ, (TP), 12/15/99.
+
+x	a1j. Fixed 256:P1&P2 in the seek function.  Also cleaned up the change
+	     in the seek form's sensitivty when switching between points.
+	     Done, SL, (TP), 12/16/99.
+
+x	a1k. Added a color bar to GG_LTNG.  Added lightning data to NMAP.
+	     The colors and time increments are hard-coded for now.
+	     Done, SJ, (TP), 12/16/99.
+
+x	a1l. Added feature to popdown the seek window when changing the map or
+	     data set.  Done, SL, (TP), 12/16/99.
+
+x	a1m. Fixed the length of the title string for watch/warn/sigmet/lightning
+	     data.   Done, SJ, (TP), 12/16/99.
+
+x	a1n. Changed the lightning data in NMAP to default to off.  Done,
+	     SJ, (TP), 12/17/99.
+
+x	a1o. Removed functionality that set the state when a user used click
+	     point or selected from the search list.  Done, SL, (TP), 12/17/99.
+
+y	a1p. This fixes an NMAP print problem when product generation is
+	     active.  The problem was after printing, objects could not
+	     be selected without clicking the "refresh" and "select"
+	     actions.  Done, ES, (SS), 12/27/99.
+
+y	a1q. Added image display toggle to NMAP2.  Done, ES, (SS), 12/27/99.
+
+y	a1r. Fixed NMAP to properly sort and load image data from a
+	     directory containing files from 12/31/99 and 01/01/00 with
+	     only 2 digits for the year in the file names.
+	     Done, SJ, (SJ), 12/28/99.
+
+y	a1s. Added functionality to the clear data button in nmap2 and cleared
+	     up a positioning problem with images in the data selection popup.
+	     Done, SL, (TP), 12/30/99.
+
+y	a1t. Added hotkeys (F1-4) to NMAP2 for loop selection.  Done, SL, 
+	     (TP), 1/5/00.
+
+y	a1u. Modified the data attribute structures for MISC data types in the
+	     NMS library and NMAP2.  Added Lightning data to NMAP2.  Done,
+	     SJ, (TP), 1/5/00.
+
+y	a1v. Added "LEVEL INFO" option menus and text into "International SIGMET
+	     Edit" window.  Done, HZ, (TP), 1/7/00.
+
+y	a1w. Fixed the set time problem in nmap.  Done, ES, (TP), 1/11/00.
+
+y	a1x. Fixed the timeline related problems with MSC data (Watch, Warn,
+	     Isig, etc) in nmap2.  For these data types the timeline is now 
+	     built oldest to newest dates.  Done, ES, (TP), 1/13/00.
+
+y	a1y. Add a new type of sounding data in CLOUD HEIGHT OPTIONS window.
+	     Done, HZ, (TP), 1/13/00.
+
+y	a1z. Fixed NMAP2's inability to zoom with only a single frame of data.
+	     Done, SL, (TP), 1/13/00.
+
+y	a2a. Replaced the characters with string variables while calling 
+	     gtrans.f.  Done, MLI, (TP), 1/18/00.
+
+y	a2b. Fixed problem #264, P1 -- not all frames getting refreshed after a 
+	     RESTORE operation (nmap and nmap2).  Fixed the crash in nmap2 when 
+	     changing maps with no data loaded and product generation active 
+	     (and element(s) drawn).  Improved data loading when product 
+	     generation is active (nmap2) by displaying the loaded vg file 
+	     immediately after the data is loaded.  Previously the vg file
+	     was displayed after all the data was loaded.  Cleaned up the
+	     XW driver; one file is deleted, and a debug statement is removed
+	     from another.  Done, ES, (TP), 1/19/00.
+
+y	a2c. Increased the sizes of map overlay toggle buttons for Motif 2.1.
+	     Done, HZ, (TP), 1/20/00.
+
+y	a2d. Corrected Problem 265.2:  If a set time contains no data, a 
+	     "Dominant Data Not Available" window pops up. Upon selecting okay,
+	     the time line is all blank but the current time button is blue.
+	     One must actually select the "current time" button to restore 
+	     the time line.  Corrected Problem 265.3:  Obs type allows the
+	     user to set a time but nothing happens after setting a time.
+	     Done, HZ, (TP), 1/20/00.
+
+y	a2e. Fixed bug on hpux that occurred when the user selected and loaded
+	     data, then popped the dataw window back up and selected "Clear".
+	     Done, ES, (TP), 1/20/00.
+
+y	a2f. Fixed problem #267, P2 (PG + change map + zoom = crash) in nmap2.
+	     Done, ES, (TP), 1/20/00.
+
+y	a2g. Fixed problem when zooming or roaming so that any loaded data does
+	     not disappear upon completion (#267:P3).  Done, SL, (TP), 1/21/00.
+
+y	a2h. Fixed the no ACFT data problem in nmap2.  Done, ES, (TP), 1/21/00.
+
+y	a2i. Modified nmap_seek to permit more seek/locator functions.  Made
+	     rounding scheme in cloformat.c more generic.  Done, AH, DP,
+	     (TP), 1/21/00.
+
+y	a2j. Fixed a bug in zoom under nmap2.  Zooming when only product
+	     generation is active (i.e., no data is loaded), zoomed to a blank
+	     map.  The vg objects were not visible unless REFRESH was clicked.
+	     Done, ES, (TP), 1/24/00.
+
+y	a2k. Fixed problem with locator and seek positions being incorrect after
+	     an autoupdate with multiple loops.  Done, SL, (TP), 1/24/00.
+
+y	a2l. Corrected a problem with clearing data in the data window in nmap2.
+	     Clearing a loaded source and then selecting LOAD had no effect.
+	     Done, ES, (TP), 1/27/00.
+
+y	a2m. Fixed a fatal seek bug in nmap/nmap2 (#273, P2).  Selecting a point
+	     that was sufficiently far removed from a known station (on a world
+	     or hemispheric map) caused a crash.  Fixed seek problem in nmap2.
+	     Seek in nmap2 didn't warp to the location of a selected city.  The
+	     code to peform the warp was ommented out in nmap2, relative to nmap.
+	     Done, ES, (TP), 1/27/00.
+
+z	a2n. Fixed #275, P1 -- crash on sunOS5, irix5, irix6.  Done, ES, (TP),
+	     2/7/00.
+
+z	a2o. Fixed #273, P3 -- wrong frame number.  Done, ES, (TP), 2/7/00.
+
+z	a2p. Fixed 277.O Seek ghost appears upon selecting cloud height.
+	     Done, HZ, (TP), 2/7/00.
+
+z	a2q. Fixed a bug in the map window in nmap2.  The latest selected image 
+	     was not consistantly displayed when show image was toggled on.
+	     Done, ES, (TP), 2/11/00.
+
+z	a2r. Added locator format edit window into nmap&nmap2.  Done, HZ,
+	     (TP), 2/11/00.
+
+z	a2s. Completed reload button implementation in nmap2.  Also, fixed 
+	     #273P4 (reload did not redisplay an active VGF file).  Done, 
+	     ES, (TP), 2/14/00.
+
+z	a2t. Added a load status indicator to nmap2.  Done, ES, (TP), 2/16/00.
+
+z	a2u. Fixed bugs in NMAP/NMAP2 as suggested by Unidata:  (1) removed 
+	     unnecessary arguments from pgline_setTable in nmap_pgline.c,
+	     (2) added iret = G_NORMAL in the declaration of nmap_mapw.c,
+	     (3) malloc(len) -> malloc(len+1) in nmap_roamw.c, (4) if
+	     nprods < 2, added a return to gtbl_sortProd in nmap_gtbl.c.
+	     Done, MLI, (TP), 2/16/00.
+
+z	a2v. Added the ability to enter a point in degrees-minutes in the
+	     SEEK text box.  The point is converted to lat. lon. in the
+	     text display.  Done, AH, (TP), 2/16/00.
+
+z	a2w. Fixed the projection related problems in nmap2, including
+	     problem reports 227:2, 227:3, 227:6, 270:1, and 273:1.
+	     Done, ES, (TP), 3/3/00.
+
+z	a2x. Seek changes:  1) Set default Lat/Lon to none; 2) If the "Limit" is 
+	     reduced, e.g. to 1, then the scoll list, should shrink down.
+	     1 = lower limit (default) and 5 = upper limit. 3) Eliminate the
+	     "State" and "Last Point" buttons.  Done, HZ, (TP), 3/8/00.
+
+z	a2y. Added the "Set Time" functionality to nmap2.  Note that when a
+	     time is set auto update is switched to OFF.  A window title
+	     rename for one instance of the vector attribute edit window is
+	     also included (286:01).  Done, ES, (TP), 3/9/00.
+
+z	a2z. Created new popup windows to allow the user to change the
+	     attributes of the miscellaneous data types (i.e., WTCH, WARN,
+	     VGF, etc.)  Modified the table miscset.tbl to contain better
+	     information for creating the popups.  Removed the type parameter
+	     from the LINE and ARRW types in miscset.tbl.  Done, SJ, (TP), 
+	     3/13/00.
+
+z	a3a. Fixed the LUT bug that prevented selecting an enhancement file
+	     for a rad/sat image in a loop following a loop with a rad/sat image.
+	     This bug was introduced with the recent projection fix.  Also
+	     fixed the LUT setting in conjunction with auto-update.  The visible
+	     image file will be momentarily confused during an auto-update, but 
+	     will reset itself to the correct colour at the end of the update. 
+	     Done, ES, (TP), 3/15/00.
+
+z	a3b. Removed the Wipe button from the main Nmap2 window.  Also included
+	     is a fix to the linux2 group crash bug.  Done, ES, (TP), 3/15/00.
+
+z	a3c. Increased the distance between locator type label and latitude
+	     label to allow long city(county) names.  Added direction into
+	     dist_popup window.  Added positioning calculation for dist_popup
+	     so it can always be seen within the main window.  Done, HZ, (TP),
+	     3/15/00.
+
+z	a3d. Fixed the 4 digit year auto-update problem in NMAP2.  Done, ES,
+	     (TP), 3/17/00.
+
+z	a3e. Fixed reload and refresh problems.  Done, ES, (TP), 3/20/00.
+
+z	a3f. Fixed auto-update bug in NMAP2.  Done, ES, (TP), 3/21/00.
+
+z	a3g. Fixed the lut problem for image loading in nmap2.  Done, ES, 
+	     (TP), 3/21/00.
+
+z.	a3h. Fixed the "continuous" auto-update problem in nmap2.  Done,
+	     ES, (TP), 3/22/00.
+
+
+019.	MAP FILES
+
+m	a. Created new Surface Analysis overlay map files for the
+	   MPC.  Done, GK, (TP), 3/3/99.
+
+m	b. Marine zones for the Great Lakes, Saint Lawrence Seaway, 
+	   and the Atlantic & Pacific coasts have been reconfigured 
+	   effective 12/1/98.  Done, GK, (TP), 3/4/99.
+
+n	c. Maps and tables that accompany the new county bounds 
+	   table as well as utilities that processed the new maps
+	   and tables.  Done, GK, (TP), 3/25/99.
+
+o	d. New Aviation boundaries map.  Done, GK, (TP), 4/27/99.
+
+o	e. Converted NWS Shapefiles into GEMPAK map and table files.
+	   Done, GK, (TP), 5/4/99.
+
+p	f. New map overlays and map background definitions for MPC
+	   products.  Done, GK, (TP), 5/14/99.
+
+q	g. New Quantitative Precipitation Forecast Verification 
+	   boundary map.  Done, GK, (TP), 6/8/99.
+
+q	h. Updated our highways map files to the latest Shapefiles
+	   from the NWS/MISG.  The high resoltion maps occupy a total
+	   of 11% (5.7MB) of the original 54MB Shapefiles.  The low
+	   resolution maps occupy a total of 3% (1.6MB).  Improved the
+	   map reduction and map processing code.  The map reduction is
+	   simpler and produces maps that are more compact and more 
+	   accurate than before.  Done, GK, (TP), 6/8/99.
+
+r	i. Corrected the SWAPPED highway map files; wrong files delivered
+	   previously.  Done, GK, (TP), 6/18/99.
+
+t	j. New Flight Information Region boundary map.  Done, GK, (TP),
+	   8/2/99.
+
+u	k. New 30 JUL Zone maps and tables.  Done, GK, (TP), 8/24/99.
+
+u	l. Corrected boundaries on our maps that include the Saudi Arabian
+	   peninsula.  Some of the boundaries are now (manually) dashed
+	   lines.  Done, GK, (TP), 9/3/99.
+
+u	m. Replaced non-swapped map files in the SWAPPED map file
+	   directory.  Regenerated missing ascii (SSF) map files in the
+	   ASCII map file directory.  Done, GK, (TP), 9/3/99.
+
+v	n. 30 JUL County maps and tables.  Done, GK, (TP), 9/14/99.
+
+v	o. Convective Sigmet boundary map (WST Regions).  Done, GK, (TP),
+	   9/24/99.
+
+w	p. W 15 SEP 1999 County Warning Area map and table set update.
+	   Split CWA map files into multiple resolutions to improve speed.
+	   Done, GK, (TP), 10/4/99.
+
+w	q. W 15 JUL 1999 Marine Zone map and table set update.  Done, GK,
+	   (TP), 10/7/99.
+
+w	r. Zones Shapefile update from 06 OCT 1999.  Zones reconfigured in
+	   AZ, CA, ND, NV, OR, UT, WA, and WY.  Added new zones:  ASZ000
+	   American Samoa and UMZ000 Midway Islands.  WFOs changed in AL
+	   and GA.  Also, the new Puerto Rican Flash Flood Guidance zones
+	   have been added.  Done, GK, (TP), 10/18/99.
+
+w	s. New Western Region boundary map file.  Done, GK, (TP), 10/20/99.
+
+w	t. 6 OCT 1999 Shapefile update to County Warning Area maps.  AZ
+	   boundaries were changed.  Done, GK, (TP), 10/22/99.
+
+w	u. 5 Oct 1999 Marine Zone Shapefile update.  Done, GK, (TP),
+	     10/27/99.
+
+w	v. Boundary map files for the Tropical Prediction Center including
+	   Aviation, Surface Analysis/Bound, High Seas, and Sigmet bounds.
+	   Done, GK, (TP), 10/27/99.
+
+w	w. Added more caribbean islands to the HIPOWO.CIA map file.  Existing
+	   caribbean islands have been improved.  Done, GK, (TP), 11/4/99.
+
+w	x. Correction for Caribbean map delivery.  Done, GK, (TP), 11/4/99.
+
+w	y. New Marine Prediction Center Forecast Boundary map files for the
+	   Atlantic and the Pacific.  Corrected MPC supplied data to work
+	   with any normal projection.  Done, GK, (TP), 11/24/99.
+
+x	z. 17 NOV 1999 Shapefile update for offshore marine zones.  Includes
+	   some reassignments of Florida WFOs, many extended zones in Eastern
+	   and Southern Regions, many new zones in Eastern and Alaska regions.
+	   Done, GK, (TP), 12/2/99.
+
+x	aa. Added Cape Verde and Socorro Islands.  Added the other Iles
+	    Revillagigedo of which Socorro is a member.  Added Islas Marias
+	    and Clipperton Island, which are off the Mexican coastline.
+	    Added Arquipelago de Fernando de Noronha and St. Peter and
+	    St. Paul Rocks off the tip of Brazil.  These additional islands
+	    were included, because they are small, and are easy to add.
+	    Done, GK, (TP), 12/7/99.
+
+x	bb. Correction for Tropical Prediction Center High Seas Forecast
+	    boundaries.  Boundaries now end at continents.  Done, GK, (TP), 
+	    12/7/99.
+
+x	cc. Continental Divide Map file set.  Constructed from various USGS
+	    map files.  Done, GK, (TP), 12/8/99.
+
+x	dd. New AWIPS High Seas Marine Zones.  These maps define MPC
+	    forecast bounds (according to AWIPS).  Done, GK, (TP), 12/9/99.
+
+x	ee. 30 NOV 1999 County Warning Area Shapefile update, which reflects
+	    a change to a boundary in Iowa.  Done, GK, (TP), 12/9/99.
+
+x	ff. North America outline map contained in a VGF file for use by the
+	    Tropical Prediction Center.  The file contains 31,785 pts, 906
+	    lines, and 500 pts in largest line.  Done, GK, (TP), 12/14/99.
+
+x	gg. New Marine Prediction Center offshore zones maps from NWS
+	    Shapefiles.  Done, GK, (TP), 12/14/99.
+
+x	hh. Reduced the North American outline map VGF.  Done, GK, (TP), 
+	    12/16/99.
+
+y	ii. Added Basin map files for the River Forecast Centers.  Done,
+	    GK, (TP), 1/27/00.
+
+z	jj. Combined RFC basins map.  Done, GK, (TP), 2/16/00.
+
+z	kk. Removed the old border between East & West Germany in
+	    HIPOWO.GSF, MEPOWO.GSF, and MXPOWO.NCP.  Done, GK, (TP), 2/18/00.
+
+z	ll. Update to offshore marine zones shapefiles.  Done, GK, (TP),
+	    2/22/00.
+
+z	mm. Zone maps update from Shapefiles for changes to Colorado zones.
+	    Done, GK, (TP), 2/22/00.
+
+z	nn. Removed non-existent islands from the Gulf of Mexico.  Done,
+	    AH, (TP), 3/22/00.
+
+
+020.	UTILITIES 
+
+l	a. New code to scan the new countybnds.tbl and create an
+	   associated countybnds.tbl.info file.  Done, DP, (TP), 
+	   2/18/99.
+
+m	b. Replaced the C language code checking script.  Modified
+	   the FORTRAN language code checking script so that it puts 
+	   valid subscripts in the relative position where they 
+	   should appear in the documentation.  Updated the ndirect 
+	   usage statement.  Done, GK, (TP), 3/2/99.
+
+o	c. Improved the paramcmp function.  Done, GK, (TP), 4/15/99.
+
+u	d. Created a stand alone program for the SPC.  It takes the text
+	   watch verification file created by NMAP, and creates the 
+	   public product (SEL), county product (SEV) and the aviation
+	   product (SAW).  Done, AH, (TP), 9/1/99.
+
+u	e. Modified how the latitudes and longitudes are converted in
+	   spctxt.  They are truncated at the 10's of minutes position
+	   without any rounding occurring.  This affects the the public
+	   product (SEL) and the county product (SEV).  Done, AH, (TP),
+	   9/3/99.
+
+w	f. Modified SPCTXT so that the independent cities would be list after
+	   the counties for any given state in the SEV product.  Also, 
+	   corrected the print out when DCA is listed as an anchor point.
+	   Done, AH, (TP), 11/4/99.
+
+w	g. Added to SPCTXT the ability to create canceled SAWs and SELs.
+	   Both cancel products are created when the following is typed:
+	   spctxt ww####.txt cancel, where #### is the watch number that
+	   is to be canceled.  Cleaned up line lengths in the SEL, added
+	   replacement watch information in SEL and SAW, added ongoing
+	   watch information in the SEL and removed unused variables in
+	   several functions.  Done, AH, (TP), 11/17/99.
+
+x	h. Rename VIEWFAX to NFAX.  Fix the Makefile for NFAX.  Done,
+	   SJ, (TP), 11/30/99.
+
+y	i. Implemented byte swapping in GSFSSF and SSFGSF map file
+	   conversion programs.  This allows map file creation on Linux,
+	   in addition to the other platforms.  Done, GK, (TP), 1/13/00.
+
+z	j. Corrected the good and bad file counts in checkSrc.sh.  Also added
+	   the +b (bad files only) and +g (good files only) options to
+	   checkSrc.sh.  Done, GK, (TP), 2/11/00.
+
+z	k. Corrected Shapefile processing to work on both Big-endian and
+	   Little-endian machines.  Done, GK, (TP), 2/22/00.
+
+
+021.	PRODUCT GENERATION
+
+l	a. Changed the pop-up for partial delete of arrow heads to 
+	   be a radio box.  Done, SL, (TP), 2/18/99.
+
+l	b. Added label and label type selections for lines,
+	   fronts, and symbols.  Also fixed editing problems.
+	   Done, WL, (TP), 2/19/99.
+
+l	c. Added keyboard focus to "wind speed" text field in
+	   "wind barb" and "wind arrow" editor.  Done, WL, (TP),
+	   2/23/99.
+
+l	d. Fixed 139:P1, arrow line width preserved during partial
+	   delete.  Done, SL, (TP), 2/23/99.
+
+l	e. Removed header line from the coded message for QPF prog.
+	   Changed the coded message filename to reflect the first
+	   3 chars. of the VG filename.  Done, FY, (TP), 2/23/99.
+
+l	f. Fixed 142:P1&2 and added several new label types in 
+	   lines & fronts.  Done, WL, (TP), 2/23/99.
+
+l	g. Append/replace toggle has been replaced with an append
+	   button and a replace button.  A toggle at the top now
+	   allows vgf files to be displayed chronologically or
+	   nmae.  Done, ES, (TP), 2/24/99.
+
+l	h. Change the way counties are determined for the watch box
+	   elements.  They are now determined by the county outline
+	   as opposed to using the centroid.  Done, DP, (TP), 2/24/99.
+
+l	i. Fixed a bug caused by users using partial delete to 
+	   delete an element (see report 144).  Done, SL, (TP),
+	   2/24/99.
+
+l	j. Perform G_NINT on label locations.  Done, DP, (TP),
+	   2/24/99.
+
+l	k. Made the blankout behind the vector the default for
+	   vectors in NMAP product generation.  Done, ES, (SS),
+	   2/25/99.
+
+l	l. Modified SFCSPLT program to handle the group type
+	   label.  Added squall lines.  Removed the creation
+	   of the pressure VGF.  Done, FY, (SS), 2/25/99.
+
+l	m. This change allows users to open 0 size .vgf files 
+	   without notification of error.  Done, ES, (TP), 
+	   2/25/99.
+
+l	n. Updated the VG convert program to convert patch l
+	   files to patch j files.  Done, FY, (SS), 2/25/99.
+
+m	o. Fixed problem with increment/decrement within roam 
+	   and zoom.  Done, ES, (TP), 3/2/99.
+
+m	p. Added two new label types in fronts and changed label
+	   value setting.  Done, WL, (TP), 3/3/99.
+
+m	q. Cleaned up the modify function so that it now deletes the
+	   smaller portion of a closed figure.  Also, it now modify's
+   	   the first point so that it ties directly to the line if 
+	   there is not a vertex close by.  Done, SL, (TP), 3/8/99.
+
+m	r. Fixed partial delete problem with nearly closed line.
+	   Done, ES, (TP), 3/9/99.
+
+m	s. Added symbol's lat/lon position editing in symbol editor.
+	   Added symbol's background fill option in symbol editor.
+	   Added ghosting lat/lon under action "place symbol,"
+	   "move symbol," and "copy symbol."  Done, WL, (TP), 3/9/99.
+
+m	t. Fixed modify tie in problems from report #156.  Done,
+	   SL, (TP), 3/11/99.
+
+m	u. Added symbol's lat/lon editing to single select section.
+	   Added table setting symbol's "clear type" and lat/lon
+	   initial value.  Done, WL, (TP), 3/12/99.
+
+m	v. Added code and an associated table for managing severe
+	   weather watch formatting.  Done, DP, (TP), 3/15/99.
+
+m	w. Added a new special line type, 22, for drawing 
+	   streamlines.  Done, SJ, (TP), 3/15/99.
+
+m	x. Fixed problem with different line types remembering
+	   previous settings (#150:P2).  Done, SL, (TP), 3/16/99.
+
+m	y. Correct bug where product save window sometimes did not 
+	   pop up.  Done, FY, (TP), 3/16/99.
+
+m	z. Changed file names of text products for Surface Prog and
+	   Excessive Rainfall to have the first 3 characters of the 
+	   vgf file with a 'dat' extension.  Changed the Weather
+	   Depiction text file name to wxd.dat.  Renamed 
+	   pgwxd_getfname to cvggetfname.  Done, FY, (TP), 3/17/99.
+
+m	aa. Removed "type selection" toggle buttons from "Inc/Dec
+	    Editor," extended text field value from positive to 
+	    integer, added keyboard focus on text field, and modified
+	    middle mouse button function (deselect all after apply).
+	    Done, WL, (TP), 3/17/99.
+
+m	bb. Fixed garbage in lat/lon ghost and ghost not working
+	    on Sun (#203).  Done, WL, (TP), 3/17/99.
+
+n	cc. Increased selected element size from 500 to 2000.  
+	    Increased selecting speed for increment/decrement editing
+	    function.  Done, WL, (TP), 3/23/99.
+
+n	dd. Always write to end of .DEFAULT.vgf.  Generate 
+	    incremental backups if .DO_BACKUP file exists.  Done,
+	    ES, (TP), 3/23/99.
+
+n	ee. Removed symbol's lat/lon editing scale bars and added 
+	    text field input value exclusions.  Removed ghosting lat/
+	    lon position for symbols.  Removed initial value table 
+	    setting of lat/lon for symbols.   Done, WL, (TP), 
+	    3/30/99.
+
+n	ff. Eliminated the half-way traversal problem for closed 
+	    lines.  Also corrected an error on modifications that 
+	    began at the last point on a non-closed line.  Done, 
+	    ES, (TP), 3/31/99.
+
+n	gg. Made changes requested by the SPC to the watch format
+	    window.  Done, SL, (TP), 4/1/99.
+
+n	hh. IRIX6.5 compiler updates.  Done, ES, (TP), 4/6/99.
+
+n	ii. Watch format text generation to SPC specifications.  Note 
+	    that states and counties may be edited within the watch 
+	    text window prior to saving.  Done, DP, (TP), 4//7/99.
+
+n	jj. Minor fix for Linux.  See 161:P1.  Done, SL, (TP),
+	    4/7/99.
+
+n	kk. Modifications to the watch box editing to improve speed.
+	    Done, DP, (TP), 4/7/99.
+
+n       ll. Cleaned up the pallette buttons highlighting to fix a 
+	    problem with non-current buttons being depressed.  Done, 
+	    SL, (TP), 4/8/99.
+
+n       mm. Minor fix to make Linux even happier.  Done, SL, (TP), 
+	    4/8/99.
+
+n	nn. Bug fixes for recent watch deliveries.  Done, DP, (TP),
+	    4/8/99.
+
+n	oo. Fixed fatal vertex drag/drop bug.  Done, ES, (TP), 4/9/99.
+
+n	pp. Fixed modify so that initial point is correctly located on 
+	    smoothed lines.  Done, ES, (TP), 4/12/99.
+
+o	qq. Changes to the SPC severe weather watch generation per fax 
+	    received on 20 April 1999.  Corrected bug when endpoint 
+	    distance to station is zero.  In watch text window format 
+	    of endpoint references set as specified, put title 
+	    identifiers on each line, replacement watch set to "NONE" 
+	    when zero.  Done, DP, (TP), 4/21/99.
+
+o	rr. Restructured the _palInfo and general cleanup of 
+	    nmap_pgpalw.c and associated files.  Done, SL, (TP), 
+	    4/27/99.
+
+o	ss. Undo 021rr.  Done, ES, (TP), 4/28/99.
+
+o	tt. Added states included to the watch format.  Done, SL,
+	    (TP), 4/30/99.
+
+o	uu. Change marker color of station models if values 
+	    modified via inc/dec function.  Done, ES, (TP),
+	    4/30/99.
+
+o	vv. Added a confirmation box to the product generation exit.  
+	    Done, WL, (TP), 5/3/99.
+
+o	ww. Added states included to the watch format.  Done, SL,
+	    (TP), 5/4/99.
+
+o	xx. Fix endpoint anchor and vor values for watch format text.
+	    Done, DP, (TP), 5/4/99.
+
+o	yy. Fix bug for distance calculations... replace old code with
+	    current CLO function calls.  Done, DP, (TP), 5/4/99.
+
+p	zz. Bug fix to NMAP_PGOLK (outlook product generation).  In call
+	    to get VOR points, the CLO type (ANCHOR, VOR, COUNTY, etc.) 
+	    was hardwired to "3"... changed to "VOR".  Done, DP, (TP),
+	    5/12/99.
+
+p	aaa. Bug fix - VOR point distances must be nautical miles, not
+	     statute miles.  Done, DP, (TP), 5/12/99.
+
+p	bbb. Added unmanagement for CLASS_PROD's "message window" after
+	     file being saved in CLASS_PROD.  Done, WL, (TP), 5/12/99.
+
+p	ccc. Added label initial value setting by object type for 
+	     CLASS_FRONT.  Done, WL, (TP), 5/12/99.
+
+p	ddd. Per HPC request, the station reference points in the 
+	     excessive rainfall product have been augmented to include
+	     distance (rounded to the nearest 5 statute miles) and a 
+	     16-point compass direction information.  Done, DP, (TP),
+	     5/13/99.
+
+p	eee. Correction to 021zz, VOR should be ANCHOR.  Done, DP,
+	     (TP), 5/13/99.
+
+p	fff. Added deletion by object.  Done, WL, (TP), 5/17/99.
+
+p	ggg. Added CLASS_TRACK.  Delete and delete all should work.  
+	     Most other functions have not been implemented.  Done,
+	     SL, (TP), 5/21/99.
+
+p	hhh. Change format of hurricane track product to conform to 
+	     ACTF requirement.  Done, DP, (TP), 5/21/99.
+
+q	iii. Added circle draw function.  GK, (TP), 5/28/99.
+
+q	jjj. Changed the hurricane product to always produce 5 lat/
+	     lon pairs, with mising set to 0.  Done, SJ, (TP), 5/28/99.
+
+q	kkk. All applicable functions now work for new track class
+	     including, select, move, copy, delete, and group.  Done,
+	     SL, (TP), 6/3/99.
+
+q	lll. Added group type in symbol, front, and line editors.
+	     Fixed delete object bugs.  Added deletion by object for
+	     class track.  Added resetting for operation buttons.  
+	     Done, WL, (TP), 6/3/99.
+
+q	mmm. Made several refinements to watch formatting at the request
+	     of the SPC.  Can now have multiple replacement numbers, 
+	     defaults to Active, has half-width of 60, default expiration
+	     number rounds to a whole hour, text window scrolled to top,
+	     save file is not editable, saves watch element to a vg file,
+	     and the format window is now popped down when you save.
+	     Done, SL, (SS), 6/4/99.
+
+q	nnn. Corrected doubled circle problem in NMAP's VGF files.  Also
+	     corrected a reconciliation error that caused a stray ghost
+	     line when first moving a new circle.  Done, GK, (TP), 
+	     6/7/99.
+
+q	ooo. Watch # now defaults based upon files already existing.
+	     Done, SL, (TP), 6/7/99.
+
+q	ppp. Fixes to track function from report #192.  Done, SL,
+	     (TP), 6/8/99.
+
+q	qqq. The mouse 2 button an exit from delete object.  Auto-
+	     update enhanced for when radar images do not arrive in
+	     chronological order.  Done, ES, (TP), 6/9/99.
+
+q	rrr. Bug fix for snapping of parallelogram watch box while
+	     editing.  Done, DP, (TP), 6/9/99.
+
+q	sss. Several additions/fixes to parallelogram watch box editing
+	     and processing:
+	     1. present VOR half-width as closest 5 nm; keep VOR
+		distances as 1 nm.
+	     2. fix bug in snapping axis endpoints -- axis endpoints
+		now snap to closest anchor point inside box (rather
+		than simply the closest).
+	     3. half-width now snaps to closest 5 statute miles.
+	     4. added units to text product display commentary.
+	     5. lat/lons in text product display rounded to nearest 
+		1/100th degree.
+	     Done, DP, (TP), 6/10/99.
+
+q	ttt. Fixes problem during watch format if there are no current 
+	     watch files in directory to get next watch number from.
+	     Done, SL, (TP), 6/10/99.
+
+q	uuu. Fix crash when replacement watch number blank.  Done,
+	     DP, (TP), 6/14/99.
+
+q	vvv. Fix grouping problems introduced by recent additions to
+	     label.  Done, ES, (TP), 6/16/99.
+
+r	www. Removed duplicate selection for inc/dec.  Done, WL, (TP),
+	     6/18/99.
+
+r	xxx. Fixed problem (196:P1) with times in the track results 
+	     window.  Done, SL, (TP), 6/18/99.
+
+r	yyy. Responses to report #193:P1-3.  Removed duplicate ghosting
+	     box for label.  Use text editor text field value to 
+	     initiate symbol's label text field.  Disabled deletion by 
+	     object for group mode.  Done, WL, (TP), 6/18/99.
+
+r	zzz. Changed the default group type (that appears within the
+	     attributes windows) for symbols and lines.  All symbols
+	     default to group type "LABEL", and all line types that
+	     used to default to group type "OTHER" now default to
+	     "LABEL."  Done, ES, (TP), 6/22/99.
+
+r	a1a. Changed the watch snap feature to only be on after
+	     releasing the mouse button during select.  Done, SL,
+	     (TP), 6/23/99.
+
+r	a1b. Fixed problem with changing multiselected tracks (200:P2).
+	     Done, SL, (TP), 6/23/99.
+
+r	a1c. Fixed circle problems.  In particular, problems with 
+	     ghosting, drawing, and blanking when a circle is in the
+	     vicinity of the poles, the dateline, or the wrap edge of a
+	     world plot.  Also corrected a problem in Text ghosting
+	     that caused a ghost to flash to the upper-left corner of
+	     the canvas when done with any type of element.  Done,
+	     GK, (TP), 6/24/99.
+
+r	a1d. Changed track direction and speed to knots.  Done,  GG,
+	     SS, (TP), 6/25/99.
+
+r	a1e. Increased # of data sources, MAX_OVL_LAYER, to 8.
+	     Increased # of entiries in roam popup, MAX_ROAMVAL, to 22.
+	     Done, SL, TP, (TP), 6/25/99.
+
+r	a1f. Modified label function to allow only 1 label per object. 
+	     Added a new set of label menus for the outlook line.  
+	     Done, ES, (TP), 6/28/99.
+
+s	a1g. Modified the outlook product generation to add connecting
+	     line segments between grouped arrow lines.  These
+	     segments indicate the order in which the information
+	     is written to the file.  If the order is incorrect,
+	     the user may click to UPDATE button and the ordering
+	     will change.  This step can be repeated until the
+	     proper order is obtained.  This modification addresses
+	     the inproper order problem that sometimes occurs with
+	     outlooks with 3 segments that are grouped together.
+	     Also, corrected problem with clo_dist calculation of
+	     the ACOS function.  Done, DP, (SS), 7/6/99.
+
+s	a1h. Corrected problem where track labels would double
+	     after labeling a line or circle.  Done, GK, (SS),
+	     7/6/99.
+
+t	a1i. Added zero value for line label.  Done, SS, (TP), 7/27/99.
+
+t	a1j. Reworked minimum scale value checks in pgline.  Done, SL,
+	     (TP), 7/29/99.
+
+t	a1k. Added the formatting of international SIGMETs.  Done, SL,
+	     (TP), 8/11/99.
+
+t	a1l. New northern and southern hemisphere tropical storm symbols
+	     for use by the Pacific Region. Done, GK, (SJ), 8/13/99.
+
+t	a1m. Clean up of SIGMETs. Done, SL, (SJ), 8/13/99.
+
+t	a1n. Fixes to International SIGMETs: Removed (left unmanaged)
+	     two buttons from the format window, fixed one core dump,
+	     and standardized fonts. Done, ES, (SJ), 8/16/99.
+
+t	a1o. Fixed a crashing bug in SIGMETS that occured when the
+	     user was allowed to drop more than 19 points, and added
+	     the "Edit Attributes" button back. Done, ES, (SJ), 8/17/99.
+
+u	a1p. Fixed fatal bug with labeling symbols and fixed a problem
+	     with text string size within labels.  Heretofore, the user
+	     only got the first 19 characters of any previously entered 
+	     text, and now they will receive all the text.  Done, ES,
+	     (TP), 8/24/99.
+
+u	a1q. Fixed a fatal label bug that occured after the user labeled
+	     an object and then clicked MB1 several times.  Done, ES,
+	     (TP), 8/30/99.
+
+u	a1r. Clean up of SIGMET process and addition of remaining SIGMETs.
+	     Done, SL, (TP), 8/31/99.
+
+u	a1s. Changes to the SIGMETs:  1) International now produces an 
+	     encoded SIGMET when "ISSUE"d.  Some information is still 
+	     missing; placeholders are used.  2) "FROM" line produced by 
+	     CLO_FROM.c cleaned up a bit... blank first character removed 
+	     and small bug fixed.  3) Reduced SIGMET line thickness.  
+	     Done, DP, (TP), 9/2/99.
+
+u	a1t. Various fixes and additions to SIGMETs.  Added scrollbar to 
+	     "from" line, reapplied apply button, fixed select problems, 
+	     added saving file popup and limited Internation specific 
+	     attributes.  Done, SL, (TP), 9/3/99.
+
+u	a1u. Made a couple of quick fixes to SIGMETs, notably fixed 
+	     certain cases where the maximum number of points was exceeded
+	     without warning and the erroneous ability to modify an
+	     isolated SIGMET.  Done, SL, (TP), 9/7/99.
+
+u	a1v. Minor bug fixes/changes for SIGMETs:  1) Fixed international
+	     dateline problem; 2) Added FIR information in the 
+	     International SIGMET product; 3) APPLY button no longer 
+	     unmanages the edit popup; 4) Edit popup moved up to 
+	     accommodate editable attributes.  Done DP, (TP), 9/7/99.
+
+u	a1w. Put hurricane track file name back to original.  Done,
+	     SS, (TP), 9/9/99.
+
+v	a1x. Made fixes to the following SIGMET functions: modify, partial
+	     delete, multi-select, delete object, and connect.  Done,
+	     SL, (TP), 9/14/99.
+
+v	a1y. Built format outlook window for product generation.  Done,
+	     HZ, (TP), 9/17/99.
+
+v	a1z. Cleaned up cursor changes, mostly by adding a parameter to 
+	     the mcanvw_set* functions for the new cursor.  Changed the 
+	     seek functions to use a cross cursor.  Cleaned the middle 
+	     mouse click in product generation so that it is more
+	     consistent with changing to select mode.  Done, SL, (TP),
+	     9/17/99.
+
+v	a2a. Changed the order of operation when opening the product
+	     generation palette in NMAP.  The working file, .DEFAULT.vgf,
+	     is created before the palette is displayed.  This fixes
+	     the possibility of multiple NMAPs running the product
+	     generation in the same directory.  Done, SJ, (TP), 9/22/99.
+
+v	a2b. Added more details to the International SIGMETs.  Done,
+	     SL, (TP), 9/23/99.
+
+v	a2c. Add more formatting to the International SIGMET product.
+	     Done, DP, (TP), 9/23/99.
+
+v	a2d. Fixes to the International SIGMETs.  Done, SL, (TP), 9/24/99.
+
+v	a2e. Minor changes to the International SIGMET processing:  1) 
+	     format correction when phenomenon is stationary; 2) move 
+	     sigmet editing box up; 3) added FIR informational string to 
+	     formatted SIGMET.  Done, DP, (TP), 9/27/99.
+
+v	a2f. Fixed problem with connecting two SIGMETs whose total points
+	     exceeded the maximum.  Done, SL, (TP), 9/27/99.
+
+v	a2g. Fixed core dumps from saving a SIGMET with many points and ID
+	     distance memory of values (220:P1-3).  Done, SL, (TP),
+	     9/28/99.
+
+w	a2h. Fixed core dump on AIX.  The problem occurs when the first
+	     object for Class "Lines" is clicked on AIX4.  Done, HZ,
+	     (TP), 10/29/99.
+
+w	a2i. Built graph-to-grid popup.  Done, HZ, (TP), 11/10/99.
+
+w	a2j. Miscellaneous changes to Sigmet Edit Window for nmap and nmap2.
+	     Added +4 and +6 buttons, Added Direction toward, Made sequence
+	     box editable, and changed distance default in edit box to 10.
+	     Done, HZ, (TP), 11/18/99.
+
+w	a2k. Added the first step in the watch warn advisory popup.
+	     Done, SL, (TP), 11/18/99.
+
+w	a2l. Graph to grid:  Added button to allow users to display the line
+	     extensions.  Added capability to form CYCLE, GDATTIM, and output
+	     filenames GDFILE and CNTRFL from information within the current 
+	     vgf filename.  Done, DP, (TP), 11/19/99.
+
+w	a2m. Caused results window to pop up after drawing a track and cleaned
+	     up the track results display.  Done, SL, (TP), 11/19/99.
+
+w	a2n. More graph-to-grid functionality:  if VGF file is not in current 
+	     working directory, make sure ".info" file that gets created is 
+	     also in that directory; re-specified grid default parameters.  
+	     Done, DP, (TP), 11/19/99.
+
+w	a2o. Added "FROM" to the output "from line" text strings of all
+	     sigmets, except the internationals.  Done, DP, (TP), 11/22/99.
+
+w	a2p. Added checks to tracking to keep the number of points from over-
+	     running the array bounds.  Changed the list of labels for lines
+	     and circles.  Done, SL, (TP), 11/22/99.
+
+w	a2q. Bug fix for SIGMETS:  prefix of "FROM" onto international
+	     sigmets uncovered previous problems.  Done, DP, (TP), 11/24/99.
+
+x	a2r. Added auto save feature into "Save VG File" popup window.  Saves
+	     every 5 minutes when on; set off by default.  Done, HZ, (TP),
+	     11/30/99.
+
+x	a2s. Fixed a bug reported by the HPC with the graph-to-grid.  The
+	     internal map projection was being reset to the graph-to-grid
+	     projection, yet the displayed map did not change.  Done, SJ,
+	     (TP), 11/30/99.
+
+x	a2t. Added popup to select expiration time of watch (00-23).
+	     Modified the watch duration error check messasge to display the
+	     actual number of hours the watch would be in effect.
+	     Added "auto-check" for MM/DD/YYYY entries so if the end time fort
+	     awatch crosses 00Z in the expiration window, the date would
+	     automatically change.  Done, HZ, (TP), 12/2/99.
+
+x	a2u. If VGF filename can be parsed for parameter information, put
+	     the paramter name into the GPARM input field.  Done, DP, (TP),
+	     12/7/99.
+
+x	a2v. Per AWC: limit SIGMET chars/line to 65 and display the SIGMET
+	     sequence number when plotting a SIGMET.  Done, DP, (TP), 12/7/99.
+
+x	a2w. Old_watches can now be read in and converted to the current
+	     element description, albeit w/o much of the new information.
+	     Done, DP, (TP), 12/7/99.
+
+x	a2x. Additions to the watch status message.  Done, DP, (TP), 12/8/99.
+
+x	a2y. Added the ability to display the latitude/longitudes of the
+	     international SIGMETs in either degrees-decimals or degrees-
+	     minutes in NMAP and NMAP2.  The default is degrees-minutes.
+	     Done, AH, (TP), 12/8/99.
+
+x	a2z. Added haze to nmap.  Done, TP, (TP), 12/9/99.
+
+x	a3a. Fixed Y2K problem in pgwfmt_getTime.  Done, TP, (TP), 12/9/99.
+
+x	a3b. Fixed a fatal bug that occurred when any vertex drag operation
+	     was begun.  Done, ES, (TP), 12/14/99.
+
+x	a3c. Added more watch format information into watch element structure.
+	     Updated the watch element when the information is ready, and save
+	     the updated watch element back to WORK_FILE.  Done, HZ, (TP), 
+	     12/15/99.
+
+x	a3d. Correct "State Included" button problem in nmap_pgwfmt.c
+	     Done, HZ, (TP), 12/16/99.
+
+x	a3e. In cdswbox.c, made sure markers are plotted w/ width 1.  Corrected 
+	     cvgrdwbx.c and cvgcp.c to allow old watches to be read correctly.  
+	     Changed cvgsvwbx.c to account for watch type undefined.  Changed 
+	     nmap routines to treat and process the watch type and color 
+	     correctly.  Done, DP, (TP), 12/16/99.
+
+x	a3f. Save "w_file" and "issued" info. of the watch element back into
+	     WORK_FILE before "ww****.vgf" gets created in nmap_pgprd.c
+	     Done, HZ, (TP), 12/16/99.
+
+x	a3g. Correct "State Included" button problem in nmap_pgwfmt.c.
+	     Done, HZ, (TP), 12/16/99.
+
+x	a3h. This release adds the watch status line.  Done, ES, (TP), 
+	     12/17/99.
+
+x	a3i. Added watch status popup.  Done, SL, (TP), 12/17/99.
+
+x	a3j. Increase "from" line string size & add text when WSM lines
+	     are associated.  Done, DP, (TP), 12/20/99.
+
+x	a3k. Fixed watch attribute popup bug.  Done, ES, (TP), 12/20/99.
+
+x	a3l. Fixed the bug that prevented the use of the LABEL function in 
+	     nmap.  Done, ES, (TP), 12/21/99.
+
+y	a3m. This release synchronizes the product generation files in
+	     the nmap and nmap2 except for nmap_pgpalw.c.  This is 
+	     being done in preparation for creating a common Nmap
+	     product generation library to facilitate configuration
+	     management for Nmap and Nmap2.  Done, ES, (SS), 12/27/99.
+
+y	a3n. Moved the NMAP product generation source code (/vgf/nmap_pg*)
+	     routines to a new common library in nmaplib/pgen.  This
+	     eliminates the redundant code in /vgf directories of nmap
+	     and nmap2.  No functionality changes have been made with
+	     this delivery.  Note that nmap_pgpalw.c is different for
+	     nmap and nmap2 and has been moved to the main source
+	     directories for each program. Done, SJ, (SS), 1/4/00.
+
+y	a3o. Correct the problem that the rectangular text box doesn't show up
+	     on AIX4.  Correct Problem 238 (parameters don't align on SGIs in
+	     graph-to-grid advanced info box.  Done, HZ, (TP), 1/5/00.
+
+y	a3p. Correct "States Included" button problem in "FORMAT WATCH"
+	     window.  Done, HZ, (TP), 1/10/00.
+
+y	a3q. Fixed bugs in NMAP2:  Watches, warnings, sigmets, and vgf files 
+	     display correctly now; Surface forecast data (MOS) now displays 
+	     correctly, as does the timeline when a SFC source is dominant;
+	     The timeline is now correct after Clear has been pushed; After
+	     a clear, stepping with the loop buttons does not change the
+	     page display (it stays 1 of 1, instead of reverting to what it was 
+	     before the clear); Load from the mapw window loads data (if 
+	     changes have been made).  Done, ES, (TP), 1/10/00.
+
+y	a3r. Added the directory listing from vgf.nmap to the product generation
+	     open window.  Done, SL, (TP), 1/13/00.
+
+y	a3s. Fixed crash when formatting watches and wrong county list when 
+	     re-editing a watch.  Fixed potential problem w/cloclosest.c.  
+	     Done, DP, (TP), 1/21/00.
+
+y	a3t. Changed the format of tops string for SIGMET in order to fix a
+	     bug that occurs when selecting an old SIGMET on Sun.  Done,
+	     HZ, (TP), 1/28/00.
+
+y	a3u. Rolled back the changes to vg file selection within product
+	     generation.  Done, ES, (TP), 1/31/00.
+
+y	a3v. Corrected the data and name actions for file selection in product
+	     generation.  Done, ES, (TP), 2/3/00
+
+z	a3w. Added the ability to add and delete counties from a watch.
+	     Done, SL, (TP), 2/14/00.
+
+z	a3x. Added outlooktimes.tbl and made corresponding changes to
+	     nmap_pgofmt.c.  Added duration check window.  Moved outlook.tbl 
+	     to new location.  Done, HZ, (TP), 2/18/00.
+
+z	a3y. Fixes to watch processing - counties handled properly under 
+	     multiple watch scenerio and status message processing per
+	     17 Feb 00 SPC memo.  Done, DP, (TP), 2/28/00.
+
+z	a3z. Set watch type and time zone defaults to none, added warning
+	     message if either of them is not selected.  Done, HZ, (TP),
+	     2/28/00.
+
+z	a4a. Added the Collective Convection Forecast element.  Done, SL,
+	     (TP), 2/29/00.
+
+z	a4b. Did minor changes to the appearances of attribute windows.
+	     Done, HZ, (TP), 2/29/00.
+
+z	a4c. Added the CCF product popup, cleaned up the CCF element, and fixed
+	     287:P1.  Done, SL, (TP), 3/8/00.
+
+z	a4d. Changed pgutls_prepNew to include an optional location parameter,
+	     in order to make it more useful and thus reduce various redundant
+	     code.  Done, SL, (TP), 3/10/00.
+
+z	a4e. Added confirmation window when popping up Format Watch Window for 
+	     new watch.  Unmanaged "Show Display" button when there is no need 
+	     to have it.  Done, HZ, (TP), 3/13/00.
+
+z	a4f. Redelivery of the new file open box for opening a VGF file.  Added
+	     a new "Local" entry and removed any need for knowing the user's
+	     login id.  Removed the user_id column from the vgf.nmap table. 
+	     Allowed the program to read either the old or new format.  
+	     Done, SL, SJ, (TP), 3/13/00.
+
+z	a4g. Changed GRPHGD processing for NMAP:  added tables for menu product 
+	     selection and re-wrote code for generalized parameters.  Done, 
+	     DP, (TP), 3/13/00.
+
+z	a4h. Increased the CCF from one element to a group of four elements.
+	     Done, SL, (TP), 3/15/00.
+
+z	a4i. Added product pulldown menu into Graph-to-Grid window.  Done,
+	     HZ, (TP), 3/15/00.
+
+z	a4j. Fixed the range record problem that was behind the watch crash
+	     bug.  Done, ES, (TP), 3/15/00.
+
+z	a4k. Fixed the length of the "current directory" string in nmap_pgfilw.c.
+	     Fixes report 295 problem 1.  Done, SJ, (TP), 3/16/00.
+
+z	a4l. Fixed the crash on a group delete operation.  Done, ES, (TP),
+	     3/17/00.
+
+z	a4m. Fixed watch status message formatting bug - extra "Z000" in state
+	     indicator line.  Done, DP, (TP), 3/17/00.
+
+z	a4n. Graph-to-grid changes:  templates may now be specified for 
+	     VGF_TEMPLATE, GDOUTF, and CNTRFL in the graph-to-grid restore 
+	     tables; therefore, the GDATTIM and GFUNC may be transferred from 
+	     the VG filename.  Done, DP, (TP), 3/17/00.
+
+z	a4o. Sundry fixes to the CCF grouping delivery (#297:P2,5,7-8,10-11,13).
+	     Done, SL, (TP), 3/17/00.
+
+z	a4p. Fixed Watch Box Hide/Show problem.  Done, DP, (TP), 3/20/00.
+
+z	a4q. Further cleanup of the CCF group including rotating the arrow
+	     updates the CCF element and a revisit to the International Date
+	     Line.  Done, SL, (TP), 3/20/00.
+
+z	a4r. Changed CCFP text product output filename to YYYYMMDD_HH.ccfp.
+	     Done, DP, (TP), 3/20/00.
+
+z	a4s. Fixed the date (GDATTIM) in graph-to-grid processing.  Done,
+	     DP, (TP), 3/20/00.
+
+z	a4t. Fixed the radius function so that it does not put addtional labels
+	     when modifying a labeled circle.  Done, SL, (TP), 3/20/00.
+
+z	a4u. Fixed sfc prog filename error.  Done, DP, (TP), 3/21/00.
+
+z	a4v. Fixed CCFP text product filename creation.  Done, DP, (TP),
+	     3/21/00.
+
+z	a4w. Fixed the refresh bug that appears when HIDE/SHOW is selected
+	     after opening a VG file in product generation.  Done, ES, (TP),
+	     3/22/00.
+
+z	a4x. Changed VGF file name displayed to the user to be only the file
+	     name without the path.  Done, SJ, (TP), 3/22/00.
+
+
+022.	VIEWFAX	
+
+w	a. Fixed compiler warnings.  Done, TP, (TP), 10/26/99.
+
+
+023.	Icons
+
+p	a. New Storm Track icons.  One for the track CLASS, the other
+	   for the track OBJECT.  Done, GK, (TP), 5/13/99.
+
+
+
+
+	SJ - Scott Jacobs		JA - Jeff Ator
+	DP - Dave Plummer		BH - Bob Hollern	
+	SS - Steve Schotz
+					PB - Peggy Bruehl
+	HZ - Harris Zeng		JC - Jim Cowie
+	GK - Gary Krueger		SC - Steve Chiswell
+	TL - Tiros Lee			
+					RS - Russ Schneider
+	CL - Chien Lin			KB - Keith Brill
+					JW - Jim Whistler
+	WL - William Li			JYC - Joey Carr
+	ES - Edward Safford		JP - James Partain
+	DKW - Duane Kidwell		JH - Jon Hoopingarner
+	FY - Fee-Jing Yen		GG - Greg Grosshans
+					SD - Steven Danz
+	AH - Andrea Hardy		JG - Joanna Green 
+	SL - Scott Law
+	TP - Tom Piper
+
+

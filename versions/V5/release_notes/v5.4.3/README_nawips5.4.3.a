@@ -1,0 +1,32 @@
+			N-AWIPS 5.4.3.a Patch Release Notes
+				10/8/1997
+
+This patch contains three bug fixes and one enhancement to 5.4.3.
+
+	o  The display of lat/lon in NMAP has been corrected when
+	   in the roam mode.
+
+	o  The file creation time has been corrected in the UTF
+	   (AFOS) driver.
+
+	o  Fixed the problem where the special lines were not 
+	   always being filled in NMAP.
+
+	o  Added the capability to edit the color for lines in the
+	   product generation mode of NMAP.
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+	patch_build_5.4.3.a 
+
+
+To execute the script and save its output in a file type:
+
+	cd $GEMPAK/build
+	patch_build_5.4.3.a >&! PATCH_$OS & ; tail -f PATCH_$OS
+
+The output of the script will be written to PATCH_$OS.
+
+
+

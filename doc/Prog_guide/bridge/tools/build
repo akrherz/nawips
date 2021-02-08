@@ -1,0 +1,10 @@
+#!/bin/sh
+
+$RM dxmain
+$RM dxtext
+
+utlDir=`dirname $0`
+curDir=`cd $utlDir ; pwd`
+
+cd ../../shared/dx ; build $curDir
+

@@ -1,0 +1,141 @@
+		NAWIPS 5.3.1 Tables Changes Description Log
+
+
+t1.	Updated and added various LUT tables for satellite imagery.
+	Also, updated image value bounds for WV imagery.  Done,
+	JC, (SS), 2/6/96.
+
+	tables/nsat/enhance.tbl
+	gempak5.3/tables/sat/imgtyp.tbl
+	gempak5.3/tables/luts/watvap.tbl
+	/resource/Nsat
+	RENAME:
+	gempak5.3/tables/luts/nmcir.tbl->ir_nmc.tbl,
+	roygbv.tbl->ir_rgby.tbl, sabir.tbl->ir_sab.tbl
+	NEW:
+	gempak5.3/tables/luts/ir_gbvr.tbl, ir_1.tbl, ir_2.tbl,
+	ir_3.tbl, ir_4.tbl, ir_5.tbl, mbcolor.tbl, wv_c1.tbl,
+	wv_c2.tbl, wv_blue.tbl, wv_gree.tbl, ir_dkrgb.tbl
+
+t2.	Added new AFOS products to AFOS tables.  These products are:
+	IJPHSF101, NFDWRKOFF to MARTXT and NMCGPHRA1, NMCGPHRA2, 
+	NMCGPHRA3, NMCGPHRP1, and NMCGPHRP2 to MFBMAN.  Done,
+	SJ, (SS), 2/6/96.
+
+	tables/afos/text/MARTXT, tables/afos/graphics/MFBMAN
+
+t3.	Updated the LDM pattern table and the NWX data tables to add
+	a new product, the Public Information Statement.  The LDM
+	table has also been updated to include some new AFOS products,
+	and test METAR data.  The LDM table has also been reorganized to have
+	all of the test data at the end so that these data can be easily
+	deleted from the operational LDM.  The AVN temperature forecast has
+	been removed from the guidata.tbl because this product is no longer
+	issued.
+
+	tables/nwx/guidata.tbl
+	tables/nwx/master.tbl
+	ldm/ldm-4.1.42/etc/pqact.conf
+	~ldm1/etc/pqact.conf
+	~ldmas2/etc/pqact.conf
+
+t4.	Corrected an error in background map for the new AFOS products delivered
+	for t2.  Done, SJ (SS), 2/14/96.
+
+	tables/afos/graphics/graphics.tbl, MFBMAN, MFBMAN2
+
+t5	Updated master.tbl for nwx to add new product type, "M" for mos products,
+	see 002a.  Done, DP, (SS), 2/21/96.
+
+	tables/nwx/master.tbl
+
+t6	Modified and renamed NSAT look-up tables.  Done, JC, (SS), 3/04/96.
+
+	~gempak5.3/tables/luts/ir_vgby.tbl, ir_drgb.tbl, ir_wbg.tbl, 
+	ir_dark.tbl, ir_aqua.tbl, ir_tpc.tbl, ir_tv1.tbl,
+	wv_gr8.tbl, wv_tpc.tbl
+	/tables/nsat/enhance.tbl
+
+t7	Added Flood Statement Product to NWX tables and LDM pattern table.
+	Done, SJ, (SS), 3/04/96.
+
+	tables/nwx/guidata.tbl, master.tbl
+	ldm/ldm-4.1.42/etc/pqact.conf, scour.conf
+
+t8	Updated the surface table.  Added some new stations: Newport, New 
+	Branunfels, Aransas, and Vicksburg.  Also corrected some existing
+	stations coordinates.  Added El Paso to the nowcast station file
+	for NWX.  Changed special weather "summaries" to "statements" in 
+	NWX guidata.tbl to better reflect the product names.  Removed
+	several NWX table files that are no longer used.  Done, KT,
+	(SS), 3/05/96.  
+
+	gempak5.3/tables/stns/sfstns.tbl
+	tables/nwx/now.bull, guidata.tbl
+
+t9	Updated LDM to accomodate desired changes in AFOS alarms at
+	NPPU, BAWX, SFC and MARINE3 desks.  Done, SJ, (SS), 3/06/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t10	Added new AFOS text products, NFDWRKOFF, NFDVF001, and
+	JNUCWFJNU to AFOS and LDM tables.  Done, SJ, (SS), 3/26/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf
+	tables/afos/text/MARTXT
+
+t11	Updated the surface stations tables to add new stations and revise
+	some existing station coordinates.  Added KFLG and KGJT to nowcast
+	station file for NWX.  Added KDCA to climo station file for
+	NWX.  Done, KT, (SS), 4/4/96.
+
+	gempak5.3/tables/stns/sfstns.tbl
+	tables/nwx/now.bull, climo.bull
+
+t12	Updated LDM configuration tables for several additions and 
+	modifications.  For pqact.conf the following changes were 
+	made: updated WMO headers for state forecasts, added new
+	upper-air, MRF MOS and NGM MOS decoders, updated olympic
+	products, filtered WMO FT products for terminal forecasts,
+	and added AFOS Juneau CWF products.  Note that the new decoders
+	have not been added to the operational LDMs.  For scour.conf:
+	added olympics and flash flood statement products.  Done,
+	SJ, (SS), 05/07/96.
+
+	ldm/ldm-4.1.42/etc/pqact.conf, scour.conf
+	tables/afos/text/MARTXT
+
+t13	Updated NWX tables for olympics products.  Also updated
+	some NWX tables for new stations.  These stations are:
+	Lake Charles, OK city, Tulsa, Amaralla, and IAD/NEXRAD.
+	Also, added new map area for olympics area.  Corrected
+	climate product name.  Done, DK, (SS), 05/07/96. 
+
+	tables/nwx/climo.bull, sfd.bull, stf.bull, guidata.tbl,
+	master.tbl, stations.tbl, mapinfo.tbl
+
+	NEW: tables/nwx/fts.stn, olympics.bull, peach.bull
+
+	REMOVE: tables/nwx/fts.bull
+
+t14	Added several new ASOS stations to surface station table.
+	Done, DK, (SS), 05/07/96.
+
+	gempak5.3/tables/stns/sfstns.tbl
+
+t15	Added APX (Gaylord, MI) to upper-air table.  Done, KT, (SS),
+	05/07/96.
+
+	gempak5.3/tables/stns/snstns.tbl
+
+t16	Changed SPC MESO DISC from ACUS to ACUS3 in the NWX tables and
+	the LDM pqact.conf. Done, SJ, (SJ), 05/10/96.
+
+	tables/nwx/meso.bull
+	ldm/ldm-4.1.42/etc/pqact.conf
+
+t17	Updated GRIB decoder table to process 10km eta for
+	olympics and 15km eta for Alaska region.  Done, KB,
+	(SS), 05/10/96.
+
+	gempak/tables/grid/grdnav.tbl

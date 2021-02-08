@@ -1,0 +1,38 @@
+
+
+                           GEMPLT Overview
+
+
+GEMPLT is a general plotting subroutine package that provides the
+applications programmer with device independent line drawing
+capabilities.  It has been designed to simplify the plotting of
+meteorological data.  New graphic devices can be added easily.
+
+GEMPLT allows plotting in a variety of coordinate systems.  The
+transformations from one coordinate system to another are handled
+internally.  Lines, text, markers, wind barbs, and arrows can be
+plotted in any coordinate system.  Utility functions to draw
+contours, streamlines, and geopolitical maps are available.
+
+GEMPLT has been designed to be extremely flexible for applications
+programmers developing either single programs or large
+applications systems.  Programs can be written that are
+independent of graphics device and map projection, both of which
+can be selected at run time.  New features, coordinate systems, and
+graphics devices can be added easily without affecting existing
+applications programs.
+
+The GEMPLT subroutines communicate with two subprocesses that are
+maintained as separate modules.  Coordinate transformations and
+utility functions are included in the first subprocess called
+GPLT.  The second subprocess is a device driver that draws lines,
+text, and symbols.  The device characteristics that are needed by
+GPLT are defined in the device driver.  A new device driver must
+be written for each graphics device.  Since the subprocesses can
+remain active after an applications program exits, plotting
+characteristics defined in one program may be used in other
+programs that follow it in the same session.
+
+This document provides information for an applications programmer.
+An introduction to GEMPLT subroutine descriptions and examples are
+included.

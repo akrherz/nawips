@@ -1,0 +1,14 @@
+Added the decoding of Canadian domestic and international SIGMETS
+to DCISIG.  LLWS, WNDSHR, and WV/SHR (low level wind shear) have been
+added to the phenomenon list that DCISIG decodes.  Only the first
+phenomenon encountered from the list in IS_PHEN will be decoded 
+in a Canadian SIGMET.
+
+DCISIG has been modified to decode max winds and pressure fields
+for hurricanes, tropical storms, and typhoons.  For tropical
+cyclones and tropical depressions, the direction and speed of
+movement from the associated thunderstorm will no longer be repeated
+in the tropical disturbance decoded line.
+ 
+NMAP2 and GPMAP have been modified to plot low level wind shear (WS)
+and flight levels of SFC and FZLVL.

@@ -1,0 +1,4 @@
+Always clear "Replaced Watches" list in the WCC interface (SPC)
+
+At the request of the SPC, the list of replaced watches is cleared
+every time the Watch Coordination Call popup is displayed.

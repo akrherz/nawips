@@ -1,0 +1,15 @@
+export GEMPARM=$GEMPAK/parm
+
+pdfbld $GEMPDF BFR2GP
+#########################
+pdfbld $GEMPDF NAGRIB
+##########################
+pdfbld $GEMPDF NAGRIB2
+#########################
+pdfbld $GEMPDF NAMSND
+#########################
+pdfbld $GEMPDF NDFDG2
+##########################
+pdfbld $GEMPDF GD2NDFD
+###############################
+echo ALL THE NA PDFs ARE BUILT.

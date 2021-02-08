@@ -1,0 +1,78 @@
+#!/bin/sh
+#------------------------------------------------------------------------------
+#
+#  parmmif.run
+#
+#  Runs the 'parmmif' utility.
+#
+#  10/17/96 -- M. Linda
+#
+#------------------------------------------------------------------------------
+
+outPath=../mif
+tplPath=../templates
+chapter=3
+
+# Create the destination directory if it does not exist.
+if [ ! -d $outPath ]
+then
+    mkdir $outPath
+fi
+
+# Test to insure that all pertinent environment variables are set.
+envVars="'$GEMHLP'"
+for oneVar in $envVars
+do
+   if [ "$oneVar" = "''" ]
+   then
+      echo "ERROR: One of the environment variables is not set."
+      exit
+   fi
+done
+
+# Get a list of the source names.
+list=`cat ../lists/parm.list`
+
+# Initialize counter of processed names.
+n=0
+
+# Determine the numer of names in the list.
+listLen=`echo $list | wc | awk '{print $2}'`
+
+# Step through all names in the list.
+for srcName in $list
+do
+   # Increment counter of processed names.
+   n=`expr $n + 1`
+
+   # Is this the first name processed?
+   if [ "$n" = "1" ]
+   then
+      # Yes, this is the first name processed.
+      # Set the call up with the 'h' option to include the MIF header.
+      optvar="$chapter+$srcName+h+$tplPath+$outPath"
+   else
+      # No, this is not the first name processed.
+      # Is this the last name processed?
+      if [ "$n" = "$listLen" ]
+      then
+         # Yes, this is the last name processed.
+         # Set the call up with the 't' option to include the MIF tail.
+         optvar="$chapter+$srcName+t+$tplPath+$outPath"
+      else
+         # No, this is not the last name processed.
+         # Set the call up with no special options.
+         optvar="$chapter+$srcName++$tplPath+$outPath"
+      fi
+   fi
+#   echo parmmif.exe $optvar
+   parmmif.exe $optvar
+done
+
+# Concatenate individual MIF files into a single one.
+cat $outPath/*.prmmif > $outPath/Chap$chapter.mif
+
+# Delete individual MIF files.
+rm  $outPath/*.prmmif
+
+#------------------------------------------------------------------------------

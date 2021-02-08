@@ -1,0 +1,13 @@
+Tropical cyclone breakpoint product (TPC)
+
+The Kelly graphic creation program, GPKGRF, has been modified to
+generate an experimental tropical cyclone watch/warning/advisory text
+product which will indicate which counties and marine zones are under
+a hurricane or tropical storm warning or watch.  The product includes
+VTEC lines and breakpoint names and locations.  At this time, the
+product is generated only for Atlantic storms affecting the continental
+U.S.  Product generation is automatic, based on a comparison of the
+previous and current breakpoint information.  In order to do the
+comparison, the breakpoint file processing has been changed.  Rather
+than having a single breakpoint file which exists over the life of the
+storm, each advisory will now have its own breakpoint file.

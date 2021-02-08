@@ -1,0 +1,276 @@
+
+                           NAWIPS 5.4.3+ Requests Log
+
+
+
+001.	ASCII Decoders
+
+
+
+
+002.	GRIB Decoder
+
+
+
+003.	Grid Diagnostics
+
+D	a. Request to calculate grid calculation for thetaw.
+	   SPC, (GG), 10/30/97.   Done, TL, 010l, 11/12/97.
+	   5.4.3.e
+
+
+
+004.	Parameter Calculations
+
+
+005.	Image Processing
+
+	a. The radar color bar does not print out properly.  It prints out
+	   as solid black.  CDB, SS, 1/9/98.
+
+
+006.	GPLT Changes
+
+	a. The line dashing patterns do not appear to be correct in NMAP.
+	   CDB, MDJ, 1/9/98.
+
+
+007.	Device Drivers
+
+
+008.	Documentation
+
+
+
+
+009.	Scripts/NTS files
+
+
+
+010.	General GEMLIB/CGEMLIB Changes
+
+
+
+011.	General GEMPAK Program Changes
+
+	a. Would like the capability to plot gridded winds
+	   over just the land or sea.  A land/sea mask is needed
+	   for GDPLOT2.  TPC, (MH), 11/4/97.  
+
+	b. GAREA currently can be set to GRID or DSET for grid files. This
+	   plots the entire grid.   This feature is not well documented.
+	   Suggest that we eliminate GRID as an option and just have 
+	   DSET which applies to both images and grid files.  CDB, (SS),
+	   12/5/97.
+
+	c. Suggest that for grid files that if PROJ is set to a blank, that
+	   the projection of the grid be used.  EMC (KB), 12/5/97.
+	   
+
+
+
+012.	General GUI Modifications
+
+
+
+013.	NTL
+
+
+014.	NTRANS
+
+D	a. Application of a look-up table for print out does not
+	   work properly.  SPC, (RS), 10/30/97.  Done, SW, 007f.,
+	   11/25/97.  5.4.3.e
+
+	b. The valid time gets cleared when setting the panel structure
+	   to one panel but does not get cleared when setting the panel
+	   structure to multipanels.  This is inconsistent.  CDB, TL, 
+	   3/19/98.
+
+
+
+
+015.	NSAT
+
+D	a. If the map line attributes are modified without having
+	   and image loaded, a fatal error results with a segmentation
+	   fault.  HPC, 1/22/98.  Done, CL, 015a., 2/24/98.
+
+
+
+016.	NWX
+
+	a. If the NEXT button is selected after several selections of the
+	   PREVIOUS button the date/time shown in the upper right corner does
+	   not match the date of the product being shown. TP, 3/9/98.
+
+
+017.	AFOS
+
+D	a. NALARM does not flash when new products appear if the
+	   program is active.  The user must exit and tnen re-invoke
+	   the program for the flashing to work.  SDM, 11/14/97.
+	   Done, SJ, 017b, 11/19/97. 5.4.3.e
+
+
+
+018.	NMAP
+
+D	a. There is a request to have the station model plot
+	   circle (sky symbol) be made smaller.  The slider 
+	   bar currently does not work properly.  SPC, (GG), 
+	   11/5/97.  Done, CL, t17, 11/14/97. 5.4.3.e
+
+	b. Would like the capability to interactively adjust
+	   the filter for plotting gridded winds.  SPC, (GG),
+	   11/5/97.
+
+	c. Need to improve parameter handling to allow conditions
+	   on parameters to be displayed and handled in the 
+	   station model plotting.  CDB, (SS), 12/17/97.
+
+	d. If you turn off parameters in the station model edit, you cannot
+	   adjust the size of the wind barb.  MPC, (JP), 2/5/98.
+
+	e. If you overlay FFG on other data that have the color bars, the
+	   color bars overlap.  We need a way to see both
+	   color bars when overlaying different data types.  CDB, TL,
+	   3/19/98.
+
+	f. If you select an image first and then observational data, and
+	   you make the observational data dominate, then only the 
+	   first frame is overlaid properly.  CDB, TL, 4/3/98.
+
+	g. Running NMAP from a group other than where the executable resides
+	   causes NMAP to fail at the SPC and TPC but not here.  TPC, MH,
+	   SPC, GG, 4/23/98.
+
+	h. If you print from NMAP with the color set to grey, the map does
+	   not appear in the printout.  The data and lat/lon lines do appear
+	   however.  SPC, GG, 4/23/98.
+
+
+019.	MAP FILES
+
+
+
+020.	UTILITIES 
+
+
+021.	PRODUCT GENERATION
+
+D	a. A front code of zero is a valid code number but
+	   is not always handled properly.  In some cases
+	   a stationary front is not plotted properly.
+	   AWC (JW), 11/4/97.  Done, SJ, 007e, 11/13/97.
+	   5.4.3.e
+
+D	b. The movement of text is not handled properly if
+	   other objects in the file, e.g., fronts are deleted
+	   first and then the text objects are moved.  If two
+	   text objects are moved the second text object is
+	   still in its original location after selection.  This
+	   is a problem with the range records not being properly
+	   updated.  AWC, (JW), 11/5/97.  Done, CL, 021m, 11/10/97.
+	   5.4.3.e
+
+D	c. Zooming a dashed line in NMAP product generation 
+	   causes the line to become solid.  Refresh will 
+	   change it back to dashed.  However, if you print
+	   the product the dashed line will be solid.  SPC,
+	   (GG), 11/5/97.  Done,  CL, 018n., 1/27/98, 5.4.3.g.
+
+	d. Editing of lines sometimes leads to the generation
+	   of a additional line which is editable.  This situation
+	   does not occur very often so it is not easily reproduced.
+	   HPC, 11/14/97.
+
+	e. In order for the HPC to use NMAP for product generation
+	   they need to get some of their manual graphics products
+	   into NMAP as a background.  Specifically they are interested
+	   in Basic_Surface products (AFOS Pills) 90F, 96F, 90I, 98I,
+	   L6P, L8P.  They also need to get the Eta PMSL fields quicker
+	   than currently in order to generate their products.  In the
+	   near-term they would be satisfied with importing the
+	   AFOS model graphics fields.  HPC, (JYC), 11/17/97.
+
+	f. The way attributes are saved in the text pop-up is not
+	   consistent.  Some attributes, e.g, text color are always
+	   set to the default when invoking the pop-up.  Others, e.g,
+	   the text size, are retain the same value as the previous 
+	   time the pop-up was invoked.  CDB, (SS), 12/8/97.
+
+D	g. If you load data from within product generation, with
+	   a VG file loaded, the VG display gets put into the
+	   background.  CDB, (SS), 12/18/97.
+
+D	h. The HPC VG file for topography causes NMAP to core dump
+	   if the file is loaded into the product generation for
+	   editing.  HPC, (JC), 12/18/97.  Done, GK, 021oo., 2/4/98,
+	   5.4.3.g.
+
+D	i. The AFOS driver is not properly handling the minutes 
+	   field.  The minutes field must be handled correctly for
+	   such products as lightning.  AWC, (JW), 12/18/97. Done,
+	   SJ, 007r., 2/18/98.
+
+D	j. NMAP core dumps if you change the line type in the
+	   product table and draw the line and then try to
+	   select it.  AWC, (JW), 1/20/98.  Done, CL, 021jj, 1/21/98,
+	   5.4.3.g.
+
+D	k. If objects are drawn when in the roam mode and then objects
+	   are drawn outsided the roam mode, when the user exits product
+	   generation,  the objects that were drawn in roam mode are
+	   saved to the background.  MPC, (JP), 1/29/98.  Done, CL, 018n.,
+	   1/27/98,  5.4.3.g.
+
+	l. If you run more than one instance of NMAP where the first instance
+	   has product generation active, and the second instance does not, then
+	   if you exit the second instance, the working file is blanked out 
+	   and all product generation objects are lost.  AWC, (SD), 3/20/98.
+
+
+
+	    
+022.	VIEWFAX
+
+
+023.	Icons
+
+--------------------------------------------------------------
+
+
+	MD - Mary desJardins (CDB)
+	SJ - Scott Jacobs (CDB)
+	DKW - Duane Kidwell (CDB)
+	DP - Dave Plummer (CDB)
+	SS - Steve Schotz (CDB)
+	FY - Fee-Jing Yen (CDB)
+	GK - Gary Krueger (CDB)
+	TL - Tiros Lee (CDB)
+	CL - Chien Lin (CDB)
+	ES - Ed Safford (CDB)
+	AH - Andrea Hardy (CDB)
+	WL - William Li (CDB)
+	ID - Ian Durham (CDB)
+	TP - Tom Piper (CDB)
+
+	JW - Jim Whistler (AWC)
+	SD - Steven Danz (AWC)
+
+	JYC - Joey Carr (HPC)
+
+	JP - James Partain (MPC)
+
+	JH - Jon Hoopingarner (CPC)
+	BM - Brian Morris (JAF)
+
+	GG - Greg Grosshans (SPC)
+	RS - Russ Schneider (SPC)
+
+	MH - Michelle Huber (TPC)
+
+	KB - Keith Brill (EMC)
+
+	PB - Peggy Bruehl (OM)

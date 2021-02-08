@@ -1,0 +1,9 @@
+External Project:  OTHER 
+Track:  119 
+Task: 18.28
+
+NWX maximum reports increased 
+
+The maximum number of reports, MAX_REPORTS, that can be stored within the NWX program was increased from 300 to 1000.  Users were reporting that they could not view all available text messages.
+
+

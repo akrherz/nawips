@@ -1,0 +1,8 @@
+Track 296:  "Turn Source Off" is not consistent with imagery
+
+The OPC found that when using the "Turn Source Off" feature on the Data
+Selection Window with imagery data, the map projection remained SAT.  This
+caused problems when switching geographic areas in the Map interface.  This
+has been fixed.  The projection no longer remains SAT.  However, one cannot
+select another image type in this case.  The image file must be removed.
+

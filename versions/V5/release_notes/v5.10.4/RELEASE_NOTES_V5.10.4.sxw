@@ -1,0 +1,302 @@
+{\rtf1\ansi\deff0\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Nimbus Roman No9 L{\*\falt Times New Roman};}{\f1\froman\fprq2\fcharset0 Nimbus Roman No9 L{\*\falt Times New Roman};}{\f2\fswiss\fprq2\fcharset0 Luxi Sans;}{\f3\fnil\fprq2\fcharset0 Andale Sans UI{\*\falt Arial Unicode MS};}{\f4\fmodern\fprq1\fcharset0 Nimbus Mono L{\*\falt Courier New};}{\f5\fnil\fprq0\fcharset2 StarSymbol;}{\f6\fnil\fprq2\fcharset0 Nimbus Roman No9 L{\*\falt Times New Roman};}{\f7\fnil\fprq2\fcharset0 HG Mincho Light J{\*\falt MS Mincho};}{\f8\fnil\fprq2\fcharset0 Tahoma{\*\falt Lucidasans};}{\f9\fnil\fprq2\fcharset0 Luxi Sans;}}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue128;\red128\green128\blue128;}
+{\stylesheet{\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\snext1 Default;}
+{\s2\sa120\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon1\snext2 Text body;}
+{\s3\li0\ri0\lin0\rin0\fi283\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon2\snext3 First line indent;}
+{\s4\li567\ri0\lin567\rin0\fi-283\cf0{\*\tlswg8236}\tx567{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon2\snext4 Hanging indent;}
+{\s5\li283\ri0\lin283\rin0\fi0\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon2\snext5 Text body indent;}
+{\s6\sb240\sa120\keepn\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af9\afs28\lang255\ltrch\dbch\af7\afs28\langfe255\loch\f2\fs28\lang1033\sbasedon1\snext2 Heading;}
+{\s7\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs32\lang255\ab\ltrch\dbch\af3\afs32\langfe255\ab\loch\f0\fs32\lang1033\b\sbasedon6\snext2{\*\soutlvl0} Heading 1;}
+{\s8\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon2\snext8 List;}
+{\s9\li283\ri0\lin283\rin0\fi-283\sa120\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon8\snext9 Numbering 1;}
+{\s10\cf0{\*\tlswg8236}\tqc\tx4320{\*\tlswg8236}\tqr\tx8640{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon1\snext10 Footer;}
+{\s11\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon2\snext11 Table Contents;}
+{\s12\sb120\sa120\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs20\lang255\ai\ltrch\dbch\af3\afs20\langfe255\ai\loch\f0\fs20\lang1033\i\sbasedon1\snext12 Caption;}
+{\s13\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\sbasedon1\snext13 Index;}
+{\s14\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af4\afs20\lang255\ltrch\dbch\af4\afs20\langfe255\loch\f4\fs20\lang1033\sbasedon1\snext14 Preformatted Text;}
+{\s15\li432\ri0\lin432\rin0\fi0\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\snext1 Indent Roman;}
+{\s16\li864\ri0\lin864\rin0\fi0\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\snext1 Indent Letter;}
+{\s17\li1296\ri0\lin1296\rin0\fi0\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033\snext1 Indent Number;}
+{\*\cs19\cf0\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 Numbering Symbols;}
+{\*\cs20\cf0\rtlch\af5\afs18\lang255\ltrch\dbch\af5\afs18\langfe255\loch\f5\fs18\lang1033 Bullets;}
+{\*\cs21\cf2\ul\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 Internet Link;}
+}{\*\listtable{\list\listtemplateid1
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'00.;}{\levelnumbers\'01;}\fi-283\li283}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'01.;}{\levelnumbers\'01;}\fi-283\li567}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'02.;}{\levelnumbers\'01;}\fi-283\li850}
+{\listlevel\levelnfc0\leveljc0\levelstartat3\levelfollow2{\leveltext \'02\'03.;}{\levelnumbers\'01;}\fi-283\li1134}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'04.;}{\levelnumbers\'01;}\fi-283\li1417}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'05.;}{\levelnumbers\'01;}\fi-283\li1701}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'06.;}{\levelnumbers\'01;}\fi-283\li1984}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'07.;}{\levelnumbers\'01;}\fi-283\li2268}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'08.;}{\levelnumbers\'01;}\fi-283\li2551}
+{\*\soutlvl{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'09.;}{\levelnumbers\'01;}\fi-283\li2835}}\listid1}
+{\list\listtemplateid2
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'00.;}{\levelnumbers\'01;}\fi-283\li283}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'01.;}{\levelnumbers\'01;}\fi-283\li567}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'02.;}{\levelnumbers\'01;}\fi-283\li850}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'03.;}{\levelnumbers\'01;}\fi-283\li1134}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'04.;}{\levelnumbers\'01;}\fi-283\li1417}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'05.;}{\levelnumbers\'01;}\fi-283\li1701}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'06.;}{\levelnumbers\'01;}\fi-283\li1984}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'07.;}{\levelnumbers\'01;}\fi-283\li2268}
+{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'08.;}{\levelnumbers\'01;}\fi-283\li2551}
+{\*\soutlvl{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow2{\leveltext \'02\'09.;}{\levelnumbers\'01;}\fi-283\li2835}}\listid2}
+}{\listoverridetable{\listoverride\listid1\listoverridecount0\ls0}{\listoverride\listid2\listoverridecount0\ls1}}
+
+{\info{\creatim\yr2005\mo2\dy15\hr8\min42}{\revtim\yr2007\mo8\dy6\hr12\min36}{\printim\yr2007\mo8\dy6\hr8\min18}{\comment StarWriter}{\vern6450}}\deftab709
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse195\pgwsxn12240\pghsxn15840\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\footery0{\*\footeryt283\footerxl0\footerxr0\footeryh0}{\footer \pard\plain \s10\cf0{\*\tlswg8236}\tqc\tx4320{\*\tlswg8236}\tqr\tx8640{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Release Notes Version 5.10.4\tab \tab {\field{\*\fldinst \\page}{\fldrslt 9}}}
+\par }
+\pgdscnxt0 Default;}}
+\paperh15840\paperw12240\margl1440\margr1440\margt1440\margb1440\sectd\sbknone\pgwsxn12240\pghsxn15840\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn2057\footery1440{\footer \pard\plain \s10\cf0{\*\tlswg8236}\tqc\tx4320{\*\tlswg8236}\tqr\tx8640{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Release Notes Version 5.10.4\tab \tab {\field{\*\fldinst \\page}{\fldrslt 9}}}
+\par }
+\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx640{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s2\cf0\qc{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\sa120\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 N-AWIPS 5.10.4 Release Notes }
+\par {\loch\f6\fs24\lang1033\i0\b0 August 6, 2007}
+\par {\loch\f6\fs24\lang1033\i0\b0 Version 5.10.4 covers development from May 14, 2007 to July 20, 2007}
+\par {\loch\f6\fs24\lang1033\i0\b0 ********************************************************************         }
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 I.\tab NMAP  Product Generation Improvements }
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0        A.   International SIGMET formatter (AWC)}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li840\ri0\lin840\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 The International SIGMET formatter will now automatically determine which FIR(s) to include in a SIGMET text product based on the intersection of the SIGMET area, line or point with any of the six FIR regions whose map points are defined in a new FIR bound
+s file.  The logic for deciding which of the FIRs are to be included in the SIGMET is invoked during the callback function for the \ldblquote SAVE\rdblquote  button.  The six FIR radio buttons (KZNY, KZMA, KZHU, KZOA, TJZS, PAZA) have been removed from the SIGMET Edit GUI.  T
+wo other minor changes were also made to the International Sigmet formatter:  the FIR for Anchorage was corrected to say \ldblquote Anchorage\rdblquote , not \ldblquote Anchorage_Oceanic\rdblquote ;  and the \ldblquote Forecaster\rdblquote  menu option has been removed from the SIGMET Edit GUI at the request of AWC
+. This work was done by the AWC in collaboration with the NAWIPS team.}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab B.\tab GFA/AIRMET (AWC)}
+\par 
+\par \pard\plain \ltrpar\s16\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li864\ri0\lin864\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 Several new features and enhancements have been added to NMAP GFA GUIs and formatting functions in support of creating the Graphical AIRMET.  In addition several problems have been corrected that were found during AWC evaluations of version 5.10.3  and int
+ermediate test executables.}
+\par 
+\par \pard\plain {\listtext\pard\plain \li1134\ri0\lin1134\rin0\fi-283\f6{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592 1.}\ilvl3 \ltrpar\s5\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\ls1\aspalpha\li1134\ri0\lin1134\rin0\fi-283\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0      Add type selection menu for MT OBSC}
+\par \pard\plain \ltrpar\s5\cf0{\*\tlswg8236}\tx1797{\*\tlswg8236}\tx2229{\*\tlswg8236}\tx2661{\*\tlswg8236}\tx3093{\*\tlswg8236}\tx3525{\*\tlswg8236}\tx3957{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1365\ri0\lin1365\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s5\cf0{\*\tlswg8236}\tx1842{\*\tlswg8236}\tx2274{\*\tlswg8236}\tx2706{\*\tlswg8236}\tx3138{\*\tlswg8236}\tx3570{\*\tlswg8236}\tx4002{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1410\ri0\lin1410\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 The type selection menu has been added into the MT OBSC create GUI. Each item in the selection menu has a radio button to turn on and off each MT OBSC type. The type items are defined in gfa.tbl. The user can modify the gfa.tbl to add and remove MT OBSC ty
+pes in the selection menu. If no type is selected after drawing the MT OBSC, a warning box will pop up and let the user select MT OBSC types.}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li840\ri0\lin840\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 2.       Add tag numbers at the end of each AIRMET}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Tag numbers have been added at the end of each AIRMET/OUTLOOK bulletin except for FZLVL and M_FZLVL. An H or L is prefixed to tag numbers for TURB-HI and TURB-LO, respectively.  Tag numbers in AIRMET/OUTLOOK bulletins can be turned off/on by setting the AD
+D_TAG_NUMBER flag in prefs.tbl to FALSE/TRUE.}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 \line \tab  3.       Select a GFA element by clicking on the text box}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1134\ri0\lin1134\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1417\ri0\lin1417\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 It is now possible to select a GFA element for editing by clicking on the text box.  The GFA element can be selected either by clicking on/near the figure or by clicking on/near the text box.  }
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033   
+\par {\loch\f0\fs24\lang1033\i0\b0  4.       Join multiple snapshots}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Added to the  existing "Connect" tool the capability to join two selected GFA elements (including snapshots, airmets, and outlooks), as long as they have the same hazard type and forecast hour.  It works like smearing two GFAs together with some special fe
+atures, as follows{\ulnone :  (1) {\b0 the joined GFA element will have the first selected GFA's attributes,  except for identified \ldblquote worst-case\rdblquote  attributes;  (2) canceled GFAs cannot be smeared, but could be joined; (3) the resulting GFA will not be snapped unless the f
+irst selected element is an airmet or outlook. }}}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033{\loch\f0\fs24\lang1033\i0\b0\b0\ulnone To join two GFA elements,  click \ldblquote Connect\rdblquote  on the Product Generation {\lang1033 palette,  select the first GFA element, then select the second GFA element,  then confirm the selections with another click.  A new joined GFA appears, while the two old GFAs are deleted.
+}}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par 
+\par 
+\par 
+\par 
+\par {\loch\f0\fs24\lang1033\i0\b0  5.       Improve the \ldblquote shrink-wrap\rdblquote  smear algorithm}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Polygon translation for both the GFA smear and general polygon interpolation has been improved. The simplistic default polygon point mapping has been replaced with an algorithm based on convex hull theory. The result should be the elimination of extraneous
+ intermediate points and more realistic overall results.}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par {\loch\f0\fs24\lang1033\i0\b0  6.       Editable From Lines}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Changes made to support the editable F/BB/A element in this release include the following:}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0     {\b Cycle Time display}.   A new prefs.tbl setting, USE_DAY_CYCLE, has been added.  When this flag is set to TRUE, a default day, cycle, and status (Routine or Update) will be selected and displayed in the title of the nmap2 window (right end).  The startin
+g value uses the same logic that the current Airmet GUI uses in selecting the day/cycle/status.  }
+\par 
+\par {\loch\f0\fs24\lang1033\i0\b0     {\b Cycle Time Selection GUI}{\b0 .}{\b    }{\b0 A }new Action, named \ldblquote Cycle\rdblquote , will be available in the pgen palette.  This opens the day/cycle selection GUI, which provides the user a means to change the selected Day, Cycle, and status.  Any changes the user makes will be 
+immediately displayed in the nmap2 window title.}
+\par 
+\par {\loch\f0\fs24\lang1033\i0\b0     {\b Airmet' (Airmet prime) GUI}{\b0 .  The Airmet' GUI has been provided with some limited functionality.  It cannot yet produce airmet text reports from the user drawn F/BB/A elements (that will be added in the next version), but it can generate valid, empty ai
+rmet text bulletins for the selected FA Areas and airmet types.  There is one minor, known problem in this GUI.  The button used to create the airmet bulletin is labeled \ldblquote Format/Save\rdblquote , and according to the design document it should be \ldblquote Generate/Save\rdblquote .  Thi
+s will be corrected in the next version of this GUI.}}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033{\loch\f0\fs24\lang1033\i0\b0{\b0     }}{\loch\f0\fs24\lang1033{\b GFA' (GFA prime) GUI}{\b0 .  There is one known issue with the GFA' GUI, which will be corrected in the next version.  One field in the GUI is labled \ldblquote Cycle\rdblquote .  This will be removed, as it has been replaced by the Cycle selection GUI (described above). }}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0  7.       Change the order of processing for Freezing Level objects to text}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 The processing order for formatting closed FZLVLs has been changed to improve the performance. If a closed FZLVL is in the FA area, the closed line point reduction is executed. Otherwise, the closed line point reduction is skipped.}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0  8.\tab Block GFA writes when closed figures have less than 3 points}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Fixed the single point smear problem.  The single point smear problem occurred when smearing a single snapshot that was sufficiently small so that one or more vertex points snapped to the same location, resulting in a GFA figure of fewer than 3 points. Wit
+h this change, GFA figures of insufficient points are rejected by the lowest level file writing routine (cvgwritgfa.c), and the user is warned that the smear for the offending tag sequence is too small to be smeared.  In routine operational use users will 
+be very unlikely to encounter this situation since it requires a single snapshot (or multiple, overlaid snapshots) of very small size (much less than 3000 sq nm).}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 This fix also rejects GFA elements with insufficient points during a file copy.  If an older vg file happens to contain GFA elements of insufficient points, the offending GFA elements will not be copied into the work file when the user selects and opens th
+e vg file, however all valid GFA elements will be copied and displayed.}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0  9.\tab Fix the filter to GFA link to avoid tag resets}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Improved the coordination of the filter and GFA menus so that when a single new time is selected in the filter window, the GFA (or GFA') GUI switches to the new time, but does not switch the tag to \ldblquote New\rdblquote .  This corrects a bug that the AWC discovered in the
+ version 5.10.3 evaluation, which resulted in resetting the tag to \ldblquote New\rdblquote  whenever the GFA (and GFA') forecast time was reset from the filter GUI.}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par 
+\par 
+\par 
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 \tab 10.\tab Change wording in AIRMET text}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 In the airmet formatting process the phrase \ldblquote ...UPDT TO CANCEL...\rdblquote  has been removed from all airmet text reports.  This phrase was formerly placed on the final line of a canceled airmet or outlook paragraph.}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 11.\tab Improve cluster processing in the clipping formatter}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 This task improved the clustering and kink removing algorithm in the AIRMET formatter to fix two clustering cases found in version 5.10.3 release testing.  The improved algorithm also makes the formatted FROM line tighter and better (closer to the original
+ FROM line) than it did in version 5.10.3.}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 12.\tab Restore debugging features for areal clipping}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 This task restored some helpful debugging/testing  features for internal testing,   which were available in version 5.10.2 but were shut off by accident in version 5.10.3.  (1) allow the areal clipping and bisection to be turned on/off independently;   (2)
+ remove the unused mid-points.}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 13.       Fix problems when drawing is interrupted by other main window commands}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par {\loch\f0\fs24\lang1033\i0\b0 In previous releases, after loading a map in the middle of drawing a GFA, users can continue to draw the unfinished GFA. This behavior is not consistent with other MET objects,  and causes NMAP2 to crash in some cases. In this release, if a map is loaded i
+n the middle of drawing a GFA, the drawing action is canceled and the unfinished GFA is abandoned.{\fs20  }}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1272{\*\tlswg8236}\tx1704{\*\tlswg8236}\tx2136{\*\tlswg8236}\tx2568{\*\tlswg8236}\tx3000{\*\tlswg8236}\tx3432{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li840\ri0\lin840\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033{\loch\f6\fs24\lang1033\i0\b0{\ulnone    }}{\loch\f6\fs24\lang1033   \tab }
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 14.       Modify CLIPVGF for GFA elements}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1850{\*\tlswg8236}\tx2282{\*\tlswg8236}\tx2714{\*\tlswg8236}\tx3146{\*\tlswg8236}\tx3578{\*\tlswg8236}\tx4010{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 Added all of the GFA elements to CLIPVGF. This allows these elements to be clipped at the international boundary for creating web graphics. This work was done in collaboration with the AWC.}
+\par 
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1272{\*\tlswg8236}\tx1704{\*\tlswg8236}\tx2136{\*\tlswg8236}\tx2568{\*\tlswg8236}\tx3000{\*\tlswg8236}\tx3432{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li840\ri0\lin840\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 II.\tab Product Generation Pre/Post Processing Improvements}
+\par 
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab A.  Generate SHAPE files for Tropical Watch/Warning information (TPC)}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1302{\*\tlswg8236}\tx1734{\*\tlswg8236}\tx2166{\*\tlswg8236}\tx2598{\*\tlswg8236}\tx3030{\*\tlswg8236}\tx3462{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi-15\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033{\loch\f6\fs24\lang1033\i0\b0{\b0\fs24\f6 \tab A new program, TPC2SHP, has been added to convert TC graphics produced by program GPTCWW to Shape file format}}{\loch\f0\fs24\lang1033. The objects are created by NMAP product generation and by the program GPTCWW and include: the {\b0\fs24\f6 TC track, the TC error cone and the associated Wat
+ch and Warning breakpoints. The objects are stored in an NAWIPS VG file. The new application converts the objects in the VG file to objects in a Shape file.}}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1302{\*\tlswg8236}\tx1734{\*\tlswg8236}\tx2166{\*\tlswg8236}\tx2598{\*\tlswg8236}\tx3030{\*\tlswg8236}\tx3462{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi-15\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 Conversion of each input VGF file results in 4 output files (.dbx, .shp, .shx, .prj) which comprise the shapefile format.  These files then can be loaded for viewing or further processing using GIS software.  See $GEMPAK/hlp/tpc2shp.hlp for detailed inform
+ation about the output files structure.}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab B.\tab Allow NAGRIB to Decode ECMWF Ensemble Grids (HPC)\tab }
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li885\ri0\lin885\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 Functionality was added to NAGRIB to process the ECMWF Ensemble information from the GRIB header extension.}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1850{\*\tlswg8236}\tx2282{\*\tlswg8236}\tx2714{\*\tlswg8236}\tx3146{\*\tlswg8236}\tx3578{\*\tlswg8236}\tx4010{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li1418\ri0\lin1418\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab C.   Add Lightning Decoder  (ALL)}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1347{\*\tlswg8236}\tx1779{\*\tlswg8236}\tx2211{\*\tlswg8236}\tx2643{\*\tlswg8236}\tx3075{\*\tlswg8236}\tx3507{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li915\ri0\lin915\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 A new decoder has been added to decode lightning data. The display options for lightning data (LTNG) were added in a previous release. The lightning data arrives in bulletins with the headers SFUS41 and SFPA41. The lightning decoder is intended to be run i
+n real-time from the LDM. The following is an example of the entries needed for the LDM pqact.conf file:}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs20\lang255\ltrch\dbch\af3\afs20\langfe255\loch\f0\fs20\lang1033 {\loch\f0\fs20\lang1033\i0\b0 # Decoder for Lightning data}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs20\lang255\ltrch\dbch\af3\afs20\langfe255\loch\f0\fs20\lang1033 {\loch\f0\fs20\lang1033\i0\b0 WMO     ^SFUS41 .... ([0-3][0-9])([0-2][0-9])}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs20\lang255\ltrch\dbch\af3\afs20\langfe255\loch\f0\fs20\lang1033 {\loch\f0\fs20\lang1033\i0\b0 PIPE    -flush ltgdecode -p 3600 -L -N -o data/decoders/ltng/%%Y%%m%%d%%H.ltng}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs20\lang255\ltrch\dbch\af3\afs20\langfe255\loch\f0\fs20\lang1033 {\loch\f0\fs20\lang1033\i0\b0 WMO     ^SFPA41 .... ([0-3][0-9])([0-2][0-9])}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs20\lang255\ltrch\dbch\af3\afs20\langfe255\loch\f0\fs20\lang1033 {\loch\f0\fs20\lang1033\i0\b0 PIPE    -flush ltgdecode -p 3600 -L -N -o data/decoders/ltng/%%Y%%m%%d%%HP.ltng}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li840\ri0\lin840\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par 
+\par      {\f6  }
+\par \pard\plain \ltrpar\s9\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 III.\tab NMAP2 Display Improvements}
+\par 
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab   A.  Added enhancements to the Ensemble Cyclone track display (OPC)}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li840\ri0\lin840\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 New user selections have been added to the Ensemble Cyclone display attributes. The user now has the option of setting a wind speed and color for Gale force winds. This is the same as for the wind speeds and colors for Tropical Depression, Tropical Storm a
+nd Hurricane. }
+\par 
+\par {\loch\f6\fs24\lang1033\i0\b0 A forecast hour value has also been added to the attribute list. The Forecast Hour allows the user to display all cyclone positions for a single forecast hour. The user can select a specific hour after turning the selection on by clicking the check box.}
+\par 
+\par {\loch\f6\fs24\lang1033\i0\b0 ***** Important Please Note ****}
+\par 
+\par {\loch\f6\fs24\lang1033\i0\b0 Since miscset.tbl was modified, old SPF files using ENS_CYC data should be recreated.}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1141{\*\tlswg8236}\tx1573{\*\tlswg8236}\tx2005{\*\tlswg8236}\tx2437{\*\tlswg8236}\tx2869{\*\tlswg8236}\tx3301{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li709\ri0\lin709\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab }
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0          B.  Update ASCT and ASCT_HI display (OPC)}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab  }
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1317{\*\tlswg8236}\tx1749{\*\tlswg8236}\tx2181{\*\tlswg8236}\tx2613{\*\tlswg8236}\tx3045{\*\tlswg8236}\tx3477{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li885\ri0\lin885\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 Changed the Rain Flag to the KNMI Quality Control Flag. The ASCAT satellite does not flag winds in areas of rain. Instead there is a flag that indicates when a wind matches the KNMI Quality Control conditions. When this flag is selected by the user, the se
+cond color for this data type may be used to plot the winds that meet the QC conditions.}
+\par 
+\par {\loch\f6\fs24\lang1033\i0\b0 Added the ASCT_HI as a new data type. It is similar to the ASCT except that the data has a higher spatial resolution.}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1317{\*\tlswg8236}\tx1749{\*\tlswg8236}\tx2181{\*\tlswg8236}\tx2613{\*\tlswg8236}\tx3045{\*\tlswg8236}\tx3477{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li885\ri0\lin885\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0         C.  Modify the time binning for satellite scatterometer winds (TPC)}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1287{\*\tlswg8236}\tx1719{\*\tlswg8236}\tx2151{\*\tlswg8236}\tx2583{\*\tlswg8236}\tx3015{\*\tlswg8236}\tx3447{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 Added the capability to change the time interval for displaying the MISC data types QSCT, ASCT, and WSAT in NMAP2 and GPMAP.  Two new tags have been added to $GEMTBL/prefs.tbl to allow the user to do this.  Tag SAT_WIND_START is for the number of minutes b
+efore the frame time to start.  The start time in prior releases has been hard-coded to 360 minutes before the frame time and that is still the default.  The end time in prior releases has been hard-coded to be the same as the frame time and with a default
+ value of 0 for tag SAT_WIND_END, that will not change.  However, by changing the value for SAT_WIND_END to a positive number of minutes, the end time for displaying will be SAT_WIND_END minutes after the frame time.}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0         D.    Change TAF decoder to store files based on cycle time (AWC)}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1287{\*\tlswg8236}\tx1719{\*\tlswg8236}\tx2151{\*\tlswg8236}\tx2583{\*\tlswg8236}\tx3015{\*\tlswg8236}\tx3447{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 The TAF decoder has been modified at AWC's request to store decoded reports into four files per day based on cycle time instead of by valid day and time into daily files.  Scheduled TAFs should be valid for 24 hours and should be issued four times per day 
+at 00, 06, 12, and 18 UTC, which are the cycle times used in the new filenames.}
+\par 
+\par {\loch\f6\fs24\lang1033\i0\b0 A new parameter STIM (hhmm) which gives the issue time has been added for TAF reports.  STIM can be displayed in NMAP2 and listed in SFLIST.}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0         E.    Decode and Display Warnings by Polygon (SPC)}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1287{\*\tlswg8236}\tx1719{\*\tlswg8236}\tx2151{\*\tlswg8236}\tx2583{\*\tlswg8236}\tx3015{\*\tlswg8236}\tx3447{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 The warning decoder, dcwarn, was modified to extract the storm-based polygon latitude/longitude pairs and add them to the output ASCII file, $OBS/warn/YYYYMMDDHH.warn.  }
+\par 
+\par {\loch\f6\fs24\lang1033\i0\b0 In addition,  ggwarn.f was modified to allow the display of the storm-based polygons based upon a new flag associated with the miscellaneous data type, warn.  See the $GEMTBL/config/miscset.tbl.}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1287{\*\tlswg8236}\tx1719{\*\tlswg8236}\tx2151{\*\tlswg8236}\tx2583{\*\tlswg8236}\tx3015{\*\tlswg8236}\tx3447{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 To display the storm-based polygons, run gpmap or nmap2.  When the polygon flag is YES, the polygon will be plotted with the color assigned to the type of warning being displayed.}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1287{\*\tlswg8236}\tx1719{\*\tlswg8236}\tx2151{\*\tlswg8236}\tx2583{\*\tlswg8236}\tx3015{\*\tlswg8236}\tx3447{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 For more information, see the help for dcwarn, $GEMHLP/hel/p/dcwarn.hlp and the help for the warn parameter, $GEMHLP/hlx/warn.hl2.}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033
+\par \pard\plain \ltrpar\s1\cf1{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par 
+\par 
+\par 
+\par 
+\par \pard\plain \ltrpar\s4\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 IV.\tab Bug Corrections}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab A.    Fix METAR Decoder (ALL)}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1302{\*\tlswg8236}\tx1734{\*\tlswg8236}\tx2166{\*\tlswg8236}\tx2598{\*\tlswg8236}\tx3030{\*\tlswg8236}\tx3462{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 A problem arose due to changes in the call letters for stations in Canada. Some Canadian stations are now using the same call letters as U.S. stations, after the leading C or K. The decoder was modified to no longer overlap the reports from these stations.
+}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab B.   Corrected Weather Codes With a Leading + or - (Unidata)}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1302{\*\tlswg8236}\tx1734{\*\tlswg8236}\tx2166{\*\tlswg8236}\tx2598{\*\tlswg8236}\tx3030{\*\tlswg8236}\tx3462{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 A bug was reported by Unidata where the heavy (+) or light (-) indicators on weather codes in METAR reports were not being applied correctly. For multiple weather codes in the same report, the indicator was only being applied to the first code. With this f
+ix, the indicator is now applied to all weather codes in a report.}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab C.\tab Corrected Creation of the WMO Header ID for Grids (HPC)}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1302{\*\tlswg8236}\tx1734{\*\tlswg8236}\tx2166{\*\tlswg8236}\tx2598{\*\tlswg8236}\tx3030{\*\tlswg8236}\tx3462{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 A bug was reported by the HPC regarding the creation of grids in GRIB. The application GDGRIB2 was fixed to properly concatenate the header string to remove the garbage characters observed by the HPC. }
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1272{\*\tlswg8236}\tx1704{\*\tlswg8236}\tx2136{\*\tlswg8236}\tx2568{\*\tlswg8236}\tx3000{\*\tlswg8236}\tx3432{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li840\ri0\lin840\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 
+\par \pard\plain \ltrpar\s9\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 V.   Map and Table Updates     }
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab A.  Updated Local GRIB Table Parameters (NCO)}
+\par 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 Parameters necessary for processing the Wave Model have been added to the GRIB2 tables \endash  g2varswmo2.tbl and g2vcrdncep1.tbl \endash  under $GEMTBL/grid.}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx1302{\*\tlswg8236}\tx1734{\*\tlswg8236}\tx2166{\*\tlswg8236}\tx2598{\*\tlswg8236}\tx3030{\*\tlswg8236}\tx3462{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab B.   Updated Originator for Redbook Graphic (NCO)}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li870\ri0\lin870\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f0\fs24\lang1033 {\loch\f0\fs24\lang1033\i0\b0 $GEMTBL/ tables/pgen/awdef.tbl has been updated to fix the originating station for Redbook graphic PTWA93{\ulnone .}}
+\par \pard\plain \ltrpar\s1\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li855\ri0\lin855\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par 
+\par 
+\par       
+\par \pard\plain \ltrpar\s9\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 VI.\tab  Calling Sequence Changes}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s5\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab A.\tab $GEMPAK/source/programs/gui/nmap2/nmap_pggfawp.c}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab B.\tab $GEMPAK/source/gemlib/gh/ghrdad.f, ghrdbd.f, ghrdfv.f}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab C.\tab $GEMPAK/source/gemlib/gb/gbpds.c}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab D.\tab $GEMPAK/source/nmaplib/nms/nmsdspl.f}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab E.\tab $GEMPAK/source/bridge/wn/wnout.f}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab F.\tab $GEMPAK/source/cgemlib/crg/crgmkrange.c}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab G.\tab $GEMPAK/source/bridge/tf/tfdecd.f}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab H.\tab $GEMPAK/source/programs/gui/nmap2/nmap_mainw.c}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab I.\tab $GEMPAK/source/gemlib/dg/dgcsubg.c}
+\par {\loch\f6\fs24\lang1033\i0\b0 \tab }
+\par \pard\plain \ltrpar\s16\cf0{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\li864\ri0\lin864\rin0\fi0\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 See the nawips.log and changes.log for additional details concerning these routines.}
+\par  
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 VII.\tab  Compiling and Linking Instructions}
+\par 
+\par \pard\plain \ltrpar\s2\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 The necessary compiling and linking instructions are contained in the following file:}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s2\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab \tab release_build_5.10.4}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s2\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 To execute the script and save its output in a file type:}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s2\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab \tab cd $GEMPAK/build}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s2\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 \tab \tab release_build_5.10.4>&! RELEASE_$NA_OS & ; tail -f RELEASE_$NA_OS}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s2\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 {\loch\f6\fs24\lang1033\i0\b0 The output of the script will be written to RELEASE_$NA_OS.}
+\par \pard\plain \ltrpar\s1\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033 
+\par \pard\plain \ltrpar\s2\cf0{\*\tlswg8236}\tx432{\*\tlswg8236}\tx864{\*\tlswg8236}\tx1296{\*\tlswg8236}\tx1728{\*\tlswg8236}\tx2160{\*\tlswg8236}\tx2592{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\aspalpha\ql\rtlch\af8\afs24\lang255\ltrch\dbch\af3\afs24\langfe255\loch\f6\fs24\lang1033    
+\par }

@@ -1,0 +1,51 @@
+#------------------------------------------------------------------------
+# ti.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		12/97	Updated
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Updated
+#------------------------------------------------------------------------
+
+# testti.f	- TI Library Test Program
+tiaddd.f	- Add One Day
+tiaddm.f	- Add Specified Number Of Minutes
+# tic2i.f	- GEMPAK Time To Date And Time
+ticcnt.f	- Get Century From Standard GEMPAK Time
+ticdtm.f	- GEMPAK Time To Date And Time
+tictoi.f	- GEMPAK Time To Integer Time
+tidaym.f	- Number Of Days In A Month 
+tidayw.f	- Day of Week
+tidifd.f	- Time Difference In Days
+tidiff.f	- Time Difference In Minutes
+tidspl.f	- Display A List Of Times 
+tidtm4.f	- Convert Standard GEMPAK Time To 4-Digit Year
+tifind.f	- Find User Input Times
+tiform.f	- Partial Time To GEMPAK Time 
+# tii2c.f	- Integer Time To GEMPAK Time
+tiidtm.f	- Date And Time To GEMPAK Time
+tiitoc.f	- Integer Array To GEMPAK Time
+tiitoj.f	- Integer Time To Julian Day
+tijtoi.f	- Julian Day To Integer Time 
+timdif.f	- Time Difference From Integer Time
+tisort.f	- Sort Times
+tistan.f	- User Input Time To GEMPAK Time 
+tistnt.f	- Compute Station Time
+tisubd.f	- Subtract One Day
+tisubm.f	- Subtract Specified Number Of Minutes 
+titzdf.f	- Convert Time To Different Time Zone 
+tiyy24.f	- Convert 2-Digit Year to 4-Digit Year
+tiyymd.f	- Convert 2-Digit YMD to 4-Digit YMD
+tiyyyy.f	- Sort Times For Proper Century 
+#------------------------------------------------------------------------

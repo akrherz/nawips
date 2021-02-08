@@ -1,0 +1,76 @@
+#------------------------------------------------------------------------
+# ma.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		11/97	Original
+#------------------------------------------------------------------------
+
+mabsrc.f	- ?
+mabst0.f	- ?
+mabtyp.f	- ?
+mackrp.f	- ?
+macld1.f	- ?
+maclds.f	- ?
+macst0.f	- ?
+macwnd.f	- ?
+madcd1.f	- ?
+madcd2.f	- ?
+madcod.f	- ?
+maddff.f	- ?
+mads4q.f	- ?
+mads4r.f	- ?
+madst0.f	- ?
+madsvs.f	- ?
+maelev.f	- ?
+maerrs.f	- ?
+magemp.f	- ?
+magrpt.f	- ?
+maicea.f	- ?
+maiffp.f	- ?
+maifmp.f	- ?
+maifpt.f	- ?
+maifsp.f	- ?
+maiihv.f	- ?
+mainit.f	- ?
+maintf.f	- ?
+malscb.f	- ?
+malscd.f	- ?
+mamawx.f	- ?
+manddf.f	- ?
+maobst.f	- ?
+mapkwd.f	- ?
+mapr24.f	- ?
+maprec.f	- ?
+mapres.f	- ?
+maprs3.f	- ?
+marelh.f	- ?
+martim.f	- ?
+masc1b.f	- ?
+masc1d.f	- ?
+masc2d.f	- ?
+masc3d.f	- ?
+masc4d.f	- ?
+masec2.f	- ?
+masec3.f	- ?
+masec5.f	- ?
+mastbl.f	- ?
+maswld.f	- ?
+matdur.f	- ?
+matemp.f	- ?
+matesa.f	- ?
+mawgem.f	- ?
+mawspd.f	- ?
+mawvh1.f	- ?
+mawvph.f	- ?
+
+#------------------------------------------------------------------------

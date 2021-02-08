@@ -1,0 +1,54 @@
+#------------------------------------------------------------------------
+# gb.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 8/97	Original
+# T. Piper/GSC		10/98	Updated
+#   ---------------------------------------------------------------------
+
+# gbbds.c	- 
+# gbbms.c	- 
+# gbbtoi.c	- 
+gbclos.c	- Close GRIB And INDEX Files
+gbdiag.c	- Get GRIB Flags
+# gbends.c	- 
+# gbensemble.c	- 
+# gbgaus.c	- 
+gbgbdh.c	- Get BDS Header
+# gbgds.c	- 
+# gbges.c	- 
+gbggds.c	- Get GDS Information
+# gbgids.c	- 
+# gbgmtx.c	- 
+gbgpbd.c	- Get Packed Grid From BDS
+gbgpds.c	- Get PDS Information
+# gbgsec.c	- 
+# gbgspk.c	- 
+gbgubd.c	- Get Unpacked Grid From BDS
+# gbids.c	- 
+# gblamb.c	- 
+# gbltln.c	- 
+# gbmerc.c	- 
+gbnext.c	- Position File To Next GRIB Message
+gbopen.c	- Open GRIB And INDEX Files
+# gbpds.c	- 
+# gbpolr.c	- 
+# gbrindx.c	- 
+# gbscan.c	- 
+# gbscpk.c	- 
+# gbsphr.c	- 
+# gbsspk.c	- 
+gbtdlens.c	- Decode Product Defintion Section
+# gbunpk.c	- 
+
+#------------------------------------------------------------------------

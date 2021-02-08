@@ -1,0 +1,56 @@
+Tropical Cyclone Graphics and Products Changes
+
+  Enhance breakpoint selection interface
+
+    Breakpoints selection for non-special geographies (meaning standard
+    breakpoint pairs, not islands and water) can now be either from the 
+    official breakpoints or from official and supplemental points.  The 
+    "Breakpoint Type" menu is used to make this selection.  By selecting 
+    "Official" only the official breakpoints can be selected.  By selecting 
+    "All" the user can choose from both official and supplemental breakpoints.
+
+    Special geographies are now functional.  These include islands and bodies
+    of water.  In order to use either of these categories, click on the TCA
+    icon on the palette to start the TCA window.  Select "Islands" or "Water"
+    in the Special Geography menu.  Now click on New Segment.  The displayed
+    breakpoints will correspond to the selected geography.  Use the left mouse
+    button to select points for the segment.  The left mouse button is used
+    to both select new points and switch off those points that are already
+    selected (toggle action).  To complete the segment click on the middle 
+    mouse button.  When you do so, the segment will be displayed in the
+    TCA window as either ISLANDS_# or WATER_#.  The # is just a sequentially
+    assigned number (that has no other meaning).  This is used to identify 
+    the group of points, since the special geography segment may contain more 
+    than two breakpoints.
+    
+    Multiple selection of special geography points is also available.  After 
+    clicking on New Segment, click and hold mouse button 1 down.  Now drag the 
+    mouse and a temporary box will be displayed.  All breakpoints within the 
+    box will be selected when the left mouse button is released.  An alternate 
+    method is to use the shift button and the left mouse click at the same 
+    time.  Do this and a temporary, closed figure is drawn.  Click with the 
+    left mouse button to define its points.  When you are finished, click the 
+    middle mouse button and all breakpoints within the defined figure will be 
+    selected.  If unwanted points are inadvertently selected they may be 
+    de-selected using single clicks of the left mouse button.  
+  
+
+  Create the breakpoint text message   
+    
+    The breakpoint text message may now be created using the TCA element in
+    PGEN.  After a TCA has been created, select it and click on the "Create
+    Text" button.  The text message will be created and displayed.  This may 
+    be saved into a local file (the file name is displayed below the text 
+    message).  Push the "Cancel" button  and the text will not be saved.
+
+
+    Note that the text message expects to find a vg file containing the 
+    previous TCA element (earlier advisory number) for the storm.  If that file
+    is not present in the local directory then the text message will be 
+    created as if the storm is new.
+  
+
+  Please note that in this release the internal structure of the TCA was 
+  modified.  As a result, TCAs in 5.7.4 are incompatible with all previous 
+  releases.  VG files from earlier NMAP2 versions should not be used.
+  

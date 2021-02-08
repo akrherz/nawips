@@ -1,0 +1,7 @@
+SFFILE  $GEMDATA/HRCBOB.SFC                                                     
+AREA    @pa                                                                     
+DATTIM  last                                                                    
+OUTPUT  t                                                                       
+SKPMIS  no                                                                      
+IDNTYP  STID                                                                    
+SFPARM                                                                          

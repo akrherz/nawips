@@ -1,0 +1,403 @@
+
+                           NAWIPS 5.3.1 Change Description Log
+
+		( * indicates a change that makes this version of NAWIPS 
+		    incompatible with the previous version )
+
+
+000.	Miscellaneous
+
+	a.  Increased a temporary variable size to 72 characters to
+	    correct a truncation problem when a long entry was 
+	    given for trace.  Done, SJ, (SS), 2/22/96.
+
+	b.  Increased character size to 160 characters for local
+	    variables in st library.  Done, LS, (SS), 2/27/96.
+
+	c.  SS_IRET was modified to translate machine dependent
+	    FORTRAN I/O error codes into meaningful FL_library
+	    error messages.  Done, KT, (SS), 2/29/96.
+
+	d.  Revised testst.f to accommodate larger character strings.
+	    Also updated header documentation.  Updated some ST routines
+	    in AIX that had not been revised earlier to reflect recent
+	    changes to ST library.  Done, KT, (SS), 2/29/96.
+
+	e.  New string function ST_ILSR has been added to allow integer
+	    input in the form of a list or range information.  This 
+	    routine is adapted from ST_ILST.  Done DP, (SS), 3/06/96.
+
+	f.  Corrected leap year calculations being done by TI_MDIF.
+	    Done, SJ, (SS), 3/06/96.
+
+	g.  Created C language routine library "cfl" that has 
+	    functionality similar to GEMPAK's "fl" library file
+	    I/O routines.  Done, GK, (SS), 3/18/96.
+
+	h.  Created new routine, ST_CLS2 that parses strings into smaller
+	    strings, just like ST_CLST, except that it does not remove
+	    blanks if the separator is a non-blank.  Also corrected
+	    header section of ST_PELT.  Done, SJ, (SS),
+	    3/20/96.
+
+	i.  Increased the message queue size between GPLT and the DEVICE
+	    levels of GEMPLT to allow larger buffer sizes.  Also added 
+	    checks for buffer overflow at the APPL level.  Done, ML, (SS),
+	    3/22/96.
+
+*	    This change affects both the GPLT and device drivers.  GPLT can
+	    not be used with the old version of the device drivers and the
+	    current device drivers can not be used with the old version of
+            GPLT.
+
+	j.  Updated C language routine library cfl.  Added new function
+	    that returns current position of the file.  Made various
+	    corrections to cfl routines.  Removed error number symbols.
+	    Updated NWX and CTB functions to use new CFL routines.
+	    Done, GK, (SS), 3/27/96.
+
+	k.  Added rotation transformation functionality to GPLT.  This 
+	    change allows the processing of eta rotated grids.  Done,
+	    KB, TL, (SS), 3/28/96.
+
+*	    The new transformation types (defined in GEMPRM) must be  
+	    the same in the GEMPAK programs and GPLT.  Thus, the new
+	    GPLT cannot be used with previously compiled programs and
+	    the old GPLT cannot be used with programs compiled with 
+   	    5.3.1 . 
+
+	l.  Corrected return code checks in TESTCFL.C.  Done, GK, (SS),
+	    4/02/96. 
+
+	m.  Increased internal temporary variables in SS_ENVR to 132
+	    characters.  Done, ML, (SS), 4/02/96.
+
+	n.  Added a routine (TI_DAYM) to return the number of days in
+	    a given month and year.  Done, SJ, (SS), 4/19/96.
+
+	o.  Add new weather symbols for volcanic activity, sea spray, and
+	    unknown precipitation from automated stations.  These symbols
+	    are needed for METAR.  Done, LS, (SS), 4/19/96.
+
+	p.  Added PT routines to decode METAR weather codes.  Done, LS,
+	    (SS), 4/19/96.
+
+	q.  Updated several constants in GEMLIB and gemprm.* to
+	    correspond to NMC on ___ .  These include heat of
+	    vaporization, degree of latitude in meters, angular
+	    velocity of the earth, and conversion of knots to m/sec.
+	    Done, LS, (SS), 4/19/96.
+
+	r.  Corrected METAR present weather symbols decoding for case
+	    when thunderstorms with hail is reported.  Done, LS, (SS),
+	    4/30/96.
+
+	s.  Modified Nxm routines so that Exit and Help popups can not
+	    be resized.  Done, SW, (SS), 5/3/96.
+
+	t.  Corrected rotated coordinates in GPLT for certain CED map
+	    projections and LCC problem of straddling the Dateline.
+	    Done, KB, (SS), 5/3/96.
+
+	u.  Changed GR_FILE to DG_FILE.  Moved parameter LLMDGG from
+	    DGCMN to GEMPRM.  Increased LLSTFL from 2000 to 3800 in
+	    GEMPRM.  Done, SJ, (SS), 5/3/96.
+
+*	    Any user-written applications programs calling GR_FILE
+	    must change the name.
+
+	v.  Changed SFLIST to list both decoded and/or TEXT data.
+	    Added new parameter SFFSRC to documentation.  Added
+	    some error checking to DCNMDC.  Done, DK, (SS), 5/3/96.
+
+	w.  Corrected syntax in DG_HILO and TI_SUBM so that they will
+	    compile on AIX.  Done, ML, (SS), 05/03/96.
+
+	x.  Added checks for missing values in the middle of the CAPE
+	    calculations.  Done, SJ, (SS), 05/03/96.
+
+	y.  Added a check for lat/lon increments less than 0.1 in
+	    GGLTLN routine.  Done, KT, (SS), 05/07/96.
+
+	z.  Updated ez script EZCROSS.IPV to account for new calling
+	    sequence for PVOR.  Done, KT, (SS), 05/08/96.
+
+	aa. Added ability to draw multiple maps at one time.  Done,
+	    SJ, (SS), 05/08/96.
+
+	bb. Commented out parameters in GRIB tables that are not
+	    desired for decoding.  Done, DP, (SS), 05/08/96.
+
+	cc. Increased size of MAXTYPE from 60 to 200 for NWX master
+	    product list.  Done, SS, (SS), 05/08/96.
+
+	dd. Updated the version number to 5.3.1 in NT_VERS.
+	    Done, SJ, (SJ), 05/08/96.
+
+001. 	Grid Diagnostics
+
+	a.  Changed the variable "ntd" to "nmr" in the call to DG_MXNT in
+	    the routine DG_CWBT.  This caused a problem when the mixing
+	    ratio (RMIX) was a grid in the data set.  Done, SC, (SS), 
+	    02/13/96.
+
+	b.  Changed the variable 'mag' from an integer to a real 'rmg' 
+	    correcting a bug in DV_VASV.  Done, SC, (SS), 2/13/96.
+
+	c.  Changed GEMPAK internal diagnostic grids, dgg, from two
+	    dimensional to one dimensional array by introducing new
+	    statement function IGDPT.FNC.  Also, optimized internal
+	    grid usage in PVOR and FRNT functions.  Consolidated
+	    and improved current PVOR routines, and added moist PVOR
+	    (MPVR) function.  Done, TL, (SS), 4/26/96
+
+*	    Incompatible due to change from two to one dimensional array 
+	    in grid diagnostic functions that use internal grids.  This
+	    change affects any DG_, DF_, or DV_ subroutines which uses 
+	    the internal grid array, dgg.
+
+	d.  Corrected the placement of parentheses in the last equation
+	    in DV_MTNG.  Done, KT, (SS), 05/03/96.
+
+002.	NWX
+
+	a.  NWX was corrected for the following problems.  First, the 
+	    search algorithm was improved for MOS products to eliminate
+	    the problem of finding the incorrect station ID when its 
+	    characters are embedded in some other string.  The "M" type
+	    was added.  Second, for "S" type products, e.g., zone forecasts,
+	    a check was added to check for the product length not to exceed
+	    the maximum text buffer size.  Done, DP, (SS), 2/21/96.
+
+	b.  Corrected for redisplay of plotted data after zooming or
+	    change in map area.  Done, CL, (SS), 05/10/96
+
+	c.  Increased REPMAX variable in gemprm.h to 20000 to allow
+	    tomorrow's forecast matrix to be handled by NWX.  Done,
+	    SS, (SS), 05/10/96.
+
+003.	Grib Decoder
+
+	a.  Added GEMPRM.PRM to NA_RHDR so that IMISSD can be properly
+	    used.  Done, PB (SS), 2/22/96.
+
+	b.  Several enhancements have been made.  These include:
+	    1). Generalized ensemble processing.  2). Added GRIB decoding table
+	    specification.  3). The GRIB decoding tables have been modified
+	    to give appropriate GNAMS to all currently-definable parameters.
+	    Also, the Weather Center table format was changed to accommodate
+	    nicer center abbreviations.  4). Added diagnostic print of 
+	    individual parts of GRIB messages (byte and structure values).
+	    New parameter, GBDIAG is invoked to give diagnostic print.
+	    Done, DP, (SS), 03/06/96.
+
+*	    Incompatible with previous GRIB decoder because of changes made to
+	    the grib decoder tables.
+
+	c.  Several modifications have been made.  Bug corrections to the 
+	    GBDIAG implementation have been made.  Also, the code has 
+	    been updated to use the new CFL routines.  As a result,
+	    several calling sequence changes have been made. 
+	    Done, DP, (SS), 03/29/96.
+
+	d.  Corrected several additional bugs in the GRIB decoder.
+	    These include handling exceeding the max number of
+	    grids, a data decoding problem for the last byte,
+	    errors in the GNAM parameter.  Also, improved help file
+	    and improved diagnostic print out.  Done, DP, (SS),
+	    04/26/96.
+
+	e.  Added changes for grid filling so that staggered E grids
+	    can be decoded.  Done, KB, (SS), 05/02/96.
+
+004	AFOS Emulator
+
+	a.  Removed an extra space (typo) in motif.c  Done, PB, (SS),
+	    2/22/96
+
+
+005.	Documentation
+
+	a.  Corrected equations in Appendix B for equations DVDX and
+	    DVDY.  Done, KB, (SS), 2/22/96.
+
+	b.  Corrected GDOMEG help.  Removed reference to NPASS and
+	    that O'Brien correction is optional.  Done, SS, (SS),
+	    05/08/96.  
+
+006.	Grid Programs
+
+	a.  Corrected PDF for GDDELT.  It was incorrect because updated
+	    GDDELT.PRM was not delivered.  Done, SJ, (SS), 2/27/96.
+
+	b.  Added THRM to list of layer quantities to GDCROSS so that cross
+	    sections of thermal wind are possible.  Done, KB, (SS),
+	    04/19/96.
+
+007.	Decoders
+
+	a.  Developed new decoder to decode NGM MOS data.  Done, DK, 
+            (SS), 03/06/96.
+
+	b.  Updated SA decoder to handle reports that have record 
+	    separators (CHRS) and equal signs as delimiters between
+	    reports.  This update will now allow decoding of newer
+	    ASOS reports.  Updated DCSAO to use SF52.PACK as the
+	    default parameter packing table.  Done, SJ, (SS),
+	    03/06/96.
+
+	c.  Developed new upper-air decoder, DCUAIR, to decode
+	    radiosonde observations.  Also added new bridge library
+	    IF, that will be used by several decoders.  Done,
+	    JA, DK, (SS), 04/16/96.
+
+	d.  Corrected the way wind speed decoding in NGM MOS decoder.
+	    Also, corrected spelling error in documentation.
+	    Done, KT, DK, (SS), 04/19/96.
+
+	e.  Modified bridge software to return and process either WMO or 
+	    AFOS bulletins.  Updated the SAO decoder to decode AFOS 
+	    reports.  Added new parameter SFFSRC (file source) to 
+	    program SFCFIL to alow the storing of text data (undecoded
+	    reports) into GEMPAK files.  Modified underlying surface
+	    routines to read and write text data to GEMPAK files.
+	    Modified NMG MOS decoder to store both decoded and text
+	    data.  Done, DK, SJ (SS), 4/25/96.
+
+	f.  Corrected RA_RMKS to avoid an infinite loop for certain
+	    cases in the SAO remarks section.  This correction
+	    was submitted by Larry Oolman of the University of
+	    Wyoming.  Done, SJ, (SS), 4/25/96.
+
+	g.  Added new MRF MOS decoder.  Done, LS, (SS), 5/03/96.
+
+	h.  Fixed the calling sequence for the file opening
+	    routines in DC_FCYL.  Done, SJ, (SS), 5/13/96.
+	    
+
+008.	Image Processing
+
+	a.  Moved the enhancement table pop-up width specification in NSAT
+	    to the resource file.  Done, CL, (SS), 03/06/96
+
+*	    Incompatible due to resource file change.
+
+	b.  Added map and lat/lon attributes to NSAT.  Done, SW, (SS),
+	    05/03/96.
+
+	c.  Corrected several bugs in GUI programs.  Also added display
+	    of lat/lon in NSAT.  Bug fixes include: print problem in
+	    NTRANS, background color initialization in NTL, lat/lon = 0
+	    problem in NSAT, display of area0540 problem in NSAT, 
+	    color initialization problem, and line width specification
+	    problem in NSAT for map and lat/lon attributes. Done,
+	    CL, (SS), 5/06/96.
+
+	d.  Corrected several bugs in NWX and AFOS programs.  These bugs
+	    include: color cell allocation problem, trapping errors,
+	    and clearing the station plot in NWX when switching to a
+	    new product.  Done, LW, (SS), 5/06/96.
+
+	e.  Corrected some additional NTRANS problems.  These changes
+	    involved trapping invalid user input for the group function.
+	    Checks for the number of frames, return when no group has
+	    been selected, and proper clearing of the frame list have
+	    been added.  Done, LW, (SS), 05/07/96.
+
+	f.  Modified lat/lon and map attributes to have just one 
+	    widget.  Done, SW, (SS), 05/07/96
+
+	g.  Corrected two NSAT bugs that caused core dump on the SUN.
+	    Done, CL, (SS), 05/07/96.
+
+009.	Parameter Calculations
+
+	a.  Improved wind chill equivalent temperature calculation.  Also
+	    updated TESTPR to include PR_WCEQ, PR_HMTR, and PR_HEAT.
+	    Done, SJ, (SS), 03/20/96.
+
+	b.  Replaced instances of 273.xx with a new parameter TMCK.  Also
+
+	    replaced explicit Centigrade to Fahrenheit conversion with
+	    calls to function PR_TMCK.  Done, GK, (SS), 4/4/96.
+
+010.	NTRANS
+
+	a.  Fixed the non-color printing problem where lines were being
+	    printed in grey shades instead of solid black.  Done,
+	    CL, (SS), 03/26/96.
+
+	b.  Changed "Psize" from an integer to a float in psdrv.h to 
+	    fix a problem with text sizes when printing groups of frames.
+	    Done, LW, (SJ), 05/09/96.
+
+011.	Device Drivers
+
+	a.  Several modifications were made to the device drivers and
+	    associated GEMPLT software.
+
+	    Added and modified attribute setting for device drivers.
+	    Added ability to set the size of the XW and PS drivers.
+	    Added the ability to set the color scheme for the PS
+	    driver.  Modified the setting of the output file or
+	    window name.
+
+	    Rewrote the color setting routines in C and added them
+	    to the GN library.
+
+	    Rewrote the PS driver in C and merged the contents of
+	    the different drivers (PS, PS1, PSC, PSP) into a
+	    single driver.  Done, SJ, CL, ML, LW, EW, (SS), 
+	    4/12/96.
+
+*	    Incompatible due to additions of attribute setting for
+	    device drivers, color setting changes.
+
+	b.  Corrected device driver attribute delivery to allow
+	    the GUI programs to open the windows properly.  Done,
+	    SJ, (SS), 4/16/96.
+
+	c.  Updated GUI programs to use the new GEMPAK drivers
+	    properly.  Done, CL, (SS), 4/17/96.
+
+	d.  Added a GIF driver as a new output device.  Done, SJ,
+	    (SS), 4/25/96.
+
+
+	e.  Made many corrections to the new device driver software.
+	    Updated HP and VT drivers to work properly.  Corrected
+	    problem where no device is specified.  Corrected errors
+	    which caused a core dump on Sun for GPLOT_NC.  Corrected
+	    color parsing for GG_PANL and IN_HILO.  Fixed querying
+	    color components for PS and NC drivers.  Added two
+	    new functions GSLWIN and GQDATT for window selection
+	    and returning window attribute information.  Fixed
+	    error message in NT_SWIN.  Done, SJ, (SS), 5/3/96.
+
+	f.  Changed GG_SDEV to accept PS1, PSC, PSP as valid 
+	    names for device.  Also, changed PS1 to draw lines
+	    and text in black and do fills with the 20 grey 
+	    shades.  Cleaned up GPLT and DEVICE, removed
+	    GSDEV, DINITD, GSFLNM, DSFLNM, HINITD, HSFLNM from
+	    all source.  Done, SJ, (SS), 05/07/96.
+
+012.	Clean up for delivery, Done, SJ, (SJ), 05/09/96
+
+	a.  Remove program: GDMOD2
+	    Remove program: SFRSSD
+	    Remove directory: nprogs/afos/source/products
+	    Remove file: resource/Nwx_new
+	    Remove file: tables/nsat/wc
+	    Remove directory: tables/nsat/rgb64
+	    Remove directory: tarfiles
+	    Remove drivers: all OLD drivers
+		(CT,DI,GKS,LA,LN,MC,PS,PS1,PSC,PSP,QM,SG)
+
+*	    Incompatible due to removal of GDMOD2, SFRSSD, and
+	    old device drivers.
+
+	b.  Move "gempak5.3" to "gempak"
+
+*	    Incompatible due to directory name change.
+
+	c.  Move all log files to "v5.3.1" directory

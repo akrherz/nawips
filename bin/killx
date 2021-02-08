@@ -1,0 +1,17 @@
+#!/bin/csh
+#
+# KILLX
+#
+if ( $OS == "AIX" ) then
+    foreach pid ( `ps -u $LOGNAME | grep $1 | grep -v killx | grep -v grep | cut -c7-13` )
+        set proc = `echo $pid | cut -f1`
+        echo Killing $1 process $proc
+        kill -9 $proc  >& /dev/null
+    end
+else
+    foreach pid ( `ps -u $LOGNAME | grep $1 | grep -v killx | grep -v grep | cut -c1-6` )
+        set proc = `echo $pid | cut -f1`
+        echo Killing $1 process $proc
+        kill -9 $proc  >& /dev/null
+    end
+endif    

@@ -1,0 +1,3 @@
+$FC $FFLAGS $LDFLAGS -o plotxbms plotxbms.f \
+		-lappl -lgemlib -lcgemlib -lgemlib -lsyslib
+$RM plotxbms.o

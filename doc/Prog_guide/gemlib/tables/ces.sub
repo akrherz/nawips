@@ -1,0 +1,27 @@
+#------------------------------------------------------------------------
+# ces.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 9/97	Original
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+cesset.c	- Change One Element Settings In Drawing Table
+#ceseldmp.c	- Dump One Element Settings To Screen
+cesget.c	- Load One Element Settings Into Header
+cesgetinx.c	- Get Index Of Matching Element Settings
+#cesinit.c	- Initialize Settings Library
+cesrtbl.c	- Load Settings From Drawing Table
+# testces.c	- CES Library Test Program
+
+#------------------------------------------------------------------------

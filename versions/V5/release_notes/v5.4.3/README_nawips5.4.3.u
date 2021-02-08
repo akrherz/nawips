@@ -1,0 +1,124 @@
+			N-AWIPS 5.4.3.u Patch Release Notes
+				9/9/99	
+
+Patch 5.4.3.u covers development from August 19 to September 7, 1999.   
+
+		  Product Generation Changes
+		  --------------------------
+
+New product generation functions include:
+
+	o  Added capability to draw "From" lines for Domestic 
+	   sigmets (Convective, Outlooks, Non-Convective), and
+	   AIRMETS.  The From line coordinates can be saved to
+	   text files.  The text files are named using the product
+	   identifier in the table GEMTBL/pgen/sigmetinfo.tbl
+	   concatenated with the sequence number concatenated with
+	   ".from".  
+
+	   The following functions do not operate properly on sigmet
+	   objects:
+
+		- partial delete
+		- multi select
+		- labeling
+		- delete object
+		- connect
+		- modify
+	   
+	   In this patch, portions of the International sigmet are
+	   formatted. The first line of the International sigmet is 
+	   formatted along with the "From" line coordinates.  The 
+	   date, movement, trend, remarks and forecaster are not yet 
+	   formatted.  These parameters will be added in the next patch.
+	   The formatted International sigmet can be saved into a text 
+	   file with the following naming convention:  MWO concatenated 
+	   with ID concatenated with the sequence number concatenated 
+	   with ".sigintl".
+
+
+Improvements to NMAP product generation functions include:
+
+	o  Changed the name of the hurricane text product to use
+	   the first three characters of the VG file name.
+
+
+New product generation post-processing functions include:
+
+	o  Wrote a new program, SPCTXT, that reads the NMAP
+	   generated Watch text file and creates the SAW, 
+	   SEL, and SEV text products.  SPCTXT is ready
+	   for SPC testing and evaluation.
+
+Product generation bug corrections include:
+
+	o  Corrected fatal bug when labeling objects.  This 
+	   problem occurred when objects already labeled were labeled 
+	   again.  Also, corrected problem with labels when character 
+	   strings greater than 19 characters were truncated.
+
+
+			NMAP Display Improvements	
+			-------------------------
+
+	o  Added capability to display watch status lines.  The 
+	   attributes of watch status lines can be changed by clicking
+	   on the edit button corresponding to the "WTCH_WARN" button.
+
+	o  Set the icon tips to off by default.
+
+	o  Corrected the turning off the map background in the map
+	   selection widget.
+
+			Decoder Improvements
+			--------------------
+
+	o  Modified the watch decoder to also decode WWUS8 (watch
+	   status) bulletins. 
+
+	o  Modified aircraft decoder dcacft (at the request of AWC)
+	   to improve the decoding of haze and haze tops.
+
+
+			Known Problems
+			--------------
+
+Auto-update occasionally fails to properly update when the skip 
+factor is greater than one.
+
+			Planned Development
+			-------------------
+
+This section is an attempt to communicate CDB software development
+plans.  The information is an estimate at the time the release notes
+are written.
+
+The following describes some of the capabilities we are anticipating 
+delivering in future patches:
+
+NMAP Data Handling Redesign:  Anticipated Delivery - September
+----------------------------
+
+	Significant changes in NMAP data handling are being made.  
+	These changes will make it much easier to add new data types 
+	to NMAP.  Also, the re-design will allow new capabilities 
+	such as multiple loops, paneling, and saving display 
+	configurations to be added in the future.  A prototype
+	NMAP with some of these features, called NMAP2, will be 
+	delivered in the next patch.  NMAP2 will be delivered
+	in addition to NMAP for testing and evaluation.  It should
+	not be used for operational purposes.
+
+
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+	patch_build_5.4.3.u 
+
+To execute the script and save its output in a file type:
+
+	cd $GEMPAK/build
+	patch_build_5.4.3.u >&! PATCH_$OS & ; tail -f PATCH_$OS
+
+The output of the script will be written to PATCH_$OS.

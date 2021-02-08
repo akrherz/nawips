@@ -1,0 +1,9 @@
+Graph-to-Grid
+
+	A. Added vector information to .info file
+
+	Wind barb and vector information (speed, direction, location, etc.) has 
+	been added to the information file, '*.info'. This information is in 
+	preparation for later development of generating U and V grids from 
+	randomly placed wind barbs/vectors. The additional information should 
+	not impact the current performance or capabilities.

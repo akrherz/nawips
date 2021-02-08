@@ -1,0 +1,17 @@
+#!/bin/csh
+
+# Copy the log files to a version archive.
+# Do this prior to creating a new version number.
+
+if  ( $#argv < 1 )  then
+    echo "Usage: $0 dir_name"
+    exit
+endif
+
+if ( ! -d ${1} ) then
+    mkdir ${1}
+endif
+
+foreach i ( changes config nawips remove tables )
+    cp ${i}.log ${1}/${i}_${1}
+end

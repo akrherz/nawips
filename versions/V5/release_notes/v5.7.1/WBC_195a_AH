@@ -1,0 +1,8 @@
+I.  Product Generation Changes
+
+    A.  NMAP/NMAP2 Product Generation Improvements
+
+	1. Added New Group Type (SPC)
+
+           Added a new group type, TSTMOLK to the group type table.  Its 
+	   attributes can be changed in the table, $GEMTBL/pgen/grptyp.tbl. 

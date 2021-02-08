@@ -1,0 +1,9 @@
+I.  Product Generation Changes
+
+    A.  NMAP/NMAP2 Product Generation Improvements
+
+      1. Added more layers to the user interface (AWC)
+
+	     Increased the number of available layers from 10 to 20.  The 
+	   additional layers are available either manually (via Add Layer) or
+	   by adding entries for layers 11-20 to an .lpf file.

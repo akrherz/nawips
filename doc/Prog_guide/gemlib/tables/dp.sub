@@ -1,0 +1,33 @@
+#------------------------------------------------------------------------
+# dp.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+#------------------------------------------------------------------------
+
+dpendp.f	- Release Packing Number
+dpfile.f	- Read Packing File
+dppack.f	- Pack Data
+dppdec.f	- Pack Grid In DEC Format
+dppdif.f	- Pack Grid In DIF Format
+dppgrb.f	- Pack Grid In GRIB Format
+dpsetp.f	- Define Packing Terms
+dpterm.f	- Compute Packing Terms
+dpudif.f	- Unpack Grid In DIF Format
+dpugrb.f	- Unpack Grid In GRIB Format
+dpunmc.f	- Unpack Grid In NMC Format
+dpunpk.f	- Unpack Data
+# testdp.f	- DP Library Test Program
+
+#------------------------------------------------------------------------

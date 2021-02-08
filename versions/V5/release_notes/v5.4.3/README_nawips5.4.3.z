@@ -1,0 +1,418 @@
+			N-AWIPS 5.4.3.z Patch Release Notes
+				3/22/00	
+
+Patch 5.4.3.z covers development from February 7 to March 22, 2000.  
+
+
+I. Product Generation Changes
+
+    A. New NMAP Functions 
+	
+	1. Collaborative Convective Forecast Product (CCFP)
+
+	   The new product generation element (CCF) 
+	   defines an area (or line) of convection with 
+	   associated values for coverage, tops, probability, growth, and 
+	   wind speed and direction. 
+	   The CCF element displays the convective area, creates a text box to
+	   display the coverage, tops, probability and growth, and also creates
+	   a directional arrow w/ speed text.  Each individual element 
+	   may be manipulated/moved. However, changes to the
+	   content of the text must be done using the CCF attribute editing gui.
+	   The wind direction may be changed either by rotating the arrow or
+	   through the CCF attribute editing gui.
+
+	   The CCF text product may be created via the "PROD" button and then 
+	   the "CCFP" button.  The user selects the proper date and time; the 
+	   text is displayed for inspection and then stored in the file 
+	   "YYYYMMDD_HH.ccfp".
+
+	2. Preliminary Versions of WCL, SEV, SAW Text Products       
+
+ 	   These text products are automatically created when the text file 
+	   is saved.  The text files are named WW### followed by a .SAW, 
+	   SEV, WCL for each product.  Note that presently there is no way 
+	   to generate cancelled watches directly in NMAP.  A GUI will be 
+	   added in the future.
+
+    B. NMAP Product Generation Improvements
+
+	1. Graph-to-grid function
+
+		a. New tables were added to control the initialization and 
+		   processing of all variables associated with the 
+		   graph-to-grid processing.  The first table, grphgd.tbl, 
+		   simply contains a list of restoration tables for individual 
+		   products.  At this delivery, there is only one table 
+		   listed, that for QPF product processing (qpf.tbl).  See the 
+		   internal documentation of "grphgd.tbl" for important 
+		   information regarding filename templates, etc.
+
+		b. When a grid is created, it is contoured and displayed using 
+		   the parameters CINT and LINE now provided in the 
+		   graph-to-grid interface.
+
+	2.  Watch Generation function
+
+		a. Added capability to add and delete counties.
+		
+		b. Added a check for no counties created when formatting
+		   the watch. A warning pop-up prompts the user to 
+		   create the counties corresponding to the watch box.
+
+		c. The time zone and watch type must now be entered
+		   by the user in the "Format Watch" GUI. A warning 
+		   popup is generated if these parameters are not
+		   entered.
+
+		d. Corrected problem where county markers were not
+		   properly removed after editing or moving a watch 
+		   box after clicking on "Create Counties".
+
+		e. Removed the "Show Display" option from the 
+		   "Watch Attributes" GUI when creating a watch.
+		   This change corrects a fatal error that occurred
+		   when "Show Display" was clicked during the 
+		   creation of the watch.
+
+		f. Corrected SEL format as requested by the SPC.
+
+	3. Watch Status Function 
+
+		a. Made several modifications to the Watch Warning
+		   Advisory GUI requested by the SPC.
+
+		b. Made the Watch Warning Advisory Save GUI text
+		   window editable by the user. 
+	
+		c. Made format corrections to the text product.
+
+	4. Outlook Generation Function
+
+		a. Added capability to generate a Day 3 outlook.
+
+		b. Added default initial and expiration times to
+		   the Format Outlook GUI that are table-driven.
+		   A new table, $GEMTBL/pgen/outlooktimes.tbl
+		   specifies default times for different clock
+		   times for Day 1,2, and 3 Outlooks.
+
+	5. VGF Open in Product Generation  
+
+	   The open is now table driven and uses the same table, 
+	   $GEMTBL/nmap/vgf.nmap as the VGF open for background display.  
+	   The first column of the table specifies the name which
+	   appears in the Open VG File GUI.  The second column specifies
+	   the directory path to the VG files.  By default, VG files in 
+	   the local directory are displayed for selection.
+
+	   IMPORTANT PLEASE NOTE:
+	   The format of $GEMTBL/nmap/vgf.nmap has changed.
+	   The second column specifying the user ID is no longer 
+	   used and has been removed.  NMAP will still read the table 
+	   in the old format but it will ignore the second column.
+
+	6. Removed the combination symbols 07 and 09 from the combination
+	   symbols palette at the request of the HPC.
+		 
+
+II. NMAP Display Improvements	
+
+    A. Seek/Locator Functions
+
+	1. The seek function has been simplified and the GUI size has
+	   been reduced by removing the state option and the 
+	   last point button.  Also, the default number of
+	   cities has been reduced to one and the GUI size has 
+	   been reduced accordingly.
+
+	2. Added the island category to the seek/locator functions
+	   at the request of the TPC.  A new table:
+	   $GEMTBL/stns/island.tbl contains islands in the tropics.
+	   Additional islands can be added to seek/locator
+	   functions by modifying this table.
+
+	3. Added the capability to edit locator attributes such
+	   as distance and direction units, rounding criteria,
+	   and display options.  To edit these parameters, click 
+	   on the "Edit" option on the locator pop-up to invoke 
+     	   the "LOCATOR SELECT and Edit" panel.  Also, added the 
+	   capability to display distance and direction relative 
+	   to city.  
+
+	4. Corrected problem where long county and city names
+	   were truncated in the "Seek Results" panel. 
+
+	5. Added a direction to the display of distance when
+	   holding the left mouse button while in the seek 
+	   function.  Also, the display of the distance and 
+	   direction information is always visible no matter
+	   where the cursor is located on the screen.
+
+	6. Added capability to enter lat/lon in degrees, minutes
+	   format in the Seek text box.  The format is degrees 
+	   followed by a colon, followed by minutes (ddd:mm).  
+	   After the lat/lon values are entered, they are 
+	   converted and displayed in decimal units.
+
+    B. Improved Cloud Height Function
+
+	The cloud height function no longer requires the images
+	to be stored in a directory with "IR" in its name.  The
+	image channel information is now read from the image
+	header.  This change was made at the request of the 
+	AWC.
+
+    C. 	Added Ice Accretion to NMAP Display
+	
+	The ice accretion rate, DIGR, has been added to NMAP at the
+	request of the MPC.  The Waves_ice station model displays
+	this parameter.
+	
+
+III. NMAP Bug Corrections
+
+    A. Corrected fatal problem on Linux when grouping text with
+       lines.
+
+    B. Corrected a problem introduced in patch y, where flipping
+       fronts generated vertices in the wrong order.
+
+    C. Corrected improper radar image time for local radars.
+       The image time in the title now matches the time
+       in the NMAP main window border.
+
+    D. Adjusted the position of several product generation 
+       GUIs so that they appear properly on Linux platforms.
+
+
+IV. Decoder Improvements
+
+    A. Aircraft Decoder
+
+       Modified the aircraft decoder, DCACFT, to decode varying 
+       formats of turbulence data reported in AIREPs.  This
+       change was done at the request of the AWC.
+
+    B. International Sigmet Decoder
+
+       Added the decoding of Japanese international sigmet 
+       reports. 
+
+    C. METAR Decoder
+
+       Modified the METAR decoder, DCMETR, to allow an AWIPS
+       ID to follow the WMO header.  Also added the decoding
+       of mean sea level pressure from the remarks section
+       of Mexican reports.
+
+
+V. Map Improvements
+
+    A. RFC Basin Map
+
+       Created a new map that combines all of the RFC basin maps
+       into one map.  The map is named: tprbus.rfc
+
+    B. World Maps
+
+       Removed the border between East and West Germany in map
+       files where this border occurred at the request of the
+       AWC.
+
+    C. Updates Made to Offshore Marine Zones.
+
+    D. Updates Made to Colorado Zones.  
+
+    E. Removed the bogus islands in the Gulf of Mexico at the 
+       request of the TPC.
+
+
+VI. General Improvements
+
+    A.  European International Sigmets Plotting
+
+        GPMAP and NMAP now properly position symbols for non-closed 
+	areas.
+
+    B.  New Lightning Data Sources
+
+        NMAP and GPMAP can now plot TRMM and off-shore lightning 
+	data.
+
+    C.  Program GDGRIB GRIB Encoder
+
+	A new program, GDGRIB, has been developed by the HPC to save a
+	grid to a GRIB file.  The program has been tested for HPC
+	functions only.  GDGRIB has been put in a contrib directory:
+
+	$GEMPAK/source/contrib/hpc/gdgrib
+
+VII. General Bug Corrections
+
+    A.  AWIPS Red Book Graphics Driver
+
+	1. Added the ability to set a base date for 
+	   the product. 
+	  
+	2. Corrected issue time in the product header.
+
+	3. Corrected the file size specification in the 
+	   communications header.
+
+	4. Corrected and updated the Red Book product table,
+	   $GEMTBL/pgen/awdef.tbl.  Re-organized the table
+	   by center and added products.  Removed automated
+	   products not produced by the service centers.
+
+    B.  GPMAP Red Book Graphics Display
+
+        Corrected GPMAP to properly display large Red Book 
+        Graphics files.
+
+    C.  Contour Fill Sub-Boxing
+
+        Changed the contour fill algorithm to not use sub-boxing
+        when CONTUR=1 making it consistent with the line contouring
+        algorithm.
+
+    D.  NWX 
+
+        Corrected improper string declarations in NWX reported
+        by the AWC.
+
+    E.  Watch Plotting
+
+        Fixed the plotting of corrected watches in GPMAP and
+        NMAP.
+		
+
+VIII. Known Problems
+
+    A.  Auto-update 
+
+        Auto-update occasionally fails to properly update when the skip 
+        factor is greater than one.
+
+    B.  Seek Function
+
+	1. The Seek function does not display the ghost markers and line when
+           roaming.  Click on the "Seek Results" window to make these features
+           reappear after roaming.  Also, if the data set or map background is 
+           changed, the seek function exits.  Click on the seek function 
+	   icon to restore its current settings.
+
+	2. The seek function does not locate the county if an independent city
+           of the same name exists in the county's state.  The seek function
+           finds the independent city instead.
+
+
+IX. Calling Sequence Changes
+
+    A. $GEMPAK/source/bridge/is/iseggy.f
+    B. $GEMPAK/source/programs/gd/grphgd/ggdriv.f
+    C. $GEMPAK/source/nmaplib/pgen/nmap_pgggc.c
+    D. $GEMPAK/source/gemlib/gg/ggltng.f
+    E. $GEMPAK/source/cgemlib/cst/cstwrap.c
+    F. $GEMPAK/source/nmaplib/pgen/nmap_pgutls.c
+
+See the nawips.log and changes.log for additional details concerning
+these routines.
+
+
+X. NMAP2: Evaluation Version:
+
+**** NOTE THAT NMAP2 SHOULD NOT BE USED TO CREATE OPERATIONAL PRODUCTS. ****  
+
+NMAP2 continues to be made available to obtain user feedback.  Many 
+bug corrections and improvements have been made in response to user 
+feedback and CDB testing.
+
+    A. NMAP functions NOT implemented in NMAP2
+
+	1. The "stop" function is not implemented.
+
+	2. Default data set selections for specific types, e.g, satellite
+	   data are not implemented in NMAP2.
+
+	3. Removed the "wipe" button that erased all frames in all loops.
+	   This function will be modified to just erase the currently
+	   viewed loop in a future release.
+	
+
+    B. NMAP2 Bug Corrections
+
+	1. NMAP2 now "remembers" which frame is displayed when switching
+	   between loops.
+
+	2. Corrected problem with loading the incorrect look-up table
+	   when auto-updating images.
+
+	3. Corrected auto-update function for images with names that
+	   contain 4 digit years.  This problem occurred at the TPC. 
+
+	4. Corrected refresh problem when reloading VG files.
+
+	5. The "Show image" function now displays the most recent image
+	   instead of the oldest image in the loop.
+
+
+    C. NMAP2 Improvements
+
+	1. Modified data access routines to allow NMAP2 to access
+	   the image databases at the SPC and AWC.
+
+	   IMPORTANT PLEASE NOTE:
+	   
+	   The table $GEMTBL/config/datatype.tbl has changed.
+	   The entries for RAD and SAT now have file name templates.
+	   These templates MUST be added for NMAP2 to properly access
+	   radar and satellite data.
+
+	2. Added the "Set Time" capability.
+
+	3. Added the "RELOAD" function.
+
+	4. The model data now displays the first frame while loading
+	   the remaining frames in the loop.
+
+	5. Added a message in the lower left border of the main
+	   NMAP window that indicates what loop is being loaded.
+	   Also, corrected the frame counter to properly indicate
+	   which frame is being loaded.
+
+	6. Added capability to display different types of
+	   lightning data including domestic, off-shore, and
+	   TRMM.  These data types can also be displayed in 
+	   GPMAP.
+
+	7. Added the capability to edit attributes of watches, 
+	   warnings, hurricane graphics, SIGMETs, lightning, 
+	   and VGF data types.  
+	   
+	   Note that the line, symbol, and arrow size and width 
+	   attribute editing has not been implemented yet.  This 
+	   functionality will be completed in a future release.
+
+    D. NMAP2 Known Bugs
+
+    	1. Zooming images is not reliable and may cause errors that 
+	   can not be corrected without exiting the program.
+
+	2. Model titles still overwrite each other when image and model
+	   data are combined.
+
+	3. The time line does not properly update with non-image data 
+	   types.
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+	patch_build_5.4.3.z 
+
+To execute the script and save its output in a file type:
+
+	cd $GEMPAK/build
+	patch_build_5.4.3.z >&! PATCH_$NA_OS & ; tail -f PATCH_$NA_OS
+
+The output of the script will be written to PATCH_$NA.

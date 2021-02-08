@@ -1,0 +1,38 @@
+#------------------------------------------------------------------------
+# cgr.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 8/97	Original
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Added cgrrolseg.c
+# T. Piper/GSC		10/00	Removed 11 obsolete routines
+#------------------------------------------------------------------------
+
+cgrbounds.c	- Check Point If Within Bounding Box
+cgrcntstrks.c	- Count Strokes Along Line
+cgrdang.c	- Determine Angle Defined By Two Points
+cgrdist.c	- Determine Distance To Polygon
+cgrinpoly.c	- Check If Point Inside Or Outside
+#cgrintrsct.c	- Calculate Intercept Along Line
+cgrlindist.c	- Calculate Distance to Line
+cgrntrsct.c	- Check If Bounding Boxes Intersect
+cgrpolyint.c	- Check If Two Polygons Intersect
+cgrrolseg.c	- Determine If Point Is On Or To Right Of Line
+cgrsegdist.c	- Calculate Distance to Segment
+cgrsegint.c	- Check If Lines Intersect
+#cgrtangent.c	- Calculate Slope Of Tangent
+cgrtorad.c	- Convert Degrees To Radians
+cgrynxt.c	- Get Next Polygon Vertex
+# testcgr.c	- CGR Library Test Program
+
+#------------------------------------------------------------------------

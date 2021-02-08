@@ -1,0 +1,124 @@
+#------------------------------------------------------------------------
+# pr.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		11/97	Updated
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Updated
+#------------------------------------------------------------------------
+
+pralti.f	- ALTI From ALTM
+praltm.f	- ALTM From ALTI
+praltp.f	- ALTI From PRES, SELV
+pramsl.f	- SALT From ALTM
+prcfct.f	- CLCT From CFRT	
+prclct.f	- CLCT From CLCL, CLCM, CLCH
+prclcx.f	- CLCX From COMX
+prclhx.f	- CLHX From COMX
+prcloa.f	- XCLO From CLCX
+prcmbc.f	- CMBC From CLCL, CLCM, CLCH
+prcomh.f	- COMH From CHC1, CHC2, CHC3
+prcoml.f	- COML From CHC1, CHC2, CHC3
+prcomm.f	- COMM From CHC1, CHC2, CHC3
+prcomt.f	- COMT From COML, COMM, COMH
+prcomx.f	- COMX From CLHX, CLCX
+prcsyh.f	- CSYH From CTYH
+prcsyl.f	- CSYL From CTYL
+prcsym.f	- CSYM From CTYM
+prcsyt.f	- CSYT From CTYL, CTYM, CTYH
+prctcc.f	- CLCT From CHC1, CHC2, CHC3
+prctcf.f	- CFRT From CLCT
+prd100.f	- Divide By 100
+prdden.f	- DDEN From PRES, TMPC
+prddep.f	- DPDX From TMPX, DWPX
+prdmax.f	- DMAX From T00X, T06X, TDXC
+prdmin.f	- DMIN From T12N, T18N
+prdrct.f	- DRCT From UX, VX
+prdwdp.f	- DWPX From TMPX, DPDX
+prdwpt.f	- DWPT From MIXR, PRES
+prheat.f	- HEAT From TMPF, RELH
+prhgfm.f	- HGHT From HGFT
+prhgfs.f	- HGML From HGFT
+prhgkm.f	- HGHT From HGTK
+prhgmd.f	- HGTD From HGHT
+prhgmf.f	- HGFT From HGHT
+prhgmk.f	- HGTK From HGHT
+prhgsf.f	- HGFT From HGML
+prhmtr.f	- HMTR From TMPF, DWPF
+prinmm.f	- mm From Inches/100
+prknms.f	- SPED From SKNT
+prlati.f	- LATI From RANG, AZIM
+prlhvp.f	- LHVP From TMPC
+prloni.f	- LONI From RANG, AZIM
+prltmp.f	- Lifted Parcel
+prm100.f	- Multiply By 100
+prmhgt.f	- Compute MHGT
+prmixr.f	- MIXR From DWPC, PRES
+prmmin.f	- Inches/100 From mm
+prmskn.f	- SKNT From SPED
+prnsym.f	- WWMO From WNUM
+prp03c.f	- P03C From P03D
+prp03d.f	- Pressure Tendency Code
+prpalt.f	- PALT From ALTM, SELV
+prpkdd.f	- DRCT From PSPD
+prpkss.f	- SPED From PSPD
+prplcl.f	- PLCL From TMPC, PRES, TLCL
+prpmsl.f	- PMSL From PRES, TMPC, DWPC,SELV
+prpres.f	- PRES From TMPC,THTA
+prpspd.f	- PSPD From DRCT, SPED
+prptsy.f	- PTSY From P03D
+prrelh.f	- RELH From TMPC, DWPC
+prrhdp.f	- DWPC From TMPC, RELH
+prrzll.f	- LAT/LON From Station Info
+prsali.f	- SALI From ALTI
+prsalt.f	- SALT From ALTI
+prsclh.f	- Compute Scale Height
+prskyx.f	- SKYX From SKYC, DRCT, SPED
+prsped.f	- SPED From UWND, VWND
+prstdz.f	- STDZ From PRES, HGHT
+prthta.f	- THTA From TMPC, PRES
+prthte.f	- THTE From PRES, TMPC, DWPC
+prthwc.f	- Compute Wet Bulb Potential Temperature
+prtlcl.f	- TLCL From TMPC, DWPC
+prtmcf.f	- TMPF From TMPC
+prtmck.f	- TMPK From TMPC
+prtmfc.f	- TMPC From TMPF
+prtmfk.f	- TMPK From TMPF
+prtmkc.f	- TMPC From TMPK
+prtmkf.f	- TMPF From TMPK
+prtmpk.f	- TMPK From PRES, THTA
+prtmst.f	- Parcel Temperature
+prtmwb.f	- TMWB From TMPK, RMIX, PRES
+prtpfr.f	- TPFR From TMIN, TMAX, PP24
+prtvrk.f	- TVRK From TMPC, DWPC, PRES
+pruwnd.f	- UWND From SPED, DRCT
+prvapr.f	- VAPR From DWPC
+prvskn.f	- Kilometers To Nautical Miles
+prvwnd.f	- VWND From SPED, DRCT
+prwccv.f	- Cloud Cover Code To Fraction
+prwceq.f	- WCEQ From TMPF, SKNT
+prwcmp.f	- Wind Component
+prwind.f	- Wind From DRCT, SPED
+prwnml.f	- Normal Wind Component
+prwphf.f	- WPHF From POWV, HOWV
+prwphm.f	- WPHM From WPER, WHGT
+prwtnd.f	- Pressure Tendency
+prwvdd.f	- WVDD From DOSW, DOS2
+prwvis.f	- Visibility
+prwvph.f	- WVPH From POWV, HOWV
+prwvsw.f	- WVSW From DOSW, POSW, HOSW
+przalt.f	- ZALT From ALTM, PRES
+# testpr.f	- PR Library Test Program
+
+#------------------------------------------------------------------------

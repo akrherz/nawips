@@ -1,0 +1,31 @@
+Product Generations Changes
+
+Add "All On" and "All Off" buttons to the Layer Control.
+
+
+   These buttons are shortcut mechanisms to turn the checkboxes for all the 
+   layers in the layer control window either on or off.  Each layer checkbox 
+   controls whether or not vg elements on the corresponding layer are displayed 
+   when that layer is not the active layer.  (The active layer selection is 
+   indicated by the layer name button with the black background and white text).
+   Note that the current layer is always displayed regardless of the status of 
+   it's corresponding check box.
+
+
+Fixed symbol labeling from grptyp.tbl. (HPC)
+
+   Symbols now support text label attributes based on grptyp.tbl entries.  This
+   is similar to the functionality that lines support.  When the user clicks 
+   the label button in the symbol GUI to On, the label menu is made available.  
+   The list of labels is taken from the grptyp.tbl.  Each label is now linked to
+   an attribute string (also in the grptyp.tbl) which can be used to set 
+   default label attributes.  So for example, the first label, say "1006", 
+   for a specific group can default to a color of cyan and a font of Courier, 
+   while the next label, "1008", could default to green and a font of Helvetica.
+
+
+Use number keys as hotkeys for switching layers.
+
+   Added hotkeys to control layer switching from the keyboard.  Keys 1..0 
+   switch the active layer to layers 1 - 10.  The key combination of Shift and 
+   1..0 change the active layer to layers 11 - 20.

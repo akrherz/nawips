@@ -1,0 +1,9 @@
+GAMET text production
+
+A new library has been added that will be used to 
+create the GAMET text product, which is part of the
+Graphical Forecast for Aviation (GFA) project. The
+library was created in collaboration with FSL.
+
+The library is not currently used, but will be 
+implemented in NMAP2 in a future release.

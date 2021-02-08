@@ -1,0 +1,38 @@
+			N-AWIPS 5.6.c.1 Release Notes
+				4/3/01	
+
+
+Patch 5.6.c.1 corrects the following problems in product generation found in 
+version 5.6.c  
+
+	1. Corrected the problem where front and symbol size and widths could
+	   not be edited.
+
+	2. Corrected the problem where the excessive rainfall product was 
+	   not generated properly when the label was enabled.
+
+	3. Corrected the problem where objects were improperly assigned group 
+	   numbers when saved to the VG file.
+
+The outlook generation software was modified to distinguish between filled 
+and unfilled lines with no text label.  Filled lines generate 
+"SIGNIFICANT SEVERE" and unfilled lines generate "GENERAL THUNDERSTORMS" in 
+the outlook text products.  This modification was done at the request of the 
+SPC.
+
+*****************************************************************************
+
+NOTE:  The patch for V5.6.c MUST BE INSTALLED BEFORE applying V5.6.c.1.
+
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+	patch_build_5.6.c.1 
+
+To execute the script and save its output in a file type:
+
+	cd $GEMPAK/build
+	patch_build_5.6.c.1 >&! PATCH_$NA_OS & ; tail -f PATCH_$NA_OS
+
+The output of the script will be written to PATCH_$NA_OS.

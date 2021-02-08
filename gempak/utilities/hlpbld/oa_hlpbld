@@ -1,0 +1,12 @@
+export GEMPARM=$GEMPAK/parm
+export GEMPTXT=$GEMPAK/txt/programs
+
+hlpbld $GEMHLP/hlp OABOX
+########################
+hlpbld $GEMHLP/hlp OABSFC
+########################
+hlpbld $GEMHLP/hlp OABSND
+########################
+hlpbld $GEMHLP/hlp OAGRID
+########################
+echo ALL THE OA HLPs ARE BUILT.

@@ -1,0 +1,9 @@
+High res QuikScat data (opc)
+
+Modifications have been made to the QuikScat processing to handle the
+new high resolution (12.5 km) data, in addition to the existing
+25 km data. In order to access the new data, a new entry (QSCT_HI) was
+added to the datatype.tbl configuration table. The 12.5 km data is
+displayed in the same manner as the 25 km data. However, there are
+more points per scan line and more scan lines. 
+

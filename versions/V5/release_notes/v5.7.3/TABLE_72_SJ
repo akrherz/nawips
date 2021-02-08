@@ -1,0 +1,14 @@
+Fix underscores in cwsu.bull
+
+The AWC reported a problem with the station table,
+cwsu.bull, for NWX. The station names contained spaces
+instead of underscores between words. This was fixed
+and the table is now read correctly in NWX.
+
+
+
+Update ncepgrib2.tbl
+
+At the request of the Production Management Branch,
+the entry for parameter number 180 was made active
+in ncepgrib2.tbl. 

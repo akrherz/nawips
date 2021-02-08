@@ -1,0 +1,54 @@
+#!/bin/sh
+#-----------------------------------------------------------------------
+# pcode
+#
+# Given one or more file names, displays the "pseudo-code" (i.e., all
+# of the comment lines in the file).
+#
+# Command-line options:
+#
+#  -p	When this option is given, individual routines are separated
+#	in the output with form-feeds.  This is useful when the
+#	output is directed to a printer.
+#
+# Example:
+#
+#	pcode  $GEMPAK/source/gemlib/er/*
+#	pcode  -p $GEMPAK/source/gemlib/er/*
+##
+# M. Linda/GSC		 4/97	Original
+# M. Linda/GSC		 5/97	Enhanced so it does C source better
+# M. Linda/GSC		 8/97	Added -p command line option
+#-----------------------------------------------------------------------
+
+#-----------------------------------------------------------------------
+# Get command line options.
+
+if  [ "$1" = "-p" ] ; then
+    OPTp="$1"
+    shift 1
+fi
+
+#-----------------------------------------------------------------------
+# Get a list of all of the files from the command line.
+
+while [ "$1" != "" ] ; do
+    files="$files $1"
+    shift 1
+done
+
+#-----------------------------------------------------------------------
+# Process one file at a time extracting comment lines.
+
+for oneFile in $files ; do
+    egrep '^\{|^\}|^C\*|^[ 	]*/\*|^.\*\*|^[	 ]+\*[ 	]+' $oneFile | \
+    egrep -v '^[ 	]*/\*[	 ]*$' | \
+    egrep -v '^[ 	]*\*/[	 ]*$' | \
+    egrep -v -- '--'
+
+    if  [ "$OPTp" = "-p" ] ; then
+	echo "\f"
+    fi
+done
+
+#-----------------------------------------------------------------------

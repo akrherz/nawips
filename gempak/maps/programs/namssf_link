@@ -1,0 +1,3 @@
+$FC $FFLAGS $LDFLAGS -o namssf namssf.f \
+			-lgemlib -lappl -lsyslib -lgemlib -lcgemlib -lgemlib
+$RM *.o

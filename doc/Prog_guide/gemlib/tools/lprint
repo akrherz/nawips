@@ -1,0 +1,27 @@
+#!/bin/sh
+#-----------------------------------------------------------------------
+# lprint
+#
+# This utility aids in printing the chapter files for one of the GEMPAK
+# books.
+#
+# Command-line options:
+#
+#  -P	Printer name
+#
+# Example:
+#
+#       lprint  TOC.out  ch01.out
+#       lprint  ch02.out 'ch07*' 'appx*'
+#       lprint  -P qms1700d  'ch02*'
+#       lprint  appxb.out  -P hp5simxPS  appxc.out
+#       lprint  '*'
+##
+# Log:
+# M. Linda/GSC		11/97	Original
+#-----------------------------------------------------------------------
+
+utlDir=`dirname $0`
+
+cd $utlDir/../out ; ../../shared/tools/lprint $*
+

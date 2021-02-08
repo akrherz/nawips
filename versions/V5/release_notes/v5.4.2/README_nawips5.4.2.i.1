@@ -1,0 +1,31 @@
+			N-AWIPS 5.4.2.i.1 Patch Release Notes
+				7/25/1997
+
+
+This file describes the patch and provides instructions for its installation.
+
+The patch contains some bug fixes and code improvements to version 5.4.2.h .
+
+These include:
+
+	1.  Added capability to rotate special text after it has been
+	    drawn/written to a VG file.
+
+
+
+This patch requires some recompiling and linking of GEMPAK programs,
+GUI programs, and  device drivers.  A script has been written
+to perform all of the necessary compiles and links.  It is called:
+
+	patch_build_5.4.2.i.1 
+
+The file is located in $GEMPAK/build.
+
+To execute the script and save its output in a file type:
+
+	cd $GEMPAK/build
+	patch_build_5.4.2.i.1 >&! PATCH_$OS & ; tail -f PATCH_$OS
+
+The output of the script will be written to PATCH_$OS.
+
+

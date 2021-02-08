@@ -1,0 +1,23 @@
+Add range and interval for all data types (all)
+Changes to range/interval user interface (all)
+
+The user may now change the timeline range and interval values for
+all data types. The user interface has also been modified to allow
+the user to enter the range and interval as Days, Hours and Minutes.
+A reference time has also been added. For observational data, this
+time is the end time of the timeline. For forcast data, the time
+is the start time of the timeline. The time must be entered as a 
+GEMPAK date/time string. Any missing portions of the time will be 
+filled in from the current system time. For example, if the user
+enters "12", then the Year, Month and Day will be from the system time
+and the Hours and Minutes will be "1200".
+
+When the dialog box is first displayed, the default values for the 
+dominant data type are filled in the appropriate boxes. For example,
+Radar data has no default interval and a 3 hour range. Selecting the
+"Default" button returns to the default values after making any changes.
+
+Clicking "Apply" will change the timeline to reflect the user input.
+The user can then apply the Skip, or click on individual tick marks,
+as normal.
+

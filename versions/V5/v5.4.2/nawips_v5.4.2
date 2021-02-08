@@ -1,0 +1,598 @@
+
+                           NAWIPS 5.4.2 Change Description Log
+
+	( * indicates a change that makes this version of NAWIPS
+	    incompatible with the previous version )
+
+
+
+001.	ASCII Decoders
+
+	a.  Corrected calling sequence in call to ER_MMSG in DC_WLOG.  
+	    Changed return code for RA_RTIM so its value is either 0 or
+	    -1.  Done, KT, (SS), 1/7/97.
+
+	b.  Changed error processing in decoders so that messages are
+	    written to log files via an intermediate message buffer.
+	    Also cleaned up and made error messages consistent so that
+	    they appear as [pid] Local System Time [XX-#] message string
+	    in the log file.  Done, KT, (SS), 1/10/97.
+
+	c.  Corrected a calling parameter in dc_init to the routine er_stat.
+	    Done, KT, (SS), 1/21/97.
+
+	d.  Integrated METAR decoder written by decoder group into N-AWIPS.
+	    Done, DKW, KT, (SS), 1/29/97.
+
+	e.  Revised the DC_GHDR routine so that it will accept bulletins
+	    that include a trailing "Z" in the date/time field.  Done,
+	    KT, (SS), 1/30/97.
+
+	f.  Corrected some AVNMOS decoder routines so that they will compile
+	    on AIX workstations.  Also, added additional mv routines to the
+	    AIX directory.   Done, SJ, (SS), 2/5/97.
+
+	g.  Made several changes to the new METAR decoder.  First, improved
+	    documentation and comments.  Second, improved error processing
+	    making more consistent with other decoders.  Third, corrected
+	    sea-level pressure decoding problem for SAO stations.  Fourth,
+	    Parameters for 6 hour max/min temperatures were added to packing
+	    and parameter tables.  Done, KT, (SS), 2/5/97.
+
+	h.  Updated the Flash Flood Guidance decoder to handle new WMO 
+	    headers and to decode more data.  Done, SC, (SS), 2/7/97.
+
+	i.  Made a few changes to the METAR decoder.  First, remarks 
+	    beginning with "RMKS" instead of "RMK" are no longer ignored.
+	    Second, Wind fields whose units are miscoded as "KZ" are
+	    no longer miinterpreted as a date/time string.  Done, KT,
+	    (SS), 2/21/97.
+
+
+002.	GRIB Decoder
+
+
+
+003.	Grid Diagnostics
+
+	a.  Corrected map scale factor error near poles for CED grids.
+	    Done, TL, (SS), 1/30/97.
+
+
+
+
+004.	Parameter Calculations
+
+	a. Created new routine, TESTPS to test stability functions in PS 
+	   library.  Done, TL, (SS), 1/22/96.
+
+005.	Image Processing
+
+	a.  Corrected a resolution scaling problem for the Rectilinear
+	    projection with AREA files.  Done, SC, SJ, (SS), 1/13/97.
+	    Testing complete, SJ, 1/13/97.
+
+	b.  Corrected a problem with color initialization that was
+	    causing an improper look-up table to be loaded into
+	    the first frame of a sequence.  This problem only appeared
+	    in applications running outside of NTL.  Done, SJ, (SS),
+	    02/11/97.
+
+
+
+006.	GPLT Changes
+
+	a.  Modified GPLT and DEVICE routines to pass reals for X and
+	    Y coordinates down to the DEVICE drivers.  This modification
+	    was done for symbols and lines and fronts.  Some clean up
+	    and bug corrections were also made.  Done, ML, (SS),
+	    1/7/97.
+
+	b.  Corrected front plotting routine to properly handle line width
+	    changes.  Done, ML, (SS), 1/8/97.
+
+	c.  Modifed GPLT and DEVICE routines to pass reals for X and
+	    Y coordinates down to the DEVICE drivers for GTEXT and GTEXTC
+	    functions.  Also, removed buffering for these functions.
+	    Done, ML, (SS), 1/15/97.
+
+	d.  Added check for no change in MAPFIL input for GSMFIL routine.
+	    Done, SM, (SS), 1/29/97.
+
+	e.  Removed unnecessary flushing of graphics buffers in relation
+	    to contour filling.  Done, DP, (SS), 1/31/97.
+
+	f.  Added a check for device drivers that do not support cursor
+	    functions.  Done, SJ, (SS), 2/4/97.
+
+	g.  Updated call to DSFRNT in GSATTR to not include the line
+	    width variables.  Also updated some documentation in 
+	    GSFRNT and DSFRNT routines.  Done, SJ, (SS), 2/4/97.
+
+	h.  Corrected a mistake in routines GTEXT and GCIRCL where DEVACT.CMN
+	    was not included.  This error was causing colors to improperly
+	    assigned on the IRIX4 platform.  Done, SJ, (SS), 2/13/97.
+	    Testing complete, SS, 2/13/97.
+
+	i.  Added GPLT routines that clear a region within an X-Window.
+	    Done, KT, SJ, (SS), 2/19/97.
+
+	j.  Modified GCLPNL so that it scales the coordinates of the
+	    region to be cleared to conform to the plot region.  This
+	    was done to correct a problem when this routine is called
+	    by NTRANS, which uses graph mode instead of map mode.  Done,
+	    KT, SJ, (SS), 2/21/97.
+
+	k.  Debuffered polygon fill routines.  Also passed real numbers
+	    for x and y coordinates down to device level.  Removed
+	    buffer FILLBF from PLOTBF.CMN.  Done, ML, (SS), 2/27/97.
+
+
+
+007.	Device Drivers
+
+	a.  Corrected problem with the fax driver not being able to run twice
+	    in a row without running gpend.  Also corrected problem of viewfax
+	    not properly handling some fax scheduling data in 6 bit files.
+	    Done, EW, (SS), 1/9/97.
+
+	b.  Made corrections to scaling factors for line patterns and other 
+	    parameters in the fax driver.  Done, EW, (SS), 1/14/97.
+
+	c.  Several changes have been made to the device driver and
+	    image display routines.  Added capability to print images
+	    in the PS driver.  Modified IM_LUTF so that a lookup table
+	    can be loaded even if last image in sequence is missing.
+	    Fixed a problem with zooming on satellite and radar images.
+	    Added processing of UNISYS radar mosiac images that was
+	    written at the SPC.  Done, RL, SJ, (SS), 02/03/97.
+
+	d.  Created new AFOS device driver (UTF).  Done, ES, (SS),
+	    2/7/97.
+
+	e.  Corrected problem in NC driver where margins were being
+	    improperly changed in the case that different text sizes
+	    are being used for overlays in a frame.  This problem
+	    was reported by Peggy Bruehl.  Done, SJ, (SS), 2/11/97.
+	    Testing complete, DK, 2/11/97.
+
+	f.  Modified XW driver to be ANCI C compliant.  This change
+	    was needed as a result of NMAP code reorginization (018h).
+	    Done, CL, (SS), 2/19/97.
+
+	g.  Corrected a zooming problem occurring on the HP platform
+	    as a result of ANCI C modifications.  Done, CL, (SS), 
+	    2/19/97.
+
+	h.  Made corrections to the UTF driver as a result of testing.
+	    The driver now converts all pil strings to upper case.
+	    Proper calls to the ER routines are now made for errors.
+	    Scales for wind barbs, arrows and weather symbols have been
+	    adjusted.  Done, ES, (SS), 2/21/96.  Testing Complete, DK, 
+	    3/3/97.
+
+	i.  Moved the cgr* routines from the utf driver to the CGEMLIB/utf
+	    library.  Modified the fax driver to use the common cgr routines.
+	    Done, ES, (SS), 3/4/97.
+
+	j.  Corrected a calling sequence error for HCLOSP in the NC, VC,
+	    and HP drivers.  Done, SJ, (SS), 3/5/97.
+
+	k.  Corrected hardware text font problems in the UTF driver.  Some
+	    clean up was also done.  Done, ES, (SS), 3/6/97.
+
+008.	Documentation
+
+	a.  Updated map file help for map alias names.  Done, SM,
+	    (SS), 2/11/97.
+
+	b.  Updated NSAT and NTRANS help files for new print capabilities.
+	    Done, SS, (SS), 3/05/97.
+
+	c.  Updated NMAP help for model data and product generation.  Done, SS, EW,
+	    (SS), 3/06/97.
+
+
+
+009.	Scripts/NTS files
+
+	a.  Created scripts that allow printing of selected
+	    model products.  Done, DP, (SS), 12/13/96.	
+
+	b.  The print scripts have been modified and new ones have been
+	    add for model products.  Done, DP, (SS), 2/20/97.  Testing
+	    complete, SM, KT, 2/24/97.
+
+	c.  The print scripts have been corrected as a result of errors
+	    detected during testing.  Done, DP, (SS), 3/4/97.
+
+	d.  Corrected problems in print scripts and NMAP restore files
+	    as a result of CDB testing.  Done, DP, (SS), 3/7/97.
+
+010.	General GEMLIB/CGEMLIB Changes
+
+	a.  Updated version number to 5.4.2 in IP_VERS routine.
+	    Done, SJ, (SS), 12/17/96.  Testing complete, SS, 12/17/96.
+
+	b.  Several routines were written and modified to improve
+	    the handling of grid file names and times for opening
+	    and closing grid files.  Done, DP, (SS), 12/23/96.
+
+	c.  Simplified return codes in FL library.  Removed calls
+	    to FL_IRET and SS_IRET.  Done, SM, (SS), 12/24/96.  Testing 
+	    complete, GK, 1/6/97.
+
+	d.  Added a new ST library routine that appends the 
+	    NULL character to a string.  Done, KT, (SS), 12/31/96.
+
+	e.  Made several changes to the ER library that allow
+	    the option to write error messages to a buffer.  Also
+	    added options for levels of errors and adding on the
+	    system time to error messages.  Done, KT, (SS), 
+	    12/31/96.
+
+	f.  Corrected bugs in two test routines, TESTGD, and TESTTG
+	    as a result of testing.  Done, DP, (SS), 1/2/97.
+
+	g.  Renamed and reorganized all UTF functions.  Added error 
+	    processing and a test program for UTF library.  Removed 
+	    references to include files from old AFOS emulator.  Done,
+	    DK, (SS), 1/9/97.
+
+	h.  Wrote new routine, GR_TMFL, that list grid times using
+	    grid file name as input.  Done, DP, (SS), 1/10/97.
+	    Testing complete, TL, 1/14/97.
+
+	i.  TG_FIND logic was simplified for range processing.
+	    Done, DP, (SS), 1/10/97. Testing complete, TL, 1/14/97.
+
+	j.  Made a few changes to file opening, map processing and
+	    text decoding routines.  Data alias table renamed and moved.
+	    Code in ggltln.f, ggmap.f, and intext.f organized into new
+	    routines for easier GUI program access.  Done, SM, (SS),
+	    1/13/97. 
+
+	k.  Removed call to FL_CLAL from GD_GTMF.  Done, DP, (SS),
+	    1/16/97.
+
+	l.  Renamed ercmn.h variables  from MXNSTR and nstr to
+	    MXERST and nermsg, respectively.  This was done to have
+	    more descriptive and unique names for these variables.
+	    Done, KT, (SS), 1/22/96.
+
+	m.  Created GG_ZARE to control zooming in GEMPAK programs.  Changed
+	    ipgtpt.f to include calls to GG_ZARE, ST_LSTF, and ST_LSTC.
+	    Done, SM, (SS), 1/22/96.
+
+	n.  Wrote a new routine, DG_CLAL, to close all grid files opened
+	    by the routine DG_OFIL.  Done, DP, (SS), 1/28/97.
+
+	o.  Wrote a new routine ST_RPST to replace substrings within a
+	    string with replacement strings.  Done, DP, (SS), 1/28/97.
+
+	p.  Wrote a new routine for processing the new input variable,
+	    TYPE, for the new version of GDPLOT.  Done, DP, (SS),
+	    1/28/97.
+
+	q.  The calling sequence to CFL_SCND was modified to include 
+	    a template string from which to sort file names.  FL_MFLS
+	    was modified to use a template string in its call to 
+	    CFL_SCND.  Done, DP, (SS), 1/28/97.
+
+	r.  Developed CVG library to read and write to vector graphics files
+	    for product generation.  Also wrote test program for this library.
+	    Done, EW, DK, (SS), 1/29/97.
+
+	s.  Added a check for unrealistically large values of record length
+	    in the DM routines DM_RDTC, DM_RDTI, DM_RDTR.  This prevents
+	    fatal errors when reading data sets that have been corrupted.
+	    Also, placed a 256 character limit on the length of raw text
+	    and special reports that can be listed by SFLIST.  Done, KT, 
+	    (SS), 1/30/97.
+
+	t.  Corrected prolog documentation in a few recently delivered 
+	    routines.  Done, SM, (SS), 1/31/97.
+
+	u.  Wrote new C routine to read GEMPAK station tables.  Done,
+	    GK, (SS), 1/31/97.
+
+	v.  Fixed a bug in PS_PRCL where it was not checking for missing
+	    data.  Also, improved the robustness of the PS library test
+	    program.  Done, TL, (SS), 1/31/97.
+
+	w.  Fixed some bugs in the TESTUTF program.  Revised error processing
+	    calls in several UTF and NAF functions.  Removed calls to IM_LUTF
+	    in NAFOS routine NAFPXM.  Done, DK, (SS), 2/3/97.
+
+	x.  Created a table with map file aliases.  Updated routines to
+	    read map alias names.  Updated TESTIN and TESTGG programs.
+	    Done, SM, (SS), 02/03/97.  Testing complete, KT, 2/11/97.
+
+	y.  Corrected some bugs in the TESTUTF program.  Done, DK, (SS), 
+	    2/18/97.
+
+	z.  Added capability to search for full geographic name as well
+	    as abbreviated name to geographic reading routine TB_FGEO.
+	    Done, KT, (SS), 2/20/97.  Testing complete, SS, 2/21/97.
+
+	aa. Added a check for exponents that are greater than the
+	    absolute value of 20.  If the exponent is outside this
+	    range, teh value is set to missing.  This change was
+	    for the string routine that converts characters to
+	    real numbers.  Done, SJ, (SS), 2/21/97.  Testing complete,
+	    SS, 2/21/97.
+
+	bb. Fixed a problem where non-standard vertical coordinates 
+	    created on a DEC machine were not read properly on other
+	    platforms and vice versa.  Added a check to DM_RHDA to
+	    swap back bytes to original order for non-standard 
+	    coordinate values.  Done, SJ, (SS), 2/24/97.  Testing
+	    Complete, KT, 2/25/97.
+
+	cc. Modfied CFDATE to return seconds in addition to other
+	    elements.  Routines that call this function were updated
+	    to reflect calling sequence change.  Done, SJ, (SS),
+	    2/24/97.
+
+	dd. Created a routine to read the version number string that is 
+	    callable from both the GEMPAK and GUI programs.  Done, SJ, 
+	    (SS), 2/24/97.  Testing complete, SS, 2/24/97.
+
+	ee. A new C function has been added to perform simplistic
+	    regular pattern matching.  This routine is necessary
+	    to handle the mesoscale model file processing for 
+	    GDPLOT2 and NMAP.  The data configuration table was 
+	    modified to properly handle the mesoscale model files.
+	    Done, DP, (SS), 2/25/97.
+
+	ff. Updated DM routines that write header to the file for
+	    non-standard vertical coordinate values.  The routines
+	    now do proper swapping of bytes.  Done, SJ, (SS), 
+	    2/25/97.  Testing Complete, KT, 2/25/97.
+
+	gg. Corrected inproper return code for situation where satellite
+	    images are applied to a GAREA which is undefined for their
+	    projections.  Done, GK, (SS), 2/28/97.
+
+	hh. Replaced call to ST_C2I in ER_MMSG with call to ST_ILST.
+	    Also removed calls to ST_C2I and ST_C2R in TESTSN and did
+	    some clean up.  Done, SJ, (SS), 3/5/97.
+
+	ii. Modified IP_HELP so that it looks in the local directory
+	    first for help files.  It then looks in $GEMHLP.  Done,
+	    KT, (SS), 3/5/97.
+
+	jj. Fixed some bugs in CTBASTN.C routine and converter its header
+	    style to K&R to be consistent with library.  Done, GK, (SS),
+	    3/07/97.
+	    
+
+
+
+011.	General GEMPAK Program Changes
+
+	a.  Corrected minor problem in GDMLBL for GDMAP program where
+	    grid row/column numbers were be plotted using D coordinates
+	    instead of G coordinates.  Done, DP, (SS), 1/10/96. 
+	    Testing complete, TL, 1/14/97.
+
+	b.  Modified GDVINT so that it will continue to interpolate 
+	    other parameters if it cannot interpolate a particular one.
+	    The name of the Eta vertical coordinate was also corrected
+	    from ETAP to ELVL to be consistent with GRIB table entries.
+	    Done, KB, (SS), 1/13/97.
+
+	c.  GDPLOT has been rewritten.  The new version is called GDPLOT2.
+	    GDPLOT now allows users to plot streamlines, grid point markers,
+	    and values in addition to contour lines/fills and wind vectors/
+	    arrows in one execution.  A routine to test some of the gdplot
+	    functionality called testgdp has also been written.  Done,
+	    DP, (SS), 1/29/97.
+	    
+	d.  Corrected error in GDPLOT2 subroutine and corrected documentation
+	    in a routine prolog.  Done, DP, (SS), 1/30/97.
+
+	e.  Corrected problem when NMAP aborts the creation of a loop and
+	    not properly closing grid files by moving the call to do so.
+	    Done, DP, (SS), 1/31/97.
+
+	f.  Updated program SFL604.  Removed parameters not displayed by the
+	    program.  Updated error processing.  Done, KT, (SS), 1/31/97.
+
+	g.  Corrected problem in gdplot (gdplot2) where the multiple file
+	    inputs where not being properly handled.  Done, DP, (SS), 
+	    2/3/97.
+
+	h.  Corrected problems in gdplot2 as a result of testing.  Also
+	    updated documentation in some routines.  Done, DP, (SS), 
+	    2/4/97.
+
+	i.  Made gemprm.h more consistent with GEMPRM.PRM.  Moved the 
+	    UNDERSCORE list of routine names to a separate file, uscore.h.
+	    Moved the error codes to a separate file, error.h.  Done,
+	    SJ, (SS), 2/7/97.
+
+	j.  Several errors were corrected to gdplot2 as a result of CDB
+	    testing.  NMAP tables for models and restore files were also
+	    updated.  Done, DP, (SS), 2/13/97.  Testing complete, 
+	    GK, 2/21/97.
+
+	k.  Corrected a bug where if LEVELS is set to blank and level 
+	    level parameters are specified, the SNLIST lists out 
+	    erroneous values.  Done, TL, (SS), 2/21/97.  Testing 
+	    complete, SS, 2/24/97.
+
+	l.  Corrected wind thinning problem and fixed a fatal error in 
+	    GDPLOT2 routines.  Updated the data table for the UKMET model.
+	    Done, DP, (SS), 3/6/97.
+
+
+012.	General GUI Modifications
+
+
+013.	NTL
+
+	a.  Modified NTL to allow the background color to be changed
+	for all applications by modifying its resource file.  Done,
+	CL, (SS), 12/17/96.  Testing complete, SM, 12/19/96.
+
+
+014.	NTRANS
+
+	a.  Modified NTRANS.  Replaced local ntrans PS driver with calls
+	    to XWP driver.  Use new print popup widget.  Added multi-panel
+	    print capability.  Cleaned up code to be more consistent with
+	    other GUI programs.  Done, SW, (SS), 1/29/97.
+
+	b.  Corrections to some errors in NTRANS as a result of CDB testing.
+	    Done, SW, (SS), 2/3/97.
+
+	c.  Corrections to errors in NTRANS as a result of CDB testing.
+	    Done, SW, (SS), 2/7/97.
+
+	d.  Corrections to errors in NTRANS as a result of CDB testing.
+	    Done, SW, (SS), 2/19/97.
+
+	e.  Fixed problem where NTRANS would not plot the graphic when
+	    only color being used is color 1.  Replaced explicit X calls
+	    with calls to GCLEAR and GCLPNL.  Done, SJ, (SS), 2/21/97.
+	    Testing Complete, TL, 2/24/97.
+
+	f.  Modified NTRANS to use common print routines in the Nxmlib
+	    library.  Done, SW, (SS), 3/3/97.
+
+
+015.	NSAT
+
+	a.  Increased the size of an internal string from 80 to 256
+	    characters to handle long path/file names.  Done,
+	    SJ, (SS), 2/11/97.
+
+	b.  Increased the size of arrays that store file name to 256
+	    characters to handle long path/file names.  Additional
+	    routines were necessary to modify beyond (015a).  Done,
+	    CL, (SS), 2/13/97.
+
+	c.  Added printer capability to NSAT.  Also, moved common
+	    printer functions to Nxmlib library.  Also moved the
+	    printer characteristics table to $GEMTBL/config/printer.tbl.
+	    Done, SW, (SS), 3/3/97.
+
+
+
+016.	NWX
+
+	a. Updated NWX so that is reads the same format geography table
+	   as NMAP.  Also updates were made to the GEOG table.  NWX world
+	   areas were added along with a generic world area.  Africa was
+	   added and the Olympics area was removed.  The NMAP geography
+	   table was also modified.  Done, CL, GK, (SS), 2/21/97.
+	   Testing complete, SS, 2/21/97.
+
+
+017.	AFOS
+
+	a. Updated the alarm program to include an "Exit" button.
+	   Also, renamed AFOS_ALARM to NALARM and added program to
+	   NTL.  Moved program under gempak gui directory
+	   Done, SJ, (SS), 12/17/96.  Testing complete, SM, 12/31/96.
+
+	b. Modified AFTEXT so that it replaces null characters within the text
+	   with blanks.  Done, DK, (SS), 12/17/96.
+
+	c. Corrected NAFOS routine, NAFGMPK.C to return explicit values to
+	   the calling routine.  This modification corrected a fatal error
+	   when running NAFOS under NTL on the HP platform.  Done, SJ, (SS),
+	   2/19/97.  Testing comple, SS, 2/19/97.
+
+	d. Corrected NAFOS so that it reads the projection from the table
+	   instead of using a hard coded value.  Done, SJ, DK, (SS),
+	   3/05/97.
+
+
+
+
+018.	NMAP
+
+	a. Updated NMAP for new error processing routines.  Done, CL,
+	   (SS), 1/23/97.
+
+	b. Added Graphics Information record to NMAP in preparation for
+	   preliminary delivery of drawing capabilities.  Done, EW, 
+	   (SS), 1/24/97.
+
+	c. Added new capability to display model data using gridded
+	   data sets.  Done, CL, (SS), 1/30/97.
+
+	d. Some error corrections as a result of testing.  Done, CL,
+	   (SS), 1/31/97.
+
+	e. Updated restore files and added a script to create links
+	   to restore files for model products.  Done, DP, (SS),
+	   02/04/97.
+
+	f. Added Watch-By-County product generation software to NMAP.
+	   Done, EW, (SS), 2/7/97.
+
+	g. Corrected problems found as a result of CDB testing.  Also
+	   added map aliases to NMAP.  Done, CL, (SS), 2/13/97.
+
+	h. Reorganization of some NMAP routines to libraries.  Moved x*.c
+	   routines to XW driver.  Moved BUSY/STOP functions to NXMLIB
+	   library.  Also renamed map area table for NMAP.  Changed
+	   default county map color and style.  Done, CL, (SS), 2/18/97.
+
+	i. Modified Makefile to use and create a NMAP library, nmap.a.
+	   Also added a nmap_compile script.  Done, CL, (SS), 2/27/97.
+	   Testing complete, SS, 2/27/97.
+
+	j. Update for icons, resource file, and drawing table for 
+	   watch by county functions.  Done, EW, (SS), 2/28/97.
+
+	k. Corrections for errors in Watch By County functions found
+	   as a result of CDB testing.  Done, EW, (SS), 2/28/97
+
+	l. Shorten the names of some of the VGF files so that IRIX4
+	   properly handles the archive into nmap.a.  Done, EW, (SS),
+	   3/3/97.
+
+	m. Modified NMAP to use tables instead of directory soft links
+	   for model restore files.  Updated NMAP tables.
+	   Done, CL, (SS), 3/04/97.
+
+	n. Use cfl_trln instead of cfl_rdln to read restore files.
+	   Done, CL, (SS), 3/05/97.
+
+
+	o. Added N-AWIPS version number retrieved from GEMLIB routine
+	   to NMAP title bar.  Done, CL, (SS), 3/7/97.
+
+
+019.	MAP FILES
+
+	a. Updates to the county warning area, RFC, and US county maps were made
+	   using updated maps from NWS/Modernization Systems Implementation Group
+	   maps.  Done, GK, (SS), 12/18/96.  Testing complete, SM, SS, 12/18/96.
+
+
+
+
+	SJ - Scott Jacobs		JA - Jeff Ator
+	DP - Dave Plummer		DKW - Duane Kidwell
+	SS - Steve Schotz
+	DK - Dave Keiser		PB - Peggy Bruehl
+	KT - Kevin Tyle			JC - Jim Cowie
+	GK - Gary Krueger		SC - Steve Chiswell
+	TL - Tiros Lee
+	SM - Sarah Maxwell
+	CL - Chien Lin
+	SW - Shanshan Wang
+	ML - Mike Linda
+	EW - Ed Wehner
+	ES - Edward Safford
+
+	RS - Russ Schneider
+	KB - Keith Brill
+	JW - Jim Whistler
+	RL - Robert Lindsay
+

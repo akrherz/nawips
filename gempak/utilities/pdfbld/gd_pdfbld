@@ -1,0 +1,55 @@
+export GEMPDFARM=$GEMPDFAK/parm
+
+pdfbld $GEMPDF GDCFIL
+#########################
+pdfbld $GEMPDF GDCNTR
+#########################
+pdfbld $GEMPDF GDCROSS
+##########################
+pdfbld $GEMPDF GDDELT
+#########################
+pdfbld $GEMPDF GDDIAG
+#########################
+pdfbld $GEMPDF GDEDIT
+#########################
+pdfbld $GEMPDF GDFRZL
+#########################
+pdfbld $GEMPDF GDGRIB
+#########################
+pdfbld $GEMPDF GDGRIB2
+#########################
+pdfbld $GEMPDF GDGSFC
+#########################
+pdfbld $GEMPDF GDINFO
+#########################
+pdfbld $GEMPDF GDLIST
+#########################
+pdfbld $GEMPDF GDMAP
+########################
+pdfbld $GEMPDF GDMOD
+########################
+pdfbld $GEMPDF GDOMEG
+#########################
+pdfbld $GEMPDF GDPLOT
+#########################
+pdfbld $GEMPDF GDPLOT2
+##########################
+pdfbld $GEMPDF GDPLOT3
+##########################
+pdfbld $GEMPDF GDPROF
+#########################
+pdfbld $GEMPDF GDSTAT
+#########################
+pdfbld $GEMPDF GDSTREAM
+###########################
+pdfbld $GEMPDF GDTHGT
+#########################
+pdfbld $GEMPDF GDTSER
+#########################
+pdfbld $GEMPDF GDVINT
+#########################
+pdfbld $GEMPDF GDWIND
+#########################
+pdfbld $GEMPDF GRPHGD
+#########################
+echo ALL THE GD PDFs ARE BUILT.

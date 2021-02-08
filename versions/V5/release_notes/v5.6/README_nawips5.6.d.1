@@ -1,0 +1,146 @@
+			N-AWIPS 5.6.d.1 Release Notes
+				June 13, 2001	
+
+Patch 5.6.d.1 includes several corrections to NMAP2.  It also includes 
+improvements to the Hurricane Graphics program, GPTPC and the upper-air
+decoder, DCUAIR.
+
+Patch 5.6.d.1 covers development from May 30 to June 13, 2001.  
+
+I.  NMAP2 Corrections
+
+    A.	VG Into Background Problem (HPC)
+
+	Corrected the problem where VG elements were put into the background 
+	if the data was loaded from product generation using the single 
+	time mode.
+
+    B.  Extended Zoom in the Map Window (ALL)
+
+	Corrected the problem where the extended zoom did not work 
+	properly when zooming in map window.  The map window has been 
+        modified to make the map drawing area the size specified in the 
+	Nmap resource file.  Previously, the map drawing area stretched in 
+	the vertical to match the shape of the entire map window taking into 
+	account the widgets along the sides, e.g., the map overlays.  This 
+	caused the problem of the map drawing area not having the same aspect 
+	ratio as the NMAP main drawing window.  Therefore, the extended zoom 
+	did not fill the data window after zooming in the map window.  
+	Resource files have also been provided with this release to better 
+	document the relationship between the map window drawing area and 
+	the main window drawing area.  The height and width of the map window 
+	(map_canvas.height/width) should be 2/3 the value of the main window 
+	height and width (mainw_canvas.height/width) map window.  
+
+    C.  Resize During Loop (ALL)
+
+	Clicking the "Stop" button while resizing the NMAP2 display window is 
+	no longer possible.  Stopping while resizing led to erroneous results.
+
+    D.  Hide/Show Problems (ALL)
+
+	Corrected problems with the hide/show function when switching loops.
+	Previously, when switching loops, hide/show would sometimes not work 
+	at all forcing the user to advance the loop to make the data visible 
+	again.  Now, switching loops will always make the loop visible.
+	Also, if the data is hidden, and new data is loaded, the loop is
+	made visible.
+
+    E.  Fading Among Loops (ALL)
+
+	The fading level for each loop is now properly saved.  Previously,
+	in certain cases the fade did not work properly when switching 
+	loops.
+
+    F.  Multiple Maps in Map Window (ALL)
+
+	Corrected the problem where two maps are drawn in the map window.
+	This occurred when looping, bring up the map window, canceling
+	the map window, switching loops and bringing up the map window
+	again.
+
+    G.	Watch Plot Problem on Local Radar Images (SPC)
+
+	Corrected the problem where watches and other types of 
+	miscellaneous data types (e.g., airmets) are not plotted correctly
+	on local radar images when the vertices of these data are located
+	outside of the local radar view region. 
+
+    H.	Corrections to Hurricane Text Product (HPC, MPC)
+
+	The hurricane text product maker in NMAP and NMAP2 was modified
+	to not include lines with 0 lat/lon points for missing forecast
+	points.  The function was also corrected to properly set the
+	storm ID using the VG file name.
+
+    I.  GHM Access Added to NMAP and NMAP2 (ALL)
+
+	Eight new restore files were added and the mod_res table was
+	modified to display GHM and GHMNEST model fields.
+
+II.   VGF Save Correction (ALL)
+
+      Corrected the problem where VG files could not be saved to non-local
+      directories with write permission.  This problem only occurred if the
+      VG file did not already exist in the non-local directory.  Both NMAP
+      and NMAP2 had this problem.
+
+III.  GPTPC Improvements (TPC)
+
+      Several improvements have been made to the hurricane graphics program,
+      GPTPC.  These include priorities 1-5 on the TPC request list. Also,
+      problems handling stationary and near-stationary storms have been 
+      corrected.  Finally, the output storm name file has been added as 
+      specified by the TPC.
+
+IV.  Ship Soundings Added to Upper-Air Decoder (ALL)
+
+     The upper air decoder dcuair was modified to decode ship (UU)
+     data, and to improve precision in wind speed unit conversion.
+     Ship reports are treated as additional stations in the decoded 
+     output file.  Currently, the maximum number of additional stations 
+     allowed is 25.  The table $GEMTBL/nmap/drop_parms.tbl has been 
+     added to enable station model editing for dropsonde data display 
+     in NMAP/NMAP2.
+
+V.   NMAP2 Problem  (ALL)
+
+     NMAP2 has one known scenario where the product generation graphics 
+     are erroneously put into the background.  This problem also occurs 
+     in V5.6.d.
+     
+     The scenario is as follows.  Click the map window from the main NMAP2 
+     window.  Load in a new map area or overlay by clicking the "Load" 
+     button.  Activate product generation and perform any action to draw 
+     an object.  Load data into another loop.  Exit product generation.  
+     The product generation graphics appear in the currently viewed frame 
+     of the loop.  Note that invoking the map window from the data window
+     does not cause this problem to occur.
+
+     To "erase" the product generation graphics from the frame, click the
+     "RELOAD" button.  Any action which re-loads the frame, e.g., "Zoom"
+     also removes the product generation graphics from the frame.
+
+
+*****************************************************************************
+
+ NOTE:  The patch for V5.6.d MUST BE INSTALLED BEFORE applying V5.6.d.1.
+
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+	patch_build_5.6.d.1 
+
+To execute the script and save its output in a file type:
+
+	cd $GEMPAK/build
+	patch_build_5.6.d.1 >&! PATCH_$NA_OS & ; tail -f PATCH_$NA_OS
+
+The output of the script will be written to PATCH_$NA_OS.
+
+Note that the build script removes files that have been eliminated in
+this patch.  These files must be removed by hand if the build script
+is not executed.  A list of removed files for each patch always appears
+in the file: $NAWIPS/versions/remove.log.
+

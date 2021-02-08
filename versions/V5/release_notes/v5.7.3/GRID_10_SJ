@@ -1,0 +1,11 @@
+Add interpolation type and direction flags to GRIB tables
+
+Two flag value columns have been added to the tables used
+by NAGRIB and NDFDG2 for decoding GRIB and GRIB2 data files.
+The flag values are not used at this time. They have been
+added in preparation for the addition of the automatic
+horizontal remapping.
+
+The tables should be updated, however, the new source code
+will still read the old file format.
+

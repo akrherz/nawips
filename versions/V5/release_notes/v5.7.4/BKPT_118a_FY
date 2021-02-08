@@ -1,0 +1,15 @@
+TASK: 12.1    TRACK: 118      EXT PROJ:  BKPT
+Filter display of HRCN data by forecast hour
+
+Added the ability to display HRCN output based on forecast valid time
+instead of bulletin time in NMAP2 and GPMAP.  Seven new flags for each
+of the forecasted positions have replaced the flag to plot all the
+forecasted positions.  Based on the setting of the flag to plot the
+forecasted hour, the corresponding wind/sea quadrant arc also will or
+will not be plotted.  To set the flags in NMAP2, see the HRCN Attributes
+window that pops up when the "Edit Source" button is clicked in NMAP2
+for displaying MISC/HRCN data.  For instructions to use the new flags in
+GPMAP, do a "help hrcn".
+
+Since miscset.tbl was modified, old SPF files with HRCN data must
+be recreated to use the new flags.

@@ -1,0 +1,33 @@
+#------------------------------------------------------------------------
+# mv.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+mvbtoi.c	- Convert Bytes To Integer
+mvei32.f	- Convert IEEE Real To IBM Real
+mvev32.c	- Convert IEEE Real To VMS Real
+mvie32.f	- Convert IBM Real To IEEE Real
+mvitob.c	- Convert Integer To Bytes
+mviv32.f	- Convert IBM Real To VAX Real
+mvsw42.f	- Swap Bytes 1-2-3-4 To 3-4-1-2
+mvswp2.f	- Swap Bytes 1-2-3-4 To 2-1-4-3
+mvswp4.f	- Swap Bytes 1-2-3-4 To 4-3-2-1
+mvve32.c	- Convert VAX Real To IEEE Real
+mvvi32.f	- Convert VAX Real To IBM Real
+# testmv.f	- MV Library Test Program
+
+#------------------------------------------------------------------------

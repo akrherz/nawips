@@ -1,0 +1,8 @@
+Color bar for satellite images (all)
+
+A color bar has been added for satellite images. The color bar displays
+a temperature scale, in Celsius, for IR images. All other images
+(e.g., Water Vapor, Visible, etc.) will display a scale of pixel values.
+The color bar also reflects the enhancement table in use for the
+current image or loop of images.
+

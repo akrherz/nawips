@@ -1,0 +1,53 @@
+#------------------------------------------------------------------------
+# cst.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 8/97	Original
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Added cstsplit.c
+#------------------------------------------------------------------------
+
+cstabbr.c	- Check For Abbreviation
+cstalnm.c	- Check For Alphanumeric Character
+cstcins.c	- Insert Character Into String
+cstclst.c	- Convert Character List To Array
+cstcrnm.c	- Decode Real
+cstctoi.c	- Store Characters In Integers
+cstfind.c	- Find String In List
+cstflst.c	- Convert File Name List To Array
+cstilst.c	- Convert Integer List To Array
+cstinch.c	- Encode Integer
+cstitoc.c	- Recover Character Array From Integers
+cstitos.c	- Recover String From Integers
+cstlcuc.c	- Convert String To Upper Case
+cstldsp.c	- Remove Leading Spaces
+cstlstr.c	- Find Length Of String
+cstncpy.c	- Copy String
+cstnocc.c	- Find Nth Occurrence Of Character
+cstnumb.c	- Decode Integer
+cstptmt.c	- Match String Pattern
+cstrang.c	- Get Range Limits
+cstrlch.c	- Encode Real Number
+cstrlst.c	- Convert Real List To Array
+cstrmbl.c	- Remove Blanks
+cstrmst.c	- Extract Substring From String
+cstrxbl.c	- Remove Extra Blanks
+cstsplit.c	- Split String Based Upon Delimeter
+cstsrch.c	- Search Text For String
+cststoi.c	- Store String In Integers
+csttims.c	- Parse Time String Into Array of Times
+cstuclc.c	- Convert String To Lower Case
+cstunpr.c	- Remove Control Characters
+# testcst.c	- CST Library Test Program
+
+#------------------------------------------------------------------------

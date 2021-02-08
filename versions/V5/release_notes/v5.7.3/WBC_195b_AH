@@ -1,0 +1,20 @@
+Watch By County
+
+	A. Fixed decoding of WFO string in final WOU (SPC)
+
+	   Corrected a problem with the decoded of the final WOU text product.
+	   The WFO string was decoded with a dollar sign appended to the WFO ids
+	   in the data file. This has been removed.
+
+	B. SPC changes to remove "MIDNIGHT" and "NOON" (SPC)
+
+	   Modified WOU and SEV text products so that the 'MIDNIGHT' and 'NOON' 
+	   phrases have been removed and  either local 12:00 or 1200 AM/PM will 
+	   be used in place.  Modified SEL and PWN text products to remove the 
+	   extra blank lines around the discussion portion of the text product.
+	   These changes were made at the request of the SPC.
+
+	C. Corrected Cancel watch number in watch format box
+
+	   Fixed an error when canceling a watch, it is now possible to cancel a
+	   watch number > 999 but less than 10,000.

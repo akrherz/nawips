@@ -1,0 +1,161 @@
+			N-AWIPS 5.4.3k+ Changes for the LDM 
+
+		( d - Development account 
+		  o - Operational account
+		  b - Both accounts )
+
+====================== Patch 5.4.3.l =============================
+====================== Patch 5.4.3.m =============================
+====================== Patch 5.4.3.n =============================
+====================== Patch 5.4.3.o =============================
+====================== Patch 5.4.3.p =============================
+
+b1.	Updated LDM pattern action table for various changes made
+	in the operational account.  Done, SJ, (SS), 6/14/99.
+
+	ldm/etc/pqact.conf
+
+====================== Patch 5.4.3.q =============================
+
+d2.	Added AIRMETs and International Sigmets from the AWC to NWX.
+	Done, SJ, (TP), 6/18/99.
+
+	ldm/etc/pqact.conf
+
+d3.	Reconcile the pqact.conf file for the LDM accounts.  Done,
+	SJ, (TP), 6/23/99.
+
+	ldm/etc/pqact.conf
+
+
+======================= Patch 5.4.3.r =============================	
+
+d4.	Added SPC watch product WWUS40 to NWX.  Done, SJ, (SS),
+	7/6/99. (See t76.).
+
+	ldm/etc/pqact.conf, scour.conf
+
+d5.	Added the Regional Temp and Precip products to the LDM tables.
+	(See T79).  Also updated the Severe Local Storms product to be
+	more inclusive.  Done, SJ, (SS), 7/7/99.
+
+	ldm/etc/pqact.conf, scour.conf
+
+========================= Patch 5.4.3.s =============================
+========================= Patch 5.4.3.t =============================
+========================= Patch 5.4.3.u =============================
+
+b6.	Added the Saudi stations to the TAF group in NWX.  Done, SJ,
+	(TP), 9/14/99.
+
+	ldm/etc/pqact.conf
+
+b7.	Implementation of several change notices.  See t113 in tables.log.
+	Done, GK, (TP), 9/22/99.
+
+	ldm/etc/pqact.conf
+
+========================= Patch 5.4.3.v =============================
+
+b8.	Added an entry to the pqact.conf file for the dchrcn decoder.
+	Done, SJ, (TP), 10/4/99.
+
+	ldm/etc/pqact.conf
+
+b9.	Part of t149.  Done, GK, (SJ), (TP), 11/17/99.
+
+	ldm/etc/pqact.conf
+	ldmas2/etc/pqact.conf
+	ldmis2/etc/pqact.conf
+
+b10.	Part of t150.  Done, GK, (SJ), (TP), 11/17/99.
+
+	ldm/etc/pqact.conf
+	ldmas2/etc/pqact.conf
+	ldmis2/etc/pqact.conf
+
+b11.	Part of t155.  Done, GK, (SJ), (TP), 11/19/99.
+
+	ldm/etc/pqact.conf
+	ldmas2/etc/pqact.conf
+	ldmis2/etc/pqact.conf
+
+============================== Patch 5.4.3.w =============================
+
+b12.	Part of t166.  Done, GK, (SJ), (TP), 12/6/99.
+
+	ldm/etc/pqact.conf
+	ldmas2/etc/pqact.conf
+	ldmis2/etc/pqact.conf
+
+b13.	Updated the file pqact.conf for Y2K.  Added new alarm products for 
+	the HPC to the groups of alarms for nppu2, nppu3 and eff2.
+	Done, SJ, (TP), 12/6/99.
+
+	ldm/etc/pqact.conf
+
+b14.	Part of t176.  Done, GK, SJ, (TP), 12/16/99.
+
+	ldmis2/etc/pqact.conf
+	ldmas2/etc/pqact.conf
+	ldm/etc/pqact.conf
+
+============================== Patch 5.4.3.x ===============================
+
+b15.	Part of t181.  Done, GK, SJ, (TP), 12/30/99.
+
+	ldmis2/etc/pqact.conf
+	ldmas2/etc/pqact.conf
+	ldm/etc/pqact.conf
+
+b16.	Part of t185.  Done, SJ, (TP), 1/5/00.
+
+	ldm/etc/pqact.conf
+
+b17.	Updated ldm pattern action table to get updated Marine Iterp
+	message headers.  They are now AGNT40 and AGPN40.  Also
+	corrected TPC Atlantic High Seas fcst header to FZNT03.
+	Done, JP, (SS), 1/13/00
+
+	ldm/etc/pqact.conf
+
+b18.	Added a new entry for the correct WMO ID for the TPC-issued 
+	Atlantic High Seas forecast (FZNT42).  Added entries to archive 
+	the newly added Marine Interpretation Messages (AGNT40,AGPN40).  
+	Done, JP, (TP), 1/14/00.
+
+	ldm/etc/pqact.conf
+
+============================== Patch 5.4.3.y ===============================
+
+b19.	Part of t198.  Done, GK, (TP), 2/7/00.
+
+	ldm/etc/pqact.conf
+
+b20.	Part of t200.  Done, GK, (TP), 2/14/00.
+
+	ldm/etc/pqact.conf
+
+b21.	Part of t205.  Done, SJ, (TP), 2/25/00.
+
+	ldm/etc/pqact.conf
+
+b22.	Part of t211.  Done, GK, (TP), 3/6/00.
+
+	ldm/etc/pqact.conf, scour.conf
+
+b23.	Part of t213.  Done, MLI, (TP), 3/7/00.
+
+	ldm/etc/pqact.conf
+
+b24.	Modified three pqact.conf files to expand the decode areas for
+	warnings.  Done, MLI, (TP), 3/10/00.
+
+	ldm/etc/pqact.conf
+
+b25.	Changed KNHC to KKCI for International Sigmets.  Done, SJ, (TP),
+	3/13/00.
+
+	ldm/etc/pqact.conf
+
+

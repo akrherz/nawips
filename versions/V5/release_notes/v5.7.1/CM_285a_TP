@@ -1,0 +1,15 @@
+Track 285 - Configuration Management
+
+Several inportant configuration management changes occurred in this release.
+NMAP and NSAT are no longer being supported.  As such, NMAP and NSAT have been 
+removed from NTL.  The environmental variable $NSAT has been removed and $NMAP
+now points to $NAWIPS/gempak/source/programs/gui/nmap2.  In addition, the 
+environmental variables $NAWIPS_LIB and $NAWIPS_EXE have been removed.  If you have
+local scripts depending upon these, please change to $GEMOLB and $GEMEXE respectively.
+The NXM library, Nxmlib.a, has been renamed libnxm.a.  Makefiles have been modified
+to reflect this change.  The environmental variable pointing to the object library, 
+$GEMOLB, has been added to the $LDFLAGS variable in the .cshrc.  It is essential
+that this change be made in your local .cshrc or your new Makefiles will not find
+some of our libraries.  Compile warnings found by Unidata were also addressed.  
+Finally, a new program, gpmap_gif, has been added to our link scripts, so that gpmap 
+can be run with the GIF driver without the use of GEMPLT.

@@ -1,0 +1,3 @@
+#!/bin/csh
+cd 
+tar -cvf opc.tar os/linux2.4el/lib/ncarg/sysresfile os/linux2.4el/bin/qc

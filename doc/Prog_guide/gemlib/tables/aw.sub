@@ -1,0 +1,42 @@
+#------------------------------------------------------------------------
+# aw.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# A. Hardy/GSC		 10/98	Original
+#------------------------------------------------------------------------
+
+aw2clg.f   -	Calculate Two's Compliment
+aw2cst.f   -	Calculate Two's Compliment
+awachr.f   -	Alphanumeric Characters Block
+awadbt.f   -	Add Two Bytes
+awalph.f   -	Alphanumeric Submode Block
+awaplt.f   -	Plot Data Block
+awgdef.f   -	Vector Graphic Definition Block
+awglsv.f   -	Relative Vectors Block
+awgrph.f   - 	Vector Graphic Submode Block
+awpend.f   -    End Product Block
+awpidb.f   -    Product Identification Block
+awpinf.f   -    Product Information Block
+awplin.f   -    Line Information Block
+awpmap.f   -    Map Background Definition Block
+awpplt.f   -    Plot Parameters Block
+awprod.f   -    Data Control Submode Block
+awread.f   -	Read AWIPS Graphics File
+awrfil.c   -	Get File Record Length
+awscom.f   -    System Binary Data Block
+awsdef.f   -    System Product ID Number Block
+awsver.f   -    System Product Version Block
+awsyst.f   -    System Product Submode Block
+awwxsm.f   -    Plot Weather Symbols 
+
+#------------------------------------------------------------------------

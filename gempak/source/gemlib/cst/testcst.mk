@@ -1,0 +1,1 @@
+$(BINDIR)/testcst: -lgemlib

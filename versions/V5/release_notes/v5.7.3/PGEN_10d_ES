@@ -1,0 +1,99 @@
+I.  Product Generation Changes
+
+    A.  NMAP2 Product Generation Improvements
+
+	2.  The product generation palette column control mechanism has been
+            made accessible to sites in order to support local customization.
+            A new setting, named PGEN_ICON_NCOLUMN, has been added to
+            $GEMTBL/config/prefs.tbl.  This controls the number of columns in
+            which the PGEN palette is displayed.
+
+            The default setting for PGEN_ICON_NCOLUMN is 3, meaning no change
+            from the previous display configuration.  However, changing this
+            value to 4 will enable a four column display.  Sites wishing to
+            move to a 4 column display may wish to use the new btn.tbl files
+            which have been optimized for 4 column displays.  In $GEMTBL/pgen
+            there are many button files (i.e. funcbtn.tbl, linebtn.tbl, etc.).
+            These files control the order in which buttons are positioned on
+            the palette.  In order to use any of the 4 column files, rename the
+            file with a _4 suffix (e.g. cp funcbtn_4.tbl funcbtn.tbl).
+
+            Also a blank button has been added.  This is a simple
+            non-functioning place holder which can be used to space buttons out
+            on a customized pgen palette.  In order to generate blank button
+            insert "blank" in the desired *btn.tbl file.
+
+        3.  It is now possible to change line/front types when in multi-select.
+            The ability to change line/front types within select has been
+            available for many years (select a line/front, click on another
+            line/front button on the PGEN palette and the type changes).  This
+            functionality has now been added to multi-select.
+
+            To use this feature draw several lines or fronts.  Click on multi-
+            select and select more than one line/front.  Now click on a
+            different line/front button on the PGEN palette.  All selected
+            lines/fronts will change type to match that chosen on the palette.
+
+
+        4.  Allow the use of "drag" and "shift-click" selection for the List 
+ 	    element.
+
+	    A new area selection mechanism has been added to the List element.
+	    When drawing or editing a list, the list components (i.e. counties, 
+	    zones, etc.) can be identified by a temporary, rectangular "drag" 
+	    box or by drawing a temporary, closed figure using the "shift-click" 
+	    method.  Selection by single mouse-click is still available as well.  
+
+	    The behavior of a list with respect to the list components within the 
+	    identified area is controled in new panel in the list attribute 
+	    window.  Components may be toggled (if they are not currently 
+	    included in the list they are added, if they are in the list they 
+	    are removed), which is the way the single click select has always 
+	    worked.  List components may also be added or deleted.
+
+	    To select list components with the "drag" box, click on the List 
+	    Class on the PGEN palette and then one of the List Objects (i.e. 
+	    County).  Now click and hold button 1.  Move the mouse and you will 
+	    see a temporary, white rectangle drawn from the site of the first 
+	    click to the current mouse cursor location.  Drag the mouse to 
+	    define the desired rectangle.  When button 1 is released, all the 
+	    list components within the drag box will be identifed and action 
+	    (toggle, add, or delete) will be taken on them and the list will be 
+	    updated accordingly.
+
+	    To select list components with the "shift-click" method, click on
+	    the List Class and then on one of the List Objects (i.e. County).
+	    Press and hold the shift key on the keyboard and click once with 
+	    the left mouse button (once the mouse button is pressed you may
+	    release the shift key).  Move the mouse and you should see a 
+	    temporary, white line drawn from the site of the first mouse click 
+	    to the current mouse cursor location.  Click again with the left 
+	    mouse button to identify other points on the closed figure.  When 
+	    you have defined the desired area, click on the middle mouse button.  
+	    This completes the figure.  All the list components within the 
+	    temporary figure will be identified and the appropriate action 
+	    (toggle, add, or delete) will be applied to them and the list 
+	    updated accordingly.
+
+
+        5.  Use Delete key to delete PGEN elements.
+
+	    The delete key can now be used to delete selected elements.  This
+	    works in both select and multi-select modes.  This is a keyboard 
+            shortcut that functions the same as the Delete Action on the 
+	    palette.  It can be undone using the Undo Action button.
+	   
+
+	6.  Change Save/Save As/Save All behavior to be more consistent.
+
+	    When the input and output file names are both specified in an
+	    lp file, the first Save will now always copy the contents of each
+	    layer to the named output file.  In the past each layer was only
+	    saved to the output file if changes had been made.
+
+	    Also, when a file is appended the specified output file name is
+	    remembered, so a Save (or Save All) will result in a Save action
+	    and not a Save As -- the user will not see a dialog box to 
+	    confirm the output file name.
+
+	   

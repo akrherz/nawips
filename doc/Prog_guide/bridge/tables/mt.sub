@@ -1,0 +1,56 @@
+#------------------------------------------------------------------------
+# mt.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 8/97	Original
+#------------------------------------------------------------------------
+
+mtaltm.f	- ?
+mtauto.f	- ?
+mtcltp.f	- ?
+mtcmtn.f	- ?
+mtdate.f	- ?
+mtdcod.f	- ?
+mtdecd.f	- ?
+mtdrop.f	- ?
+mtdsao.f	- ?
+mtdttm.f	- ?
+mtfind.f	- ?
+mtgemp.f	- ?
+mtgrpt.f	- ?
+mtmmt6.f	- ?
+mtnext.f	- ?
+mtpkwd.f	- ?
+mtpos2.f	- ?
+mtpost.f	- ?
+mtprrm.f	- ?
+mtpten.f	- ?
+mtrday.f	- ?
+mtrmks.f	- ?
+mtrvr4.f	- ?
+mtset.f		- ?
+mtshdr.f	- ?
+mtsky6.f	- ?
+mtslp.f		- ?
+mtsnow.f	- ?
+mtsspl.f	- ?
+mttdpt.f	- ?
+mttprm.f	- ?
+mtvald.f	- ?
+mtvisb.f	- ?
+mtvwnd.f	- ?
+mtwea3.f	- ?
+mtwind.f	- ?
+mtwshf.f	- ?
+
+#------------------------------------------------------------------------

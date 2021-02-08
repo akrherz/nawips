@@ -1,0 +1,106 @@
+			NAWIPS 5.10.x  Removed Files Log
+
+===============================================================================
+G72.4.1a 8/28/06 $GEMPAK/source/gplt/transform/gltow.f, gwtol.f
+
+25.21.1.3a 9/19/06 gempak/source/gemlib/cmm/proto_cmm.h
+		   gempak/source/gemlib/grc/grc.h
+		   gempak/source/gemlib/fortran_wrappers/fortran_wrappers.h
+		   gempak/source/programs/gd/gdlist/*.f
+
+25.21.1.4a 9/21/06 gempak/source/programs/gd/gddiag/*.f
+
+25.21.1.5a 10/10/06 gempak/source/gemlib/na/*.f
+		    gempak/source/programs/na/nagrib/*.f
+
+G51.28a	10/12/06 gempak/source/gemlib/im/imrtbl.f
+
+E1.1a	10/12/06 extlibs/GPC/v2.31
+		 gempak/include/gpc.h
+
+25.21.1.6a 10/18/06 gempak/source/contrib/hpc/gdgrib/*
+
+8.58a	10/19/06 gempak/source/textlib/airmet/airmet_format.c, af_link
+		 $OS_BIN/airmet_format
+
+============================  End of Release 5.10.1  ==========================
+17.10.1a 1/16/07 $NAWIPS/extlibs/AODT/v63
+		 $GEMPAK/source/programs/gui/nmap2/nmap_aodtw63.c
+		 $GEMPAK/source/programs/util/aodt/aodtv63drive.c, testaodtv63.c,
+		 testaodtv63_link
+		 $OS_BIN/testaodtv63
+		 $OS_INC/AODT/v63
+		 $OS_LIB/libAODT_v63.a
+
+============================  End of Release 5.10.2  ==========================
+C5.0a	2/16/07	gempak/include/error.h
+		extlibs/glib/v2.8.3
+		extlibs/gnu
+		extlibs/JasPer/v1.701.1
+		extlibs/netCDF/v3.6.0-p1
+		extlibs/pkg-config/v0.20
+		extlibs/PNG/v1.2.8
+		extlibs/xml2/V2.6.19
+		extlibs/xslt/v1.1.14
+		extlibs/zlib/v1.2.2
+
+C3.10a	2/28/07	gempak/source/nmaplib/pgen
+
+25.21.2.1a 3/8/07 gempak/source/nmaplib/ngd/ngddspl.f, ngdrsfl.f, ngdtlst.f
+		  gempak/source/programs/gd/gdplot2/gdbhlo.f, gdplot.cmn, gdpprt.f,
+			gdptmc.f, gdbinp.f,  gdplot.f, gdpskp.f  gdptms.f, gdblev.f,
+			gdpstg.f  gdpwnd.f, gdinst.f,  gdpstp.f, gdpban.f, gdpltb.f,
+			gdpstt.f test*
+		  gempak/source/programs/gd/gdplot3/gdanot.f,  gdinst.f,  gdncrv.f,
+			gdnreg.f, gdplot.f, gdpstp.f, gdptxt.f, gdbhlo.f, gdnarc.f,
+			gdnfnt.f, gdnsym.f, gdpltb.f, gdpstt.f, gdpwnd.f, gdbinp.f,
+			gdnarw.f, gdnlin.f, gdntxt.f, gdpprt.f, gdptmc.f, gdblev.f,
+			gdnbrb.f, gdnply.f, gdpban.f, gdpskp.f, gdptms.f, test*,
+			gdplot.cmn
+		  $OS_BIN/testgdp*
+		  $OS_LIB/gdplot2.a, gdplot3.a
+
+N4.7a	4/24/07	$GEMPAK/source/cgemlib/cfl/cflffil.c, cflrscd.c
+		$GEMPAK/source/gemlib/tb/tbnids.f
+		$GEMPAK/source/nmaplib/nim/*.f 
+
+C4.3a	4/27/07	extlibs/netCDF/v3.6.1
+
+25.21.2.2 6/6/07 gempak/include/proto_gdutil.h
+		 gempak/source/cgemlib/cfl/cflscandir.c
+		 gempak/source/gemlib/fortran_wrappers/cgclgrn.c, cgcntln.c, cinintc.c,
+			ctgmtch.c, ctitmln.c, gclgrnw.f, gcntlnw.f,
+			inintcw.f, tgmtchw.f, titmlnw.f
+		 gempak/source/gemlib/grc/grcnlev.c, grctitl.c
+		 gempak/source/gemlib/tb/tbnids.c
+		 gempak/source/gemlib/ti/timtchw.f
+		 gempak/source/nmaplib/ngd/ngdlrst.c, ngdrsfl.c
+		 gempak/source/nmaplib/nim/nimflnm.c
+		 gempak/source/programs/gd/gdplot2/gdbinp.c, gdplot.c
+		 gempak/source/programs/gd/gdplot3/gdbinp.c, gdplot.c
+		 gempak/source/programs/gd/gdutil/gctrl/gdpprt.c, gctrl.h, gdinst.c,
+                        gdctrl.c, gdpstb.c, gpskfl.c, gdpban.c, gdptim.c,
+                        setgdisp.c, gdfuin.c
+		 gempak/source/programs/gd/gdutil/gdata/gdata.h, getvgrd.c, getsgrd.c,
+                        setdmod.c
+		 gempak/source/programs/gd/gdutil/gview/gpcntr.c, gpfill.c, gdanot.f,
+                        gview.h, gdnarc.f, gptitl.c, gpwind.c, gdpwnd.c,
+                        gpstrm.c, gdnarw.f, gdnbrb.f, gdncrv.f,
+                        gdnfnt.f, gdnlin.f, gdnply.f, gdnreg.f, gdnsym.f,
+                        gdntxt.f, gdptxt.f, gdbhlo.f, gdstin.f, gdmmrk.f,
+                        gdmplt.f, gdmlbl.f, gdpoint.c
+
+============================  End of Release 5.10.3  ==========================
+25.32b	7/16/07	gempak/source/programs/gd/gdplot2/gdpltc.f
+		gempak/source/programs/gd/gdplot3/gdpltc.f
+
+25.30a	7/19/07	gempak/source/appl/contour/*
+		gempak/source/appl/utility/gstrml.f
+		gempak/source/appl/attribute/gqcntr.f, qscntr.f
+		gempak/source/gplt/contour/*
+		gempak/source/gplt/utility/gstrml.f, strmln.f
+		gempak/source/gplt/attribute/gqcntr.f, qscntr.f
+
+8.80.3b	7/26/07	$GEMPAK//source/textlib/airmet/nmap_pgairmetp.c
+
+============================  End of Release 5.10.4  ==========================

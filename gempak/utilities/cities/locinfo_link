@@ -1,0 +1,3 @@
+$CC $CFLAGS $LDFLAGS -I$GEMPAK/source/cgemlib/clo \
+		-o locinfo.$NA_OS locinfo.c -lcgemlib
+$RM *.o

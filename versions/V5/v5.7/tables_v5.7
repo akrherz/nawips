@@ -1,0 +1,750 @@
+		NAWIPS 5.7.x  Tables Changes Description Log
+
+t0.	T072:  Routine table updates.
+
+	-1. Added 60 stations to inactive.tbl.  Added 1 station to xrainsort.tbl.
+	    Added 20 stations to sfstns.tbl and renamed 3 stations;  25R -> EBG,
+	    5T5 -> INJ and T53 -> RBO.  AH, (SJ), 11/5/03.
+	
+		gempak/tables/stns/inactive.tbl, sfstns.tbl, xrainsort.tbl
+
+	-2. Corrected the longitude of 87344 Cordoba Airport from -6122 to -6422.
+	    The error was found by the SDM.  AH, (SJ), 11/24/03.
+
+		gempak/tables/stns/snstns.tbl
+
+	-3. Added the HPC preliminary extended discussions to NWX. The WMO ID is
+	    FXUS02 KWNH.  AH, (SJ), 11/24/03.
+
+		tables/nwx/guidata.tbl, master.tbl
+	NEW:	tables/nwx/extendp.bull
+
+	-4. Added 40 stations to inactive.tbl., Added 9 station to xrainsort.tbl.
+	    Added 25 stations to sfstns.tbl including the 3 stations requested
+	    by the SPC: 1F9, PSN and PTT.  AH, (SJ), 12/2/03.
+
+		gempak/tables/stns/inactive.tbl, sfstns.tbl, xrainsort.tbl
+
+	-5. In geog.tbl, changed ICAO_U1 to ICAO_EU, ICAO_U2 to ICAO_AS and
+	    ICAO_U3 to ICAO_ME, as requested by the AWC.  AH, (SJ), 12/2/03.
+
+		gempak/tables/stns/geog.tbl
+
+	-5.1 In geog.tbl, switched names for ICAO_ME (Middle East) with ICAO_AS
+	     (Asia).  AH, (SJ), 12/3/03.
+
+		gempak/tables/stns/geog.tbl
+
+	-6. Added new reporting stations LBX, ONP, EET and MHR to TAF station
+	    table.  DK, (AH), 12/9/03.
+
+		gempak/tables/stns/tafstn.tbl
+
+	-7. Updated pilot report table pirep_navaids.tbl by identifying and
+	    searching new navaids locations.  ML, (DK), 12/10/03.
+
+		gempak/tables/stns/pirep_navaids.tbl
+
+	-8. Corrected the location and elevation for surface station KLOT,
+	    Chicago/Romeoville. It was 4200 -8788 181; now 4161 -8809 205.
+	    Error was noted by NOAA Air Resources Lab. AH, (SJ), 12/17/03.
+
+	    	gempak/tables/stns/scdstn.tbl, sfstns.tbl, xrainsort.tbl
+
+============================= End of Release 5.7.1 =============================
+
+	-9. Corrected the latitude for KAMW from 4159 to 4199 in gfsmos.stn.
+	    The error was found by Unidata.  AH, (SJ), 1/5/04.
+
+		gempak/tables/stns/gfsmos.stn
+
+	-10. Updated the vertical coordinate table rdgrib1.tbl.  Created two
+	     new tables: wmogrib129.tbl and wmogrib130.tbl.  ML, (SJ), 1/26/04.
+
+		gempak/tables/grid/vcrdgrib1.tbl
+		NEW:	gempak/tables/grid/wmogrib129.tbl, wmogrib130.tbl
+
+	-11. Updated table ncepgrib129.tbl.  ML, (SJ), 2/9/04.
+
+		gempak/tables/grid/ncepgrib129.tbl
+
+	-12. Reconciled prmlst.tbl with prmlst tables used by ~natdv.  JC, TP,
+	     (SJ), 2/9/04.
+
+	     	gempak/tables/config/prmlst.tbl
+
+	-13. Added surface parameter SALI to the list of parameters 
+	     available for station models in NMAP2.  GG, SJ, (AH), 2/12/04.
+
+		gempak/tables/nmap/metar_parms.tbl
+
+	-14. Updated the inactive.tbl with 5 station.  Updated sfstns.tbl with 48
+	     stations.  Added MGR, 17Y, W11, FFA, JYL, 1A5, FYJ, RMN for the SPC.
+	     Corrected ISO's longitude and state id for TQH.  Updated 
+	     xrainsort.tbl with 21 new stations and corrected placement of 
+	     several stations in the table.  AH, (DK), 3/2/04.
+
+		gempak/tables/stns/sfstns.tbl, inactive.tbl, xrainsort.tbl
+
+	-15. Added new reporting stations BPI and ILN to taf station table.
+	     Added 14 new CMAN stations to marine station table.  DK, (SJ),
+	     3/3/04.
+
+		gempak/tables/stns/msfstns.tbl, tafstn.tbl
+
+	-16. Changed the comment from “...to 20 characters...” to “...to 16 
+	     characters...” in order to match what the code is expecting.  
+	     SJ, (SS), 3/4/04.
+
+		gempak/tables/config/prmlst.tbl
+
+	-17. Added RADAT and CWA to NWX.  RADAT is listed under observation data.
+	     CWA is listed under Aviation Forecast.  TL, (SJ), 3/5/04.
+
+		gempak/tables/nwx/guidata.tbl, master.tbl
+		NEW:	gempak/tables/nwx/cwsu.bull, radat.bull
+
+	-18. Updated pilot report table pirep_navaids.tbl by identifying and
+	     searching new navaids locations.  ML, (DK), 3/8/04.
+
+	     	gempak/tables/stns/pirep_navaids.tbl
+
+	-19. Corrected RADAT bulletin table for KWBC.  Removed a duplicated 
+	     entry for PAOT.  TL, (SJ), 3/9/04.
+
+		gempak/tables/nwx/radat.bull
+
+	-20. Added 6 new stations to sfstns.tbl and xrainsort.tbl as requested 
+	     by the SPC (03/01/04).  AH, (SJ), 3/11/04.
+
+		gempak/tables/stns/sfstns.tbl, xrainsort.tbl
+
+	-21. Changed the comment for the ALIGN values from 1, 2, 3 for Left, 
+	     Center and Right justification to -1, 0, 1.  SJ, (TP), 3/17/04.
+	
+		gempak/tables/pgen/setting.tbl
+		
+============================= End of Release 5.7.2 =============================
+
+	-22. Modified CWA table for NWX.  TL, (SJ), 3/25/04.
+
+		gempak/tables/nwx/cwsu.bull
+
+	-23. Added RUC2 grid (A236) to grdnav.tbl.  Fixed grid 218 specifications.
+	     KB, (SJ), 4/7/04.
+
+		gempak/tables/grid/grdnav.tbl
+
+	-24. Added upper air station 72391, Point Mugu to snstn.tbl as
+	     requested by the SDM.  AH, (SJ), 4/19/04.
+		
+		gempak/tables/stns/snstns.tbl
+
+	-25. As requested by the HPC, changed the priority number from 0 to 94 
+	     for Zanesville OH, Hot Springs, VA, Beckley, WV and Lewisburg, WV.
+	     AH, (SJ), 4/21/04.
+
+		gempak/tables/stns/gfsmos.stn
+
+	-26. At the request of the Production Management Branch, uncommented 
+	     grid number 180 in ncepgrib2.tbl.  SJ, (AH), 6/3/04.
+
+	     	gempak/tables/grid/ncepgrib2.tbl
+
+	-27. Updated the county cluster table, countyclust.tbl, by clustering the
+	     cities of Falls Church City, Radford, Franklin, Petersburg, Hopewell,
+	     Colonial Heights, Richmond, Fredericksburg, VA to their appropriate 
+	     counties.  This update is provided by the SPC.  GG, (SJ), 6/3/04.
+	
+		gempak/tables/stns/countyclust.tbl
+
+	-27. Changed the ICAO ID for Prishtina International Airport from LYPR 
+	     to BKPR per AWC email (06/01/04).  AH, (SJ), 6/4/04.
+	
+	gempak/tables/stns/inactive.tbl, lsfstns.tbl, sfstns.tbl, tafstn.tbl
+
+	-28. Added new reporting stations GUY, PDK, SME and TTN to TAF station 
+	     table.  Added new CMAN stations ACMN4, AVAN4 and BRBN4 to marine 
+	     surface station table.  Added stations 11747, 26629, 52983, and 
+	     84378 to upper air table, and moved 3 existing stations into 
+	     numeric order.  DK, (SJ), 6/8/04.
+
+		gempak/tables/stns/msfstns.tbl, tafstn.tbl, snstns.tbl
+
+	-29. Updated the county cluster table with St. Louis County and Dallas 
+	     clusters.  Updated the sfstns.tbl with 97 new stations and 
+	     xrainsort.tbl with 34 new stations.  Updated inactive.tbl with 6 
+	     new stations and changed the ICAO id BKPR to LYPR.  AH, (DK), 6/9/04.
+
+		gempak/tables/stns/xrainsort.tbl, inactive.tbl, sfstns.tbl, 
+								countyclust.tbl
+
+	-30. Added a new upper air station 78807, Corozal, to the snstn.tbl.
+	     Removed the comma from station name for XNP in xrainsort.tbl.  AH, 
+	     (DK), 6/15/04.
+
+		gempak/tables/stns/snstns.tbl, xrainsort.tbl
+
+	-31. Updated pilot report table pirep_navaids.tbl by identifying and 
+	     searching new navaids locations.  ML, (DK), 6/16/04.
+
+		gempak/tables/stns/pirep_navaids.tbl
+
+============================= End of Release 5.7.3 =============================
+	-32. Created the severe weather summary table, svrwx.tbl, so that in NWX 
+	     under SPC - Severe Wx Summary, the data will be displayed.  AH, 
+	     (SJ), 7/7/04.
+
+		NEW:	gempak/tables/nwx/svrwx.bull
+
+	-33. Updated the Regional temperature and precipitation table used by 
+	     NWX, rgtmpc.stn, with new AWIPS Ids and state locations.  Updated 
+	     the dev ldm with new WMO Ids for Hawaii, Alaska, Guam and Puerto 
+	     Rico.  AH, (SJ), 7/7/04.
+
+		gempak/tables/nwx/rgtmpc.stn
+		ldm/etc/pqact.conf
+
+	-34. Added to pqact.conf the storing of the Meteorological Impact 
+	     Statements for NWX.  These statements will be located in 
+	     $TEXT_DATA/aviation/mis/.  Added to scour.conf the removal of the 
+	     data files after 5 days.  Added a new table with the MIS bulletin 
+	     stations, $GEMTBL/nwx/mis.bull.  This addition is made at the 
+	     request of the AWC (08/11/04). 
+
+		gempak/tables/nwx/guidata.tbl, master.tbl
+		ldm/etc/pqact.conf, scour.conf
+		NEW:	gempak/tables/nwx/mis.bull
+
+	-35. Added entry for Marianas Island 'Anatahan' to volcano table.
+	     DP, (SJ), 8/18/04.
+
+		gempak/tables/stns/volcano.tbl
+
+	-36. Fixed the format of the synoptic station table to allow it to be 
+	     used by NWX.  Added station IDs, if missing.  Added state codes, if 
+	     missing.  Changed all spaces in the station name to underscores. 
+	     The table can now be used by NWX and does not affect the synoptic 
+	     decoder.  SJ, (AH), 8/24/04.
+
+		gempak/tables/stns/lsfstns.tbl
+
+	-37. Updated sfstns.tbl by adding 78 stations and removed 25 statons.
+	     Updated inactive.tbl by adding 25 stations.  Updated xrainsort.tbl 
+	     by adding 35 stations and changing the ids for 8 stations.  
+	     AH, (SJ), 8/30/04.
+
+		gempak/tables/stns/inactive.tbl, sfstns.tbl, xrainsort.tbl
+		NEW:	release_notes/v5.7.4/TABLE_72_AH
+
+	-38. Added TAF stations KRIL and KLCK, deleted TAF station PJON.  Changed
+	     GFS station name from KF39 to KGYI.  Added 17 new CMAN stations to 
+	     marine table.  Deleted marine zone AMZ435 from breakpoint table.  
+	     DK, (SJ), 8/31/04.
+
+		gempak/tables/stns/gfsmos.stn, msfstns.tbl, nhcbkpt_plt.tbl,
+								tafstn.tbl
+
+	-39. Release notes.  DP, (TP), 9/3/04.
+
+		NEW:	versions/release_notes/v5.7.4/TABLE20.2_72_DP
+
+	-40. The SPC has updated their county cluster table and asked that it be 
+	     placed in the 5.7.4 release (9/3/04).  AH, (SJ), 9/7/04.
+
+		gempak/tables/stns/countyclust.tbl
+
+	-41. Updated pilot report table pirep_navaids.tbl by identifying and 
+	     searching new navaids locations.  ML, (DK), 9/8/04.
+
+		gempak/tables/stns/pirep_navaids.tbl
+
+		
+################################################################################
+
+t1.	Part of 4b.  ML, (SJ), 10/8/03.
+
+	gempak/tables/config/datatype.tbl, miscset.tbl
+
+t2.	Part of 10b.  AH, (SJ), 10/22/03.
+
+	gempak/tables/pgen/grptyp.tbl
+
+t3.	Part of 8b.  MG, (DK), 10/23/03.
+
+	gempak/tables/config/datatype.tbl, miscset.tbl
+
+t4.	Part of 3a.  JW, (DP), 10/27/03.
+
+	gempak/tables/pgen/classbtn.tbl, setting.tbl
+	NEW:	gempak/tables/pgen/metbtn.tbl
+
+t5.	Part of 17a.  RT, (TP), 10/30/03.
+
+	gempak/tables/bounds/pfzbnds.tbl, pfzbnds.tbl.info
+	gempak/tables/stns/zones.tbl
+
+t6.	Part of 17a-1.  RT, (TP), 11/4/03.
+
+	gempak/tables/stns/county.tbl, countynam.tbl
+	gempak/tables/bounds/countybnds.tbl, countybnds.tbl.info
+
+t7.	Part of 1b.	FY, (SJ), 11/5/03.
+
+	gempak/tables/config/miscset.tbl
+	gempak/tables/stns/intlsig.tbl
+
+t8.	Part of 17a-2.  RT, (TP), 11/7/03.
+
+	gempak/tables/bounds/pfzbnds.tbl, pfzbnds.tbl.info
+
+t9.	Part of 3a-2.  DK, (SJ), 11/12/03.
+
+	NEW:	gempak/tables/bufr/fxyswhcld.tbl, fxyswhfrt.tbl, fxyswhjet.tbl,
+			fxyswhtrp.tbl, fxyswhtur.tbl, fxyswhvts.tbl, masterfxy.tbl
+
+t10.	Part of 10d.  TL, (SJ), 11/12/03.
+
+	gempak/tables/config/prefs.tbl
+
+t11.	Part of 10a-3. DP, (SJ), 11/14/03.
+
+	gempak/tables/pgen/sigmetbtn.tbl
+
+t12.	Part of 20a.  TL, (SJ), 11/14/03.
+
+	gempak/tables/config/datatype.tbl
+	gempak/tables/nmap/mod_res.tbl
+
+t13.	Part of 1c.  MG, (DK), 11/17/03.
+
+	gempak/tables/config/datatype.tbl, prmlst.tbl
+	tables/nwx/master.tbl, guidata.tbl
+	NEW:	gempak/tables/nmap/gfsmos_parms.tbl, gfsxmos_parms.tbl
+		gempak/tables/pack/gfsmos.pack, gfsxmos.pack
+		gempak/tables/stns/gfsmos.stn
+		tables/nwx/gfsmos.stn (link to $GEMTBL/stns)
+
+t14.	Part of 1c-1. MG, (DK), 11/18/03
+
+	gempak/tables/stns/gfsmos.stn
+
+t15.	Part of 5a-4.  ES, (DP), 11/19/03.
+
+	gempak/tables/pgen/ctrlbtn.tbl
+
+t16.	Part of 17a-3.  RT, (TP), 11/26/03.
+
+	gempak/tables/stns/county.tbl, countynam.tbl
+	gempak/tables/bounds/countybnds.tbl, countybnds.tbl.info
+
+t17.	Part of 1c-2.  DK, (SJ), 11/26/03.
+
+	gempak/tables/stns/gfsmos.stn
+
+t18.	Part of 17a-4.	RT, (TP), 12/1/03.
+
+	NEW:	gempak/tables/bounds/firebnds.tbl, firebnds.tbl.info
+
+t19.	Part of 10a-7.  DP, (SJ), 12/2/03.
+
+	gempak/tables/pgen/vaa.tbl
+
+t20.	Part of 17a-5.  MG, (TP), 12/2/03.
+
+	gempak/tables/bounds/ssa_bnd.tbl, ssa_bnd.tbl.info
+
+t21.	Part of 17a-6.  MG, (TP), 12/3/03.
+
+	gempak/tables/config/clo.tbl
+	NEW:	gempak/tables/bounds/cpcus_bnd.tbl, cpcus_bnd.tbl.info
+
+t22.	Part of 5b-4.  ES, (SJ), 12/4/03.
+
+	gempak/tables/pgen/funcbtn.tbl
+
+t23.	Part of 1a-4,  DK, (SJ), 12/4/03.
+
+	gempak/tables/stns/nhcbkpt_plt.tbl, nhcbreaks.tbl
+
+t24.	Part of 10a-9.  HZ, (DP), 12/5/03.
+
+	gempak/tables/pgen/vaa.tbl
+
+t25.	Part of 1b-3.  FY, (SJ), 12/5/03.
+
+	gempak/tables/stns/intlsig.tbl
+
+t26.	Part of 11a-4.  TP, (SJ), 12/12/93.
+
+	tables/ntl/ntl.tbl
+
+============================= End of Release 5.7.1 =============================
+
+t27.	Part of 10e.  AH, (SJ), 1/5/04.
+
+	gempak/tables/pgen/symbolbtn.tbl
+
+t28.	Part of 24o.  TP, (SJ), 1/12/04
+
+	gempak/tables/stns/nexrad.tbl
+
+t29.	Part of 10e-1.  mg, (DK), 1/20/04.
+
+	gempak/tables/config/miscset.tbl
+
+t30.	Part of 10b-1.	BY, (AH), 1/21/04.
+
+	NEW:	gempak/tables/pgen/otlfilnam.tbl
+
+t31.	Part of 10c-10.  AH, (SJ), 1/29/04.
+
+	gempak/tables/txtprd/woudef.tbl
+
+t32.	Part of 11a-8.  TP, (SJ), 1/29/04
+
+	NEW:	gempak/tables/colors/nawips_color_names
+		gempak/tables/config/ntl.tbl
+		gempak/tables/nsharp/nsharp_models.tbl, nsharp_observed.tbl, 
+								nsharp_pfc.tbl
+		gempak/tables/nwx/*  (actually moving from NAWIPS_TABLES)
+
+t33.	Part of 1a-9.  DK, (SJ), 1/29/04.
+
+	gempak/tables/stns/nhcbkpt_plt.tbl, nhcbreaks.tbl
+
+t34.	Part of 5b-14.  JW, (ES), 1/29/04.
+
+	gempak/tables/pgen/setting.tbl, uattribd.tbl
+
+t35.	Part of 10a-11.  HZ, (DP), 2/2/04
+
+	gempak/tables/pgen/vaa.tbl
+
+t36.	Part of 17a-10.  RT, (SJ), 2/9/04
+
+	gempak/tables/config/clo.tbl, mapfil.tbl
+	gempak/tables/nmap/locator.tbl, mapovl.nmap
+	NEW:  gempak/tables/bounds/tzbnds.tbl, tzbnds.tbl.info
+
+t37.	Part of 10a-12.  HZ, (DP), 2/11/04.
+
+	NEW:	gempak/tables/pgen/VAA_lpf_template.lpf
+
+t38.	Part of 17a-11.  RT, (TP), 2/12/04.
+
+	gempak/tables/bounds/mzbnds.tbl, mzbnds.tbl.info
+	gempak/tables/stns/zones.tbl
+
+t39.	Part of 1a-12.  DK, (SJ), 2/17/04.
+
+		gempak/tables/config/clo.tbl
+	NEW:	gempak/tables/stns/tcabkpt.tbl
+
+t40.	Part of 1a-14.  BY, (ES), 2/25/04.
+
+	gempak/tables/pgen/setting.tbl, uattribd.tbl
+
+t41.	Part of 20b.  TL, (SJ), 2/25/04.
+
+	gempak/tables/config/datatype.tbl
+	gempak/tables/grid/grdnav.tbl
+	gempak/tables/nmap/mod_res.tbl
+
+t42.	Part of 5b-18.  JW, (ES), 2/25/04.
+
+	gempak/tables/pgen/metbtn.tbl
+	NEW:	gempak/tables/pgen/airmet.tbl
+
+t43.	Part of 1a-16.  DK, (AH), 2/26/04.
+
+	gempak/tables/stns/nhcbreaks.tbl, tcabkpt.tbl
+
+t44.	Part of 10a-13.  HZ, (DP), 3/2/04.
+
+	gempak/tables/pgen/vaa.tbl
+
+t45.	Part of 3a-23.  ML, (DK), 3/4/04.
+
+	gempak/tables/pgen/setting.tbl
+
+t46.	Part of 1c-4.  DK, (SJ), 3/5/04.
+	
+	gempak/tables/pack/gfsmos.pack
+
+t47.	Part of 5b-22.  JW, (ES), 3/8/04.
+
+	gempak/tables/pgen/airmet.tbl, metbtn.tbl
+	NEW:	gempak/tables/pgen/ncon_sigmets.tbl
+
+============================= End of Release 5.7.2 =============================
+
+t48.	Part of 10c-12.  RT, (AH), 3/24/04.
+
+	NEW:	gempak/tables/bounds/mzcntybnds.tbl, mzcntybnds.tbl.info
+		gempak/tables/stns/marinenames.tbl, mzcntys.tbl
+
+t49.	Part of 1a-18.  BY, (ES), 3/24/04.
+
+		gempak/tables/pgen/metbtn.tbl
+	NEW:	gempak/tables/pgen/tcainfo.tbl
+
+t50.	Part of 1a-19.  DK, (SJ), 3/24/04.
+
+	gempak/tables/stns/tcabkpt.tbl
+
+t51.	Part of 10d-4.  HZ, (ES), 3/31/04.
+
+		gempak/tables/config/prefs.tbl
+	NEW:	gempak/tables/pgen/circlebtn_4.tbl, classbtn_4.tbl, 
+		combsymbbtn_4.tbl, ctrlbtn_4.tbl, frontbtn_4.tbl, funcbtn_4.tbl,
+		linebtn_4.tbl, listbtn_4.tbl, markerbtn_4.tbl, metbtn_4.tbl, 
+		prodbtn_4.tbl, sigmetbtn_4.tbl, symbolbtn_4.tbl, textbtn_4.tbl, 
+		trackbtn_4.tbl, vectorbtn_4.tbl, watchbtn_4.tbl
+
+t52.	Part of 10c-13.  RT, (AH), 3/31/04.
+
+		gempak/tables/bounds/mzcntybnds.tbl, mzcntybnds.tbl.info
+		gempak/tables/stns/marinenames.tbl, mzcntys.tbl
+
+t53.	Part of 5b-33.  JW, (ES), 4/7/04.
+
+		gempak/tables/pgen/funcbtn.tbl
+
+t54.	Part of 17a-13.  MG, (SJ), 4/8/04.
+
+		gempak/tables/bounds/ssa_bnd.tbl
+		gempak/tables/bounds/ssa_bnd.tbl.info
+
+t55.	Part of 10c-15.  AH, (SJ), 4/9/04.
+
+		gempak/tables/txtprd/woudef.tbl
+
+t56.	Part of 10c-17.  AH, (SJ), 4/13/04.
+
+		gempak/tables/txtprd/woudef.tbl
+
+t57.	Part of 10c-18.  AH, (SJ), 4/15/04.
+
+		gempak/tables/config/clo.tbl, mapfil.tbl, prefs.tbl
+		gempak/tables/pgen/listbtn.tbl, setting.tbl
+		gempak/tables/nmap/locator.tbl, mapovl.nmap
+
+t58.	Part of 3a-29.  ML, (DK), 4/20/04.
+
+		gempak/tables/bufr/fxyswhjet.tbl
+		gempak/tables/melbufr/B2M-000-002-B
+
+t59.	Part of 1a-24.  RT, (KB), 5/3/04.
+
+		gempak/tables/pgen/tcainfo.tbl
+
+t60.	Part of 17a-14.  MG, (SJ), 5/3/04.
+
+	NEW:	gempak/tables/bounds/ua_bnd.tbl, ua_bnd.tbl.info
+
+t61.	Part of 7h.  AH, (DP), 5/4/04.
+
+		gempak/tables/sat/imgtyp.tbl
+
+t62.	Part of 4h.  SC & AH, (SJ), 5/11/04.
+
+		gempak/tables/parms/pcconv.tbl
+
+t63.	Part of 3a-32.  ML, (DK), 5/12/04.
+
+		gempak/tables/bufr/fxyswhvts.tbl
+
+t64.	Part of 8a-7.  JW, (DP), 5/13/04.
+
+		gempak/tables/pgen/setting.tbl, uattribd.tbl
+
+t65.	Part of 1a-28.  BY, (ES), 5/14/04.
+
+		gempak/tables/pgen/tcainfo.tbl
+
+t66.	Part of 1a-30.  DK, MM, (SJ), 5/17/04.
+
+		gempak/tables/hcnadv/altker.tbl, eptker.tbl
+
+t67.	Part of 22a-16.  ML, (SJ), 5/18/04.
+
+		gempak/tables/grid/g2vars.tbl, gwcgrib2.tbl, ncepgrib129.tbl, 
+			ncepgrib130.tbl, ncepgrib1.tbl, ncepgrib2.tbl, 
+			nmcgrib1.tbl, nmcgrib2.tbl, wmogrib129.tbl, 
+			wmogrib130.tbl, wmogrib1.tbl, wmogrib2.tbl, wmogrib3.tbl
+
+t68.	Part of 8a-7.  JW, (SJ), 5/19/04.
+
+		gempak/tables/pgen/setting.tbl, uattribd.tbl
+
+t69.	Part of 1a-32.  BY, (ES), 5/20/04.
+
+		gempak/tables/stns/tcabkpt.tbl
+
+t70.	Part of 1a-33.  BY, (ES), 5/24/04.
+
+		gempak/tables/stns/tcabkpt.tbl
+
+t71.	Part of 17a-15.  RT, (SJ), 5/28/04.
+
+		gempak/tables/bounds/mzcntybnds.tbl, mzcntybnds.tbl.info
+		gempak/tables/stns/mzcntys.tbl, marinenames.tbl
+
+t72.	Part of 17a-16.   RT, (SJ), 5/28/04.
+
+		gempak/tables/stns/zones.tbl
+		gempak/tables/bounds/mzbnds.tbl.info, mzbnds.tbl
+
+t73.	Part of 17a-17.  MG, (TP), 6/2/04.
+
+		gempak/tables/bounds/bwus_bnd.tbl, bwus_bnd.tbl.info
+
+t74.	Part of 4b-3.  FY, (SJ), 6/3/04.
+
+		gempak/tables/config/datatype.tbl, miscset.tbl
+
+t75.	Part of 17a-18.  RT, (SJ), 6/4/04.
+
+		gempak/tables/bounds/pfzbnds.tbl, pfzbnds.tbl.info
+		gempak/tables/stns/zones.tbl
+
+t76.	Part of 10c-31.  AH, (SJ), 6/4/04.
+
+		gempak/tables/nmap/locator.tbl
+
+t77.	Part of 5b-43.  JW, (ES), 6/4/04.
+
+		gempak/tables/pgen/metbtn.tbl
+	NEW:	gempak/tables/pgen/gfa.tbl
+
+t78.	Part of 3a-33.  ML, (DK), 6/7/04.
+
+		gempak/tables/bufr/masterfxy.tbl
+
+t79.	Part of 10a-17.  HZ, (DP), 6/7/04.
+
+		gempak/tables/pgen/vaa.tbl
+
+t80.	Part of 1a-39.  DK, (SJ), 6/8/04.
+
+		gempak/tables/stns/tcabkpt.tbl, nhcbreaks.tbl, nhcbkpt_plt.tbl
+
+t81.	Part of 1e-3.  FY, (SJ), 6/9/04.
+
+		gempak/tables/config/miscset.tbl
+
+t82.	Part of 23a-1.  AH, (DK), 6/17/04.
+
+		gempak/tables/config/clo.tbl, mapfil.tbl
+		gempak/tables/nwx/master.tbl, stf.bull, guidata.tbl
+
+t83.	Part of 17a-19.  AH, SJ), 6/23/04.
+
+		gempak/tables/config/clo.tbl
+
+t84.	Part of 17a-20.  MG, (AH), 6/23/04.
+
+		gempak/tables/bounds/bwus_bnd.tbl, bwus_bnd.tbl.info
+
+t85.	Part of 22a-19.  AH, (SJ), 6/23/04.
+
+		gempak/tables/grid/g2vars.tbl, ncepgrib129.tbl, ncepgrib130.tbl, 
+                        ncepgrib1.tbl, ncepgrib2.tbl, nmcgrib1.tbl, nmcgrib2.tbl, 
+                        wmogrib129.tbl, wmogrib130.tbl, wmogrib1.tbl, 
+                        wmogrib2.tbl, wmogrib3.tbl
+
+============================= End of Release 5.7.3 =============================
+t86.	Part of 10d-16.  TP, (SJ), 7/7/04.
+
+		gempak/tables/config/prefs.tbl
+
+
+
+t87.	Part of 9f-7.  HZ, (SJ), 7/12/04.
+
+		gempak/tables/pgen/uattribd.tbl
+
+t88.	Part of 1a-42.  BY, (ES), 7/12/04.
+
+		gempak/tables/config/clo.tbl
+
+t89.	Part of 1a-43.  BY, (FY), 7/19/04
+
+		gempak/tables/config/miscset.tbl
+
+t90.	Part of 9a-23.  TL, (AH), 7/19/04.
+
+		gempak/tables/config/prefs.tbl
+
+t91.	Part of 5b-45.  JW, (ES), 7/19/04.
+
+		gempak/tables/pgen/funcbtn.tbl, funcbtn_4.tbl
+	NEW:	gempak/tables/pgen/filter.tbl
+
+t92.	Part of 1a-44.  MG, (DK), 7/20/04.
+
+		gempak/tables/stns/tcabkpt.tbl
+
+t93.	Part of 10c-40.  RT, (AH), 7/23/04.
+
+		gempak/tables/bounds/mzcntybnds.tbl, mzcntybnds.tbl.info
+		gempak/tables/stns/mzcntys.tbl, marinenames.tbl
+
+t94.	Part of 17a-21.  RT, (AH), 7/23/04.
+
+		gempak/tables/bounds/mzbnds.tbl, mzbnds.tbl.info
+
+t95.	Part of 17a-22.  RT, (TP), 7/23/04.
+
+		gempak/tables/bounds/pfzbnds.tbl, pfzbnds.tbl.info
+		gempak/tables/stns/zones.tbl
+
+
+t96.	Part of 4b4.  FY, (SJ), 7/27/04.
+
+		gempak/tables/config/datatype.tbl, miscset.tbl
+
+t97.	Part of 1a-47.  BY, (ES), 8/10/04.
+
+		gempak/tables/stns/tcabkpt.tbl
+
+t98.	Part of 17a-23.  JM, (SJ), 8/16/04.
+
+		gempak/tables/config/mapfil.tbl
+		gempak/tables/nmap/mapovl.nmap
+
+t99.	Part of 3a-40.  ML, (DK), 8/18/04.
+
+		gempak/tables/bufr/masterfxy.tbl
+	NEW:	gempak/tables/bufr/fxyswmcld.tbl, fxyswmfrt.tbl, fxyswmjet.tbl,
+						fxyswmtrp.tbl, fxyswmvts.tbl
+t100.	Part of 5b-55.  ES, (SJ), 8/18/04.
+		
+		gempak/tables/pgen/filter.tbl
+
+t101.	Part of 10c-44.  AH, (SJ), 8/18/04.
+
+		gempak/tables/config/prefs.tbl
+
+t102.	Part of 5b-58.  MG, (SJ), 8/20/04.
+
+		gempak/tables/config/miscset.tbl
+
+t103.	Part of 17a-24.  MG, (TP), 8/24/04.
+
+	NEW:	gempak/tables/bounds/airmet_bnd.tbl, airmet_bnd.tbl.info
+
+t104.	Part of 17a-26.  MG, (TP), 9/3/04.
+
+		gempak/tables/bounds/airmet_bnd.tbl, airmet_bnd.tbl.info
+
+t105.	Part of 1a-57.  DK, (SJ), 9/7/04
+
+		gempak/tables/stns/tcabkpt.tbl
+
+t106.	Part of 1a-59.  DK, (SJ), 9/9/04
+
+		gempak/tables/stns/nhcbkpt_plt.tbl
+
+

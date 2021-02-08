@@ -1,0 +1,9 @@
+Specify location of .DEFAULT.vgf in a table (hpc/opc)
+
+The location of the Product Generation work file, .DEFAULT.vgf, may
+now be specified by the user. The entry "WORK_FILE_DIR" in prefs.tbl
+is the path to the directory to be used for the work file. The default
+value as delivered is the current directory, ".". This value of this
+preference may be any directory for which the user has write 
+permission. The value may include an environment variable. 
+

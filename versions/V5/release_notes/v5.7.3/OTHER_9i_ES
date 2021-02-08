@@ -1,0 +1,20 @@
+I.  Product Generation Changes
+
+    A.  NMAP2 Product Generation Improvements
+
+    	1.  Increased the number of available data loops from 8 to 16.  Note
+	    however that the total number of available frames of data (120) has 
+	    not changed.  The F1 - F8 keys may be used to navigate to loops 1-8
+	    and the key combination of Shift + F1 - Shift + F8 key can be used 
+	    to navigate to loops 9 - 16.
+
+
+
+II.  NWX changes
+
+    A.  NWX can now accept X server command line options.
+
+        NWX has been modified to pass on any window manager command line options
+        to the X server.  The NWX application itself does not have any command
+        line options and does no command line parsing.  It merely passes on
+        what it finds on the command line.  

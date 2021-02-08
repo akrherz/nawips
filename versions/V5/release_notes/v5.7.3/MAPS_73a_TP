@@ -1,0 +1,12 @@
+Track 73:  MAPS
+
+Created new VGF and map files for new area TPC_PR.  Added the new
+area to SSA bounds VGF file and updated the bounds table files.
+
+Updated Public Forecast Zone with March 24, 2004 shapefile.
+
+Updated Marine Counties and Marine Zones with the May 20, 2004 shapefile.
+
+Created new VGF, map, and bounds files for GAREA BWUS per HPC request.
+
+

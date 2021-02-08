@@ -1,0 +1,17 @@
+! This table contains those marine zones that need to be removed when 
+! producing the combined county and marine products.
+!
+! R. Tian/SAIC		 3/04	Created
+! G. Grosshans		12/05	Added GMZ472
+! J. Huber		09/15	Removed all but Alaska and Hawaii marine zones to support expansion to two layer marine zones.
+!Gulf of Alaska
+PKZ300
+PKZ305
+PKZ385
+PKZ395
+PKZ380
+PKZ390
+!Non-coastal waters
+PHZ105
+PHZ180
+PHZ195

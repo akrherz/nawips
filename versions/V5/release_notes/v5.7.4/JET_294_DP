@@ -1,0 +1,8 @@
+Jet Element
+
+	A. Added more control over the attributes of the jet element pieces
+
+	All attributes of all jet element sub-elements - line, wind barbs and 
+	text, and hash marks - may now be controlled by both the 'setting.tbl' 
+	and 'uattribd.tbl'. Note that the jet barb and text always use the
+	same color.

@@ -1,0 +1,51 @@
+#------------------------------------------------------------------------
+# fl.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+flapnd.f	- Position Sequential File For Appending
+flbksp.f	- Backspace Sequential File
+flcdel.f	- Close And Delete File
+flclal.f	- Close All Open Files
+flclos.f	- Close File
+fldcre.f	- Create Direct Access File
+fldopn.f	- Open Existing Direct Access File
+fldsop.f	- Open Shared Direct Access File For Writing
+flffil.f	- Find Most Recent File
+flflun.f	- Free Logical Unit Number
+flglun.f	- Allocate Logical Unit Number
+flgnam.f	- Get File Name For Logical Unit
+flinqr.f	- Determine Existence Of File
+flmdat.f	- Build Date/Time From Template And File Name
+flmfil.f	- Build File Name From File Type And Time
+flmfls.f	- Build File Names From File Type And Times
+flmnam.f	- Build File Name From Template And Time
+flread.f	- Read Direct Access File
+flrewd.f	- Rewind Sequential File 
+flrshr.f	- Read Shared Direct Access File
+flscnd.f	- Scan Directory For Matching Template
+flsopn.f	- Open Existing Sequential File
+flsunk.f	- Open New Sequential File
+flswop.f	- Open Sequential File For Writing
+fltbop.f	- Open GEMPAK Table For Reading
+fltdat.f	- Position GEMPAK Table To Next Data Record
+fltmpl.f	- Determine If File An Alias
+fltrew.f	- Rewind GEMPAK Table File
+flwrit.f	- Write To Direct Access File
+# testfl.f	- FL Library Test Program
+
+#------------------------------------------------------------------------

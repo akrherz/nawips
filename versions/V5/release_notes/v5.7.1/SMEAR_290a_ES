@@ -1,0 +1,23 @@
+I.  Product Generation Changes
+
+    A.  NMAP/NMAP2 Product Generation Improvements
+
+      1. Added user interface for Smear Action (awc)
+
+	 The Smear function takes one or more closed figures (sigmets, airmets, 
+	 or closed lines) and creates a new element combining the selected 
+	 figures.  To use the function, draw several closed figures.  Click on
+	 the Smear button on the pgen palette.  Now select a figure with <L> 
+	 mouse.  Click <L> mouse again to confirm this selection or <M> mouse to 
+	 de-select.  Once the selection is confirmed the handlebars on the figure 
+	 will turn to red squares.  Select as many figures as you like.  Once 
+	 all desired figures have red squares for handlebars click the M mouse 
+   	 button.  The smear figure will be added as a new element, and will have 
+	 all the attributes (color, line type, etc) as the first selected figure 
+	 had.
+
+	 Note that only figures of the same class and type can be smeared.  That
+	 is sigmets may only be smeared with other sigmets, and closed lines only
+	 with closed lines.  
+	 
+

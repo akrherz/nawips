@@ -1,0 +1,1332 @@
+
+
+                                 GEMPAK 5.2 LOG
+
+   000.	Miscellaneous, Clean Up and Small Fixes
+
+	a. Clean up directories and logs. Collected and moved *.prm, *.err
+	   and *.txt files to new directories. Moved GPAOIM and GPOUT
+	   directories out of operational code directories. Done, STJ 5/10/93.
+	   
+	b. Reconstructed PDF and HLP files. Done, STJ 5/10/93.
+
+	c. Pressure tendency fix for decoding raw data from UNIDATA (PB 4/93).
+	   Done, STJ 7/7/93.
+
+	d. Change the checks for the four corner points in CCOEFF (KFB 4/93).
+	   Done, STJ 7/13/93. Undone, STJ 8/16/93.
+
+	   1. Modified the change in 010b. Reordered the sequence of code
+	      in CCOEFF to handle missing data better.
+	      (From MdJ) Done, STJ 3/15/94
+
+	e. Fixed a typo in GR_SUBX. Done, STJ 7/13/93.
+
+	f. Added the parameter MFGRID to all GEMPRM files. Done, STJ 8/4/93.
+ 
+	g. Corrected incorrect storage of GDATTIM when entered incorrectly. 
+	   Done, LES 8/23/93. 
+
+	h. Moved to 010a.
+
+	i. Changed the character lengths in SFMOPT to be divisible by 4, because
+	   the odd valued lengths caused core dumps under certain circumstances.
+	   (From KFB) Done, STJ 9/3/93. Undone, STJ 9/9/93.
+
+	j. Changed the calling sequences for IN_CINT and GR_CLVL to return
+	   the computed contour intervals to the calling routine. (From GKK)
+	   Done, STJ 9/6/93.
+
+	k. Changed grid time routines to allow a 3 digit forecast time to mean
+	   hours and to return a 5 digit forecast time for use in the title.
+	   Done, STJ 9/6/93.
+
+	   1. Changed to return a 3 digit forecast time if the minutes are zero.
+	      Done, STJ 9/17/93.
+
+	l. Added a new routine to get a list or range of forecast times from 
+	   a grid file. (From GKK) Done, STJ 9/6/93.
+
+	m. Added a new routine to return a specified element of a list of 
+	   characters delimited by an exclamation point (!). (From GKK)
+	   Done, STJ 9/6/93.
+
+	n. Changed the plotting location for the titles. (From GKK)
+	   Done, STJ 9/6/93.
+
+	   1. Changed the calculation of the title location to attach the 
+	      title to the plot area instead of the view area. Done, STJ 9/22/93.
+
+	   2. Added a fix for calculating the location for titles on graphs.
+	      Done, STJ 2/3/94.
+
+	o. Added a general function to find the system clock time for UNIX
+	   based computers. (From GKK) Done, STJ 9/6/93.
+
+	p. Added the ability to create a file using an environmental variable
+	   for the path to the file. Done, STJ 9/15/93.
+
+	q. Added a check for a comment in the user input in NT_DYNM. This 
+	   will be most useful when writing a script and needing to comment
+	   an individual input parameter. Done, STJ 9/15/93.
+
+	r. Changed the output format of the valid time to include a 'V' and the
+	   forecast time as in: yymmdd/hhmmVhhhmm.
+	   Done, STJ 9/15/93.
+
+	s. Changed real valued exponents to integers, where appropriate.
+	   Changed 0.5 exponents to SQRT function. Done, STJ 9/15/93.
+
+	t. Fixed typo in DG_PFUN to allow the use of multiple input files.
+	   Done, STJ 9/17/93.
+
+	u. Cleaned up compilation scripts and eliminated the need for links
+	   in /usr/include by creating and deleting links in each directory.
+	   Done, STJ 9/24/93.
+
+	v. Added a check for fonts which have already been loaded, in XSTEXT.
+	   This is needed to eliminate an error in the allocation and 
+	   deallocation of memory associated with the loading and setting of
+	   fonts. Done, CL 9/29/93.
+
+	w. Added two options to the 'f77' command for the HP workstations.
+	   Added +E4 to print a leading zero when using the E, F and G formats.
+	   Added +E6 to allow variable formats. Done, STJ 10/26/93.
+
+	x. Modified SFMAP and SNMAP to call GCLEAR before setting the filter.
+	   This solves the problem which occurs when an XW is resized. The
+	   filter was being computed from the previous window size.
+	   Done, STJ 11/29/93. Undone, STJ 2/1/94.
+
+	y. Added a routine (DQDCHR) to the DEVICE library for completeness.
+	   Done, STJ 1/27/94.
+
+	z. Modified ER_WMSG into two routines: one to make the error message
+	   (ER_MMSG) and another to write the message (ER_WMSG).
+	   Done, AC 1/28/94.
+
+	   1. Added file close to ER_MMSG.  Without close, file did not get
+	      rewound and later error messages from the file were not found.
+	      Also, rewrote TESTER so one doesn't have to <CNTL>C out of
+	      loop.  MdJ 8/2/94.
+
+	   2. Added option to eliminate writes of error messages. From
+	      P. Neilley; modified by MdJ 8/2/94
+
+	aa. Changed the default margins for GDPROF to be the same as those
+	    for SNPROF. Done, STJ 2/12/94.
+
+	bb. Increased the internal character length to 132 for the FL library.
+	    (From GKK) Done, STJ 3/7/94.
+
+     	cc. Increased the length of the value of an environmental variable to
+	    72 characters in SS_ENVR. Done, STJ 3/9/94.
+
+	dd. Removed the extra blank comment lines from the headers of all
+	    of the APPL routines. (From LW) Done, STJ 3/16/94.
+
+	ee. Removed the interpolation of vectors to the background grid of
+	    GDCROSS. Done, STJ 3/29/94.
+
+	ff. Changed the checking for the ROW header in GDEDIT. If the row
+	    number was three digits, the program would fail in reading the
+	    data. Changed to eliminate the word 'ROW' from the header line.
+	    Also replaced the call to ST_C2C with ST_RLST. All work was done
+	    in sfegdt.f. Done, STJ 3/30/94.
+
+	gg. Cleaned up the variable declaration sections of all necessary
+	    main programs. Done, LW 3/30/94.
+
+	hh. Added call to convert the case of the vertical coordinate in
+	    SNCROSS (snsyax.f). Done, STJ 4/7/94.
+
+	ii. Changed length of time substring in the title generation routine
+	    GR_TITL. Done, STJ 4/11/94.
+
+	jj. Fixed typo in RU_MLVL -- changed IMISS to IMISSD. Done, STJ 4/11/94.
+
+	kk. Modified help files for SNPARM and STNDEX to contain the correct
+	    information on the temperature and pressure at the lifted
+	    condensation level. Done, STJ 4/11/94.
+
+	ll. Removed unused variables from various routines. Done, STJ 4/19/94.
+
+ 	mm. Fixed a typo in TESTPC (jnumlev -> jnumlv). Done, STJ 4/25/94.
+
+	nn. Added new vertical coordinates to the VCRDGRIB1 table.
+	    Done, STJ 4/29/94
+
+	oo. Added the ability to use the `+' as well as the `*' for zooming
+	    in on an area. Done, LW 5/10/94.
+
+	pp. Changed the length of variables in the necessary programs:
+
+	    1. DEVICE to 72 characters. Done, STJ 6/8/94.
+
+	    2. STNDEX to 72 characters. Done, STJ 6/8/94.
+
+	    3. Temporary variable SSS in ST_CRNM to 24 characters.
+	       Done, STJ 6/8/94.
+
+	    4. COLOR(S) to 72 characters. Done, STJ 6/8/94.
+
+	qq. Initialize the variable knt to zero in PC_CING. Done, STJ 6/8/94.
+
+	rr. Changed the dimensions of the panels when plotting two traces.
+	    Done, STJ 6/8/94.
+
+	ss. Aligned the output for the filter factor in SFMOPT and SNMOPT.
+	    Done, STJ 6/8/94.
+
+	tt. Fixed a typo in the declarations for GDTHGT. Done, STJ 6/9/94.
+
+	uu. Changed ICTABL to use the FL_TOPN routine to open the color table.
+	    Done, STJ 7/9/94.
+
+	vv. Updated the header of all the C code to have the same format.
+	    Done, LW 7/12/94.
+
+	ww. Removed all code related to the AOIPS satellite projection.
+	    Done, STJ 7/12/94.
+
+	xx. Changed all user input variables to 72 characters.
+	    Done, LRW 8/5/94.
+
+	yy. Modified SNPSTB in SNPROF to return the correct number of station
+	    parameters. Done, JW 11/93. Added, STJ 8/16/94.
+
+	zz. Added MXLOOP = 30 to gemprm.xxx for maximum number of frames 
+	    in a loop.  Copied to source_comet PB 8/94.
+
+	aaa. Cleaned up inscal.f (as per MdJ). Copied to source_comet PB 8/94
+
+	bbb. Added iret check to ggsdev.f. Copied to source_comet PB 8/94
+
+	ccc. Removed comments in gvcord.hl2 about freezing level map.
+	     Copied to source_comet PB 8/94.
+
+	ddd. Cleaned up GR_GSSCL and GR_VSCL (as per MdJ). Copied to
+	     source_comet PB 8/94.
+
+	eee. Cleaned up device.f so it doesn't check for X events when
+	     it shouldn't (as per MdJ) D.Himes(COMET) Copied to source_comet
+	     PB 8/94.
+
+	fff. Fixed a typo in SNMAP. Changed process to proces. Done, PB 8/29/94.
+
+	ggg. Changed all 'type *' in SFRSSB to 'write (6,*)'. Done, PB 8/29/94.
+
+	hhh. Removed reference to "proces"--not needed.  Changed GDCNTR in
+	     ER_WMSG to GDPLOT. Done, PB 8/31/94. Added, STJ 9/23/94.
+
+	iii. Cleaned up GEMPAK5.2 directory from UNIDATA. Removed unnecessary
+	     and temporary files. Done, STJ 9/26/94.
+
+	jjj. Updated help file for MAPFIL to include map LOCOWO.GSF in the
+	     table. Done, PB 9/26/94.
+
+	kkk. Changed the scripts which create the HLP and PDF files to include
+	     the definition of environment variables. Removed the definitions
+	     of those variables from the .cshrc file. Done, STJ 9/30/94.
+
+	lll. Fixed a spacing bug in the display page of SFGRAM.
+	     Done, STJ 9/30/94.
+
+	mmm. Added declaration of a character variable to RG_GHDR.
+	     Done, PB 10/17/94
+
+	nnn. Added/updated a script to convert station tables in WXP format
+	     to station tables in GEMPAK format. Done, PB 10/17/94.
+
+	ooo. Moved the the NTS files in defaults to nts/defaults. Removed 
+	     unnecessary PDF files. Removed the old XW driver. Replaced 
+	     text files in the DM library. Renamed the aternative GINITP.F and
+	     GENDP.F files to GINITP_ALT.F and GENDP_ALT.F. Moved driver
+	     compile and link scripts from the build directory to the
+	     corresponding directories.
+	     Done, STJ 10/25/94.
+
+   001.	Grid data diagnostics
+
+	a. Added M-Surfaces function -- MSFC -- for use in GDCROSS.
+	   Done, STJ 4/22/93.
+
+	b. Added precipitation accumulation function from KFB.
+	   Done, STJ 5/22/93.
+
+	   1. Updated function to add or subtract "negative" precipitation
+	      correctly. (From KFB) Done, STJ 11/15/93.
+
+	   2. Changed code to handle "missing"/"zero" precipitation. Added
+	      new functions to accumulate precip and change from a rate to
+	      an amount. Done, MdJ 5/11/94.
+
+	c. Added a number of new functions and a set of changes to the 
+	   internal grid arrays and naming conventions, from LES and KFB.
+	   Done, STJ 7/8/93
+		CROS -- Vector cross product magnitude
+		DVDX -- Partial x derivative of a vector
+		DVDY -- Partial y derivative of a vector
+		KCRS -- K cross a vector
+		VASV -- Vector component of one vector along a second vector
+
+	d. Added a function to compute the relative extrema for a grid. Also
+	   added a call to the function, and the necessary input parameters,
+	   for GDCNTR (KFB 6/93). Done, STJ 7/13/93.
+
+	e. Modified some of the changes done in 001c. Modified grid name
+	   updating routine and applied to all necessary routines. Modified
+	   the grid area routines to avoid constant area changing. From MdJ.
+	   Done, STJ 7/27/93. Modified some of the changes. (From MdJ)
+	   Done, STJ 8/18/93.
+
+	f. Added new grid diagnostic to compute solutions to Poisson functions,
+	   given a forcing function and guess field. As of now, Dirichlet
+	   boundary conditions are used (boundary = 0). (From KFB)
+	   Done, STJ 10/25/93.
+
+	g. Added new grid diagnostics to compute the Q-vectors for a level or
+	   for a layer. Original code from John Nielsen and Dave Blanchard.
+	   Done, STJ 4/4/94.
+
+	h. Added new diagnostics.
+		- A 9-point smoother. (Done, JW 12/93.)
+		- Computation for wetbulb temperature. (Done, LW 8/18/94.)
+		- Functions to return the map scale factors. (Done, LW 8/18/94.)
+
+	i. Added a new program to perform vertical interpolations from a given
+	   coordinate to a second coordinate. Done, KFB and RM 8/25/94.
+
+	   1. Cleaned up a problem with the Montgomery Streamfunction. 
+	      Done, KFB 8/29/94.
+
+	   2. Cleaned up the help file for GDVINT. Done, RM. Added a text
+	      file for GDVINT for building the help file. Done, STJ 9/26/94.
+
+   002. HP Additions
+
+	a. Added HP to the list of machines in all GEMPRM files.
+	   Done, STJ 5/11/93.
+
+	b. Added HP check to DM_OPEN and DM_RLBL. Done, KFB 6/1/93.
+
+   003.	Observational Data Plotting and Listing
+
+	a. Reset the view region to the initial values in SFGRAM. When not
+	   reset the next plot from a different program will be drawn in the 
+	   last plot area for SFGRAM (only when panel=''). Done, STJ 6/28/93.
+
+	b. Modified the allowable length for station identifiers. Changed the
+	   character length from 4 to 8. (From KFB) Done, STJ 9/3/93.
+
+	c. Changed routines for SFLIST, SFMAP and SNMAP to reset the PC common
+	   block for each pass through the code. Needed to fix a problem with
+	   data which was not overwritten between successive runs of the 
+	   programs. (From KFB) Done, STJ 9/3/93. Undone, STJ 9/9/93.
+
+	   1. Changed PC_DFLS to reset the number of station parameters to 
+	      zero if none have been requested. Done, STJ 9/15/93.
+
+	d. Added a set of parameters to compute the wet-bulb temperature in
+	   degrees K, C or F. Added a new function PR_TMWB from KFB.
+	   Done, STJ 4/4/94.
+
+	e. Allow plotting of station indices on more than one line, if
+	   necessary, in SNPROF. Done, GKK 4/13/94.
+
+	   1. Update the format of the station indices to be 'INDX:  VALUE'
+	      on multiple lines. Done, GKK 8/18/94.
+
+	f. Modify SFEDIT to ingest ship data into a GEMPAK surface file.
+	   Done, PB 1/94. Installed, STJ 7/13/94.
+
+	   1. Fixed bugs in the processing of ship data. Done, PB 10/17/94.
+
+	   2. Added a default outcome to the check for the presence of a 
+	      ship file. Set ship=.false. if all of the other checks fail.
+	      Done, STJ 10/19/94.
+
+	   3. Rewrote the code to check for a non-standard surface data file
+	      in SFEDIT. Added a new routine (SF_FTYP) to determine the type
+	      of surface data file. Done, STJ 10/21/94.
+
+	g. Modify SFMPLT to plot markers for only stations with data when
+	   SKPMIS=YES and COLORS=0. Done, JW 3/94. Added, STJ 8/16/94.
+	
+	h. Added logical variable "first" to prompt only once during loading
+	   multiple pixmaps in SFMAP, SNMAP, SNPROF. Copied to source_comet 
+	   PB 8/94.
+
+	i. Increased variable tout dimension to accomodate input of a range
+	   of times at the "Enter a time or type EXIT" prompt in SFMAP,SNMAP
+	   SNPROF.  Copied to source_comet PB 8/94.
+
+	j. Fixed SNMAP to only apply parameter conditions once to station
+	   indices. Changed the call to PC_SACD (in SNMPRM) to PC_SLCD, since
+	   station indices are treated as level parameters in SNMAP. PC_SACD
+	   has been removed since it is no longer called by any routines.
+	   Done, STJ 8/19/94.
+
+	k. Created nmc subdirectory under tables and copied old NMC
+	   station tables there.  Created wxp subdirectory under
+	   tables and copied latest WXP station tables there, and
+	   put copy of station.trans (translating script).  Added
+	   translated WXP station tables to tables/ directory.
+	   Done, PB 8/30/94.
+
+	l. Copied these tables from the LDM4-GEMPAK Bridge decoder sytogem
+	   to the GEMPAK tables directory.  Sytogem was written by Jim Cowie
+	   of COMET (nee Naval Postgraduate School) to decode synoptic
+	   and ship and buoy reports. Done, PB 8/30/94.
+
+	m. For SFMAP, moved the title generation calls to be grouped with
+	   the title plotting calls. Done, LW 9/2/94.
+
+	n. Removed the automatic increment for setting the wind/title position
+	   in SNPROF. The user can no longer set clear=no and get all of the
+	   requested stations on a single plot. Each station/time will be
+	   drawn in a new frame. To get multiple stations/times in a single
+	   frame, the user must run the program again with clear=no.
+	   Done, STJ 10/3/94.
+
+	o. Added checks for different precipitation variables in SFL604. The
+	   program will check for P03I, P06I and P24I depending on the report
+	   time. Done, PB 10/17/94.
+
+   004.	User Interface and Input
+
+	a. Added a set of routines to get user input for GPOINT and CXSTNS
+	   from the mouse button. Done, STJ 7/7/93.
+
+	   1. Modified to allow the selection of GAREA using the mouse
+	      cursor. Done, STJ 9/15/93.
+
+	   2. Changed the values of the parameters set in NT_GTPT to only
+	      allow one decimal place. Done, STJ 6/9/94.
+
+	b. Changed user input for changing the location and magnitude of
+	   the reference arrow for the appropriate programs. Added a new
+	   input parameter - REFVEC. Done, LES 8/18/93.
+
+	   1. Corrected error to remove reference arrow when not requested.
+	      Done, LES 8/19/93.
+
+	   2. Cleaned up the code to parse the user input for REFVEC. Added
+	      call to IN_RVEC to TESTIN. Updated the help file for REFVEC.
+	      Changed the calling sequence for IN_RVEC to return the text
+	      attributes as a string. Updated the appropriate programs.
+	      Done, STJ 10/25/93.
+
+	c. Modified the input for scale to include both a scalar and vector
+	   scaling factor. Done, LES 8/18/93.
+
+	   1. Corrected several errors to properly display scale value and
+	      grid parameter name.  Done, LES 8/19/93.
+
+	d. Added an environmental variable for a directory for global
+	   restore files - GEMNTS. Done, STJ 9/15/93.
+
+	e. Changed the input for the short title to allow for use of the 
+	   special symbols used in the title. Changed the format of the output
+	   for the short title. Done, STJ 9/15/93.
+
+	   1. Added call to convert GPOINT information to upper case letters.
+	      Done, STJ 10/25/93.
+
+	f. Added animation controls to the non-tae command list. Animation
+	   controls will begin with a semi-colon (;) and include:
+		a number from 1-5 for the dwell settings
+		LOOP
+		HALT
+		STEP
+		BACK
+		REVERSE
+		ROCK (loop forward and backward)
+	   Done, STJ 2/7/94.
+
+	   1. Renumbered the command codes. The basic commands are numbered
+	      1-6, with 99 as a maximum. Commands to change the dwell rate group
+	      are numbered 101-105. Done, STJ 8/1/94.
+
+	g. Changed the calling sequence for FL_INQR to return the expanded
+	   file name. Done, STJ 2/22/94.
+
+   005.	Device Drivers
+
+	a. Renamed CGM driver to NC (NMC CGM device) and added to all
+	   build scripts.  Done, STJ 7/7/93.
+
+	b. Created VC (Vanilla CGM device) driver and added to all build
+	   scripts. Done, STJ 7/7/93.
+
+	c. Reorganized device drivers into ACTIVE and OLD. Active is for those
+	   device drivers which are still used on a continous basis. The Old
+	   directory is for drivers which are no longer in use.
+		Moved: gn;hp;nc;ps1;ps;psc;psp;vc;vt;xw drivers -->
+						source/driver/active/
+		Moved: gks;sg;ct;di;la;ln;mc;qm -->     
+						source/driver/old/
+	   Done, STJ 10/25/93.
+
+	d. Modified the NC driver to use buffered output to speed up the 
+	   output to the metafile. Done, AC 1/28/94.
+
+	e. Modified GINITP and GENDP to allow the linking of an application
+	   with GPLT and a device driver. Done, STJ 2/7/94.
+
+	f. Added a new color allocation scheme for the XW device driver.
+	   Done, CL 2/10/94.
+
+	   1. Updated color allocation to be consistent with the NAWIPS color
+	      allocation. Done, CL 6/24/94.
+
+	g. Reorganized all the code for the NC driver. The H-level routines 
+	   now do very little work, mainly calling the M-level C functions.
+	   The FORTRAN and C code share common variables through the 
+	   DRIVER.CMN -- DRIVER.H combination. Added a call to GSFLNM in 
+	   GG_SDEV to name the output file. All of the source changes are
+	   in a new directory called NCNEW. Done, AC 4/26/94.
+
+	   1. Updated the changes to the NC driver. Added new fixes and altered
+	      some methods used in the code. Done, STJ 6/16/94.
+
+	   2. Fixed the call to MWFRHD in MCLOSE to use the correct number
+	      of variables. Done, STJ 9/2/94.
+
+	h. Updated the GN driver to have all no-op routines. This will be
+	   used for linking other drivers. If a routine would be a no-op,
+	   it will link to the routine in the GN library. Therefore, only
+	   one copy of the empty routine will be kept on disk.
+	   Done, STJ 6/9/94.
+
+	i. Reorganized all the code for the XW driver. The H-level routines now
+	   only call the X-level C functions. Created a new default color table
+	   for the XW driver -- COLTBL.XW. This will later allow the use of
+	   user defined color tables. Done, STJ 7/12/94.
+
+	j. Changed the check for a blank device output file name. Moved the
+	   check from GG_SDEV to HSFLNM. Done, CL 8/1/94.
+
+	k. Cleaned up reorganized the XW driver. Added the capabitity to
+	   open multiple windows. Also added multiple pixmaps for animation.
+	   Modified the routine to get point locations from the mouse to be
+	   more consistent with standard X programs. Done, CL 8/12/94.
+	   Updated SFMAP, SNMAP and SNPROF to create multiple frames for
+	   animation. Done, STJ 8/12/94.
+
+	l. Improved error reporting during building pixmap loops: Added 
+           error +50 to tg library when number of times exceeds maximum frames
+	   allowed in a loop. Added -45 too many windows error to gemplt.err.
+	   Added -13 to gdcntr.err and gdwind.err when no times in grid file 
+	   to loop over. Copied to source_comet PB 8/94.
+
+	m. Cleaned up a number of problems in XW driver: return codes;
+	   eliminated the NoExpose event handling; properly set foreground
+	   color when active window is changed; event handling problems 
+	   causing pixmaps being drawn to the wrong window; basic clean up;
+	   Done D.Himes(COMET).  Copied to source_comet PB 8/94
+
+	n. Added mv_swp4 to UNDERSCORE define in gemprm.h.  It is now
+	   called by xsatim.c. Copied to source_comet PB 8/20/94.
+
+	o. Added return codes G_NWINDW, G_NCLRL, and G_NWSIZE to gemprm.h
+	   Also added to error.prm.
+
+	p. Fixed compiler warnings in XW about assignment type mismatch
+	   in xsatim.c, and initializer not fitting in cross.h.
+	   Done D.Himes (COMET) Copied to source_comet PB 8/94.
+
+	q. Changes to XW: (Done, STJ 8/25/94)
+		- Modified XCLEAR to destroy all pixmaps if a resize occurred.
+		- Added XENANM to destroy unused pixmaps.
+		- Added XCLOSP to close a given window.
+		- Modified default dwell rate values in XDWTBL.
+		- Removed "iret = NORMAL" from all H-level routines. This
+		  allows the X-level error messages to be sent back to the
+		  user.
+		- Began a general clean up of all of the code.
+
+	r. Moved XW_NEW to XW. Done, STJ 8/26/94.
+
+	s. Added change to VC driver to make the output of MTEXT conform to 
+	   CGM standard. Done, PB 8/30/94.
+
+	t. Added an entry to SATIMG.TBL and XSATTBL for GOES VISPC images.
+	   Done, PB 8/30/94.
+
+	u. Added a raise window flag to XXFLSH and to all the routine which
+	   call XXFLSH. Reworked the colors of the box, line and point
+	   generated by the CURSOR command in XGTPNT. Added code to clear
+	   the pixmaps as soon as they are created. Done, CL 8/31/94.
+	   Also added change to only redraw the exposed part of the window 
+	   after an expose event. Done, DH 8/31/94.
+
+	v. Changed the satellite image table to allow easier addition of 
+	   entries for the table. Done, STJ 9/3/94.
+
+	w. Changed the NC driver to NOT append to the file named "Nmeta".
+	   Done, STJ 9/20/94.
+
+	x. Added xclosp and xenanm to UNDERSCORE define in gemprm.h.
+	   From PB. Added, STJ 9/23/94.
+
+	y. Added text alignment to the NC device driver. Done, CL 10/14/94
+
+	z. Updated looping in the XW driver. Added a longer pause after the
+	   last frame equal to twice the dwell rate. Changed the delay 
+	   mechanism to be less cpu intensive. Done, CL 10/17/94.
+
+	aa. Changed the text and symbol size multipliers in the NC driver.
+	    Done, STJ 10/18/94.
+
+   006. Efficiency changes
+
+	a. Changes to make the code more efficient by reworking calls to the
+	   ST library functions. Done, STJ 7/8/93.
+
+	b. Changed TG_CTOI to not recompute the time if it has not changed.
+	   (From LES) Done, STJ 7/8/93.
+
+   007.	Grid Data Plotting
+
+	a. Modified the skip parameter to allow the plotting of staggered
+	   wind symbols. (From LES) Done, STJ 7/8/93.
+
+	b. Update to IN_SKIP for use with 007a. (From LES) Done, STJ 8/18/93.
+
+	c. Added a routine to rearrange a globe wrapping CED or MER grid so
+	   that the crease is NOT in the display area. This is only used 
+	   when the requested map projection is also CED or MER. (From KFB)
+	   Done, STJ 8/18/93.
+
+	   1. Removed this change. Deleted GR_RARG from GDCNTR and deleted
+	      grrarg.f. Done, STJ 11/26/93.
+
+	d. Added a new program (GDPLOT) to plot multiple scalar and vector
+	   fields over multiple times. (From GKK) Done, STJ 9/6/93.
+
+	   1. Changed subroutine names from GDN to GDB.  (From GKK) Done,
+	      LES 9/16/93
+
+	   2. Changed IN.ERR to note FINT when improper contour levels are
+	      selected. (From GKK) Done, LES 9/16/93
+
+	   3. Fixed color bar plotting. Adjusted text review display to show
+	      which functions are being plotted. Changed title plotting.
+	      Modified to ignore trailing blank functions. (From GKK)
+	      Done, STJ 10/13/93.
+
+	   4. Changed text review display of times to plot. Done, STJ 4/11/94.
+
+	   5. Fixed GDPLOT to stop core dumps when the grid file did not exist.
+	      Added a check for proces=.true. after the DG_OFIL and before
+	      GDBTIM. Done, STJ 10/17/94.
+
+	e. Added a set of routines to plot a color bar for GDCNTR and GDPLOT.
+	   Modified the original code from Jim Whistler. (From GKK)
+	   Done, STJ 9/6/93.
+
+	   1. Modified the label plotting for the color bar to compute the
+	      number of decimal places needed for the value labels. Changed
+	      other routines to update the calls to the routines which 
+	      compute the number of decimal places. Done, STJ 10/6/93.
+
+	   2. Changed the plotting of the color bar to include the 0 color if
+	      it occurs on either end of the sequence of fill values. This
+	      allows the first or last level values to be plotted correctly.
+	      Done, STJ 10/25/93.
+
+	f. Added new program, GDTHGT, to plot time-cross sections of gridded
+	   data at a particular point. The program originally came from Tim
+	   Barker, and changes from Dave Blanchard. (From GKK)
+	   Done, STJ 10/25/93.
+
+	g. Added a routine (GR_ACOL) to add a column of data to global
+	   cylidrical grids which almost wrap around the earth. The routine
+	   repeats the first column of data as the last column. Other routins
+	   needed to be changed to accomodate this routine. GR_SNAV resets the
+	   grid navigation to include the new column. DG_RDAT was created 
+	   to call GD_RDAT and to call GR_ACOL. Other routines were updated
+	   to call DG_RDAT instead of GD_RDAT. Done, STJ 11/26/93.
+
+	   1. Removed the change to GR_SNAV. Added the check for the valid grids
+	      to DG_OFIL, and modified DG_INIT and DG_RDAT to intialize and
+	      use the addcol flag. Done, STJ 12/1/93.
+
+	   2. Fixed bug in DG_OFIL to reset the right longitude.
+	      Done, STJ 1/21/94.
+
+	   3. Added a logical flag to the calling sequence for DG_OFIL to
+	      determine whether or not to try to add a column.
+	      Done, STJ 2/12/94.
+
+	   4. Fixed a bug in TESTDG to use the coladd logical variable.
+	      Done, STJ 3/11/94.
+
+	   5. Fixed a bug in DG_OFIL to pass the right longitude value from
+	      the navigation block, instead of the calculated value from GTRANS.
+	      Done, STJ 6/21/94.
+
+	h. Modified the location of the end point labels for GDCROSS. Added
+	   an offset calculation to GDXPLT. Done, STJ 6/9/94.
+
+	i. Changed the CONTUR attribute initialization from 3 to 0. This will
+	   set the default to NO sub boxes for the contouring algorithm.
+	   Done, STJ 6/10/94.
+
+	j. Modified GDMLBL in GDMAP to not plot the row/column labels over
+	   the data points. Done, JW 7/92. Added, STJ 8/16/94.
+
+	k. Changed format statements in GDBDSP to use 1X instead of X.
+	   Done, PB 8/29/94.
+
+	l. Added calls to ST_FLST and GR_TLST, to parse user input for files
+	   and times into lists of each, to GDCNTR and GDWIND. Cleaned up
+	   both programs. Added ST_FLST to GPMAP and SFMAP. Done, MdJ 8/29/94.
+
+	m. Modified GDTHGT to not clip the winds at the boundaries of the 
+	   plot space. Done, STJ 8/30/94.
+
+ 	n. Modified GDBTIM to allow the use of times with a ":" in GDPLOT.
+	   Done, PB 8/30/94.
+
+	o. Added ability to ignore non-existent functions and vectors in
+	   GDCNTR and GDWIND. The program will display an error that the grid
+	   cannot be found, but will continue the processing and draw the
+	   map, latlons, etc. Done, MdJ 8/31/94.
+
+	p. Added calls to ST_FLST and GR_TLST to GDSTREAM and GDMAP. Also
+	   added the ability to ignore non-existent functions and vectors.
+	   Done, LW 9/19/94.
+
+	q. Changed the number of points necessary for a contour line in order
+	   to plot a label for that contour. Changed the value from 23 to 7.
+	   Done, STJ 9/20/94.
+
+	r. Cleaned up GDWIND. Reorganized the portion of the code which
+	   gets the grids, determines the skipping factors and scales the
+	   output grid. Done, STJ 9/23/94.
+
+	   1. Fixed the call to DG_AREA in GDWIND. The sequence of variables
+	      was out of order. Done, STJ 10/17/94.
+
+	s. Cleaned up GDMAP to look like GDWIND. Added staggered plotting of
+	   the grid function values. Done, STJ 9/23/94.
+
+	t. Rewrote GDXGTS (for GDCROSS) to check for and read the surface level
+	   grid from the file. The routine now uses DG_RDAT instead of DG_GRID
+	   to read the grid. Simplified the checking for the surface level grid.
+	   Done, 10/17/94.
+
+	u. Changed GDCNTR, GDMAP, GDSTREAM and GDWIND to use the input for
+	   gdattim if there is only one time, rather than expanding the input
+	   into the full time. Done, STJ 10/19/94.
+
+   008. Message Queues
+
+	a. Modified the allocation of a message queue to work on the HP
+	   workstations. Done, AC 7/13/93. Undone, STJ 9/17/93.
+
+	b. Changed the allocation of message queues for ALL machines. Created
+	   an HP directory, and modified the code in the IBM directory. Most
+	   machines define the terminal name as >/dev/ttyp#< or >/dev/ttyq#<.
+	   IBM workstations define the terminal name as >/dev/pts/#<. This
+	   does NOT generate unique queue key numbers for different terminals.
+	   Therefore, the routine used to open message queues is machine 
+	   specific, with a different algorithm being used for the IBM.
+	   Done, STJ 9/17/93.
+
+	c. Reorganized the SYSLIB directory. All code which is the same is
+	   back in the syslib/unix directory. The one file which is different
+	   for the IBM workstations is in an AIX directory. The build script
+	   has also been modified to accomodate the new directory structure.
+	   Done, STJ 8/12/94.
+
+	   1. Replace CCHECK in the AIX directory with CGETMQ. CGETMQ is the
+	      only file which is different for AIX machines. Done, STJ 9/23/94.
+
+	d. Changed GSPROC by removing calls to SS_ENVR and ST_UCLC. GSPROC
+	   now uses the expanded file name returned from FL_INQR for the 
+	   process name. Increased the string length in CSPROC from 72 to 133.
+	   Done, STJ 9/19/94.
+
+   009.	Data Management
+
+	a. Added a new program (NAGRIB) to convert gridded data in GRIB files
+	   to gridded data in GEMPAK files. Done, STJ 9/3/93.
+
+	   1. Added capability to handle constant value grids, by expanding
+	      abridged data section to full grid. Cleanup of some GB functions
+	      to update the header information. Done, STJ 10/25/93.
+
+	   2. Updated GRIB tables to define only parameters which appear in 
+	      current grid output files. Done, STJ 10/25/93.
+
+	   3. Added statements to print debug information if the flags are
+	      turned on at compile time. Done, STJ 11/26/93.
+
+	   4. Separated GB_UTIL into individual routines to handle different
+	      projections and packing schemes. Done, STJ 11/26/93.
+
+	   5. Added the ability to flag GRIB version 0. (Need to add a decoder
+	      for version 0 later.) Done, STJ 11/26/93.
+
+ 	   6. Fixed an error in the PDS information which returned the wrong
+	      level values for some vertical coordinates. Done, STJ 11/26/93.
+
+	   7. Changed the GDS information from an array of integers to an
+	      array of real numbers. Done, STJ 11/26/93.
+
+	   8. Added check for GRIB parameter table version 2. Done,
+	      STJ 12/08/93.
+
+	   9. Changed the initialization of table information to read all the
+	      information at one time. More cleanup. Done, STJ 12/23/93.
+
+	   10. Cleaned up all the associated code for NAGRIB, the GB library
+	       and the NA library, and reorganized the tables.
+	       Done, STJ 1/31/94.
+
+	   11. Added a comma to a FORMAT statement in NAGRIB. Done, PB 9/26/94.
+
+	   12. Fixed GB_LAMB to use the true latitude to compute the map scale
+	       factor instead of 60 degrees, for Lambert grids. This was changed
+	       in the GRIB standard. Done, 10/17/94.
+
+	b. Created a temporary program based on GDMOD to allow the user to
+	   select the grid data by header information rather than grid number.
+	   (From JH) Done, STJ 1/27/94.
+
+	   1. Fixed a typo in GDOINP for GDMOD2. Added a README file to 
+	      explain the existence of GDMOD2. Done, STJ 9/22/94.
+
+	c. Changed GDOADD (in GDMOD) to count foreward when reading grids
+	   from the old file and writing to the new file. Also, changed the
+	   error message displayed when the new file can hold less grids
+	   than the old file. Done, STJ 10/17/94.
+
+	d. Changed GDDNUM (in GDDELT) to NOT display an error when the user
+	   exits from the list of grids in the file. Done, STJ 10/17/94.
+
+   010.	ALPHA Port Changes
+
+	a. Changed CSLEEP to use unsigned integer. Changed the call to CSLEEP
+	   from SS_WAIT. Original fix from Peggy Bruehl. Done, STJ 8/30/93.
+
+	b. Changed the order of checking for missing data outside of the
+	   grid box being contoured in CCOEFF. Original fix from Peggy Bruehl.
+	   Done, STJ 9/15/93.
+
+	c. Added the inclusion of 'driver.cmn' to HEPLOT for the xw driver.
+	   Original addition from Peggy Bruehl. Done, STJ 10/6/93.
+
+	d. Added OSF1 and ULTX directories to SYSLIB. Changed variable
+	   declarations for message queue send and receive functions for
+	   all types of workstations. Original addition from Peggy Bruehl.
+	   Done, STJ 10/6/93.
+
+	e. Added all build scripts for OSF1. Done, STJ 10/6/93.
+
+	f. Changed references of OSF1 to ALPH. Added MTALPH to all GEMPRM files.
+	   Added MTALPH to DP and DM routines which check for machine type.
+	   Done, STJ 10/12/93.
+
+   011. Graphical Display
+
+	a. Changed master color table entries to match the X-Windows color
+	   specifications. Removed the HLS values from the color table.
+	   Increased the number of colors allowed in the master table from 
+	   100 to 200. Changed the colors which are used by the XW driver.
+	   (From GKK) Done, STJ 10/8/93.
+
+	   1. Changed the RGB values again because the original fix used an
+	      incorrect color table found on the HP workstations. Changed the
+	      color table to use integral values, in the range 0-255, for RGB
+	      rather than real numbers from 0 to 1. Done, STJ 10/25/93.
+
+	b. Added a set of routines to signal the start of plotting and the 
+	   beginning and end of a graphics frame. Done, AC 12/23/93.
+
+	   1. Renamed the files and routines. (From LW) Done, STJ 3/16/94.
+
+	   2. Updated the code to call H-level routines in DSDATT, DENANM,
+	      DLOOPC, DSPLOT, and DSTANM. Done, STJ 6/9/94.
+
+	c. Added a set of routines to allow the user to specify the input
+	   color table for a device and the name of the output file generated.
+	   Done, AC 12/23/93.
+
+	   1. Added the device specific routines, which add the functionality
+	      of the routines. Done, AC 1/21/94.
+
+	d. Added a set of routines to control the animation parameters of an
+	   appropriate device. Done, AC 12/23/93.
+
+	e. Added a set of routines to allow the user to specify the attributes
+	   of a hardcopy device. (e.g., the user wants to set the paper size)
+	   Done, AC 12/23/93.
+
+	   1. Renamed the file and routine. (From LW) Done, STJ 3/16/94.
+
+	f. Added a set of routines to display satellite images. (From GKK)
+	   Done, AC 12/23/93.
+
+	   1. Completed the addition of the routines to display satellite
+	      images and draw graphics over the images. Done, GKK 2/10/94.
+
+	   2. Cleanup and slight recoding. Done, STJ 2/22/94.
+
+	   3. Added Mercator and Lambert projections for satellite images.
+	      (From GKK) Done, STJ 3/7/94.
+
+	   4. Cleaned up the interface routines between APPL-GPLT and
+	      GPLT-DEVICE to be more consistent in the length of characters
+	      and the calling sequences. Done, STJ 3/15/94.
+
+	   5. Added a table and the associated functions to set the minimum
+	      and maximum image pixel values, so that all images of the same
+	      type have the same range of color values. Done, STJ 3/22/94.
+
+	   6. Added GOES Water Vapor images to the table of minimum and
+	      maximum pixel values. Done, STJ 3/25/94.
+
+	   7. Fixed a bug with the string lengths of the table variables.
+	      Done, STJ 4/1/94.
+
+	   8. Added writing an error message when the satellite image does
+	      not exist. Done, STJ 4/18/94.
+
+
+	g. Changed GSFLNM to reset the window size after the user has moved
+	   from one window to another. Done, STJ 8/11/94.
+
+	h. Added a new set of routines to draw justified hardware fonts.
+	   GTEXTC has been added to allow centered and left and right justified
+	   hardware text. Done, AC 8/12/94.
+
+	   1. Added the functionality to the TEXTC routines. Done, AC 8/26/94.
+
+	i. Added code to force graphics attributes to device driver when
+	   new (different) window is activated.  Done D.Himes (COMET)
+	   Copied to source_comet PB 8/94.
+
+	j. Modified GPCLOSE to take DEVICE as input, so that the user could
+	   close a given window without quitting the device driver.
+	   Done, STJ 8/24/94.
+
+	k. Modified the plotting of wind barbs to plot the flags on the
+	   correct side if the data is in the southern hemisphere. Modified
+	   GBARB to make the wind speed negative for SH data. Modified
+	   DBARB to parse the wind speed and pass the correct information
+	   to IBARB to draw the wind barb. Done, STJ 8/24/94.
+
+	l. Added a check to the necessary programs for dropping a satellite
+	   image only if the screen is to be cleared. Done, PB 8/30/94.
+
+	   1. Added another check to GDPLOT to drop the satellite image only
+	      before the first graphics field. Done, PB 9/21/94.
+
+	m. Removed the check in UPDPXY for a satellite projection. The check
+	   set the all margins to zero. This was removed to allow the title
+	   to be plotted on un-remapped satellite images. Done, STJ 9/22/94.
+
+	n. Moved the title creation and plotting code, in all applicable 
+	   programs, to be the last object displayed on the plot.
+	   Done, STJ 9/30/94.
+
+	o. Added the capability to plot a title in GPMAP based on the
+	   information in a satellite area file. The title includes the 
+	   satellite name, the channel, the date and the hour for the image.
+	   Done, STJ 9/30/94.
+
+	p. Added a call to GR_TITL to GDTHGT so that the title will be more
+	   consistent with the existing grid programs. Done, STJ 10/3/94.
+
+	q. Added calls to GR_MTTL to create titles using symbols to SFMAP
+	   and SNMAP. Done, STJ 10/3/94.
+
+   012.	Projection Transformation
+
+	a. Added MCI projection to read McIDAS area file headers and draw maps
+	   and graphics in the satellite projection. (From J. Cowie)
+	   Done, STJ 11/15/93.
+
+	   1. Fixed error in GOESLM. The computations should be done over
+	      a loop of all the points. The loop was missing. Done, STJ 2/10/94.
+
+	   2. Added a check in GDRGRD to draw the lat-lon lines on satellite
+	      projection graphics. Done, STJ 2/14/94.
+
+	   3. Added checks in GSATMC for invalid maximum or minimum latitude and
+	      longitude values. Done, STJ 3/17/94.
+	      (*****This is probably NOT fixed correctly.*****)
+
+	b. Added oblique azimuthal projections, i.e. the ability to plot a map
+	   and data in an azimuthal projection centered on a latitude other
+	   than the poles. (From A. Taylor/ARL; Cleaned up KFB)
+	   Done, STJ 1/27/94.
+
+	c. Added code to handle MCIDAS image files that do not have
+	   the native machine's byte-order. Also created a new GPLT
+	   function code, FSATMG which works with proj=SAT.
+	   Done J.Cowie 8/94 Copied to source_comet PB 8/94.
+
+   013.	Software Management and Configuration
+
+	a. Eliminated machine specific build directories and link scripts.
+	   Added a number of environmental variables to the .cshrc file which
+	   define the flags for the f77 and cc compilers on various machines.
+	   Created a new 'build' directory and link scripts which are machine
+	   independent. Done, STJ 4/27/94.
+
+	b. Renamed all GEMPRM files to use the $OS variable as the file
+	   extension. Also renamed all of the directories with machine specific
+	   code to .../$OS. Done, STJ 4/27/94. (Changes to SYSLIB have been
+	   undone. STJ 8/12/94. See 008c.)
+
+	c. Added a GEMPRM.H file which has some parameters for use with the C
+	   functions. It also contains defines that eliminate the need for
+	   separate directories for machines that do not require underscores in
+	   the C function names. Done, STJ 4/27/94.
+
+	d. Changed the driver link scripts to use the GN device library for
+	   empty routines. Done, STJ 6/9/94.
+
+	e. Added the NXM library to the GEMPAK source tree. Changed the 
+	   build scripts to include the new library. Done, STJ 9/19/94.
+
+   014.	C Version of GEMLIB
+
+	a. Created a new library -- CGEMLIB -- for C versions of the GEMLIB
+	   routines. Started with table reading functions. Done, STJ 6/15/94.
+
+	b. Added a new routine to the CGEMLIB library. CST_SRCH will search
+	   through a larger body of text for a particular character string.
+	   Done, STJ 6/23/94.
+
+	c. Added a new routine to eliminate unprintable characters from a
+	   string of text. Done, STJ 6/24/94.
+
+	d. Added new routines to convert from upper case to lower case and
+	   vice versa (CST_LCUC and CST_UCLC). Done, STJ 7/14/94.
+
+	e. Added a new routine -- CTB_RDTYP -- to read the data type table for
+	   the NWX program. Done, STJ 7/14/94.
+
+	f. Added a new routine -- CFL_SWOP -- to open a file for writing.
+	   Done, STJ 7/14/94.
+
+	g. Updated the header comments for all of the CGEMLIB files.
+	   Done, STJ 8/13/94.
+
+	h. Added a check to CFL_SOPN and CFL_SWOP for a path with an
+	   environment variable (with a $) and a path. (e.g., $HOME/text).
+	   Done, STJ 10/4/94.
+
+   015.	Apollo Problems
+
+	a. GD_DELT does not declare the variable GDATTM as a character.
+	   Done, STJ 7/12/94.
+
+	b. Initialize the index file descriptor to zero in GB_OPEN.
+	   Done, STJ 7/12/94.
+
+	c. Initialize IRET in ST_LCUC and ST_UCLC. Done, STJ 7/12/94.
+
+   016. Cleanup of TAE libraries and titles
+
+	a. Eliminate references to TAE.  Done, MdJ 7/19/94.
+
+	b. Eliminate tae update subroutines and add short title as input
+	   variable.  Done LRW 7/19/94. 
+
+	c. Add SHRTTL to gemglb.pdf.  Done MdJ 7/19/94.
+
+	d. Remove SFWUPD from SFRAWD again.  NMC forgot to remove the
+	   call during the merge with the Unidata decoder improvements.
+	   Copied to source_comet PB 8/94.
+
+	e. Changed VAX syntax to UNIX syntax for environment variables.
+	   Done, PB 8/30/94.
+
+   017. Cleanup of GEMLIB for GEMPAK 5.2
+
+      a.  Cleaned up error messages in GG routines, especially for
+	    GG_SSAT.  Added new options to TESTGG and fixed gg.err.
+	    Done, MdJ 8/6/94.
+
+	b.  Changed FL_INQR to look for input file name first, and only
+	    convert to lower case second.  Call FL_INQR in FL_DOPN, FL_SOPN,
+	    FL_SWOP to translate file names.  Changed FL_RSHR to call FL_READ
+	    and FL_DWOP to call FL_DOPN since these routines were identical.
+	    Changed documentation in FL_GFLUN, FL_FLUN, FL_GNAM.  Done, MdJ
+	    8/6/94.
+
+	c.  Updated the help files and added TAXIS to GDTHGT parameter file.
+	    Done, GKK 8/12/94
+
+	    1. More updates to the parameter help files. Done, LW 8/29/94.
+
+	    2. More updates to the parameter help files. Done, GKK 9/27/94.
+
+	    3. More updates to the parameter help files. Done, MdJ 10/19/94.
+
+	    4. More updates to the parameter help files. Done, MdJ 10/19/94.
+
+	d.  Removed environment variables which defined the device drivers'
+	    libraries. Done, STJ 8/13/94.
+
+	e.  Removed the routine FL_PERR, since it is no longer used anywhere.
+	    Done, STJ 8/13/94.
+
+	f.  Added ability to set the REGION for the panel box in GG_PANL.
+	    Done, JW 7/92. Added, STJ 8/16/94.
+
+	g.  Added a change to PS_EQLV to no longer stop calculating when
+	    a missing value is encountered. Also changed the limit on the
+	    number of iterations and the epsilon value to determine the 
+	    end of the iterations. Done, Peter Neilley 6/94.
+	    Added, STJ 8/16/94.
+
+	h.  Changes to GB_GUBD to decode GRIB messages with missing data.
+	    Done, KFB 6/94. Added, STJ 8/17/94.
+
+	i.  Changed the computation involving the 'pow' function to use a
+	    left shift of 8 bits and an 'or' with the previous value. This
+	    calculates the value of a given number of bytes as an integer.
+	    Done, STJ 8/17/94.
+
+	j.  Added the station list file name to the calling sequence for
+	    LC_FSTN. Modified LC_ABND and LC_FLOC to call LC_FSTN correctly.
+	    Changed TESTLC to match the changes to the calling sequence.
+	    Done, STJ 7/94. Added, STJ 8/28/94.
+
+	k.  Updated the RA library for decoding surface airways observations.
+	    The changes include decoding of special data at the synoptic times
+	    and decoding ASOS reports. Done, PB 2/94. Added, STJ 8/18/94.
+
+	    1. Added the initialization of SNOW and the cloud symbol parameters
+	       to the missing value in RA_DECD. Done, PB 10/17/94.
+
+	l.  Cleaned up IN_SKIP and the help for the SKIP parameter to be more
+	    consistent. Done, STJ 8/24/94.
+
+	    1. Changed IN_SKIP to force the user to type a / to input the
+	       plot skip values. Done, STJ 8/30/94.
+
+	    2. Changed IN_SKIP to make the plot skip values odd if the 
+	       user requests staggering. Changed the variable names.
+	       Done, STJ 9/22/94.
+
+	    3. Changed IN_SKIP to default the Y-skip to 1/2 of the X-skip
+	       when plotting the data with staggering. Otherwise, use the
+	       value supplied by the user. Done, STJ 9/30/94.
+
+	m.  Created a new routine (GG_RVEC) to parse REFVEC and draw the
+	    reference vector. This routine replaces IN_RVEC. Done, STJ 8/24/94.
+
+	    1. Fixed error in GDTXPV by declaring the default label string
+	       as a character. From PB. Added, STJ 9/23/94.
+
+	n.  Added a new routine - GR_TLST - to get a list of grid times for
+	    use in the animation of grid data. Done, MdJ 8/24/94.
+
+	o.  Modify DC_HILO to handle the case where two or more adjacent
+	    grid points have the same high or low value. Done, KFB 8/25/94.
+	    Undone, STJ 10/17/94.
+
+	p.  Created ST_FLST to parse a special list of file names of the 
+	    form: abc\12\xyz;23;34;45 -- where the 12 will be replaced by 
+	    23, 34 and 45 to create subsequent file names. Done, STJ 8/25/94.
+
+	q.  Fixed error in call to FL_DOPN in FL_DSOP. Done, STJ 8/26/94.
+
+	r.  Removed a line from GG_SSAT which reset tgarea to the input
+	    value for garea, rather than keeping the expanded file name.
+	    Done, STJ 8/26/94.
+
+	s.  Fixed a problem with the byte swapping in GG_SSAT. Done, MdJ 8/29/94.
+	    Made an equivalent fix in XSATIM. Done, STJ 8/29/94.
+
+	t.  Created GR_MTTL and moved the functionality of GR_TITL to it.
+	    GR_TITL is now an interface to GR_MTTL in order to get the 
+	    call correct without changing all of the programs, yet.
+	    Done, STJ 8/29/94.
+
+	    1. Updated GR_TITL to plot the correct default title for plots
+	       with GPOINT. Updated GR_MTTL to skip parameters with the name
+	       'BLNK'. Done, STJ 9/23/94.
+
+	u.  Modified ST_RMST to remove the inefficient code. Done, MdJ 8/29/94.
+
+	v.  Modified GG_WSTR to call GTEXTC if a hardware font is set. GTEXTC
+	    will justify the title string. Modified HTEXTC to match the
+	    information coming from GG_WSTR and GTEXTC. Done, STJ 8/29/94.
+
+	w.  Increased character size in DG_PFUN to handle parsing grids with
+	    two times after the "^". Done, PB 8/30/94.
+
+	x.  Changed FL_SWOP to open files as UNKNOWN so that the IBM will 
+	    work correctly. Done, MdJ 8/31/94.
+
+	y.  Fixed the output for the analysis time in TG_VALD.
+	    Done, MdJ 10/3/94.
+
+	z.  Cleaned up IN_TITL. Changed index into title string to be more
+	    consistent. Done, MdJ 10/3/94.
+
+	aa. Changed IN_HILO to use ST_RANG to parse the range of values in the
+	    user input. This accounts for negative values in the range.
+	    Done, STJ 10/17/94.
+
+	bb. Added SS_ENVR to the TESTSS program so that testing of this 
+	    routine would be easier. Done, STJ 10/17/94.
+
+	cc. Fixed the string concatenation in NT_REST -- added a temporary
+	    variable. Done, PB 10/17/94.
+
+	dd. Changed DG_PRFT to return if the function is not a precipitation
+	    rate. Done, STJ 10/17/94.
+
+	ee. Fixed call to SN_RDAT in TESTSN. Done, STJ 10/19/94.
+
+	ff. Fixed RA_PTND the the surface decoding library to ignore the 
+	    "PK WND" remark. Done, PB 10/19/94.
+
+   018.  Satellite looping in GEMPAK programs
+
+	a.  Added image looping capability into SFMAP, SNMAP, GDWIND
+	    Done J.Cowie (COMET) Copied to source_comet PB 8/94.
+
+	b.  Added looping to GDCNTR. Copied to source_comet PB 8/94.
+	
+	  1.  Added calls to create multiple pixmaps. 
+	  2.  Added logical first to prompt once
+	  3.  Added calls to process LIST as input for GDATTIM
+	  4.  Added constant scaling and contour line specifications 
+	      including new routine IN_INTC
+	  5.  Added functionality to loop over list of grids with two times
+	  6.  Added call to GR_NLEV (new routine) to sort and check for
+	      duplicate contours (line or fill)
+	  7.  Removed GDNLEV
+	  8.  Added satellite looping, including extra call to GG_MPAS to
+	      initialize area.
+	
+	c. Added looping to GDWIND. Copied to source_comet PB 8/94. 
+
+	  1.  Added calls to create multiple pixmaps. 
+	  2.  Added logical first to prompt once
+	  3.  Added calls to process LIST as input for GDATTIM
+	  4.  Added constant scaling and contour line specifications 
+	  5.  Added logical scalflg
+	  6.  Added functionality to loop over list of grids with two times
+	
+
+	d. Added looping to GDPROF. Copied to source_comet PB 8/94.
+
+	  1.  Added calls to create multiple pixmaps. 
+	  2.  Added logical first to prompt once and calc X axis once
+	  3.  Added calls to process LIST as input for GDATTIM
+	  4.  Added functionality to loop over list of grids with two times
+
+ 	e. Added satellite looping to GPMAP. Copied to source_comet PB 8/94.
+
+	  1.  Added calls to create multiple pixmaps based on list of
+	      AREA file names. 
+	  2.  Added logical first to prompt once
+	  3.  Added GEMPRM.PRM include to get value for MXLOOP	
+
+	f. Added satellite looping to GDSTREAM. Copied to source_comet PB 8/94.
+	  1.  Added calls to create multiple pixmaps. 
+	  2.  Added logical first to prompt once
+	  3.  Added calls to process LIST as input for GDATTIM
+	  5.  Added functionality to loop over list of grids with two times
+	  8.  Added satellite looping, including extra call to GG_MPAS to
+	      initialize area.
+
+   019.  Table updates
+
+	a. Updates to SNSTNS.TBL
+
+	   1. Added:
+		OKX	Brookhaven, NY
+		DTX	Detroit/Pontiac, MI
+		TFX	Great Falls, MT
+		YPL	Pickle Lake, ON
+		GYX	Gray, ME
+
+	   2. Added:
+		RNV	Reno, NV
+
+	   3. Added:
+		71203	Kelowna, BC
+
+	   4. Added:
+		ABR	Aberdeen, SD
+	      Changed:
+		RNV to REV
+
+	b. Updates to GRIB tables
+
+	   1. NMCGRIB2.TBL -- Added the name EMSL to grid number 130
+
+   020.  NXMLIB Changes
+
+	a. Added check for a bitmap file in 'NxmBxmButtonCreate'.
+	   Done, AC 10/4/94.
+
+	b. Added a new routine 'NuiColorBarCreateWithTable' which allows
+	   the user to create a color bar from the specified color table.
+	   Done, JW 10/4/94.
+
+	c. Fixed 'NxmBxmButtonCreate' to ignore and discard multiple button
+	   clicks. Done, CL 10/17/94.
+
+	d. Refixed 'NxmBxmButtonCreate' for multiple button clicks and also
+	   applied the change to 'NxmLoopPanelCreate'. Done, CL 10/25/94.
+
+   021.  Final cleanup for titles
+
+      a. The default HTEXTC in the GN device driver was computing offsets
+	   incorrectly.  Moved setting offsets to the HTEXT subroutine.  This
+	   affected all the device drivers except XW.  Done MdJ 10/07/94.
+	   Fixed computation of x offsets in HTEXTC in XW driver.  Made
+	   ixx internal variable in XTEXTC to avoid changing input value.
+	   Done, MdJ 10/11/94.
+
+	b. Changed the text size variables in xwcmn.cmn to be floats rather
+	   than ints.  As a result, all 6 text fonts can be accessed rather
+	   than just 3.  Done MdJ 10/07/94.
+
+	c. Text fonts were not being set correctly when there were multiple
+	   windows in XW.  Fixed in DSTEXT which will call HSTEXT even if 
+	   there is no change and by eliminating similar check in xstext.
+	   Done MdJ 10/07/94.
+
+	d. Eliminate check for title within bounds in HTEXTC in XW.  This
+	   allows the X server to clip titles.  Done MdJ 10/07/94.
+
+	e. Add check in IN_TITL for old ~,^ syntax and replace with new
+	   syntax.  Done MdJ 10/07/94.
+
+	f. Fixed XTEXTC to avoid a memory leak when allocating and deallocating
+	   font identifiers. Done CL 11/7/94.
+
+==============Delivered code to operational account and UNIDATA=================
+=================================10/27/93=======================================
+
+====================Delivered code to operational account=======================
+=================================02/24/94=======================================
+
+====================Delivered code to development account=======================
+=========================in the directory GEMPAK5.2=============================
+=================================09/26/94=======================================
+
+====================Delivered code to development account=======================
+====================Delivered code to operational account=======================
+=================================10/26/94=======================================
+
+====================Delivered code to operational account=======================
+======================Delivered code to delivery account========================
+=================================11/07/94=======================================
+

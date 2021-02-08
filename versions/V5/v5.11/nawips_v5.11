@@ -1,0 +1,2282 @@
+                     NAWIPS 5.11.x  CHANGE DESCRIPTION LOG
+
+        ( * indicates a change that makes this version of NAWIPS
+            incompatible with the previous version )
+
+CEE==============================================================================
+C.   Configuration Management (CM)
+
+C1.     SS_VERS
+
+C1.11
+2       a  Update SS_VERS to 5.11.2.  TP, (TP), 11/26/07.
+
+C1.13
+3	a  Update SS_VERS to 5.11.3.  TP, (TP), 2/19/08.
+
+C1.14
+1       a  Update SS_VERS to 5.11.1.  TP, (TP), 8/20/07.
+
+C1.15
+4	a  Update SS_VERS to 5.11.4.  TP, (TP), 6/2/08.
+
+C1.16
+4a	a  Update SS_VERS to 5.11.4a.  TP, (TP), 9/19/08.
+
+C1.17
+1       a  Rename files that are the same except for upper or lower case
+           characters to avoid problems on "case aware" file systems such as
+           Mac HFS+.  SJ, (TP), 8/23/07.
+
+1       b  Deliver the correct build script.  SJ, (TP), 10/10/07.
+
+C1.18
+4b	a  Update SS_VERS to 5.11.4b.  SJ, (SJ), 3/10/09.
+
+C1.19
+4c	a  Update SS_VERS to 5.11.4c.  SJ, (SJ), 6/15/09.
+
+C1.20
+4d	a  Update SS_VERS to 5.11.4d.  SJ, (SJ), 7/28/09.
+
+C1.21
+4e	a  Update SS_VERS to 5.11.4e.  SJ, (SJ), 12/11/09.
+
+--------------------------------------------------------------------------------
+C2.     Dot files
+
+C2.5
+3	a  Modified NA_OS name to account for word size on Linux systems.
+	   TP, (SJ), 3/17/08.
+
+4d	a  Modified NA_OS name to account for RHEL 5 systems, which are very
+	   similar to RHEL 4. Added the OS_BLD value from the OS version number.
+	   SJ, (SJ), 7/28/09.
+
+--------------------------------------------------------------------------------
+C3.     Build Scripts
+
+--------------------------------------------------------------------------------
+C4.     External Error Files
+
+C5.2
+3	a  Latest versions of our external libraries.  TP, (SS), 3/3/08.
+
+C5.3
+4a	a  Updated ncepBUFR and ncepUT libraries from CCS.  TP, (TP), 9/19/08.
+
+C6.1
+1       a  Updated sample LDM config files with new decoders and fixes to some
+           entries.  Rearranged some entries to better match the development
+           LDM pattern-action file.  SJ, (TP), 9/6/07.
+
+4c	a  Updated LDM pattern for WCN products from the WFOs. The pattern
+	   was made less restrictive in order to process more products.
+	   This was done at the request of the SPC. SJ, (SJ), 6/26/09.
+
+C7.1
+1       a  Changed the AIX 'C' compiler to 'cc -qlanglvl=extc99'.  Added -k
+           option to make calls and added GMSGFMT environmental variable to
+           gettext_build.  Modified order of SUBDIRS in Makefile.in. TP,
+           (SJ), 10/24/07.
+
+C7.2
+2       a  Added GNU make files to automate the N-AWIPS build process.
+           TP, (SJ), 11/19/07.
+
+2	b  Move createbinfo, mkelev, and vgftobnd from gempak/utilities to
+	   gempak/source/programs/util and set up make.  Update link files
+	   for other utilities.  TP, (SJ), 12/7/07.
+
+C7.3
+2	a  De-constructed and reconstructed the gemlib and cgemlib libraries
+	   to better fit with the automated build system.  TP, (SJ), 12/29/07.
+
+C7.4
+2	a  Complete clean-up of old build scripts, remove obsolete environment
+	   variables, and more library separation.  TP, (SJ), 1/8/08.
+
+C7.5
+2	a  More changes to gemlib and cgemlib.  TP, (DP), 1/22/08.
+
+C8.1
+2	a  This delivery contains changes necessary to use GFORTRAN to build
+	   NAWIPS.  1.  MCHPRM.Linux.gfortran was created to properly define
+	   character parameters.  2.  Changes were made to the templates for
+	   the cshrc and profile to add new flags to ignore long lines and
+	   lines that start with a “D” in the first column.  3.  A utility
+	   program was created to find all FORMAT statements with continuation
+	   lines.  In these cases, all tabs on the continuation lines were
+	   changed to spaces.  Tabs in FORMAT continuation lines are invalid
+	   in GFORTRAN.  SJ, (TP), 12/31/07.
+
+C3.11
+4	a  Added new make configuration files to build SFGRAM with the GF and 
+	   GIF device drivers. SJ, (TP), 7/16/08.
+
+2	b  After applying all of the changes for GFORTRAN, a recompile of all
+	   source code revealed a problem with one file in the OHSHEF directory.
+	   The file had line numbers beyond the character position 72.  These
+	   have been removed.  SJ, (TP), 1/15/08.
+
+C3.12
+4	a  Per HPC's request, the GD applications will be linked to GPLT directly.
+	   TL, (SJ), 7/31/08.
+
+
+CO.     Contrib
+CO1.1
+1       a  Change to gpanot so that special text with embedded \n strings will
+           be printed as multiple lines on all platforms.  SD, (SS), (SJ), 9/11/07.
+
+
+
+DEEE=============================================================================
+D.   Decode/Display (DECDSP)
+
+D.7
+
+D1.     QuikScat
+
+D3.3
+1       a  Replace ST_CLST with ST_CLSL in MT_DECD.  HZ, (TP), 9/4/07.
+
+--------------------------------------------------------------------------------
+D6.4
+
+D8.     DCUAIR
+
+D9.1
+
+D10.    TAF decoder
+
+D11.    SCD decoder
+
+D12.
+
+D12.1.3
+4	a  Set up times and attributes  for plotting ENVI/GFO/Jason2 significant 
+	   wave heights.  Reads and plots ENVI/GFO/Jason2 significant wave heights.
+	   Calls GG_WAVE for ENVI/GFO/Jason2 significant wave heights.  Modified
+ 	   datatype.tbl and miscset.tbl to support the display of these datatypes.
+	   GM, (DP), 7/18/08.
+
+D12.1.4
+4e	a  The changes will allow a user to display altimetric satellite
+	   (Jason-1, ENVISAT, Jason-2) ground track prediction indicators in
+	   nmap2 and gpmap. GM, (SJ), 12/11/09.
+
+D12.5
+1       a  Added capability to display 50km and 25km ASCAT ambiguities
+           to GPMAP and NMAP2.  GM, (SJ), 10/9/07.
+
+1       b  Fixed problems with the KNMI QC Fail flag usage. Also fixed a
+           problem with the path name and length for the ASCAT Ambiguities
+           in datatype.tbl.  GM, (SJ), 10/19/07.
+
+D12.6
+4c	a  At the request of NESDIS and NCO Data Flow, changes were made to
+ 	   allow the ASCAT data to be pulled from the operational DDS server
+	   instead of the non-operational Manati server. The changes  are to
+	   modify the byte swapping for the new data type since Manati is
+	   little-endian and DDS is big-endian. The data directory is also
+	   changed to the new data set in datatype.tbl. Also removed unused
+	   aliases from datatype.tbl and miscset.tbl. SJ, (DP), 6/26/09.
+
+D12.7
+4d	a  Added new ASCAT data types to allow users to view Experimental
+	   data in addition to the operational data. Created new data types
+	   that are the same as the operational ASCAT types, except they are
+	   prefixed by EX, i.e., ASCT_HI and EXASCT_HI. SJ, (DP), 8/7/09.
+
+--------------------------------------------------------------------------------
+D13.5
+
+D15.5
+1       a  Modified the international SIGMET decoder, DCISIG, to properly decode
+           updated/corrected SIGMETs from KKCI, PAWU and PHFO.  Modified GPMAP
+           code to correctly display updated/corrected SIGMETs from KKCI, PAWU
+           and PHFO.  JL, (SJ), 10/1/07.
+
+D15.6
+1       a  Modify the DCCSIG decoder so it can decode LINE SIGMETs which contain
+           the contraction "INTSF".  Specifically, change the subroutine CS_CBND
+           to search for " TS " instead of "TS".  JL, (SJ), 9/26/07.
+
+D20.3
+3	a  Add four (4) new National mosaic products as well as thirteen (13) new
+	   Alaska mosaic products and thirteen new Hawaii mosaic products.  The new
+	   National Product Ids are 89, 105, 106, and 139.  The new Alaska and
+	   Hawaii Product Ids are 30, 89, 90, 95, 101, 102, 105, 106, 137, 138,
+	   139, 140, and 148.  TP, (DP), 3/26/08.
+
+3	b  Corrected projection for National Mosaics.  UNISYS WeatherMAX Site and
+	   Product Catalog, Version 3.00, December 5, 1997, page I-3 states “Maps
+	   are projected with the Lambert Conformal Conic Projection centered at
+	   38 degrees north and 98 degrees west.  Standard latitudes are 33 degrees
+	   north and 45 degrees north.  Earth radius of 6380 km is used.  A
+	   spherical earth is assumed.”  This has been recently confirmed via e-mail
+	   correspondence with Mark Logan of UNISYS.  TP, (SJ), 4/21/08.
+
+D20.3
+4	c  Fixed display of NSSL National mosaics. TP, (TL), 7/10/08.
+
+D22.
+
+D23.1
+
+D23.2
+1       a  Fix for upper and lower flight level filters when displaying AIRMETs
+           in NMAP2.  JL, (SJ), 9/11/07.
+
+D23.3
+1       a  Change the search for AIRMET LLWS subtype from "LLWS" to "LLWSPOT".
+           JL, (SJ), 9/26/07.
+
+D25.1
+
+D26.1
+
+D27.1
+
+D28.1
+
+D28.2
+3	a  A change was announced to the WMO originating station for buoy reports
+	   in collective SXUS20. The originating station is being changed from
+	   KWBC to KWNB at 1330Z on 4/30/08.  SJ, (TP), 429/08.
+
+D29.1
+
+D30.1
+
+D30.2
+4	a  Fixed calculation of the number of minutes for lightning data display.
+	   The number of minutes are used to color the symbols.  SJ, (DP), 7/7//08.
+
+D30.3
+4a	a  1.  Add an option to allow the decoder to create empty files.  This
+	   change creates a file whether or not any strikes occurred during the
+	   specified time period.  2.  Removed duplicate strikes from the output
+	   files.  3.  Added function prototypes.  4.  Removed unused variables.
+	   5.  Add more information to the verbose logging.  6.  Cleaned up
+	   included header files.  7.  Fixed compiler warnings.  JL, SJ, (DP),
+	   2/13/09.
+
+D30.4
+4e	a  Changed all LONG integers to be declared as INT. Also moved the program
+	   that dumps the contents of a lightning large-word file to its own
+	   directory so that it will be built. SJ, (SJ), 12/11/09.
+
+D32.1
+4	a  1.  Modify the TAF decoder to handle the forecast hour up to 30 and
+	   accept both old and new formats in dealing with: a) the report time;
+	   b) the FM; c) the BECMG; and d) TEMPO.  2.  Fix bugs in subroutine
+	   tf_shrd that a “IPTRH” may be out of range in array “RPT”.
+	   LL, (DP), 6/3/08.
+
+4a	b  1.  Allocate 30 available gempak slots for both 24-hour and 30-hour
+	   reports.  2.  Write output to one file in normal circumstance if the
+	   report contains 24-hour or 30-hour full forecast reports.  3.  Accept
+	   the mixture of new or old report time format for both 24-hour and
+	   30-hour reports.  4.  Treat “BECM” or “BEC” as “BECMG”.  5.  Write
+	   output to a proper file if a report does not have full forecast report
+	   in both 24-hour and 30-hour TAF.  LL, (DP), 11/26/08.
+
+D32.2
+4b	a  Fixed a problem with interpreting the times after a PROB30 or PROB40
+	   entry in a TAF report submitted by the AWC. The change adds processing
+	   of the PROBxx entries when determining the start and end times of
+	   the values. SJ, (DP), 4/13/09.
+
+D33.1
+4	a  Extend the functionality of the dctaf decoder to support circular files 
+	   over the specified number of forecast hours.   A -r switch will be added 
+	   to selectively choose the circular file concept.  Modify NMAP2 to not 
+	   display the valid time (used for model forecast grid files), if the cycle 
+	   time is internally set to 000101/0000. LH, (DP), 7/18/08.
+ 
+EEEE=============================================================================
+E.      External Libraries
+
+E1.1
+
+E1.2
+
+E2.1
+
+GEEE=============================================================================
+G.   GEMPAK
+
+G11.1
+1       a  Increased LLSTFL from 4800 to 30000.  Redefined MMHDRS as
+           LLSTFL + LLMXTM.  TP, (SJ), 8/28/07.
+
+1       b  Declared LLSTFL variables 'static' to avoid stack overflow
+           segmentation fault.  TP, (SJ), 10/1/07.
+
+G20.    GEMPAK programs
+
+G20.3.2
+
+
+G21.    GEMPAK programs - DC
+
+G22.    GEMPAK programs - GD
+
+G22.11
+
+G22.12
+1       a  Created a new standalone program GDPTPDF to plot probability
+           density/cumulative probability at selected point and time at a
+           single level, with values on the vertical axis and probability
+           along the horizontal axis.  ML, (KB), 9/11/07.
+
+1       b  Fixed segmentation fault problem caused by lower level function
+           DGC_NFIL with input of "GDFILE = gefs".  This existing problem
+           happens to all GD programs and all other applications who call
+           DGC_NFIL directly or indirectly.  ML, (TP), 10/18/07.
+
+G22.13
+2	a  Created a new standalone program GDTSPDF to plot probability
+	   density or cumulative probability at selected point as function
+	   of forecast time, with values on the vertical axis and forecast
+	   time along the horizontal axis.  The probabilities are displayed
+	   as contour lines or color fills.  ML, (KB), 11/27/07.
+
+2	b  Fixed above mentioned bugs in the test report.  Also fixed GDPTPDF
+	   segmentation fault when the user input of GDTTIM is invalid.
+	   ML, (KB), 1/15/08.
+
+G22.14
+2	a  As in the design, the 'if' check block on the directional flag has
+	   been reversed, first checking for the value of '1' then assuming
+	   any other value is to be treated as value '0'.  DP, (TP), 1//22/08.
+
+G23.    GEMPAK programs - GP
+G23.6
+G23.7
+3	a  Initialize the device driver to GN in GPTCWW to avoid runtime errors
+	   for uninitialized variables.  SJ, (SS), 2/28/08.
+
+
+--------------------------------------------------------------------------------
+G24.    GEMPAK programs - NA
+
+G24.5
+
+G24.6
+
+G24.7
+
+G24.8.1
+
+G24.8.2
+
+G24.8.3
+2	a  When the last set of changes were made to ensemble processing for
+	   the ECMWF data, the default case was left out for interpreting the
+	   PDS extension.  This delivery modifies the functions that process
+	   the NWS and ECMWF PDS extensions to each have a default case.
+	   This problem was reported by the HPC.  SJ, (SS), 1/15/08.
+
+G24.9
+4e	a  Allow nagrib2 diagnostic information to be printed to the terminal
+	   even if the grid information cannot be converted to GEMPAK
+	   information. Also,  allow negative scale factors and value limits
+	   for GRIB2 templates 4.5 and 4.9. SJ, (SJ), 12/11/09.
+
+--------------------------------------------------------------------------------
+G26.    GEMPAK programs - SF
+
+--------------------------------------------------------------------------------
+G27.    GEMPAK programs - OA
+
+G27.1
+4d	a  Moved the setting of the mandatory data flag in OABSND to after
+	   the file is open. This avoids the use of an uninitialized variable
+	   in the old logic. SC, (SJ), 9/4/09.
+
+--------------------------------------------------------------------------------
+G28.    GEMPAK programs - UTIL
+
+G28.9
+
+G28.10
+1       a  At the request of NESDIS, modified the SPENES creation application
+           to add a UGC line listing the states.  SJ, (DP), 10/22/07.
+
+G28.11
+4	a  Changed the LAT...LON section of the SPENES product to make sure that 
+	   the wrapping does not split a latlon pair. A new line is inserted after 
+	   every 5 points instead of wrapping by character count.  SJ, (DP), 7/7/08.
+
+G28.12
+4b	a  Changed all “long”s to “int”s in arinfo.c. The application would not
+	   work on 64-bit systems because the header was being read into an array
+	   of long integers. Longs are 64 bits in length and the header values
+	   were not being read correctly. SJ, (DP), 4/8/09.
+
+G28.13	a  Modified MDPSPC to (1) add the phrase “LAT...LON” in front of the
+	   lat/lon points for consistency with other SPC products; (2) the list
+	   of lat/lon points will always describe a closed area, so the last point
+	   listed will be the same as the first point listed. GG, (DP), 5/22/09.
+
+--------------------------------------------------------------------------------
+G29.1
+4a	a  Fixed a bug, reported by Stephen Jascourt, in SNCROSS.  The program
+	   would not display fill patterns without corresponding contours.  That
+	   is, when CTYPE=F only, the data would not plot.  Modified SNSLEV to
+	   compute the data range when the fill flag is set and use those values
+	   to compute the fill levels.  SJ, (TP), 12/23/08.
+
+G30.    GEMPAK programs - GUI
+
+G30.8
+4e	a  Increased the number of models displayed in the selection dialog
+	   box for NTRANS. The value was increased from 50 to 100.
+	   SJ, (SJ), 12/11/09.
+
+G40.2
+2	a  Remove radmap directory.
+ 
+--------------------------------------------------------------------------------
+G51.    GEMPAK libraries - GEMLIB
+
+G51.7
+
+G51.7.8
+
+G51.7.9
+3	a  Upgrade ENS_CVAL and ENS_CPRB to use intrinsic weights associated
+	   with the distribution of ensemble member values.  KB, (SJ), 2/28/08.
+
+G51.7.10
+4	a  Add new grid diagnostic functions INCD, BNCDF, and IBNCD.  KB, (SJ),
+	   6/23/08.
+
+G51.7.11
+1       a  Added the ability of ENS_SAVG function to calculate weighted
+           ensemble average, using weights, provided in the data file as
+           a separate grid.  MG, (SJ), 10/17/07.
+
+1       b  Fixed the bug in the de_scan calling sequence.  MG, (TP), 10/30/07.
+
+1a	c  Increased the size of each member of argu array to LLMXLN.  MG, 
+	   (DP), 11/27/07.
+
+G51.7.12
+2	a  Added functionality to the existing ensemble functions (DE_VAVG,
+	   DE_MODE, DE_PRCNTL) to use weight grid in the calculation of
+	   weighted ensemble diagnostics.  Added two new functions (DE_SWSPRD
+	   and DE_VWSPRD) for calculation of weighted ensemble spread of
+	   scalar and vector diagnostics.  MG, (TP), 1/22/08.
+
+2	b  Fixed bugs discovered in the testing in the functions DE_SWSPRD
+	   and DE_VWSPRD.  MG, (TP), 1/29/08.
+
+G51.7.13
+4b	a  Added capability to compute, for every grid point on a grid, a unit
+	   vector that points away from a point of interest and toward its
+	   antipodal point and along a great circle arc. GMF, (SJ), 4/8/09.
+
+G51.7.14
+4d	a  The HPC reported a problem with the calculation of the ensemble
+	   spread for grids with very large values. Since the spread calculation
+	   sums the values and sums the squares of the values, it has the
+	   potential to create results that are too large for a FLOAT. Fixed
+	   this problem by allocating and using internal arrays of DOUBLEs to
+	   store these large values for further processing.  Also modified the
+	   ensemble mean function in the same manner. SJ, (DP), 8/7/09.
+
+G51.7.15
+4e	a  The changes will allow a user to generate great circle rays emanating
+	   from a particular point in such a way that the rays are terminated
+	   (blocked) when  they encounter land. GM, (SJ), 12/11/09.
+
+G51.9.1
+3	a  Updated source code and imgtyp.tbl to account for the new GOES12
+	   Sounder images.  GG, (SJ), 4/16/08.
+
+G51.9.2
+4	a  When NESDIS activated GOES13, the resulting GINI files could not be
+	   displayed in GEMPAK.  This change adds the new satellite id number to
+	   the code so that the images can be displayed.  SJ, (TP), 12/15/08.
+
+G51.24
+4       a  Fixed nagrib to work on a staggered grid file.  Add HYBL as a valid
+           vertical coordinate and implement appropriate vertical flipping.  FY,
+           (DP), 7/21/08.
+
+G51.25.1
+4b	a  Fixed the DST calculation when March 1 is a Sunday. The function was
+	   erroneously stating that March 1-7 were already in Daylight Saving Time,
+	   when DST began on March 8. In the next 12 years, this would be a
+	   problem in 2009, 2015 and 2020. SJ, (DP), 3/10/09.
+
+
+G51.30
+
+G51.31
+
+G51.32
+1       a  The following routines were changed to increase the amount of
+           available radar ID numbers:  $GEMLIB/im/imsimg.f.  Two tables
+           were updated as well, to include various national radar mosaic
+           products produced by NSSL:  $GEMTBL/rad/nidprd.tbl,
+           $GEMTBL/sat/imgtyp.tbl.  JL, (SJ), 10/17/07.
+
+G51.33
+
+G51.35
+3	a  Removed all instances of cmm_malloc1d and cmm_free1d.  Moved 'tg'
+	   functions from fortran_wrappers directory to 'tg' directory.  TP,
+	   (DP), 4/3/08.
+
+G51.36
+4	a  In function GG_NARP increased the size of arrays tlat and tlon from 
+	   200 to 500 and initialized them to RMISSD.  MG, (TL), 7/19/08.
+
+G51.37	
+4	a  Increased the look back time for WOUPDT and NMAP2 for displaying WOUs 
+	   (and WCNs) to 48 hours.  FY, (DP), 7/28/08.
+
+G51.38
+4a	a  Increased parameter NA to 25 in ggnarp.f to fix ATCF display bug.
+	   TP, (SJ), 9/19/08.
+
+G51.39
+4a	a  Adds ability to process grid type 205 (B-grid staggered output) GRIB
+	   files into GEMPAK.  MP, (TP), 12/18/08.
+
+G51.40
+4b	a  Modified the String-to-Integer and Integer-to-String conversion
+	   routines for use with GFORTRAN. GFORTRAN is the only Fortran
+	   compiler available for Red Hat 5. The problem occurred when trying
+	   to embed a Carriage Return (CR) in a string for display on a device
+	   driver. The Fortran internal read/write functions do not work the
+	   same as they did under the g77 compiler. The 4 conversion functions
+	   were modified to use an EQUIVALENCE between a BYTE array and an INTEGER.
+	   SJ, (DP), 3/10/09.
+
+G51.41
+4d	a  Added 1-hour precipitation to the list of major time accumulation
+	   intervals. SJ, (SJ), 9/4/09.
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+G52.    GEMPAK libraries - CGEMLIB
+
+G52.14.1
+4	a  A problem has been identified with the width of the ghosting boxes
+	   when the associated text string used to construct a text box contains
+	   multiple spaces.  This ultimately affects the performance of the
+	   placement algorithm, causing it to overlay text boxes in places where
+	   it shouldn't, should there be multiple white space characters in a line.
+	   The cause of the problem was identified in the module crggettxtbox.c,
+	   in the section that processes special text 16.  Any text containing
+	   spaces is being stripped of its spaces in the parsing routine cst_clst.
+	   This causes the number of columns making up the ghost box to be computed
+	   too short, causing subsequent problems with the placement algorithm.
+	   Solution:  Prior to calling the parsing routine cst_clst that is used to
+	   split the text into an array using the “|” as a delimiter, replace the
+	   white space with “_”, via the subroutine cst_rspc.  Since the text is
+	   not being depicted, there is no need to replace the “_” back with space
+	   later via the routine cst_rnan.  LH, (DP), 6/3/08.
+
+G52.20
+
+G52.20.1
+
+G52.20.2
+
+G52.20.3
+1       a  Updated the placement algorithm to include a rule to use a location
+           where the placed object fits inside a polygon but its reference is
+           only clipped and not contained in the same polygon, if not other
+           more optimal location is found.  SD, (SJ), 9/11/07.
+
+1       b  Add test files for previous delivery of G52.20.3.  SD, (SJ), 10/1/07.
+
+G52.20.4
+1       a  Corrected the refreshing problem associated with the auto-placement of
+           GFA text boxes.  Originally, after you generated smears or F/BB/As from
+           snapshots when "ENABLE_AUTOPLACE" was set to TRUE in prefs.tbl, clicking
+           on the text boxes of the newly-generated smears or F/BB/As may not
+           select those elements - but they were supposed to be selectable at this
+           point.  The problem was caused by the auto-placement of the GFA text
+           boxes that may relocate them.  Such relocation requested a rebuilding of
+           the range record, which was not done properly before.  JW, (SJ), 10/31/07.
+
+
+--------------------------------------------------------------------------------
+G53.    NMAPLIB
+
+--------------------------------------------------------------------------------
+G72.    >>>
+
+
+G76.1
+2	a  Modify SFMAP to allow multiple files to be plotted at the same time,
+	   using the same filter settings.  This allows the second and
+	   subsequent files to fill in any blank areas from the first file.
+	   KK, (SJ), 1/22/08.
+
+2	b  Fixed a typo.  KK, (TP), 1/31/08.
+
+MMM==============================================================================
+M.   Maps/Bounds (MAP)
+
+M1.     Map/Bounds - Updates
+
+M1.28
+1       a  Updated map, bounds and station files to reflect changes brought
+           about by mz02oc07 shapefile.  MG, (SJ), 10/1/07.
+
+1       b  Updated map, bounds, and station files to reflect changes brought
+           about by mz02oc07 shapefile.  MG, (TP), 10/22/07.
+
+M1.29
+3	a  Updated map, bounds, and station files to reflect changes brought
+	   about by mz04de07 shapefile.  MG, (TP), 2/29/08.
+
+4	b  This change is to address SPC request to fix our map files for 5.11.2.
+	   Notice:  this delivery should not overwrite 5.11.3 (current operational)
+	   map files.  MG, (DP), 6/23/08.
+
+4	c  Remove incorrect map files.  MG, (TP), 7/30/08.
+
+M1.30
+3	a  Make updates to map, bounds and tables file according to c_11mr07,
+	   mz01ap08 and z_01ap08 shapefiles.  MG, (TP), 4/16/08.
+
+3	b  Fixed glitch in two county map files.  TP, (DP), 5/2/08.
+
+M1.31
+4	a  Made changes to map, bounds, and station files consistent with mz03jn08
+	   and fz08my08 shapefile updates.  MG, (TP), 6/23/08.
+
+M1.32
+4	a  Update map files according to oz02jn08 shapefile.  MG, (TP), 6/30/08.
+
+M1.33
+4	a  Update map, bounds, and station table files according to fz25jn08
+	   shapefile.  MG, (TP), 6/30/08.
+
+M1.34
+4a	a  Made map, bounds and tables updates for mz03oc08, c_03oc08, and
+	   z_03oc08 shapefile changes.  MG, (TP), 12/18/08.
+
+M1.35
+4a	a  Updated map. bounds and station file according to fz19nv08 shapefile
+	   update.  MG, (TP), 12/18/08.
+
+M1.36
+4b	a  Made map, bounds and station files updates for  mz18fe09, mz01ap09,
+	   fz01jn09, z_07my09, oz02jn09 shapefile updates. MG, (SJ), 5/20/09.
+
+M1.37
+4c	a  Six counties in Florida were missing WFOs.  Also, Monroe county
+	   had wrong WFO. Changes were made manually to the tables, and then
+	   creatbinfo was run to create .info files. MG, (SJ), 6/26/09.
+ 
+4c	b  Correction to county bounds file.  MG, (DP), 7/7/09.
+
+M1.38
+4d	a  Made changes to map, bounds and tables file to bring them up to
+	   date with c_15jl09 mz15jl09 z_22jl09 shapefiles.
+
+M1.39
+4d	a  Fixed the “750000” bug in the table and bounds files. Fixed
+	   CREATEBINFO to only output 2 decimal places to the bounds info files.
+	   MG, (SJ), 9/4/09.
+ 
+--------------------------------------------------------------------------------
+
+M2.     Map/Bounds - New
+
+M2.8
+1       a  Create map and bounds files based on the provided AK and NAT PSA
+           shapefiles.  MG, (TP), 10/22/07.
+
+M2.9
+2	a  Add new bounds files based an the provided VGF file ak_area.vgf
+	   and new map file based on the provided VGF file medr_bounds.vgf.
+	   MG, (TP), 12/31/07.
+
+M2.10
+4	a  Delivered new Canadian Provinces map files. MG, (TP), 7/7/08.
+
+M2.11
+4	a  Beginning in May 2008 the Storm Prediction Center began providing the 
+	   AWC CCFP desk with information on expected thunderstorm activity in the 
+	   Northeast corridor of the U.S.  The input is sent daily in vg file format 
+	   for display in NMAP2.  A map overlay for NMAP2 was created to outline 
+	   the region of interest.  Also, tables mapfil.tbl and mapovl.nmap are to
+	   be updated to include the new map files.  MG, (TL), 7/19/08.
+
+M2.12
+4a	a  Add new vgf, map and bounds files for the Volcanic Ash Advisory Centers
+	   areas of responsibility.  Add the entries for the map and bounds files
+	   in clo.tbl and mapfil.tbl.  MG, (TP), 11/21/08.
+
+M2.13
+4d	a  Fixed errors with the vgf, map and bounds files for the VAAC Areas of
+	   Responsibility. MG, (SJ), 9/4/09.
+
+--------------------------------------------------------------------------------
+
+M3.1
+1       a  Added a new Shape Exception Table shpexception.tbl into $GEMTBL/stns/.
+           The tables lists all the shapes (counties and marine zones) that have
+           manually set centroid points.  The format of each table entry is like
+           the one in county.tbl:
+
+ STID       STNM   NAME                            ST CO   LAT   LON  ELV PRI WFO
+VAC650    51650 Hampton                          VA US  3705  -7636     0     0      AKQ
+
+           The LAT/LON values are not calculated through cgr_centroid() but
+           manually set to ensure that the point falls within the shape.
+           Modified shpcv.c so it reads shpexception.tbl and manually sets the
+           centroid points for the shapes (counties and marine zones) that are
+           listed on the table.  HZ, (TP), 8/21/07.
+
+M3.3
+4	a  Several new allowable types of shapefiles need to be added for
+	   processing in conversion programs – SHPSSF and SHPCV.  MG, (TP), 6/30/08.
+
+NNN==============================================================================
+N.   NMAP (Group)
+
+--------------------------------------------------------------------------------
+
+N1.     Seek / Locator
+
+N1.6
+
+N2.     Main button bar
+
+N4.7
+
+1       a  Wrote a new function cfl_scandir to allow a limitless number of files
+           in a directory.  TP, (SJ), 9/25/07.
+
+1       b  Fixed some minor bugs from original delivery.  TP, (SJ), 9/28/07.
+
+1       c  Do not call cti_tmln if no valid times found.  Also cleaned up other
+           files that include struct dirent ** files.  TP, (SJ), 10/22/07.
+
+N4.7.2
+2	a  Fixed a problem in CTI_YYYY where a counter was being compared to the
+	   max number of times incorrectly.  The check was for greater than and
+	   is now greater than or equal to.  SJ, (TP), 12/4/07.
+
+N4.7.3
+2	a  Added check on *ntime to ctitmln.c.  TP, (SJ), 12/11/07.
+
+N4.14
+4d	a  At the request of the HPC, increased the number of grids allowed per
+	   category in the NMAP2 data section window. The value was changed
+	   from 50 to 150. SJ, (SJ), 9/4/09.
+
+
+--------------------------------------------------------------------------------
+N4.9.1
+3	a  Added capabilities to read ensemble selections from a table and
+	   plot the ensemble output in NMAP2.  ML, (DP), 3/14/08.
+
+N4.9.2
+4	a  Added a capability to select ensemble model/member in a GUI of NMAP2.
+	   ML, (DP), 6/3/08.
+
+4	b  Fixed problems found by Keith(~kbrill/n4.9.2), and also modified the
+	   ensemble GUI as follows: Added the 'First' button for each model to 
+	   indicate which model is listed first in the model list; Added alias 
+	   button for each model to show if this model is in the list; and 
+	   Added a capability to handle the '+' in the list, such as 
+	   '{gfs,nam}+ensmean|00'.  ML, (DP), 7/17/08.
+
+N4.11.1
+1       a  Changed the orientation of the panes in Data Selection Window so
+           the whole window won't be too long for GRID data.  HZ, (DP), 8/29/07.
+
+N4.12
+
+N4.13
+4	a  Increased array size for name of model and storm to allow SPFs to be 
+	   created for the GFDL and HWRF models (storm specific model) so that 
+	   they can be restored (TPC requirement 51).  SPFs should now also work
+	   for volcanic ash source, which has the volcano name in the filename.
+	   Added check for name length.  FY, (SJ), 7/15/08.
+
+N6.     Maps and Overlays
+
+
+N7.     Miscellaneous
+N7.4
+4a	a  Fix fade slider bug with > 8 pixel depth.  TP, (TP), 2/13/09.
+
+
+N12.1
+2	a  Added  the ability to zoom in the map area using a center point.  In
+	   Nmap2, two zoom mode – center zoom and corner are added to the
+	   'Option' menu, two hot key 'c' or 'C', and 'z' or 'Z' are also added
+	   as center zoom and corner zoom.  The center zoom capability was also
+	   added to GEMPAK programs using CURSOR command.  ML, (SS), 1/15/08.
+
+N14.1
+2	a  Modified mpcstw_gareaDisplay to not assume there will always be four
+	   (4) values in the GAREA text box of the Customized Map Definition
+	   window.  Also, correct the output strength length argument in
+	   st_rmbl.  Previously, the output string length value could be
+	   greater than the resultant string.  TP, (SJ), 12/28/07.
+
+N15.1
+2	a  Replaced a call to dataw_setImageNav when using the Range/Int button
+	   on the data window.  The HPC reported that when using Range/Int with
+	   data that was not within the default interval, the image navigation
+	   and color enhancement were incorrect.  Replacing the call fixes this
+	   problem.  SJ, (SS), 2/12/08.
+
+N16.1
+2	a  Change range interval changes zoom area bug fixed.  TP, (SJ), 12/7/07.
+
+OOO==============================================================================
+O.      Documentation
+
+O3.     Release Notes
+
+03.13
+1       a  Release notes and WhatsNew.hlp for version 5.11.1.  SS, (TP), 10/30/07.
+
+O3.14
+2	a  Release notes and WhatsNew.hlp for version 5.11.2.  SS, (TP), 2/4/08.
+
+O3.15
+3	a  Release notes and help file for 5.11.3. DP, (TP), 5/27/08.
+
+O4.     Help Files
+
+O5
+4	a  Release notes and help file for 5.11.4. DP, (TL), 8/12/08.
+
+
+PEE==============================================================================
+P.   Product Generation
+
+
+P2.     Grouping
+P2.4
+4b	a  Added the ability for the SPC to use 3 new group types when drawing
+	   enhanced thunderstorm outlooks for periods 3, 4 and 5. GG, (SJ), 3/10/09.
+
+P2.5
+4b	a  Updated cesgtlmstr.c and nmap_pgofmt.c to support new group types for
+	   the SPC enhanced thunderstorm outlooks and also to skip layers with a
+	   layer name of “PR2CAT” (i.e. PROBABILITY to CATEGORICAL).
+	   GG, (SJ), 4/8/09.
+
+P3.     Select / Multi-select
+
+P3.2
+P3.3.1
+1       a  Added a capability to edit certain vector attributes in multi-selection.
+           ML, (DP), 9/26/07.
+
+
+P4.     Palette
+
+P5.     Cursor Functionality
+P5.1
+
+
+P6.     Products
+P6.7
+4a	a  Fixed missing DRY TSTM lines in Day 1 and Day 2 Fire Weather Outlook
+	   message (.dat file).  FY, (DP), 9/19/08.
+
+
+--------------------------------------------------------------------------------
+
+P7.     File Management
+
+--------------------------------------------------------------------------------
+
+P8.6
+1       a  Modify the PGEN software so that the Barb Info gui is redisplayed on
+           the NMAP window wherever it was last positioned by the forecaster.
+           JL, (SJ), 9/11/07.
+
+P8.7
+1       a  Modify the nmap2 software to format international SIGMETs in
+           compliance with ICAO Annex 3 standards and recommended
+           practices.  JL, (SJ), 10/17/07.
+
+P8.8
+4	a  Fixed a bug in NMAP2 so the phenomenon latitude and longitude widgets
+	   are activated when editing the attributes of an Isolated Tropical 
+	   Cyclone SIGMET.  JL, (SJ), 10/15/08.
+
+P9.1
+3	a  The HPC has requested that PGEN be able to work with lines using
+	   GEMPAK dash type 10 – dotted lines.  This task adds the new
+	   object id and the necessary code to work with this line type.
+	   The appropriate tables and icon file have also been modified
+	   or created.  SJ, (DP), 4/18/08.
+
+P9.2
+4b	a  At the request of the HPC, added a new symbol for the letter B. This
+           was done similar to the existing symbols for the letters
+           A, C, H, L, N, X. Added the symbol to the device independent drawing
+           routine. Added the new symbol to allow PGEN to select and draw the new
+           symbol. Also added other symbols to the PGEN palette that were not
+           added when they were created. SJ, (DP), 5/18/09.
+
+P10.1
+4d	a  At the request of the SPC, increased the number of forecasters
+	   allowed in the user interface for watches and outlooks from
+	   30 to 50. SJ, (SJ), 9/9/09.
+
+P11.1
+4e	a  Fixed a bug reported by the TPC where NMAP2 crashes if there is a
+	   single new line character in the PGEN text attribute box.
+	   SJ, (SJ), 12/11/09.
+
+TEE==============================================================================
+T.      Tables - general (TABLES)
+
+T01.01
+
+T1.     BUFR
+
+T1.1
+3	a  Added fire weather testing to Nmap2.  TL, (TP), 4/24/08.
+
+T2.     Colors
+
+T3.     Config
+
+T4.     Draw
+
+--------------------------------------------------------------------------------
+T5.     Grid
+
+T5.7
+2	a  Updated the necessary GRIB tables for decoding new grids for aviation
+	   forecasting.  Uncommented the appropriate lines in the GRIB tables for
+	   Turbulence, Icing and Visibility and for the Top of the Atmosphere
+	   vertical coordinate.  Also added a Ceiling vertical coordinate.  Added
+	   new parameters for the Simulated Brightness Temperature grids.  
+	   SJ, (SS), 12/19/07.
+
+T5.8
+4b	a  Added a new table to allow the decoding of GRIB2 files when the
+	   table version is set to 1.  The new table sets the possible
+	   vertical coordinates. SJ, (DP), 3/10/09.
+
+T5.9
+4e	a  Updated GRIB1 and GRIB2 tables for new parameters and parameter tables.
+	   SJ, (SJ), 12/11/09.
+
+--------------------------------------------------------------------------------
+
+T6.     GRPHGD
+
+T7.     HCNADV
+
+T8.     Loop
+--------------------------------------------------------------------------------
+T9.     LUTS
+
+--------------------------------------------------------------------------------
+T10.    MelBUFR
+
+T10.1
+1       a  1.)  Changes to the GRIB2 tables to support SPC NDFD products.
+           2.)  Changes to GRIB tables for CCS processing.  3.)  Changes to the
+           watch cluster tables.  4.)  Updates for the pgen tables for drawing
+           and creating SPC products.  5.)  Update prefs.tbl for SPC Watch Status
+           Message flags.  6.)  Update misc settings and map file tables for SPC
+           entries.  SJ, (TP), 10/22/07.
+
+T11.    NAFOS
+
+T12.    NMAP
+
+T13.    NSHARP
+--------------------------------------------------------------------------------
+T14.    NWX
+
+T14.11
+4a	a  At the request of the OPC, added the HPC Alaska Forecast Discussion
+	   to NWX.  SJ, (TP), 11/21/08.
+
+T14.12
+4b	a At the request of the HPC, fixed the display of the Anchorage Area
+	  Forecast Discussion in NWX. SJ, (DP), 5/18/09.
+
+--------------------------------------------------------------------------------
+T17.    PGEN
+
+T17.12
+
+--------------------------------------------------------------------------------
+T18.    Rad
+
+--------------------------------------------------------------------------------
+T19.    Sat
+
+T19.6
+
+T19.7
+2	a  Based upon changes from NESDIS, updated the channel numbers for
+	   CAPE, CINH, LI, and TPW in imgtyp.tbl.  Deleted the old CAPE-CINH
+	   and LIX-PWX entries that are no longer used.  SJ, (TP), 12/31/07.
+
+2	b  Updated definitions for CAPE, CINH, LI and TPW based on actual data.
+	   SJ, (TP), 1/15/08.
+
+T19.8
+4	a  Added GOES-13 entries to imgtyp.tbl.  SJ, (TP), 12/15/08.
+
+T19.9
+4	a  Added new BLENDED TPW products to imgtyp.tbl.  SJ, (DP), 3/23/09.
+
+--------------------------------------------------------------------------------
+T20.    STNS
+
+T20.49
+1       a  Add RME to the surface station table.  ML, (SJ), 8/21/07.
+
+T20.50
+1       a  Table updates based on Technical Implementation Notice 07-74 and
+           other user requests.  ML, (SJ), 10/22/07.
+
+T20.51
+2	a  Update taf and surface station tables.  ML, (SJ), 11/27/07.
+
+T20.52
+2	a  Updated the tables sfstns.tbl, cities.tbl, and tafstn.tbl according
+	   to the user's request.  ML, (TP), 1/29/08.
+
+T20.53
+2	a  Made a number of changes to the breakpoints, adding zones, and adding
+	   more primary and supplemental breakpoints.  Also, added separate
+	   entries for East Albemarle Sound, North and South Pamlico Sounds.
+	   MG, (TP), 1/31/08.
+
+T20.54
+3	a  No description given...  MG, (TP), 5/5/08.
+
+T20.55
+4	a  The HPC has complained that some Canadian surface stations are interfering
+	   with the decoding of some US stations.  There are a number of stations in
+	   both countries that have the same 3 letters after the initial “C” or “K”.
+	   This task forces all Canadian stations to have the leading “C”.  This is
+	   consistent with how the decoder handles this situation.  Also removed
+	   station QAJ.  It is not in North Carolina, it is in the Middle East
+	   (Iraq?).  There are a number of stations in the Middle East that are of
+	   the form “KQ--”.  The decoder will not handle these properly, so this is
+	   left as another task.  SJ, (TP), 6/2/08.
+
+T20.56
+4	a  Updated the TCA break point table.  TL, (TP), 7/24/08.
+
+T20.57
+4	a  Updated two tables – tcabkptlz.tbl and tcabkpt_ovl.tbl to match those
+	   used at the TPC.  MG, (TP), 6/18/08.
+
+4	b  Changed the format of the file, so that the dos characters do not
+	   interfere with unix platforms. MG, (TL), 7/31/08.
+
+T20.58
+4b	a  Table updates for changed UA station locations – Denver and Green Bay.
+	   DP, (SJ), 5/22/09.
+
+T20.59
+4b	a  Table updates for added UA station location for Yuma Proving Grounds.
+	   SJ, (SJ), 5/28/09.
+
+T20.60
+4d	a  Updated the GFS MOS station table with new and modified information
+	   from MDL. SJ, (SJ), 8/7/09.
+
+T20.61
+4d	a  Updated all breakpoint files for the 2009 Hurricane season.
+	   CL, (SJ), 9/4/09.
+
+T20.62
+4d	a  Fixed the state for the College Park pirep navaid from MO to MD.
+	   SJ, (SJ), 9/4/09.
+
+T20.63
+4e	a  Added new entries to the GEOG.TBL to test various navigation settings.
+	   Fixed the location of the Las Vegas pirep navaid. Fixed the location
+	   of the Toronto METAR location. SJ, (SJ), 12/11/09.
+
+--------------------------------------------------------------------------------
+T22.    NEXRAD
+
+T23.1
+
+T24.1
+4	a  Added ug.err to the $GEMERR directory.  JA, (TL), 7/19/08.
+
+VEE==============================================================================
+V.      Device Drivers (DEVICE)
+
+
+
+--------------------------------------------------------------------------------
+
+V1.     PNG
+
+V2.     GIF
+
+V2.3.1
+3	a  Fixed problem the SPC reported on 2/6/08 that NMAP2 (and GPMAP)
+	   (1) did not display some polygon warnings during overnight hours
+	   of outbreak and that (2) a correction appeared to change the type
+	   from a severe to a tornado warning, when the type should not have
+	   been changed.  Eliminated duplicates in displaying to fix another
+	   bug caused by duplicate warnings.  Modified DCWARN to decode the
+	   Event Tracking Number and the correction letter.  Used these new
+	   decoded fields in displaying warnings.
+
+3	b  Added back call to BR_VTEC, which was inadvertently removed.
+	   FY, (DP), 4/24/08.
+
+V3.     VG
+
+--------------------------------------------------------------------------------
+V4.     XW
+
+V5.     PS
+
+V7.1
+
+V8.1
+1       a  Use Hershey Font tables to draw better software fonts.  Add the
+           tables that contain the characters for fonts that emulate
+           Helvetica and Times in various styles.  Add the functions to read
+           and query the font information.  Add calls to these new functions
+           in the appropriate device functions.  Also, change the logo drawing
+           routines to use software font 3 instead of font 1.  Update the
+           header files for the new structures and function prototypes.  Add
+           the necessary error messages.  Update the help file for the TEXT
+           parameter.  SJ, (DP), 10/17/07.
+
+1       b  Fix link scripts to include the necessary libraries.  SJ, (TP), 10/18/07.
+
+V9.1
+2	a  Renamed routines in gf library to avoid collision with XW library.
+	   Added *.f routines that call these renamed functions.  TP, (SS), 2/5/08.
+
+2	b  Fix error introduced when making GH driver independent of xw source
+	   code.  TP, (SS), 2/11/08.
+
+ZEE==============================================================================
+
+
+
+TWO==============================================================================
+2.      Grid Re-engineering (GRID)
+
+
+--------------------------------------------------------------------------------
+
+2.2     Apply DG/GD library changes to main programs
+
+
+--------------------------------------------------------------------------------
+
+2.3
+
+2.4
+
+--------------------------------------------------------------------------------
+
+2.5
+
+2.6
+
+2.12
+1       c  Fix the data packing algorithm to handle constant gridded values
+           with missing data.  HZ, (SJ), 9/26/07.
+
+2.13
+4b	a  The problem occurs when the data range on the grid is so large that
+	   a NINT returns a cycled integer value having a negative sign. 
+	   The fix is to trap such negative values and RETURN with an error.
+	   KB, (SJ), 4/8/09.
+
+THREE============================================================================
+3.      GRIB2 (GRIB2)
+
+3.8
+
+3.9
+2	a  Added parameter PDSEXT to program nagrib2.  SG, (SJ), 11/28/07.
+
+3.10
+2	a  Modified 'dx' calculation in gb2gdtltln.c to fix 0 longitude bug
+	   in GRIB2 encoder.  CB, (TP), 1/23/08.
+
+3.11
+4	a  Added appending of the values AE and FE, for Analysis Error and 
+	   Forecast Error, to the grid parameter names.  SJ, (DP), 7/15/08.
+
+FOUR=============================================================================
+4.      Time Selection Improvements (TIMELINE)
+
+4.3.    Time binning of observational data, esp. PIREP
+
+4.3.2.  Add Time Binning to datatype.tbl
+
+4.3.3
+
+4.3.4
+3	a  Add two capabilities to the NMAP2 time binning data display in response
+	   to SPC's requirement S067:  (1)  allow for time binning for a fraction
+	   of an hour and (2) provide option to plot only the most recent data.
+	   FY, (SJ), 4/24/08.
+ 
+
+4.4
+
+4.5
+
+FIVE=============================================================================
+5.      Weather Event Simulator / Displaced Real-Time (WES/DRT)
+
+SIX==============================================================================
+6.      BUFR (BUFR)
+
+6.2.    Create Preliminary Mid-level (SWM) Messages
+
+6.2.2.  ASCII to BUFR
+
+6.20    This update addresses a renumbering of the BUFR sequences as requested 
+	by the WMO; Sequence 3-16-052 was previously assigned.  Sequences 
+	3-16-071 through 3-16-081 will replace sequences 3-16-051 through 
+	3-16-061. 
+
+	The table B3M-000-012-D will need to be updated to address the sequence 
+	change.  In addition, the afbufrfxy.sierra,  afbufrfxy.tango, and 
+	afbufrfxy.zulu tables located in $GEMTBL/bufr need to be updated.
+
+	The decoder program (airmet_bufrvgf) will require a change in one of its 
+	header files (afreadbufr.h) with the proper sequence constants for 
+	SIERRA, TANGO, and ZULU hazards.  No changes are required to the encoder 
+	program (airmet_vgfbufr);  It is purely table driven.
+
+	LH, (DP), 3/11/09
+
+--------------------------------------------------------------------------------
+
+6.12.   SIG WX changes
+
+6.15
+
+6.17
+2	a  Modify the volcano text element font number and font hardware/software
+	   setting in sigvts.  JL, (SS), 1/22/08.
+
+6.18
+2	a  Modified definition of DT_INT in melbufr_types.h.  It no longer equals
+	   DT_LONG.  Added DT_INT to VoidVal.c.  TP, (SJ), 1/2/08.
+
+SEVEN============================================================================
+7.      High Seas Marine Forecast Products (HSEAS)
+
+EIGHT============================================================================
+8.      Graphical Forecast for Aviation (GFA)
+
+--------------------------------------------------------------------------------
+
+8.13.15  Formatter upgrades
+
+8.13.21
+
+--------------------------------------------------------------------------------
+
+8.14    Refinements to filtering
+--------------------------------------------------------------------------------
+8.15    Smear point reduction
+
+
+8.43
+1       a  The objective is to create a G-Airmet BUFR encoder and decoder that
+           will work with VGF files containing GFA objects.  The program
+           executable "airmet_vgfbufr" will be used to encode the BUFR message
+           documents using VGF files as input, and the program executable
+           "airmet_bufrvgf" will be used to decode the BUFR message documents
+           generating VGF files as output.  LH, (TP), 10/22/07.
+
+
+8.43.0
+4	a  Extended the TLAYOUT functionality with two new mnemonic functions:
+ 	   a)ZFHR  Display UTC Forecast Hour Time on single-time GFA elements.
+ 	   b)ZSFH  Conditional display of UTC Forecast Hour Time on specials.
+	   Support of these functions required that a new cycle tag (TAG_GFA_
+	   CYCLE) be added to the VGF file.  The UTC Time is derived by adding 
+	   the cycle time to a relative forecast hour time.  The output format 
+	   of these functions will be of the form HH:MM, zero-suppressed on the
+	   hour.  LH, (DP), 7/18/08.
+
+4	b  Checked the code and fixed a minor bug.  Compiled and linked with no 
+	   warnings. JW, (TL), 7/21/08.
+
+8.43.1	
+4	a  Add the necessary coding for getting the cycle time tag (TAG_GFA_CYCLE) 
+	   put into the VGF files produced by the airmet_bufrvgf application.  LH, 
+	   (TL), 7/22/08.
+
+8.43.2
+4	a  Fixed programs with a missing sequence in BUFR Table D in the BUFR 
+	   coding development efforts with the International SIGMETs.  LH, (TL),
+	   7/31/08.
+
+8.43.3	
+4	a  Add the necessary coding for getting the cycle time tag (TAG_GFA_CYCLE) 
+	   put into the VGF files produced by the gdfrzl application. LH, (TL),
+	   7/22/08.
+
+--------------------------------------------------------------------------------
+8.74.1
+1       a  Changed the GFA "Join" algorithm in the "Connect" tool based on AWC's
+           request.  Originally, "Join" GFAs used the same algorithm as "smear"
+           GFAs, which uses a "shrink-wrap" algorithm.  Now, if two GFAs to be
+           joined intersect, a union is performed instead of "shrink-wrap" to
+           keep the concavity as much as possible.  If they do not touch each
+           other, "shrink-wrap" is applied ( we will develop a new algorithm
+           for this  case in the next release).  Note that "Smear" tool keeps
+           unchanged and should behave the same as before.  JW, (SJ), 9/6/07.
+
+1       b  Fixed a problem AWC reported.  In some cases, the join tool keeps
+           only one polygon and delete the other.  The problem is the join tool
+           does not check the intersection properly.  BY, (SJ), 10/17/07.
+
+8.79.2
+1       a  GFA Text Box Generation.  LH, BY, (SJ), 10/9/07.
+
+8.79.3
+2	a  Added AWC's changes that put border/fill and background font flags
+	   for GFA text box.  BY, LH, (SJ), 1/22/08.
+
+--------------------------------------------------------------------------------
+8.80.3
+1       a  This release allows the airmet' (airmet prime) formatter to correctly
+           build airmet text bulletins from user generated F/BB/A vg elements.
+           Some reorganization of the textlib/airmet library was done as well in
+           order to allow both the airmet and airmet' to function simultaneously.
+           ES, (DP), 9/4/07.
+
+8.80.4.1
+1       a  Added a new routine to retrieve begin/end wordings from condition
+           wording strings in AIRMETs.  BY, (JW), 10/1/07.
+
+8.80.4.2
+1       a  Added the capability in the the FROM tool to generate the GFA
+           Airmet/Outlook (smear) elements as what happens in the SMEAR tool.
+           The change allows us in the next step to move all the geographic
+           processing from the airmet formatter into the FROM tool to generate
+           fully editable F/BB/A elements.   JW, (SJ), 9/26/07.
+
+8.80.4.3
+1       a  Implemented the full capability in the FROM tool to generate user
+           editable FROM lines (aka, F/BB/A elements) from GFA snapshots.  JW,
+           (SJ), 10/17/07.
+
+1       b  Made the arrow of a GFA text box point to the center of its polygon
+           when ENABLE_AUTOPLACE is off.  JW, (SJ), 10/30/07.
+
+--------------------------------------------------------------------------------
+8.81.1	
+4	a  Added 20 KT surface wind in GFA hazards.  BY, (DP), 7/15/08.
+
+8.81.2
+4	a  Changed IFR to C&V and added MVFR.  BY, (DP), 7/10/08.
+
+8.81.3
+4	a  Added top/bottom input field for MT OBSC. BY, (DP), 7/10/08.
+
+8.81.4
+4	a  Added a new GFA hazard – Mountain Wave (MTW) into the existing GFA
+	   GUI and allowed the user to control its display through setting.tbl
+	   and uattribd.tbl.  JW, (DP), 6/30/08.
+
+8.81.5
+4	a  Added a new GFA hazard thunderstorm (TS) to the collection of the
+	   existing GFA hazards.  The user has the option to control the
+	   display of TS via setting.tbl and uattribd.tbl.  TS could not be
+	   smeared or “from”ed.  JW, (DP), 6/30/08.
+
+8.81.6
+4	a  Added a new GFA hazard cloud (CLD) to the collection of the existing
+	   GFA hazards.  The user could control the displaying attributes of CLD
+	   via setting.tbl and uattribd.tbl.  CLD cannot be smeared and “from”ed.
+	   Fixed a hard-coded limit that the GFA text box could only display up
+	   to 5 lines of text.  Now it could display up to 50 lines of text.
+	   JW, (DP), 6/30/08.
+
+8.83
+4	a  Fixed two bugs reported by AWC: (1) after editing updated FBBAs in 
+	   the Update issuance mode,  formatting these FBBAs could pick up the 
+	   Routine issuance time stamp in stead of using the Update issuance 
+	   time stamp.;  (2) Editing FBBAs may result in unexpected points along
+	   the prime median.  Also increased the width of the State List text 
+	   field per AWC's request.  JW, (DP), 7/16/08.
+
+8.83.1
+4	a  Fixed the bug reported by AWC- smear/FROM snapshots resulted in 
+	   smears/FBBAs that are smaller than the snapshots.   This is a really 
+	   rare case in which the order of the GFA polygon points could be reversed 
+	   from clockwise to anti-clockwise during the smearing/snapping process.
+	   The solution is to remove the duplicate points in the polygon before 
+	   snapping  two points  apart less than 0.01 degree in MAP coordinate are 
+	   considered duplicate points  (Originally, two points apart less than 
+	   0.0001 in  device coordinate are considered duplicate points,  which was 
+	   not sufficient enough).  JW, (DP), 7/23/08.
+
+8.83.2
+4	a  Removed the warning box for FBBA state list. BY, (DP), 8/6/08
+
+8.83.3
+4a	a  Fixed the C&V and SFC_WND tag problem.  BY, (DP), 9/19/08.
+
+--------------------------------------------------------------------------------
+
+8.95.12
+
+8.96.7
+1       a  Added code to break out of a loop in pgnew_dynamicDrop(...) in order
+           to fully cancel out of GFA warning box.  BY, (SJ), 9/26/07.
+
+8.96.9
+1       a  Added MT OBSC causes into the label text box.  BY, (SJ), 9/6/07.
+
+8.96.10
+1       a  Removed the code that sets desk value in pggfawp_setPanel3Attr in
+           order to display desk menu correctly.  BY, (SJ), 9/26/07.
+
+8.96.11
+1       a  Modified xml style sheets to use actual numbers for top levels of
+           fzlvl and m_fzlvl in AIRMET bulletins.  BY, (SJ), 10/22/07.
+
+8.96.12
+1       a  Fixed the bug that pops down GFA' when changing hazard types with
+           layer GUI is up.  BY, (SS), 10/23/07.
+
+8.96.13
+2	a  Added the in-state outlook generation rule in addition to the existing
+	   rule per AWC's request.  An in-state outlook generation ratio is defined
+	   and computed so that if an outlook includes a state with an area that is
+	   significantly larger than the corresponding AIRMET area in that state
+	   (the ratio is greater than the threshold ratio set in the prefs.tbl),
+	   the outlook will then be issued as well.  JW, (SJ), 1/8/08.
+-------------------------------------------------------------------------------------
+
+8.97.1
+2	a  Fixed the bugs related to the “6-6” airmet – such an airmet should
+	   not generate FROM line s for any of its clipped parts in an FA region
+	   that does not intersect the “6” snapshot with an area >= 3K.  This
+	   caused the problems listed in the AWC's V5.11.1 release testing
+	   summary as item 1A and 1B.  JW, (SJ), 12/20/07.
+
+8.97.2
+2	a  Fixed the incorrect conditional wording when two snapshots were
+	   drawn within the same hour span, e.g., “0:15” and “0:45”.  Such
+	   snapshots were not sorted correctly with an ascending order –
+	   which was required to form the correct wording.  The issue was
+	   reported in Bruce's email (Nov 29th) as POC1.2 - “Text
+	   Formatting”.  JW, (SJ), 12/29/07.
+
+8.97.3
+2	a  Fixed the bug AWC reported as the critical item 1C – the area that
+	   had the 0 and 6h snapshots produced smears that went to 40N, 40E as
+	   in the file 4742-16.vgf.  JW, (SJ), 1/15/08.
+
+8.97.4
+2	a  AWC reported formatting 6 hour snapshot less than 3000 square miles
+	   crashes nmap2.  The problem that causes the crash is a GPC routine
+	   tries to free polygons that are not initialized.  This delivery
+	   initialize those polygons in affrom.c.  BY, (SJ), 12/4/07.
+
+8.97.5
+2	a  Fixed the NMAP2 crash occurring with a 9-hour snapshot in one FA region
+	   and a 12-hour snapshot on in another  region.  This is the critical item
+	   1E in the AWC v5.11.1 test summary and item 1.3 in the “Proof of Concept”
+	   testing.  JW, (SJ), 12/11/07.
+
+8.97.6
+2	a  Added code to check if there are different freezing level ranges
+	   in the working vg file when formatting GFAs.  In addition, the
+	   lower FZLVL range for an FA area is set to the surface freezing
+	   level if there is SFC in the area.  BY, (SJ), 12/31/07.
+
+
+8.97.7
+2	a  Fixed the Freezing level formatter gibberish bug.  BY, (SJ),
+	   12/4/07.
+
+8.97.8
+2	a  AWC reported that when issuing an amended AIRMET, the amended
+	   AIRMET did not have the current issue time.  This delivery
+	   overrides the routine issue time with the current time when
+	   there are updated AIRMETs in the FA area.  BY, (SJ), 12/7/07.
+
+8.97.9
+2	a  Fixed the bugs associated with the FBBA editor: (1) a 0-0 hour FBBA
+	   airmet does not have the correct valid time in the text box;  (2)
+	   selecting an FBBA airmet or outlook with hours other than 0-6 or
+	   6-12 cannot call up the lower panel of the FBBA editor to allow the
+	   user to edit the FA area, state list, and the wording.  Also fixed
+	   another related bug:  the conditional wording does not show up in the
+	   window if it contains a '-' because of the verification callback does
+	   not allow any punctuation in it.  JW, (SJ), 12/11/07.
+
+2	b  Fixed the reported bug - editing an FBBA or smear with special hours
+	   may change its subtype to the subtype of snapshots thus the edited
+	   FBBA or smear will not be formatted in the text bulletin.  JW, (SJ),
+	   1/15/08.
+
+8.97.10
+2	a  Set GFA' hour to the last selected hour in the filter tool.
+	   BY, (SJ), 12/7/07.
+
+8.97.11
+2	a  Fixed the problems presented in badcobdswording.vgf: (a) the wording
+	   for the FBBA in CHI is not correct and should be 'CONDS DVLPG 21-22Z.
+	   CONDS ENDG BY 00Z”;  (b) an outlook should be generated in DFW with
+	   wording like “CONDS CONTG THRU 03Z”.  Note the exact time in the
+	   wordings may vary depending on the cycle time you are using.  JW,
+	   (SJ), 1/15/08.
+
+8.97.12
+2	a  NMAP2 crashes during creation of FBBA lines for VG file
+	   20071213_21Z_M_FZLVL.vgf.  The crash is caused by an out of bound
+	   array index in af_applyAttr(...).  This delivery changes the array
+	   bound to the correct one.  BY, (SJ), 1/8/08.
+
+8.97.13
+2	a  Added a rule to generate a single set of FBBA for formattable GFAs
+	   that are large enough to cross two FA areas in one FA region but
+	   requires no area clipping.  Such type of FBBAs will have two areas
+	   separated with “-” or “.”.  The FBBA will be formatted in the AIRMET'
+	   formatter for both areas with different state lists.  Originally,
+	   two identical FBBAs were generated for those two areas so if the
+	   users edit one of them, they have to match another one with the
+	   edited one.  Note that if the area clipping is required, one FBBA
+	   will be generated for each clipped part as usual.  JW, (SJ), 1/22/08.
+
+8.97.14
+2	a  Fixed a few cases reported by AWC in which FBBAs were smaller than
+	   the snapshots (See POC1.4 & POC2.3).  JW, (SS), 1/23/08.
+
+8.97.15
+3	a  Disable the 'Move Text' button in GFA' GUI if the ENABLE_AUTOPLACE
+	   is true.  BY, (SJ), 2/20/08.
+
+8.97.16
+3	a  Added the GFA tag number after the cancellation wording.
+	   BY, (SJ), 2/20/08.
+
+8.97.17
+3	a  Fixed the map background disappearing issue when clicking radio
+	   check boxes on the filter window with both the FROM or SMEAR
+	   window is also up.  JW, (SJ), 3/7/08.
+
+8.97.20
+3	a  Added GFA Top/Bottom enhancement in prefs.tbl.  If top > 450,
+	   set top to 450; if bottom < 010, set bot = SFC.  JW, (SJ), 3/7/08.
+
+3	b  Fixed the reported bug that when ICE had a bottom value of “FZL”,
+	   it was changed into “SFC”.  JW, (SJ), 3/25/08.
+
+3	c  Added a check for ICE FZL top/bottom based on the settings in prefs.tbl,
+	   which used the same limits as the flight level top/bottom.  JW,
+	   (SJ), 4/9/08.
+
+8.97.21
+3	a  Added complete verification and auto-complete to GFA' special forecast
+	   hour input text field (“Others”).  This should meet the AWC request as
+	   listed in V5.11.2 evaluation summary as item 9 and in V5.11.1 evaluation
+	   summary as item 14.  JW, (SJ), 3/17/08.
+
+8.97.22
+3	a  Fixed a bug reported by AWC that GFA airmet formatter (not GFA')
+	   incorrectly formatted user-drawn OUTLOOK as AIRMETs.  JW, (SJ),
+	   2/29/08.
+
+8.97.23
+3	a  Set the update issue time for each FA area.  During 5.11.2
+	   evaluation test AWC reported that the update issue time is not
+	   set correctly for FA areas.  AWC wants the update issue time be
+	   set for each FA area, not for entire AIRMET.  BY, (SJ), 3/7/08.
+
+8.97.24
+3	a  Added a warning box when an FBBA has more than 3 FROM lines.
+	   BY, (SJ), 3/31/08.
+
+3	b  Fixed the first two problems in the test report.  Changed the warning
+	   message and make the warning box show only once.  BY, (SJ), 4/16/08.
+
+8.97.25
+3	a  Added a warning window if the user edits the FBBA point locations.
+	   Fixed a bug that puts empty ranges in the AIRMET bulletin for
+	   manually drawn freezing levels.  BY, (DP), 4/18/08.
+
+3	b  Fix the FZLVL bug in the test report.  BY, (DP), 4/24/08.
+
+8.97.26
+3	a  Corrected a typo in GFA text layout in the settings table.
+	   Changed “:STA” to “;STA”.  BY, (SJ), 3/17/08.
+
+8.97.27
+3	a  Added code for AIRMET freezing level ranges to account for multiple
+	   freezing levels when there are freezing level elements generated from
+	   GDFRZL.  In addition, a fatal bug is fixed when formatting FBBAs that
+	   have many (over 40) points.  A character array is too small to hold the
+	   FBBA lat/lon.  This delivery dynamically allocates memory for FBBA
+	   lat/lon.  BY, (SJ), 3/31/08.
+
+8.97.28
+3	a  This delivery addressed the critical item 4 in the V5.11.2 release
+	   testing summary: (1) allowing FZLVL smears to be edited in GFA' GUI
+	   and (2) preventing “FORMAT ALL” from deleting existing FZLVL FBBAs.
+	   So now all types of GFA elements could be edited through GFA' GUI.
+	   However, only snapshots and FBBAs could be drawn through GFA' GUI.
+	   The old GFA smears could only be drawn through the old GFA GUI as
+	   before ( usually, they should be generated via GDFRZL).  Also, FZLVL
+	   smears will only take one round of “FROM” action so a “FORMAT ALL”
+	   action on a layer other than the “FZLVL” layer will not affect the
+	   existing FZLVL FBBAs generated from any previous FROM actions.
+	   JW, (SJ), 4/2/08.
+
+8.97.29
+3	a  Removed the extra space between state names and “AND CSTL WTRS”
+	   in the state list of AIRMETs.  BY, (SJ), 3/25/08.
+
+8.97.30
+3	a  Set the default CLASS to MET in PG palette after formatting or
+	   closing AIRMET'.  BY, (SJ), 4/3/08.
+
+8.97.31
+3	a  Modified an XML style sheet in order to add the update flag for each
+	   OUTLOOKs if there are more than one OUTLOOKs.  BY, (DP), 4/3/08.
+
+8.97.32
+3	a  This delivery solved a few issues on the refreshing of the GFA text
+	   box: (1) the text box failed to refresh completely after changing
+	   the GFA's tag attributes (AWC v5.10.2 evaluation summary item 15);
+	   (2) ghost boxes/lines left behind after moving the text box around;
+	   (3) the GFA element disappeared after moving the box first followed
+	   by editing other attributes.  JW, (SJ), 4/16/08.
+
+8.97.33
+4	a  Improved PGEN action results as following: (1) DEL_OBJ works for GFA'
+	   object now; (2) The text boxes of the newly-generated GFAs from
+	   INTERP/EXTERP actions will point to the center of the GFA polygon;
+	   (3) After PGEN actions like MOD, COPY, MOVE, etc., on GFAs, UNDO/REDO
+	   these actions will not leave any ghost lines/boxes behind.  All above
+	   issues were found in V5.11.3 release testing.  JW, (DP), 6/3/08.
+
+8.97.34
+4a	a  Fixed a bug that incorrectly calculates intersection points between
+	   SFC freezing levels and FA areas.  BY, (TP), 11/21/08.
+
+8.97.36
+4a	a  If the mod tool generates a two points GFA, cvg_writgfa will set the
+	   location to the end of the file but not save the element. When redraw
+	   is called, it does not read from the file because the location points
+	   to the end of the file and put garbage into the element. Nmap will
+	   crash at the point to match the filter for the element.  BY, DP, 2/13/09.
+
+8.97.37
+4b	a  Close the PGEN work file after formatting a G-AIRMET product. BY, (SJ),
+	   3/10/09.
+
+8.97.38
+4c	a  AWC reported that the time stamps for amended IFR are not correct.
+	   What causes the problem is that IFR is replaced by C&G in the gfa
+	   table. To fix  it, check the FBBA and see if it is an IFR when
+	   formatting. If the FBBA is an IFR, treat it as C&G when get the
+	   category from the gfa table. BY, (DP), 6/30/09.
+
+8.98
+4	a  Extended the functionality of the vgmod software to support identification, 
+	   modification, and deletion of these GFA object attributes in the VGF 
+	   files.  Deleted the write_obj function out of the vgmod.c module; replace 
+	   it with call to existing CVG library function cvg_writefD.  LH, (DP),
+	   7/23/08.
+
+8.100
+4a	a  Fixed a problem identified with the width of the ghosting boxes when
+	   the associated text string used to construct a text box contains
+	   multiple spaces.  LH, (TP), 9/24/08.
+
+8.101
+4a	a  The testin.f program needs to be modified to include the cycle time.
+	   LH, (TP), 9/24/08.
+
+8.102
+4a	a  Updated setting/uattrib.tbl tables to include changes originally
+	   requested on 6/13/08.  LH, (TP), 9/24/08.
+
+8.103
+4b	a  Changes were made to revise the code to conform to the latest G-AIRMET
+	   Sequence Proposal dated 2008-05-12, which was revised specifically for
+	   ZULU AIRMET hazards. In the latest proposal, code values were added to
+	   specific sequences to cover a wider range of conditions. LH, (DP), 5/20/09.
+
+8.104
+4b	a  Enhancements for GFA drawing and post-processing: (1) Mtm Obsc wording;
+	   (2) Setting the forecast cycle time; (3) Make 30kts the default for
+	   Sfc Winds; (4) Modify vgmod to recognize GFA elements; (5) Include Domestic
+	   SIGMETs in the G-AIRMET processing. LH, (DP), 5/20/09.
+
+8.105
+4c	a  bug fixes per 6/3/2009 AWC GFA review. LH, (DP), 6/26/09.
+
+8.106
+4c	a  Revise the In-State Outlook ratio formula used in conditional processing
+	   of the outlooks. LH, (DP), 6/30/09.
+
+8.107.1
+4e	a  Fixed processing of Dust Storm and Sand Storm for Non-convective SIGMETs.
+	   LH, (SJ), 12/7/09.
+
+8.107.2
+4e	a  A problem with the G-Airmet Graphics was reported 8/30/2009 when the
+	   Mountain Obscuration was only Smoke (FU) over the western US.  The G-Airmet
+	   Graphics rendered the Mountain Obscuration as due to clouds instead. The
+	   cause of the problem was identified in the XSLT code xmlBufr_sierra.xsl.
+	   The code assumes that the DUE_TO line always started with "CLDS" followed
+	   by other obscurations.  This is an incorrect assumption and so the module
+	   needs to be modified to accept all parameters after the word “BY “,
+	   single or delimited by ‘/’. LH, (SJ), 12/7/09.
+
+8.107.3
+4e	a  Added calls to refresh the display after changing the GAIRMET cycle.
+	   LH, (SJ), 12/7/09.
+
+8.107.4
+4e	a  Fix an issue with the Mountain Obscuration forecasts when there are
+	   multiple obscuration causes. At the present time, the FBBA incorrectly
+	   contains the cause of the first mountain obscuration snapshot in the
+	   sequence, rather than all of the causes of mountain obscuration contained
+	   in the snapshots that comprise either the AIRMET or OTLK FBBA.  The issue
+	   needs to be corrected by listing all mountain obscuration causes.
+	   LH, (SJ), 12/7/09.
+
+8.107.5
+4e	a  From the Create/Edit GUI, remove the “Save From Line” push button.  Also
+	   remove any call back routines associated with this push button.  They are
+	   no longer needed. Re-align the “Move Text” pushbutton to fit the position
+	   occupied by “Save From Line”, make cosmetic adjustments if needed.
+	   LH, (SJ), 12/7/09.
+
+8.107.6
+4e	a  Add the Valid Times to the forecast hours in the GFA Create/Edit GUI.
+	   LH, (SJ), 12/7/09.
+
+8.107.7
+4e	a  Modify the afconditions.c module call to ctb_gfagcat to use variable
+	   “hazType” instead of fmt[ii].origInfo->haz_type. This will effectively
+	   allow the function af_overrideIssueTm to work correctly.
+	   LH, (SJ), 12/7/09.
+
+8.107.8
+4e	a  The following changes are collected together in this task:
+	   - Revise CCFP to support: Echo tops for 4 levels; modified coverage
+	     criteria; fewer growth trends
+	   - Add support for medium coverage
+	   - Revise text box handling to use auto placement
+	   - Create a new text box with user configurable contents
+	   - Remove the automatic grouping in favor of a single element with
+	     the label information included
+	   - Update CREATECCFP to accommodate the above changes
+	   - Create a CCFP to VGF application that reads CCF coded messages and
+	     writes VG files
+	   LH, (SJ), 12/8/09.
+
+8.107.9
+4e	a  The objective is to make provision for separate cloud layers in
+	   the GFA Create tool.  These cloud layers would be named IFR, MVFR,
+	   CLD, and CLD_TOPS.  The intent is that an over-clutter issue
+	   observed in previous testing of the C&V layer be reduced. The
+	   functionality of the C&V layer would still be maintained.
+	   LH, (SJ), 12/8/09.
+
+NINE=============================================================================
+9.      Graph-to-Grid Improvements (G2G)
+
+
+9.5     Handle categories
+
+
+9.15
+1       a  The changes will allow GRPGHD and NMAP2 to recognize WHFT groups.
+           GM, (SJ), 10/17/07.
+
+TEN==============================================================================
+10.     SPC Outlook Product Generation (SPC OTLK)
+
+10.14
+1       a  Added search for scalloped lines (Dry Thunderstorm Areas) for Day 3-8
+           Fire Weather Outlooks and grouped them together when creating the outlook
+           .dat text file in NMAP PGEN.  Added to program DAT2PTS, the creation of
+           points (PTS) products for Day 4-8 Severe Weather and Day 3-8 Fire Weather
+           Outlooks with day(s) of threat as the line label.  FY, (SJ), 10/9/07.
+10.15
+2	a  This task addresses SPC requirement S080 to create NDFD compatible
+	   grids for Day 4-8 Severe Weather Outlooks and Day3-8 Fire Weather
+	   Outlooks (including dry lightning areas) and requirement S079 to
+	   create NDFD compatible grids for Day 1 and Day 2 Fire Weather
+	   Outlooks (including dry lightning areas).  FY, DP, 1/22/08.
+
+10.16
+4	a  SPC has found several issues with the program and requested to address
+	   them.  Also, some new issues were discovered and addressed as well.
+	   Here is the list of changes (for reference use task 10.10):  the
+	   contours and labels were not being grouped together; “missing” data
+	   points represented as -9999.00 in VGF files were causing problems
+	   for creation of outlook product text file; in a particular case,
+	   resulting outlook contour line was not extended all the way to the
+	   boundary of SPC Outlook area; in a particular case, erroneous line
+	   appeared in the resulting outlook contour line along the Texas/Mexico
+	   border; labels of neighboring contours were plotted on top of one
+	   another; algorithm (function PolyClip) for finding unions/intersections
+	   was not quite working correctly in some very specific cases; functions
+	   OpenCntr and CloseCntr had some minor bugs.  MG, (DP), 6/3/08.
+
+4a	b  Made changes to p2c_CloseCntr and p2c_OpenCntr to address the issues
+	   found during the testing.  MG, (DP), 2/13/09.
+
+10.16.2
+4c	a  Made updates and fixes to PROB2CAT based on feedback from the SPC.
+	   - modified the p2c_CorctCntr function to make the correction
+	     algorithm more robust;
+	   - modified the p2c_CloseCntr function to allow for contours with
+	     multiple intersections with the SPC_OUTLOOK bounds;
+	   - as the result of modification to the p2c_CloseCntr modified the
+	     code to allow for return of multiple contours from p2c_CloseCntr
+	     function;
+	   - separated code that closes single contour in the new private
+	     function p2c_CloseSingleContour;
+	   - separated code that deals with contour extensions in the new
+	     private function p2c_ExtendCntr;
+	   - separated code that copies the content of line element and label
+	     element in two new private functions p2c_CopyCntr and p2c_CopyLbl;
+	   - modified the main function to start processing only if there is a
+	     non-zero number of qualified contours in the input files;
+	   - modified the algorithm in p2c_OpenCntr to make it more robust;
+	   - fixed the bug in p2c_OpenCntr that in some cases erroneously
+	     excluded starting point of open contour. MG, (DP), 6/15/09.
+
+4c	b  Made updates and fixes to PROB2CAT based on feedback from the SPC.
+	   - modified the main to split writing out contour and labels to
+	     prevent from writing out ungrouped labels;
+	   - fixed several bugs in p2c_OpenCntr;
+	   - created a script that runs regressive tests of Prob2cat;
+	   - prepared several test cases for regressive tests.
+	   MG, (DP), 6/30/09.
+
+10.16.3
+4e	a  Made updates and fixes to PROB2CAT based on feedback from the SPC.
+	   1. Added evaluation tolerance variable in p2c_CloseSingleCntr
+	   2. Changed tolerance value to 0.001F from 0.01F for two points
+		 distance checking
+	   XG, (DP), 12/11/09.
+
+ELEVEN===========================================================================
+11.     Watch-By-County (WBC)
+
+
+--------------------------------------------------------------------------------
+11.7    OTE Refinements
+
+
+11.15   Add options to WOUPDT to handle more VTEC codes
+
+
+--------------------------------------------------------------------------------
+
+11.16   Check for non-contiguous cnty inclusion -or- internal cnty exclusuion
+
+
+11.17   Decode and Display watches
+
+
+--------------------------------------------------------------------------------
+11.27.8.3
+
+--------------------------------------------------------------------------------
+11.38
+1       a  Fixed DCWOU which failed to decode watch #724 due to an ATTN string
+           that continued into the next text line.  FY, (SJ), 10/19/07.
+
+11.40
+2	a  Modified the display of WCNs in NMAP2 and GPMAP to check for duplicate
+	   WCNs to fix a problem reported by the SPC in which some WCNs were not
+	   displayed in watch 0724.  Also, fixed a bug in which the program
+	   incorrectly thought the array size was too small causing incorrectly
+	   displayed WCNs if another frame was previously plotted.  FY, (SS), 1/22/08.
+
+TWELVE===========================================================================
+12.     Tropical Cyclone Graphics and Products (TROP PROD)
+
+
+12.12   Enhancements and Fixes
+
+
+12.28.2
+
+1       c  Updated function CDS_ATDEFLT to include new elements TCERR, TCBKL,
+           and TCTRK into cdsUattr structures.  MG, (SJ), 8/21/07.
+
+12.28.6
+2	a  Removed semicolon at end of line in ghprpt.f.  TP, (SJ), 12/7/07.
+
+12.28.7
+2	a  Added a conversion table of sustained winds to winds gusts from the
+	   intermediate advisory, as requested by the TPC.  MG, (TP), 1/22/08.
+
+12.28.8
+4a	a  Fixed a bug introduced in 5.11.1 in the decoding of the sustained
+	   wind from an intermediate advisory. MG, (DP), 9/19/08.
+
+12.28.9
+4b	a  Created a new converter program for conversion of VGF bounds files
+	   to shapefile format. MG, (SJ), 4/8/09.
+
+12.30
+1       a  Modify the gh library and NMAP2 so that VTEC bulletins can be
+           generated for watches and warnings along the southern coast of
+           California.  Change breakpoint file to remove California breakpoints
+           in the IUSGEC section, and add the appropriate land zones to the
+           California breakpoints in the IPACIF section.  Change NMAP and
+           GH_WWTX to read/write the VTEC bulletin to file KNHCTCVEPn for
+           storms in the east Pacific.  Continue to use file name KNHCTCVATn
+           for storms in the Atlantic basin.  SG, (SJ), 10/17/07.
+
+12.31
+2	a  Made changes to functions GH_TCTX, GH_WWLN, GH_WWTX and nmap_pgtca to
+	   address the requirements for creating TCV product for Central Pacific
+	   Tropical storms.  Also, fixed a bug in GH_RDHD that resulted in
+	   erroneous characters in the GPTCWW graphics legend box when issue time
+	   and valid time were the same in the advisory.  Also, made changes to
+	   table tcabkptlz.tbl to facilitate listing of public forecast zones in
+	   the TCV product.  MG, (TP), 12/17/07.
+
+12.32
+3	a  Two new categories  for Tropical Cyclones  plotted track points are
+	   introduced – Extratropical storms are now denoted by white circles,
+	   and TC with winds stronger than 110 mph are denoted with letter “M”.
+	   Also, for remnant lows letter “L” is now plotted.  The content and
+	   structure of the legnd box also changed to accommodate the changes
+	   to the track.  MG, (TP), 4/16/08.
+12.33
+3	a  Enhance Danger Graphic.  MG, (TP), 4/22/08.
+
+12.35
+3	a  Added the ability to select the responsible office for TCV product
+	   by adding an entry with tag “TCV_RSP_OFFICE” to prefs.tbl.  Also,
+	   added the ability to select the directory where TCV products (VGF
+	   file and text file) will be saved by adding an entry with tag
+	   “TCV_WORK_DIR” to prefs.tbl.  Made changes to several GH functions
+	   and PGTCA function to make this work.  MG, (TP), 4/18/08.
+
+3	b  Added initialization of icarr to zero in function FL_SWOP.  Changed
+	   related prefs.tbl values to correct defaults.  MG, (TP), 4/21/08.
+
+3	c  Fixed the problem with the naming of text file name in the GH_WWTX
+	   and PGTCA functions.  MG, (TP), 4/22/08.
+
+12.36
+4	a  Modified GH_RDAD and GH_TCWW to fix the bugs discovered by TPC that
+	   resulted in the incorrect plotting of the legend box.  Also, modified
+	   the calling sequence to GH_RDAD in GPTPC.  MG, (TP), 6/30/08.
+
+12.37
+4	a  For the new hurricane season, the NHC added Block Island, Nantucket 
+	   and Martha's Vineyard to the list of valid islands for the TCV 
+	   product. The code needed to be modified to account for this addition.
+	   Also, it was found that the breakpoint tables were out of date, so 
+	   they were updated with the necessary information.  SJ, (SG), 8/6/08.
+
+4a	b  Updated the breakpoint tables for the new hurricane season.
+	   CL, (TP), 9/24/08.
+
+12.38
+4	a  Removed the forcing of the last character of an unnamed TC to E. MG,
+	   (TL), 8/13/08.
+
+12.39
+4a	a  Fixed a bug where the legend box was being plotted on top of
+	   breakpoints.  MG, (TP), 9/25/08.
+
+12.40
+4a	a  Bring VGF product up to date with the other device.  MG, (TP), 10/3/08.
+
+12.41
+4b	a  Code and table updates for TPC processing for the 2009 hurricane season.
+           CL/AK, (DP), 5/20/09.
+
+12.42
+4c	a  Added Canadian breakpoints to the breakpoint tables and modified
+	   source so that the new Canadian breakpoints are not included in
+	   the TCV VTEC. SG, (DP), 6/26/09.
+
+12.43
+4d	a  Modified GPTCWW to change the storm name to mixed case so that it will
+	   fit in the legend of the cone graphic. Added the output dimensions to
+	   the XW output for testing. SJ, (SJ), 9/4/09.
+
+THIRTEEN=========================================================================
+13.     Marine Quality Control Program (CREWSS)
+
+
+
+FOURTEEN=========================================================================
+14.     NSHARP ( NSHARP)
+
+14.8
+3	a  Adapted TAMDAR decoder for SIB use and changed the output to be made
+	   to GEMPAK sounding file.  MG, (TP), 3/31/08.
+
+14.8.1
+4	a  The decoder was not working in the regular decoder setup.  Several 
+	   changes needed to be made to the main function as well as to function 
+	   TA_DCOD in order to take the template for the output file instead of 
+	   the actual output file name. MG, (TP), 7/7/08.
+
+4a	b  The TAMDAR and JASON decoders were not working within LDM.  TP, (DP),
+	   9/19/08.
+
+4a	c  Fixed a bug in tamdar sounding file where the observation Ids were NOT
+	   unique enough.  TP, (DP), 10/6/08.
+
+14.8.2
+4a	a  New format for TAMDAR bufr messages.  JA, TP, (DP), 12/16/08.
+
+FIFTEEN==========================================================================
+15.     National Digital Forecast Database (NDFD)
+
+SIXTEEN==========================================================================
+16.     Volcanic Ash Advisory Product (VAA)
+
+16.4.2
+2	a  Changed VAA formatter to encode direction as a free form text field.
+	   TP, (DP), 12/11/07.
+
+2	b  Changes to the VAA formatting. After this delivery, NESDIS/SAB needs
+	   to perform a thorough checkout to ensure acceptance.  DP, (TP), 1/23/08.
+
+2	c  minor formatting mods to the VAA text product.  DP, (TP), 1/29/08.
+
+2	d  Change to enable Anchorage color coded volcano messages.  DP, (TP),
+	   1/31/08.
+
+16.7
+1       a  Got rid of "ASH NOT IDENTIFIABLE FROM SATELLITE DATA" text for
+           NOTSEEN type of ash cloud at forecast hour other than F00.
+           HZ, (DP), 9/26/07.
+
+16.8
+1       a  Added the ability to get the same VAA edit window after canceling
+           the VAA product window.  HZ, (DP), 9/26/07.
+
+16.9
+4	a  Minor formatting change - “WIDE LINE BETWEEN” to “WID LINE BTN”.  DP,
+	   (SJ), 6/23/08.
+
+SEVENTEEN========================================================================
+17.     Automated Objective Dvorak Technique (AODT)
+
+
+NINETEEN=========================================================================
+19.     Collaborative Convective Forecast Product (CCFP)
+
+
+TWENTY===========================================================================
+20.     Winter Weather (WINTER WX)
+
+
+TWENTY-ONE=======================================================================
+21.     Shape file processing
+
+TWENTY-TWO=======================================================================
+
+22.1
+1       a  Create a set of routines for Offshore Text Formatter which will
+           convert gridded data into forecast text.  TL, (SJ), 8/21/07.
+
+1       b  Further simplified wind/wave heights text based on the amended rules
+           set forth by OPC as of 8/7/2007.  Minimized the gap between range and
+           the EXCEPT conditions.  Removed debugging code from the base line
+           version.  Removed rule numbers from the end of the text.  TL, (SJ),
+           10/9/07.
+
+22.2
+2	a  This is a part of OTF (Offshore Text Formatter) delivery, which output
+	   wind directions in a clockwise fashion.  Improved algorithm for wind
+	   shifts.  Periods of identical text are combined.  TL, (TP), 12/4/07.
+
+22.3
+2	a  Restructured text simplification between Range and Except, and
+	   trending blocks.  Narrowed the gap between the values of maximum
+	   Range and minimum Except.  Per TPC's reuqest, added the word
+	   “PORTION” before the subzone name.  TL, (TP), 1/15/08.
+
+22.4
+3	a  Added the minimum values of wind and wave heights to the EXCEPT part
+	   of the offshore text if the values occur over one subzone only.  TL,
+	   (TP), 2/20/08.
+
+22.5
+3	a  Implemented table-driven OTF parameters.  Removed code that generates
+	   rule numbers.  Changed the wording of the EXCEPT portion.  TL, (TP), 3/31/08.
+
+22.6
+4	a  Created a new program which will generate wind warning polygons over 
+	   waters and common alerting protocol (CAP) message from the gridded 
+	   data. TL, (TP), 7/7/08.
+
+22.7
+4	a  Currently the wave height allows 0 FT wave.  Per TPC's request, the 
+	   0 FT wave is rephrased as '1 FT OR LESS'.  TL, (TP), 7/7/08.
+
+TWENTY-THREE=====================================================================
+
+TWENTY-FOUR======================================================================
+
+TWENTY-FIVE======================================================================
+
+25.21.1.7
+4a	a  Fixed the calling sequence for GD_GNUMW to add a missing string
+	   length to the end of the call.   SJ, (TP), 2/13/09.
+
+25.21.4.2
+1       a  Remove grid limit from GDCROSS.  SG, (DP), 8/22/07.
+
+25.21.4.3
+2	a  Removed grid limit from GDEDIT.  ML, (SG), 12/4/07.
+
+25.21.4.4
+1       a  Added "C" wrapper routines to allocate grid array dynamically.
+           SG, (DP), 8/21/07.
+
+25.21.4.5
+1       a  Removed all references to LLMXGD.  Also, added error return code
+           check for subroutine DG_CXGP.  SG, (DP), 9/6/07.
+
+25.21.4.6
+1       a  Added "C" wrapper for subroutine GDTDTA to dynamically allocate
+           the grid array.  SG, (DP), 8/21/07.
+
+25.21.4.7
+3	a  Removed common variables dependent on LLMXGD.  Allocate cmn_data
+	   buffer in C and pass to fortran.  Create indices into cmn_data
+	   for each old common variable and modify all fortran code to
+	   access cmn_data in place of common variables.  GH, (SG), 4/18/08.
+
+3	b  Fix bug found in release testing on 64bit platform.  GH, (SG), 5/1/08.
+
+25.21.4.8
+2	a  Removed grid limit from GDGSFC.  Created a new subroutine to wrap
+	   the block in main program that read and pass the grid data.  And
+	   then created a new 'C' function to wrap the FORTRAN subroutine
+	   which retrieve the grid size, allocate grid array, and pass the
+	   array into new subroutine.  ML, (SG), 11/27/07.
+
+25.21.4.11
+3	a  Removed restriction in program GDSTAT that limited grid point count
+	   (kx * ky) to a fixed size of one million.  The program will now
+	   accept arbitrarily large grids (subject only to limits on dynamically
+	   allocated working memory).  BH, (SG), 4/16/08.
+
+3	b  Fix for the bug causing all symptoms described in “Test Run C” above. 
+	   BH, (SG), 4/24/08.
+
+25.21.4.15
+2	a  Removed grid limit from OAGRID.  ML, (SG), 11/29/07.
+
+25.21.4.16
+3	a  Reset output grid size in GDPROF and GDCROSS to LLMXGD. (Undo
+	   25.21.4.2 and 25.21.4.4).  SJ, (TP), 2/20/08.
+
+25.34
+1       a  Initialized output variables for DGC_VECR.  HZ, (TP), 9/4/07.
+
+25.35
+1       a  Change the if statement within pddrct.c.  Instead of using G_DIFF,
+           we use "==" to test if a float value is 0.0F.  HZ, (SJ), 9/26/07.
+
+25.37
+4d	a  Modified GDLIST to not add a column to a globe-wrapping grid if
+	   the user sets GAREA = GRID. The error resulted in the column numbers
+	   not being listed properly and the user could not subset such a grid.
+	   KB, (SJ), 9/4/09.
+
+TWENTY-SIX=======================================================================
+
+26.1.1
+2	a  This delivery divides the nwx code into GUI and processing modules.
+	   The modules that begin nwxg_* are GUI modules, and those that are
+	   named nwxp_* are processing code modules.  There are also two
+	   wrapper modules, which begin nwx_w*.  One wraps the gemplot
+	   functions and the other wraps the Nxm functions that nwx uses.
+	   Also the header files have been similarly divided.  All nwx code
+	   now includes nwx_cmn.h, and the gui modules also include nwx_gui.h.
+	   The fatal bug (any station selection) on aix5 is also fixed in
+	   this delivery.  Please note that time did not permit to clean up
+	   valgrind's complaints with the nwx code.  There are no reported
+	   memory leaks, but there are many errors reported.  None of these
+	   are new.  Changes to nmap2 code were necessary after the removal
+	   of proto_nmaplib.h and proto_wx.h from proto.h.  As part of the
+	   effort to divide nmap2 into processing and GUI code, the header
+	   files will need to be reorganized.  These changes simply add
+	   includes for proto_nmaplib.h and proto_xw.h where needed to
+	   compile without producing warnings and errors.  ES, (SJ), 12/31/07.
+
+2	b  This release cleans up the build warnings found in MAKE_linux2.4el,
+	   which were caused by the previous delivery.  ES, (TP), 1/8/08.
+
+2	c  This release fixed the scandir filter problem in above test report.
+	   The problem was caused by the misspelling of the filter(_select_dir).
+	   The wrong filter passed NULL or NO_FILTER to the SCANDIR who scan all
+	   files in data directory no matter what time interval is picked, as
+	   the results, all station were displayed on the map for any time
+	   covered.  ML, (TP), 1/31/08.
+
+26.2
+4b	a  NWX bug fix ... for metar and tafs ... software has a refresh issue
+           when it updates the text report dialog containing missing entries.
+	   LH, (DP), 5/15/09.
+
+---------------------------------------------------------------------------------
+
+
+	CM - Chris Caruso Magee
+	DP - Dave Plummer               GG - Greg Grosshans
+	FY - Fee-Jing Yen               JA - Jeff Ator
+	SJ - Scott Jacobs               JH - Jon Hoopingarner
+	SS - Steve Schotz               JL - Jan Lewis (AWC)
+	KK - Krishna Kumar              JP - James Partain
+                                        LH - Larry Hinson
+
+	BY - Bingfan Yin                AP - Art Person/PSU
+	ES - Edward Safford             CB - Chris Bailey
+	HZ - Harris Zeng                JC - Joey Carr
+	JW - Jun Wu                     JM - Jessica Morgan
+	MG - Michael Gamazaychikov      KB - Keith Brill
+	ML - Michael Li                 KK - Krishna Kumar
+	RT - Ruiming Tian               SC - Steve Chiswell
+	TL - Tiros Lee                  SD - Steve Danz (AWC)
+	TP - Tom Piper                  SG - Steve Gilbert
+        XG - Xilin Guo
+

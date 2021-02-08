@@ -1,0 +1,18 @@
+Changed Hash Mark Speed and Flight Level Assignment for Jets (AWC)
+
+Program VG2UKA, which converts high-level SigWx data from a VG
+file to the UKMET browsable ASCII format, has been modified to
+conform to revised specifications for the assignment of wind speed
+and flight level values to hash marks.
+
+The way in which wind speeds are defined for hash marks has been
+changed in the WAFC (World Area Forecast Center) documentation.
+The hash mark wind speeds will now be "maximum speed relative as
+opposed to minimum wind (80 KT) relative."  Ideally, each hash mark
+will represent a 20 knot change (decrease) moving away from the
+nearest maximum wind speed defined for a barb.  Error handling for
+miscoded hash marks is now done in accordance with specifications
+received from the AWC.  The WAFC documentation also says that each
+hash mark will be assigned a flight level.  The flight level will
+be equal to that of the nearest wind barb.
+

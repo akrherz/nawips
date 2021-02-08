@@ -1,0 +1,1 @@
+$(BINDIR)/freeColors: $(XLIBS)

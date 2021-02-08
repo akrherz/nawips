@@ -1,0 +1,12 @@
+#!/bin/csh
+
+if  ( $#argv < 1 )  then
+    echo "Usage: $0 dir_name"
+    exit
+endif
+
+foreach ii ( changes config nawips remove tables )
+
+	cp ${ii}.log ${1}/${ii}_${1}
+
+end

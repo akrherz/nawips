@@ -1,0 +1,141 @@
+
+                             NAWIPS 5.4.3k+ Removed Files Log
+
+018c.	2/19/99	gempak/source/driver/active/xw/xrollbk.c
+
+========================== Patch 5.4.3.l =========================
+
+020b.	3/2/99	doc/Prog_guide/shared/tools/ptypcmpc.sh
+
+t18.	3/3/99	gempak/restore (and all its subdirectories)
+
+010o.	3/17/99	gempak/source/gemlib/ti/tiymdh.f
+
+========================== Patch 5.4.3.m ===========================
+
+019c.	3/25/99	shape_files/c_17mr98.tar (NAWTR only)
+		gempak/maps/programs/ssfgsf
+
+t40.	3/29/99	gempak/tables/stns/county_sort.tbl
+
+008k.	4/1/99	doc/Prog_guide/bridge/tables/metar.sub
+
+========================== Patch 5.4.3.n ===========================
+
+020c.	4/15/99	doc/Prog_guide/shared/tools/paramcmp.sh
+
+010ff.	4/19/99	gempak/source/gemlib/fl/flffil.f
+
+021rr.	4/27/99	nprogs/nmap/source/vgf/nmap_pgobj.c
+
+021ss.	4/28/99	nprogs/nmap/source/vgf/nmap_pgpalw.h
+	NOTE:  This is to undo 021rr - so do not remove
+			nmap_pgobj.c in build script.
+
+========================== Patch 5.4.3.o ===========================
+
+010qq.	5/14/99	gempak/source/gemlib/pc/pcdset.f
+		nprogs/nmap/source/smfln.f, smfltm.f
+
+021ggg.	5/21/99	icons/nmap/stmtrak.xbm
+
+========================== Patch 5.4.3.p ===========================
+
+001n.	6/8/99	gempak/source/bridge/wn/wnftim.f
+
+019h.	6/8/99	gempak/maps/swapped/hirdus.usg, hishus.usg,
+					hiuhus.usg, hiisus.usg
+		gempak/maps/hirdus.usg, hishus.usg,
+					hiuhus.usg, hiisus.usg
+		gempak/maps/ascii/aschirdus.usg, aschishus.usg,
+					aschiuhus.usg, aschiisus.usg
+
+========================== Patch 5.4.3.q ===========================
+========================== Patch 5.4.3.r ===========================
+========================== Patch 5.4.3.s ===========================
+
+t82.	7/19/99	tables/nwx/intsig.bull
+
+t84.	7/19/99	tables/nwx/afd.bull
+
+001r.	7/28/99	gempak/source/bridge/af/afhset.f
+
+009f.	8/10/99	gempak/nts/nmap/restore/modl/ruc/lifted_index
+
+========================== Patch 5.4.3.t ===========================
+
+001t.	8/25/99	gempak/source/bridge/ww/wwrepl.f, wwus9.f
+
+021a1r.	8/31/99	nprogs/nmap/source/vgf/nmap_pgsigf.c
+		gempak/tables/pgen/nmap_pgisig.tbl
+
+========================= Patch 5.4.3.u =============================
+========================= Patch 5.4.3.v =============================
+
+019p.	10/4/99	gempak/maps/ascii/asccwa.nws
+		gempak/maps/cwa.nws
+		gempak/maps/swapped/cwa.nws
+
+010a1n.	10/6/99	gempak/source/cgemlib/ctb/ctbdtfcst.c
+
+001ff.	10/22/99 gempak/source/bridge/is/isdist.c, isgtpt.c
+
+007p.	10/25/99 gempak/source/driver/active/xw/xmclear.c
+
+018vvv.	11/15/99 gempak/source/programs/gui/nmap2/nmap_sfmap.f, nmap_sfmw.c,
+							nmap_uairw.c, smgtim.f
+
+============================== Patch 5.4.3.w ==================================
+
+020h.	11/30/99 nprogs/viewfax/*
+
+018a1a.	12/1/99	gempak/source/programs/gui/nmap2/nmap_dcatg.c, nmap_dsrc.c,
+					nmap_mdl.c, nmap_mtbl.c, nmap_mtbl.h
+		gempak/tables/nmap/dcatg.nmap2, dsrc.nmap2
+
+010a2x.	12/15/99 gempak/tables/config/data.tbl, data.tbl.NON_Y2K, data.tbl.Y2K
+
+t176.	12/16/99 tables/nwx/stag.bull
+
+============================== Patch 5.4.3.x ===============================
+
+006e.	12/30/99 gempak/maps/swapped/*
+
+021a3n. 01/04/00 gempak/source/programs/gui/nmap2/vgf/*
+		 nprogs/nmap/source/vgf/*
+
+		 (Note that the vgf code has been moved to a
+		 new library: gempak/source/nmaplib/pgen)
+
+010a3e.	1/7/00	gempak/source/cgemlib/cvg/cvgctddel.c
+
+021a3r.	1/13/00	nprogs/nmap/source/nmap_vtbl.h
+		gempak/source/programs/gui/nmap2/nmap_vtbl.h
+
+018a2b.	1/19/00	gempak/source/driver/active/xw/xpgrest.c
+
+============================== Patch 5.4.3.y ===============================
+
+008dd.	2/7/00	gempak/maps/meosuo.ncp
+		gempak/maps/ascii/ascmeosuo.ncp
+
+020j.	2/11/00	doc/Prog_guide/shared/tools/checkSrc.sh
+
+007y.	2/14/00	nprogs/ntrans/source/xmexpo.c
+
+021a3x.	2/18/00	gempak/tables/nmap/outlook.tbl
+
+007bb.	2/18/00	gempak/source/driver/active/vg/hrtxsy.f
+		gempak/source/driver/active/gn/hrtxsy.f
+
+021a4a.	2/29/00 gempak/source/cgemlib/cds/cdsccfp.c
+
+010a4a.	3/2/00	gempak/source/programs/util/spctxt/spcwtch.h
+
+011nn.	3/6/00	gempak/source/programs/na/nagrib/nagss2.f, nagsub.f
+
+021a4f.	3/13/00	gempak/include/nmap_vtbl.h
+
+018a2z.	3/13/00	gempak/source/programs/gui/nmap2/nmap_vgfw.c, nmap_wwnw.c
+
+

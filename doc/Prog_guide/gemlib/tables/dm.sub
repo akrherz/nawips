@@ -1,0 +1,112 @@
+#------------------------------------------------------------------------
+# dm.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+#------------------------------------------------------------------------
+#
+# NOTE: Some of the DM_ subroutines are called only by other DM_ 
+#	subroutines.  They are not intended to be called by
+#       programmers at large.  Therefore, many of the DM library
+#       routines do not appear in the Programmer's Guide.
+#
+#------------------------------------------------------------------------
+
+# dmafre.f	- 
+# dmaspc.f	- 
+dmbegs.f	- Reset Search
+# dmchkf.f	- 
+dmchng.f	- Change File Access
+# dmclop.f	- 
+dmclos.f	- Close DM File
+# dmcnst.f	- 
+# dmcond.f	- 
+dmcret.f	- Create DM File
+dmcsrc.f	- Set Conditional Search
+dmdall.f	- Delete By Row Or Column
+dmdclh.f	- Delete Column Header
+dmdcsr.f	- Delete Conditional Search
+dmddat.f	- Delete Data
+# dmdelt.f	- 
+dmdpsr.f	- Delete Primary Search
+dmdrwh.f	- Delete Row Header
+# dmefre.f	- 
+# dmespc.f	- 
+dmfkey.f	- Determine Key Locations
+# dmfspc.f	- 
+dmfwrt.f	- Flush Write Buffers
+# dmgetf.f	- 
+# dmggpm.f	- 
+# dmgspc.f	- 
+dmgtim.f	- Return List Of Times
+dmkeys.f	- Return Row And Column Keys
+dmlssf.f	- Find Surface Station Keywords
+dmlstn.f	- Locate Station Identifier
+dmltim.f	- Locate Date/Time
+dmnext.f	- Find Next Row And Column
+# dmnxtc.f	- 
+dmopen.f	- Open DM File
+# dmpack.f	- 
+dmpart.f	- Return Part Information
+# dmpkgd.f	- 
+dmpnam.f	- Return Part Names
+dmpsrc.f	- Set Primary Search
+dmqdat.f	- Check For Data
+# dmrch4.f	- 
+dmrclh.f	- Read Column Header
+# dmrdmg.f	- 
+dmrdtc.f	- Read Character Data
+dmrdti.f	- Read Integer Data
+dmrdtr.f	- Read Real Data
+dmrfhc.f	- Read Character File Header
+dmrfhi.f	- Read Integer File Header
+dmrfhr.f	- Read Real File Header
+# dmrfil.f	- 
+# dmrflt.f	- 
+# dmrhda.f	- 
+# dmrint.f	- 
+# dmrkey.f	- 
+# dmrlbl.f	- 
+# dmrpkg.f	- 
+# dmrprt.f	- 
+# dmrrec.f	- 
+dmrrwh.f	- Read Row Header
+# dmrstr.f	- 
+dmsgpk.f	- Save Packing Parameters
+dmsrch.f	- Find Particular Row Or Column
+# dmunpk.f	- 
+# dmwch4.f	- 
+dmwclh.f	- Write Column Header
+# dmwdmg.f	- 
+dmwdtc.f	- Write Character Data
+dmwdti.f	- Write Integer Data
+dmwdtr.f	- Write Real Data
+dmwfhc.f	- Write Character File Header
+dmwfhi.f	- Write Integer File Header
+dmwfhr.f	- Write Real File Header
+# dmwfil.f	- 
+# dmwflt.f	- 
+# dmwhda.f	- 
+# dmwint.f	- 
+# dmwkey.f	- 
+# dmwlbl.f	- 
+# dmword.f	- 
+# dmwpkg.f	- 
+# dmwprt.f	- 
+dmwrwh.f	- Write Row Header
+# dmwspc.f	- 
+# dmwstr.f	- 
+# testdm.f	- DM Library Test Program
+
+#------------------------------------------------------------------------

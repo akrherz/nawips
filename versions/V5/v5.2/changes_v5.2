@@ -1,0 +1,2295 @@
+
+                        GEMPAK 5.2 DV CHANGE LOG
+
+
+
+001a.	04/22/93 	source/programs/gd/gdcross/gdcross.f
+			include/dgcmn.cmn
+			error/dg.err
+			help/gparm.hl2
+			source/gemlib/dg/dg.err
+			source/gemlib/dg/dginit.f
+			source/gemlib/dg/dgdriv.f
+			New: source/gemlib/dg/dgorgn.f
+			     source/gemlib/dv/dvmsfc.f
+
+000a.	05/10/93 	source/.../*.prm --> parm
+			source/.../*.err --> error
+			source/gemlib/.../*.txt --> txt/gemlib
+			source/programs/.../*.txt --> txt/programs
+
+			source/programs/gp/gpaoim/* --> non_op
+			source/programs/gp/gpout/* --> non_op
+
+000b.	05/10/93 	pdf/*
+			help/*.hlp
+
+002a.	05/11/93 	include/gemprm.*
+			include/gemprm.hp
+			buildhp/*
+			install/login_hp
+
+001b.	05/22/93 	source/gemlib/dg/dgchck.f
+			source/gemlib/dg/dgprcp.f
+			New: source/gemlib/dg/dgprdr.f
+			     source/gemlib/dg/dgprft.f
+
+002b.	06/01/93 	source/gemlib/dm/dmopen.f
+			source/gemlib/dm/dmrlbl.f
+
+==================Moved code to AS1 and compiled 06/25/93=======================
+
+003a.	06/28/93 	source/programs/sf/sfgram/sfgram.f
+
+004a.	07/07/93 	error/gemplt.err
+			error/nt.err
+			help/notae.hlp
+			include/error.prm
+			include/funccode.prm
+			source/gemlib/nt/ntdynm.f
+			source/gemlib/nt/testnt.f
+			source/gplt/main/gplt.f
+			source/device/main/device.f
+			source/testprog/atest.f
+			New: source/gemlib/nt/ntgtpt.f
+			     source/appl/control/ggtpnt.f
+			     source/gplt/control/ggtpnt.f
+			     source/gplt/device/control/dgtpnt.f
+			     source/device/control/dgtpnt.f
+			     source/driver/gempak51/xw/hgtpnt.f
+			     source/driver/gempak51/xw/xgtpnt.c
+
+000c.	07/07/93 	tables/pcconv.tbl
+			tables/sf51.pack
+			source/gemlib/ra/radecd.f
+			source/gemlib/ra/raptnd.f
+			source/programs/sf/sfrawd/sfrawd.f
+
+005a.	07/07/93 	build*/driver_compile
+			build*/driver_link
+			New: build*/nc_compile
+			     build*/nc_link
+			     source/driver/gempak51/nc/*
+			     source/driver/gempak51/nc/ibm/*
+
+005b.	07/07/93 	build*/driver_compile
+			build*/driver_link
+			New: build*/vc_compile
+			     build*/vc_link
+			     source/driver/gempak51/vc/*
+			     source/driver/gempak51/vc/ibm/*
+
+006a.	07/08/93 	source/gemlib/dg/dgpfun.f
+			source/gemlib/dg/dgstlv.f
+			source/gemlib/lv/lvcord.f
+			source/gemlib/lv/lvinpt.f
+			source/gemlib/nt/ntdynm.f
+			source/gemlib/nt/nthelp.f
+			source/gemlib/nt/ntlist.f
+			source/gemlib/st/stabbr.f
+			source/gemlib/st/stlcuc.f
+			source/gemlib/st/stuclc.f
+			source/programs/sn/snprof/snprof.f
+			source/programs/gd/gdprof/gdpdtv.f
+			source/programs/gd/gdcross/gdxdtv.f
+
+001c.	07/08/93 	help/gparm.hl2
+			include/dgcmn.cmn
+			source/gemlib/dg/dgchck.f
+			source/gemlib/dg/dgdriv.f
+			source/gemlib/dg/dggetl.f
+			source/gemlib/dg/dggets.f
+			source/gemlib/dg/dggetv.f
+			source/gemlib/dg/dggobs.f
+			source/gemlib/dg/dggrid.f
+			source/gemlib/dg/dggtvl.f
+			source/gemlib/dg/dginit.f
+			source/gemlib/dg/dgnxts.f
+			source/gemlib/dg/dgnxtv.f
+			source/gemlib/dg/dgsare.f
+			source/gemlib/dg/dgtops.f
+			source/gemlib/dg/dgtopv.f
+			source/gemlib/dg/dgupdh.f
+			source/gemlib/dg/dgvecr.f
+			source/gemlib/dv/dvage.f
+			source/gemlib/dv/dvgeo.f
+			source/gemlib/dv/dvisal.f
+			source/gemlib/dv/dvpvor.f
+			source/gemlib/dv/dvthrm.f
+			New: source/gemlib/dg/dgfnds.f
+			     source/gemlib/dg/dgfndv.f
+			     source/gemlib/dv/dvcros.f
+			     source/gemlib/dv/dvdvdx.f
+			     source/gemlib/dv/dvdvdy.f
+			     source/gemlib/dv/dvkcrs.f
+			     source/gemlib/dv/dvvasv.f
+
+006b.	07/08/93 	source/gemlib/tg/tgctoi.f
+
+007a.	07/08/93 	help/skip.hl2
+			source/gemlib/in/inskip.f
+			source/programs/gd/gdwind/gdwind.f
+			source/programs/gd/gdwind/gdwpnt.f
+			source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdmap/gdmpnt.f
+
+000d.	07/13/93 	source/gplt/contour/ccoeff.f
+
+001d.	07/13/93 	source/gemlib/dg/dgdriv.f
+			help/gparm.hl2
+			parm/gdcntr.prm
+			txt/gdcntr.txt
+			pdf/gemglb.pdf
+			source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdcntr/gdninp.f
+			source/programs/gd/gdcntr/gdnupd.f
+			New: help/hilo.hl1
+			     help/hilo.hl2
+			     help/hlsym.hl1
+			     help/hlsym.hl2
+			     source/gemlib/dc/dchilo.f
+			     source/gemlib/df/dfhigh.f
+			     source/gemlib/df/dfhilo.f
+			     source/gemlib/df/dflows.f
+			     source/gemlib/in/inhilo.f
+			     source/gemlib/in/inhlsy.f
+			     source/programs/gd/gdcntr/gdnhlo.f
+
+008a.	07/13/93 	source/syslib/unix/cgetmq.c
+			source/syslib/unix/ibm/cgetmq.c
+
+000e.	03/13/93 	source/gemlib/gr/grsubx.f
+
+001e.	07/27/93 	source/gemlib/df/dfddt.f
+			source/gemlib/df/dfmass.f
+			source/gemlib/df/dfstab.f
+			source/gemlib/dv/dvage.f
+			source/gemlib/dv/dvgeo.f
+			source/gemlib/dv/dvisal.f
+			source/gemlib/dv/dvltrn.f
+			source/gemlib/dv/dvmdiv.f
+			source/gemlib/dv/dvmsdv.f
+			source/gemlib/dv/dvpvor.f
+			source/gemlib/dv/dvrad.f
+			source/gemlib/dv/dvrich.f
+			source/gemlib/dv/dvthrm.f
+			source/gemlib/dv/dvtng.f
+			source/gemlib/dg/dgarea.f
+			source/gemlib/dg/dgchck.f
+			source/gemlib/dg/dgdwpt.f
+			source/gemlib/dg/dgfndv.f
+			source/gemlib/dg/dggobs.f
+			source/gemlib/dg/dggrdr.f
+			source/gemlib/dg/dggrid.f
+			source/gemlib/dg/dggtmp.f
+			source/gemlib/dg/dgnxts.f
+			source/gemlib/dg/dgnxtv.f
+			source/gemlib/dg/dgofil.f
+			source/gemlib/dg/dgprcp.f
+			source/gemlib/dg/dgprdr.f
+			source/gemlib/dg/dgprft.f
+			source/gemlib/dg/dgrgrd.f
+			source/gemlib/dg/dgtemp.f
+			source/gemlib/dg/dgsare.f
+			source/gemlib/dg/dgupdh.f
+			source/gemlib/dg/dgupdv.f
+			source/gemlib/dg/dgvcrd.f
+			source/gemlib/dg/dgvecr.f
+			source/gemlib/dg/testdg.f
+			New: source/gemlib/dg/dgmhdr.f
+			     source/gemlib/dg/dgupsg.f
+			     source/gemlib/dg/dgupvg.f
+
+000f.	08/04/93 	include/gemprm.*
+
+000d.	08/16/93 	source/gplt/contour/ccoeff.f (Undone)
+
+001f.	08/18/93 	include/dgcmn.cmn
+			source/gemlib/dg/dgdriv.f
+			source/gemlib/dg/dggets.f
+			source/gemlib/dg/dggetv.f
+			source/gemlib/dg/dggtvl.f
+			source/gemlib/dg/dginit.f
+			source/gemlib/dg/dgpfun.f
+			source/gemlib/dg/dgtops.f
+			source/gemlib/dg/dgtopv.f
+			source/gemlib/dv/dvgeo.f
+			source/gemlib/dv/dvisal.f
+			source/gemlib/dv/dvrad.f
+			source/gemlib/dv/dvthrm.f
+			source/gemlib/dv/dvtng.f
+
+007b.	08/18/93 	source/gemlib/in/inskip.f
+
+004b.	08/18/93 	help/refvec.hl1
+			help/refvec.hl2
+			parm/gdcross.prm
+			parm/gdprof.prm
+			parm/gdwind.prm
+			source/gemlib/in/inrvec.f
+			source/programs/gd/gdcross/gdcross.f
+			source/programs/gd/gdcross/gdxinp.f
+			source/programs/gd/gdcross/gdxpuw.f
+			source/programs/gd/gdcross/gdxupd.f
+			source/programs/gd/gdprof/gdprof.f
+			source/programs/gd/gdprof/gdpinp.f
+			source/programs/gd/gdprof/gdpuvp.f
+			source/programs/gd/gdprof/gdpupd.f
+			source/programs/gd/gdwind/gdwind.f
+			source/programs/gd/gdwind/gdwinp.f
+			source/programs/gd/gdwind/gdwupd.f
+
+004c.	08/18/93 	source/gemlib/gr/grsscl.f
+			source/gemlib/gr/grvscl.f
+			source/gemlib/gr/testgr.f
+			source/gemlib/in/inscal.f
+			source/programs/gd/gdcntr/gdnlev.f
+			source/programs/gd/gdcross/gdxlev.f
+			source/programs/gd/gdlist/gdlist.f
+			source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdprof/gdpxax.f
+			source/programs/gd/gdtser/gdtyax.f
+
+007c.	08/18/93 	source/gemlib/gr/grrarg.f
+			source/programs/gd/gdcntr/gdcntr.f
+
+004b1.	08/19/93 	source/gemlib/in/inrvec.f
+
+004c1.	08/19/93 	source/programs/gd/gdwind/gdwind.f
+
+000g.	08/23/93 	source/gemlib/dg/dgvecr.f
+
+010a.	08/30/93 	source/gemlib/ss/sswait.f
+			source/gemlib/ss/csleep.c
+			source/gemlib/ss/ibm/csleep.c
+
+009a.	09/03/93 	build*/gemlib_compile
+			build*/programs_compile
+			build*/programs_link
+			pdf/gemglb.pdf
+			tables/grdnav.tbl
+			New: error/nagrib.err
+			     help/gbfile.hl1
+			     help/gbfile.hl2
+			     help/indxfl.hl1
+			     help/indxfl.hl2
+			     parm/nagrib.prm
+			     txt/programs/nagrib.txt
+			     build*/na_compile
+			     build*/na_link
+			     source/gemlib/da/*
+			     source/gemlib/gb/*
+			     source/gemlib/gb/ibm/*
+			     source/gemlib/gr/grcnav.f
+			     source/programs/na/nagrib/*
+			     tables/grib1parm.tbl
+			     tables/grib1vcrd.tbl
+
+003b.	09/03/93 	source/gemlib/dm/dmlssf.f
+			source/gemlib/dm/dmlstn.f
+			source/gemlib/dm/testdm.f
+			source/gemlib/lc/lcfloc.f
+			source/gemlib/lc/lcfstn.f
+			source/gemlib/lc/lcsare.f
+			source/gemlib/lc/testlc.f
+			source/gemlib/pc/pccmn.cmn
+			source/gemlib/pc/testpc.f
+			source/gemlib/ra/dcsurf.for
+			source/gemlib/ra/ratmst.f
+			source/gemlib/ra/testra.f
+			source/gemlib/ru/rustms.f
+			source/gemlib/ru/rutmst.f
+			source/gemlib/sf/sfcmn.cmn
+			source/gemlib/sf/sfastn.f
+			source/gemlib/sf/sfcclf.f
+			source/gemlib/sf/sfcref.f
+			source/gemlib/sf/sfcsdf.f
+			source/gemlib/sf/sfcstn.f
+			source/gemlib/sf/sfdstn.f
+			source/gemlib/sf/sffstn.f
+			source/gemlib/sf/sfofil.f
+			source/gemlib/sf/sfqstn.f
+			source/gemlib/sf/sfsnxt.f
+			source/gemlib/sf/sfsstn.f
+			source/gemlib/sf/sfstid.f
+			source/gemlib/sf/sfstnf.f
+			source/gemlib/sf/sftstn.f
+			source/gemlib/sf/sfustn.f
+			source/gemlib/sf/sfwsdd.f
+			source/gemlib/sf/testsf.f
+			source/gemlib/sn/sncmn.cmn
+			source/gemlib/sn/snastn.f
+			source/gemlib/sn/sncref.f
+			source/gemlib/sn/sncrfp.f
+			source/gemlib/sn/sncrua.f
+			source/gemlib/sn/sncstn.f
+			source/gemlib/sn/sndstn.f
+			source/gemlib/sn/snfstn.f
+			source/gemlib/sn/snofil.f
+			source/gemlib/sn/snqstn.f
+			source/gemlib/sn/snsnxt.f
+			source/gemlib/sn/snsstn.f
+			source/gemlib/sn/snstid.f
+			source/gemlib/sn/snstim.f
+			source/gemlib/sn/snstnf.f
+			source/gemlib/sn/sntstn.f
+			source/gemlib/sn/snustn.f
+			source/gemlib/sn/testsn.f
+			source/gemlib/tb/tbrstn.f
+			source/gemlib/tb/testtb.f
+			source/programs/sf/sfcfil/sfcfil.f
+			source/programs/sf/sfcfil/sffsfl.f
+			source/programs/sf/sfedit/sfestn.f
+			source/programs/sf/sfl604/sfl6pr.f
+			source/programs/sf/sflist/sfllis.f
+			source/programs/sf/sflist/sflprc.f
+			source/programs/sf/sfmod/sfmod.f
+			source/programs/sf/sfrawd/sfrawd.f
+			source/programs/sf/sfrawd/vms/sfrawd.f
+			source/programs/sf/sfrssd/sfrssb.f
+			source/programs/sf/sfstns/sfstns.f
+			source/programs/sn/sncfil/sncfil.f
+			source/programs/sn/sncfil/snfsfl.f
+			source/programs/sn/sncross/snssst.f
+			source/programs/sn/sncross/snsstm.f
+			source/programs/sn/snedit/snedit.f
+			source/programs/sn/snhodo/snhdta.f
+			source/programs/sn/snlist/snldta.f
+			source/programs/sn/snlist/snlpdt.f
+			source/programs/sn/snlist/snlwst.f
+			source/programs/sn/snmod/snodat.f
+			source/programs/sn/snprof/snppst.f
+			source/programs/sn/snstns/snstns.f
+			source/programs/sn/sntser/sntdta.f
+			source/programs/sn/sntser/sntser.f
+			txt/gemlib/sflib.txt
+			txt/gemlib/snlib.txt
+
+003c.	09/03/93 	source/programs/sf/sflist/sflprm.f
+			source/programs/sf/sfmap/sfmprm.f
+			source/programs/sn/snmap/snmap.f
+
+000i.	09/03/93 	source/programs/sf/sfmap/sfmopt.f
+
+007d.	09/06/93 	build*/gd_compile
+			build*/gd_link
+			New: error/gdplot.err
+			     parm/gdplot.prm
+			     txt/programs/gdplot.txt
+			     source/programs/gd/gdplot/*
+
+000j.	09/06/93 	source/gemlib/gr/grclvl.f
+			source/gemlib/in/incint.f
+			source/gemlib/in/testin.f
+			source/programs/gd/gdcntr/gdnlev.f
+			source/programs/gd/gdcross/gdxlev.f
+			source/programs/gd/gdplot/gdnlev.f
+			source/programs/sn/sncross/snslev.f
+
+000k.	09/06/93 	source/gemlib/tg/tgiftm.f
+			source/gemlib/tg/tgcftm.f
+
+000l.	09/06/93 	error/tg.err
+			source/gemlib/tg/testtg.f
+			New: source/gemlib/tg/tgfind.f
+
+000m.	09/06/93 	New: source/gemlib/st/stpelt.f
+
+000n.	09/06/93 	source/gemlib/gg/ggwstr.f
+
+007e.	09/06/93 	pdf/gemglb.pdf
+			parm/gdcntr.prm
+			parm/gdplot.prm
+			txt/programs/gdcntr.txt
+			txt/programs/gdplot.txt
+			source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdcntr/gdninp.f
+			source/programs/gd/gdcntr/gdnupd.f
+			source/programs/gd/gdcross/gdcross.f
+			source/programs/gd/gdcross/gdxinp.f
+			source/programs/gd/gdcross/gdxupd.f
+			source/programs/gd/gdplot/gdninp.f
+			source/programs/gd/gdplot/gdnupd.f
+			source/programs/gd/gdplot/gdplot.f
+			source/programs/sn/sncross/sncross.f
+			source/programs/sn/sncross/snsinp.f
+			source/programs/sn/sncross/snsupd.f
+			source/gemlib/in/testin.f
+			source/gemlib/gg/testgg.f
+			New: source/gemlib/in/incbar.f
+			     source/gemlib/gg/ggcbar.f
+			     help/clrbar.hl1
+			     help/clrbar.hl2
+
+000o.	09/06/93 	source/gemlib/ss/ssgtim.f
+			New: source/gemlib/ss/cfdate.c
+			     source/gemlib/ss/ibm/cfdate.c
+
+000i.	09/09/93 	source/programs/sf/sfmap/sfmopt.f (Undone)
+
+003c.	09/09/93 	source/programs/sf/sflist/sflprm.f (Undone)
+			source/programs/sf/sfmap/sfmprm.f (Undone)
+			source/programs/sn/snmap/snmap.f (Undone)
+
+004d.	09/15/93 	include/gemprm.hp
+			include/gemprm.ibm
+			include/gemprm.sgi
+			include/gemprm.sun
+			include/gemprm.ultx
+			include/gemprm.vms
+			install/login.vms
+			install/login_hp
+			install/login_ibm
+			install/login_sgi
+			install/login_sun
+			install/login_ultx
+			source/gemlib/nt/ntrest.f
+
+004a1. 	09/15/93 	source/gemlib/nt/ntgtpt.f
+			source/appl/control/ggtpnt.f
+			source/gplt/control/ggtpnt.f
+			source/gplt/device/control/dgtpnt.f
+			source/gplt/main/gplt.f
+			source/device/control/dgtpnt.f
+			source/device/main/device.f
+			source/driver/gempak51/xw/hgtpnt.f
+			source/driver/gempak51/xw/ibm/xgtpnt.c
+			source/driver/gempak51/xw/xgtpnt.c
+			source/driver/gempak51/cgm/hgtpnt.f
+			source/driver/gempak51/gks/hgtpnt.f
+			source/driver/gempak51/gn/hgtpnt.f
+			source/driver/gempak51/nc/hgtpnt.f
+			source/driver/gempak51/ps/hgtpnt.f
+			source/driver/gempak51/ps1/hgtpnt.f
+			source/driver/gempak51/psc/hgtpnt.f
+			source/driver/gempak51/psp/hgtpnt.f
+			source/driver/gempak51/sg/hgtpnt.f
+			source/driver/gempak51/vc/hgtpnt.f
+
+000p.	09/15/93 	source/gemlib/fl/fldcre.f
+			source/gemlib/fl/flsunk.f
+			source/gemlib/fl/flswop.f
+
+004e.	09/15/93 	source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdcross/gdcross.f
+			source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdprof/gdprof.f
+			source/programs/gd/gdstream/gdstream.f
+			source/programs/gd/gdtser/gdtser.f
+			source/programs/gd/gdwind/gdwind.f
+			source/gemlib/gr/testgr.f
+			source/gemlib/gr/grtitl.f
+			New: source/gemlib/gr/grshrt.f
+
+000q.	09/15/93 	source/gemlib/nt/ntdynm.f
+
+003c1.	09/15/93 	source/gemlib/pc/testpc.f
+			source/gemlib/pc/pcdfls.f
+
+000r.	09/15/93 	source/gemlib/tg/testtg.f
+			source/gemlib/tg/tgvald.f
+
+010b.	09/15/93 	source/gplt/contour/ccoeff.f
+
+000s.	09/15/93 	source/programs/sn/sncross/snsxax.f
+
+007d1.  09/16/93 	source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdplot/gdbdsp.f
+			source/programs/gd/gdplot/gdbhlo.f
+			source/programs/gd/gdplot/gdbinp.f
+			source/programs/gd/gdplot/gdblev.f
+			source/programs/gd/gdplot/gdbpnt.f
+			source/programs/gd/gdplot/gdbtim.f
+			source/programs/gd/gdplot/gdbupd.f
+
+007d2.	09/16/93 	error/in.err
+
+008b.	09/17/93 	source/syslib/unix/*.f
+			source/syslib/unix/*.c
+			source/syslib/unix/*.h
+			source/syslib/unix/hp/*.f
+			source/syslib/unix/hp/*.c
+			source/syslib/unix/hp/*.h
+			source/syslib/unix/ibm/*.f
+			source/syslib/unix/ibm/*.c
+			source/syslib/unix/ibm/*.h
+			buildhp/syslib_compile
+			buildibm/syslib_compile
+
+000t.	09/17/93 	source/gemlib/dg/dgpfun.f
+
+000k1.	09/17/93 	source/gemlib/tg/tgcftm.f
+
+000n1.	09/22/93 	source/gemlib/gg/ggwstr.f
+
+000u.	09/24/93 	install/setup_links
+			install/remove_links
+			buildhp/*
+			buildsgi/*
+			buildsun/*
+			buildibm/*
+			buildultx/*
+
+000v.	09/29/93 	source/driver/gempak51/xw/xstext.c
+
+007e1.	10/06/93 	source/gemlib/gg/ggcbar.f
+			source/gemlib/gd/gdaxis.f
+			source/gemlib/gd/gdrgrd.f
+			source/gplt/contour/ccplot.f
+			New: source/gemlib/gr/grlabl.f
+			     source/gemlib/gr/grndcp.f
+			Deleted: source/gplt/contour/clabel.f
+				 source/gplt/graph/cndecp.f
+
+010c.	10/06/93 	source/driver/gempak51/xw/heplot.f
+
+010d.	10/06/93 	source/syslib/unix/crecv.c
+			source/syslib/unix/csend.c
+			source/syslib/unix/grecv.c
+			source/syslib/unix/gsend.c
+			source/syslib/unix/hp/crecv.c
+			source/syslib/unix/hp/csend.c
+			source/syslib/unix/hp/grecv.c
+			source/syslib/unix/hp/gsend.c
+			source/syslib/unix/ibm/crecv.c
+			source/syslib/unix/ibm/csend.c
+			source/syslib/unix/ibm/grecv.c
+			source/syslib/unix/ibm/gsend.c
+			source/syslib/unix/osf1/*
+			source/syslib/unix/ultx/*
+
+010e.	10/06/93 	buildosf1/*
+			include/gemprm.osf1
+
+011a.	10/08/93 	include/coltbl.cmn
+			tables/coltbl.tbl
+			source/driver/gempak51/xw/hscint.f
+
+010f.	10/12/93 	buildosf1 --> buildalph
+			source/syslib/unix/osf1 --> source/syslib/unix/alph
+			include/gemprm.osf1 --> include/gemprm.alph
+			include/gemprm.*
+			source/gemlib/dp/dpunmc.f
+			source/gemlib/dm/dmopen.f
+			source/gemlib/dm/dmrlft.f
+			source/gemlib/dm/dmrlbl.f
+			source/gemlib/dm/dmwflt.f
+
+007d3.	10/13/93 	source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdplot/gdbdsp.f
+			source/gemlib/st/stpelt.f
+
+011a1.	10/25/93 	tables/coltbl.tbl
+			source/device/color/ictabl.f
+			source/driver/gempak51/xw/hscint.f
+			source/driver/gempak51/nc/hscint.f
+			source/driver/gempak51/vc/hscint.f
+			source/driver/gempak51/gks/hscint.f
+			source/driver/gempak51/sg/hscint.f
+
+004b2.	10/25/93 	source/gemlib/in/inrvec.f
+			source/gemlib/in/testin.f
+			help/refvec.hl1
+			help/refvec.hl2
+			source/programs/gd/gdcross/gdxpuw.f
+			source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdprof/gdpuvp.f
+			source/programs/gd/gdwind/gdwind.f
+
+004e1.	10/25/93 	source/gemlib/gr/grtitl.f
+
+009a1.	10/25/93 	source/programs/na/nagrib/nagrib.f
+			source/gemlib/gb/gbbds.c
+			source/gemlib/gb/gbbms.c
+			source/gemlib/gb/gbgds.c
+			source/gemlib/gb/gbggds.c
+			source/gemlib/gb/gbgpbd.c
+			source/gemlib/gb/gbgubd.c
+			source/gemlib/gb/gbopen.c
+			source/gemlib/gb/gbutil.c
+			source/gemlib/gb/ibm/gbbds.c
+			source/gemlib/gb/ibm/gbbms.c
+			source/gemlib/gb/ibm/gbgds.c
+			source/gemlib/gb/ibm/gbggds.c
+			source/gemlib/gb/ibm/gbgpbd.c
+			source/gemlib/gb/ibm/gbgubd.c
+			source/gemlib/gb/ibm/gbopen.c
+			source/gemlib/gb/ibm/gbutil.c
+
+001f.	10/25/93 	source/gemlib/dg/dgdriv.f
+			source/gemlib/df/dfpois.f
+			source/gemlib/pd/pdslvp.f
+			error/pd.err
+
+007e2.	10/25/93 	source/gemlib/gg/ggcbar.f
+
+009a2.	10/25/93 	tables/grib1parm.tbl
+			tables/grib1vcrd.tbl
+
+007f.	10/25/93 	source/programs/gd/gdthgt/*
+			text/programs/gdthgt.txt
+			error/gdthgt.err
+			parm/gdthgt.prm
+			build*/gd_compile
+			build*/gd_link
+
+005c.	10/25/93 	build*/driver_compile
+			build*/driver_link
+			build*/gn_compile
+			build*/gn_link
+			build*/hp_compile
+			build*/hp_link
+			build*/nc_compile
+			build*/nc_link
+			build*/ps1_compile
+			build*/ps1_link
+			build*/ps_compile
+			build*/ps_link
+			build*/psc_compile
+			build*/psc_link
+			build*/psp_compile
+			build*/psp_link
+			build*/vc_compile
+			build*/vc_link
+			build*/vt_compile
+			build*/vt_link
+			build*/xw_compile
+			build*/xw_link
+			moved: gn;hp;nc;ps1;ps;psc;psp;vc;vt;xw drivers --> 
+						source/driver/active/
+			       gks;sg;ct;di;la;ln;mc;qm drivers -->
+						source/driver/old/
+
+000w.	10/26/93 	buildhp/*
+			source/gemlib/*/*linkhp
+			source/programs/*/*/*linkhp
+
+==============Delivered code to operational account and UNIDATA=================
+=================================10/27/93=======================================
+
+012a.	11/15/93 	include/gemprm.*
+			include/funccode.prm
+			source/gemlib/gg/ggsmap.f
+			source/gplt/main/gplt.f
+			source/gplt/transform/goeslm.f
+			source/gplt/transform/goesml.f
+			New: source/appl/satellite/gsatmc.f
+			     source/gemlib/gg/ggsmci.f
+			     source/gplt/satellite/gsatmc.f
+			     source/gplt/transform/mcidas/wisnav.f
+
+001b1.	11/15/93 	source/gemlib/dg/dgprft.f
+
+009a3-7.11/26/93 	source/gemlib/gb/*.c
+			source/gemlib/gb/*.h
+			source/gemlib/gb/ibm/*.c
+			source/gemlib/gb/ibm/*.h
+			source/programs/na/nagrib/*.f
+
+007c1.	11/26/93 	source/gemlib/gr/grrarg.f (Undone)
+			source/programs/gd/gdcntr/gdcntr.f (Undone)
+
+007g.	11/26/93 	source/gemlib/gr/grrobs.f
+			source/gemlib/gr/grsnav.f
+			source/gemlib/gr/grwobs.f
+			source/gemlib/dg/dggobs.f
+			source/gemlib/dg/dggrdr.f
+			source/gemlib/dg/dgprdr.f
+			source/gemlib/dg/dgrgrd.f
+			New: source/gemlib/dg/dgrdat.f
+			     source/gemlib/gr/gracol.f
+
+000x.	11/29/93 	source/programs/sf/sfmap/sfmap.f
+			source/programs/sn/snmap/snmap.f
+
+007g1.	12/01/93 	source/gemlib/gr/grsnav.f (Undone)
+			source/gemlib/gr/gracol.f
+			source/gemlib/dg/dginit.f
+			source/gemlib/dg/dgofil.f
+			source/gemlib/dg/dgrdat.f
+			include/dgcmn.cmn
+
+009a8.	12/08/93 	source/programs/na/nagrib/naghdr.f
+			tables/grib2parm.tbl
+
+009a9.	12/23/93 	source/programs/na/nagrib/nagrib.f
+			source/gemlib/gb/gbcmn.h
+			source/gemlib/gb/gbgaus.c
+			source/gemlib/gb/gbges.c
+			source/gemlib/gb/gbggds.c
+			source/gemlib/gb/gbgids.c
+			source/gemlib/gb/gbgpbd.c
+			source/gemlib/gb/gbgpds.c
+			source/gemlib/gb/gbgubd.c
+			source/gemlib/gb/gblamb.c
+			source/gemlib/gb/gbltln.c
+			source/gemlib/gb/gbmerc.c
+			source/gemlib/gb/gbpolr.c
+			source/gemlib/gb/ibm/gbcmn.h
+			source/gemlib/gb/ibm/gbgaus.c
+			source/gemlib/gb/ibm/gbges.c
+			source/gemlib/gb/ibm/gbggds.c
+			source/gemlib/gb/ibm/gbgids.c
+			source/gemlib/gb/ibm/gbgpbd.c
+			source/gemlib/gb/ibm/gbgpds.c
+			source/gemlib/gb/ibm/gbgubd.c
+			source/gemlib/gb/ibm/gblamb.c
+			source/gemlib/gb/ibm/gbltln.c
+			source/gemlib/gb/ibm/gbmerc.c
+			source/gemlib/gb/ibm/gbpolr.c
+			source/gemlib/na/nacmn.cmn
+			source/gemlib/na/nainit.f
+			source/gemlib/na/nalevl.f
+			source/gemlib/na/narhdr.f
+			source/gemlib/na/nartbl.f
+			tables/cntrgrib1.tbl
+			tables/vcrdgrib1.tbl
+			tables/wmogrib1.tbl
+			tables/wmogrib2.tbl
+			tables/nmcgrib1.tbl
+			tables/nmcgrib2.tbl
+			error/nagrib.err
+			build*/gemlib_compile
+
+011b.	12/23/93	include/funccode.prm
+			source/testprog/main/atest.f
+			source/gplt/main/gplt.f
+			source/device/main/device.f
+			New: source/appl/control/gsplot.f
+			     source/appl/control/gspixm.f
+			     source/appl/control/gepixm.f
+			     source/gplt/control/gsplot.f
+			     source/gplt/control/gspixm.f
+			     source/gplt/control/gepixm.f
+			     source/gplt/device/control/dsplot.f
+			     source/gplt/device/control/dspixm.f
+			     source/gplt/device/control/depixm.f
+			     source/device/control/dsplot.f
+			     source/device/control/dspixm.f
+			     source/device/control/depixm.f
+
+011c.	12/23/93	include/funccode.prm
+			source/testprog/main/atest.f
+			source/gplt/main/gplt.f
+			source/device/main/device.f
+			New: source/appl/control/gsctbl.f
+			     source/appl/control/gsflnm.f
+			     source/gplt/control/gsctbl.f
+			     source/gplt/control/gsflnm.f
+			     source/gplt/device/control/dsctbl.f
+			     source/gplt/device/control/dsflnm.f
+			     source/device/control/dsctbl.f
+			     source/device/control/dsflnm.f
+
+011d.	12/23/93	include/funccode.prm
+			source/testprog/main/atest.f
+			source/gplt/main/gplt.f
+			source/device/main/device.f
+			New: source/appl/control/gloopc.f
+			     source/gplt/control/gloopc.f
+			     source/gplt/device/control/dloopc.f
+			     source/device/control/dloopc.f
+
+011e.	12/23/93	include/funccode.prm
+			source/testprog/main/atest.f
+			source/gplt/main/gplt.f
+			source/device/main/device.f
+			New: source/appl/attribute/gshcat.f
+			     source/gplt/attribute/gshcat.f
+			     source/gplt/device/attribute/dshcat.f
+			     source/device/attribute/dshcat.f
+
+011f.	12/23/93 	build*/gpltdev_compile
+			build*/device_compile
+			include/funccode.prm
+			source/testprog/main/atest.f
+			source/gplt/main/gplt.f
+			source/device/main/device.f
+			New: source/appl/satellite/gsatim.f
+			     source/gplt/satellite/gsatim.f
+			     source/gplt/device/satellite/dsatim.f
+			     source/device/satellite/dsatim.f
+			     source/driver/active/xw/hsatim.f
+			     source/driver/active/xw/xsatim.c
+			     source/driver/active/xw/ibm/xsatim.c
+			     source/driver/active/*/hsatim.f
+
+007g2.	01/21/94 	source/gemlib/dg/dgofil.f
+
+011c1.	01/21/94	source/gplt/device/control/dsctbl.f
+			source/gplt/device/control/dsflnm.f
+			source/driver/active/nc/hopen.f
+			source/driver/active/nc/driver.cmn
+			source/driver/active/nc/mopen.c
+			source/driver/active/nc/nccmn.h
+			New: source/driver/active/nc/hsflnm.f
+			     source/driver/active/nc/hsctbl.f
+			     source/driver/active/gn/hsflnm.f
+			     source/driver/active/gn/hsctbl.f
+			     source/driver/active/hp/hsflnm.f
+			     source/driver/active/hp/hsctbl.f
+			     source/driver/active/ps/hsflnm.f
+			     source/driver/active/ps/hsctbl.f
+			     source/driver/active/ps1/hsflnm.f
+			     source/driver/active/ps1/hsctbl.f
+			     source/driver/active/psc/hsflnm.f
+			     source/driver/active/psc/hsctbl.f
+			     source/driver/active/psp/hsflnm.f
+			     source/driver/active/psp/hsctbl.f
+			     source/driver/active/vc/hsflnm.f
+			     source/driver/active/vc/hsctbl.f
+			     source/driver/active/vt/hsflnm.f
+			     source/driver/active/vt/hsctbl.f
+			     source/driver/active/xw/hsflnm.f
+			     source/driver/active/xw/hsctbl.f
+
+000y.	01/27/94 	source/device/access/dqdchr.f
+
+012b.	01/27/94 	source/gplt/coord/updazm.f
+			source/gplt/coord/updmap.f
+			source/gplt/transform/gazmlm.f
+			source/gplt/transform/gazmml.f
+			source/gplt/utility/gdrgrd.f
+
+009b.	01/27/94 	New: source/programs/gd/gdmod2/*
+			     prm/gdmod2.prm
+			     pdf/gdmod2.pdf
+
+000z.	01/28/94 	source/gemlib/er/erwmsg.f
+			New: source/gemlib/er/ermmsg.f
+
+005d.	01/28/94 	source/driver/active/nc/driver.cmn
+			source/driver/active/nc/hopen.f
+			source/driver/active/nc/mcirc.c
+			source/driver/active/nc/mclear.c
+			source/driver/active/nc/mclose.c
+			source/driver/active/nc/mfill.c
+			source/driver/active/nc/mheader.c
+			source/driver/active/nc/mline.c
+			source/driver/active/nc/mmesg.c
+			source/driver/active/nc/mopen.c
+			source/driver/active/nc/msclrtb.c
+			source/driver/active/nc/msflclr.c
+			source/driver/active/nc/mslnclr.c
+			source/driver/active/nc/mslnwid.c
+			source/driver/active/nc/mstext.c
+			source/driver/active/nc/mtext.c
+			source/driver/active/nc/mtitle.c
+			source/driver/active/nc/nccmn.h
+			source/driver/active/nc/nccod.h
+			source/driver/active/nc/ibm/driver.cmn
+			source/driver/active/nc/ibm/hopen.f
+			source/driver/active/nc/ibm/mcirc.c
+			source/driver/active/nc/ibm/mclear.c
+			source/driver/active/nc/ibm/mclose.c
+			source/driver/active/nc/ibm/mfill.c
+			source/driver/active/nc/ibm/mheader.c
+			source/driver/active/nc/ibm/mline.c
+			source/driver/active/nc/ibm/mmesg.c
+			source/driver/active/nc/ibm/mopen.c
+			source/driver/active/nc/ibm/msclrtb.c
+			source/driver/active/nc/ibm/msflclr.c
+			source/driver/active/nc/ibm/mslnc/ibm.c
+			source/driver/active/nc/ibm/mslnwid.c
+			source/driver/active/nc/ibm/mstext.c
+			source/driver/active/nc/ibm/mtext.c
+			source/driver/active/nc/ibm/mtitle.c
+			source/driver/active/nc/ibm/nccmn.h
+			source/driver/active/nc/ibm/nccod.h
+
+009a10.	01/31/94 	source/programs/na/nagrib/*.f
+			source/gemlib/gb/*
+			source/gemlib/gb/ibm/*
+			source/gemlib/na/*
+			tables/cntrgrib1.tbl
+			tables/nmcgrib1.tbl
+			tables/nmcgrib2.tbl
+			tables/vcrdgrib1.tbl
+			tables/wmogrib1.tbl
+			tables/wmogrib2.tbl
+			error/nagrib.err
+
+000x.	02/01/94 	source/programs/sf/sfmap/sfmap.f (Undone)
+			source/programs/sn/snmap/snmap.f (Undone)
+
+000n2.	02/03/94 	source/gemlib/gg/ggwstr.f
+
+004f.	02/07/94	error/nt.err
+			source/gemlib/nt/testnt.f
+			source/gemlib/nt/ntdynm.f
+			New: source/gemlib/nt/ntlctl.f
+
+005e.	02/07/94 	buildhp/gplt_compile
+			buildibm/gplt_compile
+			buildsgi/gplt_compile
+			buildsun/gplt_compile
+			New: source/gplt/access/alt/ginitp.f
+			     source/gplt/access/alt/gendp.f
+			
+012a1.	02/10/94 	source/gplt/transform/goeslm.f
+
+011f1.	02/10/94 	source/gemlib/gg/ggsmap.f
+			source/driver/active/xw/hsatim.f
+			source/driver/active/xw/xsatim.c
+			source/driver/active/xw/ibm/xsatim.c
+			New: source/gemlib/gg/ggssat.f
+
+005f.	02/10/94 	source/driver/active/xw/hclear.f
+			source/driver/active/xw/hscint.f
+			source/driver/active/xw/hscolr.f
+			source/driver/active/xw/hscrgb.f
+			source/driver/active/xw/xinitd.c
+			source/driver/active/xw/xscolr.c
+			source/driver/active/xw/xscrgb.c
+			source/driver/active/xw/xwcmn.h
+			source/driver/active/xw/ibm/xinitd.c
+			source/driver/active/xw/ibm/xscolr.c
+			source/driver/active/xw/ibm/xscrgb.c
+			source/driver/active/xw/ibm/xwcmn.h
+			New: source/driver/active/xw/xcaloc.c
+			     source/driver/active/xw/ibm/xcaloc.c
+
+007g3.	02/12/94 	source/gemlib/dg/dgofil.f
+			source/gemlib/dg/testdg.f
+			source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdcross/gdcross.f
+			source/programs/gd/gddiag/gddiag.f
+			source/programs/gd/gdlist/gdlist.f
+			source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdprof/gdprof.f
+			source/programs/gd/gdstat/gdstat.f
+			source/programs/gd/gdstream/gdstream.f
+			source/programs/gd/gdthgt/gdthgt.f
+			source/programs/gd/gdtser/gdtser.f
+			source/programs/gd/gdwind/gdwind.f
+
+000aa.	02/12/94 	source/programs/gd/gdprof/gdpgrf.f
+
+004g.	02/22/94	source/gemlib/fl/flinqr.f
+			source/gemlib/fl/fltopn.f
+			source/gemlib/fl/testfl.f
+			source/gemlib/nt/nthelp.f
+			source/gemlib/nt/ntrest.f
+			source/gemlib/nt/ntstrp.f
+			source/driver/active/nc/hsflnm.f
+			source/gplt/utility/gsmfil.f
+			source/programs/na/nagrib/nagcog.f
+			source/syslib/unix/gsproc.f
+			source/syslib/unix/alph/gsproc.f
+			source/syslib/unix/hp/gsproc.f
+			source/syslib/unix/ibm/gsproc.f
+			source/syslib/unix/ultx/gsproc.f
+
+011f2.	02/22/94	error/gg.err
+			source/gemlib/gg/ggsmap.f
+			source/gemlib/gg/ggssat.f
+			source/driver/active/xw/driver.cmn
+			source/driver/active/xw/hsatim.f
+			source/driver/active/xw/xsatim.c
+			source/driver/active/xw/xwcmn.h
+			source/driver/active/xw/ibm/xsatim.c
+			source/driver/active/xw/ibm/xwcmn.h
+			New: source/gemlib/gg/ggmaps.f
+			     source/driver/active/xw/satimg.h
+			     source/driver/active/xw/ibm/satimg.h
+
+====================Delivered code to operational account=======================
+=================================02/24/94=======================================
+
+012a2.	03/07/94	source/gplt/utility/gdrgrd.f
+
+000bb.	03/07/94	source/gemlib/fl/fldcre.f
+			source/gemlib/fl/fldopn.f
+			source/gemlib/fl/fldsop.f
+			source/gemlib/fl/flinqr.f
+			source/gemlib/fl/flsopn.f
+			source/gemlib/fl/flsunk.f
+			source/gemlib/fl/flswop.f
+			source/gemlib/fl/fltopn.f
+			source/gemlib/fl/testfl.f
+			source/gemlib/fl/fl/vms/fldopn.f
+			source/gemlib/fl/fl/vms/fldsop.f
+			source/gemlib/fl/fl/vms/flsopn.f
+			source/gemlib/fl/fl/vms/flswop.f
+
+011f3.	03/07/94	error/gg.err
+			source/gemlib/gg/ggssat.f
+			New: source/gemlib/gg/ggslmb.f
+			     source/gemlib/gg/ggsmrc.f
+			     source/gemlib/gg/ggsstr.f
+
+000cc.	03/09/94	source/gemlib/ss/ssenvr.f
+
+007g4.	03/11/94	source/gemlib/dg/testdg.f
+
+000d1.	03/15/94	source/gplt/contour/ccoeff.f
+
+011f4.	03/15/94	source/appl/satellite/gsatim.f
+			source/gplt/main/gplt.f
+			source/gplt/satellite/gsatim.f
+			source/gplt/device/satellite/dsatim.f
+			source/device/main/device.f
+			source/device/satellite/dsatim.f
+
+011b1.	03/16/94	include/funccode.prm
+			source/appl/control/genanm.f
+			source/appl/control/gstanm.f
+			source/gplt/main/gplt.f
+			source/gplt/control/genanm.f
+			source/gplt/control/gstanm.f
+			source/gplt/device/control/denanm.f
+			source/gplt/device/control/dstanm.f
+			source/device/main/device.f
+			source/device/control/denanm.f
+			source/device/control/dstanm.f
+			source/testprog/atest.f
+
+011e1.	03/16/94	include/funccode.prm
+			source/appl/attribute/gsdatt.f
+			source/gplt/main/gplt.f
+			source/gplt/attribute/gsdatt.f
+			source/gplt/device/attribute/dsdatt.f
+			source/device/main/device.f
+			source/device/attribute/dsdatt.f
+			source/testprog/atest.f
+
+000dd.	03/16/94	source/appl/access/gendp.f
+			source/appl/access/ginitp.f
+			source/appl/access/gqmode.f
+			source/appl/access/gsmode.f
+			source/appl/attribute/gqarrw.f
+			source/appl/attribute/gqbarb.f
+			source/appl/attribute/gqcntr.f
+			source/appl/attribute/gqctyp.f
+			source/appl/attribute/gqline.f
+			source/appl/attribute/gqlpat.f
+			source/appl/attribute/gqmrkr.f
+			source/appl/attribute/gqptnd.f
+			source/appl/attribute/gqpwth.f
+			source/appl/attribute/gqsky.f
+			source/appl/attribute/gqsysz.f
+			source/appl/attribute/gqtext.f
+			source/appl/attribute/gqwthr.f
+			source/appl/attribute/gsarrw.f
+			source/appl/attribute/gsbarb.f
+			source/appl/attribute/gscntr.f
+			source/appl/attribute/gsctyp.f
+			source/appl/attribute/gsdatt.f
+			source/appl/attribute/gsline.f
+			source/appl/attribute/gslpat.f
+			source/appl/attribute/gsmrkr.f
+			source/appl/attribute/gsptnd.f
+			source/appl/attribute/gspwth.f
+			source/appl/attribute/gssky.f
+			source/appl/attribute/gstext.f
+			source/appl/attribute/gstick.f
+			source/appl/attribute/gswthr.f
+			source/appl/bounds/gqbnd.f
+			source/appl/bounds/gqview.f
+			source/appl/bounds/gsview.f
+			source/appl/color/gqcolr.f
+			source/appl/color/gqcomp.f
+			source/appl/color/gqncol.f
+			source/appl/color/gschls.f
+			source/appl/color/gscint.f
+			source/appl/color/gscnam.f
+			source/appl/color/gscolr.f
+			source/appl/color/gscrgb.f
+			source/appl/contour/gcboxx.f
+			source/appl/contour/gcfill.f
+			source/appl/contour/gclgrn.f
+			source/appl/contour/gcspln.f
+			source/appl/control/gclear.f
+			source/appl/control/gclosp.f
+			source/appl/control/genanm.f
+			source/appl/control/geplot.f
+			source/appl/control/gflush.f
+			source/appl/control/ggtpnt.f
+			source/appl/control/gloopc.f
+			source/appl/control/gmesg.f
+			source/appl/control/goutp.f
+			source/appl/control/gqdev.f
+			source/appl/control/gsctbl.f
+			source/appl/control/gsdev.f
+			source/appl/control/gsflnm.f
+			source/appl/control/gsplot.f
+			source/appl/control/gstanm.f
+			source/appl/curve/gcurve.f
+			source/appl/curve/gcyevl.f
+			source/appl/graph/gaaxis.f
+			source/appl/graph/gdaxis.f
+			source/appl/graph/gqgmgn.f
+			source/appl/graph/gqgraf.f
+			source/appl/graph/gsgmgn.f
+			source/appl/graph/gsgraf.f
+			source/appl/grid/gqggrf.f
+			source/appl/grid/gqgmap.f
+			source/appl/grid/gqgprj.f
+			source/appl/grid/gsggrf.f
+			source/appl/grid/gsgmap.f
+			source/appl/grid/gsgprj.f
+			source/appl/map/gqmmap.f
+			source/appl/map/gqmmgn.f
+			source/appl/map/gqmprj.f
+			source/appl/map/gsmmap.f
+			source/appl/map/gsmmgn.f
+			source/appl/map/gsmprj.f
+			source/appl/plot/garrw.f
+			source/appl/plot/gbarb.f
+			source/appl/plot/gcircl.f
+			source/appl/plot/gctyp.f
+			source/appl/plot/gfill.f
+			source/appl/plot/gline.f
+			source/appl/plot/gmark.f
+			source/appl/plot/gptnd.f
+			source/appl/plot/gpwth.f
+			source/appl/plot/gsky.f
+			source/appl/plot/gtext.f
+			source/appl/plot/gwthr.f
+			source/appl/satellite/gcldht.f
+			source/appl/satellite/gqsatn.f
+			source/appl/satellite/gsatao.f
+			source/appl/satellite/gsatim.f
+			source/appl/satellite/gsatmc.f
+			source/appl/satellite/gsatnp.f
+			source/appl/save/grest.f
+			source/appl/save/gsave.f
+			source/appl/transform/gptvis.f
+			source/appl/transform/gtrans.f
+			source/appl/utility/gdrgrd.f
+			source/appl/utility/gdrmap.f
+			source/appl/utility/gqmfil.f
+			source/appl/utility/gsmfil.f
+			source/appl/utility/gstrml.f
+
+012a3.	03/17/94	source/gplt/satellite/gsatmc.f
+
+011f5.	03/22/94	source/driver/active/xw/xinitd.c
+			source/driver/active/xw/xsatim.c
+			source/driver/active/xw/xwcmn.h
+			source/driver/active/xw/satimg.h
+			source/driver/active/xw/ibm/xinitd.c
+			source/driver/active/xw/ibm/xsatim.c
+			source/driver/active/xw/ibm/xwcmn.h
+			source/driver/active/xw/ibm/satimg.h
+			New: tables/satimg.tbl
+			     source/driver/active/xw/xsattbl.c
+			     source/driver/active/xw/xsatdebug.c
+			     source/driver/active/xw/ibm/xsattbl.c
+			     source/driver/active/xw/ibm/xsatdebug.c
+
+011f6.	03/24/94	tables/satimg.tbl
+			source/driver/active/xw/xsattbl.c
+			source/driver/active/xw/ibm/xsattbl.c
+
+000ee.	03/29/94	source/programs/gd/gdcross/gdcross.f
+
+000ff.	03/30/94	source/programs/gd/gdedit/gdegdt.f
+
+000gg.	03/30/94	source/programs/gd/gdcfil/gdcfil.f
+			source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdcross/gdcross.f
+			source/programs/gd/gddelt/gddelt.f
+			source/programs/gd/gdinfo/gdinfo.f
+			source/programs/gd/gdlist/gdlist.f
+			source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdomeg/gdomeg.f
+			source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdstream/gdstream.f
+			source/programs/gd/gdthgt/gdthgt.f
+			source/programs/gd/gdwind/gdwind.f
+			source/programs/gp/gpcolor/gpcolor.f
+			source/programs/gp/gpmap/gpmap.f
+			source/programs/gp/gprest/gprest.f
+			source/programs/gp/gpsave/gpsave.f
+			source/programs/oa/oabsnd/oabsnd.f
+			source/programs/sf/sfdelt/sfdelt.f
+			source/programs/sf/sfedit/sfedit.f
+			source/programs/sf/sfgram/sfgram.f
+			source/programs/sf/sfl604/sfl604.f
+			source/programs/sf/sflist/sflist.f
+			source/programs/sf/sfmap/sfmap.f
+			source/programs/sf/sfrssd/sfrssb.f
+			source/programs/sn/sndelt/sndelt.f
+			source/programs/sn/snprof/snprof.f
+			source/programs/sn/snrawd/snrawd.f
+			source/programs/sn/sntser/sntser.f
+
+011f7.	04/01/94	source/driver/active/xw/xsattbl.c
+			source/driver/active/xw/ibm/xsattbl.c
+
+001g.	04/04/94	source/gemlib/dg/dgdriv.f
+			source/gemlib/dv/dvdvdx.f
+			source/gemlib/dv/dvdvdy.f
+			New: source/gemlib/dv/dvqvec.f
+			     source/gemlib/dv/dvqvcl.f
+
+003d.	04/04/94	source/tables/pcconv.tbl
+			source/tables/prmflg.tbl
+			source/gemlib/pc/pccmn.cmn
+			source/gemlib/pc/pcfunc.f
+			New: source/gemlib/pr/prtmwb.f
+
+000hh.	04/07/94	source/programs/sn/sncross/snsyax.f
+
+007d4.	04/11/94	source/programs/gd/gdplot/gdbdsp.f
+
+000ii.	04/11/94	source/gemlib/gr/grtitl.f
+
+000jj.	04/11/94	source/gemlib/ru/rumlvl.f
+
+000kk.	04/11/94	help/snparm.hl2
+			help/stndex.hl2
+
+003e.	04/13/94	source/programs/sn/snprof/snppst.f
+
+000ll.	04/19/94	source/gemlib/dv/dvqvec.f
+			source/gemlib/gg/ggcbar.f
+			source/gemlib/gg/ggssat.f
+			source/gemlib/gr/grshrt.f
+			source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdstream/gdstream.f
+			source/programs/sf/sfdelt/sfdelt.f
+			source/programs/sn/sncross/sncross.f
+
+000mm.	04/25/94	source/gemlib/pc/testpc.f
+
+005g.	04/26/94	source/gemlib/gg/ggsdev.f
+			source/driver/active/ncnew/*
+
+013a.	04/27/94	build/*
+			source/.../*link
+
+013b.	04/27/94	include/gemprm.*
+			New: source/gemlib/mv/AIX/*
+			     source/gemlib/mv/OSF1/*
+			     source/gemlib/mv/ULTRIX/*
+			     source/gemlib/st/AIX/*
+			     source/syslib/unix/AIX/*
+			     source/syslib/unix/HP-UX/*
+			     source/syslib/unix/IRIX/*
+			     source/syslib/unix/OSF1/*
+			     source/syslib/unix/SunOS/*
+			     source/syslib/unix/ULTRIX/*
+
+013c.	04/27/94	source/gemlib/da/dacmn.h
+			source/gemlib/gb/*.c
+			source/gemlib/gb/gbcmn.h
+			source/gemlib/mv/*.c
+			source/gemlib/ss/*.c
+			source/driver/active/ncnew/nccmn.h
+			source/driver/active/nc/nccmn.h
+			source/driver/active/nc/*.c
+			source/driver/active/vc/vccmn.h
+			source/driver/active/vc/*.c
+			source/driver/active/xw/xwcmn.h
+			source/driver/active/xw/*.c
+			New: include/gemprm.h
+			Deleted: source/gemlib/ss/ibm/*
+			         source/driver/active/nc/ibm/*
+			         source/driver/active/vc/ibm/*
+			         source/driver/active/xw/ibm/*
+
+000nn.	04/29/94	tables/vcrdgrib1.tbl
+
+000oo.	05/10/94	source/gemlib/lc/lcabnd.f
+
+001b2.	05/11/94	source/gemlib/dg/dgchck.f
+			source/gemlib/dg/dgprcp.f
+			source/gemlib/dg/dgprdr.f
+			source/gemlib/dg/dgprft.f
+			source/gemlib/gd/gdrdat.f
+			New: source/gemlib/pd/pdprcp.f
+			     source/gemlib/pd/pdprcr.f
+
+000pp1.	06/08/94	source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdcross/gdcross.f
+			source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdprof/gdprof.f
+			source/programs/gd/gdstream/gdstream.f
+			source/programs/gd/gdthgt/gdthgt.f
+			source/programs/gd/gdtser/gdtser.f
+			source/programs/gd/gdwind/gdwind.f
+			source/programs/gp/gpbox/gpbox.f
+			source/programs/gp/gpclear/gpclear.f
+			source/programs/gp/gpcolor/gpcolor.f
+			source/programs/gp/gpmap/gpmap.f
+			source/programs/gp/gprest/gprest.f
+			source/programs/gp/gpsave/gpsave.f
+			source/programs/sf/sfgram/sfgram.f
+			source/programs/sf/sfmap/sfmap.f
+			source/programs/sn/sncross/sncross.f
+			source/programs/sn/snhodo/snhodo.f
+			source/programs/sn/snmap/snmap.f
+			source/programs/sn/snprof/snprof.f
+			source/programs/sn/sntser/sntser.f
+
+000pp2.	06/08/94	source/programs/oa/oabsnd/oabsnd.f
+			source/programs/sn/snlist/snlist.f
+			source/programs/sn/snprof/snprof.f
+			source/programs/sn/sntser/sntser.f
+
+000qq.	06/08/94	source/gemlib/pc/pccing.f
+
+000pp3.	06/08/94	source/gemlib/st/stcrnm.f
+			source/gemlib/st/AIX/stcrnm.f
+
+000rr.	06/08/94	source/programs/sf/sfgram/sfgram.f
+
+000ss.	06/08/94	source/programs/sf/sfmap/sfmopt.f
+			source/programs/sn/snmap/snmopt.f
+
+000tt.	06/09/94	source/programs/gd/gdthgt/gdthgt.f
+
+005h.	06/09/94	source/driver/active/gn/*
+
+013d.	06/09/94	build/gn_link
+			build/hp_link
+			build/nc_link
+			build/ncnew_link
+			build/ps1_link
+			build/ps_link
+			build/psc_link
+			build/psp_link
+			build/vc_link
+			build/vt_link
+			build/xw_link
+
+011b2.	06/09/94	source/programs/device/attribute/dsdatt.f
+			source/programs/device/control/denanm.f
+			source/programs/device/control/dloopc.f
+			source/programs/device/control/dsplot.f
+			source/programs/device/control/dstanm.f
+			New: source/driver/active/gn/hsdatt.f
+			     source/driver/active/gn/henanm.f
+			     source/driver/active/gn/hloopc.f
+			     source/driver/active/gn/hsplot.f
+			     source/driver/active/gn/hstanm.f
+
+000pp4.	06/09/94	source/programs/gd/gdmap/gdmap.f
+			source/programs/gp/gpcolor/gpcolor.f
+			source/programs/sf/sfmap/sfmap.f
+			source/programs/sn/snmap/snmap.f
+
+004a2.	06/09/94	source/gemlib/nt/ntgtpt.f
+
+007h.	06/09/94	source/programs/gd/gdcross/gdxplt.f
+
+007i.	06/10/94	source/gplt/access/ginit.f
+
+014a.	06/15/94	include/gemprm.h
+			New: source/cgemlib/cfl/cflsopn.c
+			     source/cgemlib/css/cssenvr.c
+			     source/cgemlib/ctb/ctbrbul.c
+			     source/cgemlib/ctb/ctbrstn.c
+			     source/cgemlib/testclib/testclib.c
+			     include/geminc.h
+			     include/ctbcmn.h
+			     include/geminc.h
+
+005g1.	06/16/94	include/error.prm
+			include/gemprm.h
+			include/cgmcmn.h
+			error/gemplt.err
+			source/testprog/atest.f
+			source/driver/active/nc/*
+
+007g5.	06/21/94 	source/gemlib/dg/dgofil.f
+
+014b.	06/23/94	source/cgemlib/testclib/testclib.c
+			New: source/cgemlib/cst/cstsrch.c
+
+014c.	06/23/94	source/cgemlib/testclib/testclib.c
+			New: source/cgemlib/cst/cstunpr.c
+
+005f1.	06/24/94	source/driver/active/xw/xcaloc.c
+
+000uu.	07/09/94	source/device/color/ictabl.f
+
+005i.	07/12/94	source/driver/active/xw/*
+			New: tables/coltbl.xw
+
+000vv.	07/12/94	driver/active/nc/*.c
+			driver/active/vc/*.c
+			syslib/unix/AIX/*.c
+			syslib/unix/HPUX/*.c
+			syslib/unix/IRIX/*.c
+			syslib/unix/OSF1/*.c
+			syslib/unix/SunOS/*.c
+			syslib/unix/ULTRIX/*.c
+			gemlib/da/*.c
+			gemlib/gb/*.c
+			gemlib/mv/*.c
+			gemlib/mv/AIX/*.c
+			gemlib/ss/*.c
+			cgemlib/cfl/*.c
+			cgemlib/css/*.c
+			cgemlib/cst/*.c
+			cgemlib/ctb/*.c
+
+000ww.	07/12/94	source/gemlib/gg/ggsmap.f
+			source/gemlib/gg/ggmaps.f
+			source/gemlib/gg/testgg.f
+			source/appl/satellite/gqsatn.f
+			source/gplt/satellite/gqsatn.f
+			source/gplt/main/gplt.f
+			source/gplt/transform/goeslm.f
+			source/gplt/transform/goesml.f
+			source/testprog/atest.f
+			include/funccode.prm
+			build/gplt_compile
+			Deleted: source/gemlib/gg/ggsaoi.f
+				 source/appl/satellite/gsatao.f
+				 source/gplt/satellite/gsatao.f
+				 source/gplt/transform/aoips/*
+
+015a.	07/12/94	source/gemlib/gd/gddelt.f
+
+015b.	07/12/94	source/gemlib/gb/gbopen.c
+
+015c.	07/12/94	source/gemlib/st/stlcuc.f
+			source/gemlib/st/stuclc.f
+
+003f.	07/13/94	source/programs/sf/sfedit/*.f
+			error/sfedit.err
+
+014d.	07/14/94	source/cgemlib/testclib/testclib.c
+			New: source/cgemlib/cstlcuc.c
+			     source/cgemlib/cstuclc.c
+
+014e.	07/14/94	source/cgemlib/testclib/testclib.c
+			New: source/cgemlib/ctbrdtyp.c
+
+014f.	07/14/94	source/cgemlib/testclib/testclib.c
+			New: source/cgemlib/cflswop.c
+
+016a.   07/19/94	source/gemlib/ip/ipdynm.f, ipexit.f, ipidnt.f,
+					 ipinit.f, iplog.f,  ipmfil.f,
+					 ipresp.f, ipstr.f,  ipuloc.f,
+					 ipulog.f, ipustr.f, testip.f
+			source/gemlib/nt/ntdfts.f
+			New: source/gemlib/nt/ntlog.f
+			Deleted: source/gemlib/ip/taeblk.cmn
+				 source/gemlib/ip/tae/*.*
+
+016b.	07/19/94	source/programs/gd/gdcfil/gdcfil.f
+			source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdcross/gdcross.f
+			source/programs/gd/gddelt/gddelt.f
+			source/programs/gd/gddiag/gddiag.f
+			source/programs/gd/gdedit/gdedit.f
+			source/programs/gd/gdinfo/gdinfo.f
+			source/programs/gd/gdlist/gdlist.f
+			source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdmod/gdmod.f
+			source/programs/gd/gdmod2/gdmod2.f
+			source/programs/gd/gdomeg/gdomeg.f
+			source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdprof/gdprof.f
+			source/programs/gd/gdstat/gdstat.f
+			source/programs/gd/gdstream/gdstream.f
+			source/programs/gd/gdthgt/gdthgt.f
+			source/programs/gd/gdtser/gdtser.f
+			source/programs/gd/gdwind/gdwind.f
+			source/programs/gp/gparea/gparea.f
+			source/programs/gp/gpbox/gpbox.f
+			source/programs/gp/gpcolor/gpcolor.f
+			source/programs/gp/gpmap/gpmap.f
+			source/programs/gp/gprest/gprest.f
+			source/programs/gp/gpsave/gpsave.f
+			source/programs/na/nagrib/nagrib.f
+			source/programs/oa/oabox/oabox.f
+			source/programs/oa/oabsfc/oabsfc.f
+			source/programs/oa/oabsnd/oabsnd.f
+			source/programs/oa/oagrid/oagrid.f
+			source/programs/sf/sfcfil/sfcfil.f
+			source/programs/sf/sfdelt/sfdelt.f
+			source/programs/sf/sfedit/sfedit.f
+			source/programs/sf/sfgram/sfgram.f
+			source/programs/sf/sfl604/sfl604.f
+			source/programs/sf/sflist/sflist.f
+			source/programs/sf/sfmap/sfmap.f
+			source/programs/sf/sfmod/sfmod.f
+			source/programs/sf/sfrawd/sfrawd.f
+			source/programs/sf/sfrssb/sfrssb.f
+			source/programs/sf/sfstns/sfstns.f
+			source/programs/sn/sncfil/sncfil.f
+			source/programs/sn/sncross/sncross.f
+			source/programs/sn/sndelt/sndelt.f
+			source/programs/sn/snedit/snedit.f
+			source/programs/sn/snhodo/snhodo.f
+			source/programs/sn/snlist/snlist.f
+			source/programs/sn/snmap/snmap.f
+			source/programs/sn/snmod/snmod.f
+			source/programs/sn/snprof/snprof.f
+			source/programs/sn/snrawd/snrawd.f
+			source/programs/sn/snstns/snstns.f
+			Deleted: source/programs/gd/gdcfil/gdcupd.f
+				 source/programs/gd/gdcntr/gdnupd.f
+				 source/programs/gd/gdcross/gdxupd.f
+				 source/programs/gd/gddelt/gddupd.f
+				 source/programs/gd/gddiag/gdgupd.f
+				 source/programs/gd/gdedit/gdeupd.f
+				 source/programs/gd/gdinfo/gdiupd.f
+				 source/programs/gd/gdlist/gdlupd.f
+				 source/programs/gd/gdmap/gdmupd.f
+				 source/programs/gd/gdmod/gdoupd.f
+				 source/programs/gd/gdmod2/gdoupd.f
+				 source/programs/gd/gdomeg/gdaupd.f
+				 source/programs/gd/gdplot/gdbupd.f
+				 source/programs/gd/gdprof/gdpupd.f
+				 source/programs/gd/gdstat/gdyupd.f
+				 source/programs/gd/gdstream/gdsupd.f
+				 source/programs/gd/gdtser/gdtupd.f
+				 source/programs/gd/gdwind/gdwupd.f
+				 source/programs/gp/gparea/gpaupd.f
+				 source/programs/gp/gpbox/gpbupd.f
+				 source/programs/gp/gpcolor/gpcupd.f
+				 source/programs/gp/gpmap/gpmupd.f
+				 source/programs/gp/gprest/gprudp.f
+				 source/programs/gp/gpsave/gpvupd.f
+				 source/programs/na/nagrib/nagupd.f
+				 source/programs/oa/oabox/oabupd.f
+				 source/programs/oa/oabsfc/oacupd.f
+				 source/programs/oa/oabsnd/oanupd.f
+				 source/programs/oa/oagrid/oagupd.f
+				 source/programs/sf/sfcfil/sffupd.f
+				 source/programs/sf/sfdelt/sfdupd.f
+				 source/programs/sf/sfedit/sfeupd.f
+				 source/programs/sf/sfgram/sfxupd.f
+				 source/programs/sf/sfl604/sfl6up.f
+				 source/programs/sf/sflist/sflupd.f
+				 source/programs/sf/sfmap/sfmupd.f
+				 source/programs/sf/sfmod/sfcupd.f
+				 source/programs/sf/sfrawd/sfwupd.f
+				 source/programs/sf/sfrssb/sfbupd.f
+				 source/programs/sf/sfstns/sfsupd.f
+				 source/programs/sn/sncfil/snfupd.f
+				 source/programs/sn/sncross/snsupd.f
+				 source/programs/sn/sndelt/sndupd.f
+				 source/programs/sn/snedit/sneupd.f
+				 source/programs/sn/snhodo/snhupd.f
+				 source/programs/sn/snlist/snlupd.f
+				 source/programs/sn/snmap/sfmupd.f
+				 source/programs/sn/snmod/snoupd.f
+				 source/programs/sn/snprof/snpupd.f
+				 source/programs/sn/snrawd/sfwupd.f
+				 source/programs/sn/snstns/snnupd.f
+				 source/programs/sn/sntser/sntupd.f
+
+016c.	07/19/94	pdf/gemglb.pdf
+
+005j.	08/01/94	source/gemlib/gg/ggsdev.f
+			source/driver/active/nc/hsflnm.f
+
+004f1.	08/01/94	source/gemlib/nt/ntlctl.f
+
+000z1.  08/02/94	source/gemlib/er/ermmsg.f, tester.f
+
+000z2.	08/02/94	New: source/gemlib/er/erstat.f
+			     error/er.err
+			Modified: source/gemlib/er/tester.f
+				  source/gemlib/in/inbdta.f
+				  source/gemlib/er/erwmsg.f
+				  include/gmbdta.cmn
+
+000xx.	08/05/94	source/programs/gd/*.*
+			source/programs/gp/*.*
+			source/programs/na/*.*
+			source/programs/oa/*.*
+			source/programs/sf/*.*
+			source/programs/sn/*.*
+
+017a.   08/06/94	source/gemlib/gg/ggssat.f, ggmaps.f, testgg.f
+			error/gg.err
+
+017b.   08/06/94	source/gemlib/fl/fldopn.f fldsop.f flinqr.f,
+					 flrshr.f, flsopn.f, flswop.f,
+					 testfl.f
+			Documentation: source/gemlib/fl/flglun.f,
+					 flflun.f, flgnam.f
+
+011g.	08/11/94	source/gplt/control/gsflnm.f
+
+005k.	08/12/94	include/gemprm.h
+			source/programs/sf/sfmap/sfmap.f
+			source/programs/sn/snmap/snmap.f
+			source/programs/sn/snprof/snprof.f
+			New: source/driver/active/xw_new/*
+			     tables/dwell.tbl
+
+017c.	08/12/94	help/area.hl2
+			help/clrbar.hl2
+			help/colors.hl2
+			help/contur.hl2
+			help/cxstns.hl2
+			help/dattim.hl2
+			help/device.hl2
+			help/dtaarea.hl2
+			help/garea.hl2
+			help/gdattim.hl2
+			help/gparm.hl2
+			help/gpoint.hl2
+			help/grdarea.hl2
+			help/proj.hl2
+			help/ptype.hl2
+			help/sfparm.hl2
+			help/snparm.hl2
+			help/title.hl2
+			parm/gdthgt.prm
+
+011h.	08/12/94	source/testprog/atest.f
+			source/gplt/main/gplt.f
+			source/device/main/device.f
+			New: source/appl/plot/gtextc.f
+			     source/gplt/plot/gtextc.f
+			     source/gplt/plot/pltextc.f
+			     source/gplt/device/plot/dtextc.f
+			     source/device/plot/dtextc.f
+			     source/driver/active/xw/htextc.f
+			     source/driver/active/xw/xtextc.c
+			     source/driver/active/xw_new/htextc.f
+			     source/driver/active/xw_new/xtextc.c
+
+008c.	08/12/94	syslib/unix/*.[chf]
+			syslib/unix/AIX/ccheck.c (replaced w/ cgetmq.c)
+			syslib/unix/AIX/gemsys.h
+			build/syslib_compile
+
+017d.	08/13/94	build/gn_compile
+			build/gn_link
+			build/hp_compile
+			build/hp_link
+			build/nc_compile
+			build/nc_link
+			build/ps1_compile
+			build/ps1_link
+			build/ps_compile
+			build/ps_link
+			build/psc_compile
+			build/psc_link
+			build/psp_compile
+			build/psp_link
+			build/vc_compile
+			build/vc_link
+			build/vt_compile
+			build/vt_link
+			build/xw_compile
+			build/xw_link
+
+017e.	08/13/94	source/gemlib/fl/testfl.f
+			Deleted: source/gemlib/fl/flperr.f
+
+014g.	08/13/94	source/cgemlib/*/*.c
+
+007j.	08/16/94	source/programs/gd/gdmap/gdmlbl.f
+
+017f.	08/16/94	source/gemlib/gg/ggpanl.f
+			help/panel.hl2
+
+000yy.	08/16/94	source/programs/sn/snprof/snpstb.f
+
+003g.	08/16/94	source/programs/sf/sfmap/sfmplt.f
+
+017g.	08/16/94	source/gemlib/ps/pseqlv.f
+
+017h.	08/17/94	source/gemlib/gb/gbgubd.c
+			source/gemlib/gb/gbunpk.c
+
+017i.	08/17/94	source/gemlib/gb/gbbtoi.c
+			source/gemlib/gb/gbcmn.h
+
+017j.	08/18/94	source/gemlib/lc/lcabnd.f
+			source/gemlib/lc/lcfloc.f
+			source/gemlib/lc/lcfstn.f
+			source/gemlib/lc/testlc.f
+
+017k.	08/18/94	source/gemlib/ra/*
+			source/programs/sf/sfrawd/sfrawd.f
+			tables/sf52.pack
+
+003e1.	08/18/94	source/programs/sn/snprof/snppst.f
+
+001h.	08/18/94	source/gemlib/dg/dgdriv.f
+			source/gemlib/dg/dgchck.f
+			source/gemlib/dg/dggtmp.f
+			source/gemlib/dg/dgcdeg.f
+			New: source/gemlib/dg/dgcwbt.f
+			     source/gemlib/pd/pdtmwb.f
+			     source/gemlib/df/dftmwk.f
+			     source/gemlib/df/dfsm9s.f
+
+003j.	08/19/94	source/programs/sn/snmap/snmprm.f
+			Deleted: source/gemlib/pc/pcsacd.f
+
+================================================================================
+=======================COMET CHANGES 8/15-8/21/94===============================
+
+003h.	8/18/94		source/programs/sf/sfmap/sfmap.f
+			source/programs/sn/snmap/snmap.f
+			source/programs/sn/snprof/snprof.f
+
+003i.	8/18/94		source/programs/sn/snmap/snmdat.f
+			source/programs/sf/sfmap/sfmdat.f
+			source/programs/sn/snprof/snpdat.f
+
+000zz.	8/18/94		include/gemprm..AIX
+			include/gemprm.HPUX
+			include/gemprm.IRIX
+			include/gemprm.OSF1
+			include/gemprm.SunOS
+			include/gemprm.ULTRIX
+			include/gemprm.prm
+			include/gemprm.vms
+	
+000aaa.	8/18/94		source/gemlib/in/inscal.f
+
+000bbb.	8/18/94		source/gemlib/gg/ggsdev.f
+
+012c.	8/18/94		include/funccode.prm
+	  		source/gemlib/gg/ggssat.f
+			source/appl/satellite/gsatmg.f
+	  		source/gplt/main/gplt.f
+	  		source/gplt/satellite/gsatmg.f
+			source/driver/active/xw_new/xsatim.c
+
+000ccc.	8/19/94		help/gvcord.hl2
+
+018a.	8/19/94	  	source/programs/sf/sfmap/sfmap.f
+		  	source/programs/sn/snmap/snmap.f
+	  		source/programs/gd/gdwind/gdwind.f
+	
+005m.	8/19/94		source/driver/active/xw_new/hinitd.f 
+			source/driver/active/xw_new/hsflnm.f 
+			source/driver/active/xw_new/xopenw.c 
+			source/driver/active/xw_new/xscolr.c 
+			source/driver/active/xw_new/xselwin.c 
+			source/driver/active/xw_new/xxevnt.c 
+			source/driver/active/xw_new/xcaloc.c 
+
+000eee.	8/19/94		source/device/main/device.f 
+
+005o.	8/19/94		include/gemprm.h 
+			include/error.prm 
+
+011i.	8/19/94		source/gplt/control/gsflnm.f 
+
+005l.	8/20/94		error/tg.err
+			error/gemplt.err
+			error/gdcntr.err
+			error/gdwind.err
+
+016d.	8/20/94		source/programs/sf/sfrawd/sfrawd.f
+
+005n.	8/20/94		include/gemprm.h
+
+018b.	8/20/94		source/programs/gd/gdcntr/gdcntr.f
+			Removed:  source/programs/gd/gdcntr/gdnlev.f
+			New:  source/gemlib/in/inintc.f
+			New:  source/gemlib/gr/grnlev.f
+
+000ddd.	8/20/94		source/gemlib/gr/grvscl.f
+			source/gemlib/gr/grsscl.f
+		
+018c.	8/20/94		source/programs/gd/gdwind.f
+
+018d.	8/21/94		source/programs/gd/gdprof.f
+
+018e.	8/21/94		source/programs/gp/gpmap/gpmap.f
+
+018f.	8/21/94		source/programs/gd/gdstream/gdstream.f
+
+005p.	8/21/94 	source/driver/active/xw_new/satim.c
+		 	source/driver/active/xw_new/cross.h
+
+================================================================================
+
+017l.	08/24/94	source/gemlib/in/inskip.f
+			source/gemlib/in/testin.f
+			help/skip.hl2
+
+017m.	08/24/94	source/programs/gd/gdwind/gdwind.f
+			source/programs/gd/gdcross/gdxpuw.f
+			source/programs/gd/gdprof/gdpuvp.f
+			source/gemlib/gg/testgg.f
+			source/gemlib/in/testin.f
+			New: source/gemlib/gg/ggrvec.f
+
+011j.	08/24/94	source/programs/gp/gpclose/gpclose.f
+			source/programs/gp/gpclose/gpclose_link
+			build/gp_compile
+			New: source/programs/gp/gpclose/gpoinp.f
+			     parm/gpclose.prm
+			     pdf/gpclose.pdf
+			     txt/programs/gpclose.txt
+
+011k.	08/24/94	source/gplt/plot/gbarb.f
+			source/device/plot/dbarb.f
+
+017n.	08/24/94	source/gemlib/gr/testgr.f
+			New: source/gemlib/gr/grtlst.f
+
+017o.	08/25/94	source/gemlib/dc/dchilo.f (Undone)
+
+017p.	08/25/94	New: source/gemlib/st/stflst.f
+
+001i.	08/25/94	build/gd_compile
+			build/gd_link
+			New: source/programs/gd/gdvint/*
+			     error/gdvint.err
+			     help/gdvint.hlp
+			     pdf/gdvint.pdf
+			     parm/gdvint.prm
+
+005q.	08/25/94	source/driver/active/xw_new/*
+
+017q.	08/26/94	source/gemlib/fl/fldsop.f
+
+017r.	08/26/94	source/gemlib/gg/ggssat.f
+
+011h1.	08/26/94	source/testprog/atest.f
+			source/appl/plot/gtextc.f
+			source/gplt/plot/gtextc.f
+			source/gplt/plot/pltextc.f
+			source/gplt/device/plot/dtextc.f
+			source/device/plot/dtextc.f
+			source/driver/active/xw_new/htextc.f
+			source/driver/active/xw_new/xtextc.c
+
+005r.	08/26/94	source/driver/active/xw/* -->
+				 source/driver/old/xw/*
+			source/driver/active/xw_new/* -->
+				 source/driver/active/xw/*
+			build/xw_compile
+			build/xw_link
+
+001i1.	08/29/94	source/programs/gd/gdvint/vcmsht.f
+			source/programs/gd/gdvint/vgread.f
+
+017s.	08/29/94	source/gemlib/gg/ggssat.f
+			source/driver/active/xw/xsatim.f
+
+017t.	08/29/94	source/gemlib/gr/grtitl.f
+			source/gemlib/gr/testgr.f
+			New: source/gemlib/gr/grmttl.f
+
+017u.	08/29/94	source/gemlib/st/strmst.f
+			source/gemlib/st/testst.f
+
+017v.	08/29/94	source/gemlib/gg/ggwstr.f
+			source/driver/active/gn/htextc.f
+			source/driver/active/xw/htextc.f
+
+007k.	08/29/94	source/programs/gd/gdplot/gdbdsp.f
+
+007l.	08/29/94	source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdwind/gdwind.f
+			source/programs/gp/gpmap/gpmap.f
+			source/programs/gp/gpmap/gpmopt.f
+			source/programs/sf/sfmap/sfmap.f
+
+000fff.	08/29/94	source/programs/sn/snmap/snmap.f
+
+000ggg.	08/29/94	source/programs/sf/sfrssd/sfrssb.f
+
+017c1.	08/29/94	help/clrbar.hl1
+			help/clrbar.hl2
+			help/colors.hl2
+			help/contur.hl2
+			help/cxstns.hl2
+			help/garea.hl2
+			help/hilo.hl2
+			help/hlsym.hl2
+			help/proj.hl2
+			help/refvec.hl2
+			help/snparm.hl2
+			help/title.hl2
+
+*****	08/29/94	Made all PDF files
+			Updated scripts in utilities/pdfbld
+
+*****	08/29/94	Made all HLP files
+			Updated scripts in utilities/hlpbld
+
+007m.	08/30/94	source/programs/gd/gdthgt/gdtxpv.f
+
+007n.	08/30/94	source/programs/gd/gdplot/gdbtim.f
+
+005s.	08/30/94	source/driver/active/vc/mtext.c
+
+005t.	08/30/94	source/driver/active/xw/xsattbl.c
+			tables/satimg.tbl
+
+003k.	08/30/94	tables/sfstns.tbl
+			tables/snstns.tbl
+			tables/snworld.tbl
+			tables/systns.tbl
+
+003l.	08/30/94	tables/sbpack.tbl
+			tables/sypack.tbl
+			tables/systns.tbl
+			tables/syworld.tbl
+
+017l1.	08/30/94	source/gemlib/in/inskip.f
+			help/skip.hl1
+			help/skip.hl2
+
+016e.	08/30/94	pdf/gemglb.pdf
+
+017w.	08/30/94	source/gemlib/dg/dgpfun.f
+			source/programs/gd/gdplot/gdplot.f
+
+011l.	08/30/94	source/programs/sn/snmap/snmap.f
+			source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdplot/gdplot.f
+			source/programs/gd/gdstream/gdstream.f
+
+007o.	08/31/94	source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdwind/gdwind.f
+			source/gemlib/in/inintc.f
+			Removed: source/programs/gd/gdwind/gdwpnt.f
+
+005u.	08/31/94	source/driver/active/xw/henanm.f
+			source/driver/active/xw/heplot.f
+			source/driver/active/xw/hsflnm.f
+			source/driver/active/xw/hstanm.f
+			source/driver/active/xw/xgtpnt.c
+			source/driver/active/xw/xloopc.c
+			source/driver/active/xw/xmotifw.c
+			source/driver/active/xw/xsplot.c
+			source/driver/active/xw/xxevnt.c
+			source/driver/active/xw/xxflsh.c
+
+017x.	08/31/94	source/gemlib/fl/flswop.f
+
+005g2.	09/02/94	source/driver/active/nc/mclose.c
+
+003m.	09/02/94	source/programs/sf/sfmap/sfmap.f
+
+005v.	09/03/94	source/driver/active/xw/xsatim.c
+			source/driver/active/xw/xsattbl.c
+			source/driver/active/xw/satimg.h
+			tables/satimg.tbl
+
+013e.	09/19/94	build/all_compile
+			New: build/nxmlib_compile
+			     source/nxmlib/*
+
+007p.	09/19/94	source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdstream/gdstream.f
+
+008d.	09/19/94	source/syslib/unix/csproc.c
+			source/syslib/unix/gsproc.f
+
+005w.	09/20/94	source/driver/active/nc/mopen.c
+
+007q.	09/20/94	source/gplt/contour/ccplot.f
+
+011l1.	09/21/94	source/programs/gd/gdplot/gdplot.f
+
+009b1.	09/22/94 	source/programs/gd/gdmod2/gdoinp.f
+			New: source/programs/gd/gdmod2/README
+
+011m.	09/22/94	source/gplt/coord/updpxy.f
+
+017l2.	09/22/94	source/gemlib/in/inskip.f
+			source/gemlib/in/testin.f
+			help/skip.hl2
+
+017m1.	09/23/94	source/programs/gd/gdthgt/gdtxpv.f
+
+008c1.	09/23/94	source/syslib/unix/AIX/cgetmq.c
+
+019a1.	09/23/94	tables/snstns.tbl
+
+019b1.	09/23/94	tables/nmcgrib2.tbl
+
+000hhh.	09/23/94	source/programs/gd/gdplot/gdbtim.f
+
+007r.	09/23/94	source/programs/gd/gdwind/gdwind.f
+			source/programs/gd/gdwind/gdwdsp.f
+
+007s.	09/23/94	source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdmap/gdmmrk.f
+			source/programs/gd/gdmap/gdmplt.f
+
+017t1.	09/23/94	source/gemlib/gr/grtitl.f
+			source/gemlib/gr/grmttl.f
+
+====================Delivered code to development account=======================
+=========================in the directory GEMPAK5.2=============================
+=================================09/26/94=======================================
+
+000iii.	09/26/94	Removed: help/gdvint.prm
+				 tables/gemglb.nts
+				 tables/grib1parm.tbl
+				 tables/grib1vcrd.tbl
+				 tables/grib2parm.tbl
+				 source/driver/active/xw/makes
+				 source/programs/gd/gdcntr/gdnlev.f
+				 source/programs/gd/gdvint/files
+				 source/programs/gd/gdvint/gdvint_compile
+				 source/programs/sf/sfrawd/sfrawd.f.nmc
+				 source/programs/sn/snedit/snedi5.a
+				 source/syslib/unix/files
+				 source/syslib/unix/AIX/cgetmq.c.orig
+
+000jjj.	09/26/94	help/mapfil.hl2
+
+001i2.	09/26/94	help/gdvint.hlp
+			New: txt/programs/gdvint.txt
+
+009a11.	09/26/94	source/programs/na/nagrib/nagrib.f
+
+017c2.	09/27/94	help/clrbar.hl2
+			help/colors.hl2
+			help/contur.hl2
+			help/ctype.hl2
+			help/dattim.hl2
+			help/device.hl2
+			help/dtaarea.hl2
+			help/garea.hl2
+			help/gdattim.hl2
+			help/gdnum.hl2
+			help/gparm.hl2
+			help/grdarea.hl2
+			help/hilo.hl2
+			help/hlsym.hl2
+			help/line.hl2
+			help/mapfil.hl2
+			help/panel.hl2
+			help/proj.hl2
+			help/refvec.hl2
+			help/savfil.hl2
+			help/scale.hl2
+			help/sfparm.hl2
+			help/sfprmf.hl2
+			help/skip.hl2
+			help/snprmf.hl2
+			help/stnfil.hl2
+			help/title.hl2
+
+*****	09/28/94	Removed routines from the active drivers which
+			have no operation. These will be linked from the
+			GN driver for the executable. (See remove.log)
+
+*****	09/29/94	Removed the doc directory from gempak5.2
+			Moved the contents to various locations
+
+000kkk.	09/30/94	hlpbld/gd_hlpbld
+			hlpbld/gp_hlpbld
+			hlpbld/na_hlpbld
+			hlpbld/oa_hlpbld
+			hlpbld/sf_hlpbld
+			hlpbld/sn_hlpbld
+			pdfbld/gd_pdfbld
+			pdfbld/gp_pdfbld
+			pdfbld/na_pdfbld
+			pdfbld/oa_pdfbld
+			pdfbld/sf_pdfbld
+			pdfbld/sn_pdfbld
+
+017l3.	09/30/94	source/gemlib/in/inskip.f
+
+011n.	09/30/94	source/programs/gd/gdcross/gdcross.f
+			source/programs/gd/gdprof/gdprof.f
+			source/programs/gd/gdstream/gdstream.f
+			source/programs/gd/gdtser/gdtser.f
+			source/programs/sf/sfmap/sfmap.f
+			source/programs/sf/sfgram/sfgram.f
+			source/programs/sn/sncross/sncross.f
+			source/programs/sn/snhodo/snhodo.f
+			source/programs/sn/snmap/snmap.f
+			source/programs/sn/snprof/snprof.f
+			source/programs/sn/sntser/sntser.f
+
+000lll.	09/30/94	source/programs/sf/sfgram/sfxdsp.f
+
+011o.	09/30/94	source/programs/gp/gpmap/gpmap.f
+			source/programs/gp/gpmap/gpminp.f
+			source/gemlib/gg/gginit.f
+			source/gemlib/gg/ggssat.f
+			error/gg.err
+			parm/gpmap.prm
+			tables/satimg.tbl
+			New: source/gemlib/gg/ggcmn.cmn
+			     source/gemlib/gg/ggsttl.f
+			     source/gemlib/ti/tijtoi.f
+
+003n.	10/03/94	source/programs/sn/snprof/snprof.f
+			txt/programs/snprof.txt
+			help/snprof.hlp
+
+017y.	10/03/94	source/gemlib/tg/tgvald.f
+
+017z.	10/03/94	source/gemlib/in/intitl.f
+
+011p.	10/03/94	source/programs/gd/gdthgt/gdthgt.f
+
+011q.	10/03/94	source/programs/sf/sfmap/sfmap.f
+			source/programs/sn/snmap/snmap.f
+
+014h.	10/04/94	source/cgemlib/cfl/cflsopn.c
+			source/cgemlib/cfl/cflswop.c
+
+020a.	10/04/94	source/nxmlib/NxmBxmButtonCreate.c
+
+020b.	10/04/94	source/nxmlib/NuiColorInit.c
+
+021a.   10/07/94	source/driver/active/gn/htextc.f
+
+021b.	10/07/94	source/driver/active/xw/xwcmn.h
+
+021c.	10/07/94	source/device/attribute/dstext.f
+			source/driver/active/xw/xstext.c
+
+021d.	10/07/94	source/driver/device/active/xw/htextc.f
+
+021e.	10/07/94	source/gemlib/in/intitl.f
+
+021a.	10/11/94	source/driver/active/xw/htextc.f
+			source/driver/active/xw/xtextc.c
+
+005y.	10/14/94	source/driver/active/nc/nccmn.h
+			source/driver/active/nc/mtext.c
+			source/driver/active/nc/mopen.c
+			source/driver/active/nc/mclear.c
+			New: source/driver/active/nc/htextc.f
+			     source/driver/active/nc/mtextc.c
+			-------------------------------------------------
+			nprogs/ntrans2.1/source/Makefile
+			nprogs/ntrans2.1/source/command.c
+			nprogs/ntrans2.1/source/ntrans.c
+			nprogs/ntrans2.1/source/process_meta.c
+                        nprogs/ntrans2.1/include/defs.h
+                        New: nprogs/ntrans2.1/source/xw/xtextc.c
+
+
+017aa.	10/17/94	source/gemlib/in/inhilo.f
+			source/gemlib/in/testin.f
+
+009a12.	10/17/94	source/gemlib/gb/gblamb.c
+
+017bb.	10/17/94	source/gemlib/ss/testss.f
+
+017k1.	10/17/94	source/gemlib/ra/radecd.f
+
+017cc.	10/17/94	source/gemlib/nt/ntrest.f
+
+020c.	10/17/94	source/nxmlib/NxmBxmButtonCreate.c
+
+007r1.	10/17/94	source/programs/gd/gdwind/gdwind.f
+
+003f1.	10/17/94	source/programs/sf/sfedit/sfeprm.f
+			source/programs/sf/sfedit/sfestn.f
+
+003o.	10/17/94	source/programs/sf/sfl604/sfl6li.f
+			source/programs/sf/sfl604/sfl6pm.f
+
+000mmm.	10/17/94	source/programs/sf/sfrawd/rgghdr.f
+
+090c.	10/17/94	source/programs/gd/gdmod/gdoadd.f
+
+090d.	10/17/94	source/programs/gd/gddelt/gddnum.f
+
+000nnn.	10/17/94	New: tables/wxp/station.trans
+
+019a2.	10/17/94	tables/snstns.tbl
+
+007d5.	10/17/94	source/programs/gd/gdplot/gdplot.f
+
+007t.	10/17/94	source/programs/gd/gdcross/gdxgts.f
+
+017dd.	10/17/94	source/gemlib/dg/dgprft.f
+
+005z.	10/17/94	source/driver/active/xw/xloopc.c
+
+005aa.	10/18/94	source/driver/active/nc/hinit.f
+			source/driver/active/nc/htext.f
+			source/driver/active/nc/htextc.f
+
+017c3.	10/19/94	HL1 for clrbar, hilo, panel, refvec, region,
+				scale, search, skip
+
+*****	10/19/94	Made all PDF files
+
+017c4.	10/19/94	HL2 for clrbar, filter, gpack, hlsym, skip,
+				contur, fline, gparm, line, thtaln,
+				ctype, garea, hilo, lstall, title
+
+007u.	10/19/94	source/programs/gd/gdcntr/gdcntr.f
+			source/programs/gd/gdmap/gdmap.f
+			source/programs/gd/gdstream/gdstream.f
+			source/programs/gd/gdwind/gdwind.f
+
+003f2.	10/19/94	source/programs/sf/sfedit/sfestn.f
+
+017ee.	10/19/94	source/gemlib/sn/testsn.f
+
+017ff.	10/19/94	source/gemlib/ra/raptnd.f
+
+*****	10/21/94	Updated necessary Makefiles
+
+003f3.	10/21/94	source/programs/sf/sfedit/*.f
+			source/programs/sf/sfedit/Makefile
+			source/gemlib/sf/Makefile
+			New: source/programs/sf/sfedit/sfeshp.f
+			     source/gemlib/sf/sfftyp.f
+
+000ooo.	10/25/94	defaults/* --> nts/defaults/*
+			txt/gemlib/dm/dmfile.txt --> source/gemlib/dm
+			txt/gemlib/dm/dmsubs.txt --> source/gemlib/dm
+			txt/gemlib/dm/dmvars.txt --> source/gemlib/dm
+			source/gplt/access/gplt/alt/ginitp.f --> ginitp_alt.f
+			source/gplt/access/gplt/alt/gendp.f --> gendp_alt.f
+			source/gplt/access/gplt/alt/Makefile
+			build/driver_compile
+			build/driver_link
+		        build/gn_compile --> source/driver/active/gn
+		        build/hp_compile --> source/driver/active/hp
+		        build/nc_compile --> source/driver/active/nc
+		        build/ps_compile --> source/driver/active/ps
+		        build/ps1_compile --> source/driver/active/ps1
+		        build/psc_compile --> source/driver/active/psc
+		        build/psp_compile --> source/driver/active/psp
+		        build/vc_compile --> source/driver/active/vc
+		        build/vt_compile --> source/driver/active/vt
+		        build/xw_compile --> source/driver/active/xw
+		        build/gn_link --> source/driver/active/gn
+		        build/hp_link --> source/driver/active/hp
+		        build/nc_link --> source/driver/active/nc
+			build/ps_link --> source/driver/active/ps
+		        build/ps1_link --> source/driver/active/ps1
+		        build/psc_link --> source/driver/active/psc
+		        build/psp_link --> source/driver/active/psp
+		        build/vc_link --> source/driver/active/vc
+		        build/vt_link --> source/driver/active/vt
+		        build/xw_link --> source/driver/active/xw
+			Removed: pdf/maplin.pdf
+				 pdf/maptrk.pdf
+				 pdf/nmcgrd.pdf
+				 pdf/nmcsao.pdf
+				 pdf/nmcsfc.pdf
+				 pdf/nmcshp.pdf
+				 pdf/nmcupa.pdf
+				 source/driver/old/xw/*
+
+020d.	10/25/94	source/nxmlib/NxmBxmButtonCreate.c
+			source/nxmlib/NxmLoopPanelCreate.c
+
+019a3.	10/25/94	tables/snstns.tbl
+
+====================Delivered code to development account=======================
+====================Delivered code to operational account=======================
+=================================10/26/94=======================================
+
+019a4.	11/07/94	tables/snstns.tbl
+
+021f.	11/07/94	source/driver/active/xw/xtextc.c
+                        nprogs/ntrans2.1/source/xw/xtextc.c
+
+====================Delivered code to operational account=======================
+======================Delivered code to delivery account========================
+=================================11/07/94=======================================

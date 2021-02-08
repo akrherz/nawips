@@ -1,0 +1,21 @@
+C************************************************************************
+C* DXTOC.CMN								*
+C*									*
+C* This common is storage for the Table Of Contents variables.		*
+C*									*
+C* Variables:								*
+C*	LUNTOC		INTEGER		TOC output file LUN		*
+C*	ITOCLN		INTEGER		Current line in the TOC file	*
+C*	TOC  ( TOCMAX )	CHAR*		TOC for one chapter		*
+C**									*
+C* Log:									*
+C* M. Linda/GSC		12/97	Original				*
+C************************************************************************
+C*
+	PARAMETER	( TOCMAX = 200 )
+C!						Max lines in the TOC
+C
+	CHARACTER	toc ( TOCMAX )*128
+C
+	COMMON  / DXTOC / luntoc, itocln, toc
+C

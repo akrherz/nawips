@@ -1,0 +1,338 @@
+			N-AWIPS 5.5.a Patch Release Notes
+				4/24/00	
+
+Patch 5.5.a covers development from March 22 to April 21, 2000.  
+
+************************************************************************
+
+IMPORTANT INSTALLATION NOTES:
+
+Patch 5.5.a is being delivered as a complete new version.  We are providing
+the entire source tree.  Therefore, the entire system MUST be compiled and 
+linked.
+
+We have improved the performance of building NAWIPS by setting up
+permanent links for the FORTRAN include files.  
+
+You MUST do the following:
+
+1. Modify your .cshrc and/or .profile files by adding -I$GEMINC to the 
+   following compiler flags:
+
+	CFLAGS
+	ANSI_CFLAGS
+	FFLAGS
+
+2. Add -I$GEMINC/$OS to FFLAGS
+
+3. Add the -s option to the LDFLAGS variable to strip the executables.
+
+4. Set up the permanent links before compiling by executing the following
+   script in your nawips account:
+
+	$GEMPAK/install/create_links
+
+We have included .cshrc_5.5.a and .profile_5.5.a as guidance.
+
+**************************************************************************
+
+	
+
+I. Product Generation Changes
+
+    A. New NMAP Functions 
+
+	1. New Watch Products
+
+	   The initial WOU and AWN are automatically created in NMAP when
+	   the watch is saved.  The PWN text product has been added
+	   to the SPCTXT program.
+	
+
+    B. NMAP Product Generation Improvements
+
+	1. CCFP Product Generation Function
+
+		a. Modified the CCFP popup to have both issue and valid
+	           time pulldowns.  These times are added to the output 
+		   text file.  The issue and valid times are now table
+	           driven.  Edit the table $GEMTBL/pgen/ccfp.tbl to modify
+	           the list of available issue and valid times. 
+	   
+	   	b. Added the ability to place the CCFP text box and rotate 
+		   the direction arrow when creating the product.  
+		   
+		c. Changed the direction to be towards instead from the 
+		   compass point.  
+		   
+		d. The line type of CCFP was modified to include only
+		   the location information in the text product.  
+		   
+		e. The CCFP is now displayed as group when deleting.
+
+	2. International SIGMET Product Change
+
+	   Added AFOS and WMO headers for the international SIGMET
+	   product at the request of the AWC.
+
+	3. Outlook Label Improvement
+
+	   Outlook labels are now table driven.  Labels can be added
+	   or modified by editing the tables, $GEMTBL/pgen/grptyp.tbl
+	   and $GEMTBL/pgen/outlook.tbl 
+
+	4. Larger Text Size
+	
+	   Added a larger text size, "Giant" at the request of the TPC.
+	   "Giant" now appears as one of the choices in the "Size" popup.
+
+	5. Increased maximum number of VG File Elements
+
+	   The maximum number of elements in a VG file was increased to
+	   5000 at the request of the TPC.
+
+	6. Surface Prog Product Modification
+
+	   The coding of LOWS has been changed when they are labeled
+	   with "XX".  For this case, the pressure value is listed
+	   as 0000 in the text product.  This was done at the request
+	   of the HPC.
+
+	7. Hurricane Track Product Improvements
+
+	   Added a pop-up window to the hurricane track product function.
+	   The pop-up allows specification of storm ID, ocean, issuing 
+	   center, date and cycle time.
+
+	8. Watch Status Product
+
+	   Added a forecaster pulldown menu to the Watch Status product.
+	   Removed the "CONTINUE WW" and modified the date format for
+	   the text product at the request of the SPC.
+
+
+II. NMAP Display Improvements	
+
+    A. Seek/Locator Functions
+
+	1. Made the "Seek Results" text fonts uniform.
+
+	2. The "Seek Results" scroll list is cleared out when input 
+	   is invalid.
+
+	3. Added error checking for invalid entries.
+
+	4. More complete station names are now shown in the GUI.
+	   Up to 15 characters are now displayed. 
+
+
+    B. Improved Cloud Height Function
+
+	1. The cursor type now changes from an + to an x when the 
+	   function is calculating the height.
+
+	2. The distance units are now consistent between distance and
+	   maximum search radius entries in the "CLOUD HEIGHT OPTIONS
+	   GUI".
+
+	3. The function automatically uses the moist adiabatic method
+	   if the standard method cannot determine a cloud height.
+
+	4. The user can specify whether multiple or single cloud height 
+	   values are displayed.
+
+	5. A "Status Message" text box has been added to the "CLOUD
+	   HEIGHT" GUI to indicate whether the moist adiabatic method
+	   has been substituted for the standard method.  If both
+	   methods fail to find a cloud height, then status message
+	   will provide information indicating why no cloud height could be 
+	   calculated.  It also indicates whether multiple cloud heights 
+	   have been found when the single level option has been selected.  
+
+	6. Cloud height is now calculated for a stable sounding.  
+	   In this case, the status message will display "Stable sounding".
+
+	7. Cloud height defaults are now table-driven.  They are specified
+	   in the table: $GEMTBL/nmap/nmap_cldhgt.tbl.
+
+	8. Zero height is displayed if the cloud temperature is warmer than
+	   the sounding.
+
+    C. Test Event Decoding and Display
+
+       TEST events for watches, warnings, international SIGMETs and hurricane
+       tracks are now distinguished from normal events.  For TEST reports, 
+       bounded areas are shown with a dashed line, markers are open rather than
+       filled, and point events (e.g., tropical depression), have a "T" 
+       displayed next to the event symbol.
+
+    D. CLDS parameter added to NMAP/NMAP2
+
+       The parameter CLDS was added to the METAR parameter display list
+       for NMAP/NMAP2 at the request of the AWC.
+	
+
+III. NMAP Bug Corrections
+
+    A. Watch Select
+
+       Corrected problem with deselecting and selecting a watch.  The
+       watch can now be selected by just clicking on it after it has
+       been deselected.
+
+    B. Add/Remove Counties in Roam 
+
+       Corrected problem where the wrong county was added/removed
+       when in the roam mode.  
+
+    C. Graph-To-Grid
+
+       Program GRPHGD now properly handles errors where the grid
+       file cannot be created.  Also fixed the fatal error when
+       more than 2 entries were added to the table:
+       
+       $GEMTBL/grphgd/grphgd.tbl
+
+    D. Fatal Error with Map Selection
+
+       Corrected fatal error that occurred when changing the map or
+       zooming from the "Map Selection" window while looping frames 
+       in the main window.
+
+
+
+IV. Decoder Improvements
+
+    A. Marine and Synoptic Decoders
+
+       The marine and synoptic decoders were modified to store the 
+       undecoded reports.  These reports can be displayed by using
+       the GEMPAK TEXT parameter.
+
+    B. METAR Decoder
+      
+       Modified the METAR decoder to handle April 1, 2000 format change
+       of mean sea level pressure from the remarks section of Mexican
+       reports.
+
+    C. Aircraft Decoder
+
+       Modified the aircraft decoder, DCACFT to decode more formats of
+       turbulence data reported in AIREPS and PIREPS at the request of
+       the AWC.
+
+    D. International Sigmet Decoder
+
+       Added the decoding of Volcanic Ash reports excluding the EGGY
+       and RJAA SIGMETS.
+
+V. General Bug Corrections
+
+    A. NAGRIB
+
+       Fixed a bug reported by the SPC where the RFC 24-hour
+       rainfall accumulation grid was writing the incorrect
+       time to the GEMPAK file.
+
+    B. AWIPS Redbook Graphics Display
+
+       Fixed a bug reported by Unidata which was causing an infinite
+       loop in some cases.
+
+
+VI. Known Problems
+
+    A.  Auto-update 
+
+        Auto-update occasionally fails to properly update when the skip 
+        factor is greater than one.
+
+    B.  Seek Function
+
+	1. The Seek function does not display the ghost markers and line when
+           roaming.  Click on the "Seek Results" window to make these features
+           reappear after roaming.  Also, if the data set or map background is 
+           changed, the seek function exits.  Click on the seek function 
+	   icon to restore its current settings.
+
+	2. The seek function does not locate the county if an independent city
+           of the same name exists in the county's state.  The seek function
+           finds the independent city instead.
+
+
+VII. Calling Sequence Changes
+
+    A. $GEMPAK/source/bridge/ma/mawgem.f
+    B. $GEMPAK/source/cgemlib/ctb/ctbfszxvl.c
+    C. $GEMPAK/source/bridge/is/ismov.f
+    D. $GEMPAK/source/gemlib/dg/dgmfil.f
+    E. $GEMPAK/source/gemlib/gr/grlist.f
+
+
+See the nawips.log and changes.log for additional details concerning
+these routines.
+
+
+VIII. Table Format Changes
+
+    A. $GEMTBL/pgen/grptyp.tbl
+       
+       Added label choices for FRONT, OUTLOOK and LABEL group types.
+
+
+IX. NMAP2: Evaluation Version:
+
+**** NOTE THAT NMAP2 SHOULD NOT BE USED TO CREATE OPERATIONAL PRODUCTS. ****  
+
+NMAP2 continues to be made available to obtain user feedback.  Many 
+bug corrections and improvements have been made in response to user 
+feedback and CDB testing.
+
+    A. NMAP functions NOT implemented in NMAP2
+
+	1. The "stop" function is not implemented.
+
+	2. Default data set selections for specific types, e.g, satellite
+	   data are not implemented in NMAP2.
+
+	3. Removed the "wipe" button that erased all frames in all loops.
+	   This function will be modified to just erase the currently
+	   viewed loop in a future release.
+	
+
+    B. NMAP2 Bug Corrections
+
+	1.  Fixed problems with multiple projections and loops.
+
+	2.  Fixed problems with auto-update while looping.
+
+
+    C. NMAP2 Improvements
+
+	1. The loop being viewed is now linked with the loop being
+	   selected in the "Data Selection Window"
+
+	2. The loop selected to view is loaded first.  All other loops
+	   are then loaded in the background.
+
+	3. The symbol, line, and arrow attributes can now be edited
+	   for miscellaneous data types, i.e., WTCH, WARN, HRCN, 
+	   ISIG and LTNG.
+
+
+    D. NMAP2 Known Bugs
+
+	1. The time line does not properly update with non-image data 
+	   types.
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+	patch_build_5.5.a 
+
+To execute the script and save its output in a file type:
+
+	cd $GEMPAK/build
+	patch_build_5.5.a >&! PATCH_$NA_OS & ; tail -f PATCH_$NA_OS
+
+The output of the script will be written to PATCH_$NA_OS.

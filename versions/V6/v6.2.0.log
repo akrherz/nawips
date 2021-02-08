@@ -1,0 +1,732 @@
+------------------------------------------------------------------------
+r224 | jacobs | 2010-09-21 12:01:46 +0000 (Tue, 21 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/snstns.tbl
+
+Updated radiosonde locations and elevations based on information from the NWS
+Upper Air Operations office.
+------------------------------------------------------------------------
+r223 | jacobs | 2010-09-20 21:05:22 +0000 (Mon, 20 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/help/hlx/osct.hl1
+   A /trunk/nawips/gempak/help/hlx/osct.hl2
+   M /trunk/nawips/gempak/parm/gpmap.prm
+   M /trunk/nawips/gempak/source/gemlib/gg/ggmisc.f
+   A /trunk/nawips/gempak/source/gemlib/gg/ggosct.f
+   A /trunk/nawips/gempak/source/gemlib/gg/ggosrd.c
+   M /trunk/nawips/gempak/source/nmaplib/nms/nmsdspl.f
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpmap.f
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpminp.f
+   M /trunk/nawips/gempak/tables/config/datatype.tbl
+   M /trunk/nawips/gempak/tables/config/miscset.tbl
+   M /trunk/nawips/gempak/txt/programs/gpmap.txt
+
+Added the ability to display the OceanScat miscellaneous data in GPMAP and
+NMAP2. This work was done by Greg McFadden, OPC.
+------------------------------------------------------------------------
+r221 | jacobs | 2010-09-17 19:10:08 +0000 (Fri, 17 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/versions/V6/v6.2.0.log
+
+Add SVN log for version 6.2.0.
+------------------------------------------------------------------------
+r220 | jacobs | 2010-09-17 15:50:05 +0000 (Fri, 17 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/versions/V5/changes.log
+   A /trunk/nawips/versions/V5/config.log
+   A /trunk/nawips/versions/V5/nawips.log
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.a
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.a
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.z
+   A /trunk/nawips/versions/V5/release_notes/v5.5/README_nawips5.5.a
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.a
+   A /trunk/nawips/versions/V5/remove.log
+   A /trunk/nawips/versions/V5/tables.log
+   A /trunk/nawips/versions/V5/v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4.3.z/changes_v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4.3.z/ldm_v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4.3.z/nawips_v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4.3.z/remove_v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4.3.z/requests_v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4.3.z/tables_v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4.3.z/test_closed_v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4.3.z/test_v5.4.3.z
+   A /trunk/nawips/versions/V5/v5.4a/changes.log
+   A /trunk/nawips/versions/V5/v5.4a/nawips.log
+   A /trunk/nawips/versions/V6/v6.0.0.log
+   A /trunk/nawips/versions/V6/v6.1.0.log
+   A /trunk/nawips/versions/V6/v6.1.1.log
+
+Reorganized the version log directory. Added the logs for 6.0.0 and later.
+------------------------------------------------------------------------
+r219 | jacobs | 2010-09-17 15:40:49 +0000 (Fri, 17 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gemlib/ss/ssvers.f
+
+Updated version number to 6.2.0
+------------------------------------------------------------------------
+r218 | jacobs | 2010-09-17 15:01:36 +0000 (Fri, 17 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/versions/V5/release_notes/v5.10.1
+   A /trunk/nawips/versions/V5/release_notes/v5.10.1/RELEASE_NOTES_v5.10.1.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.10.2
+   A /trunk/nawips/versions/V5/release_notes/v5.10.2/RELEASE_NOTES_V5.10.2.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.10.3
+   A /trunk/nawips/versions/V5/release_notes/v5.10.3/RELEASE_NOTES_V5.10.3.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.10.4
+   A /trunk/nawips/versions/V5/release_notes/v5.10.4/RELEASE_NOTES_V5.10.4.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.11.1
+   A /trunk/nawips/versions/V5/release_notes/v5.11.1/RELEASE_NOTES_V5.11.1.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.11.2
+   A /trunk/nawips/versions/V5/release_notes/v5.11.2/RELEASE_NOTES_V5.11.2.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.11.3
+   A /trunk/nawips/versions/V5/release_notes/v5.11.3/RELEASE_NOTES_V5.11.3.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.11.4
+   A /trunk/nawips/versions/V5/release_notes/v5.11.4/RELEASE_NOTES_V5.11.4.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.b
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.c
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.d
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.e
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.f
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.g
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.h
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.i
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.i.1
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.j
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.k
+   A /trunk/nawips/versions/V5/release_notes/v5.4.2/README_nawips5.4.2.m
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.b
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.c
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.d
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.e
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.f
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.g
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.h
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.i
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.j
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.k
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.l
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.m
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.n
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.p
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.q
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.r
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.s
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.t
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.u
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.v
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.w
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.x
+   A /trunk/nawips/versions/V5/release_notes/v5.4.3/README_nawips5.4.3.y
+   A /trunk/nawips/versions/V5/release_notes/v5.5
+   A /trunk/nawips/versions/V5/release_notes/v5.5/README_nawips5.5.b
+   A /trunk/nawips/versions/V5/release_notes/v5.5/README_nawips5.5.c
+   A /trunk/nawips/versions/V5/release_notes/v5.5/README_nawips5.5.d
+   A /trunk/nawips/versions/V5/release_notes/v5.6
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.b
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.c
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.c.1
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.d
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.d.1
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.e
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.e.1
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.f
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.g
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.h
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.i
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.j
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.k
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.l
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.l.1
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.l.2
+   A /trunk/nawips/versions/V5/release_notes/v5.6/README_nawips5.6.m
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/BKPT_118a_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/BUFR_2a_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/BUGS_278a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/BUGS_281a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/BUGS_296a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/BUGS_297a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/BUGS_92a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/CBAR_291a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/CM_285a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/GRID_10a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/LAYER_14a_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/LAYER_14a_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/LAYER_14b_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/MAPS_073a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/OTHER_118a_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/OTHER_240a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/OTHER_246a_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/OTHER_249a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/OTHER_280a_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/OTHER_292a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/OTHER_293a_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/OTHER_295a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/PGFILE_294a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/README_nawips5.7.1
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/SIG_12a_FY
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/SMEAR_290a_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/TABLES_72a_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/TIMELINE_267a_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/WBC_195a_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/WBC_195b_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.1/WBC_195c_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.2
+   A /trunk/nawips/versions/V5/release_notes/v5.7.2/README_nawips5.7.2
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BKPT_118a_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BKPT_118b_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BKPT_118c_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BKPT_118d_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BKPT_118e_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BKPT_118f_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BUFR_2a_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BUFR_2b_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BUFR_2c_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BUGS_148_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BUGS_300_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BUGS_313a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/BUGS_318_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/CM_285a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/GFA_290_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/GFA_5b_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/GRID_10_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/INTERP_5b_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/MAPS_73a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/MAP_73_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/OTHER_148a_FY
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/OTHER_228_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/OTHER_280a_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/OTHER_311a_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/OTHER_312a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/OTHER_315_316_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/OTHER_9i_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/PGEN_10d_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/QSCT_249a_FY
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/QSCT_249b_FY
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/README_nawips5.7.3
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/TABLE_72_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/TABLE_72_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/TIMELINE_267_SJ
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/WBC_195a_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/WBC_195b_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/WBC_195c_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.3/WBC_195d_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/BKPT_118a_FY
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/BKPT_118b_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/BUFR_2a_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/BUFR_2b_DK
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/BUG19.14_300_DP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/BUG19.15_300_DP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/BUGS_300_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/BUGS_300b_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/G2G_265_DP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/GFA_290a_FY
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/GFA_5b_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/JET_294_DP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/MAP_73_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/OTHER_119a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/OTHER_304a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/OTHER_322a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/PGEN_10d_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/PGEN_294a_TP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/QSCT_249a_FY
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/README_nawips5.7.4
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/TABLE20.2_72_DP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/TABLE_72_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/TCA_1a_ES
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/VAA_250_DP
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/WBC_195_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.7.4/WBC_195b_AH
+   A /trunk/nawips/versions/V5/release_notes/v5.8.1
+   A /trunk/nawips/versions/V5/release_notes/v5.8.1/README_nawips5.8.1
+   A /trunk/nawips/versions/V5/release_notes/v5.8.1/README_nwx_tbls.txt
+   A /trunk/nawips/versions/V5/release_notes/v5.8.2
+   A /trunk/nawips/versions/V5/release_notes/v5.8.2/README_v5.8.2.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.8.2/README_v5.8.2b.txt
+   A /trunk/nawips/versions/V5/release_notes/v5.8.3
+   A /trunk/nawips/versions/V5/release_notes/v5.8.3/README_v5.8.3.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.8.3a
+   A /trunk/nawips/versions/V5/release_notes/v5.8.3a/README_v5.8.3a.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.8.4
+   A /trunk/nawips/versions/V5/release_notes/v5.8.4/README_v5.8.4.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.8.4/README_v5.8.4a.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.8.4/README_v5.8.4b.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.9.1
+   A /trunk/nawips/versions/V5/release_notes/v5.9.1/README_nawips5.9.1.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.9.2
+   A /trunk/nawips/versions/V5/release_notes/v5.9.2/README_nawips5.9.2.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.9.3
+   A /trunk/nawips/versions/V5/release_notes/v5.9.3/RELEASE_NOTES_v5.9.3.sxw
+   A /trunk/nawips/versions/V5/release_notes/v5.9.4
+   A /trunk/nawips/versions/V5/release_notes/v5.9.4/RELEASE_NOTES_v5.9.4.sxw
+   A /trunk/nawips/versions/V5/v5.11/svn_info
+   A /trunk/nawips/versions/V5/v5.11/svn_info/v511_svn.txt
+
+Reorganized the version log directory. Added the logs for 6.0.0 and later.
+------------------------------------------------------------------------
+r217 | jacobs | 2010-09-17 14:59:52 +0000 (Fri, 17 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/versions/V5/release_notes
+   A /trunk/nawips/versions/V5/v5.10
+   A /trunk/nawips/versions/V5/v5.10/changes.log_v5.10
+   A /trunk/nawips/versions/V5/v5.10/config.log_v5.10
+   A /trunk/nawips/versions/V5/v5.10/copy_log
+   A /trunk/nawips/versions/V5/v5.10/nawips.log_v5.10
+   A /trunk/nawips/versions/V5/v5.10/remove.log_v5.10
+   A /trunk/nawips/versions/V5/v5.10/tables.log_v5.10
+   A /trunk/nawips/versions/V5/v5.11
+   A /trunk/nawips/versions/V5/v5.11/changes_v5.11
+   A /trunk/nawips/versions/V5/v5.11/config_v5.11
+   A /trunk/nawips/versions/V5/v5.11/nawips_v5.11
+   A /trunk/nawips/versions/V5/v5.11/remove_v5.11
+   A /trunk/nawips/versions/V5/v5.11/tables_v5.11
+   A /trunk/nawips/versions/V5/v5.2
+   A /trunk/nawips/versions/V5/v5.2/changes_v5.2
+   A /trunk/nawips/versions/V5/v5.2/nawips_v5.2
+   A /trunk/nawips/versions/V5/v5.2.1
+   A /trunk/nawips/versions/V5/v5.2.1/changes_v5.2.1
+   A /trunk/nawips/versions/V5/v5.2.1/changes_v5.2.1doc
+   A /trunk/nawips/versions/V5/v5.2.1/nawips_v5.2.1
+   A /trunk/nawips/versions/V5/v5.2.1/nawips_v5.2.1doc
+   A /trunk/nawips/versions/V5/v5.2.1/remove_v5.2.1
+   A /trunk/nawips/versions/V5/v5.2.1/remove_v5.2.1doc
+   A /trunk/nawips/versions/V5/v5.3
+   A /trunk/nawips/versions/V5/v5.3/changes_v5.3
+   A /trunk/nawips/versions/V5/v5.3/nawips_v5.3
+   A /trunk/nawips/versions/V5/v5.3/remove_v5.3
+   A /trunk/nawips/versions/V5/v5.3.1
+   A /trunk/nawips/versions/V5/v5.3.1/changes_5.3.1
+   A /trunk/nawips/versions/V5/v5.3.1/nawips_5.3.1
+   A /trunk/nawips/versions/V5/v5.3.1/remove_5.3.1
+   A /trunk/nawips/versions/V5/v5.3.1/tables_5.3.1
+   A /trunk/nawips/versions/V5/v5.4
+   A /trunk/nawips/versions/V5/v5.4/changes_5.4
+   A /trunk/nawips/versions/V5/v5.4/ldm_5.4
+   A /trunk/nawips/versions/V5/v5.4/nawips_5.4
+   A /trunk/nawips/versions/V5/v5.4/remove_5.4
+   A /trunk/nawips/versions/V5/v5.4/tables_5.4
+   A /trunk/nawips/versions/V5/v5.4.1
+   A /trunk/nawips/versions/V5/v5.4.1/changes_5.4.1
+   A /trunk/nawips/versions/V5/v5.4.1/ldm_5.4.1
+   A /trunk/nawips/versions/V5/v5.4.1/nawips_5.4.1
+   A /trunk/nawips/versions/V5/v5.4.1/remove_5.4.1
+   A /trunk/nawips/versions/V5/v5.4.1/tables_5.4.1
+   A /trunk/nawips/versions/V5/v5.4.2
+   A /trunk/nawips/versions/V5/v5.4.2/changes_v5.4.2
+   A /trunk/nawips/versions/V5/v5.4.2/ldm_v5.4.2
+   A /trunk/nawips/versions/V5/v5.4.2/nawips_v5.4.2
+   A /trunk/nawips/versions/V5/v5.4.2/remove_v5.4.2
+   A /trunk/nawips/versions/V5/v5.4.2/tables_v5.4.2
+   A /trunk/nawips/versions/V5/v5.4.3
+   A /trunk/nawips/versions/V5/v5.4.3/changes_v5.4.3
+   A /trunk/nawips/versions/V5/v5.4.3/ldm_v5.4.3
+   A /trunk/nawips/versions/V5/v5.4.3/nawips_v5.4.3
+   A /trunk/nawips/versions/V5/v5.4.3/remove_v5.4.3
+   A /trunk/nawips/versions/V5/v5.4.3/tables_v5.4.3
+   A /trunk/nawips/versions/V5/v5.4.3.k
+   A /trunk/nawips/versions/V5/v5.4.3.k/changes_v5.4.3.k
+   A /trunk/nawips/versions/V5/v5.4.3.k/ldm_v5.4.3.k
+   A /trunk/nawips/versions/V5/v5.4.3.k/nawips_v5.4.3.k
+   A /trunk/nawips/versions/V5/v5.4.3.k/remove_v5.4.3.k
+   A /trunk/nawips/versions/V5/v5.4.3.k/tables_v5.4.3.k
+   A /trunk/nawips/versions/V5/v5.4a
+   A /trunk/nawips/versions/V5/v5.5
+   A /trunk/nawips/versions/V5/v5.5/changes_v5.5
+   A /trunk/nawips/versions/V5/v5.5/ldm_v5.5
+   A /trunk/nawips/versions/V5/v5.5/nawips_v5.5
+   A /trunk/nawips/versions/V5/v5.5/remove_v5.5
+   A /trunk/nawips/versions/V5/v5.5/tables_v5.5
+   A /trunk/nawips/versions/V5/v5.5/test_closed_v5.5
+   A /trunk/nawips/versions/V5/v5.5/test_v5.5
+   A /trunk/nawips/versions/V5/v5.6.e
+   A /trunk/nawips/versions/V5/v5.6.e/changes_v5.6.e
+   A /trunk/nawips/versions/V5/v5.6.e/config_v5.6.e
+   A /trunk/nawips/versions/V5/v5.6.e/ldm_v5.6.e
+   A /trunk/nawips/versions/V5/v5.6.e/nawips_v5.6.e
+   A /trunk/nawips/versions/V5/v5.6.e/remove_v5.6.e
+   A /trunk/nawips/versions/V5/v5.6.e/tables_v5.6.e
+   A /trunk/nawips/versions/V5/v5.6.m
+   A /trunk/nawips/versions/V5/v5.6.m/changes_v5.6.m
+   A /trunk/nawips/versions/V5/v5.6.m/config_v5.6.m
+   A /trunk/nawips/versions/V5/v5.6.m/nawips_v5.6.m
+   A /trunk/nawips/versions/V5/v5.6.m/remove_v5.6.m
+   A /trunk/nawips/versions/V5/v5.6.m/tables_v5.6.m
+   A /trunk/nawips/versions/V5/v5.7
+   A /trunk/nawips/versions/V5/v5.7/changes_v5.7
+   A /trunk/nawips/versions/V5/v5.7/config_v5.7
+   A /trunk/nawips/versions/V5/v5.7/nawips_v5.7
+   A /trunk/nawips/versions/V5/v5.7/remove_v5.7
+   A /trunk/nawips/versions/V5/v5.7/tables_v5.7
+   A /trunk/nawips/versions/V5/v5.8
+   A /trunk/nawips/versions/V5/v5.8/changes_v5.8
+   A /trunk/nawips/versions/V5/v5.8/config_v5.8
+   A /trunk/nawips/versions/V5/v5.8/nawips_v5.8
+   A /trunk/nawips/versions/V5/v5.8/remove_v5.8
+   A /trunk/nawips/versions/V5/v5.8/tables_v5.8
+   A /trunk/nawips/versions/V5/v5.9
+   A /trunk/nawips/versions/V5/v5.9/changes_v5.9
+   A /trunk/nawips/versions/V5/v5.9/config_v5.9
+   A /trunk/nawips/versions/V5/v5.9/nawips_v5.9
+   A /trunk/nawips/versions/V5/v5.9/remove_v5.9
+   A /trunk/nawips/versions/V5/v5.9/tables_v5.9
+
+Reorganized the version log directory. Added the logs for 6.0.0 and later.
+------------------------------------------------------------------------
+r216 | jacobs | 2010-09-17 14:56:44 +0000 (Fri, 17 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/versions/V5
+   A /trunk/nawips/versions/V5/copy_log
+   A /trunk/nawips/versions/V6
+   D /trunk/nawips/versions/changes.log
+   D /trunk/nawips/versions/config.log
+   D /trunk/nawips/versions/copy_log
+   D /trunk/nawips/versions/nawips.log
+   D /trunk/nawips/versions/release_notes
+   D /trunk/nawips/versions/remove.log
+   D /trunk/nawips/versions/tables.log
+   D /trunk/nawips/versions/v5.10
+   D /trunk/nawips/versions/v5.11
+   D /trunk/nawips/versions/v5.2
+   D /trunk/nawips/versions/v5.2.1
+   D /trunk/nawips/versions/v5.3
+   D /trunk/nawips/versions/v5.3.1
+   D /trunk/nawips/versions/v5.4
+   D /trunk/nawips/versions/v5.4.1
+   D /trunk/nawips/versions/v5.4.2
+   D /trunk/nawips/versions/v5.4.3
+   D /trunk/nawips/versions/v5.4.3.k
+   D /trunk/nawips/versions/v5.4.3.z
+   D /trunk/nawips/versions/v5.4a
+   D /trunk/nawips/versions/v5.5
+   D /trunk/nawips/versions/v5.6.e
+   D /trunk/nawips/versions/v5.6.m
+   D /trunk/nawips/versions/v5.7
+   D /trunk/nawips/versions/v5.8
+   D /trunk/nawips/versions/v5.9
+
+Reorganized the version log directory. Added the logs for 6.0.0 and later.
+------------------------------------------------------------------------
+r215 | jacobs | 2010-09-17 14:40:52 +0000 (Fri, 17 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/bridge/wo/wodcod.f
+   M /trunk/nawips/gempak/source/bridge/wo/wodecd.f
+
+Modified the WOU decoder to handle the situation where Scott AFB issues the SPC
+WOU product. Scott AFB is the operational backup for the SPC and when they issue
+the product there is an extra line in the header. This line needs to be skipped
+in order for the decoder to find the date string.
+------------------------------------------------------------------------
+r210 | jacobs | 2010-09-16 19:48:15 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/error/sfdsl604.err
+   A /trunk/nawips/gempak/help/hlp/sfdsl604.hlp
+   A /trunk/nawips/gempak/parm/sfdsl604.prm
+   A /trunk/nawips/gempak/pdf/sfdsl604.pdf
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/GNUmakefile
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfdsl604.f
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfdsl604.mk
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfl6fl.f
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfl6hd.f
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfl6in.f
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfl6li.f
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfl6pm.f
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfl6pr.f
+   A /trunk/nawips/gempak/source/programs/sf/sfdsl604/sfl6tm.f
+   A /trunk/nawips/gempak/txt/programs/sfdsl604.txt
+   M /trunk/nawips/gempak/utilities/hlpbld/sf_hlpbld
+   M /trunk/nawips/gempak/utilities/pdfbld/sf_pdfbld
+
+Add the new program SFDSL604. This program will produce text output for surface
+observations in a format required by the AMS DataStreme web site. Steve Lilly
+did the programming for this change.
+------------------------------------------------------------------------
+r209 | jacobs | 2010-09-16 19:40:43 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/inactive.tbl
+   M /trunk/nawips/gempak/tables/stns/snstns.tbl
+   M /trunk/nawips/gempak/tables/stns/snstns_land.tbl
+   M /trunk/nawips/gempak/tables/stns/snworld.tbl
+   M /trunk/nawips/gempak/tables/stns/stns_ll90.tbl
+
+Fixed the location of Yuma Proving Grounds (K1Y7). A report was received from
+the Phoenix WFO via the SDM that AWIPS and the NCEP upper air plots had
+different locations. The locations in NAWIPS and on the CCS were updated to the
+values in the AWIPS station tables.
+------------------------------------------------------------------------
+r207 | xguo | 2010-09-16 16:32:41 +0000 (Thu, 16 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/util/prob2cat/prob2cat.c
+
+fixed multi-points on top of each other and 2 slit labels without slight
+------------------------------------------------------------------------
+r206 | jacobs | 2010-09-14 17:05:45 +0000 (Tue, 14 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/xwprm.h
+
+Increase the number of user pixmaps from 120 to 480 at the request of the SPC.
+------------------------------------------------------------------------
+r205 | jacobs | 2010-09-14 11:18:20 +0000 (Tue, 14 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/sn/sntser/sntser.f
+
+Increase the local arrays to allow more times in a plot. Changed the array value
+from the local MAXTIM=100 to the global LLMXTM. This change was suggested by
+Kevin Tyle/U Albany.
+------------------------------------------------------------------------
+r204 | jacobs | 2010-09-14 11:16:20 +0000 (Tue, 14 Sep 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/cgemlib/cvg/compareVgf.c
+   M /trunk/nawips/gempak/source/cgemlib/cvg/cvgv2x.c
+   M /trunk/nawips/gempak/source/cgemlib/cvg/vgf2xml.c
+
+Added and modified support functions for converting VG to XML and back again.
+Work done by Quan Zhou.
+------------------------------------------------------------------------
+r203 | jacobs | 2010-09-12 20:02:49 +0000 (Sun, 12 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghwwbk.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghwwbl.f
+
+Increased the size of the temporary arrays used to create the Tropical Cyclone
+VTEC product. The arrays were not large enough to handle the numerous, small
+segments for Hurricane Earl impacting the Northeast US coastline. 
+------------------------------------------------------------------------
+r202 | jacobs | 2010-09-12 19:59:36 +0000 (Sun, 12 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/sfstns.tbl
+
+At the request of the HPC, set NYL (Yuma MSAS) as a replacement for YUM (Yuma
+Airport) for the Daily Weather Map. Changed the priority plotting value to the
+flag for DWM use.
+------------------------------------------------------------------------
+r201 | jacobs | 2010-09-08 16:11:48 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gd/gdfrzl/vg2frzl.c
+
+Fixed a problem reported by the AWC where the existence of SFC freezing lines
+was not reflected in the range of levels in the AIRMET product. Modified the
+application to create a unique range for every run through the process, then
+merge all of the ranges at the end. 
+------------------------------------------------------------------------
+r200 | jacobs | 2010-09-08 16:06:32 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/help/hlx/strmid.hl1
+   M /trunk/nawips/gempak/help/hlx/strmid.hl2
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtclb.f
+
+Changed the NHC Cone Graphic to replace the distance scale with a disclaimer
+about the size of the storm not being related to the cone size.
+------------------------------------------------------------------------
+r199 | jacobs | 2010-09-08 16:01:17 +0000 (Wed, 08 Sep 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgsigw.c
+
+Fixed the format of SIGMETs to conform to the ICAO standard. Removed the FIR ID
+from the second line of data. Removed the phrase AREA BOUNDED BY from all SIGMET
+types. 
+------------------------------------------------------------------------
+r197 | jacobs | 2010-08-30 17:16:41 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/environ/gemenv.csh
+   M /trunk/nawips/environ/gemenv.sh
+   A /trunk/nawips/scripts/decoder
+   A /trunk/nawips/scripts/decoder/gairm_metwatch_processor.pl
+   A /trunk/nawips/scripts/decoder/xml2gairm4nmap.pl
+
+Produce the G-AIRMET flat files necessary to support NMAP2 and GPMAP related
+displays of the G-AIRMET referenced in proposals (1) New GAIRM 3-Hour Display
+for NMAP2, and (2) GPMAP Changes required to support 3-hour G-AIRMET snapshots.
+The decoder is a set of 2 PERL scripts. This work was done by Larry Hinson, AWC.
+------------------------------------------------------------------------
+r196 | jacobs | 2010-08-30 16:23:01 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/help/hlp/gpmap.hlp
+   A /trunk/nawips/gempak/help/hlx/gairm.hl1
+   A /trunk/nawips/gempak/help/hlx/gairm.hl2
+   M /trunk/nawips/gempak/parm/gpmap.prm
+   M /trunk/nawips/gempak/pdf/gpmap.pdf
+   M /trunk/nawips/gempak/source/gemlib/gg/ggmisc.f
+   M /trunk/nawips/gempak/source/gemlib/gg/testgg.f
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpmap.f
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpminp.f
+
+Add a new GPMAP MISC/GAIRM display functionality to render the 3-hour snapshot
+information associated with G-AIRMET forecasts. This work was done by Larry
+Hinson, AWC.
+------------------------------------------------------------------------
+r195 | jacobs | 2010-08-30 15:58:35 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/gemlib/gg/gggairm.f
+   M /trunk/nawips/gempak/source/nmaplib/nms/nmsdspl.f
+   M /trunk/nawips/gempak/tables/config/datatype.tbl
+   M /trunk/nawips/gempak/tables/config/miscset.tbl
+
+Aadd a new NMAP2 MISC/GAIRM display functionality to render the 3-hour snapshot
+information associated with G-AIRMET forecasts. This work was done by Larry
+Hinson, AWC.
+------------------------------------------------------------------------
+r194 | jacobs | 2010-08-30 15:01:06 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/contrib/awc/dcccfpvgf2010/dcccfpvgf2010.c
+
+A problem was identified with the NMAP2 software crashing when editing VGF files
+produced by the dcccfpvgf2010 encoder software with Auto-Placement turned on.
+The solution is to encode the CCF Areas/Lines with a grouptype number of 8 into
+the VGF files. This work was done by Larry Hinson, AWC.
+------------------------------------------------------------------------
+r193 | jacobs | 2010-08-30 14:35:56 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgccfw.c
+
+Revise CCFP to set the default Growth Trend on the CCFP Menu Choice GUI to
+“NC”. This work was done by Larry Hinson, AWC.
+------------------------------------------------------------------------
+r192 | jacobs | 2010-08-30 14:21:26 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/contrib/awc/bldfzlvlvgf
+   A /trunk/nawips/gempak/source/contrib/awc/bldfzlvlvgf/GNUmakefile
+   A /trunk/nawips/gempak/source/contrib/awc/bldfzlvlvgf/bldfzlvlvgf.c
+   A /trunk/nawips/gempak/source/contrib/awc/bldfzlvlvgf/bldfzlvlvgf.h
+   A /trunk/nawips/gempak/source/contrib/awc/bldfzlvlvgf/bldfzlvlvgf.mk
+
+Create a G-Airmet VGF generator that reads ASCII text files containing Freezing
+Level and Multi-Freezing Level information derived from AIRMET text and renders
+them in a G-AIRMET VGF format. This work was done by Larry Hinson, AWC.
+------------------------------------------------------------------------
+r191 | jacobs | 2010-08-30 14:12:14 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/libdepends.mk
+   A /trunk/nawips/gempak/include/parseAWC_XML.h
+   A /trunk/nawips/gempak/source/contrib/awc/sig_xmlvgf
+   A /trunk/nawips/gempak/source/contrib/awc/sig_xmlvgf/GNUmakefile
+   A /trunk/nawips/gempak/source/contrib/awc/sig_xmlvgf/cflags.mk
+   A /trunk/nawips/gempak/source/contrib/awc/sig_xmlvgf/sig_xmlvgf.c
+   A /trunk/nawips/gempak/source/contrib/awc/sig_xmlvgf/sig_xmlvgf.h
+   A /trunk/nawips/gempak/source/contrib/awc/sig_xmlvgf/sig_xmlvgf.mk
+   A /trunk/nawips/gempak/source/contrib/awc/xml_share
+   A /trunk/nawips/gempak/source/contrib/awc/xml_share/GNUmakefile
+   A /trunk/nawips/gempak/source/contrib/awc/xml_share/cflags.mk
+   A /trunk/nawips/gempak/source/contrib/awc/xml_share/parseAWC_XML.c
+
+Create an XML to VGF encoder that will read XML documents describing SIGMET
+hazards, and convert them to VGF files containing GFA SIGMET hazards. This work
+was done by Larry Hinson, AWC.
+------------------------------------------------------------------------
+r190 | jacobs | 2010-08-30 13:45:41 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/contrib/awc/fromToStateARTCC
+   A /trunk/nawips/gempak/source/contrib/awc/fromToStateARTCC/GNUmakefile
+   A /trunk/nawips/gempak/source/contrib/awc/fromToStateARTCC/fromToStateARTCC.c
+   A /trunk/nawips/gempak/source/contrib/awc/fromToStateARTCC/fromToStateARTCC.h
+   A
+/trunk/nawips/gempak/source/contrib/awc/fromToStateARTCC/fromToStateARTCC.mk
+   A /trunk/nawips/gempak/tables/bounds/artccbnds.tbl
+   A /trunk/nawips/gempak/tables/bounds/artccbnds.tbl.info
+   M /trunk/nawips/gempak/tables/config/clo.tbl
+
+Create an application to read Non-Convective NMAP2 From-Lines for input and
+produce a listing of the affected States, Great Lakes, Adjacent Coastal Waters,
+and ARTCC regions. This work was done by Larry Hinson, AWC.
+------------------------------------------------------------------------
+r189 | jacobs | 2010-08-30 13:40:16 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/cds/cdsccf.c
+
+Fixed a problem with gpmap filling CCFP line objects as if they were an area
+object. Initialized the fill flag for all types, then set it properly for each
+area object. This work was done by Larry Hinson, AWC.
+------------------------------------------------------------------------
+r188 | jacobs | 2010-08-30 12:21:34 +0000 (Mon, 30 Aug 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/error/sndslist.err
+   A /trunk/nawips/gempak/help/hlp/sndslist.hlp
+   A /trunk/nawips/gempak/parm/sndslist.prm
+   A /trunk/nawips/gempak/pdf/sndslist.pdf
+   A /trunk/nawips/gempak/source/programs/sn/sndslist
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/GNUmakefile
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/sndslist.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/sndslist.mk
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snldat.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snldta.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlfil.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlinp.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snllev.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snllvd.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlpdt.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlprm.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlprt.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlwlp.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlwmn.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlwsg.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlwsp.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlwst.f
+   A /trunk/nawips/gempak/source/programs/sn/sndslist/snlwtm.f
+   A /trunk/nawips/gempak/txt/programs/sndslist.txt
+   M /trunk/nawips/gempak/utilities/hlpbld/sn_hlpbld
+   M /trunk/nawips/gempak/utilities/pdfbld/sn_pdfbld
+
+Added a new application - SNDSLIST. This program lists upper air data in a
+format specified by the AMS DataStreme Project. The coding for this new program
+was done by Steve Lilly.
+------------------------------------------------------------------------
+r187 | jacobs | 2010-08-27 19:10:02 +0000 (Fri, 27 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/help/hlx/gparm.hl2
+   M /trunk/nawips/gempak/source/diaglib/de/dedriv.c
+   A /trunk/nawips/gempak/source/diaglib/de/dessum.c
+
+Add a new ensemble grid diagnostic - ENS_SSUM - to compute the non-weighted sum
+of the values of a scalar field over an ensemble. This work was done by Keith
+Brill, HPC.
+------------------------------------------------------------------------
+r186 | jacobs | 2010-08-27 19:08:33 +0000 (Fri, 27 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/util/spenes/spenes.c
+
+Add a section to the template for the NESDIS Satellite Precipitation Estimate
+(SPENES) product.
+------------------------------------------------------------------------
+r185 | jacobs | 2010-08-27 19:05:49 +0000 (Fri, 27 Aug 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/programs/sn/snmap/snmap_gif.mk
+   A /trunk/nawips/gempak/source/programs/sn/snprof/snprof_gif.mk
+
+Add make files for building SNMAP and SNPROF directly with the GIF driver.
+------------------------------------------------------------------------
+r184 | jacobs | 2010-08-20 18:16:55 +0000 (Fri, 20 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/bridge/ru/rudrp1.f
+
+Fixed a problem with dropsondes from the new tropical aircraft. The dcuair
+decoder looks for aircraft IDs with specific patterns. The new aircraft did not
+conform to existing patterns. So, patterns for N###F and NA### were added.
+------------------------------------------------------------------------
+r183 | jacobs | 2010-08-14 16:31:54 +0000 (Sat, 14 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtclb.f
+
+The TPC reported a problem with Advisory 1 for TD FIVE (2010). The advisory was
+issued at 730pm and the graphic only showed the hours without the minutes. Added
+the minutes to the graphic legend only if they are not 00.
+------------------------------------------------------------------------
+r182 | jacobs | 2010-08-14 15:51:57 +0000 (Sat, 14 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgsfp.c
+
+Fixed problem for HPC where the high resolution surface front product had too
+many characters per line. Changed the number of values per line to be less (7)
+than the low resolution product (10).
+------------------------------------------------------------------------
+r181 | jacobs | 2010-07-30 20:19:16 +0000 (Fri, 30 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/sfstns.tbl
+
+At the request of the SPC and the SDM, added more Gulf of Mexico platforms to
+the surface station table.
+------------------------------------------------------------------------

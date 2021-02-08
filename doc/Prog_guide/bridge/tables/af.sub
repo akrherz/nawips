@@ -1,0 +1,81 @@
+#------------------------------------------------------------------------
+# af.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		10/97	Original
+#------------------------------------------------------------------------
+
+afaflv.f	- ?
+afalat.f	- ?
+afalon.f	- ?
+afarfg.f	- ?
+afatim.f	- ?
+afatmp.f	- ?
+afator.f	- ?
+afatrb.f	- ?
+afawnd.f	- ?
+afawpt.f	- ?
+afbkgp.f	- ?
+afbltp.f	- ?
+afbsrc.f	- ?
+afcrid.f	- ?
+afdadr.f	- ?
+afdarp.f	- ?
+afdcod.f	- ?
+afdprp.f	- ?
+afdrco.f	- ?
+afflvl.f	- ?
+afgfld.f	- ?
+afgmpk.f	- ?
+afgrpt.f	- ?
+afhhfm.f	- ?
+afhhmm.f	- ?
+aficid.f	- ?
+afiffp.f	- ?
+afifiv.f	- ?
+afifmp.f	- ?
+afifpt.f	- ?
+afifsp.f	- ?
+afintf.f	- ?
+afobdh.f	- ?
+afpatp.f	- ?
+afpflv.f	- ?
+afpicg.f	- ?
+afpilr.f	- ?
+afploc.f	- ?
+afplyr.f	- ?
+afpnbd.f	- ?
+afptim.f	- ?
+afptlr.f	- ?
+afptmp.f	- ?
+afptor.f	- ?
+afptrb.f	- ?
+afpwnd.f	- ?
+afpwxv.f	- ?
+afrcld.f	- ?
+africg.f	- ?
+afriht.f	- ?
+afrpht.f	- ?
+afrswd.f	- ?
+afrtim.f	- ?
+afrtmd.f	- ?
+afrtmh.f	- ?
+afslat.f	- ?
+afslon.f	- ?
+aftbid.f	- ?
+aftmck.f	- ?
+aftmpc.f	- ?
+afwind.f	- ?
+afxbif.f	- ?
+
+#------------------------------------------------------------------------

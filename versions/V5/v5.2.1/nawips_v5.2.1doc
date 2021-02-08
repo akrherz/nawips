@@ -1,0 +1,54 @@
+
+                           NAWIPS Change Description Log
+
+   000. Miscellaneous
+
+	a. Moved older GEMPAK logs to versions/v5.2. Moved latest
+	   NAWIPS logs to versions/v5.2.1. Opened new logs for 
+	   new version of the NAWIPS system. Done, SJ 5/24/95.
+
+	b. Changed the magnitude scaling in GDWIND to use the sub area
+	   to compute the min/max values. Done, SJ 5/31/95.
+
+	c. Corrected cross-naming problems in the past weather symbol
+	   line widths with the pressure tendency and current weather
+	   symbol line widths.  This change prevents the pressure
+	   tendency symbols from displaying incorrect line widths.
+	   Done, GK 6/13/95.
+
+   001.	GEMPAK station tables
+
+	a. Added STID - SGF - for Springfield, MO (72440).
+	   Done, SJ 5/19/95.
+
+   002. Documentation
+
+	a. Updated HL2 files for various parameters and TXT files
+	   for some of the programs. Done, SS and SJ 5/31/95.
+
+	b. Changed the header of the QVEC and QVCL functions to match
+	   the documentation. Done, 5/31/95.
+
+	c. Updated NOTAE.HLP with new commands and program desriptions.
+	   Done, SJ 6/1/95.
+
+	d. Changed example in taxis.hl2 from upper case to lower case.
+	   Done, SJ 6/7/95.
+
+	e. Edited the TXT files for GDEDIT, GDOMEG and SNEDIT to fix
+	   small formatting problems. Done, SJ 6/12/95.
+
+	f. Completed the "N-AWIPS User's Guide 5.2.1". Delivered the
+	   entire directory structure under "doc/User_guide".
+	   Done, ML/SS/SJ 6/14/95.
+
+   003.	Device Drivers
+
+	a. Changed the file permissions on the created metafile from
+	   00666 (-rw-rw-rw) to 00644 (-rw-r--r-). This provides write 
+	   access for only the owner of the file. Done, SJ 6/1/95.
+
+   004.	AFOS tables
+
+	a. Added two products to the graphics directory: NMCGPHP03 and
+	   NMCGPHP0D to the Observed Graphics group. Done, LW 6/5/95.

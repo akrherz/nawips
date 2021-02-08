@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+#  cplibsub - used to propogate GNUmakefiles for
+#		root (top library) directories.
+#
+for dir in `find . -type d`
+do
+    cp -f $GEMPAK/build/GNUmakefile_libsub1 ./${dir}/GNUmakefile
+done
+cp -f $GEMPAK/build/GNUmakefile_libtop GNUmakefile

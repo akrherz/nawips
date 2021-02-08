@@ -1,0 +1,99 @@
+#------------------------------------------------------------------------
+# df.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		11/97	Original
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+#
+# NOTE:	All DF_ subroutines are called only by DV_, DG_, and other DF_
+#	subroutines.  They are not intended to be called by programmers
+#	at large.  Therefore, the DF library does not appear in the 
+#	Programmer's Guide.
+#
+#------------------------------------------------------------------------
+
+# dfabs.f	- 
+# dfacos.f	- 
+# dfadd.f	- 
+# dfasin.f	- 
+# dfatan.f	- 
+# dfatn2.f	- 
+# dfavg.f	- 
+# dfbvsq.f	-
+# dfcddr.f	- 
+# dfcdth.f	- 
+# dfcorl.f	- 
+# dfcos.f	- 
+# dfdden.f	- 
+# dfddr.f	- 
+# dfddt.f	- 
+# dfddx.f	- 
+# dfddy.f	- 
+# dfdth.f	- 
+# dfexp.f	- 
+# dfexpi.f	- 
+# dffcnt.f	- 
+# dfgwfs.f	- 
+# dfhigh.f	- 
+# dfhilo.f	- 
+# dfjcbn.f	- 
+# dfknts.f	- 
+# dflap.f	- 
+# dflav.f	- 
+# dfldf.f	- 
+# dfln.f	- 
+# dflog.f	- 
+# dflows.f	- 
+# dfmask.f	-
+# dfmass.f	- 
+# dfmixr.f	- 
+# dfmul.f	- 
+# dfplat.f	- 
+# dfplon.f	- 
+# dfpois.f	- 
+# dfpolf.f	- 
+# dfquo.f	- 
+# dfrelh.f	- 
+# dfsavg.f	- 
+# dfsavs.f	- 
+# dfsbtw.f	- 
+# dfsge.f	- 
+# dfsgt.f	- 
+# dfsin.f	- 
+# dfsle.f	- 
+# dfslt.f	- 
+# dfsm5s.f	- 
+# dfsm9s.f	- 
+# dfsqrt.f	- 
+# dfstab.f	- 
+# dfsub.f	- 
+# dftan.f	- 
+# dftav.f	- 
+# dftdf.f	- 
+# dfthan.f	- 
+# dfthes.f	- 
+# dfthta.f	- 
+# dfthte.f	- 
+# dfthwc.f	- 
+# dftmst.f	- 
+# dftmwk.f	- 
+# dfwndx.f	- 
+# dfxav.f	- 
+# dfxsum.f	- 
+# dfxval.f	- 
+# dfyav.f	- 
+# dfysum.f	- 
+# dfyval.f	- 
+
+#------------------------------------------------------------------------

@@ -1,0 +1,45 @@
+#------------------------------------------------------------------------
+# cfl.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+cflaopn.c	- Open File For Appending
+cflclos.c	- Close File
+cfldopn.c	- Open File For Read Only Access
+cflffil.c	- Find File Alphabetically Less Than Reference Input
+cflinqr.c	- Determine Existence And Size Of File
+cfliret.c	- Translate Non-Zero Error To "CFL" Error Code
+cflmdat.c	- Build Date/Time From Template And File Name
+cflmnam.c	- Build File Name From Template And Time
+cflrdir.c	- Read Directory Into Structure
+cflrdln.c	- Read Line Of Text From File
+cflread.c	- Read Buffer Of Bytes From File
+cflropn.c	- Open File For Reading
+cflscnd.c	- Read Directory Into String
+cflseek.c	- Reposition File
+cflsrch.c	- Search For Text Pattern
+cfltbnr.c	- Determine Number Of Viable Records In Table
+cfltbop.c	- Open GEMPAK Table For Reading
+cfltmpo.c	- Open Temporary File For Writing
+cfltrln.c	- Read Next Line From GEMPAK Table
+cfluopn.c	- Open File For Updating
+cflwher.c	- Determine Position In File
+cflwopn.c	- Open File For Writing
+cflwrit.c	- Write Buffer Of Bytes Into File
+# testcfl.c	- CFL Library Test Program
+
+#------------------------------------------------------------------------

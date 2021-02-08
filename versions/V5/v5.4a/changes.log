@@ -1,0 +1,58 @@
+
+                             NAWIPS 5.4 Fixes Changed Files Log
+
+
+010b.	8/21/96		gempak/source/gemlib/ip/ipdynm.f
+
+001a.	8/21/96		gempak/source/bridge/dc/dcb.c, dcgbul.c,
+			dcosnm.f
+
+011a.	8/21/96		gempak/source/programs/gd/gdplot/gdplot.f
+
+008a.	8/21/96		gempak/help/lutfil.hl2
+
+001b.	8/21/96		gempak/source/bridge/metar/dcdmetar.c, 
+			dcdmtrmk.c
+
+010c.	8/21/96		gempak/source/gemlib/st/strxbl.f, testst.f
+			gempak/source/gemlib/st/AIX/strxbl.f,
+			testst.f, stlstc.f, stlstf.f, stlsti.f
+
+011d.	9/04/96		gempak/source/programs/sf/sfgram/sfxdta.f
+
+010d.	9/04/96		gempak/source/gemlib/in/inhilo.f
+
+010e.	9/04/96		gempak/source/device/draw/imark.f
+
+006a.   9/05/96         gempak/source/device/draw/iwthr.f
+			gempak/source/device/plot/dptnd.f, dpwth.f
+			gempak/source/testprog/plotsyms.f
+
+			NEW:doc/User_guied/tools/symplot
+			gempak/build/plotsyms_link
+
+			doc/User_guide/Final/apxC.ps, chap3.ps
+			doc/User_guide/apx/symlin.apx
+			doc/User_guide/maker/apxC.doc, chap3.doc
+			doc/User_guide/symbols/cloud.ps, cloud.xwd,
+			icing.ps, icing.xwd, lineTypes.ps, lineTypes.xwd,
+			markers.ps,, markers.xwd, pastWeather.ps, 
+			pastWeather.xwd, pressureTendency.ps, pressureTendency.xwd,
+			skyCover.ps, skyCover.xwd, special.ps, special.xwd,
+			turbulence.ps, weather.ps, weather.xwd
+
+			gempak/build/all_link, atest_link
+			gempak/help/colors.hl2
+
+006b.	9/06/96		gempak/source/gplt/utility/gdrmap.f
+
+001c.	9/10/96		gempak/source/bridge/dc/dcghdr.f
+
+001d.	9/11/96		gempak/source/bridge/dc/dcosnm.f
+
+003a.	9/11/96		gempak/source/gemlib/dg/dggetv.f
+			gempak/error/dg.err
+
+001e.	9/12/96		gempak/source/programs/dc/dchrly/dcadcd.f
+
+010f.	9/12/96		gempak/source/gemlib/im/imar2gm.f

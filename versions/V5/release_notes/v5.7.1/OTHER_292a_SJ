@@ -1,0 +1,8 @@
+Auto-update for NWX (cdb)
+
+An auto-update feature has been added to NWX. The user must first select
+a data type and a location. If auto-update is on, the data will be 
+reloaded at 5 minute intervals. If new data has arrived, it will be 
+displayed in the text window. The current default value for Auto-update
+is off.
+

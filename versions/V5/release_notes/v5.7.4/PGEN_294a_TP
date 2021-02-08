@@ -1,0 +1,9 @@
+External Project:  PGEN
+Track:  294
+Task:  14.5
+
+SIGMET output file location
+
+A new option, SIG_FILE_DIR, has been added to the preferences table, $GEMTBL/config/prefs.tbl, that allows the user to specify the location directory where SIGMET products produced via Product Generation will be saved.
+
+

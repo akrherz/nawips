@@ -1,0 +1,7 @@
+Hurricane Graphics Improvements for 2004 Season (CPHC)
+
+The tropical cyclone danger area graphic was corrected to remove
+spurious storm name labels for Central Pacific storms.  (The storm
+name was being plotted even if the Pacific storm was outside the
+plot area.)
+

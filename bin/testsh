@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "About to execute .profile"
+~/.profile
+echo "Returned from .profile"

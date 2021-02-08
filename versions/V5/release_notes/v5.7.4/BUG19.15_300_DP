@@ -1,0 +1,5 @@
+BUG FIX
+
+	A. Corrected the problem where latitude-longitude lines were not being 	
+	plotted correctly on unremapped satellite imagery.
+

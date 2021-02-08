@@ -1,0 +1,3343 @@
+			NAWIPS 5.4.3.k+ Changed Files Log
+
+	   	 NEW => new files; CSC => calling sequence changes 
+
+010a.	2/18/99	gempak/source/gemlib/ss/ssvers.f
+
+018a.	2/18/99	nprogs/nmap/source/nmap_dataw.c, nmap_dsp.c, nmap_loopw.c
+	NEW:	gempak/source/driver/active/xw/xcpypxm.c, xrollbk.c
+
+018b.	2/18/99	nprogs/nmap/source/nmap_mbotw.c, nmap_mmenuw.c
+
+021a.	2/18/99	nprogs/nmap/source/vgf/nmap_pgpdel.c
+	NEW:	gempak/source/nxmlib/NxmGeneric.c
+
+010b.	2/18/99	gempak/source/cgemlib/clo/clocmn.h
+
+
+010c.	2/18/99	gempak/source/gemlib/pc/pcfunc.f
+		gempak/source/gemlib/pr/prwvdd.f, prwvph.f, testpr.f
+		gempak/source/gemlib/pt/ptfunc.f, testpt.f
+		gempak/help/sfparm.hl2
+		gempak/txt/apx/parms.apx
+		gempak/tables/parms/pcconv.tbl
+
+	NEW:	gempak/source/gemlib/pr/prwphf.f, prwphm.f, prwvsw.f
+		gempak/source/gemlib/pt/ptswel.f
+
+020a.	2/18/99	NEW:  gempak/utilities/counties/cntybinfo,
+				cntybinfo.c, cntybinfo_link
+
+010d.	2/19/99	gempak/source/cgemlib/clo/cloinit.c, testclo.c, 
+						testclo_link
+	NEW:	gempak/source/cgemlib/clo/cloqcountty.c, clordcntyb.c
+
+010e.	2/19/99	gempak/source/cgemlib/cds/cdstext.c
+
+018c.	2/19/99	nprogs/nmap/source/nmap_dataw.c, nmap_dsp.c
+		gempak/include/xwcmn.h
+		gempak/source/driver/active/xw/xinita.c, xsplot.c
+	NEW:	gempak/source/driver/active/xw/xsincr.c
+
+021b.	2/19/99	gempak/include/hints.h
+		nprogs/nmap/source/vgf/nmap_pgevt.c, nmap_pgfrtw.c, 
+			nmap_pgline.c, nmap_pgtxt.c, nmap_pgnew.c, 
+			nmap_pgvgf.c, nmap_pgpalw.c, nmap_pgsymb.c
+	NEW:	nprogs/nmap/source/vgf/nmap_pglabel.c
+
+012a.	2/19/99	gempak/source/programs/gui/nafos/nafmenuw.c
+		nprogs/nsat/source/mmenuw.c
+		nprogs/ntrans/source/menubar.c, ntrans_compile, Makefile
+
+018d.	2/22/99	nprogs/nmap/source/nmap_mbotw.c
+
+010f.	2/22/99	gempak/source/cgemlib/cvg/cvgcp.c
+
+011a.	2/22/99	gempak/source/programs/oa/oabsfc/oabsfc.f, oacopn.f
+		gempak/help/oabsfc.hlp
+
+011b.	2/22/99	gempak/help/sfparm.hl2
+		gempak/source/programs/sf/sfmap/sfmap.f,
+			sfmclr.f, sfmcof.f, sfmplt.f, sfmprm.f
+
+021c.	2/23/99	nprogs/nmap/source/vgf/nmap_pgwndw.c
+
+021d.	2/23/99	nprogs/nmap/source/vgf/nmap_pgpdel.c
+
+021e.	2/23/99	nprogs/nmap/source/vgf/nmap_pgqpf.c
+
+021f.	2/23/99	nprogs/nmap/source/vgf/nmap_pgnew.c, nmap_pgline.c, 
+						nmap_pgfrtw.c
+
+010g.	2/24/99	gempak/source/cgemlib/clo/cloinit.c, clordcntyb.c, 
+				clotgltln.c, testclo.c, clocmn.h
+		gempak/include/gemprm.h
+	NEW:	gempak/source/cgemlib/clo/clocntybgall.c, clocntybinply.c
+
+021g.	2/24/99	nprogs/nmap/source/vgf/nmap_pgfilw.c
+
+011c.	2/24/99	gempak/source/nxmlib/NxmPrt.c
+
+021h.	2/24/99	gempak/source/cgemlib/cds/cdswbox.c
+		gempak/source/cgemlib/cgr/cgrinpoly.c
+		nprogs/nmap/source/vgf/nmap_pgwlst.c
+
+010h.	2/24/99	gempak/source/cgemlib/cvg/cvgcp.c
+
+021i.	2/24/99	nprogs/nmap/source/vgf/nmap_pgpdel.c, nmap_pgutls.c
+
+010i.	2/24/99	gempak/source/gemlib/dm/dmgtim.f
+		gempak/source/gemlib/fl/flmfls.f
+		gempak/source/gemlib/ti/testti.f
+	NEW:	gempak/source/gemlib/ti/ticcnt.f, tiyyyy.f
+
+007a.	2/24/99	gempak/source/cgemlib/cds/cdswind.c
+		gempak/source/device/draw/ibarb.f, idraw.f, iarrw.f
+		gempak/source/device/plot/dbarb.f, ddarr.f, darrw.f
+		gempak/source/testprog/plotsyms.f
+
+021j.	2/24/99	nprogs/nmap/source/vgf/nmap_pgsfp.c
+
+011d.	2/24/99	nprogs/nmap/source/vgf/nmap_pgggc.c
+		gempak/source/programs/gd/grphgd/gggint.f,
+			ggrads.f, ggrdln.f, grinp.f, grphgd.f, gsmoot.f
+		gempak/help/keycol.hl1, keycol.hl2
+		gempak/parm/grphgd.prm
+		ggempak/txt/programs/grphgd.txt
+
+009a.	2/24/99	gempak/utilities/hlpbld/hlpbld_link
+		gempak/utilities/pdfbld/pdfbld_link
+
+018e.	2/25/99	nprogs/nmap/source/nmap_dataw.c
+
+008a.	2/25/99	gempak/txt/programs/oabsfc.txt
+
+021k.	2/25/99	gempak/source/cgemlib/ces/cesrtbl.c
+
+021l.	2/25/99	gempak/source/programs/util/sfcsplt/sfcsplt.c
+
+001a.	2/25/99	gempak/source/bridge/ls/lswgem.f
+	NEW:	gempak/source/bridge/ls/lsqctl.f
+
+010j.	2/25/99	gempak/source/cgemlib/clo/clocntybinply.c
+
+021m.	2/25/99	gempak/source/cgemlib/cvg/cvgcp.c
+		nprogs/nmap/source/vgf/nmap_pgfilw.c
+
+021n.	2/25/99	gempak/source/cgemlib/cvg/convcvg.c, cvgc3k3j.c
+
+018f.	2/26/99	nprogs/nmap/source/nmap_roamw.c
+
+008b.	3/1/99	help/nmap/WhatsNew.hlp
+
+======================= Patch 5.4.3.l =============================
+
+010k.	3/2/99	gempak/source/gemlib/ss/ssvers.f
+
+021o.	3/2/99	nprogs/nmap/source/vgf/nmap_pgdsel.c
+
+016a.	3/2/99	nprogs/nwx/source/srchw.c
+
+020b.	3/2/99	doc/Prog_guide/shared/tools/checkSrc.sh, ptypcmpf.perl
+		bin/ndirect
+	NEW:	doc/Prog_guide/shared/tools/ptypcmpc.perl
+
+010l.	3/2/99	gempak/source/cgemlib/cvg/cvgcp.c
+
+007b.	3/2/99	gempak/source/driver/active/ps/pline.c
+		gempak/source/cgemlib/cds/cdswind.c
+
+018g.	3/3/99	nprogs/nmap/source/nmap_seekw.c
+
+021p.	3/3/99	nprogs/nmap/source/vgf/nmap_pgfrtw.c, nmap_pgline.c, 
+						nmap_pgsymb.c
+
+011e.	3/3/99	gempak/source/gemlib/in/incclr.f, testin.f
+		gempak/source/programs/sf/sfmap/sfmap.f, afmclr.f, 
+						sfmprm.f, sfmplt.f
+		gempak/help/colors.hl2
+
+019a.	3/3/99	gempak/tables/config/mapfil.tbl
+
+	NEW:	gempak/maps/mefba1.ncp, mefba2.ncp, mefbp1.ncp, mefbp2.ncp
+		gempak/maps/ascii/ascmefba1.ncp, ascmefba2.ncp, 
+					ascmefbp1.ncp, ascmefbp2.ncp
+		gempak/maps/swapped/mefba1.ncp, mefba2.ncp, mefbp1.ncp, 
+							mefbp2.ncp
+
+019b.	3/4/99	gempak/tables/stns/zones.tbl
+		gempak/maps/loosuo.nws, hiosuo.nws
+		gempak/maps/ascii/ascloosuo.nws, aschiosuo.nws
+		gempak/maps/swapped/loosuo.nws, hiosuo.nws
+	NAWTR only:	shape_files/ascorosuo.nws
+			shape_files/programs/abbrev.tbl, 
+			get_utilities, GenMarZones.csh
+
+018h.	3/4/99	nprogs/nmap/source/nmap_sfmap.f
+
+007c.	3/4/99	gempak/help/sfparm.hl2
+		gempak/source/testprog/plotsyms.f
+		gempak/source/device/plot/dptnd.f
+		gempak/source/device/draw/imark.f, isky.f, isymb.f
+
+011f.	3/4/99	gempak/source/programs/oa/oabsfc/oabsfc.f, oacdsp.f, 
+							oacinp.f
+		gempak/nts/gemglb.nts
+		gempak/parm/oabsfc.prm
+		gempak/txt/programs/oabsfc.txt
+
+	NEW:	gempak/source/gemlib/oa/oagint.f
+		gempak/help/qcntl.hl1, qcntl.hl2
+
+010m.	3/5/99	gempak/source/gemlib/pc/pccmn.cmn, pccmst.f, pcdfst.f, 
+					testpc.f
+		gempak/source/programs/oa/oabsfc/oacdta.f
+		gempak/source/programs/oa/oabsnd/oandta.f
+		gempak/source/programs/oa/oagrid/oagstn.f
+		gempak/source/programs/sf/sfgram/sfxdta.f
+		gempak/source/programs/sf/sfl604/sfl6pr.f
+		gempak/source/programs/sf/sflist/sfldta.f
+		gempak/source/programs/sf/sfmap/sfmap.f
+		gempak/source/programs/sf/sfmod/sfmod.f
+		gempak/source/programs/sn/sncross/snsprm.f, snsrge.f, 
+							snstha.f, snswnd.f
+		gempak/source/programs/sn/snhodo/snhdta.f
+		gempak/source/programs/sn/snlist/snldta.f
+		gempak/source/programs/sn/snmap/snmap.f
+		gempak/source/programs/sn/snmod/snodat.f
+		gempak/source/programs/sn/snprof/snprof.f
+		gempak/source/programs/sn/sntser/sntdta.f
+		nprogs/nmap/source/nmap_sfmap.f, nmap_snmap.f
+	CSC:	gempak/source/gemlib/pc/pcsstn.f
+
+011g.	3/5/99	gempak/source/programs/sf/sfmod/sfmod.f, sfcinp.f, 
+						sfcnfl.f, sfcopt.f
+		gempak/error/sfmod.err
+		gempak/help/sfparm.hl2
+		gempak/parm/sfmod.prm
+		gempak/tables/parms/pcconv.tbl
+		gempak/txt/apx/parms.apx
+		gempak/txt/programs/sfmod.txt
+		gempak/source/gemlib/pc/pcfunc.f
+		gempak/source/gemlib/pr/testpr.f
+
+	NEW:	gempak/source/gemlib/pr/prdmax.f, prdmin.f
+		gempak/tables/pack/dlwx.pack
+
+011h.	3/8/99	gempak/tables/config/prmlst.tbl
+		gempak/build/sf_compile, sf_link
+
+	NEW:	gempak/source/programs/sf/sfvgsf/sfvprm.f, sfvcmn.h,
+		sfvstn.f, sfvdta.f, sfvvgf.c, sfvget.c, sfvgsf.f,
+		sfvinp.f, sfvopt.f, sfvgsf_link
+		gempak/txt/programs/sfvgsf.txt
+		gempak/parm/sfvgsf.prm
+		gempak/tables/pack/mmfcst.pack
+		gempak/error/sfvgsf.err
+
+011i.	3/8/99	gempak/source/programs/util/sfcsplt/sfcsplt.c
+
+021q.	3/8/99	nawdv/nprogs/nmap/source/vgf/nmap_pgactv.c,
+		nmap_pgconn.c, nmap_pgmdfy.c, nmap_pgmodv.c,
+		nmap_pgpdel.c, nmap_pgutls.c
+		nawdv/gempak/include/pgprm.h
+
+011j.	3/8/99	gempak/source/testprog/plotsyms.f
+
+011k.	3/9/99	gempak/source/programs/sf/sfvgsf/sfvcmn.h,
+		sfvvgf.c, sfvget.c, sfvdta.f, sfvinp.f
+		gempak/help/notae.hlp
+
+021r.	3/9/99	nprogs/nmap/source/vgf/nmap_pgpdel.c
+
+021s.	3/9/99	nprogs/nmap/source/vgf/nmap_pgpalw.c, nmap_pgsymb.c,
+		nmap_pgvgf.c, nmap_pggst.c, nmap_pgundo.c
+
+016b.	3/10/99	nprogs/nwx/source/srchb.c, sstruct.c
+
+010n.	3/10/99	gempak/source/gemlib/pt/ptfunc.f, testpt.f
+		gempak/tables/parms/pcconv.tbl
+		gempak/txt/apx/parms.apx
+		gempak/help/sfparm.hl2
+	NEW:	gempak/source/gemlib/pt/ptdprc.f
+
+018i.	3/10/99	nprogs/nmap/source/nmap_botw.c
+
+011l.	3/11/99 gempak/source/gemlib/in/intaxs.f
+		gempak/source/programs/gd/gdthgt/gdtxta.f
+
+021t.	3/11/99	gempak/source/cgemlib/cgr/cgrdist.c, cgrsegdist.c
+		gempak/source/cgemlib/cvg/cvgscan.c
+		nprogs/nmap/source/vgf/nmap_pgmdfy.c
+		gempak/include/gemprm.h
+
+021u.	3/12/99 ==> gempak/include/cescmn.h [structure change]
+		gempak/tables/pgen/setting.tbl
+		gempak/source/cgemlib/ces/cesget.c, cesrtbl.c,
+						cesset.c, testces.c
+		nprogs/nmap/source/vgf/nmap_pgedit.c, nmap_pgsymb.c
+
+011m.	3/12/99 gempak/source/programs/sf/sfmod/sfmod.f
+		gempak/source/programs/sf/sfdelt/sfdelt.f
+		gempak/source/programs/sf/sfgram/sfxdta.f
+		gempak/source/programs/sf/sfl604/sfl6pr.f
+		gempak/source/programs/sf/sflist/sflprc.f, sflprt.f
+		gempak/source/programs/sf/sfmap/sfmap.f
+		gempak/source/programs/sf/sfchck/sfchck.f
+		gempak/source/programs/sf/sfedit/sfestn.f
+		gempak/source/programs/sf/sfstns/sfstns.f
+		gempak/source/programs/oa/oabsfc/oacdta.f
+		gempak/source/programs/oa/oagrid/oagstn.f
+		gempak/source/gemlib/sf/testsf.f
+		gempak/source/gemlib/pc/testpc.f
+		gempak/source/bridge/mt/mtdcod.f
+		gempak/source/bridge/sc/scdcod.f
+		gempak/source/bridge/ls/lsgemp.f
+		gempak/source/cgemlib/cds/cdswbox.c
+		nprogs/nmap/source/vgf/nmap_pgwfmt.c, nmap_pgwlst.c
+		nprogs/nmap/source/nmap_sfmap.f
+		nprogs/nwx/source/srcho.c
+	CSC:	gempak/source/gemlib/sf/sfsnxt.f, sfqstn.f, sfsstn.f, 
+							sfustn.f 
+
+021v.	3/15/99	nprogs/nmap/source/vgf/nmap_pgwfmt.c
+	NEW:	gempak/tables/nmap/nmap_pgw.tbl
+
+015a.	3/15/99	nprogs/nsat/source/file.c
+
+018j.	3/15/99	nprogs/nmap/source/nmap_dataw.c, nmap_image.c,
+		nmap_dttmw.c, nmap_dtmbw.c, nmap_obs.c
+		nprogs/nmap/source/vgf/nmap_pgfilw.c
+
+021w.	3/15/99	gempak/source/device/draw/ipatln.f
+		gempak/source/testprog/plotsyms.f
+		nprogs/nmap/source/vgf/nmap_pgobj.c, nmap_pgpalw.c
+		gempak/include/drwids.h
+		gempak/tables/draw/splpat.tbl
+		gempak/tables/pgen/linebtn.tbl, setting.tbl
+	NEW:	icons/nmap/spln22.xbm
+
+008c.	3/16/99	gempak/source/gemlib/
+		./cv/cvprmt.f
+		./dm/dmggpm.f
+		./dp/dppack.f, dpudif.f, dpunmc.f, dpunpk.f
+		./fl/flmfls.f
+		./gd/gdfltm.f, gdgtmf.f, gdwpgd.f
+		./gdu/gduginp.f
+		./gg/ggcbar.f, ggzare.f
+		./gr/grmttl.f, grplin.f, grsubx.f, grtmfl.f
+		./im/imcbar.f, imttob.f, prnlnr.f
+		./in/incint.f, inintc.f, inline.f
+		./na/narhdr.f
+		./pc/pcclyr.f, pccstb.f, pcfunc.f, pcsing.f
+		./pd/pdctot.f, pddwpt.f, pdkinx.f, pdsduv.f, 
+			pdtmwb.f, pdvpmr.f
+		./sf/sfcacny.f
+		./sn/sncrfp.f, snrprt.f
+		./st/statoe.f, stlstf.f
+		./tg/tgiftm.f
+
+011n.	3/16/99	gempak/source/programs/oa/oabsfc/oabsfc.f, oacdta.f,
+		oacopn.f, oacprm.f
+		gempak/source/gemlib/oa/oagint.f
+		gempak/txt/programs/oabsfc.txt
+		gempak/tables/stns/sfstns.tbl
+		gempak/error/oabsfc.err
+
+021x.	3/16/99	gempak/source/cgemlib/ces/cesget.c, cesrtbl.c,
+			cesset.c
+		gempak/source/nxmlib/NxmBxmBtn.c
+		nprogs/nmap/source/vgf/nmap_pgedit.c, nmap_pglabel.c,
+		nmap_pgline.c, nmap_pgnew.c, nmap_pgpalw.c, nmap_pgvgf.c
+		**==> gempak/include/cescmn.h [structure change]
+
+021y.	3/16/99	nprogs/nmap/source/vgf/nmap_pgprd.c
+
+011o.	3/16/99	gempak/source/programs/sf/sfvgsf/sfvstn.f
+		gempak/source/cgemlib/cvg/cvgsvsym.c
+
+001b.	3/17/99	gempak/source/bridge/dc/dcosfc.f, dcosfr.f, dcosnd.f,
+						dcosnm.f
+		gempak/source/bridge/ls/lsgemp.f
+		gempak/source/bridge/mt/mtdcod.f
+		gempak/source/bridge/sc/scdcod.f
+		gempak/source/gemlib/pc/pcsstn.f, pccmst.f, testpc.f
+		gempak/source/gemlib/sf/sfsnxt.f, sfsstn.f, testsf.f
+		gempak/source/programs/oa/oabsfc/oacdta.f
+		gempak/source/programs/oa/oagrid/oagstn.f
+		gempak/source/programs/sf/sfchck/sfchck.f
+		gempak/source/programs/sf/sfdelt/sfdelt.f
+		gempak/source/programs/sf/sfedit/sfestn.f
+		gempak/source/programs/sf/sfgram/sfxdta.f
+		gempak/source/programs/sf/sfl604/sfl6pr.f
+		gempak/source/programs/sf/sflist/sflprc.f, sflprt.f
+		gempak/source/programs/sf/sfmap/sfmap.f
+		gempak/source/programs/sf/sfmod/sfmod.f
+		nprogs/nmap/source/nmap_sfmap.f
+		nprogs/nmap/source/vgf/nmap_pgwfmt.c, nmap_pgwlst.c
+		nprogs/nwx/source/srcho.c
+
+	CSC:	gempak/source/bridge/dc/dcstns.f
+		gempak/source/programs/sf/sflist/sfldta.f
+
+021z.	3/17/99	nprogs/nmap/source/vgf/nmap_pgprd.c, nmap_pgqpf.c,
+		nmap_pgsfp.c, nmap_pgwxd.c, nmap_pgxrain.c
+	NEW:	gempak/source/cgemlib/cvg/cvggetfname.c
+
+021aa.	3/17/99	nprogs/nmap/source/vgf/nmap_pgnumb.c, 
+			nmap_pgevt.c, nmap_pgedit.c
+
+010o.	3/17/99	gempak/source/gemlib/tg/tgrang.f, tgrinc.f, tgrnoi.f
+		gempak/source/gemlib/ti/testti.f, tifind.f, tisort.f
+	NEW: 	gempak/source/gemlib/ti/tidtm4.f, tiyy24.f, tiyymd.f
+
+021bb.	3/17/99	nprogs/nmap/source/vgf/nmap_pggst.c
+
+010p.	3/17/99	gempak/source/gemlib/pc/testpc.f, pcfunc.f, pcclcd.f,
+					pccmvs.f, pccmst.f
+		gempak/source/gemlib/pr/testpr.f
+		gempak/source/gemlib/pt/testpt.f, ptfunc.f
+		gempak/tables/parms/pcconv.tbl
+
+	NEW:	gempak/source/gemlib/pr/prtpfr.f
+		gempak/source/gemlib/pt/pttpfc.f 
+
+010q.	3/18/99	gempak/source/gemlib/pr/testpr.f
+
+016c.	3/18/99	nprogs/nwx/source/srchb.c
+
+010r.	3/18/99	gempak/source/cgemlib/cvg/cvgc3k3j.c, convcvg.c
+
+008d.	3/18/99	gempak/help/area.hl2, sfparm.hl2
+
+007d.	3/19/99	gempak/source/device/plot/dmark.f
+		gempak/source/driver/active/rbk/asymb.c, hsymb.f
+		gempak/source/driver/active/utf/usymb.c, hsymb.f
+
+008e.	3/22/99	help/nmap/WhatsNew.hlp
+
+======================= Patch 5.4.3.m ===========================
+
+021cc.	3/23/99	nprogs/nmap/source/vgf/nmap_pgdsel.c, nmap_pghdlb.c
+
+021dd.	3/23/99 gempak/source/cgemlib/cvg/cvgfndhl.c
+		nprogs/nmap/source/vgf/nmap_pgfilw.c
+
+007e.	3/24/99	gempak/source/driver/active/utf/uclosp.c
+
+010s.	3/24/99 gempak/source/cgemlib/clo/clordcnty.c, clordstn.c,
+					testclo.c, clocmn.h
+	NEW:	gempak/source/cgemlib/clo/clofindcnty.c, clofindstn.c
+
+010t.	3/24/99	gempak/source/gemlib/ss/ssvers.f
+
+018k.	3/24/99	gempak/source/cgemlib/crg/crgsetwnd.c
+		nprogs/nmap/source/nmap_seekw.c
+	NEW:	gempak/source/cgemlib/clo/clofindmatch.c
+
+011p.	3/25/99	gempak/source/programs/sf/sfgram/sfxdat.f
+
+010u.	3/25/99	gempak/source/cgemlib/cds/cdssymb.c
+		gempak/source/cgemlib/cvg/cvgload.c
+		gempak/source/device/draw/idraw.f
+
+019c.	3/25/99	gempak/maps/programs/ssfgsf.f
+		gempak/maps/hicnus.nws, locnus.nws
+		gempak/maps/ascii/aschicnus.nws, asclocnus.nws
+		gempak/maps/swapped/hicnus.nws, locnus.nws
+		gempak/tables/stns/county.tbl, countynam.tbl
+
+	NAWTR:	shape_files/programs/shpprm.h, GenCounty.csh, dbfcv.c,
+		dbfid.c, get_utilities, mapstrip, mapthin
+		shape_files/programs/shplib/cmpgetst.c
+
+	NEW:	shape_files/c_28de98.zip
+		shape_files/programs/shpcmn.h, DataSplit.perl, 
+		SortCntyBnds.perl, SortCounties.perl, bndcv.c, 
+		bndthin, fixcntybnds.perl
+		shape_files/programs/shplib/cshrdbh.c, cshrdbr.c, 
+		cshrshh.c, cshrshr.c, cshwdbr.c, cshwshr.c
+
+008f.	3/25/99	gempak/source/cgemlib/
+		./cgr/cgrbdeg.c, cgrcntstrks.c, cgrdist.c, cgrdlta.c,
+		cgrgetmtrx.c, cgrineg.c, cgrmact.c, cgrmkeg.c,
+		cgrrolseg.c, cgrsact.c, cgrsegdist.c, cgrtorad.c,
+		cgruact.c, cgrundomtrx.c, cgrynxt.c
+		./clo/clocntybinply.c, clodirect.c, clofindcity.c,
+		clordcntyb.c, clordstn.c, clotclosest.c, clotgid.c,
+		clotinpoly.c
+		./crg/crggettxtbox.c, crgggbnd.c, crgrngpt.c,
+		crgsetcir.c
+		./cst/cstcins.c, cstflst.c, cstitoc.c, cstnocc.c,
+		cstrlst.c, cstsplit.c
+		./ctb/ctbdttime.c, ctbpllist.c, ctbrbul.c, ctbrdtyp.c,
+		ctbrmtyp.c, ctbrstn.c, ctbtiff.c
+		./cvg/cvgcp.c, cvgctddel.c, cvgfscan.c, cvggetfname.c,
+		cvgopen.c, cvgsvcir.c, cvgtodev.c
+
+008g.	3/25/99	doc/Prog_guide/gemlib/tables/clo.sub, cst.sub,oa.sub,
+		st.sub, cds.sub, cpg.sub, ctb.sub, ip.sub, pr.sub,
+		ti.sub, cgr.sub, crg.sub, cvg.sub, pt.sub
+	NEW:	doc/Prog_guide/gemlib/tables/cbf.sub, jb.sub
+
+007f.	3/26/99	gempak/source/driver/active/utf/utfcmn.h, uinita.c,
+							usymb.c, utext.c
+		gempak/source/programs/sf/sfmap/sfmap.f
+		gempak/tables/pgen/grptyp.tbl
+		gempak/include/uscore.h
+
+	NEW:	gempak/source/driver/active/utf/hegrp.f, hsgrp.f,
+		uegrp.c, usgrp.c
+
+008h.	3/29/99	NEW:  gempak/txt/cgemlib/cbflib.txt
+		NEW:  gempak/txt/gemlib/awlib.txt, cvlib.txt, 
+			gplib.txt, jblib.txt
+
+008i.	3/29/99	gempak/source/gemlib/aw/awachr.f, awadbt.f, awalph.f,
+		awaplt.f, awgdef.f, awglsv.f, awgrph.f, awpend.f,
+		awpidb.f, awpinf.f, awplin.f, awpmap.f, awpplt.f,
+		awprod.f, awread.f, awrfil.c, awscom.f, awsdef.f,
+		awsver.f, awsyst.f, awwxsm.f
+
+008j.	3/29/99	gempak/source/cgemlib/clo/clofindcnty.c, 
+					clofindmatch.c, clofindstn.c
+		gempak/source/cgemlib/cvg/cvgcirsto.c, cvgqkopen.c
+		gempak/source/cgemlib/cvq/cvqgetginf.c
+		gempak/source/gemlib/gb/gbggds.c, gbgpds.c
+		gempak/source/gemlib/in/intxtn.f
+		gempak/source/gemlib/mv/mvbtoi.c, mvitob.c
+		gempak/source/gemlib/mv/Linux/mvbtoi.c, mvitob.c
+		gempak/source/gemlib/mv/OSF1/mvbtoi.c, mvitob.c
+		gempak/source/gemlib/mv/ULTRIX/mvbtoi.c, mvitob.c
+		gempak/source/gemlib/sn/sncrfp.f
+		gempak/source/appl/graph/gdaxis.f
+		gempak/source/appl/satellite/gsatmg.f
+
+010v.	3/30/99	gempak/source/gemlib/jb/jwbufr.f
+
+010w.	3/30/99	gempak/source/gemlib/gb/gbids.c, gbpds.c
+		gempak/source/cgemlib/cds/cdswbox.c
+		gempak/source/cgemlib/clo/testclo.c
+
+021ee.	3/30/99	nprogs/nmap/source/vgf/nmap_pgsymb.c, nmap_pggst.c
+	**==>	gempak/tables/pgen/setting.tbl
+	**==>	Format change: removed lat/lon for symbols
+
+012b.	3/30/99	gempak/source/driver/active/rbk/aclosp.c, aopen.c
+		nprogs/nsat/source/dslw.c, enhw.c, mainw.c, prefw.c
+		nprogs/ntrans/source/commands.c, dsply.c, multipanel.c
+
+011q.	3/31/99	gempak/parm/oabsnd.prm
+		gempak/txt/programs/oabsnd.txt
+		gempak/source/gemlib/oa/oagint.f
+		gempak/source/programs/oa/oabsfc/oabsfc.f, oacdta.f, 
+					oacopn.f, oacprm.f, oacrms.f
+		gempak/source/programs/oa/oabsnd/oabsnd.f, oandsp.f, 
+				oandta.f, oaninp.f, oanopn.f, oanrms.f
+
+	NEW:	gempak/source/programs/oa/oabsfc/oacstn.f
+		gempak/source/programs/oa/oabsnd/oanstn.f
+
+012c.	3/31/99	nprogs/nwx/source/prf.c, mapw.c, srchb.c, uvi.c, 
+							nwx.c, fosd.c
+		gempak/source/bridge/dc/dcb.c
+		gempak/source/driver/active/gn/cscrgb.c
+		gempak/source/driver/active/vg/vsymb.c, vwind.c
+		gempak/source/cgemlib/testclib/testclib.c
+		gempak/source/programs/gui/nalarm/nalarm.c, 
+						naltxt.c, viewfile.c
+
+018l.	3/31/99	gempak/source/driver/active/xw/xcpypxm.c, xg2pxm.c, 
+								xsroam.c
+		nprogs/nmap/source/nmap_dsp.c
+		nprogs/nmap/source/vgf/nmap_pghdlb.c, nmap_pgpalw.c,
+							nmap_pgvgf.c
+
+021ff.	3/31/99	nprogs/nmap/source/vgf/nmap_pgmdfy.c
+
+010x.	3/31/99	gempak/source/gemlib/gd/gdaddt.f
+		gempak/source/gemlib/tg/testtg.f
+		gempak/source/bridge/ma/mastbl.f
+		gempak/source/bridge/ru/rumand.f
+	NEW:	gempak/source/gemlib/tg/tgyymd.f
+
+008k.	4/1/99	gempak/source/bridge/
+		./av/av3chr.f, avdecc.f, avdecd.f
+		./dc/dcfint.f, dcosfc.f, dcosfr.f, dcoshp.f, 
+			dcsgnl.c, dcwbuf.c, dcwclg.c
+		./ff/ffdecd.f, ffglin.f
+		./ma/mabtyp.f, magemp.f
+		./mm/mm3chr.f, mmclim.f, mmdecc.f, mmdecd.f
+		./mn/mn3chc.f, mn3chr.f, mndecd.f, mnntdy.f, mnsls.f
+		./mt/mtdrop.f, mtslp.f, mtsspl.f, mtvald.f
+		./ra/radecd.f, rap24i.f, raptda.f, raptnd.f, rarmks.f
+		./rs/rsdeco.f, rsdhdr.f, rsgchr.f, rsggrp.f, 
+			rsgrpt.f, rsnmer.f, rswsdd.f
+		./ru/ruplvl.f, rushdr.f, rustmp.f, ruttcc.f
+		./ua/uaegrp.f, uaprs2.f, uaprs3.f, uatype.f
+		./ww/wwus9.f
+
+021gg.	4/1/99	icons/arrow.xbm
+		nprogs/nmap/source/vgf/nmap_pgwfmt.c
+
+016d.	4/2/99	nprogs/nwx/source/dir.c, draw.c, dslw.c, srcho.c,
+					txtw.c, wbox.c
+
+007g.	4/2/99	gempak/source/device/draw/ipatln.f
+
+018m.	4/5/99	nprogs/nmap/source/nmap_dataw.c, nmap_mbtnw.c
+	NEW:	icons/nmap/auto_off.xbm, auto_on.xbm
+
+010y.	4/6/99	gempak/source/gemlib/ti/tiaddm.f, ticcnt.f, tictoi.f,
+		tidtm4.f, tijtoi.f, timdif.f, tisubm.f, tiyy24.f,
+		tiyyyy.f
+
+010z.	4/6/99	gempak/source/cgemlib/cfl/cflmnam.c
+		gempak/source/gemlib/fl/flmnam.f
+
+021hh.	4/6/99	gempak/source/cgemlib/cvg/cvgcp.c, cvgrdcir.c, 
+		cvgrdele.c, cvgrdsym.c, cvgrdwnd.c
+		gempak/source/driver/active/xw/xmloop.c
+		nprogs/nmap/source/nmap_dsp.c, nmap_mcanvw.c,
+		nmap_mdl.c, nmap_mmenuw.c, nmap_seekw.c, nmap_stnmw.c
+		nprogs/nmap/source/vgf/nmap_pgdelpt.c, nmap_pgevt.c,
+			nmap_pgfilw.c, nmap_pgfrtw.c, nmap_pggst.c, 
+			nmap_pgpalw.c, nmap_pgsfp.c, nmap_pgwlst.c, 
+			nmap_pgwndw.c
+
+018n.	4/6/99	nprogs/nmap/source/nmap_mbtnw.c
+		nprogs/nmap/source/vgf/nmap_pghdlb.c
+
+018o.	4/7/99	nprogs/nmap/source/nmap_mcanvw.c, nmap_seekw.c, 
+							nmap_mainw.h
+
+001c.	4/7/99	gempak/source/bridge/ma/mawgem.f
+		gempak/error/ma.err
+		gempak/tables/stns/lsfstns.tbl, snstns.tbl 
+
+	Doc:	gempak/source/bridge/ma/mastbl.f
+		gempak/source/gemlib/ti/tiitoj.f
+
+021ii.	4/7/99	gempak/include/gemprm.h	[#define for unit conversion]
+		gempak/source/cgemlib/clo/clocntybgall.c
+		nprogs/nmap/source/vgf/nmap_pgprd.c, nmap_pgwfmt.c,
+					nmap_pgwlst.c
+	NEW:	nprogs/nmap/source/vgf/nmap_pgwatch.c
+
+018p.	4/7/99	nprogs/nmap/source/nmap_loopw.c, nmap_mbtnw.c
+		gempak/source/cgemlib/cvg/cvgrndef.c
+		gempak/source/nxmlib/NxmBusy.c, NxmBxmBtn.c, NxmPrt.c,
+		NxmColorBlink.c, NxmColrP.c, NxmConfirm.c, NxmDwell.c
+
+021jj.	4/7/99	nprogs/nmap/source/vgf/nmap_pgline.c
+
+018q.	4/7/99	gempak/source/nxmlib/NxmVers.c
+		nprogs/nmap/source/nmap_mapw.c
+		gempak/build/nprog_link
+		gempak/source/programs/gui/nalarm/nalarm_link
+
+021kk.	4/7/99	nprogs/nmap/source/vgf/nmap_pgevt.c, nmap_pghdlb.c,
+			nmap_pgmodv.c, nmap_pgmvcp.c, nmap_pgwbxw.c,
+			nmap_pgwlst.c
+
+021ll.	4/8/99	nprogs/nmap/source/vgf/nmap_pgpalw.c
+
+021mm.	4/8/99	nprogs/nmap/source/vgf/nmap_pgline.c
+
+018r.	4/8/99	nprogs/nmap/source/nmap_dsp.c, nmap_dataw.c, 
+							nmap_mbtnw.c
+	NEW:	icons/nmap/reload.xbm
+
+021nn.	4/8/99	nprogs/nmap/source/vgf/nmap_pgwatch.c, nmap_pgwbxw.c,
+					nmap_pgwfmt.c, nmap_pgwlst.c
+
+010aa.	4/8/99	gempak/source/cgemlib/cvg/convcvg.c, cvgc3k3j.c
+
+018s.	4/8/99	nprogs/nmap/source/nmap_mbotw.c
+		gempak/source/nxmlib/NxmBxmBtn.c
+	NEW:	icons/nmap/locator.xbm
+
+018t.	4/8/99	nprogs/nmap/source/nmap_mbtnw.c
+
+021oo.	4/9/99	nprogs/nmap/source/vgf/nmap_pgmodv.c
+
+021pp.	4/12/99	nprogs/nmap/source/vgf/nmap_pgmdfy.c, nmap_pgutls.c
+
+008l.	4/12/99	help/nmap/WhatsNew.hlp
+
+======================= Patch 5.4.3.n =============================
+
+010bb.	4/14/99	gempak/source/gemlib/ss/ssvers.f
+
+018u.	4/14/99	nprogs/nmap/source/nmap_dataw.c
+		gempak/source/driver/active/xw/xmloop.c
+
+001d.	4/14/99	gempak/source/bridge/af/afdcod.f
+	NEW:	gempak/source/bridge/af/affarp.f
+
+010cc.	4/14/99	gempak/source/gemlib/ti/tifind.f
+
+010dd.	4/15/99	gempak/source/gemlib/gb/gbgpds.c, gbends.c, gbcmn.h
+		gempak/tables/nmap/mod_res.tbl
+		gempak/nts/nmap/restore/modl/rfc/24-hr_obs_pcpn.al
+	NEW:	gempak/nts/nmap/restore/modl/rfc/24-hr_obs_pcpn_spc.al
+
+018v.	4/15/99	nprogs/nmap/source/nmap_dataw.c
+
+020c.	4/15/99	doc/Prog_guide/shared/tools/ptypcmpc.perl,
+					ptypcmpf.perl, checkSrc.sh
+	NEW:	doc/Prog_guide/shared/tools/paramcmp.perl, checksrc.pl
+
+010ee.	4/16/99	gempak/source/gemlib/in/intaxs.f
+		gempak/source/programs/gd/gdthgt/gdtxta.f
+
+007h.	4/16/99	gempak/source/driver/active/utf/uclosp.c
+
+010ff.	4/19/99	gempak/source/gemlib/fl/flmfil.f (renamed flffil.f)
+		gempak/source/gemlib/fl/testfl.f
+		gempak/source/gemlib/pc/testpc_link
+		gempak/source/programs/gd/gdcntr/gdcntr.f
+		gempak/source/programs/gd/gd****_link
+		gempak/source/programs/oa/oa****_link
+		gempak/source/programs/oa/sf****_link
+		gempak/source/programs/oa/sn****_link
+		gempak/help/sffile.hl2, snfile.hl2
+
+010gg.	4/19/99	gempak/source/cgemlib/css/linux2/scandir.c
+
+018w.	4/20/99	gempak/source/gemlib/gg/ggsttl.f
+		nprogs/nmap/source/nmap_dsp.c, nmap_image.c
+
+007i.	4/21/99	gempak/source/device/plot/ddarr.f, darrw.f
+
+010hh.	4/21/99	gempak/source/gemlib/tg/tgfind.f
+
+021qq.	4/21/99	nprogs/nmap/source/vgf/nmap_pgwatch.c, nmap_pgwfmt.c,
+					nmap_pgwlst.c
+		gempak/tables/nmap/nmap_pgw.tbl
+
+001e.	4/23/99	gempak/include/undscr.h
+		gempak/source/bridge/ww/wwctim.f, wwdcod.f, wwrtim.f,
+						wwus9.f
+		gempak/source/gemlib/gg/ggwtch.f, testgg.f
+		nprogs/nwx/source/gui.h, dir.c, draw.c, txtw.c, wbox.c,
+			srcho.c, wwctim.f, wwdcod.f, wwrtim.f, wwus9.f
+	NEW:	gempak/source/gemlib/gg/ggwlbl.f
+
+018x.	4/27/99	nprogs/nmap/source/nmap_dsp.c, nmap_image.c
+
+021rr.	4/27/99	gempak/include/drwids.h
+		nawdv/gempak/source/cgemlib/cvg/cvgsvfhed.c
+		nawdv/nprogs/nmap/source/nmap_zoomw.c
+		nawdv/nprogs/nmap/source/vgf/nmap_pgdel.c,
+		nmap_pgedit.c, nmap_pgevt.c, nmap_pgfilw.c, 
+		nmap_pggrpw.c, nmap_pglabel.c, nmap_pgnew.c,
+		nmap_pgnumb.c, nmap_pgpalw.c, nmap_pgtxt.c,
+		nmap_pgundo.c, nmap_pgvgf.c
+	NEW:	nprogs/nmap/source/vgf/nmap_pgpalw.h
+
+010ii.	4/27/99	gempak/source/gemlib/pt/ptfunc.f, testpt.f
+		gempak/source/gemlib/pc/pcfunc.f
+		gempak/source/gemlib/pr/testpr.f
+		gempak/tables/parms/pcconv.tbl
+		gempak/tables/pack/dlwx.pack, metar.pack
+		gempak/help/sfparm.hl2
+		gempak/txt/apx/parms.apx
+
+	NEW:	gempak/source/gemlib/pt/ptvsbf.f
+		gempak/source/gemlib/pr/prpr6x.f
+
+018y.	4/27/99	nprogs/nmap/source/nmap_seekw.c
+
+019d.	4/27/99	gempak/maps/ascii/mapfiles.doc
+		gempak/help/mapfil.hl2
+
+	NEW	gempak/maps/hiavus.nws
+		gempak/maps/swapped/hiavus.nws
+
+001f.	4/27/99	gempak/source/bridge/ww/wwctim.f, wwus9.f
+		gempak/source/gemlib/gg/ggwtch.f
+		nprogs/nwx/source/wwctim.f, wwus9.f
+
+010jj.	4/27/99	gempak/include/gemprm.h
+		gempak/tables/stns/marine.tbl
+		gempak/source/cgemlib/clo/clotclosest.c, cloclosest.c,
+			clordstn.c, clotgid.c, clotinltln.c, cloinit.c,
+			clotgltln.c, clotinpoly.c, testclo.c, clocmn.h
+
+021ss.	4/28/99	gempak/include/drwids.h
+		nawdv/gempak/source/cgemlib/cvg/cvgsvfhed.c
+		nawdv/nprogs/nmap/source/nmap_zoomw.c
+		nawdv/nprogs/nmap/source/vgf/nmap_pgdel.c,
+			nmap_pgedit.c, nmap_pgevt.c, nmap_pgfilw.c, 
+			nmap_pggrpw.c, nmap_pglabel.c, nmap_pgnew.c,
+			nmap_pgnumb.c, nmap_pgobj.c, nmap_pgpalw.c,
+			nmap_pgtxt.c, nmap_pgundo.c, nmap_pgvgf.c
+
+009b.	4/28/99	gempak/build/gd_link
+
+	NEW:	gempak/source/programs/gd/gdplot/gdplot_ps_link
+		gempak/source/programs/gd/gdplot2/gdplot_ps_link
+		
+018z.	4/29/99	nprogs/nmap/source/nmap_mbotw.c, nmap_mmenuw.c,
+							nmap_seekw.c
+
+018aa.	4/30/99	nprogs/nmap/source/nmap_dataw.c
+
+010kk.	4/30/99	gempak/source/cgemlib/clo/clofindmatch.c, clofindstn.c
+		nprogs/nmap/source/nmap_seekw.c
+
+021tt.	4/30/99	nprogs/nmap/source/vgf/nmap_pgevt.c, nmap_pgprd.c,
+					nmap_pgwatch.c, nmap_pgwfmt.c
+
+021uu.	4/30/99	nprogs/nmap/source/vgf/nmap_pgdsel.c, nmap_pgedit.c,
+					nmap_pgevt.c, nmap_pgsymb.c 
+		gempak/source/cgemlib/ces/cesrtbl.c, cesset.c
+		gempak/tables/pgen/setting.tbl
+
+021vv.	5/3/99	nprogs/nmap/source/vgf/nmap_pgpalw.c
+
+021ww.	5/4/99	nprogs/nmap/source/vgf/nmap_pgwatch.c, nmap_pgwfmt.c
+		gempak/include/pgprm.h
+
+019e.	5/4/99	gempak/tables/bounds/countybnds.tbl, countybnds.tbl.info
+		gempak/tables/stns/county.tbl, cwa.tbl, zones.tbl
+		gempak/maps/cwa.nws, hiznus.nws, loznus.nws, 
+						hicnus.nws, locnus.nws
+		gempak/maps/swapped/cwa.nws, hiznus.nws, loznus.nws,
+						hicnus.nws, locnus.nws
+		gempak/maps/ascii/asccwa.nws, aschiznus.nws, 
+			ascloznus.nws, aschicnus.nws, asclocnus.nws
+
+021xx.	5/4/99	nprogs/nmap/source/vgf/nmap_pgwft.c
+
+021yy.	5/4/99	nprogs/nmap/source/vgf/nmap_pgwlst.c
+
+018bb.	5/4/99	nprogs/nmap/source/nmap_seekw.c
+
+008m.	5/5/99	help/nmap/WhatsNew.hlp
+
+======================= Patch 5.4.3.o =============================
+
+006a.	5/11/99	gempak/source/gplt/contour/ccboxt.f
+
+010ll.	5/11/99	gempak/source/gemlib/fl/flmdat.f
+		gempak/source/cgemlib/cfl/cflmdat.c
+
+007j.   5/12/99 gempak/include/imgdef.h
+
+010mm.	5/12/99	gempak/source/cgemlib/clo/testclo.c
+	NEW:	gempak/source/cgemlib/clo/clotrack.c
+
+010nn.	5/12/99	gempak/source/gemlib/ss/ssvers.f
+
+018cc.	5/12/99	nprogs/nmap/source/nmap_mbtnw.c
+
+018dd.	5/12/99	nprogs/nmap/source/nmap_seekw.c
+
+018ee.	5/12/99	nprogs/nmap/source/nmap_dsp.c, nmap_image.c, 
+		nmap_mbotw.c, nmap_sfmw.c, nmap_stnmw.c, nmap_uairw.c 
+		gempak/source/gemlib/im/imdrop.f, imrtbl.f, imsimg.f
+		gempak/source/driver/active/xw/xgbank.c, xqclrs.c
+		gempak/source/programs/gd/gdplot2/gdpltb.f
+		gempak/source/nxmlib/NxmEnhw.c
+
+021zz.	5/12/99	nprogs/nmap/source/vgf/nmap_pgolk.c
+
+021aaa.	5/12/99	nprogs/nmap/source/vgf/nmap_pgwlst.c
+
+021bbb.	5/12/99 nprogs/nmap/source/vgf/nmap_pgprd.c
+
+021ccc.	5/12/99	nprogs/nmap/source/vgf/nmap_pgfrtw.c
+
+010oo.	5/12/99	gempak/source/cgemlib/ces/testces.c
+		gempak/source/cgemlib/cfl/cflrdir.c, cflrdln.c 
+		gempak/source/cgemlib/cgr/cgrtorad.c
+		gempak/source/cgemlib/cst/cstptmt.c, testcst.c
+		gempak/source/cgemlib/ctb/testctb.c
+		gempak/source/cgemlib/cvg/cvgc3k3j.c, dumpvgf.c, 
+						testcvg.c
+		gempak/source/programs/gui/nafos/nafdslw.c, nafos.c,
+							nafprefw.c
+		gempak/source/programs/util/avnbul/avnbul.c, bavcb.c,
+		bavcntr.c, bavcvtll.c, bavextrtinfo.c, bavgetpoly.c,
+		bavinitgplt.c, bavline.c, bavsplin.c, bavsptx.c,
+		bavtext.c, bavturb.c
+		gempak/source/programs/util/sfcsplt/sfcsplt.c
+
+010pp.	5/13/99	gempak/source/testprog/atest.f
+		gempak/source/gplt/main/gplt.f
+		gempak/source/gplt/access/ginit.f
+		gempak/source/gplt/attribute/gsattr.f
+		gempak/source/device/main/device.f
+		gempak/source/device/plot/dspln.f, dfill.f, dline.f
+		gempak/source/driver/active/*/hinit.f
+		gempak/source/driver/active/xwp/hinitps.f, hinitxw.f
+		gempak/source/gemlib/cv/testcv.f
+		gempak/source/gemlib/gg/testgg.f, ggmap.f, ggdmap.f
+		gempak/source/gemlib/in/testin.f, inline.f
+		gempak/source/programs/gd/gdplot2/gdblev.f, gdpltb.f
+		gempak/source/programs/gd/gdcross/gdxplt.f, gdxsdl.f
+							gdxlev.f
+		gempak/source/programs/gd/gdcntr/gdcntr.f
+		gempak/source/programs/gd/gdplot/gdblev.f, gdplot.f
+		gempak/source/programs/gd/gdprof/gdpplt.f
+		gempak/source/programs/gd/gdstream/gdstream.f
+		gempak/source/programs/gd/gdthgt/gdtxlv.f, gdtxpl.f
+		gempak/source/programs/gd/gdtser/gdtplt.f
+		gempak/source/programs/gp/gpbox/gpbox.f
+		gempak/source/programs/gp/gpmap/gpmap.f
+		gempak/source/programs/oa/oabox/oabox.f
+		gempak/source/programs/sf/sfgram/sfgram.f
+		gempak/source/programs/sn/sncross/snsbor.f, snsisn.f,
+							snslev.f
+		gempak/source/programs/sn/snhodo/snhodo.f
+		gempak/source/programs/sn/snprof/snpprm.f, snplin.f
+		gempak/source/programs/sn/sntser/sntplt.f
+		gempak/help/map.hl2, map.hl1, line.hl2, line.hl1
+		gempak/include/devset.cmn, devact.cmn, devreq.cmn,
+					devchr.cmn, funccode.prm
+
+	NEW:	gempak/source/appl/attribute/gqrduc.f, gsrduc.f
+		gempak/source/gplt/attribute/gqrduc.f, gsrduc.f
+		gempak/source/gplt/device/attribute/dsrduc.f
+		gempak/source/device/attribute/dsrduc.f
+		gempak/source/gemlib/cv/cvrduc.f
+
+001g.	5/13/99	gempak/source/bridge/ww/wwctim.f
+		nprogs/nwx/source/wwctim.f
+
+023a.	5/13/99	NEW:  icons/nmap/stmtrak.xbm, track.xbm
+
+018ff.	5/13/99 nprogs/nmap/source/nmap_mbotw.c, nmap_mmenuw.c
+
+021ddd. 5/13/99 nprogs/nmap/source/vgf/nmap_pgxrain.c
+
+021eee. 5/13/99 nprogs/nmap/source/vgf/nmap_pgolk.c
+
+010qq.	5/14/99	gempak/source/gemlib/lv/lvinpt.f
+		gempak/source/gemlib/pc/pccmdt.f, pcsfcz.f, testpc.f
+		gempak/source/programs/oa/oabsnd/oabsnd.f, oanprm.f
+		gempak/source/programs/sn/sncross/snsfil.f
+		gempak/source/programs/sn/snhodo/snhlev.f
+		gempak/source/programs/sn/snlist/snllev.f
+		gempak/source/programs/sn/snmap/snmap.f, snmlev.f
+		gempak/source/programs/sn/snmod/snolev.f
+		gempak/source/programs/sn/sntser/sntlev.f
+		nprogs/nmap/source/nmap_snmap.f
+		gempak/help/levels.hl2
+		gempak/txt/gemlib/lvlib.txt
+		gempak/include/undscr.h
+	NEW:	gempak/source/gemlib/pc/pcmand.f
+
+019f.	5/14/99	gempak/maps/mefbp2.ncp, mefbp1.ncp, mefba2.ncp,
+					mefba1.ncp
+		gempak/maps/swapped/mefbp2.ncp, mefbp1.ncp, 
+					mefba2.ncp, mefba1.ncp
+		gempak/maps/ascii/ascmefbp2.ncp, ascmefbp1.ncp,
+					ascmefba2.ncp, ascmefba1.ncp
+		gempak/tables/stns/geog.tbl
+		gempak/tables/pgen/tiffprod.tbl, faxprod.tbl
+		gempak/tables/nmap/mod_res.tbl
+	NEW:	gempak/nts/nmap/resore/modl/global/1000_850thk_only
+
+009c.	5/14/99	gempak/tables/nmap/mod_res.tbl
+		gempak/nts/nmap/restore/modl/global/
+		bl_2-meter_12hrmax_temp, bl_2-meter_12hrmin_temp
+
+	NEW:	gempak/nts/nmap/restore/modl/eta/ct_index
+		gempak/nts/nmap/restore/modl/ngm/ct_index
+		gempak/nts/nmap/restore/modl/global/bl_2-meter_temp_c,
+		bl_2-meter_12hrmax_temp_c, bl_2-meter_12hrmin_temp_c,
+		ct_index
+
+001h.	5/17/99	gempak/source/bridge/dc/dcfcls.f, dcfcyl.f, dcfint.f
+		gempak/source/bridge/ww/wwdcod.f
+		gempak/build/dc_link
+
+	NEW:	gempak/source/programs/dc/dcwtch/dcwtch.c
+		gempak/source/bridge/ww/wwdecd.f, wwout.f
+		gempak/error/dcwtch.err
+		gempak/help/dcwtch.hlp
+		gempak/source/programs/dc/dcwtch/dcwtch_link
+
+011r.	5/17/99	gempak/source/programs/sf/sfmap/sfmap.f, sfminp.f
+		gempak/parm/sfmap.prm
+
+021fff.	5/17/99	nprogs/nmap/source/vgf/nmap_pgpalw.c, nmap_pgobj.c
+		gempak/include/drwids.h, hints.h
+		gempak/tables/pgen/funcbtn.tbl
+
+	NEW:	nprogs/nmap/source/vgf/nmap_pgdelobj.c
+		icons/nmap/del_obj.xbm
+
+010rr.	5/18/99	gempak/source/gemlib/gg/ggwtch.f, ggwlbl.f, testgg.f,
+							testgg_link
+		gempak/source/programs/gp/gpmap/gpmap.f, gpminp.f,
+							gpmap_link
+		gempak/nts/gemglb.nts
+		gempak/parm/gpmap.prm
+		gempak/tables/config/data.tbl
+
+	NEW:	gempak/source/gemlib/gg/ggwarn.f
+		gempak/help/warn.hl1, warn.hl2
+
+018gg.	5/18/99	nprogs/nmap/source/nmap_image.c
+		nprogs/nsat/source/file.c, pxm.c
+		gempak/source/programs/gui/nafos/nafpxm.c
+
+018hh.	5/18/99	nprogs/nmap/source/nmap_dataw.c, nmap_domt.c, 
+				nmap_dslw.c, nmap_dsp.c, nmap_dsrc.c
+		nprogs/nmap/source/nmapprm.h
+		gempak/tables/nmap/dcatg.nmap, dsrc.nmap
+		gempak/include/undscr.h
+
+001i.	5/19/99	gempak/include/undscr.h
+		gempak/build/bridge_compile, dc_link
+		
+	NEW:	gempak/source/bridge/wn/wncmn.cmn, wncnty.f, wnctim.f,
+		    wndcod.f, wnffld.f, wnftim.f, wnghdr.f, wnrdtb.f,
+		    wnstsm.f, wntorn.f
+		gempak/source/programs/dc/dcwarn/dcwarn.c, dcwarn_link
+		gempak/help/dcwarn.hlp
+
+010ss.	5/19/99	gempak/source/gemlib/im/imcbar.f
+
+018ii.	5/19/99	nprogs/nmap/source/nmap_dataw.c, nmap_domt.c, nmap_dsp.c,
+			nmap_dslw.c, nmap_dttmw.c, nmap_mdl.c, nmap_data.h
+
+010tt.	5/20/99	gempak/source/gemlib/gg/ggwarn.f
+
+001j.	5/20/99	gempak/source/bridge/wn/wndcod.f, wnffld.f, wnftim.f,
+					wnghdr.f, wnstsm.f, wntorn.f
+
+021ggg.	5/21/99	nprogs/nmap/source/vgf/nmap_pghdlb.c, nmap_pgnew.c,
+			nmap_pgpalw.c, nmap_pgundo.c, nmap_pgvgf.c
+		nprogs/nmap/source/nmap_dttm.h
+    		resource/Nmap
+		gempak/source/cgemlib/cds/cdsdspelm.c
+		gempak/source/cgemlib/ces/cesget.c, cesrtbl.c, cesset.c
+		gempak/source/cgemlib/crg/crgset.c
+		gempak/source/cgemlib/cst/csttims.c
+		gempak/source/cgemlib/cvg/cvgtodev.c
+		gempak/include/cescmn.h, drwids.h, gemprm.h, vgstruct.h
+		gempak/tables/pgen/classbtn.tbl, setting.tbl
+
+	NEW:	nprogs/nmap/source/vgf/nmap_pgtrkw.c
+		gempak/source/cgemlib/cds/cdstrack.c
+		gempak/source/cgemlib/cvg/cvgsvtrk.c, cvgtrksto.c
+		gempak/tables/pgen/trackbtn.tbl
+		icons/nmap/trkstorm.xbm
+
+021hhh.	5/21/99	nprogs/nmap/source/vgf/nmap_pgtrk.c
+
+018jj.	5/21/99	nprogs/nmap/source/nmap_mdl.c
+
+018kk.	5/21/99	nprogs/nmap/source/nmap_dsp.c, nmap_image.c
+
+011s.	5/21/99	gempak/source/programs/gd/gdplot2/gdpltb.f
+
+010uu.	5/21/99	gempak/source/cgemlib/ces/testces.c
+		gempak/source/cgemlib/cst/testcst.c
+		gempak/source/cgemlib/cvg/cvgdump.c, dumpvgf.c,
+							testcvg.c
+
+001k.	5/24/99	gempak/source/bridge/wn/wndcod.f, wnghdr.f, wnstsm.f,
+						wntorn.f, wnffld.f
+
+008n.	5/24/99	help/nmap/WhatsNew.hlp
+
+018ll.	5/25/99	nprogs/nmap/source/nmap_mdl.c
+		gempak/nts/nmap/restore/modl/NEWwave/*
+		gempak/nts/nmap/restore/modl/nww3/*
+		gempak/nts/nmap/restore/modl/wam/*
+
+======================= Patch 5.4.3.p =============================
+
+010vv.	5/28/99	gempak/source/cgemlib/ces/testces.c
+
+010ww.	5/28/99	gempak/source/cgemlib/cvg/dumpvgf.c
+
+007k.	5/28/99	gempak/source/driver/active/utf/uclosp.c
+
+006b.	5/28/99	gempak/source/gplt/transform/mcidas/mcnav.f
+
+001l.	5/28/99	gempak/source/bridge/ww/wwdcod.f, wwdecd.f, wwus9.f
+	NEW:	gempak/source/bridge/ww/wwrepl.f, wwwnum.f
+
+021iii.	5/28/99	nprogs/nmap/source/vgf/nmap_pgdelobj.c, nmap_pgobj.c,
+		nmap_pgmodv.c, nmap_pgvgf.c, nmap_pgundo.c, 
+		nmap_pgpalw.c, nmap_pgnew.c, nmap_pgmvcp.c, 
+		nmap_pglabel.c, nmap_pghdlb.c, nmap_pggst.c,
+		nmap_pgevt.c, nmap_pgedit.c
+		gempak/source/cgemlib/cvg/testcvg.c, cvgtodev.c,
+		cvgsvcir.c, cvgrdcir.c, cvgdump.c, cvgcirsto.c
+		gempak/source/cgemlib/crg/crgset.c, crgsetcir.c
+		gempak/source/cgemlib/cds/cdscirc.c
+		gempak/tables/pgen/classbtn.tbl
+		gempak/include/drwids.h, vgstruct.h
+		resource/Nmap
+
+	NEW:	nprogs/nmap/source/vgf/nmap_pgrad.c, nmap_pgcirc.c
+		gempak/tables/pgen/circlebtn.tbl
+		icons/nmap/circle.xbm, cirsolid.xbm
+
+018mm.	5/28/99	nprogs/nmap/source/nmap_dsp.c
+
+021jjj.	5/28/99	nprogs/nmap/source/vgf/nmap_pgtrk.c
+
+010xx.	5/28/99	gempak/source/gemlib/cv/cvprmt.f
+
+010yy.	5/28/99	gempak/source/driver/active/gn/crnids.c
+		gempak/source/gemlib/im/imsimg.f, imnihd.f, imunhd.f
+
+010zz.	5/28/99	nprogs/nwx/source/mapw.c, prf.c, uvi.c, gui.h
+		gempak/include/gemprm*
+		gempak/tables/stns/lsfstns.tbl
+
+011t.	6/1/99	gempak/source/programs/na/namsnd/namrbf.f, namrdd.f
+		gempak/source/gemlib/jb/jwbufr.f
+
+018nn.	6/1/99	nprogs/nmap/source/nmap_image.c
+
+010aaa.	6/1/99	gempak/source/gemlib/dm/dmrflt.f, dmwflt.f
+
+018oo.	6/1/99	nprogs/nmap/source/nmap_dsp.c
+
+021kkk.	6/3/99	nawdv/nprogs/nmap/source/vgf/nmap_pgedit.c, nmap_pgevt.c,
+		nmap_pgmodv.c, nmap_pgtrkw.c, nmap_pgvgf.c
+		nawdv/gempak/include/gemprm.h
+		nawdv/resource/Nmap
+		nawdv/gempak/source/cgemlib/ces/cesrtbl.c
+		nawdv/gempak/source/cgemlib/cvg/cvgtodev.c
+		nawdv/gempak/source/cgemlib/clo/clotrack.c
+	NEW:	nawdv/gempak/source/cgemlib/clo/clotimes.c
+
+021lll.	6/3/99	nawdv/nprogs/nmap/source/vgf/nmap_pgpalw.c, 
+		nmap_pgline.c, nmap_pgsymb.c, nmap_pgfrtw.c, nmap_pgnew.c,
+		nmap_pggrpw.c, nmap_pgdelobj.c, nmap_pgobj.c
+		gempak/tables/pgen/funcbtn.tbl
+
+011u.	6/3/99	gempak/source/programs/gd/gdplot/gdplot.f
+
+001m.	6/3/99	gempak/source/bridge/wn/wnffld.f, wnghdr.f,
+						wnstsm.f, wntorn.f
+
+018pp.	6/4/99	nprogs/nmap/source/nmap_dataw.c
+
+021mmm.	6/4/99	nprogs/nmap/source/vgf/nmap_pgprd.c, nmap_pgwfmt.c,
+		nmap_pgwpts.c
+
+010bbb.	6/4/99	gempak/source/gemlib/gg/ggwarn.f, ggwtch.f, testgg.f
+		gempak/source/programs/gp/gpmap/gpmap.f
+		nprogs/nmap/source/nmap_dsp.c
+		gempak/help/warn.hl1, warn.hl2, watch.hl1, watch.hl2
+
+021nnn.	6/7/99	nprogs/nmap/source/vgf/nmap_pgvgf.c, nmap_pgrad.c,
+							nmap_pgmodv.c
+
+006c.	6/7/99	gempak/source/gplt/satellite/gsatmg.f
+		gempak/source/gplt/utility/gdrgrd.f
+		gempak/source/gemlib/im/imar2gm.f
+
+010ccc.	5/28/99	gempak/source/gemlib/ss/ssvers.f
+
+018qq.	6/7/99	nprogs/nmap/source/nmap_dsp.c
+
+021ooo.	6/7/99	nprogs/nmap/source/vgf/nmap_pgwfmt.c
+	NEW:	gempak/source/cgemlib/cfl/cflrscd.c
+
+011v.	6/8/99	gempak/source/programs/gp/gptext/gptext.f
+
+010ddd.	6/8/99	gempak/source/gemlib/gr/grclvl.f
+		gempak/error/gr.err
+
+021ppp.	6/8/99	nprogs/nmap/source/vgf/nmap_pgedit.c, nmap_pgnew.c
+
+001n.	6/8/99	gempak/source/bridge/wn/wncnty.f, wndcod.f, wnffld.f,
+				wnghdr.f, wnrdtb.f, wnstsm.f, wntorn.f
+	NEW:	gempak/source/bridge/wn/wnout.f
+
+018rr.	6/8/99	nprogs/nmap/source/nmap_dsp.c
+
+019g.	6/8/99	gempak/tables/config/mapfil.tbl
+		gempak/help/mapfil.hl2
+		gempak/maps/ascii/mapfiles.doc
+
+	NEW:	gempak/maps/swapped/mefbqv.ncp
+		gempak/maps/mefbqv.ncp
+		gempak/maps/ascii/ascmefbqv.ncp
+
+019h.	6/8/99	gempak/maps/programs/ssfgsf.f
+		gempak/tables/config/mapfil.tbl
+		gempak/help/mapfil.hl2
+
+	NEW:	gempak/maps/swapped/lordus.nws, loshus.nws, louhus.nws,
+			loisus.nws, hirdus.nws, hishus.nws, hiuhus.nws,
+			hiisus.nws
+		gempak/maps/lordus.nws, loshus.nws, louhus.nws, 
+			loisus.nws, hirdus.nws, hishus.nws, hiuhus.nws,
+			hiisus.nws
+		gempak/maps/ascii/asclordus.nws, ascloshus.nws,
+			asclouhus.nws, ascloisus.nws, aschirdus.nws,
+			aschishus.nws, aschiuhus.nws, aschiisus.nws
+
+010eee.	6/9/99	gempak/source/gemlib/gg/ggwarn.f, ggwtch.f
+		gempak/source/gplt/satellite/gsatmg.f
+
+016e.	6/9/99	nprogs/nwx/source/wbox.c
+
+010fff.	6/9/99	gempak/source/cgemlib/cgr/cgrinpoly.c
+
+021qqq.	6/9/99	nprogs/nmap/source/nmap_dataw.c
+		nprogs/nmap/source/vgf/nmap_pgdelobj.c, nmap_pgevt.c,
+							nmap_pgpalw.c
+		gempak/include/hints.h
+
+021rrr.	6/9/99	nprogs/nmap/source/vgf/nmap_pgwpts.c
+
+008o.	6/10/99 help/nmap/ProdGen.hlp, nmapHlp.index
+	NEW	help/nmap/Seek.hlp
+
+021sss.	6/10/99	nprogs/nmap/source/vgf/nmap_pgwatch.c, nmap_pgwfmt.c,
+					nmap_pgwlst.c, nmap_pgwpts.c
+
+021ttt.	6/10/99	nprogs/nmap/source/vgf/nmap_pgwfmt.c
+
+008p.	6/11/99	help/nmap/WhatsNew.hlp
+
+021uuu.	6/14/99	nprogs/nmap/source/vgf/nmap_pgwfmt.c
+
+021vvv.	6/16/99	nprogs/nmap/source/vgf/nmap_pggrpw.c
+
+ ======================= Patch 5.4.3.q =============================
+
+010ggg.	6/18/99	gempak/source/gemlib/ss/ssvers.f
+
+021www.	6/18/99	nprogs/nmap/source/vgf/nmap_pgedit.c
+
+018ss.	6/18/99	nprogs/nmap/source/nmap_mmenuw.c
+	NEW:	gempak/tables/nmap/nmap_roam.tbl
+
+021xxx.	6/18/99	nprogs/nmap/source/vgf/nmap_pgtrkw.c
+
+021yyy.	6/18/99	nprogs/nmap/source/vgf/nmap_pglabel.c, nmap_pgsymb.c,
+						nmap_pgpalw.c
+
+018tt.	6/18/99	nprogs/nmap/source/nmap_mapw.c
+
+018uu.	6/18/99	nprogs/nmap/source/nmap_dsp.c
+
+019i.	6/18/99	gempak/maps/swapped/lordus.nws, loshus.nws, louhus.nws,
+                             loisus.nws, hirdus.nws, hishus.nws, 
+			     hiuhus.nws, hiisus.nws
+
+021zzz.	6/22/99	nprogs/nmap/source/vgf/nmap_pggrpw.c
+
+011w.	6/23/99	gempak/source/bridge/dc/dccrid.f
+		gempak/source/programs/sf/sfvgsf/sfvstn.f
+
+009d.	6/23/99	gempak/source/driver/active/rbk/rbk_link
+		gempak/source/driver/active/utf/utf_link
+		gempak/source/programs/gui/nalarm/nalarm_link
+		gempak/source/programs/util/freeColors/Makefile
+		gempak/source/programs/dc/dcacft/dcacft_link
+		gempak/source/programs/dc/dcamos/dcamos_link
+		gempak/source/programs/dc/dcffg/dcffg_link
+		gempak/source/programs/dc/dclsfc/dclsfc_link
+		gempak/source/programs/dc/dcmetr/dcmetr_link
+		gempak/source/programs/dc/dcmmos/dcmmos_link
+		gempak/source/programs/dc/dcmsfc/dcmsfc_link
+		gempak/source/programs/dc/dcnmos/dcnmos_link
+		gempak/source/programs/dc/dcscd/dcscd_link
+		gempak/source/programs/dc/dcuair/dcuair_link
+		gempak/source/programs/dc/dcwarn/dcwarn_link
+		gempak/source/programs/dc/dcwtch/dcwtch_link
+		nprogs/quitst/source/Makefile
+		nprogs/ncolor/source/Makefile
+		nprogs/nmap/source/Makefile
+		nprogs/nsat/source/Makefile
+		nprogs/ntrans/source/Makefile
+		nprogs/nwx/source/Makefile
+		nprogs/viewfax/Makefile
+
+021a1a.	6/23/99	nprogs/nmap/source/vgf/nmap_pgmodv.c, nmap_pgwpts.c
+
+021a1b.	6/23/99	nprogs/nmap/source/vgf/nmap_pgedit.c
+
+009e.	6/23/99	gempak/nts/nmap/restore/stnd/500mb_hght_rh_omega,
+			600mb_hght_rh_omega, 700mb_hght_rh_omega,
+			850mb_hght_rh_omega, 900mb_hght_rh_omega,
+			925mb_hght_rh_omega, 500mb_hght_geoabsv,
+			700mb_hght_rh_omega_ncf
+		gempak/nts/nmap/restore/modl/avn/300-200mb_pv,
+			1000-470mb_rh_rs_t_700mb_vv, 400-200mb_pv,
+			500-250mb_pv, 500-300mb_pv, 400-250mb_pv
+		gempak/nts/nmap/restore/modl/ecmwfg/pmsl_ethkn, ethkn
+		gempak/nts/nmap/restore/modl/ecmwft/200mb_wnd 
+		gempak/nts/nmap/restore/modl/eta/precip_type_vv_ncf, 
+			1000-470mb_rh_rs_t_700_vv, bl1_rh, bl2-5_rh,
+			precip_type_vv, 400-250mb_pv, potvort_400-250mb
+		gempak/nts/nmap/restore/modl/global/300-200mb_pv,
+			1000-470mb_rh_rs_t_700mb_vv, 400-200mb_pv,
+			400-250mb_pv, 500-250mb_pv, 500-300mb_pv
+		gempak/nts/nmap/restore/modl/meso/700mb_rh_rs_t_vv,
+			bl1_rh, precip_type_vv, 300-200mb_pv, 
+			400-250mb_pv, 500-250mb_pv
+		gempak/nts/nmap/restore/modl/ngm/700mb_rh_rs_t_vv,
+			1000-470mb_rh_rs_t_700vv, bl1_rh, bl2-5_rh,
+			bl3_rh, 300-200mb_pv, 400-250mb_pv, 500-250mb_pv
+		gempak/nts/nmap/restore/modl/ruc/400-250mb_pv,
+			potvort_400-250mb, potvort_400-250mb_al
+
+021a1c.	6/24/99	nprogs/nmap/source/vgf/nmap_pgmvcp.c, nmap_pggst.c
+		gempak/source/gplt/plot/gcircl.f
+		gempak/source/cgemlib/cvg/cvgsvcir.c
+		gempak/source/cgemlib/crg/crgsetcir.c
+
+021a1d.	6/25/99	nprogs/nmap/source/vgf/nmap_pgtrkw.c
+		gempak/include/gemprm.h [#define only]
+
+001o.	6/25/99	gempak/source/bridge/mt/mtdcod.f
+		gempak/error/dc.err
+		gempak/help/dcmetr.hlp
+	NEW:	gempak/source/bridge/dc/dcgtim.f
+
+021a1e.	6/25/99	nprogs/nmap/source/nmap_mmenuw.c, nmap_data.h
+		gempak/tables/nmap/nmap_roam.tbl [doc only]
+
+018vv.	6/28/99	nprogs/nmap/source/nmap_mmenuw.c
+		gempak/tables/nmap/nmap_roam.tbl [doc only]
+
+021a1f.	6/28/99	nprogs/nmap/source/vgf/nmap_pgline.c, nmap_pgnew.c,
+						nmap_pgtxt.c
+
+010hhh.	6/29/99	gempak/source/cgemlib/cvg/cvgsvcir.c
+		gempak/source/cgemlib/crg/crgsetcir.c
+
+======================= Patch 5.4.3.r =============================
+
+010iii.	7/6/99	gempak/source/gemlib/ss/ssvers.f
+
+018ww.	7/6/99	nprogs/nmap/source/nmap_mapw.c
+
+021a1g.	7/6/99	nprogs/nmap/source/vgf/nmap_pgolk.c
+		gempak/source/cgemlib/clo/clodist.c
+
+021a1h.	7/6/99	gempak/source/cgemlib/cds/cdstrack.c
+
+018xx.	7/6/99 nprogs/nmap/source/nmap_dsp.c, nmap_dataw.c
+	NEW:	nprogs/nmap/source/nmap_wwnw.c
+
+011x.	7/6/99	gempak/source/programs/gd/gdcfil/gdcdsp.f
+
+010jjj.	7/6/99	gempak/source/gemlib/gg/ggdvgf.c
+
+018yy.	7/12/99	nprogs/nmap/source/nmap_mtbl.h
+
+001p.	7/12/99	gempak/source/programs/dc/dcwtch/dcwtch.c, dcwtch_link
+		gempak/build/bridge_compile
+		gempak/help/dcwtch.hlp
+		gempak/source/gemlib/gg/ggwtch.f
+		gempak/source/bridge/ww/wwctim.f, wwdcod.f, wwdecd.f,
+					wwout.f
+	NEW:	gempak/source/bridge/ww/wwaxpt.f, wwcrnr.c, wwus40.f
+
+
+001q.	7/13/99	gempak/source/bridge/af/afcmn.cmn, afatrb.f, afdadr.f,
+		afdrco.f, afdprp.f, afgmpk.f, aficid.f, afifpt.f,
+		afifsp.f, afintf.f, afpicg.f, afpilr.f, afptlr.f,
+		afptrb.f, africg.f, aftbid.f
+		gempak/help/sfparm.hl2
+		gempak/tables/pack/acft.pack
+		gempak/txt/apx/parms.apx
+	NEW:	gempak/source/bridge/af/afhset.f, afpsky.f, afpsl1.f,
+							afpslr.f
+
+008q.	7/15/99	help/nmap/WhatsNew.hlp
+
+======================= Patch 5.4.3.s =============================
+
+010kkk.	7/19/99	gempak/source/gemlib/ss/ssvers.f
+
+010lll.	7/20/99	gempak/source/gemlib/dg/dgmfil.f
+		gempak/source/gemlib/fl/flmfil.f, flmfls.f, testfl.f
+		gempak/source/gemlib/gd/gdgcyc.f, gdgtmf.f, testgd.f
+		gempak/source/gemlib/tg/testtg.f, tgfind.f, tgqrng.f
+		gempak/source/programs/gd/gdplot2/gdplot.f, gdpltb.f,
+							gdpprt.f
+		gempak/source/programs/gd/grphgd/grphgd.f
+		gempak/help/gdattim.hl2, gdfile.hl2
+
+016f.	7/22/99	nprogs/nwx/source/wbox.c, wwctim.f, wwdcod.f
+		tables/nwx/master.tbl
+	NEW:	nprogs/nwx/source/wwcrnr.c, wwaxpt.f, wwus40.f, 
+							wwwnum.f
+
+010mmm.	7/23/99	gempak/source/cgemlib/cds/cdsdspelm.c
+		gempak/source/cgemlib/ces/cesget.c, cesrtbl.c, cesset.c
+		gempak/source/cgemlib/cvg/cvgdump.c, cvgtodev.c
+		nprogs/nmap/source/vgf/nmap_pgnew.c, nmap_pgpalw.c,
+							nmap_pgvgf.c
+		gempak/include/cescmn.h, drwids.h, vgstruct.h
+		gempak/tables/pgen/classbtn.tbl, setting.tbl
+
+	NEW:	gempak/source/cgemlib/cds/cdssig.c
+		gempak/source/cgemlib/cvg/cvgsigsto.c, cvgsvsig.c
+		nprogs/nmap/source/vgf/nmap_pgsigw.c
+		gempak/tables/pgen/nmap_pgisig.tbl, sigmetbtn.tbl
+		icons/nmap/sigintl.xbm, sigmet.xbm
+
+021a1i.	7/27/99	nprogs/nmap/source/vgf/nmap_pgline.c
+
+001r.	7/28/99	gempak/source/bridge/af/afdadr.f, afdarp.f, afdcod.f,
+			afdprp.f, afdrco.f, afflvl.f, affnc.fnc, afgmpk.f,
+			afhhfm.f, afintf.f, afpicg.f, afpilr.f, afpsky.f, 
+			afpsl1.f, afpslr.f, afptlr.f, afptmp.f, afptrb.f,
+			afpwxv.f, afrcld.f, africg.f, afriht.f
+		gempak/source/bridge/dc/dcwthr.f
+		gempak/source/gemlib/sf/sfcsdf.f, sfwsdd.f
+		gempak/help/sfparm.hl2
+		gempak/tables/pack/acft.pack
+		gempak/tables/parms/pcconv.tbl
+		gempak/txt/apx/parms.apx
+	NEW:	gempak/source/bridge/af/afprmk.f
+
+010nnn.	7/28/99	gempak/source/cgemlib/clo/testclo.c
+	NEW:	gempak/source/cgemlib/clo/clofrom.c
+
+021a1j.	7/29/99	nprogs/nmap/source/vgf/nmap_pgline.c
+
+011y.	7/29/99	gempak/source/programs/gd/gdcfil/gdcfil.f
+
+010ooo.	7/30/99	gempak/source/gemlib/pt/ptfunc.f, testpt.f
+		gempak/tables/parms/pcconv.tbl
+		gempak/help/sfparm.hl2
+		gempak/txt/apx/parms.apx
+	NEW:	gempak/source/gemlib/pt/ptfqot.f, pttice.f, ptturb.f
+
+010ppp.	7/30/99	gempak/source/gemlib/pc/pcfunc.f
+		gempak/source/gemlib/pr/testpr.f
+		gempak/help/sfparm.hl2
+		gempak/tables/parms/pcconv.tbl
+		gempak/txt/apx/parms.apx
+	NEW:	gempak/source/gemlib/pr/prxvfr.f
+
+019j.	8/2/99	gempak/tables/config/mapfil.tbl
+
+	NEW:	gempak/maps/hifiwo.ncp
+		gempak/maps/ascii/aschifiwo.ncp
+		gempak/maps/swapped/hifiwo.ncp
+
+010qqq.	8/9/99	gempak/source/cgemlib/clo/clofrom.c, testclo.c
+		gempak/include/vgstruct.h (#defines only)
+
+009f.	8/10/99	gempak/nts/nmap/restore/misc/pmsl_thkn
+		gempak/nts/nmap/restore/modl/ruc/300-700_q-vctrs_thkn,
+			700mb_rh_rs_temp, best_li, bl_moist_conv, bl_rh, 
+			mmsl, sfclifted_index
+		gempak/nts/nmap/restore/stnd/100mb_hght_wind, 
+		150mb_hght_wind, 200mb_hght_wind, 250mb_hght_wind,
+		300mb_hght_absv, 300mb_hght_absv_adv, 300mb_hght_wind,
+		500mb_hght_absv, 500mb_hght_absv_adv, 500mb_hght_absv_ncf,
+		500mb_hght_color, 500mb_hght_geoabsv, 50mb_hght_wind,
+		600mb_hght_rh_omega, 700mb_hght_rh_omega, 70mb_hght_wind,
+		700mb_hght_rh_omega_ncf, 850mb_hght_tmp_wind_ncf,
+		850mb_thtae_advection
+
+021a1k.	8/11/99	resource/Nmap
+		gempak/include/vgstruct.h
+		gempak/source/cgemlib/ces/cesget.c
+		gempak/source/cgemlib/clo/clofrom.c, clocmn.h
+		gempak/source/cgemlib/crg/crgset.c
+		nprogs/nmap/source/vgf/nmap_pgedit.c, nmap_pgevt.c,
+			nmap_pghdlb.c, nmap_pgmodv.c, nmap_pgnumb.c, 
+			nmap_pgobj.c, nmap_pgpalw.c, nmap_pgsigw.c, 
+			nmap_pgundo.c, nmap_pgvgf.c
+	NEW:	nprogs/nmap/source/vgf/nmap_pgsigf.c
+
+010rrr.	8/11/99	gempak/source/cgemlib/clo/clodirect.c, testclo.c
+
+010sss.	8/13/99	gempak/source/cgemlib/cds/cdssig.c
+		gempak/tables/pgen/setting.tbl
+
+011z.	8/13/99	gempak/source/programs/gd/gdplot/gdplot.f, gdbpnt.f
+		gempak/source/programs/gd/gdplot2/gdpltb.f, gdpskp.f
+		gempak/source/programs/gd/gdwind/gdwind.f
+
+021a1l.	8/13/99	gempak/source/testprog/plotsyms.f
+		gempak/source/device/draw/ispcl.f
+		gempak/source/driver/active/utf/usymb.c
+		gempak/source/driver/active/rbk/asymb.c
+		gempak/tables/pgen/symbolbtn.tbl
+		gempak/include/drwids.h
+		nprogs/nmap/source/vgf/nmap_pgpalw.c, nmap_pgobj.c
+	NEW:	icons/nmap/ptrpssh.xbm, ptrpsnh.xbm
+
+021a1m.	8/13/99	gempak/source/cgemlib/cvg/cvgsigsto.c, cvgsvsig.c
+		nprogs/nmap/source/vgf/nmap_pgevt.c, nmap_pgmdfy.c,
+			nmap_pgnew.c, nmap_pgobj.c, nmap_pgpalw.c,
+			nmap_pgsigf.c, nmap_pgsigw.c, nmap_pgvgf.c
+		gempak/include/drwids.h, vgstruct.h
+		gempak/tables/pgen/sigmetbtn.tbl
+
+021a1n.	8/16/99	nprogs/nmap/source/vgf/nmap_pgsigf.c
+
+021a1o.	8/17/99	nprogs/nmap/source/vgf/nmap_pgsigf.c, nmap_pgsigw.c
+
+========================= Patch 5.4.3.t =============================
+
+007l.	8/24/99	gempak/source/driver/active/rbk/hinit.f, ainita.c,
+						asdatt.c, asymb.c, atext.c
+		gempak/source/driver/active/rbk/ardcmn.h
+		gempak/include/uscore.h
+	NEW:	gempak/source/driver/active/rbk/hegrp.f, hsgrp.f,
+							aegrp.c, asgrp.c
+
+021a1p.	8/24/99	nprogs/nmap/source/vgf/nmap_pgsymb.c
+		gempak/source/cgemlib/ces/cesset.c
+		gempak/include/cescmn.h
+
+019k.	8/24/99	gempak/tables/stns/zones.tbl
+		gempak/maps/swapped/loznus.nws, hiznus.nws
+		gempak/maps/loznus.nws, hiznus.nws
+		gempak/maps/ascii/ascloznus.nws, aschiznus.nws
+
+	NEW:	gempak/maps/swapped/meznus.nws, tpznus.nws
+		gempak/maps/meznus.nws, tpznus.nws
+		gempak/maps/ascii/ascmeznus.nws, asctpznus.nws
+
+001s.	8/24/99	gempak/source/programs/dc/dcamos/dcavcd.f
+		gempak/source/programs/dc/dcnmos/dcnmdc.f
+		gempak/source/programs/dc/dcmmos/dcmmdc.f
+		gempak/source/bridge/sc/scdcod.f
+
+010ttt.	8/25/99	gempak/source/gemlib/ss/ssvers.f
+
+001t.	8/25/99	gempak/source/programs/dc/dcwtch/dcwtch.c
+		gempak/source/bridge/ww/wwcrnr.c, wwctim.f,
+						wwdcod.f, wwout.f
+		gempak/help/dcwtch.hlp
+		gempak/error/dcwtch.err
+	CSC:	gempak/source/bridge/ww/wwaxpt.f, wwdecd.f, wwus40.f
+	NEW:	gempak/source/bridge/ww/wwgtpt.c, wwus8.f
+
+001u.	8/27/99	gempak/source/bridge/ls/lscmn.cmn, lsast0.f, lsclds.f,
+			lsdcd1.f, lsifpt.f, lsifsp.f, lsiihv.f,
+			lsmawx.f, lswvph.f
+		gempak/source/bridge/ma/macmn.cmn, mabst0.f, maclds.f,
+			macst0.f, mads4r.f, madst0.f, maifpt.f,
+			maifsp.f, maiihv.f, mamawx.f, masc1d.f,
+			masc2d.f, masc3d.f, mawvph.f
+		gempak/help/sfparm.hl2
+		gempak/txt/apx/parms.apx
+		gempak/tables/stns/msfstns.tbl
+
+	NEW:	gempak/source/bridge/ls/lscld4.f, lssec4.f
+		gempak/source/bridge/ma/mad0qc.f, madwph.f
+
+021a1q.	8/30/99	nprogs/nmap/source/vgf/nmap_pgnew.c
+
+010uuu.	8/30/99	gempak/source/gemlib/sn/testsn.f
+		gempak/source/gemlib/lc/testlc.f
+		gempak/error/sn.err
+
+	NEW:	gempak/source/gemlib/sn/snghgt.f
+		gempak/source/gemlib/lc/lcdist.f
+		gempak/source/gemlib/pc/pcintt.f
+
+012d.	8/31/99	gempak/source/programs/gui/nalarm/nalarm.c, naltxt.c
+		resource/Naltxt
+
+010vvv.	8/31/99	gempak/source/gemlib/gg/testgg.f
+		gempak/source/programs/gp/gpmap/gpmap.f
+		nprogs/nmap/source/nmap_dsp.c, nmap_wwnw.c
+		gempak/help/watch.hl1, watch.hl2
+	CSC:	gempak/source/gemlib/gg/ggwtch.f
+
+010www.	8/31/99	gempak/source/cgemlib/cgr/cgrpolyint.c, testcgr.c
+	CSC:	gempak/source/cgemlib/cgr/cgrsegint.c
+
+021a1r.	8/31/99	gempak/source/cgemlib/cds/cdssig.c
+		gempak/source/cgemlib/ces/cesget.c, cesrtbl.c, cesset.c
+		gempak/source/cgemlib/crg/crgset.c
+		gempak/source/cgemlib/cvg/cvgdump.c, cvgtodev.c
+		nprogs/nmap/source/vgf/nmap_pgedit.c, nmap_pghdlb.c,
+		nmap_pgmodv.c, nmap_pgpalw.c, nmap_pgsigw.c, nmap_pgvgf.c
+		gempak/include/vgstruct.h
+		gempak/tables/pgen/setting.tbl
+		resource/Nmap
+	CSC:	gempak/source/cgemlib/cvg/cvgsigsto.c, cvgsvsig.c
+	NEW:	gempak/tables/pgen/sigmetinfo.tbl
+		icons/nmap/sigairm.xbm, sigconv.xbm, signcon.xbm, 
+				sigoutl.xbm
+
+020d.	9/1/99	gempak/source/gemlib/pr/testpr.f
+		gempak/source/gemlib/tb/testtb.f
+		gempak/source/cgemlib/clo/testclo.c
+		gempak/source/cgemlib/cst/testcst.c
+		gempak/build/util_link
+		gempak/tables/parms/pcconv.tbl
+		gempak/include/undscr.h
+
+	NEW:	gempak/source/gemlib/pr/prktmh.f
+		gempak/source/gemlib/tb/tbidst.f
+		gempak/source/cgemlib/clo/clocmpwds.c
+		gempak/source/cgemlib/cst/cstrnan.c
+		gempak/source/programs/util/spctxt/spctxt.c, spcwtch.h,
+						spctxt_link
+		gempak/help/spctxt.hlp
+		gempak/tables/stns/state.tbl
+
+010xxx.	9/1/99	gempak/source/cgemlib/cds/cdssig.c
+		gempak/source/cgemlib/cgr/cgrsegint.c
+		gempak/source/cgemlib/clo/clodirect.c, testclo.c
+		nprogs/nmap/source/vgf/nmap_pgsigw.c
+	CSC:	gempak/source/cgemlib/clo/clofrom.c
+
+018zz.	9/2/99	nprogs/nmap/source/nmap_mapw.c
+		nprogs/nmap/source/nmap_map.h
+
+010yyy.	9/2/99	gempak/source/gemlib/fl/flmfls.f
+
+021a1s.	9/2/99	gempak/source/cgemlib/clo/clofrom.c
+		nprogs/nmap/source/vgf/nmap_pgsigw.c
+		gempak/tables/pgen/setting.tbl
+
+018aaa.	9/2/99	nprogs/nmap/source/nmap_mainw.c
+
+010zzz.	9/3/99	gempak/source/gemlib/gg/ggwtch.f
+
+019l.	9/3/99	gempak/maps/ascii/ascmxpowo.ncp, ascmepowo.gsf,
+		aschipowo.gsf, aschipowo.cia, aschipone.cia, aschicywo.cia
+		gempak/maps/swapped/mxpowo.ncp, mepowo.gsf, hipowo.gsf,
+			hipowo.cia, hipone.cia, hicywo.cia
+		gempak/maps/mxpowo.ncp, mepowo.gsf, hipowo.gsf, 
+			hipowo.cia, hipone.cia, hicywo.cia
+
+018bbb.	9/3/99	nprogs/nmap/source/nmap_mapw.c, nmap.c
+		nprogs/nmap/source/vgf/nmap_pgprd.c
+
+020e.	9/3/99	gempak/source/programs/util/spctxt.c
+
+019m.	9/3/99	gempak/maps/swapped/tectonic.cia, meosuo.ncp, locosh.gsf,
+			loconh.gsf, lakes.cia, hifiwo.ncp
+	NEW:	gempak/maps/ascii/asctectonic.cia, ascmeosuo.ncp,
+			asclocosh.gsf, ascloconh.gsf, asclakes.cia,
+			aschifiwo.ncp
+
+001v.	9/3/99	gempak/source/bridge/af/afatrb.f, afcmn.cmn, afgmpk.f,
+		afgrpt.f, afifpt.f, afifsp.f, afintf.f, afprmk.f, 
+		afpsky.f, afpsl1.f, afpslr.f, afptlr.f, afpwxv.f, afrcld.f
+		gempak/source/bridge/ls/lssec4.f
+		gempak/source/bridge/ww/wwdcod.f, wwdecd.f, wwus8.f
+		gempak/error/dcwtch.err
+	NEW:	gempak/source/bridge/af/afphaz.f, afptop.f
+
+021a1t.	9/3/99	nprogs/nmap/source/vgf/nmap_pgevt.c, nmap_pgmodv.c,
+							nmap_pgsigw.c
+		gempak/include/vgstruct.h
+
+021a1u.	9/7/99	nprogs/nmap/source/vgf/nmap_pgevt.c, nmap_pgnew.c
+
+021a1v.	9/7/99	nprogs/nmap/source/vgf/nmap_pgsigw.c
+		gempak/source/cgemlib/cds/cdssig.c
+		resource/Nmap
+
+008r.	9/9/99	help/nmap/WhatsNew.hlp
+
+021a1w.	9/9/99	nprogs/nmap/source/vgf/nmap_pgprd.c
+
+========================= Patch 5.4.3.u =============================
+
+010a1a.	9/13/99	gempak/source/gemlib/ss/ssvers.f
+
+007m.	9/13/99	gempak/source/driver/active/ps/pinita.c, psdatt.c,
+							psopen.c
+
+010a1b.	9/13/99	gempak/source/cgemlib/cfl/testcfl.c
+		gempak/source/gemlib/fl/flmfil.f, testfl.f
+		gempak/source/gemlib/gd/gdgcyc.f, gdgtmf.f
+		nprogs/nmap/source/nmap_obs.c, nmap_image.c
+
+	CSC:	gempak/source/cgemlib/cfl/cflmdat.c
+		gempak/source/gemlib/fl/flmdat.f
+
+010a1c.	9/13/99	gempak/source/gemlib/gg/ggmap.f
+
+010a1d.	9/13/99	gempak/source/gemlib/gg/ggwtch.f
+
+018ccc.	9/13/99	nprogs/nmap/source/nmap_mtbl.h
+
+018ddd.	9/13/99	nprogs/nmap/source/nmap_dsp.c
+
+011aa.	9/13/99	gempak/source/programs/gd/grphgd/grphgd.cmn
+
+010a1e.	9/14/99 gempak/source/cgemlib/cds/cdssig.c
+
+011bb.	9/14/99	gempak/parm/grphgd.prm
+		gempak/nts/gemglb.nts
+		gempak/source/programs/gd/grphgd/grphgd.f, grphgd.cmn,
+								gsmoot.f
+
+	NEW:	gempak/source/programs/gd/grphgd/gglims.f, glimit.f
+		gempak/help/gglims.hl1, gglims.hl2
+	CSC:	gempak/source/programs/gd/grphgd/grginp.f
+
+019n.	9/14/99	gempak/utilities/counties/cntybinfo.c
+		gempak/maps/ascii/asclocnus.nws, aschicnus.nws
+		gempak/maps/locnus.nws, hicnus.nws
+		gempak/maps/swapped/locnus.nws, hicnus.nws
+
+	NEW:	gempak/maps/ascii/ascmecnus.nws, asctpcnus.nws
+		gempak/maps/mecnus.nws, tpcnus.nws
+		gempak/maps/swapped/mecnus.nws, tpcnus.nws
+
+021a1x.	9/14/99	nprogs/nmap/source/vgf/nmap_pgactv.c, nmap_pgconn.c,
+			nmap_pgdelobj.c, nmap_pgedit.c, nmap_pgmdfy.c,
+			nmap_pgpalw.c, nmap_pgpdel.c, nmap_pgsigw.c
+
+001w.	9/16/99	gempak/source/bridge/af/aftmpc.f, afptmp.f
+
+010a1f.	9/16/99	gempak/source/cgemlib/cds/cdssig.c
+
+010a1g.	9/16/99	gempak/source/cgemlib/clo/clodirect.c
+
+021a1y.	9/17/99	nprogs/nmap/source/vgf/nmap_pgpalw.c, nmap_pgprd.c,
+							nmap_pgolk.c
+		resource/Nmap
+	NEW:	nprogs/nmap/source/vgf/nmap_pgofmt.c
+
+021a1z.	9/17/99	gempak/source/nxmlib/NxmCursor.c
+		nprogs/nmap/source/nmap_mapw.c, nmapprm.h, nmap_compile,
+					nmap_seekw.c, nmap_zoomw.c
+		nprogs/nmap/source/vgf/nmap_pgconn.c, nmap_pgdelobj.c,
+		nmap_pgdelpt.c, nmap_pgdsel.c, nmap_pgedit.c, 
+		nmap_pgevt.c, nmap_pgmdfy.c, nmap_pgmodv.c, nmap_pgmvcp.c,
+		nmap_pgnew.c, nmap_pgpalw.c, nmap_pgpdel.c, nmap_pgrad.c,
+		nmap_pgrot.c, nmap_pgsigw.c, nmap_pgwfmt.c
+	CSC:	nprogs/nmap/source/nmap_mcanvw.c
+
+021a2a.	9/22/99	nprogs/nmap/source/vgf/nmap_pgpalw.c
+
+005a.	9/22/99	gempak/source/gemlib/im/imbtot.f, testim.f, testim_link
+		gempak/source/gplt/main/gplt.f
+		gempak/source/device/main/device.f
+		gempak/include/funccode.prm, uscore.h
+		gempak/error/im.err
+
+	NEW:	gempak/source/gemlib/im/imgpix.f
+		gempak/source/appl/satellite/gsatpx.f
+		gempak/source/gplt/satellite/gsatpx.f
+		gempak/source/gplt/device/satellite/dsatpx.f
+		gempak/source/device/satellite/dsatpx.f
+		gempak/source/driver/active/xw/hsatpx.f, xsatpx.c
+		gempak/source/driver/active/gn/hsatpx.f
+
+021a2b.	9/23/99	nprogs/nmap/source/vgf/nmap_pgsigw.c, nmap_pgutls.c,
+					nmap_pgvgf.c
+		gempak/include/vgstruct.h [structure changes]
+		resource/Nmap
+	CSC:	gempak/source/cgemlib/cvg/cvgsigsto.c, cvgsvsig.c
+
+
+021a2c.	9/23/99	nprogs/nmap/source/vgf/nmap_pgsigw.c
+	
+007n.	9/23/99	gempak/source/device/plot/dcircl.f
+
+021a2d.	9/24/99 nmap/source/vgf/nmap_pgsigw.c, nmap_pgvgf.c
+		gempak/include/vgstruct.h [structure changes]
+	CSC:	gempak/source/cgemlib/cvg/cvgsigsto.c, cvgsvsig.c
+
+019o.	9/24/99	gempak/help/mapfil.hl2
+		gempak/maps/ascii/mapfiles.doc
+
+	NEW:	gempak/maps/tpcsus.ncp
+		gempak/maps/ascii/asctpcsus.ncp
+		gempak/maps/swapped/tpcsus.ncp
+
+005b.	9/24/99	gempak/source/gemlib/im/imgpix.f
+		gempak/source/driver/active/xw/xsatpx.c
+
+018eee.	9/24/99	nprogs/nmap/source/nmap.c, nmap_dataw.c, nmap_mbtnw.c
+		gempak/include/undscr.h
+
+	NEW:	nprogs/nmap/source/nmap_cldhgtw.c
+		icons/nmap/cldhgt.xbm
+
+018fff.	9/27/99	nprogs/nmap/source/nmap.c, nmap_dataw.c, nmap_mbtnw.c,
+							nmap_cldhgtw.c
+		gempak/include/undscr.h
+
+021a2e.	9/27/99	nprogs/nmap/source/vgf/nmap_pgsigw.c
+		resource/Nmap
+
+021a2f.	9/27/99	nprogs/nmap/source/vgf/nmap_pgactv.c
+
+021a2g.	9/28/99	nprogs/nmap/source/vgf/nmap_pgsigw.c
+
+010a1h.	9/28/99	gempak/source/gemlib/sn/snghgt.f
+		gempak/error/sn.err
+
+009g.	9/28/99	NEW:  gempak/nts/nmap/restore/modl/ruc/bestcape_cin
+		      gempak/nts/nmap/restore/modl/ruc/bestcape_cin_ncf
+
+008s.	9/29/99	help/nmap/WhatsNew.hlp
+
+========================= Patch 5.4.3.v =============================
+
+010a1i.	10/4/99	gempak/source/gemlib/ss/ssvers.f
+
+010a1j.	10/4/99	gempak/source/cgemlib/cds/cdssig.c
+		icons/nmap/cldhgt.xbm
+
+010a1k.	10/4/99	gempak/source/cgemlib/cds/cdswind.c, cdswbox.c, cdstrack.c,
+		cdstext.c, cdssymb.c, cdsline.c, cdsfrnt.c, cdscirc.c
+		gempak/include/undscr.h
+
+001x.	10/4/99	gempak/source/bridge/af/afifiv.f, afprmk.f
+
+001y.	10/4/99	gempak/source/bridge/ww/wwdecd.f, wwus8.f
+
+001z.	10/4/99	gempak/source/gemlib/gg/testgg.f
+		gempak/source/programs/gp/gpmap/gpmap.f
+		gempak/build/bridge_compile, dc_link
+		gempak/parm/gpmap.prm
+		gempak/nts/gemglb.nts
+
+	NEW:	gempak/source/bridge/hc/hcctim.f, hcdcod.f, hcdecd.f,
+			hcghdr.f, hcout.f, hcrtim.f
+		gempak/source/programs/dc/dchrcn/dchrcn.c, dchrcn_link
+		gempak/source/gemlib/gg/gghrcn.f
+		gempak/help/hrcn.hl1, hrcn.hl2, dchrcn.hlp
+
+	CSC:	gempak/source/programs/gp/gpmap/gpminp.f
+
+011cc.	10/4/99	gempak/source/programs/sf/sfgram/sfgram.f
+
+012e.	10/4/99	gempak/source/programs/gui/aftext/aftdsp.c
+
+018ggg.	10/4/99	nprogs/nmap/source/nmap_dsp.c
+
+019p.	10/4/99	gempak/source/programs/gui/nafos/nafgmpk.c
+		gempak/help/mapfil.hl2
+
+	NEW:	gempak/maps/locwa.nws, mecwa.nws, hicwa.nws, tpcwa.nws
+		gempak/maps/ascii/asclocwa.nws, ascmecwa.nws,
+					aschicwa.nws, asctpcwa.nws
+		gempak/maps/swapped/locwa.nws, mecwa.nws, hicwa.nws,
+								tpcwa.nws
+
+010a1l.	10/4/99	gempak/source/programs/sf/sfmap/sfmprm.f
+		gempak/source/gemlib/in/testin.f
+
+	NEW:	gempak/source/gemlib/in/inicng.f, inturb.f
+
+010a1m.	10/5/99	gempak/source/gemlib/gb/gbgpds.c
+
+001aa.	10/6/99	gempak/source/bridge/hc/hcdecd.f, hcghdr.f
+		gempak/source/gemlib/gg/gghrcn.f
+
+007o.	10/6/99	gempak/source/driver/active/xw/xmloop.c, xsatim.c
+	NEW:	gempak/source/driver/active/xw/xmclear.c, xscpxm.c
+
+010a1n.	10/6/99	gempak/source/gemlib/dg/dgmfil.f
+		gempak/source/gemlib/fl/testfl.f, flmfls.f, flmfil.f
+		gempak/source/gemlib/gg/testgg.f, ggwarn.f, gghrcn.f,
+						ggwtch.f, ggdvgf.f
+		gempak/source/gemlib/tg/testtg.f
+		gempak/source/gemlib/ti/testti.f
+		gempak/source/cgemlib/cfl/testcfl.c
+		gempak/source/cgemlib/ctb/testctb.c, ctbdtrd.c,
+				ctbdtdump.c
+		gempak/build/cgemlib_compile, all_compile, all_link
+		gempak/include/undscr.h, ctbcmn.h, gemprm.h, gemprm.log,
+			gemprm.OSF1, gemprm.AIX, gemprm.HPUX,
+			gemprm.IRIX, gemprm.Linux, gemprm.ULTRIX, 
+			gemprm.SunOS, gemprm.vms 
+		gempak/error/gg.err 
+
+	NEW:	gempak/source/gemlib/tg/tgmtch.f
+		gempak/source/gemlib/ti/timtch.f
+		gempak/source/cgemlib/ctb/ctbdtcat.c
+		gempak/source/cgemlib/cvg/cvgload2.c
+		gempak/source/nmaplib/ngd/testngd.c, ngdgtim.c, 
+			ngdcmn.h, ngddspl.f, ngdqatt.c, ngdsatt.c, 
+			ngdinit.c, ngdtlst.f, ngdplot.c
+		gempak/source/nmaplib/nim/testnim.c, nimftot.f, 
+			nimgtim.c, nimcmn.h, nimdspl.f, nimqatt.c, 
+			nimsatt.c, niminit.c, nimtlst.f, nimflnm.f, 
+			nimplot.c
+		gempak/source/nmaplib/nms/testnms.c, nmscmn.h,
+			nmsdspl.f, nmsqatt.c, nmssatt.c, nmsinit.c, 
+			nmsplot.c
+		gempak/source/nmaplib/nsf/testnsf.c, nsfgtim.c,
+			nsfcmn.h, nsfdspl.f, nsfqatt.c, nsfsatt.c, 
+			nsfinit.c, nsftlst.f, nsfplot.c
+		gempak/source/nmaplib/nsn/testnsn.c, nsngtim.c, 
+			nsncmn.h, nsndspl.f, nsnqatt.c, nsnsatt.c, 
+			nsninit.c, nsntlst.f, nsnplot.c
+		gempak/build/nmaplib_link, nmaplib_compile
+		gempak/error/nms.err, ngd.err, nsf.err, nim.err, nsn.err
+		gempak/source/nmaplib/ngd/testngd_link
+		gempak/source/nmaplib/nim/testnim_link
+		gempak/source/nmaplib/nms/testnms_link
+		gempak/source/nmaplib/nsf/testnsf_link
+		gempak/source/nmaplib/nsn/testnsn_link
+		gempak/tables/config/datatype.tbl
+
+	CSC:	gempak/source/gemlib/fl/flscnd.f, fltmpl.f
+		gempak/source/cgemlib/cfl/cflscnd.c
+		gempak/source/cgemlib/ctb/ctbdtget.c, ctbdttime.c
+
+019q.	10/7/99	gempak/maps/loosuo.nws, hiosuo.nws
+		gempak/maps/swapped/loosuo.nws, hiosuo.nws
+		gempak/maps/ascii/ascloosuo.nws, aschiosuo.nws
+
+	NEW:	gempak/maps/meosuo.nws, tposuo.nws
+		gempak/maps/swapped/meosuo.nws, tposuo.nws
+		gempak/maps/ascii/ascmeosuo.nws, asctposuo.nws
+
+001bb.	10/7/99	gempak/source/bridge/ls/lsintf.f, lswgem.f
+		gempak/source/bridge/ma/mabst0.f, macmn.cmn, maelev.f,
+			maifsp.f, maintf.f, masc2d.f, masc4d.f, mawgem.f
+		gempak/source/gemlib/pr/testpr.f
+		gempak/help/sfparm.hl2
+		gempak/txt/apx/parms.apx
+
+	NEW:	gempak/source/bridge/ma/mas4dg.f, mas4eg.f, mas4ll.f,
+								mas4tp.f
+		gempak/source/gemlib/pr/prpwao.f, prwmao.f
+
+001cc.	10/8/99	gempak/source/bridge/hc/hcdecd.f
+
+001dd.	10/8/99	gempak/source/bridge/ww/wwus8.f
+
+010a1o.	10/14/99 gempak/source/cgemlib/cds/cds.h, cdsdspelm.c, cdsinit.c
+		gempak/source/programs/gp/gpmap/gpmap.f
+		gempak/include/cescmn.h, undscr.h
+		gempak/help/vgfile.hl2
+
+	CSC:	gempak/source/cgemlib/cds/cdscirc.c, cdsfrnt.c, cdsline.c,
+			cdssig.c, cdssymb.c, cdstext.c, cdstrack.c,
+			cdswbox.c, cdswind.c
+
+	NEW:	gempak/source/cgemlib/cds/cdsgetinx.c, cdsrtbl.c, cdssubtyp.c
+		gempak/error/cds.err
+
+018hhh.	10/14/99 gempak/source/nmaplib/nim/testnim.c, nimcmn.h
+	NEW:	gempak/source/nmaplib/nim/nimgfil.c, nimgfln.f
+
+001ee.	10/14/99 gempak/build/bridge_compile, dc_link
+		gempak/include/undscr.h
+
+	NEW:	gempak/source/bridge/is/isarea.f, iscent.f, ischng.f,
+			isdcod.f, isdecd.f, isdist.c, isesol.f, isflvl.f,
+			isgtpt.c, ishurc.f, isltln.f, ismov.f, isobfc.f,
+			isout.f, isphen.f, isprmb.f, istime.f, ists.f,
+			isturb.f
+		gempak/source/programs/dc/dcisig/dcisig.c, dcisig_link
+		gempak/error/dcisig.err
+		gempak/help/dcisig.hlp
+
+018iii.	10/14/99 gempak/source/nxmlib/NxmEnhw.c
+		nprogs/nmap/source/nmap.c
+
+011dd.	10/14/99 gempak/source/programs/gd/grphgd/grphgd.f
+		gempak/nts/gemglb.nts
+		gempak/parm/grphgd.prm
+	CSC:	gempak/source/programs/gd/grphgd/grginp.f
+	NEW:	gempak/source/programs/gd/grphgd/ggdriv.f
+		gempak/help/histgrd.hl1, histgrd.hl2
+
+011ee.	10/14/99 gempak/source/programs/gp/gpmap/gpmap.f
+		gempak/source/nmaplib/nms/nmsdspl.f
+		gempak/help/hrcn.hl1, hrcn.hl2
+	CSC:	gempak/source/gemlib/gg/gghrcn.f
+
+018jjj.	10/14/99 nprogs/nmap/source/nmap_cldhgtw.c
+		nprogs/nmap/source/vgf/nmap_pgsigw.c
+
+010a1p.	10/15/99 gempak/source/cgemlib/clo/cloclosest.c, clotdirect.c,
+			clofrom.c, clotrack.c, clocmn.h, testclo.c
+		gempak/source/cgemlib/cds/cdssig.c
+		gempak/source/cgemlib/cvg/cvgsvcir.c
+		gempak/source/bridge/ww/wwcrnr.c, wwgtpt.c
+		gempak/source/programs/util/spctxt/spctxt.c
+		nprogs/nmap/source/nmap_seekw.c, nmap_mbotw.c
+		nprogs/nmap/source/vgf/nmap_pgwlst.c, nmap_pgolk.c,
+			nmap_pgwpts.c, nmap_pgxrain.c, nmap_pgwatch.c,
+			nmap_pgsigw.c
+		nprogs/nwx/source/wwcrnr.c
+		gempak/include/uscore.h
+
+	CSC:	gempak/source/cgemlib/clo/clodist.c, clodirect.c, 
+			clodltln.c, clocompass.c, clocmpwds.c
+	NEW:	gempak/source/cgemlib/clo/clo_cmpdir.c
+
+012f.	10/15/99 gempak/source/nxmlib/NxmLabel.c
+
+019r.	10/18/99 gempak/maps/swapped/loznus.nws, meznus.nws, hiznus.nws,
+						tpznus.nws
+		gempak/maps/loznus.nws, meznus.nws, hiznus.nws, tpznus.nws
+		gempak/maps/ascii/ascloznus.nws, ascmeznus.nws,
+					aschiznus.nws, asctpznus.nws
+
+018kkk.	10/19/99 gempak/source/nmaplib/nms/testnms.c
+	NEW:	gempak/source/nmaplib/nms/nmsghrn.c
+
+010a1q.	10/19/99 gempak/source/gemlib/im/imgpix.f
+		nprogs/nmap/source/nmap_cldhgtw.c
+		gempak/error/im.err
+
+018lll.	10/19/99 nprogs/nmap/source/* [except snmprm.f, nmap_snmap.f, 
+					nmap_domt.c, and nmap_compile]
+		nprogs/nmap/source/vgf/*
+		gempak/source/programs/gui/nmap2/nmap.c, nmap_dataw.c,
+			nmap_dslw.c, nmap_dsp.c, nmap_dsrc.c, nmap_dttmw.c,
+			nmap_image.c, nmap_mainw.c, nmap_mapw.c, 
+			nmap_mbotw.c, nmap_mbtnw.c, nmap_mdl.c, nmap_obs.c,
+			nmap_mmenuw.c, nmap_sfmw.c, nmap_tmln.c, 
+			nmap_uairw.c, nmap_vgf.c, nmap_data.h, nmapprm.h,
+			nmap_zoomw.c
+		gempak/source/programs/gui/nmap2/vgf/nmap_pgpalw.c
+
+	NEW:	gempak/source/programs/gui/nmap2/nmap_dcatg.c, nmap_msc.c,
+					Makefile, nmap2_compile
+		icons/nmap/one.xbm, two.xbm, three.xbm, four.xbm,
+							insns_lp.xbm
+		
+010a1r.	10/19/99 gempak/source/cgemlib/cds/cds.h, cdsdspelm.c, cdsinit.c, 
+						cdsrtbl.c
+	NEW:	gempak/source/cgemlib/cds/cdsatdeflt.c
+
+010a1s.	10/19/99 gempak/source/cgemlib/css/testcss.c
+	NEW:	gempak/source/cgemlib/css/cssgtim.c
+
+018mmm.	10/19/99 gempak/source/programs/gui/nmap2/nmap.c, nmap_clddhtw.c,
+			nmap_dataw.c, nmap_dsp.c, nmap_mbotw.c, 
+			nmap_mbtnw.c, nmap_data.h
+
+019s.	10/20/99 gempak/maps/ascii/mapfiles.doc
+		gempak/help/mapfil.hl2
+
+	NEW:	gempak/maps/tpfbwr.ncp
+		gempak/maps/ascii/asctpfbwr.ncp
+		gempak/maps/swapped/tpfbwr.ncp
+
+011ff.	10/20/99 gempak/source/programs/gd/grphgd/ggdriv.f, glimit.f,
+								grphgd.cmn
+		gempak/help/gglims.hl2, histgrd.hl1
+
+010a1t.	10/21/99 gempak/help/vgfile.hl1
+
+010a1u.	10/21/99 gempak/source/cgemlib/cvg/dumpvgf.c
+
+018nnn.	10/21/99 gempak/source/nmaplib/ngd/ngddspl.f
+		gempak/source/programs/gui/nmap2/nmap_dsp.c, nmap_dataw.c
+
+011gg.	10/21/99 gempak/source/programs/util/spctxt/spctxt.c
+
+018ooo.	10/21/99 gempak/source/programs/gui/nmap2/nmap_mpcstw.c
+
+008t.	10/21/99 gempak/txt/programs/gpmap.txt
+
+001ff.	10/22/99 gempak/source/bridge/is/isarea.f, isdcod.f, isdecd.f,
+			isesol.f, ismov.f, isout.f, isphen.f, isprmb.f
+		gempak/source/gemlib/gg/testgg.f
+		gempak/source/programs/gp/gpmap/gpmap.f
+		gempak/build/bridge_compile
+		gempak/help/dcisig.hlp
+		gempak/nts/gemglb.nts
+		gempak/parm/gpmap.prm
+		gempak/source/gemlib/gg/testgg_link
+
+	CSC:	gempak/source/bridge/is/ishurc.f, ists.f
+		gempak/source/programs/gp/gpmap/gpminp.f
+
+	NEW:	gempak/source/gemlib/gg/ggisig.f
+		gempak/help/isig.hl1, isig.hl2
+
+010a1v.	10/22/99 gempak/source/gemlib/pc/pcmand.f
+
+010a1w.	10/22/99 gempak/source/gemlib/gg/ggcpnl.f, ggpanl.f
+
+019t.	10/22/99 gempak/maps/locwa.nws, mecwa.nws, hicwa.nws, tpcwa.nws
+		gempak/maps/ascii/asclocwa.nws, ascmecwa.nws,
+					aschicwa.nws, asctpcwa.nws
+		gempak/maps/swapped/locwa.nws, mecwa.nws, hicwa.nws,
+								tpcwa.nws
+
+008u.	10/25/99 gempak/txt/programs/gpmap.txt
+
+007p.	10/25/99 gempak/include/xwcmn.h
+		gempak/source/driver/active/xw/xclear.c, xscpxm.c
+		gempak/source/programs/gui/nmap2/nmap.c, nmap_dsp.c,
+					nmap_mmenuw.c, nmap_roamw.c
+	NEW:	gempak/source/driver/active/xw/xsvflg.c
+
+011hh.	10/25/99 gempak/source/programs/gd/grphgd/gggint.f, ggdriv.f
+
+022a.	10/26/99 nprogs/viewfax/viewfax.c
+
+010a1x.	10/26/99 gempak/source/gemlib/im/imgpix.f
+
+012g.	10/27/99 nprogs/ntl/source/prog.c, prog.h
+
+012h.	10/27/99 nprogs/busy/source/busy.c
+
+019u.	10/27/99 gempak/maps/loosuo.nws, meosuo.nws, hiosuo.nws, tposuo.nws
+		gempak/maps/swapped/loosuo.nws, meosuo.nws, hiosuo.nws, 
+								tposuo.nws
+		gempak/maps/ascii/ascloosuo.nws, ascmeosuo.nws,
+					aschiosuo.nws, asctposuo.nws
+
+019v.	10/27/99 gempak/maps/ascii/mapfiles.doc
+		gempak/help/mapfil.hl2
+
+	NEW:	gempak/maps/tptvna.ncp, tptsna.ncp, tpthna.ncp, tptbna.ncp,
+							tptana.ncp
+		gempak/maps/swapped/tptvna.ncp, tptsna.ncp, tpthna.ncp,
+					tptbna.ncp, tptana.ncp
+		gempak/maps/ascii/asctptvna.ncp, asctptsna.ncp,
+			asctpthna.ncp, asctptbna.ncp, asctptana.ncp
+
+010a1y.	10/28/99 gempak/source/cgemlib/clo/cloclosest.c, clotdirect.c,
+			clotrack.c, testclo.c
+		gempak/source/cgemlib/cvg/cvgsvcir.c
+		gempak/source/bridge/is/isesol.f
+		nprogs/nmap/source/nmap_seekw.c + NMAP2
+		nprogs/nmap/source/vgf/nmap_pgwlst.c, nmap_pgolk.c,
+					nmap_pgwpts.c, nmap_pgwatch.c
+	CSC:	gempak/source/cgemlib/clo/clodist.c
+
+010a1z.	10/28/99 gempak/source/cgemlib/clo/clocmn.h
+
+021a2h.	10/29/99 nprogs/nmap/source/vgf/nmap_pgline.c & NMAP2
+
+012i.	11/2/99	gempak/source/nxmlib/NxmEnhw.c
+
+010a2a.	11/2/99	gempak/source/gemlib/pc/pcfunc.f
+		gempak/source/programs/sf/sfmap/sfmprm.f
+
+001gg.	11/2/99	gempak/source/bridge/af/afarfg.f, afawpt.f, afcmn.cmn, afadr.f,
+			afdarp.f, afdrco.f, afgfld.f, afpatp.f, afpflv.f, 
+			afptim.f, afrcld.f, africg.f, afxbif.f
+
+011ii.	11/2/99	gempak/build/gd_compile, gd_link
+		gempak/help/notae.hlp, scale.hl2
+
+	NEW:	gempak/source/programs/gd/gdgsfc/gdgsfc.f, gdzinp.f, gdzdsp.f,
+								gdgsfc_link
+		gempak/error/gdgsfc.err	
+		gempak/parm/gdgsfc.prm
+		gempak/txt/programs/gdgsfc.txt
+		gempak/utilities/pdfbld/gd_pdfbld
+		gempak/utilities/hlpbld/gd_hlpbld
+
+011jj.	11/2/99	gempak/source/programs/gd/grphgd/ggdriv.f
+
+018ppp.	11/2/99	nprogs/nmap/source/nmap_seekw.c
+		gempak/source/programs/gui/nmap2/nmap_seekw.c
+		gempak/source/cgemlib/clo/clordcnty.c, clofindstn.c
+
+001hh.	11/3/99	gempak/source/bridge/ww/wwus8.f
+
+018qqq.	11/3/99	nprogs/nmap/source/nmap_dataw.c
+		nprogs/nmap/source/vgf/nmap_pgpalw.c
+
+007q.	11/3/99	gempak/include/xwcmn.h
+		gempak/source/driver/active/xw/xarea.c, xclear.c, xclrpxm.c,
+			xcpypxm.c, xg2pxm.c, xgtpnt.c, xinita.c, xmexpo.c,
+			xmloop.c, xmotif.c, xmroam.c, xopenw.c, xpgpaste.c,
+			xpgrest.c, xpgsvfrm.c, xputpxms.c, xqdatt.c, xroam.c,
+			xsatim.c, xsatpx.c, xsdatt.c, xselwin.c, xslwin.c,
+			xsplot.c, xsroam.c, xxevnt.c, xxflsh.c
+		nprogs/nmap/source/nmap_cldhgtw.c, nmap_roamw.c, nmap_seekw.c
+		nprogs/nmap/source/vgf/nmap_pgconn.c, nmap_pgdelpt.c,
+			nmap_pgdsel.c, nmap_pggst.c, nmap_pgmdfy.c, 
+			nmap_pgmodv.c, nmap_pgmvcp.c, nmap_pgnew.c,
+			nmap_pgpdel.c, nmap_pgrad.c, nmap_pgrot.c, nmap_pgevt.c
+		gempak/source/programs/gui/nmap2/nmap_data.h, nmap.c, 
+			nmap_cldhgtw.c, nmap_dataw.c, nmap_dslw.c, nmap_dsp.c, 
+			nmap_image.c, nmap_mapw.c, nmap_mbotw.c, nmap_mbtnw.c, 
+			nmap_mmenuw.c, nmap_mpcstw.c, nmap_roamw.c, 
+			nmap_seekw.c, nmap_zoomw.c
+		gempak/source/programs/gui/nmap2/vgf/nmap_pgconn.c, 
+			nmap_pgdelpt.c, nmap_pgdsel.c, nmap_pggst.c, 
+			nmap_pgmdfy.c, nmap_pgmodv.c, nmap_pgmvcp.c,
+			nmap_pgnew.c, nmap_pgpdel.c, nmap_pgrad.c, nmap_pgrot.c,
+			nmap_pgevt.c, nmap_pgpalw.c
+
+	NEW:	gempak/source/driver/active/xw/xwgui.h
+		gempak/source/programs/gui/nmap2/nmap_auto.c, nmap_loop.c
+
+020f.	11/4/99	gempak/source/programs/util/spctxt/spcwtch.h, spctxt.c
+
+019w.	11/4/99	gempak/maps/hipowo.cia
+		gempak/maps/swapped/hipowo.cia
+		gempak/maps/ascii/aschipowo.cia
+
+010a2b.	11/4/99	gempak/source/gemlib/fl/flmfil.f
+
+019x.	11/4/99	gempak/maps/hipone.cia
+		gempak/maps/swapped/hipone.cia
+		gempak/maps/ascii/aschipone.cia
+
+011kk.	11/5/99	gempak/source/programs/gui/nmap2/nmap_auto.c, nmap_dataw.c,
+			nmap_dsp.c, nmap_loop.c, nmap_roamw.c, nmap_zoomw.c
+		gempak/source/programs/gui/nmap2/vgf/nmap_pgpalw.c
+
+001ii.	11/5/99	gempak/source/bridge/is/isarea.f, isdcod.f, isdecd.f, isflvl.f,
+			isltln.f, ismov.f, isout.f, isphen.f, 
+			isprmb.f, ists.f, isturb.f
+		gempak/source/gemlib/gg/ggwlbl.f, testgg.f
+		gempak/source/programs/gp/gpmap/gpmap.f
+
+	CSC:	gempak/source/bridge/is/ishurc.f
+		gempak/source/gemlib/gg/ggisig.f
+
+	NEW:	gempak/source/bridge/is/isbdln.f, isosol.f
+		gempak/source/gemlib/gg/ggctrd.f
+
+010a2c.	11/5/99	gempak/source/gemlib/oa/oagint.f
+
+010a2d.	11/8/99	gempak/source/gemlib/gg/testgg.f
+
+001jj.	11/8/99	gempak/source/bridge/af/afgmpk.f
+
+018rrr.	11/9/99	gempak/source/programs/gui/nmap2/nmap_auto.c, nmap_image.c,
+								nmap_tmln.c
+
+018sss.	11/10/99 gempak/source/programs/gui/nmap2/nmap_dsp.c
+
+011ll.	11/10/99 gempak/source/programs/gd/grphgd/ggdriv.f
+
+021a2i.	11/10/99 nprogs/nmap/source/vgf/nmap_pgpalw.c, nmap_pgggc.c, nmap_pgprd.c
+		 resource/Nmap
+		 gempak/include/undscr.h
+		 nprogs/nmap/source/Makefile
+		
+	NEW:	 nprogs/nmap/source/vgf/nmap_pggfmt.c
+
+018ttt.	11/10/99 gempak/source/programs/gui/nmap2/vgf/nmap_pgpalw.c, i
+			nmap_pgggc.c, nmap_pgprd.c
+		 gempak/source/programs/gui/nmap2/Makefile
+
+	NEW:	 gempak/source/programs/gui/nmap2/vgf/nmap_pggfmt.c
+
+018uuu.	11/10/99 gempak/source/programs/gui/nmap2/nmap_loop.c, 
+					nmap_roamw.c, nmap_dataw.c, nmap_data.h
+
+018vvv.	11/15/99 gempak/source/programs/gui/nmap2/nmap_dataw.c, nmap_msc.c,
+			nmap_obs.c, nmap_stnmw.c, nmap_stnm.h, nmap2_compile
+
+001kk.	11/15/99 gempak/source/bridge/hc/hcghdr.f
+
+012j.	11/15/99 gempak/source/nmaplib/nsn/nsndspl.f
+
+010a2e.	11/15/99 gempak/source/gemlib/gg/ggisig.f
+
+018www.	11/16/99 nprogs/nmap/source/nmap_dsp.c, nmap_wwnw.c
+		 gempak/include/undscr.h
+
+010a2f.	11/17/99 gempak/source/gemlib/im/testim.f, testim_link
+		 gempak/source/gemlib/lc/testlc.f, testlc_link
+		 gempak/source/gemlib/sn/testsn.f, testsn_link
+		 gempak/source/programs/gui/nmap2/nmap_cldhgtw.c
+		 nprogs/nmap/source/nmap_cldhgtw.c
+
+	CSC:	 gempak/source/gemlib/im/imgpix.f
+		 gempak/source/gemlib/lc/lcdist.f
+		 gempak/source/gemlib/sn/snghgt.f
+
+010a2g.	11/17/99 gempak/source/gemlib/aw/awpmap.f
+
+020g.	11/17/99 gempak/source/programs/util/spctxt/spctxt.c, spcwtch.h
+		 gempak/help/spctxt.hlp
+
+010a2h.	11/17/99 gempak/source/cgemlib/cds/cdssfill.c
+		 gempak/source/cgemlib/cfl/testcfl.c
+		 gempak/source/gemlib/fl/testfl.f
+		 gempak/source/gemlib/gg/ggwarn.f, gghrcn.f, ggwtch.f
+		 gempak/source/nmaplib/nms/nmsdspl.f, nmscmn.h, nmsinit.c, 
+							nmsplot.c, testnms.c
+		 gempak/source/programs/gui/nmap2/nmap_msc.c
+		 nprogs/nmap/source/nmap_dsp.c
+		 gempak/error/nms.err
+		 gempak/install/remove_links, setup_links
+
+	NEW:	 gempak/source/cgemlib/cfl/cflpath.c
+		 gempak/source/gemlib/fl/flpath.f
+		 gempak/source/nmaplib/nms/nmsrtbl.c
+		 gempak/include/nmsdef.h
+
+	CSC:	 gempak/source/nmaplib/nms/nmsqatt.c, nmssatt.c
+
+018xxx.	11/17/99 gempak/source/programs/gui/nmap2/nmap_dataw.c, nmap_dsp.c,
+							nmap_loop.c
+	NEW:	 gempak/source/driver/active/xw/xrbpxm.c
+
+010a2i.	11/18/99 gempak/source/cgemlib/css/testcss.c
+	NEW:	 gempak/source/cgemlib/css/cssmtyp.c
+
+008v.	11/18/99 gempak/help/hrcn.hl2
+
+021a2j.	11/18/99 nprogs/nmap/source/vgf/nmap_pgsigw.c, nmap_pgutls.c
+		 gempak/source/programs/gui/nmap2/vgf/nmap_pgsigw.c, nmap_pgutls.c
+
+021a2k.	11/18/99 nprogs/nmap/source/vgf/nmap_pgpalw.c
+	NEW:	 nprogs/nmap/source/vgf/nmap_pgwsmw.c
+
+010a2j.	11/18/99 gempak/source/gemlib/fl/flmdat.f
+		 gempak/source/cgemlib/cfl/cflmdat.c
+		 gempak/error/fl.err, cfl.err
+
+021a2l.	11/19/99 nprogs/nmap/source/vgf/nmap_pggfmt.c, nmap_pgggc.c + NMAP2
+
+021a2m.	11/19/99 nprogs/nmap/source/vgf/nmap_pgtrkw.c + NMAP2
+
+008w.	11/19/99 gempak/txt/apx/parms.apx
+		 gempak/help/sfparm.hl2
+
+010a2k.	11/19/99 gempak/source/gemlib/im/imgpix.f
+		 gempak/error/im.err
+
+021a2n.	11/22/99 nprogs/nmap/source/vgf/nmap_pggfmt.c + NMAP2
+
+007r.	11/22/99 gempak/source/driver/active/nc/mtext.c
+
+009h.	11/22/99 NEW:	 gempak/nts/nmap/restore/modl/global/1000mb_hght_absv,
+						850mb_hght_absv
+		 gempak/nts/nmap/restore/modl/NEWwave/peak_swell_per_gridded
+		 gempak/nts/nmap/restore/modl/nww3/peak_swell_per_gridded
+		 gempak/nts/nmap/restore/modl/wam/peak_swell_per_gridded
+
+021a2o.	11/22/99 nprogs/nmap/source/vgf/nmap_pgsigw.c + NMAP2
+
+021a2p.	11/22/99 nprogs/nmap/source/vgf/nmap_pgcirc.c, nmap_pgline.c,
+						nmap_pgtrkw.c + NMAP2
+
+018yyy.	11/22/99 nprogs/nmap/source/nmap_cldhgtw.c
+		 gempak/source/programs/gui/nmap2/nmap_cldhgtw.c
+
+018zzz.	11/23/99 gempak/source/programs/gui/nmap2/nmap_dsp.c, nmap_mainw.c,
+						nmap_dataw.c, nmap_mbtnw.c
+		 gempak/source/driver/active/xw/xinita.c
+
+008x.	11/23/99 help/nmap/WhatsNew.hlp
+
+021a2q.	11/24/99 nprogs/nmap/source/vgf/nmap_pgsigw.c + NMAP2
+
+019y.	11/24/99 gempak/maps/ascii/mapfiles.doc
+		 gempak/help/mapfil.hl2
+
+	NEW:	 gempak/maps/lofbp3.ncp, lofba3.ncp, mefbp3.ncp, mefba3.ncp,
+			hifbp3.ncp, hifba3.ncp, tpfbp3.ncp, tpfba3.ncp
+		 gempak/maps/ascii/asclofbp3.ncp, asclofba3.ncp, ascmefbp3.ncp,
+			ascmefba3.ncp, aschifbp3.ncp, aschifba3.ncp,
+			asctpfbp3.ncp, asctpfba3.ncp
+		 gempak/maps/swapped/lofbp3.ncp, lofba3.ncp, mefbp3.ncp,
+			mefba3.ncp, hifbp3.ncp, hifba3.ncp, tpfbp3.ncp,
+			tpfba3.ncp
+
+============================== Patch 5.4.3.w ===============================
+
+010a2l.	11/30/99 gempak/source/gemlib/ss/ssvers.f
+
+021a2r.	11/30/99 nprogs/nmap/source/vgf/nmap_pgfilw.c + NMAP2
+
+021a2s.	11/30/99 nprogs/nmap/source/vgf/nmap_pggfmt.c + NMAP2
+
+009i.	11/30/99 gempak/nts/nmap/restore/prcp/precip_5-day
+	NEW:	 gempak/nts/nmap/restore/modl/global/precip_type_vv
+
+010a2m.	11/30/99 gempak/source/gemlib/ti/tidayw.f, testti.f
+	NEW:	 gempak/source/gemlib/ti/tidst.f
+
+020h.	11/30/99 gempak/build/nprog_make, nprog_link
+	NEW:	 nprogs/nfax/source/*
+
+001ll.	12/1/99	gempak/source/bridge/sc/scdcod.f
+		gempak/source/programs/dc/dcamos/dcavcd.f
+		gempak/source/programs/dc/dcnmos/dcnmdc.f
+		gempak/source/programs/dc/dcmmos/dcmmdc.f
+
+001mm.	12/1/99	gempak/source/gemlib/pr/testpr.f
+		gempak/source/bridge/is/isarea.f, isdcod.f, isesol.f, 
+					isltln.f, ismov.f, isosol.f
+
+	NEW:	gempak/source/gemlib/pr/prhgnm.f
+		gempak/source/bridge/is/isintx.f
+
+018a1a.	12/1/99	gempak/source/gemlib/fl/fltmpl.f
+		gempak/source/cgemlib/ctb/ctbdtrd.c
+		gempak/source/programs/gui/nmap2/nmap.c, nmap_dataw.c, 
+					nmap_dslw.c, nmap_dsp.c, nmap_msc.c
+		gempak/include/gemprm.*a
+
+	NEW:	gempak/source/cgemlib/ctb/ctbdtlist.c
+		gempak/source/programs/gui/nmap2/nmap_grd.c, nmap_gtbl.c
+								nmap_gtbl.h
+019z.	12/2/99	gempak/maps/loosuo.nws, meosuo.nws, hiosuo.nws, tposuo.nws
+		gempak/maps/swapped/loosuo.nws, meosuo.nws, hiosuo.nws,
+								tposuo.nws
+		gempak/maps/ascii/ascloosuo.nws, ascmeosuo.nws, aschiosuo.nws,
+								asctposuo.nws
+
+010a2n.	12/2/99	gempak/source/gemlib/pr/praltp.f, prpalt.f, przalt.f, testpr.f
+		gempak/source/programs/gd/gdvint/vcetac.f, vcpfet.f
+
+009j.	12/2/99	gempak/nts/nmap/restore/modl/global/precip_type_vv
+
+021a2t.	12/2/99	nprogs/nmap/source/vgf/nmap_pgwfmt.c + NMAP2
+
+010a2o.	12/2/99	gempak/source/cgemlib/cvg/cvgrdele.c
+		nprogs/nmap/source/vgf/nmap_pgvgf.c + NMAP2
+		gempak/include/vgstruct.h	[major change]
+	NEW:	gempak/source/cgemlib/cvg/cvgrdwbx.c
+
+010a2p.	12/3/99	gempak/source/cgemlib/cst/testcst.c
+	NEW:	gempak/source/cgemlib/cst/cstwrap.c
+
+021a2u.	12/7/99	nprogs/nmap/source/vgf/nmap_pggfmt.c + NMAP2
+
+021a2v.	12/7/99	gempak/source/cgemlib/cds/cdssig.c
+		nprogs/nmap/source/vgf/nmap_pgsigw.c + NMAP2
+
+021a2w.	12/7/99	gempak/source/cgemlib/cvg/cvgrdwbx.c
+		nprogs/nmap/source/vgf/nmap_pgvgf.c + NMAP2
+	CSC:	gempak/source/cgemlib/cvg/cvgsvwbx.c, cvgwbsto.c
+
+018a1b.	12/7/99	nprogs/nmap/source/nmap_dataw.c
+
+019aa.	12/7/99	gempak/maps/hiposw.cia, hiponw.cia, hipowo.cia
+		gempak/maps/swapped/hiposw.cia, hiponw.cia, hipowo.cia
+		gempak/maps/ascii/aschiposw.cia, aschiponw.cia, aschipowo.cia
+
+019bb.	12/7/99	gempak/maps/tpthna.ncp
+		gempak/maps/swapped/tpthna.ncp
+		gempak/maps/ascii/asctpthna.ncp
+
+001nn.	12/7/99	gempak/source/bridge/is/isarea.f
+
+019cc.	12/8/99	gempak/help/mapfil.hl2
+		gempak/maps/ascii/mapfiles.doc 
+
+	NEW:	gempak/maps/locdus.usg, mecdus.usg, hicdus.usg, tpcdus.usg
+		gempak/maps/swapped/locdus.usg, mecdus.usg, hicdus.usg, 
+								tpcdus.usg
+		gempak/maps/ascii/asclocdus.usg, ascmecdus.usg, 
+						aschicdus.usg, asctpcdus.usg
+
+018a1c.	12/8/99	gempak/source/gemlib/im/testim.f
+		gempak/source/gemlib/sn/testsn.f
+		gempak/source/programs/gui/nmap2/nmap_cldhgtw.c
+		nprogs/nmap/source/nmap_cldhgtw.c
+		gempak/error/im.err, sn.err
+
+	CSC:	gempak/source/gemlib/im/imgpix.f
+		gempak/source/gemlib/sn/snghgt.f
+		
+	NEW:	gempak/source/gemlib/sn/snopnt.f, snrtbl.f
+
+021a2x.	12/8/99	nprogs/nmap/source/vgf/nmap_pgwsmw.c + NMAP2
+
+010a2q.	12/8/99	gempak/source/gemlib/fl/flmfls.f, flmfil.f
+
+021a2y.	12/8/99	nprogs/nmap/source/vgf/nmap_pgsigw.c + NMAP2
+		gempak/source/cgemlib/clo/testclo.c
+	CSC:	gempak/source/cgemlib/clo/clofrom.c
+
+010a2r.	12/8/99	gempak/source/bridge/dc/dcstns.f
+		gempak/source/bridge/ma/mastbl.f
+		gempak/source/bridge/rs/sfstnf.f
+		gempak/source/gemlib/gg/ggsplt.f
+		gempak/source/gemlib/lc/lcfstn.f
+		gempak/source/gemlib/tb/tbrstn.f, testtb.f
+		gempak/source/programs/sf/sfcfil/sffsfl.f
+		gempak/source/programs/sf/sfstns/sfstns.f
+		gempak/source/programs/sn/sncfil/snfsfl.f
+		gempak/source/programs/sn/snstns/snstns.f
+
+019dd.	12/9/99	gempak/help/mapfil.hl2
+
+	NEW:	gempak/maps/lohsuo.nws, mehsuo.nws, hihsuo.nws, tphsuo.nws
+		gempak/maps/swapped/lohsuo.nws, mehsuo.nws, hihsuo.nws,
+								tphsuo.nws
+		gempak/maps/ascii/asclohsuo.nws, ascmehsuo.nws,
+					aschihsuo.nws, asctphsuo.nws
+
+010a2s.	12/9/99	gempak/source/cgemlib/clo/clofrom.c
+
+018a1d.	12/9/99	nprogs/nmap/source/nmap_mbotw.c, nmap_mmenuw.c
+		gempak/source/programs/gui/nmap2/nmap_mbotw.c, nmap_mmenuw.c
+
+021a2z.	12/9/99	nprogs/nmap/source/vgf/nmap_pgpalw.c, nmap_pgobj.c
+		gempak/source/programs/gui/nmap2/vgf/nmap_pgpalw.c, nmap_pgobj.c
+		gempak/include/drwids.h
+		gempak/utilities/xbm/nmapxbms.csh
+	NEW:	icons/nmap/wxsym05.xbm
+
+021a3a.	12/9/99	nprogs/nmap/source/vgf/nmap_pgwfmt.c
+		gempak/source/programs/gui/nmap2/vgf/nmap_pgwfmt.c
+
+018a1e.	12/9/99	gempak/source/cgemlib/clo/clotclosest.c, clotdirect.c, testclo.c
+		nprogs/nmap/source/nmap_mbotw.c
+		gempak/source/programs/gui/nmap2/nmap_mbotw.c
+
+019ee.	12/9/99	gempak/maps/locwa.nws, mecwa.nws, hicwa.nws, tpcwa.nws
+		gempak/maps/swapped/locwa.nws, mecwa.nws, hicwa.nws, tpcwa.nws
+		gempak/maps/ascii/asclocwa.nws, ascmecwa.nws, aschicwa.nws,
+								asctpcwa.nws
+
+010a2t.	12/10/99 gempak/source/gemlib/gg/ggwtch.f
+
+010a2u.	12/10/99 gempak/source/cgemlib/cvg/cvgdump.c, cvgrdwbx.c
+
+007s.	12/13/99 gempak/source/driver/active/rbk/aopen.c
+
+018a1f.	12/13/99 nprogs/nmap/source/nmap_mcanvw.c, nmap_seekw.c + NMAP2
+		 nprogs/nmap/source/vgf/nmap_pggst.c + NMAP2 
+	NEW:	 icons/nmap/dblarr.xbm
+
+010a2v.	12/13/99 gempak/source/cgemlib/clo/clodirect.c, clodist.c, clocmn.h
+
+007t.	12/13/99 gempak/include/xwcmn.h
+		 gempak/source/driver/active/xw/xcirc.c, xclear.c, xclpnl.c,
+		 	xclrpxm.c, xdot.c, xenanm.c, xfill.c, xg2pxm.c, xgtpnt.c,
+		 	xinita.c, xline.c, xmexpo.c, xmotifw.c, xmroam.c, 
+			xopenw.c, xpgpaste.c, xpgrest.c, xpgrfrsh.c, xpoint.c, 
+			xputpxms.c, xrbpxm.c, xroam.c, xsatim.c, xscpxm.c, 
+			xsplot.c, xsroam.c, xtext.c, xtextc.c, xxevnt.c, xxflsh.c
+		 gempak/source/programs/gui/nmap2/nmap.c, nmap_auto.c,
+			nmap_dataw.c, nmap_dsp.c, nmap_loop.c, nmap_mbtnw.c,
+			nmap_mcanvw.c, nmap_roamw.c, nmap_zoomw.c
+		gempak/source/programs/gui/nmap2/vgf/nmap_pgpalw.c
+	NEW:	gempak/source/driver/active/xw/xcpypxm2.c, xpgrestlp.c,
+			xpgsvfrm2.c, xpgsvlp.c
+
+007u.	12/14/99 gempak/source/driver/active/nc/mtext.c
+
+021a3b.	12/14/99 nprogs/nmap/source/vgf/nmap_pgmodv.c
+		 gempak/source/programs/gui/nmap2/vgf/nmap_pgmodv.c
+
+019ff.	12/14/99 NEW:	gempak/data/vgf/NAmer.vgf
+
+019gg.	12/14/99 gempak/help/mapfil.hl2
+		 gempak/maps/ascii/mapfiles.doc
+
+	NEW:	 gempak/maps/lomouo.nws, memouo.nws, himouo.nws, tpmouo.nws
+		 gempak/maps/swapped/lomouo.nws, memouo.nws, himouo.nws,
+								tpmouo.nws
+		 gempak/maps/ascii/asclomouo.nws, ascmemouo.nws, 
+						aschimouo.nws, asctpmouo.nws
+
+018a1g.	12/15/99 nprogs/nmap/source/nmap_seekw.c + NMAP2
+		 nprogs/nmap/source/vgf/nmap_pgsigw.c + NMAP2
+
+018a1h.	12/15/99 nprogs/nmap/source/nmap_cldhgtw.c
+		 gempak/source/programs/gui/nmap2/nmap_cldhgtw.c
+		 gempak/source/gemlib/im/testim.f
+		 gempak/source/gplt/main/gplt.f
+		 gempak/source/device/main/device.f
+
+	CSC:	 gempak/source/driver/active/gn/hsatpx.f
+		 gempak/source/driver/active/xw/hsatpx.f, xsatpx.c
+		 gempak/source/device/satellite/dsatpx.f
+		 gempak/source/gplt/satellite/gsatpx.f
+		 gempak/source/gplt/device/satellite/dsatpx.f
+		 gempak/source/appl/satellite/gsatpx.f
+		 gempak/source/gemlib/im/imgpix.f
+
+018a1i.	12/15/99 nprogs/nmap/source/nmap_cldhgtw.c
+		 gempak/source/programs/gui/nmap2/nmap_cldhgtw.c
+		 resource/Nmap
+
+010a2w.	12/15/99 gempak/source/cgemlib/cds/cdswbox.c
+
+021a3c.	12/15/99 nprogs/nmap/source/vgf/nmap_pgwfmt.c, nmap_pgwatch.c,
+				nmap_pgevt.c, nmap_pgprd.c + NMAP2
+
+010a2x.	12/15/99 gempak/source/gemlib/gg/ggisig.f, testgg.f
+		 gempak/source/device/attribute/dsmrkr.f
+		 gempak/source/device/draw/imark.f
+		 gempak/source/programs/gp/gpmap/gpmap.f
+		 gempak/build/gemlib_compile
+		 gempak/help/marker.hl2
+		 gempak/include/undscr.h
+		 gempak/nts/gemglb.nts
+		 gempak/parm/gpmap.prm
+		 gempak/txt/programs/gpmap.txt
+
+	NEW:	 gempak/source/gemlib/gg/ggltng.f
+		 gempak/source/gemlib/lw/lwinpt.f
+		 gempak/help/ltng.hl1, ltng.hl2
+
+	CSC:	 gempak/source/programs/gp/gpmap/gpminp.f 
+
+021a3d.	12/16/99 nprogs/nmap/source/vgf/nmap_pgwfmt.c + NMAP2
+
+021a3e.	12/16/99 nprogs/nmap/source/vgf/nmap_pgedit.c, nmap_pgevt.c,
+				nmap_pgvgf.c, nmap_pgwatch + NMAP2
+		 gempak/source/cgemlib/cvg/cvgcp.c, cvgrdwbx.c, cvgsvwbx.c
+		 gempak/source/cgemlib/cds/cdswbox.c
+
+018a1j.	12/16/99 nprogs/nmap/source/nmap_mmenuw.c, nmap_seekw.c, nmap_zoomw.c
+		 gempak/source/programs/gui/nmap2/nmap_roamw.c, nmap_zoomw.c,
+								nmap_seekw.c
+
+021a3f.	12/16/99 nprogs/nmap/source/vgf/nmap_pgprd.c + NMAP2!
+
+018a1k.	12/16/99 gempak/source/gemlib/gg/ggltng.f
+		 nprogs/nmap/source/nmap_dsp.c, nmap_wwnw.c
+
+018a1l.	12/16/99 nprogs/nmap/source/nmap_dataw.c, nmap_mbtnw.c 
+		 gempak/source/programs/gui/nmap2/nmap_dataw.c, nmap_mbtnw.c
+
+021a3g.	12/16/99 nprogs/nmap/source/vgf/nmap_pgwfmt.c + NMAP2
+
+008y.	12/16/99 help/nmap/CloudHght.hlp, Seek.hlp, nmapHlp.index
+
+019hh.	12/16/99 gempak/data/vgf/NAmer.vgf
+
+010a2y.	12/16/99 gempak/source/cgemlib/cvg/cvgcp.c
+
+018a1m.	12/16/99 nprogs/nmap/source/nmap_dsp.c
+
+018a1n.	12/17/99 nprogs/nmap/source/nmap_wwnw.c
+
+018a1o.	12/17/99 nprogs/nmap/source/nmap_seekw.c + NMAP2!!
+
+021a3h.	12/17/99 gempak/include/drwids.h, pgprm.h
+		 nprogs/nmap/source/vgf/nmap_pgevt.c, nmap_pgnew.c, 
+						nmap_pgpalw.c, nmap_pgwbxw.c
+		 gempak/source/programs/gui/nmap2/vgf/nmap_pgevt.c, 
+				nmap_pgnew.c, nmap_pgpalw.c, nmap_pgwbxw.c
+	NEW:	 icons/nmap/wtchln.xbm
+
+021a3i.	12/17/99 nprogs/nmap/source/nmap_seekw.c
+		 nprogs/nmap/source/vgf/nmap_pgpalw.c, nmap_pgprd.c,
+			nmap_pgwatch.c, nmap_pgwfmt.c, nmap_pgwsmw.c, 
+			nmap_pgevt.c
+		 gempak/include/drwids.h
+	NEW:	 icons/nmap/wtchstat.xbm
+
+021a3j.	12/20/99 nprogs/nmap/source/nmap_pgwsmw.c
+
+021a3k.	12/20/99 nprogs/nmap/source/vgf/nmap_pgevt.c
+
+008z.	12/20/99 help/nmap/WhatsNew.hlp
+
+021a3l.	12/21/99 nprogs/nmap/source/vgf/nmap_pgwsmw.c
+
+============================== Patch 5.4.3.x ===============================
+
+010a2z.	12/27/99 gempak/source/gemlib/ss/ssvers.f
+
+001oo.	12/27/99 gempak/source/bridge/ff/ffglin.f
+
+006d.	12/27/99 gempak/source/device/draw/ipatln.f
+		
+		 gempak/tables/draw/splpat.tbl
+
+021a3m. 12/27/99 nprogs/nmap/source/nmap_cldhgtw.c, nmap_mapw.c,
+		 nmap_mcanw.c, nmap_seekw.c, nmap_zoomw.c
+		 nprogs/nmap/source/vgf/nmap_nmap_pgconn.c, 
+		 nmap_pgdelobj.c, nmap_pgdelpt.c, nmap_pgdsel.c,
+		 nmap_pgevt.c, nmap_pggfmt.c, nmap_pgmdfy.c,
+		 nmap_pgmodv.c, nmap_pgmvcp.c, nmap_pgnew.c,
+		 nmap_pgpalw.c, nmap_pgpdel.c, nmap_pgprd.c,
+		 nmap_pgprad.c, nmap_pgprot.c, nmap_pgsigw.c,
+		 nmap_pgsigw.c, nmap_pgwfmt.c, nmap_pgwsmw.c
+		 gempak/source/programs/gui/nmap2/nmap_cldhgtw.c, 
+		 nmap_mapw.c, nmap_mcanw.c, nmap_zoomw.c
+		 gempak/source/programs/gui/nmap2/vgf/nmap_pgconn.c
+		 nmap_pgdelobj.c, nmap_pgdelpt.c, nmap_pgdsel.c,
+		 nmap_pgedit.c, nmap_pgevt.c, nmap_pggfmt.c, 
+		 nmap_pgmdfy.c, nmap_pgmodv.c, nmap_pgmvcp.c,
+		 nmap_pgnew.c, nmap_pgpalw.c, nmap_pgpdel.c,
+		 nmap_pgprd.c, nmap_pgrad.c, nmap_pgrad.c, 
+		 nmap_pgrot.c, nmap_pgsigw.c, nmap_pgwatch.c,
+		 nmap_pgwfmt.c, nmap_pgwsmw.c
+
+		 gempak/include/gemprm.h
+		 nprogs/nmap/source/nmapprm.h
+		 gempak/source/programs/gui/nmap2/nmapprm.h
+
+018a1p.	12/27/99 nprogs/nmap/source/nmap_dsp.c
+		 gempak/source/programs/gui/nmap2/nmap_dsp.c
+
+018a1q.	12/27/99 gempak/source/programs/gui/nmap2/nmap_mapw.c	
+
+018a1r.	12/28/99 nprogs/nmap/source/nmap_image.c, nmap_dataw.c
+
+010a3a.	12/28/99 gempak/source/gemlib/fl/flmfil.f
+
+018a1s.	12/30/99 gempak/source/driver/active/xw/xmloop.c
+		 gempak/source/programs/gui/nmap2/nmap_dataw.c, nmap_dslw.c,
+							nmap_dsp.c, nmap_mbtnw.c
+
+010a3b.	12/30/99 gempak/source/cgemlib/cvg/cvgrdele.c, cvgrdhdr.c, cvgrdsym.c,
+			cvgrdwnd.c, cvgsvsym.c, cvgsvwnd.c, cvgwrit.c,
+			cvgdelet.c, cvgcp.c
+		 gempak/include/vgstruct.h {only new #defines}
+	 NEW:	 gempak/source/cgemlib/cvg/cvgswap.c
+
+006e.	12/30/99 .cshrc
+		 gempak/source/gplt/utility/gdrmap.f
+
+006f.	12/30/99 gempak/source/gplt/utility/gdrgrd.f
+		 gempak/source/gemlib/gg/ggcbar.f
+		 gempak/source/driver/active/nc/mtext.c
+
+010a3c.	1/3/00	gempak/source/gemlib/fl/flmfil.f
+
+021a3n.	1/4/00	NEW: (moved from /vgf subdirectory)
+		     gempak/source/nmaplib/pgen/*.c
+	
+		NEW: (moved from $NAWIPS/nprogs/nmap/source/vgf)
+		     nprogs/nmap/source/nmap_pgpalw.c
+
+		NEW: (moved from $GEMPAK/source/programs/gui/nmap2/vgf)
+		     $GEMPAK/source/programs/gui/nmap2/nmap_pgpalw.c
+
+		gempak/source/programs/gui/nmap2/nmap2_compile
+		gempak/build/nmaplib_compile
+		nprogs/nmap/source/nmap_compile, Makefile
+
+021a3o.	1/5/00	gempak/source/nmaplib/pgen/nmap_pggfmt.c, nmap_pggst.c
+
+018a1t.	1/5/00	gempak/source/programs/gui/nmap2/nmap.c, nmap_mbtnw.c
+		nprogs/nmap/source/nmap.c
+		resource/Nmap
+
+010a3d.	1/5/00	gempak/source/gemlib/gg/ggisig.f, ggwtch.f
+
+001pp.	1/5/00	gempak/source/bridge/is/isarea.f, iscent.f, isltln.f
+
+007v.	1/5/00	gempak/source/driver/active/xw/xg2pxm.c
+
+018a1u.	1/5/00	gempak/source/nmaplib/nms/nmsrtbl.c, nmsqatt.c, nmssatt.c, 
+			nmsinit.c, nmsplot.c, testnms.c, nmscmn.h
+		gempak/source/programs/gui/nmap2/nmap_vtbl.c, nmap_msc.c,
+			nmap_dslw.c
+		gempak/include/nmsdef.h
+	CSC:	gempak/source/nmaplib/nms/nmsdspl.f
+
+001qq.	1/7/00	gempak/source/bridge/dc/dcwlog.f, dcinit.c
+		gempak/help/decode.hlp
+		gempak/error/dc.err
+
+018a1v.	1/7/00	gempak/source/nmaplib/pgen/nmap_pgsigw.c
+
+021a3p.	1/10/00	gempak/source/nmaplib/pgen/nmap_pgwfmt.c
+
+006g.	1/10/00	gempak/source/gplt/main/gplt.f
+		gempak/source/programs/gd/gdcntr/gdcntr.f
+		gempak/source/programs/gd/gdcross/gdcross.f
+		gempak/source/programs/gd/gdplot/gdplot.f
+		gempak/source/programs/gd/gdplot2/gdpltb.f
+		gempak/source/programs/sn/sncross/sncross.f
+		gempak/source/gemlib/in/testin.f
+		gempak/source/testprog/atest.f
+		gempak/include/funccode.prm
+		gempak/help/ctype.hl2, type.hl2
+
+	NEW:	gempak/source/gplt/contour/gcntln.f, gcntfl.f, gcntbx.f,
+			ccdrw2.f, cldrv2.f, ffdrv2.f
+		gempak/source/appl/contour/gcntln.f, gcntfl.f, gcntbx.f
+
+	CSC:	gempak/source/gemlib/in/intype.f, inctyp.f
+
+021a3q.	1/10/00	gempak/source/driver/active/xw/xwgui.h, xinita.c, xmloop.c
+		gempak/source/programs/gui/nmap2/nmap_data.h, nmap_dataw.c,
+			nmap_dslw.c, nmap_loop.c, nmap_loopw.c, nmap_mapw.c,
+			nmap_mbtnw.c
+
+010a3f.	1/10/00	gempak/source/cgemlib/cds/cdswbox.c
+
+018a1w.	1/11/00	nprogs/nmap/source/nmap_dataw.c
+
+018a1x.	1/13/00	gempak/source/programs/gui/nmap2/nmap_dataw.c
+
+021a3r.	1/13/00	gempak/source/nmaplib/pgen/nmap_pgfilw.c
+		gempak/source/programs/gui/nmap2/nmap_dslw.c, nmap_vtbl.c
+		nprogs/nmap/source/nmap_dslw.c, nmap_vtbl.c
+	
+	NEW:	gempak/include/nmap_vtbl.h [moving from nmap/nmap2]
+		gempak/source/cgemlib/cfl/cflgfil.c
+
+018a1y.	1/13/00	nprogs/nmap/source/nmap_cldhgtw.c
+		gempak/source/programs/gui/nmap2/nmap_cldhgtw.c
+
+010a3g.	1/13/00	gempak/source/cgemlib/cvg/cvgdeall.c
+
+018a1z.	1/13/00	gempak/source/programs/gui/nmap2/nmap_dsp.c
+
+020i.	1/13/00	gempak/maps/programs/ssfgsf.f, gsfssf.f
+
+009k.	1/13/00	NEW: gempak/nts/nmap/restore/modl/eta/frzg_lvl_hght,
+							frzg_lvl_hght_ncf
+
+010a3h.	1/14/00	gempak/source/cgemlib/clo/clocmn.h, clofrom.c, cloinit.c, 
+							testclo.c
+		gempak/source/nmaplib/pgen/nmap_pgolk.c, nmap_pgwlst.c,
+			nmap_pgwpts.c, nmap_pgxrain.c
+		gempak/source/bridge/ww/wwcrnr.c, wwgtpt.c
+		gempak/source/programs/util/spctxt/spctxt.c
+		gempak/source/programs/gui/nmap2/nmap_mbotw.c, nmap_mmenuw.c,
+								nmap_seekw.c
+		nprogs/nmap/source/nmap_mbotw.c, nmap_mmenuw.c, nmap_seekw.c
+		nprogs/nwx/source/wwcrnr.c
+
+	NEW:	gempak/source/cgemlib/clo/clowhich.c, cloformat.c
+	CSC:	gempak/source/cgemlib/clo/clocitygall.c, clofindmatch.c,
+			clofindstn.c, clordstn.c, clotclosest.c, clotdirect.c,
+			clotgid.c, clotgltln.c, clotinltln.c, clotinpoly.c
+
+018a2a.	1/18/00 nprogs/nsat/source/mcanvw.c
+		nprogs/nmap/source/nmap_cldhgtw.c, nmap_mcanvw.c, nmap_seekw.c
+		gempak/source/programs/gui/nmap2/nmap_seekw.c, nmap_cldhgtw.c,
+								nmap_mcanvw.c
+		gempak/source/programs/gui/nafos/nafmcnvw.c
+		gempak/source/cgemlib/cds/cdssig.c
+		gempak/source/nmaplib/pgen/nmap_pgcirc.c, nmap_pgedit.c, 
+			nmap_pggst.c, nmap_pgmodv.c, nmap_pgnew.c, nmap_pgsymb.c
+
+010a3i.	1/18/00	gempak/source/cgemlib/clo/cloformat.c
+
+001rr.	1/19/00	gempak/source/bridge/ma/maobst.f
+
+018a2b. 1/19/00	gempak/source/driver/active/xw/xpgsvlp.c
+		nprogs/nmap/source/nmap_pgpalw.c
+		gempak/source/programs/gui/nmap2/nmap_dsp.c, nmap_mapw.c, 
+								nmap_pgpalw.c
+
+010a3j.	1/19/00 gempak/source/cgemlib/cvg/cvgsvcir.c
+		gempak/source/cgemlib/crg/crgsetcir.c 
+
+010a3k.	1/19/00	gempak/include/vgstruct.h
+		gempak/source/cgemlib/cds/cdswbox.c
+		gempak/source/cgemlib/cvg/cvgcp.c, cvgdump.c, cvgrdwbx.c, cvgswap.c
+		gempak/source/nmaplib/pgen/nmap_pgevt.c, nmap_pgvgf.c, 
+			nmap_pgwatch.c, nmap_pgwbxw.c, nmap_pgwfmt.c, nmap_pgwlst.c
+	NEW:	gempak/source/cgemlib/clo/clotgst.c
+	CSC:	gempak/source/cgemlib/cvg/cvgsvwbx.c, cvgwbato.c
+
+007w.	1/20/00	gempak/source/driver/active/xw/xmloop.c, xpgrestlp.c
+		gempak/source/programs/gui/nmap2/nmap_dataw.c
+
+007x.	1/20/00	gempak/include/xwprm.h
+		gempak/source/driver/active/xw/xmloop.c
+		nprogs/nmap/source/nmap_loopw.c
+		gempak/source/programs/gui/nmap2/nmap_dsp.c, nmap_loopw.c
+
+018a2c.	1/20/00	nprogs/nmap/source/nmap_mapw.c
+		gempak/source/programs/gui/nmap2/nmap_mapw.c
+
+018a2d.	1/20/00 nprogs/nmap/source/nmap_dataw.c, nmap_obs.c
+
+018a2e.	1/20/00	gempak/source/programs/gui/nmap2/nmap_dataw.c
+
+014a.	1/20/00 nprogs/ntrans/source/models.c
+
+015b.	1/20/00	nprogs/nsat/source/mcanvw.c
+		gempak/source/programs/gui/nafos/nafmcnvw.c
+
+010a3l.	1/20/00 gempak/source/gemlib/im/testim.f
+		gempak/source/gemlib/pr/testpr.f
+		gempak/source/gemlib/ps/pscape.f
+		gempak/source/gemlib/sn/testsn.f
+		nprogs/nmap/source/nmap_cldhgtw.c
+		gempak/source/programs/gui/nmap2/nmap_cldhgtw.c
+		gempak/error/im.err, sn.err
+
+	NEW:	gempak/source/gemlib/pr/prpmst.f
+		gempak/source/gemlib/ps/psustb.f
+
+	CSC:	gempak/source/gemlib/im/imgpix.f
+		gempak/source/gemlib/sn/snghgt.f
+
+001ss.	1/20/00	gempak/source/bridge/is/isarea.f, isdcod.f, isflvl.f, isobfc.f
+
+	NEW:	gempak/source/bridge/is/isegar.f, iseggy.f, isegmv.f, 
+					isegpr.f, isegtb.f, isegts.f
+
+001tt.	1/20/00	gempak/source/bridge/is/isesol.f, isintx.f
+
+001uu.	1/20/00 gempak/source/bridge/af/afcmn.cmn, afdprp.f, afgmpk.f, 
+							afifsp.f, afintf.f
+		gempak/source/gemlib/pt/ptfunc.f, testpt.f
+		gempak/help/sfparm.hl2
+		gempak/txt/apx/parms.apx
+	
+	NEW:	gempak/source/bridge/af/afprsi.f
+		gempak/source/gemlib/pt/ptactp.f, ptpatn.f
+
+018a2f.	1/20/00	gempak/source/programs/gui/nmap2/nmap_zoomw.c
+
+018a2g.	1/21/00	gempak/source/programs/gui/nmap2/nmap_dsp.c
+
+021a3s.	1/21/00	gempak/source/nmaplib/pgen/nmap_pgwfmt.c, nmap_pgwatch.c
+		gempak/source/cgemlib/clo/cloclosest.c, clotclosest.c
+
+018a2h.	1/21/00	gempak/source/programs/gui/nmap2/nmap_dsp.c, nmap_obs.c
+
+018a2i.	1/21/00	gempak/source/cgemlib/clo/cloformat.c
+		nprogs/nmap/source/nmap_seekw.c
+		gempak/source/programs/gui/nmap2/nmap_seekw.c
+
+008aa.	1/21/00	gempak/help/device.hl2
+
+018a2j.	1/24/00	gempak/source/programs/gui/nmap2/nmap_zoomw.c
+
+018a2k.	1/24/00	gempak/source/programs/gui/nmap2/nmap_auto.c
+
+018a2l.	1/27/00	gempak/source/programs/gui/nmap2/nmap_dataw.c
+
+018a2m.	1/27/00	nprogs/nmap/source/nmap_seekw.c
+		gempak/source/programs/gui/nmap2/nmap_seekw.c
+
+019ii.	1/27/00	gempak/help/mapfil.hl2
+		gempak/maps/ascii/mapfiles.doc
+
+	NEW:	gempak/maps/tprbwg.rfc, tprbse.rfc, tprboh.rfc, tprbne.rfc,
+		      tprbnc.rfc, tprbmb.rfc, tprbma.rfc, tprblm.rfc, tprbab.rfc
+		gempak/maps/ascii/asctprbwg.rfc, asctprbse.rfc, asctprboh.rfc,
+			asctprbne.rfc, asctprbnc.rfc, asctprbmb.rfc,
+			asctprbma.rfc, asctprblm.rfc, asctprbab.rfc
+
+021a3t.	1/28/00	gempak/source/nmaplib/pgen/nmap_pgsigw.c
+
+010a3m.	1/28/00	gempak/source/cgemlib/ctb/ctbdtlist.c
+
+008bb.	1/28/00	help/nmap/nmapHlp.index, help/nmap/WhatsNew.hlp
+	NEW:	help/nmap/Nmap2.hlp
+
+021a3u.	1/31/00	gempak/source/nmaplib/pgen/nmap_pgfilw.c
+
+008cc.	1/31/00 help/nmap/WhatsNew.hlp
+
+009l.	2/1/00	gempak/nts/nmap/restore/modl/global/precip_type_vv
+
+021a3v.	2/3/00	gempak/source/nmaplib/pgen/nmap_pgfilw.c
+
+============================= Patch 5.4.3.y ===============================
+
+010a3n.	2/7/00	gempak/source/gemlib/ss/ssvers.f
+
+010a3o.	2/7/00	gempak/source/cgemlib/clo/cloformat.c
+
+018a2n.	2/7/00	gempak/source/programs/gui/nmap2/nmap_dataw.c
+
+018a2o.	2/7/00	gempak/source/programs/gui/nmap2/nmap_dataw.c
+
+001vv.	2/7/00	gempak/source/driver/active/rbk/ainita.c, aopen.c
+		gempak/source/gemlib/aw/awachr.f, awadbt.f, awaplt.f, awgdef.f,
+		      awglsv.f, awpidb.f, awpmap.f, awpplt.f, awread.f, awscom.f
+
+018a2p.	2/7/00	nprogs/nmap/source/nmap_seekw.c
+		gempak/source/programs/gui/nmap2/nmap_seekw.c
+
+008dd.	2/7/00	gempak/help/mapfil.hl2
+
+018a2q.	2/11/00	gempak/source/programs/gui/nmap2/nmap_mapw.c
+
+020j.	2/11/00	doc/Prog_guide/shared/tools/paramcmp.perl, ptypcmpc.perl,
+						ptypcmpf.perl, checksrc.pl
+	NEW:	doc/Prog_guide/shared/tools/checkSrc.perl
+
+001ww.	2/11/00	gempak/source/bridge/af/afatrb.f, aftbid.f
+	NEW:	gempak/source/bridge/af/afatbx.f
+
+018a2r.	2/11/00	nprogs/nmap/source/nmap.c, nmap_mbotw.c, nmap_mmenuw.c
+		gempak/source/programs/gui/nmap2/nmap.c, nmap_mbotw.c,
+								nmap_mmenuw.c
+		resource/Nmap
+
+	NEW:	nprogs/nmap/source/nmap_locfmtw.c
+		gempak/source/programs/gui/nmap2/nmap_locfmtw.c
+
+018a2s.	2/14/00	gempak/source/programs/gui/nmap2/nmap_mbtnw.c
+
+021a3w.	2/14/00 gempak/source/nmaplib/pgen/nmap_pgevt.c, nmap_pgwatch.c,
+				nmap_pgwbxw.c, nmap_pgwfmt.c, nmap_pgwlst.c
+
+010a3p.	2/14/00	gempak/source/cgemlib/clo/cloformat.c
+		gempak/source/programs/gui/nmap2/nmap_seekw.c
+		nprogs/nmap/source/nmap_seekw.c
+
+007y.	2/14/00	gempak/include/xwcmn.h, xwprm.h
+		gempak/source/driver/active/xw/xg2pxm.c, xcirc.c, xclear.c,
+			xclpnl.c, xdot.c, xenanm.c, xfill.c, xgtpnt.c, 
+			xinita.c, xline.c, xloopc.c, xmexpo.c, xmloop.c,
+			xmotifw.c, xmroam.c, xopenw.c, xpgsvfrm.c, xpgsvfrm2.c,
+			xpoint.c, xqcpxm.c, xroam.c, xsatim.c, xscpxm.c, 
+			xsplot.c, xsroam.c, xstanm.c, xtext.c, xtextc.c,
+			xxevnt.c, xxflsh.c, xputpxms.c, xpgsvlp.c, xpgrestlp.c,
+			xcpypxm.c, xcpypxm2.c, xw_compile
+		gempak/source/driver/active/gf/xendd.c, xxflsh.c, xwrgif.c
+		gempak/source/programs/gui/nafos/nafpxm.c
+		gempak/source/programs/gui/nmap2/nmap_dsp.c, nmap_mcanvw.c
+		gempak/source/nmaplib/ngd/ngdplot.c
+		gempak/source/nmaplib/nim/nimplot.c
+		gempak/source/nmaplib/nms/nmsplot.c
+		gempak/source/nmaplib/nsf/nsfplot.c
+		gempak/source/nmaplib/nsn/nsnplot.c
+		nprogs/ntrans/source/dsply.c
+		nprogs/nsat/source/pxm.c
+	NEW:	gempak/source/driver/active/xw/xpxm2win.c
+
+012k.	2/15/00	gempak/source/nxmlib/NxmClrW.c
+		resource/Nmap
+
+001xx.	2/15/00	gempak/source/bridge/is/isdcod.f, isegar.f
+		gempak/error/dcisig.err
+	CSC:	gempak/source/bridge/is/iseggy.f
+
+010a3q.	2/16/00	gempak/source/cgemlib/crg/crgset.c
+	NEW:	gempak/source/cgemlib/crg/crgsetwbx.c
+
+010a3r.	2/16/00	gempak/source/gemlib/im/imgi2gm.f, testim.f
+		gempak/source/programs/gui/nmap2/nmap_dataw.c
+		nprogs/nmap/source/nmap_dataw.c
+		gempak/include/undscr.h
+	NEW:	gempak/source/gemlib/im/imqchn.f
+
+018a2t.	2/16/00	gempak/source/programs/gui/nmap2/nmap_dsp.c, nmap_mbotw.c
+
+018a2u.	2/16/00	gempak/source/programs/gui/nmap2/nmap_gtbl.c, nmap_mapw.c,
+								nmap_roamw.c
+		gempak/source/nmaplib/pgen/nmap_pgline.c
+
+019jj.	2/16/00 NEW:	gempak/maps/tprbus.rfc
+			gempak/maps/ascii/asctprbus.rfc
+
+018a2v.	2/16/00	gempak/source/programs/gui/nmap2/nmap_seekw.c
+		nprogs/nmap/source/nmap_seekw.c
+
+007z.	2/17/00	gempak/source/device/draw/ipatln.f
+
+019kk.	2/18/00	gempak/maps/mxpowo.ncp, mepowo.gsf, hipowo.gsf
+		gempak/maps/ascii/ascmxpowo.ncp, ascmepowo.gsf, aschipowo.gsf
+
+021a3x.	2/18/00 gempak/source/nmaplib/pgen/nmap_pgofmt.c, nmap_pgolk.c
+		gempak/include/undscr.h
+
+007aa.	2/18/00	gempak/source/driver/active/vg/vtext.c
+
+010a3s.	2/18/00	gempak/source/gemlib/gg/ggcbar.f
+
+010a3t.	2/18/00	gempak/include/vgstruct.h
+	NEW:	gempak/source/cgemlib/cds/cdsccfp.c
+
+007bb.	2/18/00	gempak/source/driver/active/vg/htxsy.f
+		gempak/source/driver/active/gn/htxsy.f
+		nprogs/nmap/source/nmap_stnmw.c
+
+020k.	2/22/00	gempak/maps/programs/ssfgsf.f
+
+019ll.	2/22/00	gempak/maps/loosuo.nws, meosuo.nws, hiosuo.nws, tposuo.nws
+		gempak/maps/ascii/ascloosuo.nws, ascmeosuo.nws, aschiosuo.nws, 
+								asctposuo.nws
+
+019mm.	2/22/00	gempak/maps/loznus.nws, meznus.nws, hiznus.nws, tpznus.nws
+		gempak/maps/ascii/ascloznus.nws, ascmeznus.nws, aschiznus.nws,
+								asctpznus.nws
+
+011mm.	2/23/00	gempak/source/programs/gd/grphgd/grphgd.f
+		gempak/source/nmaplib/pgen/nmap_pggfmt.c
+		gempak/help/grphgd.hlp
+		help/nmap/nmapHlp.index
+		gempak/include/undscr.h
+
+	NEW:	help/nmap/GrphGd.hlp
+	CSC:	gempak/source/programs/gd/grphgd/ggdriv.f
+		gempak/source/nmaplib/pgen/nmap_pgggc.c
+
+010a3u.	2/23/00	gempak/source/gemlib/aw/awaplt.f
+
+010a3v.	2/24/00	gempak/source/gemlib/fl/fltmpl.f
+		gempak/source/gemlib/gg/testgg.f
+		gempak/source/gemlib/lw/lwinpt.f
+		gempak/source/nmaplib/nms/nmsdspl.f
+		gempak/source/programs/gp/gpmap/gpmap.f
+		nprogs/nmap/source/nmap_dsp.c
+	CSC:	gempak/source/gemlib/gg/ggltng.f
+	NEW:	gempak/source/gemlib/gg/ggltrp.f
+
+001yy.	2/25/00	gempak/source/bridge/wn/wncnty.f, wndcod.f, wnghdr.f
+
+010a3w.	2/28/00	gempak/source/cgemlib/cst/testcst.c
+		gempak/source/nmaplib/pgen/nmap_pgsigw.c
+
+	CSC:	gempak/source/cgemlib/cst/cstwrap.c
+	NEW:	gempak/source/cgemlib/cst/cstctrl.c
+
+021a3y.	2/28/00	gempak/source/nmaplib/pgen/nmap_pgwatch.c, nmap_pgwlst.c,
+								nmap_pgwsmw.c
+
+001zz.	2/28/00	gempak/source/bridge/wn/wndcod.f, wnghdr.f
+
+021a3z.	2/28/00	gempak/source/nmaplib/pgen/nmap_pgwfmt.c
+
+010a3x.	2/28/00	gempak/source/gemlib/im/imnihd.f
+		gempak/source/nmaplib/nim/nimdspl.f, nimflnm.f, nimgfln.f,
+								nimtlst.f
+
+006h.	2/29/00	gempak/source/gplt/contour/gcfill.f, gcboxx.f
+
+021a4a.	2/29/00	gempak/source/cgemlib/cds/cdsatdeflt.c, cdsdspelm.c, cdsrtbl.c,
+								cdssubtyp.c
+		gempak/source/cgemlib/ces/cesget.c, cesrtbl.c, cesset.c
+		gempak/source/cgemlib/crg/crgset.c
+		gempak/source/cgemlib/cvg/cvgdump.c, cvgswap.c, cvgtodev.c,
+								dumpvgf.c
+		gempak/source/nmaplib/pgen/nmap_pgconn.c, nmap_pgedit.c,
+		      nmap_pgevt.c, nmap_pghdlb.c, nmap_pgmdfy.c, nmap_pgmodv.c,
+		      nmap_pgnew.c, nmap_pgobj.c, nmap_pgpdel.c, nmap_pgsigw.c,
+		      nmap_pgundo.c, nmap_pgvgf.c, nmap_pgwsmw.c
+		gempak/source/programs/gui/nmap2/nmap_pgpalw.c
+		nprogs/nmap/source/nmap_pgpalw.c
+		gempak/include/drwids.h, vgstruct.h
+
+	NEW:	gempak/source/cgemlib/cds/cdsccf.c
+		gempak/source/cgemlib/cvg/cvgccfsto.c, cvgsvccf.c
+		gempak/source/nmaplib/pgen/nmap_pgccfw.c
+		gempak/include/pgcmn.h
+		icons/nmap/sigccf.xbm
+
+021a4b.	2/29/00	gempak/source/nmaplib/pgen/nmap_pgtxt.c, nmap_pgline.c,
+			nmap_pgsymb.c, nmap_pgfrtw.c, nmap_pgcirc.c,
+			nmap_pgwndw.c, nmap_pgtrkw.c, nmap_pgwbxw.c
+
+010a3y.	3/2/00	gempak/source/gemlib/gb/gbgpds.c
+
+010a3z.	3/2/00	gempak/source/gemlib/gg/ggwtch.f
+
+010a4a.	3/2/00	gempak/source/programs/util/spctxt/spctxt.c, spctxt_link
+		gempak/build/gemlib_compile, gemlib_link
+
+	NEW:	gempak/source/gemlib/vf/vfcmn.h, vfampm.c, vfcnsaw.c,
+			vfcnsel.c, vfctim.c, vfgdat.c, vfgname.c, vfgtod.c,
+			vfgttxt.c, vfrdrp.c, vfread.c, vfrptxt.c, vfspc.c,
+			vfstate.c, vftomin.c, vfwsaw.c, vfwsel.c, vfwsev.c,
+			testvf.c, testvf_link
+
+018a2w.	3/3/00	gempak/source/programs/gui/nmap2/nmap_dsp.c, nmap_zoomw.c,
+								nmap_mbtnw.c
+		gempak/include/undscr.h
+
+011nn.	3/6/00	gempak/source/programs/gd/gdcfil/gdcfil.f
+		gempak/source/programs/gd/grphgd/ggdriv.f
+		gempak/source/programs/na/nagrib/nagrib.f, nagcog.f
+		gempak/help/cpyfil.hl1, cpyfil.hl2, nagrib.hlp
+
+	NEW:	gempak/source/gemlib/gd/gdgeni.f
+		gempak/source/gemlib/gr/grsuba.f, grsub2.f (former 'na' subs)
+
+010a4b.	3/7/00	gempak/source/gemlib/vf/vfrptxt.c, vfwsaw.c, vfwsel.c, vfwsev.c
+		gempak/source/nmaplib/pgen/nmap_pgprd.c
+	NEW:	gempak/source/gemlib/vf/vfeftm.c
+
+007cc.	3/7/00	gempak/source/driver/active/rbk/ainita.c, asdatt.c
+		gempak/help/device.hl2
+
+009m.	3/8/00	gempak/nts/nmap/restore/modl/eta/great_lakes_snow
+
+	NEW:	gempak/nts/nmap/restore/stnd/700mb_streamlines, 
+				500mb_streamlines, 250mb_streamlines
+		gempak/nts/nmap/restore/modl/eta/great_lakes_snow2, precip_type
+		gempak/nts/nmap/restore/modl/global/great_lakes_snow2,
+				great_lakes_snow, precip_type, precip_type_vv_nvf
+
+021a4c.	3/8/00	gempak/include/drwids.h
+		gempak/source/nmaplib/pgen/nmap_pgccfw.c, nmap_pgprd.c
+		gempak/source/programs/gui/nmap2/nmap_pgpalw.c
+		nprogs/nmap/source/nmap_pgpalw.c
+		resource/Nmap
+
+	NEW:	icons/nmap/ccfprd.xbm
+		gempak/source/nmaplib/pgen/nmap_pgccfp.c
+
+018a2x.	3/8/00	nprogs/nmap/source/nmap_seekw.c
+		gempak/source/programs/gui/nmap2/nmap_seekw.c
+
+018a2y.	3/9/00	gempak/source/programs/gui/nmap2/nmap_dataw.c, nmap_dtmbw.c,
+					nmap_dttmw.c, nmap_data.h
+		gempak/source/nmaplib/pgen/nmap_pgwndw.c
+
+010a4c.	3/9/00	gempak/source/cgemlib/cst/cstrxbl.c
+
+010a4d.	3/10/00	gempak/source/cgemlib/cfl/cflmnam.c
+
+001aaa.	3/10/00	gempak/source/bridge/is/isegpr.f, isegtb.f, isegts.f, isflvl.f
+		gempak/error/dcisig.err
+	NEW:	gempak/source/bridge/is/iseg2d.f, isegao.f
+
+021a4d.	3/10/00	gempak/source/nmaplib/pgen/nmap_pgconn.c, nmap_pgdel.c,
+			nmap_pgdelobj.c, nmap_pgdelpt.c, nmap_pgedit.c,
+			nmap_pgevt.c, nmap_pgmdfy.c, nmap_pgmodv.c, nmap_pgrad.c,
+			nmap_pgpdel.c, nmap_pgrot.c, nmap_pgwatch.c,
+			nmap_pgwlst.c, nmap_pgwsmw.c
+	CSC:	gempak/source/nmaplib/pgen/nmap_pgutls.c
+
+001bbb.	3/10/00	gempak/source/bridge/mt/mtdecd.f, mtfind.f, mtpten.f
+	NEW:	gempak/source/bridge/mt/mtrmmx.f
+
+009n.	3/10/00	gempak/nts/nmap/restore/model/NEWwave/sig_wave_gridded_dir_only,
+			sig_wave_gridded_feet_dir, sig_wave_gridded_meters_dir
+		gempak/nts/nmap/restore/modl/nww3/sig_wave_gridded_dir_only,
+			sig_wave_gridded_feet_dir, sig_wave_gridded_meters_dir
+		gempak/nts/nmap/restore/modl/nogaps/bl_winds_only,
+			pmsl_1000-850_thk, pmsl_and_bl_wind
+
+010a4e.	3/10/00	gempak/source/gemlib/vf/vfcmn.h, vfspc.c, vfwsev.c, testvf.c
+		gempak/source/nmaplib/pgen/nmap_pgprd.c
+		gempak/source/programs/util/spctxt/spctxt.c
+		gempak/help/spctxt.hlp
+	NEW:	gempak/source/gemlib/vf/vfwwcl.c
+
+003a.	3/13/00	ALL NEW:
+		gempak/source/contrib/hpc/gdgrib/*
+		gempak/build/contrib_compile, contrib_link, all_compile, all_link
+		gempak/error/gdgrib.err
+		gempak/help/gdgrib.hlp, pdsval.hl1, pdsval.hl2, precsn.hl1,
+			precsn.hl2, vercen.hl1, vercen.hl2, wmohdr.hl1,
+			wmohdr.hl2
+		gempak/nts/examples/gdgrib*.nts
+		gempak/parm/gdgrib.prm
+		gempak/pdf/gdgrib.pdf
+		gempak/txt/programs/gdgrib.txt
+
+008ee.	3/13/00	NEW:  versions/release_notes/v5.4.2/*
+		      versions/release_notes/v5.4.3/*
+
+010a4f.	3/13/00	gempak/source/cgemlib/cst/cstrxbl.c, testcst.c
+
+021a4e.	3/13/00	gempak/source/nmaplib/pgen/nmap_pgwlst.c, nmap_pgevt.c, 
+						nmap_pgwbxw.c, nmap_pgwfmt.c
+		nprogs/nmap/source/nmap_pgpalw.c
+		resource/Nmap
+
+021a4f.	3/13/00	gempak/source/nmaplib/pgen/nmap_pgfilw.c
+		nprogs/nmap/source/nmap_vtbl.c, nmap_dslw.c
+		gempak/source/programs/gui/nmap2/nmap_vtbl.c, nmap_dslw.c
+		gempak/tables/nmap/vgf.nmap (CHANGED FORMAT)
+
+	NEW:	gempak/include/vgftbl.h (formerly gempak/include/nmap_vtbl.h)
+
+010a4g.	3/13/00	gempak/source/gemlib/vf/vfwwcl.c
+
+021a4g.	3/13/00	gempak/source/nmaplib/pgen/nmap_pggfmt.c
+
+018a2z.	3/13/00	gempak/source/nmaplib/nms/testnms.c, nmsrtbl.c, nmsqatt.c,
+						nmssatt.c, nmsinit.c, nmsplot.c
+		gempak/source/programs/gui/nmap2/nmap_msc.c, nmap_dataw.c
+		gempak/include/nmsdef.h
+		resource/Nmap
+
+001ccc.	3/13/00	gempak/source/driver/active/rbk/aclosp.c, aopen.c
+		gempak/source/gemlib/aw/awachr.f, awread.f
+
+016g.	3/15/00	nprogs/nwx/source/fosd.c, srchw.c
+
+010a4h.	3/15/00	gempak/source/gemlib/st/testst.f
+	NEW:	gempak/source/gemlib/st/stgtst.f
+
+010a4i.	3/15/00	gempak/source/gemlib/gg/ggisig.f
+
+018a3a.	3/15/00	gempak/source/programs/gui/nmap2/nmap_auto.c, nmap_dsp.c,
+						nmap_loop.c, nmap_mbtnw.c
+
+021a4h.	3/15/00	gempak/source/nmaplib/pgen/nmap_pgccfw.c, nmap_pgedit.c,
+						nmap_pgevt.c, nmap_pgnew.c
+		gempak/include/pgprm.h
+
+018a3b.	3/15/00	gempak/source/programs/gui/nmap2/nmap_mbtnw.c
+		gempak/source/cgemlib/cvg
+
+018a3c.	3/15/00	nprogs/nmap/source/nmap_seekw.c
+		gempak/source/programs/gui/nmap2/nmap_seekw.c
+
+021a4i.	3/15/00	gempak/source/nmaplib/pgen/nmap_pggfmt.c
+
+021a4j.	3/15/00	gempak/source/programs/gui/nmap2/nmap_pgpalw.c
+
+001ddd.	3/15/00	gempak/source/bridge/is/isegpr.f, isout.f
+
+010a4j.	3/16/00	gempak/source/cgemlib/cst/testcst.c
+	NEW:	gempak/source/cgemlib/cst/cstrpst.c
+
+010a4k.	3/16/00	gempak/source/gemlib/pc/pcfunc.f
+		gempak/source/gemlib/pr/testpr.f
+		gempak/source/gemlib/pt/ptfunc.f, testpt.f
+		gempak/help/sfparm.hl2
+		gempak/txt/apx/parms.apx
+
+	NEW:	gempak/source/gemlib/pr/prigro.f
+		gempak/source/gemlib/pt/ptdigr.f
+
+001eee.	3/16/00	gempak/source/bridge/ww/wwus8.f
+
+021a4k.	3/16/00	gempak/source/nmaplib/pgen/nmap_pgfilw.c
+
+018a3d.	3/17/00	gempak/source/programs/gui/nmap2/nmap_auto.c, nmap_dataw.c
+
+021a4l.	3/17/00	gempak/source/nmaplib/pgen/nmap_pgdel.c 
+
+021a4m.	3/17/00	gempak/source/nmaplib/pgen/nmap_pgwsmw.c
+
+021a4n.	3/17/00	gempak/source/nmaplib/pgen/nmap_pggfmt.c
+		gempak/include/undscr.h
+
+021a4o.	3/17/00	gempak/source/nmaplib/pgen/nmap_pgccfw.c, nmap_pgprd.c
+		gempak/source/cgemlib/cvg/cvggetfname.c
+
+018a3e.	3/20/00	gempak/source/programs/gui/nmap2/nmap_mbtnw.c, nmap_pgpalw.c
+		nprogs/nmap/source/nmap_pgpalw.c
+		gempak/source/driver/active/xw/xpgrestlp.c, xpgsvfrm.c,
+						xpgsvlp.c, xputpxms.c
+
+	NEW:	gempak/source/driver/active/xw/xpgsetpg.c
+
+021a4p.	3/20/00	gempak/source/nmaplib/pgen/nmap_pgwatch.c, nmap_pgwbxw.c
+
+011oo.	3/20/00	gempak/source/programs/gd/grphgd/gglims.c, gweigs.f
+
+021a4q.	3/20/00	gempak/source/nmaplib/pgen/nmap_pgccfw.c, nmap_pgrot.c
+
+021a4r.	3/20/00	gempak/source/nmaplib/pgen/nmap_pgccfp.c, nmap_pgprd.c
+
+021a4s.	3/20/00	gempak/source/nmaplib/pgen/nmap_pggfmt.c
+
+021a4t.	3/20/00	gempak/source/nmaplib/pgen/nmap_pgrad.c
+
+018a3f.	3/21/00	gempak/source/programs/gui/nmap2/nmap_auto.c
+
+021a4u.	3/21/00	gempak/source/nmaplib/pgen/nmap_pgprd.c
+
+021a4v. 3/21/00 gempak/source/nmaplib/pgen/nmap_pgprd.c
+
+018a3g.	3/21/00	gempak/source/programs/gui/nmap2/nmap_auto.c, nmap_dsp.c
+		gempak/source/nmaplib/nim/nimdspl.f 
+
+019nn.	3/22/00	gempak/maps/hiponw.cia, hipowo.cia
+		gempak/maps/ascii/aschiponw.cia, aschipowo.cia
+
+021a4w.	3/22/00	nprogs/nmap/source/nmap_pgpalw.c
+		gempak/source/programs/gui/nmap2/nmap_pgpalw.c
+
+021a4x.	3/22/00 gempak/source/nmaplib/pgen/nmap_pgfilw.c
+
+018a3h.	3/22/00	gempak/source/programs/gui/nmap2/nmap_auto.c
+
+008ff.	3/23/00	help/nmap/WhatsNew.hlp
+	NEW:	versions/release_notes/v5.4.3/README_nawips5.4.3.z
+
+008gg.	3/23/00	help/nmap/Seek.hlp
+
+010a4l.	3/24/00	gempak/source/cgemlib/cvg/cvgdeall.c
+
+

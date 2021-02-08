@@ -1,0 +1,23 @@
+#!/bin/sh
+#------------------------------------------------------------------------------
+
+outPath=../lists
+curDir=`pwd`
+
+# Create the destination directory if it does not exist.
+if [ ! -d $outPath ]
+then
+    mkdir $outPath
+fi
+
+# Get full path to the output directory.
+outDir=`cd $outPath; pwd; cd $curDir`
+
+# Go to top of where source files are.
+cd $GEMHLP
+
+# Extract the base part of the file names.
+ls *.hlp | sed 's,\.hlp$,,' | grep '^decode$'           > $outDir/deco.list
+ls *.hlp | sed 's,\.hlp$,,' | grep '^dc' | sort | uniq >> $outDir/deco.list
+
+#------------------------------------------------------------------------------

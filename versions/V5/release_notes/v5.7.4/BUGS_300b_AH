@@ -1,0 +1,7 @@
+Fixed marine zone St. Lawrence River in WBC products (SPC)
+
+	Corrected a bug with the WBC text products listing the 
+	St. Lawrence River as a state in SAW, SEL and the WOU initial.
+	It is now treated as a marine zone and only appears in the 
+	'COASTAL WATERS' marine zone listings in the WCL, WOU initial,
+	and enhanced WSM. 

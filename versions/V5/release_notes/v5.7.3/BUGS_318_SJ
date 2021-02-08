@@ -1,0 +1,10 @@
+NALARM
+
+Two problems were resolved with NALARM. The new product
+button was not flashing when a new bulletin arrived. 
+This has been fixed. There was also a problem with 
+printing bulletins with control characters to some
+new printers at the SDM desk. The control characters
+are now stripped from the file before attempting to
+print.
+

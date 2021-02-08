@@ -1,0 +1,63 @@
+#------------------------------------------------------------------------
+# sn.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+snastn.f	- Add Station
+snatim.f	- Add Time
+snbegs.f	- Reset Search
+snchkf.f	- Check For Valid Sounding File Number
+snckua.f	- Find Unmerged Data Types
+snclos.f	- Close Sounding File
+sncman.f	- Combine Mandatory Data
+sncref.f	- Create Sounding File
+sncrfp.f	- Create Using Packing File
+sncrua.f	- Create Unmerged File
+sncstn.f	- Check Existance Of Station
+snctim.f	- Check Existance Of Date/Time
+snddat.f	- Delete Data
+sndstn.f	- Delete Station
+sndtim.f	- Delete Time
+snfstn.f	- Find Station
+snftim.f	- Find Time
+sngtim.f	- Get List Of Times
+snmand.f	- Set Mandatory Flag
+snmerg.f	- Merge Upper Air Data
+snmman.f	- Merge Mandatory Data With Wind
+snmspm.f	- Get Mandatory & Significant Parameter Names
+snmtyp.f	- Define Data Merge Type
+snofil.f	- Open Existing File
+snopnf.f	- Open Sounding File
+snopnr.f	- Open Real-Time Sounding File
+snqdat.f	- Check For Data
+snqstn.f	- Get Station Information
+snrdat.f	- Read Data
+snrprt.f	- Read Part From Unmerged File
+snrtyp.f	- Get Level Types
+snsnxt.f	- Get Next Station
+snsstn.f	- Set Particular Station
+snstid.f	- Check Station ID
+snstim.f	- Set Time For Station Search
+sntnxt.f	- Get Next Time
+sntstn.f	- Set Station Search
+snttim.f	- Set Particular Time
+snustn.f	- Update Station Information
+snwdat.f	- Write Data
+snwprt.f	- Write Part To Unmerged File
+# testsn.f	- SN Library Test Program
+
+#------------------------------------------------------------------------

@@ -1,0 +1,192 @@
+		NAWIPS 5.10.x  Tables Changes Description Log
+
+===============================================================================
+T20.36a	8/23/06	gempak/tables/stns/tafstn.tbl
+		gempak/tables/nwx/tafstn.tbl
+
+8.55a	8/23/06	gempak/tables/config/prefs.tbl
+
+G72.5a	8/23/06	gempak/tables/sat/imgtyp.tbl
+
+8.56a	8/24/06	gempak/tables/xslt/get_attention_line.xsl
+
+8.13.21a 8/25/06 gempak/tables/xslt/get_status.xsl
+
+10.9a	8/29/06	gempak/tables/pgen/grptyp.tbl
+
+P5.1a	9/5/06	gempak/tables/pgen/funcbtn.tbl, funcbtn_4.tbl
+
+G72.6a	9/13/06	gempak/tables/sat/imgtyp.tbl
+
+T17.10a	9/15/06	gempak/tables/pgen/awdef.tbl
+
+T20.37	9/15/06	gempak/tables/stns/gfsmos.stn
+
+G51.26a	10/2/06	gempak/tables/parms/pcconv.tbl, prmflg.tbl
+
+T20.38a	10/3/06	gempak/tables/stns/coordPts.tbl, snap.tbl
+
+M1.21a	10/3/06	gempak/tables/bounds/FA_Area.tbl, FA_Area.tbl.info,
+					FA_Region.tbl, FA_Region.tbl.info
+
+M1.23a	10/3/06	gempak/tables/config/clo.tbl
+	NEW:	gempak/tables/bounds/bwus_label.tbl, bwus_label.tbl.info
+		
+T20.39a	10/10/06 gempak/tables/stns/lsfstns.tbl, sfstns.tbl, systns.tbl, syworld.tbl
+
+8.63a	10/10/06 gempak/tables/config/prefs.tbl
+
+T17.11a	10/11/06 gempak/tables/pgen/awdef.tbl
+
+4.4a	10/16/06 gempak/tables/config/prefs.tbl
+
+8.85a	10/19/06 gempak/tables/xslt/airmet_zulu.xsl
+
+8.63c	10/31/06 gempak/tables/config/prefs.tbl
+
+M1.22a	11/1/06	NEW:	gempak/tables/bounds/tpcbounds.tbl, tpcbounds.tbl.info
+
+8.63d	11/1/06	gempak/tables/config/prefs.tbl
+
+8.63e	11/2/06	gempak/tables/config/prefs.tbl
+
+
+============================  End of Release 5.10.1  ==========================
+
+8.92.2a	11/29/06 gempak/tables/xslt/airmet_tango.xsl
+
+8.93.1a	11/30/06 gempak/tables/config/prefs.tbl
+
+8.93.6a	12/5/06	gempak/tables/config/prefs.tbl
+
+8.93.7a	12/5/06	gempak/tables/config/prefs.tbl
+
+M1.24a	12/21/06 gempak/tables/bounds/pfzbnds.tbl, pfzbnds.tbl.info
+
+8.92.5a	12/27/06 gempak/tables/xslt/airmet_zulu.xsl
+
+T20.40a	1/4/07	gempak/tables/stns/sfstns.tbl, tafstn.tbl
+
+T23.1a	1/4/07	gempak/tables/pack/snclass1.prm
+
+T20.41a	1/9/07	$GEMTBL/stns/marinenames.tbl
+
+G74.2a	1/9/07	NEW:	gempak/tables/stns/tpc_states.tbl, tpc_countries.tbl
+
+8.93.11a 1/11/07 gempak/tables/config/clo.tbl
+	NEW:	 gempak/tables/bounds/FA_AreaX.tbl, FA_AreaX.tbl.info
+
+17.10.1a 1/16/07 gempak/tables/nmap/aodtvers.tbl
+
+N9.2a	1/17/07	gempak/tables/config/prefs.tbl
+
+8.95.6a	1/19/07	gempak/tables/config/prefs.tbl
+
+T5.5a	1/25/07	gempak/tables/grid/wmogrib2.tbl, wmogrib1.tbl
+
+M1.25a	1/30/07	gempak/tables/stns/marinenames.tbl, mzcntys.tbl, zones.tbl
+		gempak/tables/bounds/pfzbnds.tbl, pfzbnds.tbl.info, mzcntybnds.tbl,
+                		mzcntybnds.tbl.info, mzbnds.tbl.info, mzbnds.tbl
+
+============================  End of Release 5.10.2  ==========================
+8.79a	2/15/07	gempak/tables/draw/splpat.tbl
+		gempak/tables/pgen/setting.tbl, uattribd.tbl
+
+G52.20a	2/15/07	gempak/tables/pgen/placement.tbl
+
+8.92.12a 2/15/07 gempak/tables/config/prefs.tbl
+
+8.95.7b	2/16/07	gempak/tables/config/prefs.tbl
+
+P2.3a	3/1/07	gempak/tables/pgen/grptyp.tbl
+
+N4.11a	3/1/07	NEW:	gempak/tables/nmap/grid_cat.tbl
+
+T20.42a	3/2/07	gempak/tables/stns/tafstn.tbl
+
+8.95.8a	3/12/07	gempak/tables/config/prefs.tbl
+
+8.95.11a 3/20/07 gempak/tables/config/prefs.tbl
+
+T20.44a	3/20/07	gempak/tables/grid/g2varsncep1.tbl
+
+T19.6a	3/21/07	gempak/tables/sat/imgtyp.tbl
+
+8.95.11.1a 3/29/07 gempak/tables/config/prefs.tbl
+
+8.80.1a	3/29/07	gempak/tables/pgen/funcbtn.tbl, metbtn.tbl, prodbtn.tbl,
+				funcbtn_4.tbl, metbtn_4.tbl, prodbtn_4.tbl
+
+D29.1a	4/4/07	gempak/tables/sat/imgtyp.tbl
+
+D23.1a	4/5/07	$GEMTBL/config/miscset.tbl
+
+T20.43a	4/10/07	gempak/tables/txtprd/woudef.tbl
+
+10.12a	4/12/07	gempak/tables/pgen/grptyp.tbl, otlfilnam.tbl, outlooktimes.tbl
+
+D9.1a	4/20/07	
+	NEW:	$GEMTBL/bufrlib/bufrtabl.000, bufrtabl.001, bufrtabl.255
+                $GEMTBL/pack/shef.pack, shef.prm
+		$GEMTBL/stns/shef_C00P.tbl, shef_C00P[1-4], shef.master.tbl
+
+12.29a	4/20/07	gempak/tables/stns/tcabkptlz.tbl, tcabkpt.tbl
+
+10.13a	4/24/07	gempak/tables/pgen/otlfilnam.tbl, outlooktimes.tbl, outlook.tbl
+
+8.80.2a	4/24/07	gempak/tables/pgen/setting.tbl, uattribd.tbl
+
+10.10b	4/24/07	NEW:	gempak/tables/pgen/p2cdef.tbl
+
+============================  End of Release 5.10.3  ==========================
+
+8.92.20a 6/26/07 gempak/tables/xslt/get_attention_line.xsl
+
+12.28.2a 6/26/07 gempak/tables/pgen/uattribd.tbl
+
+8.70a	7/2/07	gempak/tables/pgen/gfa.tbl
+
+8.71a	7/3/07	gempak/tables/config/prefs.tbl
+		gempak/tables/xsd/airmet.xsd
+		gempak/tables/xslt/airmet_sierra.xsl, airmet_tango.xsl,
+					airmet_zulu.xsl, output_outlook.xsl
+
+D.7a	7/5/07	gempak/tables/stns/sfstns.tbl
+
+D13.5a	7/5/07	gempak/tables/config/miscset.tbl
+
+P8.5a	7/5/07	$GEMTBL/config/clo.tbl
+		$GEMTBL/pgen/sigmetinfo.tbl
+	NEW:	$GEMTBL/bounds/firbnds.tbl, firbnds.tbl.info
+
+T20.45a	7/10/07	gempak/tables/stns/sfstns.tbl
+
+8.84a	7/19/07	gempak/tables/nmap/taf_parms.tbl
+		gempak/tables/pack/taf.pack
+
+T17.12a	7/19/07	$GEMPAK/tables/pgen/awdef.tbl
+
+4.3.3a	7/23/07	gempak/tables/config/datatype.tbl, prefs.tbl
+
+8.80.3a	7/23/07	gempak/tables/config/prefs.tbl
+
+T01.01a	7/24/07	gempak/tables/sat/imgtyp.tbl
+
+T5.6a	7/24/07	gempak/tables/grid/g2varswmo2.tbl, g2vcrdncep1.tbl
+
+T20.46a	7/24/07	gempak/tables/stns/tafstn.tbl, sfstns.tbl
+
+T20.47a	7/24/07	gempak/tables/hcnadv/altker.tbl, eptker.tbl
+		gempak/tables/stns/tcabkpt.tbl, tcabkpt_ovl.tbl, tcabkptlz.tbl
+	NEW:	gempak/tables/stns/tcabkpt_island.tbl, tcabkpt_land.tbl, tcabkpt_water.tbl
+
+8.82a	7/24/07	gempak/tables/config/clo.tbl
+	NEW:	gempak/tables/bounds/gfa_conus.tbl, gfa_conus.tbl.info
+
+D12.4a	7/24/07	gempak/tables/config/miscset.tbl, datatype.tbl
+
+T20.48a	7/24/07	gempak/tables/stns/snstns.tbl
+
+8.80.3b	7/26/07	gempak/tables/pgen/funcbtn.tbl, funcbtn_4.tbl
+
+============================  End of Release 5.10.4  ==========================

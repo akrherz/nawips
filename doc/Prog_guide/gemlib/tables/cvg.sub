@@ -1,0 +1,77 @@
+#------------------------------------------------------------------------
+# cvg.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		12/97	Original
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Updated
+#------------------------------------------------------------------------
+
+convcvg.c	- Convert Differing Versions Of VGF
+cvgc3e3f.c	- Convert VGF From 5.4.3.e to 5.4.3.f
+cvgc3i3h.c	- Convert VGF From 5.4.3.i to 5.4.3.h
+cvgc3k3j.c	- Convert VGF From 5.4.3.k-m to 5.4.3.j
+cvgcirsto.c	- Convert To Map Coordinates and Store Circle
+cvgclos.c	- Close VG File
+cvgcp.c		- Copy From One VG File Into Another
+cvgcrvgf.c	- Create VG File
+cvgctddel.c	- Delete Centroids From VG File
+#cvgctdsto.c	- Transform Centroid And Store In VG File
+cvgdeall.c	- Mark All VG Records As Deleted
+cvgdelet.c	- Delete VG File Record
+cvgdump.c	- Display VG File Record
+cvgfndhl.c	- Find Empty Record In VG File
+cvgfrsto.c	- Store Front In VG File
+cvgfscan.c	- Find Elements With Class in Bounds
+cvggetfname.c	- Create Product Filename From VGF name
+cvgindex.c	- Display VG File Record Sizes
+cvglinsto.c	- Store Line In VG File
+cvgload.c	- Plot All Elements From VG File
+cvgopen.c	- Open VG File
+cvgqkopen.c	- Open VG File With Limited Error Checking
+cvgrdcir.c	- Read VG Circle Element
+cvgrdele.c	- Read Element From VG File
+cvgrdhdr.c	- Find Element Header In VG File
+cvgrdrec.c	- Read Record At VG File Position
+cvgrdsel.c	- Read Record Matching VG Information
+cvgrdsym.c	- Read Symbol From VG File
+#cvgrdwch.c	- Read Record Matching VG Watch
+cvgrdwnd.c	- Read Wind Symbol From VG File
+cvgrest.c	- Restore Saved WORK_FILE
+cvgrfrsh.c	- Refresh Plot Of VG Records
+cvgrndef.c	- Rename Default WORK_FILE
+cvgscan.c	- Find Elements In VG File 
+cvgsetginf.c	- Set Group Type And Number
+cvgsplsto.c	- Transform Special Line And Store In VG File
+cvgsptsto.c	- Transform To Map Coord. And Store In VG File
+cvgsvcir.c	- Store Circle In VG File
+#cvgsvctd.c	- Store Centroid In VG File
+cvgsvfhed.c	- Create VG File Header
+cvgsvfnt.c	- Store Front In VG File
+cvgsvlin.c	- Store Simple Line In VG File
+cvgsvsln.c	- Store Special Line In VG File
+cvgsvstx.c	- Store Special Text Group In VG File
+cvgsvsym.c	- Store Symbol In VG File
+cvgsvtxt.c	- Store Text String In VG File
+cvgsvwbx.c	- Store Watch Box In VG File
+cvgsvwnd.c	- Store Wind Symbol In VG File (1)
+cvgsymsto.c	- Store Weather Symbol In VG File
+cvgtodev.c	- Transform VG To Device Coordinates
+cvgtxsto.c	- Store Text String In VG File
+cvgwbsto.c	- Transform Watch Box And Store In VG File
+cvgwndsto.c	- Store Wind Symbol In VG File (2)
+cvgwrit.c	- Write Element To VG File
+dumpvgf.c	- Dump VGF
+# testcvg.c	- CVG Library Test Program
+
+#------------------------------------------------------------------------

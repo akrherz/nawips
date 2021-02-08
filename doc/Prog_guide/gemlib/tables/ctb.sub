@@ -1,0 +1,53 @@
+#------------------------------------------------------------------------
+# ctb.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 9/97	Original
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Added ctbtiff.c
+#------------------------------------------------------------------------
+
+ctbafos.c	- Read AFOS Product Definition Table
+ctbastn.c	- Read Station Table
+ctbawdef.c	- Read AWIPS Product Definition Table 
+ctbawmap.c 	- Read AWIPS Map Definition
+ctbdtdump.c	- Dump DtTable Structure
+ctbdtfcst.c	- Get Forecast Parameters For Data Alias
+ctbdtget.c	- Get All Parameters For Data Alias
+ctbdtpath.c	- Get Path For Data Alias
+ctbdtrd.c	- Load data.tbl
+ctbdttime.c	- Get Time Parameters For Data Alias
+ctbdttmpl.c	- Get Template For Data Alias
+ctbfszfnd.c	- Find Font Size
+ctbfsznam.c	- Get Font Size Name
+ctbfszqn.c	- Get Total Number Of Font Sizes
+ctbfszrd.c	- Load fontsz.tbl
+ctbfszval.c	- Get Font Size Value
+ctbfszxvl.c	- Get X Font Size Value
+ctbpldump.c	- Dump prmlst Structure
+ctbplgcc.c	- Get Color Code Value
+ctbplget.c	- Get Parameter String
+ctbpllist.c	- Get List Of Alias Names
+ctbplrd.c	- Load prmlst.tbl
+ctbplsdef.c	- Load Specified Info From prmlst.tbl
+ctbplset.c	- Set Parameter String
+ctbprmt.c	- Read Parameter Aliases
+ctbprod.c	- Read FAX Product Definition Table
+ctbrbul.c	- Read Bulletin Table
+ctbrdtyp.c	- Read Data Type Table
+ctbrmtyp.c	- Read Map Projection Table
+ctbrstn.c	- Read Station Table Into Structures
+ctbtiff.c	- Read TIFF Product Definition Table
+# testctb.c	- CTB Library Test Program
+
+#------------------------------------------------------------------------

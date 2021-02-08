@@ -1,0 +1,7 @@
+TRACK 249:  QSCT
+
+
+A bug in displaying QuikScat data when using the second color for rain in which
+circles were being displayed instead of wind barbs has been fixed.
+
+The changed Hi-resolution QuikScat data can now be read and displayed. 

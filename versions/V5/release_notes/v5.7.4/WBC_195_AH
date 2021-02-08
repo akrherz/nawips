@@ -1,0 +1,36 @@
+Watch-By-County
+
+	A. County - Marine Zone centriod locations (SPC)
+
+	Fixed a problem where some centroids were not located in the
+	correct county or marine zone. Added checks when creating the
+	maps and bounds files to check if the centroid is properly 
+	located. 
+
+	B. Checks on Watch Format GUI entries (SPC)
+	
+	Added checks to the Watch Format GUI to:
+	    1. check the current watch number against the list of watch 
+	       replacement numbers. If the current watch number is in
+	       the replacement watch number list, a warning message
+	       will appear.
+	    2. check whether the current number has already been used. If
+	       it has been used, the user will be asked if they wish to
+	       overwrite the files.
+	    3. check that the WSM check box for reference mesoscale 
+	       discussion is toggled off when the GUI pops up.
+
+	C. Updated the enhanced WSM and status message display (SPC)
+
+	Added to the enhanced WSM a line containing the watch type and
+	watch number. "STATUS REPORT FOR W? ####".  In the enhanced 
+	watch status message, checked the tag variable ADD_WSM_WS_WT to 
+	check if the line: "STATUS REPORT FOR W? ####" should be added 
+	in the WSM text message. TRUE, it should be added and FALSE, it 
+	should not be added. This tag variable is found in 
+	$GEMTBL/config/prefs.tbl.
+    
+	Also, replaced the old WSM with the enhanced WSM in the Watch 
+	Status Save GUI.  Both WSM text files are still saved to the 
+	local directory.
+

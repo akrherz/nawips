@@ -1,0 +1,2 @@
+$CC $CFLAGS $LDFLAGS -o naminfo.$NA_OS naminfo.c -lcgemlib
+$RM *.o

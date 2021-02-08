@@ -1,0 +1,58 @@
+#------------------------------------------------------------------------
+# gd.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+#
+# NOTE: Some of the GD_ subroutines are called only by other GD_ 
+#       subroutines.  They are not intended to be called by
+#       programmers at large.  Therefore, many of the GD library
+#       routines do not appear in the Programmer's Guide.
+#
+#------------------------------------------------------------------------
+
+# gdaddt.f	- 
+gdclos.f	- Close Grid File
+gdcref.f	- Create Grid File
+# gddelt.f	- 
+gddgrd.f	- Delete Grid From File
+# gdfchk.f	- 
+gdfltm.f	- Get All Times
+gdganl.f	- Get Analysis Block
+gdgcyc.f	- Get All Cycles
+gdggrd.f	- Read Grid By Number
+gdgidn.f	- Read Grid Identifier
+gdglev.f	- Get Grid Levels
+gdgnav.f	- Get Navigation Block
+gdgnum.f	- Get Grid Number
+gdgtim.f	- Get Grid Times
+gdgtmf.f	- Get Grid Times From Named File
+# gdhtoi.f	- 
+# gditoh.f	- 
+gdngrd.f	- Return Number Of Grids
+# gdofil.f	- 
+gdopnf.f	- Open Grid File
+gdopnr.f	- Open Realtime Grid File
+gdrdat.f	- Read Grid From File
+# gdsrtl.f	- 
+# gdsrtt.f	- 
+gdswrt.f	- Set Write Flag In Grid File
+gdwdat.f	- Write Grid To File
+gdwpgd.f	- Write Packed Grid
+gdwppg.f	- Write Pre-Packed Grid
+# testgd.f	- GD Library Test Program
+
+#------------------------------------------------------------------------

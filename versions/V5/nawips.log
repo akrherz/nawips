@@ -1,0 +1,281 @@
+                     NAWIPS 5.11.x  CHANGE DESCRIPTION LOG
+
+        ( * indicates a change that makes this version of NAWIPS
+            incompatible with the previous version )
+
+CEE==========================================================================
+C.   Configuration Management (CM)
+
+C1.     SS_VERS
+
+C1.21
+ 	a  Update SS_VERS to 6.0.  SJ, (SJ), 12/11/09.
+
+-----------------------------------------------------------------------------
+C2.     Dot files
+
+-----------------------------------------------------------------------------
+C3.     Build Scripts
+
+-----------------------------------------------------------------------------
+C4.     External Error Files
+
+
+CO===========================================================================
+CO.     Contrib
+
+
+DEE==========================================================================
+D.   Decode/Display (DECDSP)
+
+ 
+EEE==========================================================================
+E.      External Libraries
+
+
+GEE==========================================================================
+G.   GEMPAK
+
+G20.    GEMPAK programs
+
+G21.    GEMPAK programs - DC
+
+G22.    GEMPAK programs - GD
+
+G23.    GEMPAK programs - GP
+
+G24.    GEMPAK programs - NA
+
+G26.    GEMPAK programs - SF
+
+G27.    GEMPAK programs - OA
+
+G28.    GEMPAK programs - UTIL
+
+G30.    GEMPAK programs - GUI
+
+-----------------------------------------------------------------------------
+G51.    GEMPAK libraries - GEMLIB
+
+G52.    GEMPAK libraries - CGEMLIB
+
+G53.    NMAPLIB
+
+
+MMM==========================================================================
+M.   Maps/Bounds (MAP)
+
+M1.     Map/Bounds - Updates
+
+M2.     Map/Bounds - New
+
+
+NNN==========================================================================
+N.   NMAP (Group)
+
+N1.     Seek / Locator
+
+N2.     Main button bar
+
+N6.     Maps and Overlays
+
+N7.     Miscellaneous
+
+
+OOO==========================================================================
+O.      Documentation
+
+O3.     Release Notes
+
+O4.     Help Files
+
+
+PEE==========================================================================
+P.   Product Generation
+
+P2.     Grouping
+
+P3.     Select / Multi-select
+
+P4.     Palette
+
+P5.     Cursor Functionality
+
+P6.     Products
+
+P7.     File Management
+
+
+TEE==========================================================================
+T.      Tables - general (TABLES)
+
+T1.     BUFR
+
+T2.     Colors
+
+T3.     Config
+
+T4.     Draw
+
+T5.     Grid
+
+T6.     GRPHGD
+
+T7.     HCNADV
+
+T8.     Loop
+
+T9.     LUTS
+
+T10.    MelBUFR
+
+T11.    NAFOS
+
+T12.    NMAP
+
+T13.    NSHARP
+
+T14.    NWX
+
+T17.    PGEN
+
+T18.    Rad
+
+T19.    Sat
+
+T20.    STNS
+
+T22.    NEXRAD
+
+
+VEE==========================================================================
+V.      Device Drivers (DEVICE)
+
+
+V1.     PNG
+
+V2.     GIF
+
+V3.     VG
+
+V4.     XW
+
+V5.     PS
+
+
+ZEE==========================================================================
+
+
+
+TWO==========================================================================
+2.      Grid Re-engineering (GRID)
+
+
+THREE========================================================================
+3.      GRIB2 (GRIB2)
+
+
+FOUR=========================================================================
+4.      Time Selection Improvements (TIMELINE)
+
+
+FIVE=========================================================================
+5.      Weather Event Simulator / Displaced Real-Time (WES/DRT)
+
+
+SIX==========================================================================
+6.      BUFR (BUFR)
+
+
+SEVEN========================================================================
+7.      High Seas Marine Forecast Products (HSEAS)
+
+
+EIGHT========================================================================
+8.      Graphical Forecast for Aviation (GFA)
+
+
+NINE=========================================================================
+9.      Graph-to-Grid Improvements (G2G)
+
+
+TEN==========================================================================
+10.     SPC Outlook Product Generation (SPC OTLK)
+
+
+ELEVEN=======================================================================
+11.     Watch-By-County (WBC)
+
+
+TWELVE=======================================================================
+12.     Tropical Cyclone Graphics and Products (TROP PROD)
+
+
+THIRTEEN=====================================================================
+13.     Marine Quality Control Program (CREWSS)
+
+
+FOURTEEN=====================================================================
+14.     NSHARP ( NSHARP)
+
+
+FIFTEEN======================================================================
+15.     National Digital Forecast Database (NDFD)
+
+
+SIXTEEN======================================================================
+16.     Volcanic Ash Advisory Product (VAA)
+
+
+SEVENTEEN====================================================================
+17.     Automated Objective Dvorak Technique (AODT)
+
+
+NINETEEN=====================================================================
+19.     Collaborative Convective Forecast Product (CCFP)
+
+
+TWENTY=======================================================================
+20.     Winter Weather (WINTER WX)
+
+
+TWENTY-ONE===================================================================
+21.     Shape file processing
+
+TWENTY-TWO===================================================================
+
+
+TWENTY-THREE=================================================================
+
+
+TWENTY-FOUR==================================================================
+
+
+TWENTY-FIVE==================================================================
+
+
+TWENTY-SIX===================================================================
+
+
+-----------------------------------------------------------------------------
+
+
+	CM - Chris Caruso Magee
+	DP - Dave Plummer               GG - Greg Grosshans
+	FY - Fee-Jing Yen               JA - Jeff Ator
+	SJ - Scott Jacobs               JH - Jon Hoopingarner
+	SS - Steve Schotz               JL - Jan Lewis (AWC)
+	KK - Krishna Kumar              JP - James Partain
+                                        LH - Larry Hinson
+
+	BY - Bingfan Yin                AP - Art Person/PSU
+	ES - Edward Safford             CB - Chris Bailey
+	HZ - Harris Zeng                JC - Joey Carr
+	JW - Jun Wu                     JM - Jessica Morgan
+	MG - Michael Gamazaychikov      KB - Keith Brill
+	ML - Michael Li                 KK - Krishna Kumar
+	RT - Ruiming Tian               SC - Steve Chiswell
+	TL - Tiros Lee                  SD - Steve Danz (AWC)
+	TP - Tom Piper                  SG - Steve Gilbert
+        XG - Xilin Guo
+

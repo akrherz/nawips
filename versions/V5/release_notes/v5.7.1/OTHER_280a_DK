@@ -1,0 +1,14 @@
+GFS MOS replaces AVN MOS and MRF MOS (ALL)
+
+Directory, file and source code nomenclature and documentation have
+been changed in NMAP2, NWX, the decoders and the LDM to support the
+scheduled December 16, 2003 switch from separate AVN- and MRF-based
+MOS systems to a unified GFS-based MOS system.  All MOS data is now
+classified as type 'MOS' in NMAP2 and NWX, and no distinction is made
+between what was formerly differentiated as 'MOS' and 'New MOS'.
+References to 'New AVN MOS' have been changed to 'GFS MOS', and
+references to 'New MRF MOS' have been changed to 'GFSX MOS'.  Obsolete
+references to the "old" AVN and MRF MOS codes, which have not run for
+months, have been removed.  Finally, the GFS MOS station table has
+been updated with 145 new stations, 4 deleted stations, and 3 changed
+station names.

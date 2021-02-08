@@ -1,0 +1,1021 @@
+------------------------------------------------------------------------
+r108 | jacobs | 2010-04-19 20:57:42 +0000 (Mon, 19 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/sample_files/cshrc_sample
+   M /trunk/nawips/sample_files/profile_sample
+
+Updated the sample cshrc and profile to show the new locations of the environment variables.
+------------------------------------------------------------------------
+r107 | xguo | 2010-04-19 20:41:53 +0000 (Mon, 19 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/rad/nidprd.tbl
+
+added 94 product
+------------------------------------------------------------------------
+r106 | xguo | 2010-04-19 20:41:20 +0000 (Mon, 19 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/sat/imgtyp.tbl
+
+added 94 product
+------------------------------------------------------------------------
+r104 | xguo | 2010-04-19 17:57:22 +0000 (Mon, 19 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gemlib/im/imnexbzwmo.c
+
+updated
+------------------------------------------------------------------------
+r103 | xguo | 2010-04-19 17:34:33 +0000 (Mon, 19 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/gn/crnexbz.c
+
+added code to handle WMO, FOS header
+------------------------------------------------------------------------
+r102 | xguo | 2010-04-19 17:33:14 +0000 (Mon, 19 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gemlib/im/imnexbz.c
+   A /trunk/nawips/gempak/source/gemlib/im/imnexbzwmo.c
+   M /trunk/nawips/gempak/source/gemlib/im/imnexz.c
+
+added codes to handle WMO,FOS header
+------------------------------------------------------------------------
+r101 | xguo | 2010-04-19 17:30:54 +0000 (Mon, 19 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/proto_gemlib.h
+   M /trunk/nawips/gempak/include/uscore.h
+
+added im_nexbzwmo function
+------------------------------------------------------------------------
+r100 | jacobs | 2010-04-19 14:37:00 +0000 (Mon, 19 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/nts/nmap/restore/volcano/volcash_comp
+   M /trunk/nawips/gempak/nts/nmap/restore/volcano/volcash_high_lvl
+   M /trunk/nawips/gempak/nts/nmap/restore/volcano/volcash_low_lvl
+   M /trunk/nawips/gempak/nts/nmap/restore/volcano/volcash_mid_lvl
+
+Updated color scheme in the volcanic ash restore files for NMAP. This is the color scheme used by the SDMs.
+------------------------------------------------------------------------
+r99 | jacobs | 2010-04-18 00:31:09 +0000 (Sun, 18 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/shpprm.h
+   M /trunk/nawips/gempak/maps/ascii/aschinpsa.nws
+   M /trunk/nawips/gempak/maps/ascii/asclonpsa.nws
+   M /trunk/nawips/gempak/maps/ascii/ascmenpsa.nws
+   M /trunk/nawips/gempak/maps/ascii/asctpnpsa.nws
+   M /trunk/nawips/gempak/maps/hinpsa.nws
+   M /trunk/nawips/gempak/maps/lonpsa.nws
+   M /trunk/nawips/gempak/maps/menpsa.nws
+   M /trunk/nawips/gempak/maps/tpnpsa.nws
+   M /trunk/nawips/gempak/source/programs/util/maps/shp/shpbhdr.c
+   M /trunk/nawips/gempak/source/programs/util/maps/shp/shpcbnd.c
+   M /trunk/nawips/gempak/source/programs/util/maps/shp/shpctbl.c
+   M /trunk/nawips/gempak/source/programs/util/maps/shp/shpgkey.c
+   M /trunk/nawips/gempak/source/programs/util/maps/shp/shpmmem.c
+   M /trunk/nawips/gempak/source/programs/util/maps/shp/shpmtyp.c
+   M /trunk/nawips/gempak/tables/bounds/npsabnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/npsabnds.tbl.info
+   A /trunk/nawips/gempak/tables/stns/npsa.tbl
+
+Added maps, bounds and station table for the Predictive Service Areas. Processing for these new shape files required source code changes to recognize the tags and values. The tags are different than those in the standard NWS shape files. 
+------------------------------------------------------------------------
+r98 | jacobs | 2010-04-17 01:15:28 +0000 (Sat, 17 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/hcnadv/eptker.tbl
+
+Updated the Eastern Pacific track error table for 2010. This work was done by the TPC.
+------------------------------------------------------------------------
+r97 | jacobs | 2010-04-17 00:55:06 +0000 (Sat, 17 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gemlib/db/dbrunquery.c
+
+Changed the way that generated Python scripts are sent to the EDEX uEngine. The previous version employed curl. This has been modified to use the RTS supplied Command Line Interface (CLI).
+------------------------------------------------------------------------
+r96 | jacobs | 2010-04-17 00:53:17 +0000 (Sat, 17 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/gemlib/im/imgi2gm.f
+
+Update the satellite identification for GINI images to include GOES-14, 15 and 16.
+------------------------------------------------------------------------
+r95 | jacobs | 2010-04-17 00:46:02 +0000 (Sat, 17 Apr 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/200mb_absv_wind
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/200mb_hght_absv_wnd
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/500-300_mean_rh
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/500mb_absv_wind
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/500mb_hght_absv_wnd
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/700mb_absv_wind
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/700mb_hgt_absv_wind
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/850-200_mlw_pmsl
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/850-200mb_wind_shear
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/850-300mb_wind_shear
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/850-500mb_wind_shear
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/850-700_mean_rh
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/850mb_absv_wind
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/850mb_hgt_absv_wind
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/850mb_wind_and_rel_vort
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/minpres_10m_wind
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/pmsl_1000-500thk
+   A /trunk/nawips/gempak/nts/nmap/restore/modl/hwrf/pmsl_1000mb_wind
+   M /trunk/nawips/gempak/tables/config/datatype.tbl
+   M /trunk/nawips/gempak/tables/nmap/mod_res.tbl
+
+Added HWRF and HWRFNEST models to the tables. Also added restore files for displaying these models.
+------------------------------------------------------------------------
+r94 | jacobs | 2010-04-16 14:52:43 +0000 (Fri, 16 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/contrib/awc/gpanot/gpanot.mk
+   M /trunk/nawips/gempak/source/contrib/awc/gpltln/gpltln.mk
+   M /trunk/nawips/gempak/source/gemlib/gg/testgg.mk
+   M /trunk/nawips/gempak/source/gemlib/lc/testlc.mk
+   M /trunk/nawips/gempak/source/nmaplib/nmp/testnmp.mk
+   M /trunk/nawips/gempak/source/nmaplib/nms/testnms.mk
+   M /trunk/nawips/gempak/source/nmaplib/nsf/testnsf.mk
+   M /trunk/nawips/gempak/source/nmaplib/nsn/testnsn.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdcntr/gdcntr.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdfrzl/gdfrzl.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdlist/gdlist.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdmap/gdmap.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot/gdplot.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot/gdplot_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot/gdplot_ps.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_gf.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_gif.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_ps.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_rbk.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_vg.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_gf.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_gif.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_ps.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_rbk.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_tiff.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_vg.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdstream/gdstream.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdwind/gdwind.mk
+   M /trunk/nawips/gempak/source/programs/gd/gpolyg/gpolyg.mk
+   M /trunk/nawips/gempak/source/programs/gd/grphgd/grphgd.mk
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpmap_gf.mk
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpmap_gif.mk
+   M /trunk/nawips/gempak/source/programs/gp/gptcww/gptcww.mk
+   M /trunk/nawips/gempak/source/programs/gp/gptpc/gptpc.mk
+   M /trunk/nawips/gempak/source/programs/gui/nsharp/nsharp.mk
+   M /trunk/nawips/gempak/source/programs/gui/nwx/nwx.mk
+   M /trunk/nawips/gempak/source/programs/oa/oabox/oabox.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfmap/sfmap.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfmap/sfmap_nc.mk
+   M /trunk/nawips/gempak/source/programs/sn/snmap/snmap.mk
+   M /trunk/nawips/gempak/source/programs/util/aodt/aodt.mk
+   M /trunk/nawips/gempak/source/programs/util/mkelev/mkelev.mk
+
+Update makefiles to include the BZIP2 library.
+------------------------------------------------------------------------
+r92 | xguo | 2010-04-15 19:42:16 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/gemprm.h
+   M /trunk/nawips/gempak/include/proto_gemlib.h
+   M /trunk/nawips/gempak/include/proto_xw.h
+   M /trunk/nawips/gempak/include/uscore.h
+
+added 8-bit function prototypes
+------------------------------------------------------------------------
+r91 | xguo | 2010-04-15 19:34:49 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/device/device/GF.mk
+   M /trunk/nawips/gempak/source/device/device/GIF.mk
+   M /trunk/nawips/gempak/source/device/device/PS.mk
+   M /trunk/nawips/gempak/source/device/device/TIFF.mk
+   M /trunk/nawips/gempak/source/device/device/XW.mk
+   M /trunk/nawips/gempak/source/device/device/XWP.mk
+
+add bzlib
+------------------------------------------------------------------------
+r90 | xguo | 2010-04-15 19:32:23 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/xw/xsatim.c
+   M /trunk/nawips/gempak/source/driver/active/xw/xsatpx.c
+
+add code to handle radar 94 product
+------------------------------------------------------------------------
+r89 | xguo | 2010-04-15 19:30:21 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/tiff/tsatim.c
+
+add code to handle radar 94 product
+------------------------------------------------------------------------
+r88 | xguo | 2010-04-15 19:28:48 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/gif/wsatim.c
+
+add code to handle radar 94 product
+------------------------------------------------------------------------
+r87 | xguo | 2010-04-15 19:27:23 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/driver/active/ps/psatim.c
+
+added code to handle 94 product
+------------------------------------------------------------------------
+r86 | xguo | 2010-04-15 19:25:10 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/driver/active/gn/crnexbz.c
+
+function to uncompress 8-bit product
+------------------------------------------------------------------------
+r85 | xguo | 2010-04-15 19:22:52 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap2.mk
+
+add bzlib
+------------------------------------------------------------------------
+r84 | xguo | 2010-04-15 19:22:06 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpmap.mk
+
+add bzlib
+------------------------------------------------------------------------
+r83 | xguo | 2010-04-15 19:19:06 +0000 (Thu, 15 Apr 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/gemlib/im/imnexbz.c
+   M /trunk/nawips/gempak/source/gemlib/im/imnidh.f
+   M /trunk/nawips/gempak/source/gemlib/im/imsimg.f
+   M /trunk/nawips/gempak/source/gemlib/im/testim.mk
+
+Added codes to support 8-bit product
+------------------------------------------------------------------------
+r82 | jacobs | 2010-04-12 19:26:46 +0000 (Mon, 12 Apr 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_rbk.mk
+
+At the request of the HPC, added a makefile for GDPLOT3_RBK.
+------------------------------------------------------------------------
+r81 | jacobs | 2010-04-12 17:02:35 +0000 (Mon, 12 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/appl/plot/glogo.f
+   M /trunk/nawips/gempak/source/device/draw/inoaa.f
+   M /trunk/nawips/gempak/source/device/draw/ispcl.f
+   M /trunk/nawips/gempak/source/device/plot/dlogo.f
+   M /trunk/nawips/gempak/source/gplt/plot/glogo.f
+   M /trunk/nawips/gempak/source/gpltdev/plot/dlogo.f
+   M /trunk/nawips/gempak/source/programs/gp/gptext/gptext.f
+   M /trunk/nawips/gempak/source/programs/util/plotsyms/plotsyms.f
+
+At the request of the HPC: 1) Changed the shape of the "B" symbol and 2) provided a NOAA logo that does not have the curved text around the symbol. Updated the routine headers with the new logo number. Added the name NOAANOTX to gptext as a valid logo type. Updated plotsyms to set the GF output size to the same as the XW.
+------------------------------------------------------------------------
+r80 | jacobs | 2010-04-10 19:53:05 +0000 (Sat, 10 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/lsfstns.tbl
+   M /trunk/nawips/gempak/tables/stns/sfstns.tbl
+   M /trunk/nawips/gempak/tables/stns/snstns.tbl
+
+Updated locations and elevations for a number of Canadian stations. This was done at the request of the HPC.
+------------------------------------------------------------------------
+r79 | jacobs | 2010-04-05 23:58:59 +0000 (Mon, 05 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/maps/ascii/aschifzus.nws
+   M /trunk/nawips/gempak/maps/ascii/aschiosuo.nws
+   M /trunk/nawips/gempak/maps/ascii/aschiznus.nws
+   M /trunk/nawips/gempak/maps/ascii/asclofzus.nws
+   M /trunk/nawips/gempak/maps/ascii/ascloosuo.nws
+   M /trunk/nawips/gempak/maps/ascii/ascloznus.nws
+   M /trunk/nawips/gempak/maps/ascii/ascmefzus.nws
+   M /trunk/nawips/gempak/maps/ascii/ascmeosuo.nws
+   M /trunk/nawips/gempak/maps/ascii/ascmeznus.nws
+   M /trunk/nawips/gempak/maps/ascii/asctpfzus.nws
+   M /trunk/nawips/gempak/maps/ascii/asctposuo.nws
+   M /trunk/nawips/gempak/maps/ascii/asctpznus.nws
+   M /trunk/nawips/gempak/maps/hifzus.nws
+   M /trunk/nawips/gempak/maps/hiosuo.nws
+   M /trunk/nawips/gempak/maps/hiznus.nws
+   M /trunk/nawips/gempak/maps/lofzus.nws
+   M /trunk/nawips/gempak/maps/loosuo.nws
+   M /trunk/nawips/gempak/maps/loznus.nws
+   M /trunk/nawips/gempak/maps/mefzus.nws
+   M /trunk/nawips/gempak/maps/meosuo.nws
+   M /trunk/nawips/gempak/maps/meznus.nws
+   M /trunk/nawips/gempak/maps/tpfzus.nws
+   M /trunk/nawips/gempak/maps/tposuo.nws
+   M /trunk/nawips/gempak/maps/tpznus.nws
+   M /trunk/nawips/gempak/tables/bounds/firebnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/firebnds.tbl.info
+   M /trunk/nawips/gempak/tables/bounds/mzbnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/mzbnds.tbl.info
+   M /trunk/nawips/gempak/tables/bounds/pfzbnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/pfzbnds.tbl.info
+   M /trunk/nawips/gempak/tables/stns/firezones.tbl
+   M /trunk/nawips/gempak/tables/stns/zones.tbl
+
+Update Public Zones and Fire Zones maps, bounds and station tables from the latest Shapefiles on the NWS web site.
+------------------------------------------------------------------------
+r78 | jacobs | 2010-04-05 23:51:33 +0000 (Mon, 05 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/sfstns.tbl
+   M /trunk/nawips/gempak/tables/stns/snstns.tbl
+   M /trunk/nawips/gempak/tables/stns/syworld.tbl
+
+Update latitude, longitude and elevation for Guam (PGUM).
+------------------------------------------------------------------------
+r77 | jacobs | 2010-04-05 23:50:38 +0000 (Mon, 05 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/pgen/outlook.tbl
+
+Remove blank line from the end of OUTLOOK.TBL.
+------------------------------------------------------------------------
+r76 | xguo | 2010-04-01 12:05:25 +0000 (Thu, 01 Apr 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/tables/nmap/enhanced_thunder_06z.lpf
+   A /trunk/nawips/gempak/tables/nmap/enhanced_thunder_06z_blank.lpf
+   A /trunk/nawips/gempak/tables/nmap/enhanced_thunder_06z_sref.lpf
+   A /trunk/nawips/gempak/tables/nmap/enhanced_thunder_06z_work.lpf
+   A /trunk/nawips/gempak/tables/nmap/enhanced_thunder_13z.lpf
+   A /trunk/nawips/gempak/tables/nmap/enhanced_thunder_13z_last.lpf
+
+SPC enhanced TSTM & Fire OTLK changes
+------------------------------------------------------------------------
+r75 | xguo | 2010-04-01 11:59:11 +0000 (Thu, 01 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/pgen/grptyp.tbl
+   M /trunk/nawips/gempak/tables/pgen/otlfilnam.tbl
+   M /trunk/nawips/gempak/tables/pgen/outlooktimes.tbl
+
+SPC enhanced TSTM & Fire OTLK changes
+------------------------------------------------------------------------
+r74 | xguo | 2010-04-01 11:55:32 +0000 (Thu, 01 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/help/hlp/dat2pts.hlp
+
+SPC enhanced TSTM & Fire OTLK changes
+------------------------------------------------------------------------
+r73 | xguo | 2010-04-01 11:52:56 +0000 (Thu, 01 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/util/dat2pts/d2pday.f
+   M /trunk/nawips/gempak/source/programs/util/dat2pts/d2phdr.f
+   M /trunk/nawips/gempak/source/programs/util/dat2pts/dat2pts.f
+
+SPC enhanced TSTM & Fire OTLK changes
+------------------------------------------------------------------------
+r72 | xguo | 2010-04-01 11:47:44 +0000 (Thu, 01 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgofmt.c
+
+SPC enhanced TSTM & Fire OTLK changes
+------------------------------------------------------------------------
+r71 | xguo | 2010-04-01 11:43:46 +0000 (Thu, 01 Apr 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/ces/cesgtlmstr.c
+
+check in SPC enhancement after testing
+------------------------------------------------------------------------
+r69 | xguo | 2010-03-30 21:08:36 +0000 (Tue, 30 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/cvg/cvgt2v.c
+
+fixed while loop ii ++
+------------------------------------------------------------------------
+r67 | xguo | 2010-03-29 15:01:19 +0000 (Mon, 29 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/util/prob2cat/prob2cat.c
+
+fix bugs for ticket 20
+------------------------------------------------------------------------
+r66 | jacobs | 2010-03-25 21:16:20 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/cvg/cvgcrall.c
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgsigw.c
+   M /trunk/nawips/gempak/tables/bounds/firbnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/firbnds.tbl.info
+   M /trunk/nawips/gempak/tables/pgen/sigmetinfo.tbl
+
+Change the id for the Oakland FIR from KZOA to KZAK. Added the FIR id to the second line of the SIGMET product.
+------------------------------------------------------------------------
+r65 | jacobs | 2010-03-25 21:14:06 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/help/hlp/nmap2.hlp
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap2.c
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_cmdln.c
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/proto_nmap2.h
+
+Add ability to load a VG file from the command line of nmap2.
+------------------------------------------------------------------------
+r64 | jacobs | 2010-03-25 21:03:55 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/sfstns.tbl
+
+Update Alaskan surface station information.
+------------------------------------------------------------------------
+r63 | jacobs | 2010-03-25 21:01:13 +0000 (Thu, 25 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/sf/sfgram/sfgram.f
+   M /trunk/nawips/gempak/source/programs/sf/sfgram/sfxgrf.f
+
+Add vertical witness lines to SFGRAM.
+------------------------------------------------------------------------
+r61 | xguo | 2010-03-23 15:08:04 +0000 (Tue, 23 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghwwcz.f
+
+fixed bug for ticket 18-TCA Cancel bug
+------------------------------------------------------------------------
+r59 | xguo | 2010-03-11 22:02:39 +0000 (Thu, 11 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghkglp.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghkgmp.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghrdad.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghrdbd.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghrdfv.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtc2vg.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtclb.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtcww.f
+
+Code changes for the new graphic legend and removed all unused codes.
+------------------------------------------------------------------------
+r58 | xguo | 2010-03-11 21:55:32 +0000 (Thu, 11 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gp/gptpc/gptpc.f
+
+Removed all unused codes
+------------------------------------------------------------------------
+r57 | xguo | 2010-03-11 21:54:57 +0000 (Thu, 11 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gp/gptcww/gptcww.f
+
+Made code changes to support the new graphic legend and removed all unused codes 
+------------------------------------------------------------------------
+r55 | mlaryukhin | 2010-03-11 13:37:22 +0000 (Thu, 11 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/.cproject
+
+
+------------------------------------------------------------------------
+r52 | mlaryukhin | 2010-03-10 22:16:24 +0000 (Wed, 10 Mar 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/.cproject
+   M /trunk/nawips/.project
+
+branch: indexer works now
+------------------------------------------------------------------------
+r46 | jacobs | 2010-03-07 22:37:12 +0000 (Sun, 07 Mar 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/doc/Shared_Objects
+   A /trunk/nawips/doc/Shared_Objects/CVG_func_list.txt
+   A /trunk/nawips/doc/Shared_Objects/mvswp4.c
+   M /trunk/nawips/gempak/include/proto_cgemlib.h
+   M /trunk/nawips/gempak/include/proto_vg.h
+   A /trunk/nawips/gempak/source/cgemlib/cvg/cvgopenj.c
+   A /trunk/nawips/gempak/source/cgemlib/cvg/cvgrdjhdr.c
+   M /trunk/nawips/gempak/source/cgemlib/cvg/cvgrdjrecnoc.c
+   A /trunk/nawips/gempak/source/cgemlib/cvg/cvgv2x.c
+   A /trunk/nawips/gempak/source/cgemlib/cvg/output
+   A /trunk/nawips/gempak/source/cgemlib/cvg/vgf2xml.c
+   D /trunk/nawips/gempak/source/vgfconvlib
+
+Moved files from vgfconvlib directory to the cvg library and the doc directories. Added all missing functions to the $GEMINC prototype header files. Removed the vgfconflib directory so that it does not interfere with the build process.
+------------------------------------------------------------------------
+r45 | jacobs | 2010-03-07 20:30:15 +0000 (Sun, 07 Mar 2010) | 1 line
+Changed paths:
+   D /trunk/nawips/gempak/maps/programs/gsfssf.aix4
+   D /trunk/nawips/gempak/maps/programs/gsfssf.aix5
+   D /trunk/nawips/gempak/maps/programs/gsfssf.f
+   D /trunk/nawips/gempak/maps/programs/gsfssf.hpux10
+   D /trunk/nawips/gempak/maps/programs/gsfssf.hpux11
+   D /trunk/nawips/gempak/maps/programs/gsfssf.irix6
+   D /trunk/nawips/gempak/maps/programs/gsfssf.linux2.2
+   D /trunk/nawips/gempak/maps/programs/gsfssf.linux2.4
+   D /trunk/nawips/gempak/maps/programs/gsfssf.linux2.4el
+   D /trunk/nawips/gempak/maps/programs/gsfssf.linux2.6el
+   D /trunk/nawips/gempak/maps/programs/gsfssf_link
+   A /trunk/nawips/gempak/source/programs/util/maps/gsfssf
+   A /trunk/nawips/gempak/source/programs/util/maps/gsfssf/GNUmakefile
+   A /trunk/nawips/gempak/source/programs/util/maps/gsfssf/gsfssf.c
+   A /trunk/nawips/gempak/source/programs/util/maps/gsfssf/gsfssf.mk
+   A /trunk/nawips/gempak/source/programs/util/maps/gsfssf/map_gsfssf.f
+   M /trunk/nawips/gempak/source/programs/util/maps/shp/shpstrip.c
+   M /trunk/nawips/gempak/source/programs/util/maps/shpssf/shpssf.c
+
+Map processing changes. Moved the utility application GSFSSF from the maps directory to the utility source directory. Cleaned up error messages in other map applications. 
+------------------------------------------------------------------------
+r44 | jacobs | 2010-03-07 20:28:24 +0000 (Sun, 07 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/bin/searcher
+
+Modified the utility script - searcher - to not search in the svn directories in the source tree.
+------------------------------------------------------------------------
+r43 | jacobs | 2010-03-07 19:33:51 +0000 (Sun, 07 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/diaglib/dg/dgcwbt.c
+
+Fixed error checking in Wet-bulb temperature calculation. This function collects the grids needed for the calculation, but never checked if the grids were actually retrieved before computing the result.
+------------------------------------------------------------------------
+r42 | xguo | 2010-03-04 19:43:42 +0000 (Thu, 04 Mar 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghpsum.f
+   A /trunk/nawips/gempak/source/cgemlib/gh/ghpsum09.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghrdfv.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghrdpb.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtclb.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghtcww.f
+   M /trunk/nawips/gempak/source/cgemlib/gh/ghwipl.f
+
+code changes for tropical graphics ticket 3,4,5
+------------------------------------------------------------------------
+r40 | xguo | 2010-02-24 13:07:36 +0000 (Wed, 24 Feb 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/vgfconvlib/src/cvgopenj.c
+   A /trunk/nawips/gempak/source/vgfconvlib/src/cvgrdjele.c
+   A /trunk/nawips/gempak/source/vgfconvlib/src/cvgrdjhdr.c
+   A /trunk/nawips/gempak/source/vgfconvlib/src/cvgrdjrecnoc.c
+   A /trunk/nawips/gempak/source/vgfconvlib/src/cvgv2x.c
+   A /trunk/nawips/gempak/source/vgfconvlib/src/mvswp4.c
+   A /trunk/nawips/gempak/source/vgfconvlib/src/vgf2xml.c
+
+functions for Java
+------------------------------------------------------------------------
+r39 | xguo | 2010-02-24 13:06:27 +0000 (Wed, 24 Feb 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/vgfconvlib/doc/scriptFile
+
+*. list for vgfConv
+------------------------------------------------------------------------
+r38 | xguo | 2010-02-24 13:02:21 +0000 (Wed, 24 Feb 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/vgfconvlib
+   A /trunk/nawips/gempak/source/vgfconvlib/doc
+   A /trunk/nawips/gempak/source/vgfconvlib/src
+
+check in vgfConv functions for Quan Zhou
+------------------------------------------------------------------------
+r36 | jacobs | 2010-02-20 16:51:06 +0000 (Sat, 20 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/site/sib_gemdat.csh
+   M /trunk/nawips/site/sib_gemdat.sh
+
+Update the site configuration files to use the new server disk. This change is necessary because of changes being made to get ready to move to the new NCWCP building.
+------------------------------------------------------------------------
+r35 | jacobs | 2010-02-20 16:48:31 +0000 (Sat, 20 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/permclust.tbl
+
+Update to the severe weather watch permanent cluster table. This update came from the SPC.
+------------------------------------------------------------------------
+r34 | xguo | 2010-02-17 22:35:59 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgsmear.c
+
+add codes to handle two smear algorithms
+------------------------------------------------------------------------
+r33 | xguo | 2010-02-17 22:34:59 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgpalw.c
+
+add codes to handle ADD-PT button
+------------------------------------------------------------------------
+r32 | xguo | 2010-02-17 22:32:51 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pghdlb.c
+
+add functions to check hazard type for support multi-selected GFA elements
+------------------------------------------------------------------------
+r31 | xguo | 2010-02-17 22:30:26 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pggfawp.c
+
+add codes to support multi-selected GFA elements
+------------------------------------------------------------------------
+r30 | xguo | 2010-02-17 22:28:56 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgfrom.c
+
+add codes to support two smear algorithms
+------------------------------------------------------------------------
+r29 | xguo | 2010-02-17 22:27:16 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgedit.c
+
+add codes to support add point and multi-select GFA functions
+------------------------------------------------------------------------
+r28 | xguo | 2010-02-17 22:21:57 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgevt.c
+
+add codes to support FUNC_ADDPOINT
+------------------------------------------------------------------------
+r27 | xguo | 2010-02-17 22:19:12 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_pgaddpt.c
+
+new functions to support add a point to GFA
+------------------------------------------------------------------------
+r26 | xguo | 2010-02-17 22:15:59 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/proto_vg.h
+
+add pgaddpt_start prototype
+------------------------------------------------------------------------
+r25 | xguo | 2010-02-17 22:14:56 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/include/drwids.h
+
+add FUNC_ADDPOINT
+------------------------------------------------------------------------
+r24 | xguo | 2010-02-17 22:12:03 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/pgen/funcbtn.tbl
+
+add addpoint
+------------------------------------------------------------------------
+r23 | xguo | 2010-02-17 22:11:29 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/pgen/funcbtn_4.tbl
+
+add addpoint
+------------------------------------------------------------------------
+r22 | xguo | 2010-02-17 22:07:20 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/config/prefs.tbl
+
+add GFA smear algorithm flag
+------------------------------------------------------------------------
+r21 | xguo | 2010-02-17 22:03:54 +0000 (Wed, 17 Feb 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/icons/nmap/addpoint.xbm
+
+new button image for add a point to GFA
+------------------------------------------------------------------------
+r18 | jacobs | 2010-01-29 22:31:29 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/nmaplib/nms/nmsdspl.f
+
+Added the EXperimental ASCT data types to NMAP. This was apparently missed in an earlier delivery when the processing was added to the library functions. 
+------------------------------------------------------------------------
+r17 | jacobs | 2010-01-29 22:29:14 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/stns/snstns.tbl
+   M /trunk/nawips/gempak/tables/stns/snstns_land.tbl
+   M /trunk/nawips/gempak/tables/stns/snworld.tbl
+
+Applied annual update for upper air station locations from Bill Blackmore, NWS.
+------------------------------------------------------------------------
+r16 | jacobs | 2010-01-29 21:48:16 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/maps/hifzus.nws
+   D /trunk/nawips/gempak/maps/hifzus.nws_01jn09
+   M /trunk/nawips/gempak/maps/himouo.nws
+   D /trunk/nawips/gempak/maps/himouo.nws_02jn09
+   D /trunk/nawips/gempak/maps/himzcn.nws_01ap09
+   D /trunk/nawips/gempak/maps/himzcn.nws_18fe09
+   D /trunk/nawips/gempak/maps/hiosuo.nws_01ap09
+   D /trunk/nawips/gempak/maps/hiosuo.nws_18fe09
+   D /trunk/nawips/gempak/maps/hiznus.nws_07my09
+   M /trunk/nawips/gempak/maps/lofzus.nws
+   D /trunk/nawips/gempak/maps/lofzus.nws_01jn09
+   M /trunk/nawips/gempak/maps/lomouo.nws
+   D /trunk/nawips/gempak/maps/lomouo.nws_02jn09
+   D /trunk/nawips/gempak/maps/lomzcn.nws_01ap09
+   D /trunk/nawips/gempak/maps/lomzcn.nws_18fe09
+   D /trunk/nawips/gempak/maps/loosuo.nws_01ap09
+   D /trunk/nawips/gempak/maps/loosuo.nws_18fe09
+   D /trunk/nawips/gempak/maps/loznus.nws_07my09
+   M /trunk/nawips/gempak/maps/mefzus.nws
+   D /trunk/nawips/gempak/maps/mefzus.nws_01jn09
+   M /trunk/nawips/gempak/maps/memouo.nws
+   D /trunk/nawips/gempak/maps/memouo.nws_02jn09
+   D /trunk/nawips/gempak/maps/memzcn.nws_01ap09
+   D /trunk/nawips/gempak/maps/memzcn.nws_18fe09
+   D /trunk/nawips/gempak/maps/meosuo.nws_01ap09
+   D /trunk/nawips/gempak/maps/meosuo.nws_18fe09
+   D /trunk/nawips/gempak/maps/meznus.nws_07my09
+   M /trunk/nawips/gempak/maps/tpfzus.nws
+   D /trunk/nawips/gempak/maps/tpfzus.nws_01jn09
+   M /trunk/nawips/gempak/maps/tpmouo.nws
+   D /trunk/nawips/gempak/maps/tpmouo.nws_02jn09
+   D /trunk/nawips/gempak/maps/tpmzcn.nws_01ap09
+   D /trunk/nawips/gempak/maps/tpmzcn.nws_18fe09
+   D /trunk/nawips/gempak/maps/tposuo.nws_01ap09
+   D /trunk/nawips/gempak/maps/tposuo.nws_18fe09
+   D /trunk/nawips/gempak/maps/tpznus.nws_07my09
+   D /trunk/nawips/gempak/tables/bounds/20060630pfzbnds.tbl
+   D /trunk/nawips/gempak/tables/bounds/20060630pfzbnds.tbl.info
+   M /trunk/nawips/gempak/tables/bounds/firebnds.tbl
+   M /trunk/nawips/gempak/tables/bounds/firebnds.tbl.info
+   D /trunk/nawips/gempak/tables/bounds/firebnds.tbl.info_01jn09
+   D /trunk/nawips/gempak/tables/bounds/firebnds.tbl_01jn09
+   D /trunk/nawips/gempak/tables/bounds/mzbnds.tbl.info_01ap09
+   D /trunk/nawips/gempak/tables/bounds/mzbnds.tbl.info_18fe09
+   D /trunk/nawips/gempak/tables/bounds/mzbnds.tbl_01ap09
+   D /trunk/nawips/gempak/tables/bounds/mzbnds.tbl_18fe09
+   D /trunk/nawips/gempak/tables/bounds/mzcntybnds.tbl.info_01ap09
+   D /trunk/nawips/gempak/tables/bounds/mzcntybnds.tbl.info_18fe09
+   D /trunk/nawips/gempak/tables/bounds/mzcntybnds.tbl_01ap09
+   D /trunk/nawips/gempak/tables/bounds/mzcntybnds.tbl_18fe09
+   A /trunk/nawips/gempak/tables/bounds/osmzbnds.tbl
+   A /trunk/nawips/gempak/tables/bounds/osmzbnds.tbl.info
+   D /trunk/nawips/gempak/tables/bounds/osmzbnds.tbl.info_02jn09
+   D /trunk/nawips/gempak/tables/bounds/osmzbnds.tbl_02jn09
+   D /trunk/nawips/gempak/tables/bounds/pfzbnds.tbl.info_07my09
+   D /trunk/nawips/gempak/tables/bounds/pfzbnds.tbl_07my09
+   M /trunk/nawips/gempak/tables/stns/firezones.tbl
+   D /trunk/nawips/gempak/tables/stns/firezones.tbl_01jn09
+   D /trunk/nawips/gempak/tables/stns/marinenames.tbl_01ap09
+   D /trunk/nawips/gempak/tables/stns/marinenames.tbl_18fe09
+   D /trunk/nawips/gempak/tables/stns/mzcntybnds.tbl_01ap09
+   D /trunk/nawips/gempak/tables/stns/mzcntys.tbl_18fe09
+   D /trunk/nawips/gempak/tables/stns/zones.tbl_01ap09
+   D /trunk/nawips/gempak/tables/stns/zones.tbl_07my09
+   D /trunk/nawips/gempak/tables/stns/zones.tbl_18fe09
+
+Clean up dated tables and map files. These files were created and either never installed as the default file, or were superseded by a later delivery. 
+------------------------------------------------------------------------
+r15 | jacobs | 2010-01-29 20:50:40 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/contrib/awc/airmet_share/afcreatexml.c
+   M /trunk/nawips/gempak/source/contrib/awc/airmet_vgfbufr/afcreatebufr.c
+   A /trunk/nawips/gempak/tables/melbufr/B3M-000-013-0
+   A /trunk/nawips/gempak/tables/melbufr/B3M-000-013-A
+   A /trunk/nawips/gempak/tables/melbufr/B3M-000-013-B
+   A /trunk/nawips/gempak/tables/melbufr/B3M-000-013-D
+   A /trunk/task_docs/GFA_Design_GAIRMET_BUFR_TABLE13_Change_BUGFIX.doc
+
+Updates to the BUFR sequence for the GFA. Updated sequence 0-08-079 in table version 13 and made the necessary code changes to reference the new table version. Also fixed a problem when the bottom flight level is NULL. These changes were made by Larry Hinson of the AWC.
+------------------------------------------------------------------------
+r14 | jacobs | 2010-01-29 20:28:17 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/config/mapfil.tbl
+   M /trunk/nawips/gempak/tables/grid/g2vars.tbl
+   M /trunk/nawips/gempak/tables/stns/cnty_clst.tbl
+   M /trunk/nawips/gempak/tables/stns/marinenames.tbl
+   M /trunk/nawips/gempak/tables/stns/spcwatch.tbl
+
+Table updates from the SPC. 1) Added the fire weather maps to mapfil.tbl so that they can be referenced by the applications. 2) Added fire weather grid parameters to the GRIB2 table. 3) Cleaned up station tables used in the watch creation process.
+------------------------------------------------------------------------
+r13 | jacobs | 2010-01-29 20:20:43 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/source/programs/util/sigbufr/sigbufr.c
+
+Fixed SIGBUFR for the AWC. The application was reporting a segfault on 64 bit workstations. Added variable initialization. Fixed the logic for closing the output files.
+------------------------------------------------------------------------
+r12 | jacobs | 2010-01-29 20:17:58 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/tables/nmap/mapovl.nmap
+
+Update the map overlay table for NMAP to include the NWS States map. This only allows the user to select this map, it does not display this map by default.
+------------------------------------------------------------------------
+r11 | jacobs | 2010-01-29 20:17:03 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/build/libiconv_build
+
+Rename the iconv binary that is created when the library is built. This binary was interfering with the use of "man" on certain systems. The binary is not needed by NAWIPS, only the library is used in building the software.
+------------------------------------------------------------------------
+r10 | jacobs | 2010-01-29 20:15:12 +0000 (Fri, 29 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/environ/gemenv.csh
+   M /trunk/nawips/environ/gemenv.sh
+
+Update environment to include RHEL5 64bit, at the request of the AWC.
+------------------------------------------------------------------------
+r9 | jacobs | 2010-01-11 17:42:50 +0000 (Mon, 11 Jan 2010) | 1 line
+Changed paths:
+   A /trunk/nawips/extlibs/bzip2
+   A /trunk/nawips/extlibs/bzip2/v1.0.5
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/CHANGES
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/LICENSE
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/Makefile
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/Makefile-libbz2_so
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/README
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/README.COMPILATION.PROBLEMS
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/README.XML.STUFF
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/blocksort.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bz-common.xsl
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bz-fo.xsl
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bz-html.xsl
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzdiff
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzdiff.1
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzgrep
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzgrep.1
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzip.css
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzip2.1
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzip2.1.preformatted
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzip2.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzip2.txt
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzip2recover.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzlib.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzlib.h
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzlib_private.h
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzmore
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/bzmore.1
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/compress.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/crctable.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/decompress.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/dlltest.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/dlltest.dsp
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/entities.xml
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/format.pl
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/huffman.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/libbz2.def
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/libbz2.dsp
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/makefile.msc
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/manual.html
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/manual.pdf
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/manual.ps
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/manual.xml
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/mk251.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/randtable.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/sample1.bz2
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/sample1.ref
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/sample2.bz2
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/sample2.ref
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/sample3.bz2
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/sample3.ref
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/spewG.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/unzcrash.c
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/words0
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/words1
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/words2
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/words3
+   A /trunk/nawips/extlibs/bzip2/v1.0.5/xmlproc.sh
+   A /trunk/nawips/gempak/build/bzip2_compile
+   M /trunk/nawips/gempak/build/external_libs_compile
+
+Add the BZIP2 compression library and utilities. This is version 1.0.5. The library is being added to support reading 8-bit radar images from the NWS. This delivery also includes the GEMPAK build scripts to build the new extlib.
+------------------------------------------------------------------------
+r8 | jacobs | 2010-01-11 14:59:26 +0000 (Mon, 11 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/error/db.err
+   A /trunk/nawips/gempak/error/db.err_old
+   M /trunk/nawips/gempak/include/GEMPRM.PRM
+   M /trunk/nawips/gempak/include/gemprm.h
+   M /trunk/nawips/gempak/include/proto_gemlib.h
+   M /trunk/nawips/gempak/include/proto_xw.h
+   M /trunk/nawips/gempak/include/uscore.h
+   M /trunk/nawips/gempak/source/contrib/awc/gpanot/gpanot.mk
+   M /trunk/nawips/gempak/source/contrib/awc/gpltln/gpltln.mk
+   M /trunk/nawips/gempak/source/device/device/FAX.mk
+   M /trunk/nawips/gempak/source/device/device/GF.mk
+   M /trunk/nawips/gempak/source/device/device/GIF.mk
+   M /trunk/nawips/gempak/source/device/device/GN.mk
+   M /trunk/nawips/gempak/source/device/device/NC.mk
+   M /trunk/nawips/gempak/source/device/device/PS.mk
+   M /trunk/nawips/gempak/source/device/device/RBK.mk
+   M /trunk/nawips/gempak/source/device/device/TIFF.mk
+   M /trunk/nawips/gempak/source/device/device/UTF.mk
+   M /trunk/nawips/gempak/source/device/device/VG.mk
+   M /trunk/nawips/gempak/source/device/device/XW.mk
+   M /trunk/nawips/gempak/source/device/device/XWP.mk
+   A /trunk/nawips/gempak/source/driver/active/gn/crginidb.c
+   A /trunk/nawips/gempak/source/driver/active/gn/crmcidasdb.c
+   A /trunk/nawips/gempak/source/driver/active/gn/crmosadb.c
+   A /trunk/nawips/gempak/source/driver/active/gn/crnidsdb.c
+   M /trunk/nawips/gempak/source/driver/active/xw/xsatim.c
+   M /trunk/nawips/gempak/source/gemlib/cfl/cflscandir.c
+   M /trunk/nawips/gempak/source/gemlib/cfl/testcfl.mk
+   A /trunk/nawips/gempak/source/gemlib/db
+   A /trunk/nawips/gempak/source/gemlib/db/GNUmakefile
+   A /trunk/nawips/gempak/source/gemlib/db/cflags.mk
+   A /trunk/nawips/gempak/source/gemlib/db/dbcheckconnection.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbcmn.h
+   A /trunk/nawips/gempak/source/gemlib/db/dbgetbinarydata.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbgetquerytext.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbgfilenames.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbgnextcolumn.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbgradhdr.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbgradimg.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbgsathdr.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbgsatimg.c
+   A /trunk/nawips/gempak/source/gemlib/db/dbrunquery.c
+   M /trunk/nawips/gempak/source/gemlib/fl/testfl.mk
+   M /trunk/nawips/gempak/source/gemlib/gg/testgg.mk
+   A /trunk/nawips/gempak/source/gemlib/im/imdbgini2gm.f
+   A /trunk/nawips/gempak/source/gemlib/im/imdbmcidas2gm.f
+   A /trunk/nawips/gempak/source/gemlib/im/imdbmosaic2gm.f
+   A /trunk/nawips/gempak/source/gemlib/im/imdbnids2gm.f
+   M /trunk/nawips/gempak/source/gemlib/im/imsimg.f
+   M /trunk/nawips/gempak/source/gemlib/im/testim.mk
+   M /trunk/nawips/gempak/source/gemlib/in/testin.mk
+   M /trunk/nawips/gempak/source/gemlib/lc/testlc.mk
+   A /trunk/nawips/gempak/source/gemlib/tb/tbnidsdb.c
+   M /trunk/nawips/gempak/source/gemlib/tg/testtg.mk
+   M /trunk/nawips/gempak/source/gridlib/gd/testgd.mk
+   M /trunk/nawips/gempak/source/gridlib/gr/testgr.mk
+   M /trunk/nawips/gempak/source/nmaplib/ngd/testngd.mk
+   M /trunk/nawips/gempak/source/nmaplib/nim/testnim.mk
+   M /trunk/nawips/gempak/source/nmaplib/nmp/testnmp.mk
+   M /trunk/nawips/gempak/source/nmaplib/nms/testnms.mk
+   M /trunk/nawips/gempak/source/nmaplib/nsf/testnsf.mk
+   M /trunk/nawips/gempak/source/nmaplib/nsn/testnsn.mk
+   M /trunk/nawips/gempak/source/prmcnvlib/pc/testpc.mk
+   M /trunk/nawips/gempak/source/programs/dc/dcxmos/dcxmos.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdcfil/gdcfil.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdcntr/gdcntr.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdcross/gdcross.mk
+   M /trunk/nawips/gempak/source/programs/gd/gddelt/gddelt.mk
+   M /trunk/nawips/gempak/source/programs/gd/gddelt/gddelt_gn.mk
+   M /trunk/nawips/gempak/source/programs/gd/gddiag/gddiag.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdedit/gdedit.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdfrzl/gdfrzl.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdgrib/gdgrib.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdgrib/gdgrib_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdgrib2/gdgrib2.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdgsfc/gdgsfc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdgsfc/gdgsfc_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdinfo/gdinfo.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdlist/gdlist.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdmap/gdmap.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdmod/gdmod.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdomeg/gdomeg.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdp/testgdp.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdp/testgdp3.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot/gdplot.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot/gdplot_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot/gdplot_ps.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_gf.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_gif.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_ps.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_rbk.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot2/gdplot2_vg.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_gf.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_gif.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_ps.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_tiff.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdplot3/gdplot3_vg.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdprof/gdprof.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdprof/gdprof_nc.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdptpdf/gdptpdf.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdstat/gdstat.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdstream/gdstream.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdthgt/gdthgt.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdtser/gdtser.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdtspdf/gdtspdf.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdvint/gdvint.mk
+   M /trunk/nawips/gempak/source/programs/gd/gdwind/gdwind.mk
+   M /trunk/nawips/gempak/source/programs/gd/goftxt/goftxt.mk
+   M /trunk/nawips/gempak/source/programs/gd/gpolyg/gpolyg.mk
+   M /trunk/nawips/gempak/source/programs/gd/grphgd/grphgd.mk
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpmap.mk
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpmap_gf.mk
+   M /trunk/nawips/gempak/source/programs/gp/gpmap/gpmap_gif.mk
+   M /trunk/nawips/gempak/source/programs/gp/gptcww/gptcww.mk
+   M /trunk/nawips/gempak/source/programs/gp/gptpc/gptpc.mk
+   M /trunk/nawips/gempak/source/programs/gui/naltxt/naltxt.mk
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_dataw.c
+   M /trunk/nawips/gempak/source/programs/gui/nmap2/nmap_dslw.c
+   M /trunk/nawips/gempak/source/programs/gui/nsharp/nsharp.mk
+   M /trunk/nawips/gempak/source/programs/gui/ntrans/ntrans.mk
+   M /trunk/nawips/gempak/source/programs/gui/nwx/nwx.mk
+   M /trunk/nawips/gempak/source/programs/na/gd2ndfd/gd2ndfd.mk
+   M /trunk/nawips/gempak/source/programs/oa/oabox/oabox.mk
+   M /trunk/nawips/gempak/source/programs/oa/oabsfc/oabsfc.mk
+   M /trunk/nawips/gempak/source/programs/oa/oabsnd/oabsnd.mk
+   M /trunk/nawips/gempak/source/programs/oa/oagrid/oagrid.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfchck/sfchck.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfdelt/sfdelt.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfedit/sfedit.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfgram/sfgram.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfgram/sfgram_gf.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfgram/sfgram_gif.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfl604/sfl604.mk
+   M /trunk/nawips/gempak/source/programs/sf/sflist/sflist.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfmap/sfmap.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfmap/sfmap_nc.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfmod/sfmod.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfstns/sfstns.mk
+   M /trunk/nawips/gempak/source/programs/sf/sfvgsf/sfvgsf.mk
+   M /trunk/nawips/gempak/source/programs/sn/sncross/sncross.mk
+   M /trunk/nawips/gempak/source/programs/sn/sndelt/sndelt.mk
+   M /trunk/nawips/gempak/source/programs/sn/snedit/snedit.mk
+   M /trunk/nawips/gempak/source/programs/sn/snhodo/snhodo.mk
+   M /trunk/nawips/gempak/source/programs/sn/snlist/snlist.mk
+   M /trunk/nawips/gempak/source/programs/sn/snmap/snmap.mk
+   M /trunk/nawips/gempak/source/programs/sn/snmod/snmod.mk
+   M /trunk/nawips/gempak/source/programs/sn/snprof/snprof.mk
+   M /trunk/nawips/gempak/source/programs/sn/snstns/snstns.mk
+   M /trunk/nawips/gempak/source/programs/sn/sntser/sntser.mk
+   M /trunk/nawips/gempak/source/programs/util/aodt/aodt.mk
+   M /trunk/nawips/gempak/source/programs/util/mkelev/mkelev.mk
+   M /trunk/nawips/gempak/source/programs/util/sigbufr/sigbufr.mk
+   M /trunk/nawips/gempak/source/programs/util/woupdt/woupdt.mk
+   M /trunk/nawips/gempak/source/sflib/testsf.mk
+   M /trunk/nawips/gempak/source/snlib/testsn.mk
+   M /trunk/nawips/gempak/source/vflib/testvf.mk
+   A /trunk/nawips/gempak/tables/config/datatypedb.tbl
+   M /trunk/nawips/gempak/tables/config/prefs.tbl
+   A /trunk/nawips/gempak/tables/xslt/catalog_response.xlt
+   A /trunk/nawips/gempak/tables/xslt/response.xlt
+   A /trunk/task_docs/G55.1.sxw
+
+Wrote a set of new functions, as well as make changes to the existing functions, to ensure the ability of NMAP2 to display satellite and radar images stored in the AWIPS II database. This work was done by Mike Gamazaychikov from Sept 2009 to Jan 2010.
+------------------------------------------------------------------------
+r6 | jacobs | 2010-01-10 00:40:17 +0000 (Sun, 10 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/nawips/gempak/error/cvg.err
+   M /trunk/nawips/gempak/include/proto_vg.h
+   A /trunk/nawips/gempak/source/cgemlib/cvg/cvgrdjele.c
+   A /trunk/nawips/gempak/source/cgemlib/cvg/cvgrdjrecnoc.c
+   M /trunk/nawips/gempak/source/programs/util/vgf2tag/vgf2tag.c
+   M /trunk/nawips/gempak/source/programs/util/vgf2tag/vgf2tag.mk
+
+Create new copies of CVG functions, that read an element, that do not require GPLT to be linked with the VGF2TAG application. This development was done on 29 December 2009. See task document G52.31.
+------------------------------------------------------------------------

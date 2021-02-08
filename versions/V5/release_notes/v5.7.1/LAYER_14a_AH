@@ -1,0 +1,10 @@
+I.  Product Generation Changes
+
+    A.  NMAP2 Product Generation Improvements
+
+	1. Comments are recognized in LPFs (ALL)
+
+        Added the ability to skip comment lines; those beginning with 
+        '!', in LPFs. Previously, the file was read in as one block. So 
+	any commented lines which contained '<' or '>' in it was thought 
+	to contain a tag descriptor.

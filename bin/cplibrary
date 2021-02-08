@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+#  cplibrary
+#
+for dir in `find . -type d`
+do
+    cp -f $GEMPAK/build/GNUmakefile_library ./${dir}/GNUmakefile
+done
+cp -f $GEMPAK/build/GNUmakefile_subdir GNUmakefile

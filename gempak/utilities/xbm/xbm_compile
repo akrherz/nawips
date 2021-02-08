@@ -1,0 +1,4 @@
+$CC $CFLAGS -I$GEMPAK/source/driver/active/fax -c r*.c
+cp $OS_LIB/libfax.a libxbm.a
+$AR $ARFLAGS libxbm.a *.o
+$RM *.o

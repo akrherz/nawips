@@ -1,0 +1,34 @@
+#!/bin/sh
+
+if  [ $# != 0 ]
+then
+    ver=$1
+    dir=$NAWIPS/extlibs/ncepBUFR/$ver
+    if  [ -d $dir ]
+    then
+	echo "COMPILING NCEPBUFR LIBRARY $ver"
+	echo "INSTALLING as \"$OS_LIB/libncepBUFR_${ver}.a\""
+	$RM $OS_LIB/libncepBUFR.a $OS_LIB/libncepBUFR_${ver}.a $OS_LIB/ncepBUFR_*
+
+	cd $dir
+
+	BNFS=`./preproc.sh`
+
+	$CC $CFLAGS -c *.c
+	$FC $FFLAGS -c *.f
+	$AR $ARFLAGS $OS_LIB/libncepBUFR_${ver}.a *.o
+	$RM *.o $BNFS
+
+	touch $OS_LIB/ncepBUFR_$ver
+	cd $OS_LIB
+	ln -s libncepBUFR_${ver}.a libncepBUFR.a
+
+##########################################################################
+	echo "COMPILATION OF ncepBUFR LIBRARY ${ver} IS COMPLETE."
+	echo "====================================================="
+    else
+	echo "Directory \"$dir\" does not exist!"
+    fi
+else
+    echo "Please include a valid ncepBUFR library version; e.g., v10.2.3"
+fi

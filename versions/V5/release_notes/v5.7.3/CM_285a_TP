@@ -1,0 +1,9 @@
+Track 285 - Configuration Management
+
+The .cshrc and .profile files were modified in this release to add a new
+search path for include files for the ODT programs.  Added to $FFLAGS
+and $ANSI_CFLAGS was -I$GEMPAK/source/aodtlib for each platform.
+Compile errors will occur without making this update.
+
+Changed NWX to allow the use of local station tables. 
+

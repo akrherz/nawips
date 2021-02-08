@@ -1,0 +1,10 @@
+III. Decoder Improvements
+
+    A.  Hurricane Decoder Improvements (PR)
+
+	1. Added JTWC Hurricane Advisories
+
+        Added the ability to decode Joint Typhoon Weather Center (JTWC)
+	hurricane advisories with the WMO header 'WTPN3[1-5] PGTW'. See
+        the hurricane help file, dchrcn.hlp, for description of changes
+	to the hurricane output text file.

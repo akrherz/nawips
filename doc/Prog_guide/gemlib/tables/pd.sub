@@ -1,0 +1,57 @@
+#------------------------------------------------------------------------
+# pd.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		11/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+pdctot.f	- CTOT From T500 & TD850
+pddden.f	- DDEN From PRES, TMPC
+pddrct.f	- DRCT From UX, VX
+pddwpt.f	- DWPT From MIXR, PRES
+pdinmm.f	- Convert Inches To Millimeters
+pdkinx.f	- Compute K Index
+pdknms.f	- SPED From SKNT
+pdmixr.f	- MIXR FromDWPC, PRES
+pdmmin.f	- Convert Millimeters To Inches
+pdmskn.f	- SKNT From SPED
+pdprcp.f	- Precip Accumulation
+pdprcr.f	- Precip Amount From Rate
+pdrelh.f	- RELH From TMPC, DWPC
+pdrhdp.f	- DWPC From TMPC, RELH
+pdsduv.f	- Speed/Direction To U/V
+pdshmr.f	- MIXR From SPFH
+pdslvp.f	- Solve A Poisson Equation
+pdsped.f	- SPED From UNWD, VWND
+pdswet.f	- Compute SWEAT Index
+pdthta.f	- THTA From TMPC, PRES
+pdthte.f	- THTE From PRES, TMPC, DWPC
+pdthwc.f	- Compute Wet Bulb Potential Temperature
+pdtmcf.f	- TMPF From TMPC
+pdtmck.f	- TMPK From TMPC
+pdtmfc.f	- TMPC From TMPF
+pdtmfk.f	- TMPK From TMPF
+pdtmkc.f	- TMPC From TMPK
+pdtmkf.f	- TMPF From TMPK
+pdtmpk.f	- TMPK From PRES, THTA
+pdtmst.f	- TMST From THTE, PRES
+pdtmwb.f	- TMWB From TMPK, RMIX, PRES
+pdtotl.f	- Compute Total Totals Index
+pdtvrk.f	- TVRK From TMPC, DWPC, PRES
+pduvsd.f	- U/V To Speed/Direction
+pdvpmr.f	- MIXR From VAPR
+pdvtot.f	- Compute Vertical Totals Index
+
+#------------------------------------------------------------------------

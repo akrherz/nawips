@@ -1,0 +1,226 @@
+
+
+                       Introduction To GEMPLT
+
+
+This chapter provides a brief description of the GEMPLT functions.
+Required logical name assignments are described in an appendix.
+
+
+
+2.1  Initialization And Termination
+
+
+GINITP must be the first GEMPLT subroutine called by each program.
+The first time GINITP is called, the GPLT task is installed.  A
+call to GINITP in later programs is required to establish
+communications with GPLT.  When GINITP is called, a mode must be
+specified.  Mode 1 indicates plotting will be in earth
+(latitude/longitude) coordinates.  Mode 2 is used for drawing graph
+(x/y) plots.  Graphs may not be defined or drawn in earth mode;
+map projections may not be defined or plotted in graph mode.  The
+transformations for both earth and graph are retained in GPLT.  If
+the mode is changed, the appropriate transformation is activated.
+
+GENDP should be the last GEMPLT subroutine called by each
+application program.  It will cause any data buffered internally by
+GEMPLT to be flushed.  An option exists to stop the GPLT and
+device driver subprocesses.
+
+
+
+2.2  Control Of Plotter Space
+
+
+The graphics device to be used for plotting is specified by a call
+to GSDEV, which installs the device driver as a separate process.
+This subroutine must be called before any plotting is done.  Some
+transformations cannot be defined until GSDEV is called.
+
+GSVIEW allows the user to specify a view region.  The view region
+is specified in fractions from 0 to 1.  The point (0,0) is the
+lower left of the plotter space; and (1,1) is the upper right corner.
+Thus, the upper right quadrant can be selected by placing the lower
+left corner of the view region at (0.5,0.5) and the upper right
+corner at (1,1).  Note that, except for square devices, these
+fractional units are not the same as the normalized coordinates
+defined later.
+
+The programmer may also control the plotter space by defining
+margins.  GSMMGN defines margins for plotting in map projections;
+GSGMGN defines margins for graphs.  No margins will be used when
+plotting on satellite imagery.  The margins in effect when the M
+coordinate system is defined will be used until the coordinate
+system is redefined.  Later calls to the margins will have no
+effect until the coordinate system is redefined.  Margins may be
+defined as fractions for the entire graphics region or as
+multiples of the text size.
+
+
+
+2.3  Coordinate Systems
+
+
+GEMPLT uses four coordinate systems which are organized in a
+hierarchical structure.  These coordinate systems are described
+briefly here.
+
+ o  D coordinates are the actual device coordinates.
+
+ o  N coordinates are normalized device coordinates.  N coordinate
+    limits range from 0.0 to 1.0 along the longest dimension and
+    from 0.0 to a value less than or equal to 1.0 along the other
+    axis.  These limits are determined using a linear scaling of
+    the device coordinates.  Correction for the aspect ratio of the
+    pixel is included in the transformation from D to N
+    coordinates.
+
+    View regions and margins may be specified in GEMPLT.  Use of
+    these parameters allows two clipped versions of N coordinates:
+
+    o  V coordinates, view coordinates, are the same as normalized
+       coordinates but the clipping boundaries correspond to the
+       view region.
+
+    o  P coordinates, plot coordinates, are the same as normalized
+       coordinates but the clipping boundaries correspond to the
+       region inside the margins.
+
+ o  M coordinates are the earth or graph coordinates in which plot
+    locations are generally specified.  Map projection functions
+    transform any point on the earth into a (possibly infinite)
+    plane, a subregion of which is scaled to the normalized
+    coordinate system for display on the output device.  Clipping
+    boundaries are the same as for plot coordinates.
+
+ o  G coordinates are grid coordinates.  This coordinate system
+    defines the projection on which a grid was created.  The grid
+    is assumed to be evenly spaced in this projection.  Using the
+    inverse of the standard map or graph projection functions,
+    grid point coordinates can be translated into earth
+    coordinates.  The grid projection is independent of the map
+    coordinate projection.  Clipping is the same as for plot
+    coordinates.
+
+In addition, the plane into which M coordinates are transformed
+defines an L coordinate system of linear coordinates.  Since these
+are different for each projection, they are not generally used by
+the applications programmer.
+
+GQBND can be called to query the limits of any coordinate system.
+The bounds of the M and G regions are estimates of the maximum and
+minimum values of the coordinates along each side.
+
+GTRANS will translate a list of x,y points from any coordinate
+system into any other system.
+
+
+
+2.4  Attributes
+
+
+Attribute subroutines allow plotting characteristics to be
+modified and queried.  Subroutines are available to change line,
+text, marker, and wind symbol attributes.  Color modification
+subroutines are described separately.
+
+The line attributes are set in GSLINE.  Line type specifies the
+dashing pattern.  Line width may also be specified.  Flags to
+change from software to hardware functions for generating line
+types and widths are available.
+
+GSTEXT is used to define the text font, text size multiplier,
+text width, and a flag specifying generation of software or
+hardware text.
+
+GSMRKR sets marker characteristics including marker number,
+software/hardware marker flag, marker size multiplier, and marker
+width.
+
+GSBARB and GSARRW set the wind barb and the arrow attributes.
+GSWTHR sets weather symbol characteristics including size and
+width.
+
+If a hardware function is specified for a device on which it is
+unavailable, the software function will be substituted
+automatically.  The attributes that will be used can be obtained by
+calling the corresponding query subroutine.  If a hardware flag is
+set and the hardware function is available, it will be used even
+if other attributes, such as size, must be modified.  Note that the
+hardware option for many graphics devices will not draw dashed
+lines well when a long series of short line segments is drawn.
+Such short segments are generally used for drawing maps and
+contours.
+
+
+
+2.5  Plotting Functions
+
+
+The basic GEMPLT plotting functions are the generation of lines,
+text, markers, wind, and other meteorological symbols.
+
+The location for each symbol is given by its x,y position and
+coordinate system.  For plotting in earth coordinates, latitude
+and longitude replace x and y.  The units and clipping boundaries
+are dependent on the coordinate system.  In each case, the input
+coordinates are translated to device coordinates for plotting and
+clipping.  The marker center, the first character of a text string
+and the base of a wind barb or arrow will be plotted at the given
+location.
+
+
+
+2.6  Utilities
+
+
+GEMPLT utility functions are implemented to perform complex
+plotting functions.  Contours, streamlines, and geopolitical maps
+can be plotted.
+
+The name of the map file to be used can be changed using GSMFIL.
+The default map is a medium resolution map.  GQMFIL is used to
+query the current map file name.
+
+
+
+2.7  Color
+
+
+GSCOLR and GQCOLR can be used to set and query the color using
+color numbers.  Colors are specified by numbers from 1 to N
+where N is the number of colors defined for a particular device.
+If a program requests a color number larger than available on the
+current device, the color used will correspond to that of the
+requested number, modulo-N.
+
+Subroutines are available to change the color components of a
+graphics plane on devices where this feature is available.  The
+color components may be specified as red, green, and blue
+intensities (RGB), as hue, lightness and saturation (HLS), or by
+name.  Names are kept in a GEMPLT text file which may be modified
+by a GEMPLT systems programmer.
+
+
+
+2.8  Errors
+
+
+All GEMPLT subroutines send back a return code called IRET.  The
+normal value, indicating that no error was encountered, is 0.  All
+other error numbers are negative and indicate that the subroutine
+did not execute normally.  The substitution of software functions
+for hardware functions that are requested, but not available, is
+not considered an error.
+
+Programmers who prefer to check for error within programs by using
+parameter names should include the following file in the program
+declarations:
+
+                 GEMINC:ERROR.PRM
+
+
+The parameter name for the 0 error code is NORMAL.
+
+Error messages may be printed using the subroutine GERROR.  A list of
+error messages and names is given in an appendix.

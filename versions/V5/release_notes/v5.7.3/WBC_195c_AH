@@ -1,0 +1,17 @@
+Watch By County
+
+	A. Fixed an error when issuing the same watch more than 2 times (SPC)
+
+	   Corrected the problem when a watch was issued more than 2 times, it
+	   caused the ww####.vgf file to be empty. When creating List elements 
+	   from the active watch counties, modified the software in how it 
+	   determines which List element to delete from the .DEFAULT.vgf file.  
+	   This bug was reported by the SPC 5/12/04.
+
+	B. Fixed the WCN decoder DCWCN (SPC, CDB)
+
+           It was noticed that the raw WCNs contained extra lines between the
+	   MND and the UGC line. This line caused the decoder to hang. These 
+	   lines are now being skipped and there are extra checks for finding and
+	   validating the VTEC line.
+

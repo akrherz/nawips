@@ -1,0 +1,33 @@
+#------------------------------------------------------------------------
+# ss.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+cfdate.c	- Current System Time
+csleep.c	- Wait Specified Number Of Seconds
+sscurs.f	- Move Cursor To Specified Line
+ssenvr.f	- Expand Environment Variables
+ssexit.f	- Terminate A Program
+ssgsym.f	- Get Symbol Value
+ssgtim.f	- Get The System Time
+ssltim.f	- Current System Time As GEMPAK Time
+sspage.f	- Clear Terminal Screen
+ssvers.f	- Get Software Version Number
+sswait.f	- Halt Program For Specified Time	
+# testss.f	- SS Library Test Program
+
+#------------------------------------------------------------------------

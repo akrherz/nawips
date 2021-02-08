@@ -1,0 +1,49 @@
+diff -r /nawcf/home/nawcf2/NCEP_GEMPAK/nawips/gempak/source/bridge/wn/wndcod.f /export-2/cdbsrv/prev_nawips/v7.5.0/gempak/source/bridge/wn/wndcod.f
+48d47
+< C* S. Guan/NCEP         05/18   Initialized bultin                      *   
+93,98d91
+< C* Initialize bultin
+< C
+<             DO I = 1, DCMXBF
+<                bultin(I:I) =' '
+<             END DO 
+< C
+diff -r /nawcf/home/nawcf2/NCEP_GEMPAK/nawips/gempak/source/bridge/wn/wnghdr.f /export-2/cdbsrv/prev_nawips/v7.5.0/gempak/source/bridge/wn/wnghdr.f
+49d48
+< C* S. Guan/NCEP         05/18   Fixed producing spurious warns bug      *
+64d62
+<         wtype = ' '
+107c105
+< 	    ibuldex = islash 
+---
+> 	    ibuldex = islash
+140,142c138,139
+<         IF ( (itypidx .ne. 0) .or. 
+<      +    ( INDEX (btin(:ibuldex+20), '.SQ.W.') .ne. 0) ) THEN
+<             IF ( itypidx .ne. 0 ) THEN 
+---
+>         IF ( (itypidx .ne. 0) .or. (nchar .ne. 1) ) THEN
+>             IF ( nchar .eq. 1 ) THEN
+147d143
+<                 wtype = 'SQW'
+diff -r /nawcf/home/nawcf2/NCEP_GEMPAK/nawips/gempak/source/gemlib/gg/ggwarn.f /export-2/cdbsrv/prev_nawips/v7.5.0/gempak/source/gemlib/gg/ggwarn.f
+85c85
+<      +			poly*512, tstrt*20, tstn*7, tstpt*20 
+---
+>      +			poly*512, tstrt*20, tstn*7
+258d257
+<                             tstpt = carr(4)
+280,281c279
+< 				    IF ( tstrt .eq. timstr (kw) .and.
+<      +                                   tstpt .eq. timstp (kw) ) THEN
+---
+> 				    IF ( tstrt .eq. timstr (kw) ) THEN
+diff -r /nawcf/home/nawcf2/NCEP_GEMPAK/nawips/gempak/source/gemlib/ss/ssvers.f /export-2/cdbsrv/prev_nawips/v7.5.0/gempak/source/gemlib/ss/ssvers.f
+64d63
+< C* S. Guan/NCEP         05/18           Updated to 7.5.1                *
+72c71
+< 	vmsg = 'Version 7.5.1'
+---
+> 	vmsg = 'Version 7.5.0'
+Only in /export-2/cdbsrv/prev_nawips/v7.5.0/gempak/source/programs/dc/ltgdecode: install.csh
+Only in /nawcf/home/nawcf2/NCEP_GEMPAK/nawips/gempak/source: tt

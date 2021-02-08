@@ -1,0 +1,60 @@
+#------------------------------------------------------------------------
+# attribute.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+#------------------------------------------------------------------------
+
+gqarrw.f	- Query Wind Arrow Attributes
+gqbarb.f	- Query Wind Barb Attributes
+gqcntr.f	- Query Contour Attributes
+gqctyp.f	- Query Cloud Type Symbol Attributes
+# gqdatt.f	- 
+gqfill.f	- Query Polygon Fill Attributes
+gqfrnt.f	- Query Front Attributes
+gqicng.f	- Query Icing Symbol Attributes
+gqline.f	- Query Simple Line Attributes
+gqlpat.f	- Query Line Pattern
+gqmrkr.f	- Query Marker Attributes
+gqptnd.f	- Query Pressure Tendency Symbol Attributes
+gqpwth.f	- Query Past Weather Symbol Attributes
+gqsky.f		- Query Sky Coverage Symbol Attributes
+gqspcl.f	- Query Special Symbol Attributes
+gqspln.f	- Query Special Line Attributes
+gqsysz.f	- Query Size Attributes
+gqtext.f	- Query Text Attributes
+gqturb.f	- Query Turbulence Symbol Attributes
+gqwthr.f	- Query Weather Symbol Attributes
+gsarrw.f	- Set Wind Arrow Attributes
+gsbarb.f	- Set Wind Barb Attributes
+gscntr.f	- Set Contour Attributes
+gsctyp.f	- Set Cloud Type Symbol Attributes
+# gsdatt.f	- 
+gsfill.f	- Set Polygon Fill Attributes
+gsfrnt.f	- Set Front Attributes
+gsicng.f	- Set Icing Symbol Attributes
+gsline.f	- Set Simple Line Attributes
+gslpat.f	- Set Line Pattern
+gsmrkr.f	- Set Marker Attributes
+gsptnd.f	- Set Pressure Tendency Symbol Attributes
+gspwth.f	- Set Past Weather Symbol Attributes
+gssky.f		- Set Sky Coverage Symbol Attributes
+gsspcl.f	- Set Special Symbol Attributes
+gsspln.f	- Set Special Line Attributes
+gstext.f	- Set Text Attributes
+gstick.f	- Set Tick Mark Attributes
+gsturb.f	- Set Turbulence Symbol Attributes
+gswthr.f	- Set Weather Symbol Attributes
+
+#------------------------------------------------------------------------

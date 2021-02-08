@@ -1,0 +1,3626 @@
+%!
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%DocumentFonts: (atend)
+%%EndComments
+%
+% FrameMaker PostScript Prolog 3.0, for use with FrameMaker 3.0
+% Copyright (c) 1986,87,89,90,91 by Frame Technology Corporation.
+% All rights reserved.
+%
+% Known Problems:
+%	Due to bugs in Transcript, the 'PS-Adobe-' is omitted from line 1
+/FMversion (3.0) def 
+% Set up Color vs. Black-and-White
+	/FMPrintInColor systemdict /colorimage known
+		systemdict /currentcolortransfer known or def
+% Uncomment this line to force b&w on color printer
+%   /FMPrintInColor false def
+/FrameDict 295 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} def
+	} if
+/FMVERSION {
+	FMversion ne {
+		/Times-Roman findfont 18 scalefont setfont
+		100 100 moveto
+		(FrameMaker version does not match postscript_prolog!)
+		dup =
+		show showpage
+		} if
+	} def 
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/organgle FMLOCAL
+	/orgfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne dup {setmanualfeed} if
+	/manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	/yscale exch def
+	/xscale exch def
+	currenttransfer cvlit /orgxfer exch def
+	currentscreen cvlit /orgproc exch def
+	/organgle exch def /orgfreq exch def
+	setpapername 
+	manualfeed {true} {papersize} ifelse 
+	{manualpapersize} {false} ifelse 
+	{desperatepapersize} if
+	end 
+	} def 
+	/pagesave FMLOCAL
+	/orgmatrix FMLOCAL
+	/landscape FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch neg translate pop 
+		}
+		{pop pop}
+		ifelse
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+	} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin
+	array /fillvals exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fy translate 
+	rotate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	} bind def
+/FMENDEPSF {
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	/FMdicttop countdictstack 1 add def 
+	statusdict begin stopped end 
+	countdictstack -1 FMdicttop {pop end} for 
+	} def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped pop 
+		end
+		} if
+	} def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+/freq dpi 18.75 div 8 div round dup 0 eq {pop 1} if 8 mul dpi exch div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setpattern {
+	 /bwidth  exch def
+	 /bpside  exch def
+	 /bstring exch def
+	 /onbits 0 def  /offbits 0 def
+	 freq sangle landscape {90 add} if 
+		{/y exch def
+		 /x exch def
+		 /xindex x 1 add 2 div bpside mul cvi def
+		 /yindex y 1 add 2 div bpside mul cvi def
+		 bstring yindex bwidth mul xindex 8 idiv add get
+		 1 7 xindex 8 mod sub bitshift and 0 ne
+		 {/onbits  onbits  1 add def 1}
+		 {/offbits offbits 1 add def 0}
+		 ifelse
+		}
+		setscreen
+	 {} settransfer
+	 offbits offbits onbits add div FMsetgray
+	/graymode false def
+	} bind def
+/grayness {
+	FMsetgray
+	graymode not {
+		/graymode true def
+		orgxfer cvx settransfer
+		orgfreq organgle orgproc cvx setscreen
+		} if
+	} bind def
+	/HUE FMLOCAL
+	/SAT FMLOCAL
+	/BRIGHT FMLOCAL
+	/Colors FMLOCAL
+FMPrintInColor 
+	
+	{
+	/HUE 0 def
+	/SAT 0 def
+	/BRIGHT 0 def
+	% array of arrays Hue and Sat values for the separations [HUE BRIGHT]
+	/Colors   
+	[[0    0  ]    % black
+	 [0    0  ]    % white
+	 [0.00 1.0]    % red
+	 [0.37 1.0]    % green
+	 [0.60 1.0]    % blue
+	 [0.50 1.0]    % cyan
+	 [0.83 1.0]    % magenta
+	 [0.16 1.0]    % comment / yellow
+	 ] def
+      
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	/K { 
+		Colors exch get dup
+		0 get /HUE exch store 
+		1 get /BRIGHT exch store
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} def
+	/FMsetgray { 
+		/SAT exch 1.0 exch sub store 
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} bind def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	/FMsetgray {setgray} bind def
+	/K { 
+		pop
+		} def
+	}
+ifelse
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setpattern} 
+	{grayness}
+	ifelse
+	} bind def
+/V { 
+	gsave eofill grestore
+	} bind def
+/N { 
+	stroke
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+	/rad FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+% The following commented out code did not work for tangent lines of zero
+% length.  The code following it was provided by Frame to patch this error.
+%
+%/RR { 
+%	/rad exch def
+%	normalize
+%	/y2 exch def
+%	/x2 exch def
+%	normalize
+%	/y1 exch def
+%	/x1 exch def
+%	newpath
+%	x1 y1 rad add moveto
+%	x1 y2 x2 y2 rad arcto
+%	x2 y2 x2 y1 rad arcto
+%	x2 y1 x1 y1 rad arcto
+%	x1 y1 x1 y2 rad arcto
+%	closepath
+%	16 {pop} repeat
+%	} bind def
+/rarc
+    {rad
+     {arcto} stopped
+    } bind def
+/RR {
+    /rad exch def
+    normalize
+    /y2 exch def
+    /x2 exch def
+    normalize
+    /y1 exch def
+    /x1 exch def
+    mark
+    newpath
+    x1 y1 rad add moveto
+    x1 y2 x2 y2 rarc
+    x2 y2 x2 y1 rarc
+    x2 y1 x1 y1 rarc
+    x2 y1 x1 y1 rarc
+    x1 y1 x1 y2 rarc
+    closepath
+    cleartomark
+    } bind def
+
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath fill
+	grestore
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	stroke
+	grestore
+	} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 4 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/cip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        cris indx placer 255 mul cvi put
+        cgis indx placeg 255 mul cvi put
+        cbis indx placeb 255 mul cvi put
+    } for pop cris
+
+	
+	} bind def
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+	} bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+	dup 
+	8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+	/proc1 FMLOCAL
+	/proc2 FMLOCAL
+	/newproc FMLOCAL
+/Fmcc {
+    /proc2 exch cvlit def
+    /proc1 exch cvlit def
+    /newproc proc1 length proc2 length add array def
+    newproc 0 proc1 putinterval
+    newproc proc1 length proc2 putinterval
+    newproc cvx
+} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+/colorsetup {
+    currentcolortransfer
+    /gryt exch def
+    /blut exch def
+    /grnt exch def
+    /redt exch def
+    0 1 255 {
+        /indx exch def
+        /cynu 1 red indx get 255 div sub def
+        /magu 1 green indx get 255 div sub def
+        /yelu 1 blue indx get 255 div sub def
+        /k cynu magu min yelu min def
+        nredt indx 1 0 cynu max sub redt exec put
+        ngreent indx 1 0 magu max sub grnt exec put
+        nbluet indx 1 0 yelu max sub blut exec put
+        ngrayt indx 1 k sub gryt exec put
+    } for
+	} bind def
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch Fmcc settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	colorsetup
+	/is w d wbytes string def
+    /ris w d wbytes string def
+    /gis w d wbytes string def
+    /bis w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        ris indx placer 255 mul cvi put
+        gis indx placeg 255 mul cvi put
+        bis indx placeb 255 mul cvi put
+    } for pop ris}
+	{gis} {bis} true 3 colorimage 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	colorsetup
+	/is im 0 lb getinterval def 
+    /cris lb string def
+    /cgis lb string def
+    /cbis lb string def
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cip} {cgis} {cbis} true 3 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip} {gip} {bip} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip gip bip w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+%%EndProlog
+%%BeginSetup
+(3.0) FMVERSION
+1 1 612 792 0 1 8 FMDOCUMENT
+0 0 /Helvetica-Bold FMFONTDEFINE
+1 0 /Times-Roman FMFONTDEFINE
+2 0 /Helvetica FMFONTDEFINE
+3 0 /Helvetica-Oblique FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-1) 306.95 36 T
+(October 1996) 458.67 36 T
+0 18 Q
+(APPENDIX A) 260.02 678 T
+0 14 Q
+(GEMP) 234.41 650.67 T
+(AK P) 274.58 650.67 T
+(ARAMETERS) 306.98 650.67 T
+1 12 Q
+2.99 (This appendix contains a list of the GEMPAK parameters.  Algorithms used in) 108 600 P
+-0.18 (computing these parameters are also included.  The following constants are used in the) 108 586 P
+(computations:) 108 572 T
+2 10 Q
+( KAPP) 144.63 547.33 T
+(A) 173.33 547.33 T
+(= Poisson's constant) 183.6 547.33 T
+(= 2 / 7) 342 547.33 T
+(G) 172.22 523.33 T
+(= Gravitational constant) 183.6 523.33 T
+(= 9.80616 m/sec/sec) 342 523.33 T
+( GAMUSD) 133.36 499.33 T
+(= Standard atmospheric lapse rate) 183.6 499.33 T
+(= 6.5 K/km) 342 499.33 T
+( RDGAS) 141.68 475.33 T
+(= Gas constant for dry air) 183.6 475.33 T
+(= 287.04 J/K/kg) 342 475.33 T
+(PI) 170.55 451.33 T
+(= Circumference / diameter) 183.6 451.33 T
+(= 3.14159265) 342 451.33 T
+1 12 Q
+(References for some of the algorithms:) 108 426 T
+2 10 Q
+-0.22 ( Bolton, D., 1980: The computation of equivalent potential temperature.,) 129.6 401.33 P
+3 F
+-0.22 (Monthly W) 446.86 401.33 P
+-0.22 (eather) 493.67 401.33 P
+(Review) 180 389.33 T
+2 F
+(,) 212.21 389.33 T
+0 F
+(108) 217.77 389.33 T
+2 F
+(, pp 1046-1053.) 234.44 389.33 T
+0.14 ( Miller) 129.6 365.33 P
+0.14 (, R.C., 1972: Notes on Severe Storm Forecasting Procedures of the Air Force Glo-) 155.83 365.33 P
+(bal W) 180 353.33 T
+(eather Central,) 205.37 353.33 T
+3 F
+(A) 274.25 353.33 T
+(WS T) 280.73 353.33 T
+(ech.  Report 200) 304.8 353.33 T
+2 F
+(.) 378.69 353.33 T
+( W) 129.6 329.33 T
+(allace, J.M., P) 141.44 329.33 T
+(.V) 202.92 329.33 T
+(.  Hobbs, 1977:) 211.45 329.33 T
+3 F
+(Atmospheric Science) 282.01 329.33 T
+2 F
+(, Academic Press, 467 pp.) 375.87 329.33 T
+0 F
+2.78 ( TEMPERATURE PARAMETERS) 171 281.33 P
+1 12 Q
+(TMPC) 108 254 T
+(-) 153.36 254 T
+(T) 162 254 T
+(emperature in Celsius) 168.49 254 T
+(TMPF) 108 226 T
+(-) 153.36 226 T
+(T) 162 226 T
+(emperature in Fahrenheit) 168.49 226 T
+(TMPK) 108 198 T
+(-) 153.36 198 T
+(T) 162 198 T
+(emperature in Kelvin) 168.49 198 T
+(THT) 108 170 T
+(A) 130.36 170 T
+(-) 153.36 170 T
+(Potential temperature in Kelvin) 162 170 T
+(THTK) 108 142 T
+(-) 153.36 142 T
+(Potential temperature in Kelvin) 162 142 T
+(THTC) 108 114 T
+(-) 153.36 114 T
+(Potential temperature in Celsius) 162 114 T
+(STHA) 108 86 T
+(-) 153.36 86 T
+(Surface potential temperature in Kelvin) 162 86 T
+FMENDPAGE
+%%EndPage: "1" 2
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-2) 288.95 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+(STHK) 90 698 T
+(-) 135.36 698 T
+(Surface potential temperature in Kelvin) 144 698 T
+(STHC) 90 670 T
+(-) 135.36 670 T
+(Surface potential temperature in Celsius) 144 670 T
+(THTE) 90 642 T
+(-) 135.36 642 T
+(Equivalent potential temperature in Kelvin) 144 642 T
+(STHE) 90 614 T
+(-) 135.36 614 T
+(Surface equivalent potential temperature in Kelvin) 144 614 T
+(THTS) 90 586 T
+(-) 135.36 586 T
+(Saturation equivalent pot.  temperature in Kelvin) 144 586 T
+(STHS) 90 558 T
+(-) 135.36 558 T
+(Surface saturation equivalent pot.  temperature in Kelvin) 144 558 T
+(TVRK) 90 530 T
+(-) 135.36 530 T
+(V) 144 530 T
+(irtual temperature in Kelvin) 151.94 530 T
+(TVRC) 90 502 T
+(-) 135.36 502 T
+(V) 144 502 T
+(irtual temperature in Celsius) 151.94 502 T
+(TVRF) 90 474 T
+(-) 135.36 474 T
+(V) 144 474 T
+(irtual temperature in Fahrenheit) 151.94 474 T
+(THTV) 90 446 T
+(-) 135.36 446 T
+(V) 144 446 T
+(irtual potential temperature in Kelvin) 151.94 446 T
+(TMAX) 90 418 T
+(-) 135.36 418 T
+(Maximum 24 hour temperature in Celsius) 144 418 T
+(TMIN) 90 390 T
+(-) 135.36 390 T
+(Minimum 24 hour temperature in Celsius) 144 390 T
+(SSTC) 90 362 T
+(-) 135.36 362 T
+(Sea surface temperature in Celsius) 144 362 T
+(L) 90 334 T
+(TMP) 96.22 334 T
+(-) 135.36 334 T
+(Surface lifted temperature) 144 334 T
+2 10 Q
+( TMPC = \050 TMPF - 32 \051 * 5 / 9) 111.6 307.33 T
+( TMPC = TMPK - 273.16) 111.6 281.33 T
+( THT) 111.6 255.33 T
+(A = TMPK * \050 1000 / PRES \051 ** KAPP) 133.07 255.33 T
+(A) 297.59 255.33 T
+( STHA = TMPK * \050 1000 / P) 111.6 229.33 T
+(AL) 232.23 229.33 T
+(T \051 ** KAPP) 243.72 229.33 T
+(A) 295.19 229.33 T
+( TVRK = TMPK * \050 1 + \050 .001 * MIXR \051 / .62197\051 \051 / \050 1 + \050 .001 * MIXR \051 \051) 111.6 203.33 T
+( THTV = TVRK * \050 1000 / PRES \051 ** KAPP) 111.6 177.33 T
+(A) 297.22 177.33 T
+( THTE =) 111.6 151.33 T
+(THTM * EXP [ \050 3.376 / TLCL - .00254 \051 * \050 MIXR * \050 1 + .81 * .001 * MIXR \051 \051 ]) 153 151.33 T
+(THTM) 144 139.33 T
+(= potential temperature for moist air) 180 139.33 T
+(= TMPK * \050 1000 / PRES \051 ** E) 180 127.33 T
+(E) 144 115.33 T
+(= 2.  / 7.  * \050 1 - \050 .28 * .001 * MIXR \051 \051) 180 115.33 T
+(TLCL) 144 103.33 T
+(= temperature at the LCL in Kelvin) 180 103.33 T
+(Bolton, MWR \0501980\051) 135 91.33 T
+FMENDPAGE
+%%EndPage: "2" 3
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-3) 306.95 36 T
+(October 1996) 458.67 36 T
+2.78 (MOISTURE PARAMETERS) 171 713.33 P
+1 12 Q
+(DWPC) 108 686.8 T
+(-) 153.36 686.8 T
+(Dewpoint in Celsius) 162 686.8 T
+(DWPF) 108 660.4 T
+(-) 153.36 660.4 T
+(Dewpoint in Fahrenheit) 162 660.4 T
+(DWPK) 108 634 T
+(-) 153.36 634 T
+(Dewpoint in Kelvin) 162 634 T
+(DPDC) 108 607.6 T
+(-) 153.36 607.6 T
+(Dewpoint depression in Celsius) 162 607.6 T
+(DPDF) 108 581.2 T
+(-) 153.36 581.2 T
+(Dewpoint depression in Fahrenheit) 162 581.2 T
+(DPDK) 108 554.8 T
+(-) 153.36 554.8 T
+(Dewpoint depression in Kelvin) 162 554.8 T
+(MIXR) 108 528.4 T
+(-) 153.36 528.4 T
+(Mixing ratio in g/kg) 162 528.4 T
+(MIXS) 108 502 T
+(-) 153.36 502 T
+(Saturated mixing ratio in g/kg) 162 502 T
+(SMXR) 108 475.6 T
+(-) 153.36 475.6 T
+(Surface mixing ratio in g/kg) 162 475.6 T
+(SMXS) 108 449.2 T
+(-) 153.36 449.2 T
+(Surface saturated mixing ratio in g/kg) 162 449.2 T
+(RELH) 108 422.8 T
+(-) 153.36 422.8 T
+(Relative humidity in percent) 162 422.8 T
+(TMWK) 108 396.4 T
+(-) 153.36 396.4 T
+(W) 162 396.4 T
+(et bulb temperature in Kelvin) 172.36 396.4 T
+(TMWC) 108 370 T
+(-) 153.36 370 T
+(W) 162 370 T
+(et bulb temperature in Celsius) 172.36 370 T
+(TMWF) 108 343.6 T
+(-) 153.36 343.6 T
+(W) 162 343.6 T
+(et bulb temperature in Fahrenheit) 172.36 343.6 T
+(V) 108 317.2 T
+(APR) 115.11 317.2 T
+(-) 153.36 317.2 T
+(V) 162 317.2 T
+(apor pressure in millibars) 169.33 317.2 T
+(V) 108 290.8 T
+(APS) 115.11 290.8 T
+(-) 153.36 290.8 T
+(Saturation vapor pressure in millibars) 162 290.8 T
+(LHVP) 108 264.4 T
+(-) 153.36 264.4 T
+(Latent heat of vaporization in J/kg) 162 264.4 T
+(PWTR) 108 238 T
+(-) 153.36 238 T
+(Precipitable water in mm) 162 238 T
+2 10 Q
+( DPDx = TMPx - DWPx) 129.6 212.93 T
+( MIXR = .62197 * \050 E / \050 PRES - E \051 \051 * 1000) 129.6 188.53 T
+(E) 162 177.33 T
+(= V) 198 177.33 T
+(APR * [ 1.001 + \050 PRES - 100\051 / 900 * .0034 ]) 212.54 177.33 T
+(V) 162 166.13 T
+(APR) 167.93 166.13 T
+(= 6.1) 198 166.13 T
+(12 * EXP \050 \050 17.67 * DWPC \051 / \050 DWPC + 243.5 \051 \051) 219.77 166.13 T
+(Bolton, MWR \0501980\051) 153 154.93 T
+( MIXS = .62197 * \050 Es / \050 PRES - Es \051 \051 * 1000) 129.6 130.53 T
+(Es) 162 119.33 T
+(= V) 198 119.33 T
+(APS * [ 1.001 + \050 PRES - 100 \051 / 900 * .0034 ]) 212.54 119.33 T
+(V) 162 108.13 T
+(APS) 167.93 108.13 T
+(= 6.1) 198 108.13 T
+(12 * EXP \050 \050 17.67 * TMPC \051 / \050 TMPC + 243.5 \051 \051) 219.77 108.13 T
+(Bolton, MWR \0501980\051) 153 96.93 T
+FMENDPAGE
+%%EndPage: "3" 4
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-4) 288.95 36 T
+(October 1996) 440.67 36 T
+2 F
+( SMXR = .62197 * \050 E / \050 P) 111.6 713.33 T
+(AL) 227.8 713.33 T
+(T - E \051 \051 * 1000) 239.28 713.33 T
+(E) 144 701.33 T
+(= V) 180 701.33 T
+(APR * [ 1.001 + \050 P) 194.54 701.33 T
+(AL) 278.53 701.33 T
+(T - 100 \051 / 900 * .0034 ]) 290.01 701.33 T
+(V) 144 689.33 T
+(APR) 149.93 689.33 T
+(= 6.1) 180 689.33 T
+(12 * EXP \050 \050 17.67 * DWPC \051 / \050 DWPC + 243.5 \051 \051) 201.77 689.33 T
+( SMXS = .62197 * \050 Es / \050 P) 111.6 663.33 T
+(AL) 232.24 663.33 T
+(T - Es \051 \051 * 1000) 243.73 663.33 T
+(Es) 144 651.33 T
+(= V) 180 651.33 T
+(APS * [ 1.001 + \050 P) 194.54 651.33 T
+(AL) 277.98 651.33 T
+(T - 100 \051 / 900 * .0034 ]) 289.46 651.33 T
+(V) 144 639.33 T
+(APS) 149.93 639.33 T
+(= 6.1) 180 639.33 T
+(12 * EXP \050 \050 17.67 * TMPC \051 / \050 TMPC + 243.5 \051 \051) 201.77 639.33 T
+( RELH = V) 111.6 613.33 T
+(APR / V) 158.35 613.33 T
+(APS * 100) 193.16 613.33 T
+( \050 TMPK - TMWK \051 * Cp - \050 Rsat \050TMWK\051 - RMIX \051 * L) 111.6 587.33 T
+(V) 345.74 587.33 T
+(AP = 0) 351.67 587.33 T
+( Implicit equation solved by Newton's method for TMWK.) 144 575.33 T
+(Cp) 153 563.33 T
+(- Speci\336c heat at constant pressure) 180 563.33 T
+(Rsat) 153 551.33 T
+(- Saturation mixing ratio at TMWK) 180 551.33 T
+(RMIX) 153 539.33 T
+(- Mixing ratio) 180.76 539.33 T
+(L) 153 527.33 T
+(V) 157.82 527.33 T
+(AP) 163.74 527.33 T
+(- Latent heat of vaporization) 180 527.33 T
+( V) 111.6 501.33 T
+(APR = 6.1) 120.31 501.33 T
+(12 * EXP [ \050 17.67 * DWPC \051 / \050 DWPC + 243.5 \051 ]) 165.4 501.33 T
+(Bolton, MWR \0501980\051) 135 489.33 T
+( V) 111.6 463.33 T
+(APS = 6.1) 120.31 463.33 T
+(12 * EXP [ \050 17.67 * TMPC \051 / \050 TMPC + 243.5 \051 ]) 164.85 463.33 T
+(Bolton, MWR \0501980\051) 135 451.33 T
+( LHVP = \050 2.501 - .00237 * TMPC \051 * 10E6) 111.6 425.33 T
+(Bolton, MWR \0501980\051) 135 413.33 T
+0 F
+2.78 (HEIGHT PARAMETERS) 153 365.33 P
+1 12 Q
+(HGHT) 90 338 T
+(-) 135.36 338 T
+(Height in meters) 144 338 T
+(HGTM) 90 310 T
+(-) 135.36 310 T
+(Height in meters) 144 310 T
+(HGTK) 90 282 T
+(-) 135.36 282 T
+(Height in kilometers) 144 282 T
+(HGTD) 90 254 T
+(-) 135.36 254 T
+(Height in decameters) 144 254 T
+(HGFT) 90 226 T
+(-) 135.36 226 T
+(Height in feet \0503.28084 * HGHT\051) 144 226 T
+(HGFH) 90 198 T
+(-) 135.36 198 T
+(Height in hundreds of feet) 144 198 T
+(HGFK) 90 170 T
+(-) 135.36 170 T
+(Height in thousands of feet) 144 170 T
+(HGML) 90 142 T
+(-) 135.36 142 T
+(Height in miles \0506.2137E-04 * HGHT\051) 144 142 T
+(DHGT) 90 114 T
+(-) 135.36 114 T
+(Dry hydrostatic height in meters) 144 114 T
+(MHGT) 90 86 T
+(-) 135.36 86 T
+(Moist hydrostatic height in meters) 144 86 T
+FMENDPAGE
+%%EndPage: "4" 5
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-5) 306.95 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(STDZ) 108 698 T
+(-) 153.36 698 T
+(Character standard height convention used on u.-a.  charts) 162 698 T
+(RSTZ) 108 670 T
+(-) 153.36 670 T
+(Numeric standard height convention used on u.-a.  charts) 162 670 T
+2 10 Q
+0.7 (For data below 500 mb, the standard height is the last three digits of the) 158.4 643.33 P
+0.06 (height.  For data at and above 500 mb, the height is the last three digits of) 158.4 631.33 P
+(the height in decameters.) 158.4 619.33 T
+1 12 Q
+(ZMSL, Z000, Z900, Z850, Z800 - Estimated height at a pressure level) 108 592 T
+2 10 Q
+0.1 (DHGT and MHGT are computed using the hypsometric equation and inte-) 158.4 565.33 P
+0.69 (grating from the surface pressure to the desired level.  DHGT \050MHGT\051 is) 158.4 553.33 P
+(computed without \050with\051 the in\337uence of moisture.) 158.4 541.33 T
+( DHGT = HB + \050 RDGAS / G \051 * LN \050 PBOT / PT) 129.6 515.33 T
+(OP \051 * T) 340.47 515.33 T
+(A) 375.83 515.33 T
+(VE) 381.76 515.33 T
+(HB) 162 503.33 T
+(= height of the bottom of layer) 198 503.33 T
+(PBOT) 162 491.33 T
+(= pressure at bottom of layer) 198 491.33 T
+(PT) 162 479.33 T
+(OP) 174.59 479.33 T
+(= pressure at the top the layer) 198 479.33 T
+(T) 162 467.33 T
+(A) 167.37 467.33 T
+(VE) 173.29 467.33 T
+(= average temperature of the layer) 198 467.33 T
+( MHGT = HB + \050 RDGAS / G \051 * LN \050 PBOT / PT) 129.6 441.33 T
+(OP \051 * TV) 341.58 441.33 T
+(A) 383.61 441.33 T
+(VE) 389.54 441.33 T
+(HB) 162 429.33 T
+(= height of the bottom of layer) 198 429.33 T
+(PBOT) 162 417.33 T
+(= pressure at bottom of layer) 198 417.33 T
+(PT) 162 405.33 T
+(OP) 174.59 405.33 T
+(= pressure at the top the layer) 198 405.33 T
+(TV) 162 393.33 T
+(A) 174.03 393.33 T
+(VE) 179.96 393.33 T
+(= average virtual temperature of the layer) 198 393.33 T
+( Zxxx = [ T) 129.6 367.33 T
+(o * \050 1 - \050 PRES / AL) 175.43 367.33 T
+(TM \051 ** \050 RDGAS * GAMUSD / G \051 ] / GAMUSD) 264.12 367.33 T
+(Zxxx) 153 355.33 T
+(= height at the pressure level) 176.88 355.33 T
+(ZMSL : 1013.25 mb) 198 343.33 T
+(Z000 : 1000 mb) 198 331.33 T
+(Z900 : 900 mb) 198 319.33 T
+(Z850 : 850 mb) 198 307.33 T
+(Z800 : 800 mb) 198 295.33 T
+(T) 153 283.33 T
+(o) 158 283.33 T
+(= sea level temperature in U.S.  Std.  Atmos.  = 288 K) 171 283.33 T
+0 F
+2.78 (PRESSURE AND ALTIMETER PARAMETERS) 171 235.33 P
+1 12 Q
+(PRES) 108 208 T
+(-) 153.36 208 T
+(Station pressure in millibars) 162 208 T
+2 10 Q
+( PRES is the actual pressure at a level as reported with upper air data.) 129.6 181.33 T
+1 12 Q
+(PMSL) 108 154 T
+(-) 153.36 154 T
+(Mean sea level pressure) 162 154 T
+2 10 Q
+( PMSL is reported with surface data.) 129.6 127.33 T
+1 12 Q
+(P) 108 100 T
+(AL) 113.57 100 T
+(T) 128.45 100 T
+(-) 153.36 100 T
+(Surface pressure in millibars from AL) 162 100 T
+(TI) 343.76 100 T
+FMENDPAGE
+%%EndPage: "5" 6
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-6) 288.95 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+(AL) 90 712 T
+(TI) 104.88 712 T
+(-) 135.36 712 T
+(Altimeter setting in inches of mercury) 144 712 T
+2 10 Q
+( AL) 111.6 685.33 T
+(TI is reported with surface data.) 125.86 685.33 T
+1 12 Q
+(AL) 90 658 T
+(TM) 104.88 658 T
+(-) 135.36 658 T
+(Altimeter setting converted to millibars) 144 658 T
+(SAL) 90 630 T
+(T) 111.55 630 T
+(-) 135.36 630 T
+(Abbreviated standard altimeter setting) 144 630 T
+(SMSL) 90 602 T
+(-) 135.36 602 T
+(Abbreviated mean sea level pressure in millibars) 144 602 T
+(SALI) 90 574 T
+(-) 135.36 574 T
+(Abbreviated altimeter setting in inches of mercury) 144 574 T
+(RMSL) 90 546 T
+(-) 135.36 546 T
+(First 3 digits left of decimal of PMSL * 10) 144 546 T
+(RSLI) 90 518 T
+(-) 135.36 518 T
+(First 3 digits left of decimal of AL) 144 518 T
+(TI * 100) 308.47 518 T
+(RSL) 90 490 T
+(T) 110.89 490 T
+(-) 135.36 490 T
+(First 3 digits left of decimal of AL) 144 490 T
+(TM * 10) 308.47 490 T
+(PTND) 90 462 T
+(-) 135.36 462 T
+(Pressure tendency: graphics symbol with numeric change) 144 462 T
+(PTSY) 90 434 T
+(-) 135.36 434 T
+(Graphics symbol for pressure tendency) 144 434 T
+(P03C) 90 406 T
+(-) 135.36 406 T
+(3-h numeric pressure change) 144 406 T
+2 10 Q
+( PMSL = PRES * EXP \050 \050 G * SEL) 111.6 379.33 T
+(V \051 / \050 RDGAS * TV) 260.01 379.33 T
+(A) 344.24 379.33 T
+(VE \051 \051) 350.17 379.33 T
+(SEL) 144 367.33 T
+(V) 162.15 367.33 T
+(= station elevation) 180 367.33 T
+(TV) 144 355.33 T
+(A) 156.03 355.33 T
+(VE) 161.96 355.33 T
+(= average virtual temperature between station and sea level) 180 355.33 T
+(= TVRK + \050 DEL) 180 343.33 T
+(TV / 2 \051) 251.47 343.33 T
+(DEL) 144 331.33 T
+(TV) 162.7 331.33 T
+(= GAMUSD * SEL) 180 331.33 T
+(V / 1000) 260.08 331.33 T
+(W) 135 319.33 T
+(allace & Hobbs \0501977\051) 144.07 319.33 T
+( P) 111.6 293.33 T
+(AL) 120.31 293.33 T
+(T = AL) 131.79 293.33 T
+(TM * \050 1 - \050 \050 SEL) 160.77 293.33 T
+(V / 1000 \051 * GAMUSD / T) 235.56 293.33 T
+(o \051 \051 **) 345.54 293.33 T
+(                   \050 G / \050 GAMUSD * RDGAS \051 * 1000 \051) 180 281.33 T
+( SEL) 144 269.33 T
+(V) 164.93 269.33 T
+(= station elevation in meters) 180 269.33 T
+( T) 144 257.33 T
+(o) 151.78 257.33 T
+(= sea level temperature in U.S.  Std.  Atmos.  = 288 K) 180 257.33 T
+(W) 135 245.33 T
+(allace & Hobbs \0501977\051) 144.07 245.33 T
+( AL) 111.6 219.33 T
+(TM = AL) 125.86 219.33 T
+(TI * \050 1013.25 / 29.921 \051) 163.17 219.33 T
+( SAL) 111.6 193.33 T
+(T = MOD \050 AL) 132.53 193.33 T
+(TM * 10, 1000 \051) 193.71 193.33 T
+0 F
+2.78 ( WINDS) 153 145.33 P
+1 12 Q
+(UWND) 90 118 T
+(-) 135.36 118 T
+(U-component of the wind in meters/second) 144 118 T
+(VWND) 90 90 T
+(-) 135.36 90 T
+(V) 144 90 T
+(-component of the wind in meters/second) 151.56 90 T
+FMENDPAGE
+%%EndPage: "6" 7
+%%Page: "7" 7
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-7) 306.95 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(UKNT) 108 712 T
+(-) 153.36 712 T
+(U-component of the wind in knots) 162 712 T
+(VKNT) 108 684 T
+(-) 153.36 684 T
+(V) 162 684 T
+(-component of the wind in knots) 169.56 684 T
+(DRCT) 108 656 T
+(-) 153.36 656 T
+(W) 162 656 T
+(ind direction in degrees) 172.84 656 T
+(SPED) 108 628 T
+(-) 153.36 628 T
+(W) 162 628 T
+(ind speed in meters/second) 172.84 628 T
+(SKNT) 108 600 T
+(-) 153.36 600 T
+(W) 162 600 T
+(ind speed in knots) 172.84 600 T
+(PSPD) 108 572 T
+(-) 153.36 572 T
+(Packed direction and speed in meters/second \050ddf) 162 572 T
+(f) 399.6 572 T
+(f\051) 403.38 572 T
+(PKNT) 108 544 T
+(-) 153.36 544 T
+(Packed direction and speed in knots \050ddf) 162 544 T
+(f) 356.98 544 T
+(f\051) 360.76 544 T
+(GUST) 108 516 T
+(-) 153.36 516 T
+(W) 162 516 T
+(ind gusts in knots) 172.84 516 T
+(GUMS) 108 488 T
+(-) 153.36 488 T
+(W) 162 488 T
+(ind gusts meters/second) 172.84 488 T
+(WNML) 108 460 T
+(-) 153.36 460 T
+0.81 (W) 162 460 P
+0.81 (ind component toward a direction 90 degrees counter) 172.84 460 P
+0.81 (-clockwise from a) 433.78 460 P
+(speci\336ed direction.) 180 446 T
+(WCMP) 108 418 T
+(-) 153.36 418 T
+(W) 162 418 T
+(ind component toward a speci\336ed direction) 172.84 418 T
+(BARB) 108 390 T
+(-) 153.36 390 T
+(Barb feathered in m/s) 162 390 T
+(BRBM) 108 362 T
+(-) 153.36 362 T
+(Barb feathered in m/s) 162 362 T
+(BRBK) 108 334 T
+(-) 153.36 334 T
+(Barb feathered in knots) 162 334 T
+(ARR) 108 306 T
+(W) 132 306 T
+(-) 153.36 306 T
+(Arrows scaled in m/s) 162 306 T
+(ARRM) 108 278 T
+(-) 153.36 278 T
+(Arrows scaled in m/s) 162 278 T
+(ARRK) 108 250 T
+(-) 153.36 250 T
+(Arrows scaled in knots) 162 250 T
+(DARR) 108 222 T
+(-) 153.36 222 T
+(W) 162 222 T
+(ind direction arrows of uniform length) 172.84 222 T
+2 10 Q
+( UWND = - SIN \050 DRCT \051 * SPED) 129.6 195.33 T
+( VWND = - COS \050 DRCT \051 * SPED) 129.6 169.33 T
+( DRCT = A) 129.6 143.33 T
+(T) 177.45 143.33 T
+(AN2 \050 -UWND, -VWND \051 * 180 / PI) 182.82 143.33 T
+( SPED = SQR) 129.6 117.33 T
+(T \050 UWND ** 2 + VWND ** 2 \051) 192.46 117.33 T
+( SPED = SKNT / 1.9438) 129.6 91.33 T
+FMENDPAGE
+%%EndPage: "7" 8
+%%Page: "8" 8
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-8) 288.95 36 T
+(October 1996) 440.67 36 T
+2 F
+( PSPD = JDRCT * 100 + JSPED) 111.6 713.33 T
+(JDRCT) 144 701.33 T
+(= NINT \050 DRCT / 5 \051) 180 701.33 T
+(JSPED) 144 689.33 T
+(= NINT \050 SPED \051) 180 689.33 T
+( PKNT = JDRCT * 100 + JSKNT) 111.6 663.33 T
+(JDRCT) 144 651.33 T
+(= NINT \050 DRCT / 5 \051) 180 651.33 T
+(JSKNT) 144 639.33 T
+(= NINT \050 SKNT \051) 180 639.33 T
+( WCMP = - COS \050 DRCT - SPCD \051 * SPED) 111.6 613.33 T
+(SPCD is the speci\336ed direction) 153 601.33 T
+( WNML = - COS \050 DRCT - \050 SPCD - PI/2 \051 \051 * SPED) 111.6 575.33 T
+(SPCD is the speci\336ed direction) 153 563.33 T
+0 F
+2.78 ( LIFTED CONDENSATION LEVEL \050LCL\051) 153 515.33 P
+1 12 Q
+(TLCL) 90 488 T
+(-) 135.36 488 T
+(T) 144 488 T
+(emperature in Kelvin at the LCL from the given level) 150.49 488 T
+(PLCL) 90 460 T
+(-) 135.36 460 T
+(Pressure in millibars at the LCL from the given level) 144 460 T
+2 10 Q
+( TLCL = [1 / \050 1 / \050 DWPK - 56 \051 + LN \050 TMPK / DWPK \051 / 800 \051] + 56) 111.6 433.33 T
+( Bolton, MWR \0501980\051) 135 421.33 T
+( PLCL = PRES * \050 TLCL / \050 TMPC + 273.16 \051 \051 ** \050 1 / KAPP) 111.6 395.33 T
+(A \051) 374.16 395.33 T
+( Poisson's equation) 135 383.33 T
+0 F
+2.78 (STABILITY INDICES) 153 335.33 P
+2 F
+(Note:) 111.6 309.33 T
+-0.23 (Default depths given in the de\336nitions below are preceded by an ! and may) 140.4 309.33 P
+2.11 (be changed using the in-line depth speci\336cation.  dz in the de\336nitions) 140.4 297.33 P
+(below defaults to the layer thickness in the sounding.) 140.4 285.33 T
+1 12 Q
+(BRCH) 90 258 T
+(-) 135.36 258 T
+(Bulk Richardson number) 144 258 T
+2 10 Q
+( BRCH = CAPE / \050 0.5 * U**2 \051) 111.6 233.33 T
+(CAPE) 144 221.33 T
+(= Convective A) 180 221.33 T
+(vailable Potential Energy) 247.31 221.33 T
+(U) 144 209.33 T
+(= magnitude of shear \050 u2 - u1, v2 - v1 \051) 180 209.33 T
+(u1,v1) 144 197.33 T
+(= average u,v in the lowest !500 m) 180 197.33 T
+(u2,v2) 144 185.33 T
+(= average u,v in the lowest !6000 m) 180 185.33 T
+1 12 Q
+(BVFQ) 90 158 T
+(-) 135.36 158 T
+(Brunt-V) 144 158 T
+(aisala frequency) 182.64 158 T
+2 10 Q
+( BVFQ = SQR) 111.6 131.33 T
+(T \050 \050 G / THT) 174.46 131.33 T
+(A \051 * ST) 230.37 131.33 T
+(AB \051) 264.62 131.33 T
+1 12 Q
+(BVPD) 90 104 T
+(-) 135.36 104 T
+(Brunt-V) 144 104 T
+(aisala period) 182.64 104 T
+2 10 Q
+( BVPD = 2.  * PI / BVFQ) 111.6 77.33 T
+FMENDPAGE
+%%EndPage: "8" 9
+%%Page: "9" 9
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-9) 306.95 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(BVSQ) 108 698 T
+(-) 153.36 698 T
+(Brunt-V) 162 698 T
+(aisala frequency squared) 200.64 698 T
+2 10 Q
+( BVSQ = BVFQ ** 2) 129.6 671.33 T
+1 12 Q
+(CAPE) 108 644 T
+(-) 153.36 644 T
+(Convective available potential ener) 162 644 T
+(gy) 331.32 644 T
+2 10 Q
+( CAPE = GRA) 129.6 617.33 T
+(VTY * SUMP \050 DELZ * \050 THP - TH \051 / TH \051) 191.91 617.33 T
+(SUMP) 162 605.33 T
+(= sum over sounding layers for which \050 THP - TH \051 is greater than zero) 198 605.33 T
+(THP) 162 593.33 T
+(= potential temperature of a parcel from the lowest !500 m of) 198 593.33 T
+(   the atmosphere, raised dry adiabatically to the lcl and moist) 198 581.33 T
+(   adiabatically thereafter) 198 569.33 T
+(TH) 162 557.33 T
+(= potential temperature of the environment) 198 557.33 T
+1 12 Q
+(CINS) 108 530 T
+(-) 153.36 530 T
+(Convective inhibition) 162 530 T
+2 10 Q
+( CINS = - GRA) 129.6 503.33 T
+(VTY * SUMN \050 DELZ * \050 THP - TH \051 / TH \051) 194.67 503.33 T
+(SUMN) 162 491.33 T
+(= sum over sounding layers for which \050 THP - TH \051 is less than zero.) 198 491.33 T
+(THP) 162 479.33 T
+(= potential temperature of a parcel from the lowest !500 m of) 198 479.33 T
+(   the atmosphere, raised dry adiabatically to the lcl and moist) 198 467.33 T
+(   adiabatically thereafter) 198 455.33 T
+(TH) 162 443.33 T
+(= potential temperature of the environment) 198 443.33 T
+1 12 Q
+(CT) 108 416 T
+(OT) 123.11 416 T
+(-) 153.36 416 T
+(Cross T) 162 416 T
+(otals index) 198.81 416 T
+2 10 Q
+( CT) 129.6 389.33 T
+(OT = TD850 - T500) 145.52 389.33 T
+(TD850) 162 377.33 T
+(= Dewpoint in Celsius at 850 mb) 198 377.33 T
+(T500) 162 365.33 T
+(= T) 198 365.33 T
+(emperature in Celsius at 500 mb) 211.61 365.33 T
+1 12 Q
+(EQL) 108 338 T
+(V) 130.21 338 T
+(-) 153.36 338 T
+(Equilibrium level) 162 338 T
+2 10 Q
+( EQL) 129.6 311.33 T
+(V = level at which parcel undergoing moist adiabatic ascent ceases to be buoyant.) 151.64 311.33 T
+1 12 Q
+(KINX) 108 284 T
+(-) 153.36 284 T
+(K index) 162 284 T
+2 10 Q
+( KINX = \050 T850 - T500 \051 + TD850 - \050 T700 - TD700 \051) 129.6 257.33 T
+(T850) 162 245.33 T
+(= T) 198 245.33 T
+(emperature in Celsius at 850 mb) 211.61 245.33 T
+(T500) 162 233.33 T
+(= T) 198 233.33 T
+(emperature in Celsius at 500 mb) 211.61 233.33 T
+(TD850) 162 221.33 T
+(= Dewpoint in Celsius at 850 mb) 198 221.33 T
+(T700) 162 209.33 T
+(= T) 198 209.33 T
+(emperature in Celsius at 700 mb) 211.61 209.33 T
+(TD700) 162 197.33 T
+(= Dewpoint in Celsius at 700 mb) 198 197.33 T
+1 12 Q
+(LAPS) 108 170 T
+(-) 153.36 170 T
+(T) 162 170 T
+(emperature lapse rate in layer) 168.49 170 T
+2 10 Q
+( LAPS = d \050TMPK\051 / dz = d \050TMPC\051 / dz) 129.6 143.33 T
+1 12 Q
+(LCLP) 108 116 T
+(-) 153.36 116 T
+(Pressure in millibars at the LCL from the surface) 162 116 T
+2 10 Q
+( LCLP = PRES * \050 LCL) 129.6 89.33 T
+(T / \050 TMPC + 273.16 \051 \051 ** \050 1 / KAPP) 229.12 89.33 T
+(A \051) 391.42 89.33 T
+( Poisson's equation) 153 77.33 T
+FMENDPAGE
+%%EndPage: "9" 10
+%%Page: "10" 10
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-10) 286.17 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+(LCL) 90 698 T
+(T) 111.55 698 T
+(-) 135.36 698 T
+(T) 144 698 T
+(emperature in Kelvin at the LCL from the surface) 150.49 698 T
+2 10 Q
+( LCL) 111.6 671.33 T
+(T = [1 / \050 1 / \050 DWPK - 56 \051 + LN \050 TMPK / DWPK \051 / 800 \051] + 56) 131.97 671.33 T
+( Bolton, MWR \0501980\051) 135 659.33 T
+1 12 Q
+(LFCV) 90 632 T
+(-) 135.36 632 T
+(Level of free convection) 144 632 T
+2 10 Q
+( LFCV = level above which a parcel ascending moist adiabatically is buoyant.) 111.6 605.33 T
+1 12 Q
+(LIFT) 90 578 T
+(-) 135.36 578 T
+(Lifted index) 144 578 T
+2 10 Q
+( LIFT = T500 - Tparcel) 111.6 551.33 T
+(T500) 144 539.33 T
+(= T) 180 539.33 T
+(emperature in Celsius at 500 mb) 193.61 539.33 T
+(Tparcel) 144 527.33 T
+(= 500 mb temperature in Celsius of a lifted parcel with the average) 180.1 527.33 T
+(   pressure, temperature and dewpoint of the layer !100 mb above) 180 515.33 T
+(   the surface) 180 503.33 T
+1 12 Q
+(MLMR) 90 476 T
+(-) 135.36 476 T
+(Mean mixed layer MIXR) 144 476 T
+2 10 Q
+( MLMR = A) 111.6 449.33 T
+(verage MIXR in lowest !500 m) 161.68 449.33 T
+1 12 Q
+(ML) 90 422 T
+(TH) 106.89 422 T
+(-) 135.36 422 T
+(Mean mixed layer THT) 144 422 T
+(A) 256.62 422 T
+2 10 Q
+( ML) 111.6 395.33 T
+(TH = A) 127.52 395.33 T
+(verage THT) 158.72 395.33 T
+(A in lowest !500 m) 210.74 395.33 T
+1 12 Q
+(PW) 90 368 T
+(A) 106.66 368 T
+(T) 113.99 368 T
+(-) 135.36 368 T
+(Precipitable water \050mm\051 for the entire sounding) 144 368 T
+(RICH) 90 340 T
+(-) 135.36 340 T
+(Richardson number in layer) 144 340 T
+2 10 Q
+( RICH = BFVQ ** 2 / SHRM ** 2) 111.6 313.33 T
+1 12 Q
+(SEP) 90 286 T
+(A) 109.56 286 T
+(-) 135.36 286 T
+(Isentropic layer pressure thickness) 144 286 T
+2 10 Q
+( SEP) 111.6 260.33 T
+(A = Pressure dif) 133.64 260.33 T
+(ference over isentropic layer !5 K deep) 204.84 260.33 T
+1 12 Q
+(SHOW) 90 235 T
+(-) 135.36 235 T
+(Showalter index) 144 235 T
+2 10 Q
+( SHOW = T500 - Tparcel) 111.6 208.33 T
+(T500) 144 196.33 T
+(= T) 180 196.33 T
+(emperature in Celsius at 500 mb) 193.61 196.33 T
+(Tparcel) 144 184.33 T
+(= T) 180.1 184.33 T
+(emperature in Celsius at 500 mb of parcel lifted from 850 mb) 193.71 184.33 T
+1 12 Q
+(SHRD) 90 157 T
+(-) 135.36 157 T
+(W) 144 157 T
+(ind shear direction in layer) 154.84 157 T
+2 10 Q
+( SHRD = direction of [ du/dz, dv/dz ]) 111.6 130.33 T
+1 12 Q
+(SHRM) 90 103 T
+(-) 135.36 103 T
+(W) 144 103 T
+(ind shear magnitude in layer) 154.84 103 T
+2 10 Q
+( SHRM = magnitude of [ du/dz, dv/dz ]) 111.6 76.33 T
+FMENDPAGE
+%%EndPage: "10" 11
+%%Page: "11" 11
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-11) 304.17 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(ST) 108 698 T
+(AB) 121.04 698 T
+(-) 153.36 698 T
+(THT) 162 698 T
+(A lapse rate in layer) 184.36 698 T
+2 10 Q
+( ST) 129.6 671.33 T
+(AB = d \050THT) 144.41 671.33 T
+(A\051 / dz) 199.49 671.33 T
+1 12 Q
+(ST) 108 644 T
+(AP) 121.04 644 T
+(-) 153.36 644 T
+(THT) 162 644 T
+(A change with pressure) 184.36 644 T
+2 10 Q
+( ST) 129.6 617.33 T
+(AP = - d \050THT) 144.41 617.33 T
+(A\051 / dp) 205.6 617.33 T
+1 12 Q
+(SWET) 108 590 T
+(-) 153.36 590 T
+(SWEA) 162 590 T
+(T index) 194.65 590 T
+2 10 Q
+( SWET = 12 * TD850 + 20 * TERM2 + 2 * SKT850 + SKT500 + SHEAR) 129.6 563.33 T
+(TD850) 162 551.33 T
+(= Dewpoint in Celsius at 850 mb) 198 551.33 T
+(TERM2) 162 539.33 T
+(= MAX \050 T) 198 539.33 T
+(OTL - 49, 0 \051) 243.09 539.33 T
+(T) 162 527.33 T
+(OTL) 167.93 527.33 T
+(= T) 198 527.33 T
+(otal totals index) 211.61 527.33 T
+(SKT850) 162 515.33 T
+(= 850 mb wind speed in knots) 198.11 515.33 T
+(SKT500) 162 503.33 T
+(= 500 mb wind speed in knots) 198.11 503.33 T
+(SHEAR) 162 491.33 T
+(= 125 * [ SIN \050 DIR500 - DIR850 \051 + .2 ]) 198 491.33 T
+(DIR500) 162 479.33 T
+(= 500 mb wind direction) 198 479.33 T
+(DIR850) 162 467.33 T
+(= 850 mb wind direction) 198 467.33 T
+(If TD850 is negative, then TD850 is set to 0.) 162 441.33 T
+(SHEAR is set to 0 if any of the following conditions are met:) 162 429.33 T
+( wind direction at 850mb is < 130 or > 250) 171 417.33 T
+( wind direction at 500mb is < 210 or > 310) 171 405.33 T
+( DIR500 - DIR850 <= 0) 171 393.33 T
+( SPD500 <= 15 or SPD850 <= 15) 171 381.33 T
+(Miller \0501972\051) 153 369.33 T
+1 12 Q
+(T) 108 342 T
+(OTL) 115.11 342 T
+(-) 153.36 342 T
+(T) 162 342 T
+(otal T) 168.49 342 T
+(otals index) 195.96 342 T
+2 10 Q
+( T) 129.6 315.33 T
+(OTL = \050 T850 - T500 \051 + \050 TD850 - T500 \051) 138.3 315.33 T
+(T850) 162 303.33 T
+(= T) 198 303.33 T
+(emperature in Celsius at 850 mb) 211.61 303.33 T
+(TD850) 162 291.33 T
+(= Dewpoint in Celsius at 850 mb) 198 291.33 T
+(T500) 162 279.33 T
+(= T) 198 279.33 T
+(emperature in Celsius at 500 mb) 211.61 279.33 T
+1 12 Q
+(VT) 108 252 T
+(OT) 123.77 252 T
+(-) 153.36 252 T
+(V) 162 252 T
+(ertical T) 169.33 252 T
+(otals index) 208.79 252 T
+2 10 Q
+( VT) 129.6 225.33 T
+(OT = T850 - T500) 144.97 225.33 T
+(T850) 162 213.33 T
+(= T) 198 213.33 T
+(emperature in Celsius at 850 mb) 211.61 213.33 T
+(T500) 162 201.33 T
+(= T) 198 201.33 T
+(emperature in Celsius at 500 mb) 211.61 201.33 T
+0 F
+2.78 (CLOUD PARAMETERS) 171 153.33 P
+1 12 Q
+0.15 (Cloud coverage may be defined using a cloud code, short code, fractional coverage or) 108 126 P
+1.36 (numeric value.  The valid values of these parameters ordered from least to greatest) 108 112 P
+(cloud coverage, are:) 108 98 T
+FMENDPAGE
+%%EndPage: "11" 12
+%%Page: "12" 12
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-12) 286.17 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+1.63 (The following lists the GEMPAK parameter definitions with an example using the) 90 452 P
+(sample AIRWAYS cloud report:) 90 439 T
+2 10 Q
+(22SCT    80-BKN    250OVC) 111.6 413.33 T
+1 12 Q
+0.47 (Note that the character x may be replaced by L, M, or H, indicating low, mid or high) 90 386 P
+0.12 (clouds.  Also note that the character T indicates the value of the parameter at the level) 90 373 P
+(of maximum cloud coverage.) 90 360 T
+(xCLD) 90 335 T
+(-) 135.36 335 T
+(Character cloud coverage code) 144 335 T
+2 10 Q
+(Examples:) 162 323.33 T
+(LCLD) 216 323.33 T
+(=) 248.4 323.33 T
+(SCT) 262.8 323.33 T
+(MCLD) 216 312.63 T
+(=) 248.4 312.63 T
+(-BKN) 262.8 312.63 T
+(HCLD) 216 301.93 T
+(=) 248.4 301.93 T
+(OVC) 262.8 301.93 T
+1 12 Q
+(TCLD) 90 277.9 T
+(-) 135.36 277.9 T
+(xCLD at maximum cloud coverage) 144 277.9 T
+2 10 Q
+(Example:) 162 266.23 T
+(TCLD) 216 266.23 T
+(=) 248.4 266.23 T
+(OVC) 262.8 266.23 T
+1 12 Q
+(xCLO) 90 241.9 T
+(-) 135.36 241.9 T
+(Fractional cloud coverage) 144 241.9 T
+2 10 Q
+(Examples:) 162 230.23 T
+(LCLO) 216 230.23 T
+(=) 248.4 230.23 T
+(0.400) 262.8 230.23 T
+(MCLO) 216 219.53 T
+(=) 248.4 219.53 T
+(0.600) 262.8 219.53 T
+(HCLO) 216 208.83 T
+(=) 248.4 208.83 T
+(1.000) 262.8 208.83 T
+1 12 Q
+(TCLO) 90 184.8 T
+(-) 135.36 184.8 T
+(xCLO at maximum cloud coverage) 144 184.8 T
+2 10 Q
+(Example:) 162 173.13 T
+(TCLO) 216 173.13 T
+(=) 248.4 173.13 T
+(1.00) 262.8 173.13 T
+1 12 Q
+(CLCx) 90 148.8 T
+(-) 135.36 148.8 T
+(Numeric cloud coverage) 144 148.8 T
+2 10 Q
+(Examples:) 162 137.13 T
+(CLCL) 216 137.13 T
+(=) 248.4 137.13 T
+(2) 262.8 137.13 T
+(CLCM) 216 126.43 T
+(=) 248.4 126.43 T
+(7) 262.8 126.43 T
+(CLCH) 216 115.73 T
+(=) 248.4 115.73 T
+(4) 262.8 115.73 T
+1 12 Q
+(CLCT) 90 91.7 T
+(-) 135.36 91.7 T
+(CLCx at maximum cloud coverage) 144 91.7 T
+2 10 Q
+(Example:) 162 80.03 T
+(CLCT) 216 80.03 T
+(=) 248.4 80.03 T
+(4) 262.8 80.03 T
+0 F
+(Cloud) 111.84 697.33 T
+(Coverage) 103.23 685.33 T
+(Cloud) 180.24 697.33 T
+(xCLD) 181.35 685.33 T
+(Short) 249.75 691.33 T
+(Fractional) 307.32 697.33 T
+(xCLO) 317.87 685.33 T
+(Numeric) 379.61 697.33 T
+(CLCx) 386.55 685.33 T
+(Symbol) 449.95 697.33 T
+(CFRT) 454.68 685.33 T
+2 9 Q
+(missing) 110.77 664 T
+(-) 261.3 664 T
+(0.00) 322.45 664 T
+(0) 397.1 664 T
+(-) 466.5 664 T
+(clear) 116.26 645 T
+(CLR) 185.41 645 T
+(C) 259.56 645 T
+(0.00) 322.45 645 T
+(1) 397.1 645 T
+(0) 465.5 645 T
+-0.64 (thin scattered) 99.02 626 P
+(-SCT) 183.92 626 T
+(-S) 258.31 626 T
+(0.25) 322.45 626 T
+(6) 397.1 626 T
+(2) 465.5 626 T
+(scattered) 107.52 607 T
+(SCT) 185.41 607 T
+(S) 259.8 607 T
+(0.40) 322.45 607 T
+(2) 397.1 607 T
+(3) 465.5 607 T
+(thin broken) 103.77 588 T
+(-BKN) 183.66 588 T
+(-B) 258.31 588 T
+(0.60) 322.45 588 T
+(7) 397.1 588 T
+(5) 465.5 588 T
+(broken) 112.26 569 T
+(BKN) 185.16 569 T
+(B) 259.8 569 T
+(0.75) 322.45 569 T
+(3) 397.1 569 T
+(6) 465.5 569 T
+(thin overcast) 100.53 550 T
+(-OVC) 183.17 550 T
+(-O) 257.81 550 T
+(0.90) 322.45 550 T
+(8) 397.1 550 T
+(7) 465.5 550 T
+(overcast) 109.02 531 T
+(OVC) 184.66 531 T
+(O) 259.3 531 T
+(1.00) 322.45 531 T
+(4) 397.1 531 T
+(8) 465.5 531 T
+-0.64 (thin obscured) 99.02 512 P
+(-X) 189.91 512 T
+(-X) 258.31 512 T
+(0.00) 322.45 512 T
+(9) 397.1 512 T
+(0) 465.5 512 T
+(obscured) 107.52 493 T
+(X) 191.4 493 T
+(X) 259.8 493 T
+(1.00) 322.45 493 T
+(5) 397.1 493 T
+(9) 465.5 493 T
+91.8 711 91.8 487 2 L
+V
+2 H
+0 Z
+N
+160.2 713 160.2 485 2 L
+V
+0.5 H
+N
+228.6 713 228.6 485 2 L
+V
+N
+297 713 297 485 2 L
+V
+N
+365.4 713 365.4 485 2 L
+V
+N
+433.8 713 433.8 485 2 L
+V
+N
+502.2 711 502.2 487 2 L
+V
+2 H
+N
+90.8 712 503.2 712 2 L
+V
+N
+90.8 676 503.2 676 2 L
+V
+N
+90.8 657 503.2 657 2 L
+V
+0.5 H
+N
+90.8 638 503.2 638 2 L
+V
+N
+90.8 619 503.2 619 2 L
+V
+N
+90.8 600 503.2 600 2 L
+V
+N
+90.8 581 503.2 581 2 L
+V
+N
+90.8 562 503.2 562 2 L
+V
+N
+90.8 543 503.2 543 2 L
+V
+N
+90.8 524 503.2 524 2 L
+V
+N
+90.8 505 503.2 505 2 L
+V
+N
+90.8 486 503.2 486 2 L
+V
+2 H
+N
+FMENDPAGE
+%%EndPage: "12" 13
+%%Page: "13" 13
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-13) 304.17 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(The next two parameters combine cloud coverage values from the three cloud levels.) 108 698.8 T
+(CLDS) 108 672.4 T
+(-) 153.36 672.4 T
+(Combined cloud coverage short code from three levels) 162 672.4 T
+2 10 Q
+(Example:) 180 660.53 T
+(CLDS) 234 660.53 T
+(=) 266.4 660.53 T
+(S-BO) 280.8 660.53 T
+1 12 Q
+(CMBC) 108 634.8 T
+(-) 153.36 634.8 T
+(Combined cloud coverage numeric from three levels) 162 634.8 T
+2 10 Q
+(Example:) 180 622.93 T
+(CMBC) 234 622.93 T
+(=) 266.4 622.93 T
+(274) 280.8 622.93 T
+1 12 Q
+(The next set of parameters are combined cloud height and cloud coverage.) 108 597.2 T
+(CLHx) 108 570.8 T
+(-) 153.36 570.8 T
+(Cloud height in hundreds of feet) 162 570.8 T
+2 10 Q
+(Examples:) 180 558.93 T
+(CLHL) 234 558.93 T
+(=) 266.4 558.93 T
+(22.) 280.8 558.93 T
+(CLHM) 234 547.73 T
+(=) 266.4 547.73 T
+(80.) 280.8 547.73 T
+(CLHH) 234 536.53 T
+(=) 266.4 536.53 T
+(250.) 280.8 536.53 T
+1 12 Q
+(CLDx) 108 510.8 T
+(-) 153.36 510.8 T
+(Combined cloud height and short code) 162 510.8 T
+2 10 Q
+(Examples:) 180 498.93 T
+(CLDL) 234 498.93 T
+(=) 266.4 498.93 T
+(22S) 280.8 498.93 T
+(CLDM) 234 487.73 T
+(=) 266.4 487.73 T
+(80-B) 280.8 487.73 T
+(CLDH) 234 476.53 T
+(=) 266.4 476.53 T
+(250O) 280.8 476.53 T
+1 12 Q
+(CLDT) 108 450.8 T
+(-) 153.36 450.8 T
+(CLDx at maximum coverage level) 162 450.8 T
+2 10 Q
+(Example:) 180 438.93 T
+(CLDT) 234 438.93 T
+(=) 266.4 438.93 T
+(250O) 280.8 438.93 T
+1 12 Q
+(COMx) 108 413.2 T
+(-) 153.36 413.2 T
+(Numeric combined cloud height and coverage combined as) 162 413.2 T
+(CLHx * 10 + CLCx) 180 400 T
+2 10 Q
+(Examples:) 180 388.13 T
+(COML) 234 388.13 T
+(=) 266.4 388.13 T
+(222.) 280.8 388.13 T
+(COMM) 234 376.93 T
+(=) 268.42 376.93 T
+(807.) 280.8 376.93 T
+(COMH) 234 365.73 T
+(=) 267.31 365.73 T
+(2504) 280.8 365.73 T
+(Note:) 129.6 342.53 T
+-0.13 (In the case when the sky is partially obscured, the value of 10000 is added) 158.4 342.53 P
+0.12 (on to the lowest reporting level.  For example, if AIR) 158.4 331.33 P
+0.12 (W) 388.87 331.33 P
+0.12 (A) 397.93 331.33 P
+0.12 (YS report is -X M5) 403.86 331.33 P
+(BKN 19 BKN, COML would equal 10053.) 158.4 320.13 T
+1 12 Q
+(COMT) 108 294.4 T
+(-) 153.36 294.4 T
+(COMx at maximum coverage level) 162 294.4 T
+2 10 Q
+(Example:) 180 282.53 T
+(COMT) 234 282.53 T
+(=) 266.4 282.53 T
+(2504.) 280.8 282.53 T
+1 12 Q
+0.36 (The next two parameters combine the cloud height and coverage allowing up to three) 108 256.8 P
+1.8 (reports which do not necessarily correspond to low, middle and high level clouds.) 108 243.6 P
+-0.4 (These parameters allow a means of storing cloud reports where there may be more than) 108 230.4 P
+(one report at a single level.) 108 217.2 T
+(CHCx) 108 190.8 T
+(-) 153.36 190.8 T
+(Numeric combined cloud height and coverage combined as) 162 190.8 T
+2 10 Q
+(CLHx * 10 + CLCx, where x is the cloud report group number from 1 to 3.) 171 178.93 T
+(Examples:) 180 167.73 T
+(CHC1) 234 167.73 T
+(=) 266.4 167.73 T
+(222.) 280.8 167.73 T
+(CHC2) 234 156.53 T
+(=) 266.4 156.53 T
+(807.) 280.8 156.53 T
+( CHC3) 234 145.33 T
+(=) 266.76 145.33 T
+(2504) 280.8 145.33 T
+(Note:) 129.6 122.93 T
+-0.13 (In the case when the sky is partially obscured, the value of 10000 is added) 158.4 122.93 P
+1 (on to the \336rst reporting level.  For example, if AIR) 158.4 111.73 P
+1 (W) 385.38 111.73 P
+1 (A) 394.44 111.73 P
+1 (YS report is -X M5) 400.37 111.73 P
+(BKN 19 BKN, CHC1 would equal 10053.) 158.4 100.53 T
+FMENDPAGE
+%%EndPage: "13" 14
+%%Page: "14" 14
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-14) 286.17 36 T
+(October 1996) 440.67 36 T
+1 12 Q
+(CHDx) 90 712 T
+(-) 135.36 712 T
+(Combined cloud height and short code) 144 712 T
+2 10 Q
+(Examples:) 162 699.33 T
+(CHD1) 216 699.33 T
+(=) 248.4 699.33 T
+(22S) 262.8 699.33 T
+(CHD2) 216 687.33 T
+(=) 248.4 687.33 T
+(80-B) 262.8 687.33 T
+(CHD3) 216 675.33 T
+(=) 248.4 675.33 T
+(250O) 262.8 675.33 T
+1 12 Q
+0.25 (The following set of cloud parameters is the numeric WMO codes which are reported) 90 648 P
+(by airways data.) 90 634 T
+(CFRL) 90 606 T
+(-) 135.36 606 T
+1.19 (Fraction of celestial dome covered by all low and mid level clouds from) 144 606 P
+(WMO Code 2700) 162 592 T
+(CTYL) 90 564 T
+(-) 135.36 564 T
+(Low-level cloud genera from WMO Code 0513) 144 564 T
+(CTYM) 90 536 T
+(-) 135.36 536 T
+(Mid-level cloud genera from WMO Code 0513) 144 536 T
+(CTYH) 90 508 T
+(-) 135.36 508 T
+(High-level cloud genera from WMO Code 0513) 144 508 T
+(CBAS) 90 480 T
+(-) 135.36 480 T
+(Cloud base height from WMO Code 1000) 144 480 T
+(CSYL) 90 452 T
+(-) 135.36 452 T
+(Cloud graphics symbol for CTYL) 144 452 T
+(CSYM) 90 424 T
+(-) 135.36 424 T
+(Cloud graphics symbol for CTYM) 144 424 T
+(CSYH) 90 396 T
+(-) 135.36 396 T
+(Cloud graphics symbol for CTYH) 144 396 T
+(CSYT) 90 368 T
+(-) 135.36 368 T
+(Cloud graphics symbol for \336rst level reporting clouds) 144 368 T
+(CFR) 90 340 T
+(T) 111.95 340 T
+(-) 135.36 340 T
+(Cloud coverage number from CLCT \050maximum clouds\051) 144 340 T
+(SKYC) 90 312 T
+(-) 135.36 312 T
+(Cloud coverage graphics symbol for CFR) 144 312 T
+(T) 343.49 312 T
+(SKYM) 90 284 T
+(-) 135.36 284 T
+(Sky coverage symbol with wind barbs in m/s) 144 284 T
+(SKYK) 90 256 T
+(-) 135.36 256 T
+(Sky coverage symbol with wind barbs in knots) 144 256 T
+0 10 Q
+2.78 (WEATHER CODES) 153 193.33 P
+1 12 Q
+(WCOD) 90 166 T
+(-) 135.36 166 T
+(Character weather code) 144 166 T
+(WNUM) 90 138 T
+(-) 135.36 138 T
+(Numeric weather code) 144 138 T
+2 10 Q
+0.53 (The weather code WCOD may also be accessed as WTHR.  The weather number con-) 111.6 113.33 P
+0.02 (sists of 3 parts, A, B, C where WNUM = A * 80 * 80 + B * 80 + C.  Each part corresponds) 111.6 101.33 P
+(to one of the values:) 111.6 89.33 T
+FMENDPAGE
+%%EndPage: "14" 15
+%%Page: "15" 15
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-15) 304.17 36 T
+(October 1996) 458.67 36 T
+2 F
+( 0) 183.6 713.33 T
+(\050no value\051) 216 713.33 T
+( 1) 183.6 702.33 T
+(R) 198 702.33 T
+(\050mod rain\051) 216 702.33 T
+(41) 342 702.33 T
+( 2) 183.6 691.33 T
+(L) 198 691.33 T
+(\050mod drizzle\051) 216 691.33 T
+(42) 342 691.33 T
+( 3) 183.6 680.33 T
+(S) 198 680.33 T
+(\050mod snow\051) 216 680.33 T
+(43) 342 680.33 T
+( 4) 183.6 669.33 T
+(A) 198 669.33 T
+(\050mod hail\051) 216 669.33 T
+(44) 342 669.33 T
+( 5) 183.6 658.33 T
+(T) 198 658.33 T
+(\050thunder\051) 216 658.33 T
+(45) 342 658.33 T
+( 6) 183.6 647.33 T
+(H) 198 647.33 T
+(\050haze\051) 216 647.33 T
+(46) 342 647.33 T
+( 7) 183.6 636.33 T
+(K) 198 636.33 T
+(\050smoke\051) 216 636.33 T
+(47) 342 636.33 T
+( 8) 183.6 625.33 T
+(D) 198 625.33 T
+(\050dust\051) 216 625.33 T
+(48) 342 625.33 T
+( 9) 183.6 614.33 T
+(F) 198 614.33 T
+(\050fog\051) 216 614.33 T
+(49 ZR-) 342 614.33 T
+(\050lt frz rain\051) 381.6 614.33 T
+(10) 183.6 603.33 T
+(50 ZR+) 342 603.33 T
+(\050hvy frz rain\051) 381.6 603.33 T
+(1) 183.6 592.33 T
+(1) 188.42 592.33 T
+(51 R) 342 592.33 T
+(W) 362.93 592.33 T
+(-) 372.18 592.33 T
+(\050lt rain shwr\051) 381.6 592.33 T
+(12) 183.6 581.33 T
+(52 R) 342 581.33 T
+(W+) 362.93 581.33 T
+(\050hvy rain shwr\051) 381.6 581.33 T
+(13) 183.6 570.33 T
+(R-) 198 570.33 T
+(\050lt rain\051) 216 570.33 T
+(53 ZL-) 342 570.33 T
+(\050lt freezing drizzle\051) 381.6 570.33 T
+(14) 183.6 559.33 T
+(R+) 198 559.33 T
+(\050hvy rain\051) 216 559.33 T
+(54 ZL+) 342 559.33 T
+(\050hvy freezing drizzle\051) 381.6 559.33 T
+(15) 183.6 548.33 T
+(ZR) 198 548.33 T
+(\050mod frz rain\051) 216 548.33 T
+(55 SW) 342 548.33 T
+(-) 371.81 548.33 T
+(\050lt snow shwr\051) 381.6 548.33 T
+(16) 183.6 537.33 T
+(R) 198 537.33 T
+(W) 205.04 537.33 T
+(\050mod rain shwr\051) 217.25 537.33 T
+(56 SW+) 342 537.33 T
+(\050hvy snow shwr\051) 381.6 537.33 T
+(17) 183.6 526.33 T
+(L-) 198 526.33 T
+(\050lt drizzle\051) 216 526.33 T
+(57 IP-) 342 526.33 T
+(\050lt ice pellets\051) 381.6 526.33 T
+(18) 183.6 515.33 T
+(L+) 198 515.33 T
+(\050hvy drizzle\051) 216 515.33 T
+(58 IP+) 342 515.33 T
+(\050hvy ice pellets\051) 381.6 515.33 T
+(19) 183.6 504.33 T
+(ZL) 198 504.33 T
+(\050frz drizzle\051) 216 504.33 T
+(59 SG-) 342 504.33 T
+(\050lt snow grains\051) 381.6 504.33 T
+(20) 183.6 493.33 T
+(S-) 198 493.33 T
+(\050lt snow\051) 216 493.33 T
+(60 SG+) 342 493.33 T
+(\050hvy snow grains\051) 381.6 493.33 T
+(21) 183.6 482.33 T
+(S+) 198 482.33 T
+(\050hvy snow\051) 216 482.33 T
+(61 SP-) 342 482.33 T
+(\050lt snow pellets\051) 381.6 482.33 T
+(22) 183.6 471.33 T
+(SW) 198 471.33 T
+(\050mod snow shwr\051) 216.88 471.33 T
+(62 SP+) 342 471.33 T
+(\050hvy snow pellets\051) 381.6 471.33 T
+(23) 183.6 460.33 T
+(IP) 198 460.33 T
+(\050mod ice pellet\051) 216 460.33 T
+(63 IPW) 342 460.33 T
+(\050mod ice pellet shwr\051) 381.6 460.33 T
+(24) 183.6 449.33 T
+(SG) 198 449.33 T
+(\050mod snow grain\051) 216 449.33 T
+(64 IC-) 342 449.33 T
+(\050lt ice crystals\051) 381.6 449.33 T
+(25) 183.6 438.33 T
+(SP) 198 438.33 T
+(\050mod snow pellet\051) 216 438.33 T
+(65 IC+) 342 438.33 T
+(\050hvy ice crystals\051) 381.6 438.33 T
+(26) 183.6 427.33 T
+(A-) 198 427.33 T
+(\050lt hail\051) 216 427.33 T
+(66 TR) 342 427.33 T
+(W) 369.04 427.33 T
+(\050mod thunder shwr\051) 381.6 427.33 T
+(27) 183.6 416.33 T
+(A+) 198 416.33 T
+(\050hvy hail\051) 216 416.33 T
+(67) 342 416.33 T
+(28) 183.6 405.33 T
+(T) 198 405.33 T
+(-) 203.56 405.33 T
+(\050lt thunder\051) 216 405.33 T
+(68) 342 405.33 T
+(29) 183.6 394.33 T
+(T+) 198 394.33 T
+(\050hvy thunder\051) 216 394.33 T
+(69) 342 394.33 T
+(30) 183.6 383.33 T
+(IF) 198 383.33 T
+(\050ice fog\051) 216 383.33 T
+(70) 342 383.33 T
+(31) 183.6 372.33 T
+(GF) 198 372.33 T
+(\050ground fog\051) 216 372.33 T
+(71) 342 372.33 T
+(32) 183.6 361.33 T
+(BS) 198 361.33 T
+(\050blowing snow\051) 216 361.33 T
+(72) 342 361.33 T
+(33) 183.6 350.33 T
+(BD) 198 350.33 T
+(\050blowing dust\051) 216 350.33 T
+(73) 342 350.33 T
+(34) 183.6 339.33 T
+(BY) 198 339.33 T
+(\050blowing spray\051) 216 339.33 T
+(74) 342 339.33 T
+(35) 183.6 328.33 T
+(BN) 198 328.33 T
+(\050blowing sand\051) 216 328.33 T
+(75 IPW) 342 328.33 T
+(-) 374.59 328.33 T
+(\050lt ice pellet shwr\051) 381.6 328.33 T
+(36) 183.6 317.33 T
+(IC) 198 317.33 T
+(\050mod ice crystals\051) 216 317.33 T
+(76 IPW+) 342 317.33 T
+(\050hvy ice pellet shwr\051) 383.39 317.33 T
+(37) 183.6 306.33 T
+(IN) 198 306.33 T
+(\050ice needles\051) 216 306.33 T
+(77 TR) 342 306.33 T
+(W) 369.04 306.33 T
+(-) 378.29 306.33 T
+(\050lt rain thunder shwr\051) 384.4 306.33 T
+(38) 183.6 295.33 T
+(AP) 198 295.33 T
+(\050small hail\051) 216 295.33 T
+(78 TR) 342 295.33 T
+(W+) 369.04 295.33 T
+(\050hvy rain thunder shwr\051) 387.08 295.33 T
+(39) 183.6 284.33 T
+(KH) 198 284.33 T
+(\050smoke, haze\051) 216 284.33 T
+(79) 342 284.33 T
+(40) 183.6 273.33 T
+(The following correspond to a single character code:) 132.38 256.33 T
+(-1) 183.6 239.33 T
+(T) 198 239.33 T
+(ORNA \050tornado\051) 203.93 239.33 T
+(-3 W) 342 239.33 T
+(A) 362.73 239.33 T
+(TER) 368.65 239.33 T
+(\050water spout\051) 388.64 239.33 T
+(-2) 183.6 228.33 T
+(FUNNE \050funnel cloud\051) 198 228.33 T
+1 12 Q
+(WTHR) 108 203 T
+(-) 153.36 203 T
+(Character weather codes for W604 data) 162 203 T
+(W604) 108 177 T
+(-) 153.36 177 T
+(Numeric weather codes used for 604 data) 162 177 T
+2 10 Q
+(0) 174.44 154.33 T
+(=) 187.2 154.33 T
+( 22) 274.11 154.33 T
+(= L+) 295.2 154.33 T
+( 44) 382.11 154.33 T
+(= R+S) 403.2 154.33 T
+(1) 174.44 143.33 T
+(= T) 187.2 143.33 T
+( 23) 274.11 143.33 T
+(= SP) 295.2 143.33 T
+( 45) 382.11 143.33 T
+(= RS-) 403.2 143.33 T
+( 2) 171.66 132.33 T
+(= R) 187.2 132.33 T
+( 24) 274.11 132.33 T
+(= SG) 295.2 132.33 T
+( 46) 382.11 132.33 T
+(= RS+) 403.2 132.33 T
+( 3) 171.66 121.33 T
+(= S) 187.2 121.33 T
+( 25) 274.11 121.33 T
+(= BY) 295.2 121.33 T
+( 47) 382.11 121.33 T
+(= ZL-) 403.2 121.33 T
+( 4) 171.66 110.33 T
+(= F) 187.2 110.33 T
+( 26) 274.11 110.33 T
+(= BN) 295.2 110.33 T
+( 48) 382.11 110.33 T
+(= ZL+) 403.2 110.33 T
+( 5) 171.66 99.33 T
+(= H) 187.2 99.33 T
+( 27) 274.11 99.33 T
+(= BD) 295.2 99.33 T
+( 49) 382.11 99.33 T
+(= TSW) 403.2 99.33 T
+( 6) 171.66 88.33 T
+(= K) 187.2 88.33 T
+( 28) 274.11 88.33 T
+(= IF) 295.2 88.33 T
+( 50) 382.11 88.33 T
+(= TSW) 403.2 88.33 T
+(-) 433.84 88.33 T
+( 7) 171.66 77.33 T
+(= L) 187.2 77.33 T
+( 29) 274.11 77.33 T
+(= RS) 295.2 77.33 T
+( 51) 382.11 77.33 T
+(= TSW+) 403.2 77.33 T
+FMENDPAGE
+%%EndPage: "15" 16
+%%Page: "16" 16
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-16) 286.17 36 T
+(October 1996) 440.67 36 T
+2 F
+( 8) 153.66 713.33 T
+(= R+) 169.2 713.33 T
+(30) 258.89 713.33 T
+(= TR) 277.2 713.33 T
+(W) 298.96 713.33 T
+( 52) 364.11 713.33 T
+(= TR) 385.2 713.33 T
+(W) 406.96 713.33 T
+(-) 416.21 713.33 T
+( 9) 153.66 702.33 T
+(= R-) 169.2 702.33 T
+(31) 258.89 702.33 T
+(= TR-) 277.2 702.33 T
+( 53) 364.11 702.33 T
+(= TR) 385.2 702.33 T
+(W+) 406.96 702.33 T
+( 10) 148.11 691.33 T
+(= S+) 169.2 691.33 T
+(32) 258.89 691.33 T
+(= TR+) 277.2 691.33 T
+( 54) 364.11 691.33 T
+(= TR) 385.2 691.33 T
+(W) 406.96 691.33 T
+(A) 416.02 691.33 T
+( 1) 148.85 680.33 T
+(1) 156.44 680.33 T
+(= S-) 169.2 680.33 T
+(33) 258.89 680.33 T
+(= TS-) 277.2 680.33 T
+( 55) 364.11 680.33 T
+(= R-S-) 385.2 680.33 T
+( 12) 148.11 669.33 T
+(= R) 169.2 669.33 T
+(W) 184.85 669.33 T
+(34) 258.89 669.33 T
+(= TS+) 277.2 669.33 T
+( 56) 364.11 669.33 T
+(= R-S+) 385.2 669.33 T
+( 13) 148.11 658.33 T
+(= SW) 169.2 658.33 T
+(35) 258.89 658.33 T
+(= ZR-) 277.2 658.33 T
+( 57) 364.11 658.33 T
+(= R+S-) 385.2 658.33 T
+( 14) 148.11 647.33 T
+(= TR) 169.2 647.33 T
+(36) 258.89 647.33 T
+(= ZR+) 277.2 647.33 T
+( 58) 364.11 647.33 T
+(= R+S+) 385.2 647.33 T
+( 15) 148.11 636.33 T
+(= TS) 169.2 636.33 T
+(37) 258.89 636.33 T
+(= SW) 277.2 636.33 T
+(-) 301.74 636.33 T
+( 59) 364.11 636.33 T
+(= TR) 385.2 636.33 T
+(W+A) 406.96 636.33 T
+( 16) 148.11 625.33 T
+(= ZL) 169.2 625.33 T
+(38) 258.89 625.33 T
+(= SW+) 277.2 625.33 T
+( 60) 364.11 625.33 T
+(= TR) 385.2 625.33 T
+(W) 406.96 625.33 T
+(-A) 416.21 625.33 T
+( 17) 148.11 614.33 T
+(= ZR) 169.2 614.33 T
+(39) 258.89 614.33 T
+(= SG-) 277.2 614.33 T
+( 61) 364.11 614.33 T
+(= T) 385.2 614.33 T
+(ORNA) 399.74 614.33 T
+( 18) 148.11 603.33 T
+(= IP) 169.2 603.33 T
+(40) 258.89 603.33 T
+(= SG+) 277.2 603.33 T
+( 62) 364.11 603.33 T
+(= FUNNE) 385.2 603.33 T
+( 19) 148.11 592.33 T
+(= GF) 169.2 592.33 T
+(41) 258.89 592.33 T
+(= R) 277.2 592.33 T
+(W) 292.85 592.33 T
+(-) 302.11 592.33 T
+( 63) 364.11 592.33 T
+(= W) 385.2 592.33 T
+(A) 402.88 592.33 T
+(TER) 408.81 592.33 T
+( 20) 148.11 581.33 T
+(= BS) 169.2 581.33 T
+(42) 258.89 581.33 T
+(= R) 277.2 581.33 T
+(W+) 292.85 581.33 T
+( 21) 148.11 570.33 T
+(= L-) 169.2 570.33 T
+(43) 258.89 570.33 T
+(= R-S) 277.2 570.33 T
+1 12 Q
+(WTMO) 90 547 T
+(-) 135.36 547 T
+(Character WMO weather code) 144 547 T
+(WWMO) 90 519 T
+(-) 135.36 519 T
+(Numeric WMO weather code) 144 519 T
+(WSYM) 90 491 T
+(-) 135.36 491 T
+(Graphics weather symbol corresponding to WWMO) 144 491 T
+2 10 Q
+( The transformation is:) 114.38 473.33 T
+(0) 156.44 456.33 T
+(=) 169.2 456.33 T
+( 34) 256.11 456.33 T
+(= BD+) 277.2 456.33 T
+( 67) 364.11 456.33 T
+(= ZR) 385.2 456.33 T
+(1) 156.44 445.33 T
+(=) 169.2 445.33 T
+( 35) 256.11 445.33 T
+(= BD+) 277.2 445.33 T
+( 68) 364.11 445.33 T
+(= R-S-) 385.2 445.33 T
+(2) 156.44 434.33 T
+(=) 169.2 434.33 T
+( 36) 256.11 434.33 T
+(= BS) 277.2 434.33 T
+( 69) 364.11 434.33 T
+(= RS) 385.2 434.33 T
+(3) 156.44 423.33 T
+(=) 169.2 423.33 T
+( 37) 256.11 423.33 T
+(= BS+) 277.2 423.33 T
+( 70) 364.11 423.33 T
+(= S-) 385.2 423.33 T
+(4) 156.44 412.33 T
+(= K) 169.2 412.33 T
+( 38) 256.11 412.33 T
+(= BS) 277.2 412.33 T
+( 71) 364.11 412.33 T
+(= S-) 385.2 412.33 T
+(5) 156.44 401.33 T
+(= H) 169.2 401.33 T
+( 39) 256.11 401.33 T
+(= BS+) 277.2 401.33 T
+( 72) 364.11 401.33 T
+(= S) 385.2 401.33 T
+(6) 156.44 390.33 T
+(= D) 169.2 390.33 T
+( 40) 256.11 390.33 T
+(=) 277.2 390.33 T
+( 73) 364.11 390.33 T
+(= S) 385.2 390.33 T
+(7) 156.44 379.33 T
+(= BD) 169.2 379.33 T
+( 41) 256.11 379.33 T
+(= F) 277.2 379.33 T
+( 74) 364.11 379.33 T
+(= S+) 385.2 379.33 T
+(8) 156.44 368.33 T
+(= BD) 169.2 368.33 T
+( 42) 256.11 368.33 T
+(= F) 277.2 368.33 T
+( 75) 364.11 368.33 T
+(= S+) 385.2 368.33 T
+(9) 156.44 357.33 T
+(= BD) 169.2 357.33 T
+( 43) 256.11 357.33 T
+(= F) 277.2 357.33 T
+( 76) 364.11 357.33 T
+(= IN) 385.2 357.33 T
+( 10) 148.11 346.33 T
+(= F-) 169.2 346.33 T
+( 44) 256.11 346.33 T
+(= F) 277.2 346.33 T
+( 77) 364.11 346.33 T
+(= SG) 385.2 346.33 T
+( 1) 148.85 335.33 T
+(1) 156.44 335.33 T
+(= GF) 169.2 335.33 T
+( 45) 256.11 335.33 T
+(= F) 277.2 335.33 T
+( 78) 364.11 335.33 T
+(= S-) 385.2 335.33 T
+( 12) 148.11 324.33 T
+(= GF) 169.2 324.33 T
+( 46) 256.11 324.33 T
+(= F) 277.2 324.33 T
+( 79) 364.11 324.33 T
+(= IP) 385.2 324.33 T
+( 13) 148.11 313.33 T
+(=) 169.2 313.33 T
+( 47) 256.11 313.33 T
+(= F) 277.2 313.33 T
+( 80) 364.11 313.33 T
+(= R) 385.2 313.33 T
+(W) 400.85 313.33 T
+(-) 410.11 313.33 T
+( 14) 148.11 302.33 T
+(=) 169.2 302.33 T
+( 48) 256.11 302.33 T
+(= F) 277.2 302.33 T
+( 81) 364.11 302.33 T
+(= R) 385.2 302.33 T
+(W) 400.85 302.33 T
+( 15) 148.11 291.33 T
+(=) 169.2 291.33 T
+( 49) 256.11 291.33 T
+(= F) 277.2 291.33 T
+( 82) 364.11 291.33 T
+(= R) 385.2 291.33 T
+(W+) 400.85 291.33 T
+( 16) 148.11 280.33 T
+(=) 169.2 280.33 T
+( 50) 256.11 280.33 T
+(= L-) 277.2 280.33 T
+( 83) 364.11 280.33 T
+(= R) 385.2 280.33 T
+(W) 400.85 280.33 T
+(-SW) 410.11 280.33 T
+(-) 429.36 280.33 T
+( 17) 148.11 269.33 T
+(= T) 169.2 269.33 T
+( 51) 256.11 269.33 T
+(= L-) 277.2 269.33 T
+( 84) 364.11 269.33 T
+(= R) 385.2 269.33 T
+(WSW) 400.85 269.33 T
+( 18) 148.11 258.33 T
+(= Q) 169.2 258.33 T
+( 52) 256.11 258.33 T
+(= L-) 277.2 258.33 T
+( 85) 364.11 258.33 T
+(= SW) 385.2 258.33 T
+(-) 409.74 258.33 T
+( 19) 148.11 247.33 T
+(= FUNNE) 169.2 247.33 T
+( 53) 256.11 247.33 T
+(= L) 277.2 247.33 T
+( 86) 364.11 247.33 T
+(= SW) 385.2 247.33 T
+( 20) 148.11 236.33 T
+(=) 169.2 236.33 T
+( 54) 256.11 236.33 T
+(= L+) 277.2 236.33 T
+( 87) 364.11 236.33 T
+(= SP-) 385.2 236.33 T
+( 21) 148.11 225.33 T
+(=) 169.2 225.33 T
+( 55) 256.11 225.33 T
+(= L+) 277.2 225.33 T
+( 88) 364.11 225.33 T
+(= SP) 385.2 225.33 T
+( 22) 148.11 214.33 T
+(=) 169.2 214.33 T
+( 56) 256.11 214.33 T
+(= ZL-) 277.2 214.33 T
+( 89) 364.11 214.33 T
+(= A-) 385.2 214.33 T
+( 23) 148.11 203.33 T
+(=) 169.2 203.33 T
+( 57) 256.11 203.33 T
+(= ZL) 277.2 203.33 T
+( 90) 364.11 203.33 T
+(= A) 385.2 203.33 T
+( 24) 148.11 192.33 T
+(=) 169.2 192.33 T
+( 58) 256.11 192.33 T
+(= R-L-) 277.2 192.33 T
+( 91) 364.11 192.33 T
+(= R-) 385.2 192.33 T
+( 25) 148.11 181.33 T
+(=) 169.2 181.33 T
+( 59) 256.11 181.33 T
+(= RL) 277.2 181.33 T
+( 92) 364.11 181.33 T
+(= R) 385.2 181.33 T
+( 26) 148.11 170.33 T
+(=) 169.2 170.33 T
+( 60) 256.11 170.33 T
+(= R-) 277.2 170.33 T
+( 93) 364.11 170.33 T
+(= RS) 385.2 170.33 T
+( 27) 148.11 159.33 T
+(=) 169.2 159.33 T
+( 61) 256.11 159.33 T
+(= R-) 277.2 159.33 T
+( 94) 364.11 159.33 T
+(= R+S+) 385.2 159.33 T
+( 28) 148.11 148.33 T
+(=) 169.2 148.33 T
+( 62) 256.11 148.33 T
+(= R) 277.2 148.33 T
+(95) 366.89 148.33 T
+(= TR) 385.2 148.33 T
+(W) 406.96 148.33 T
+(-) 416.21 148.33 T
+( 29) 148.11 137.33 T
+(=) 169.2 137.33 T
+( 63) 256.11 137.33 T
+(= R) 277.2 137.33 T
+(96) 366.89 137.33 T
+(= TR) 385.2 137.33 T
+(W) 406.96 137.33 T
+(-A) 416.21 137.33 T
+( 30) 148.11 126.33 T
+(= BD) 169.2 126.33 T
+( 64) 256.11 126.33 T
+(= R+) 277.2 126.33 T
+( 97) 364.11 126.33 T
+(= TR) 385.2 126.33 T
+(W+) 406.96 126.33 T
+( 31) 148.11 115.33 T
+(= BD) 169.2 115.33 T
+( 65) 256.11 115.33 T
+(= R+) 277.2 115.33 T
+( 98) 364.11 115.33 T
+(= TD) 385.2 115.33 T
+( 32) 148.11 104.33 T
+(= BD) 169.2 104.33 T
+( 66) 256.11 104.33 T
+(= ZR-) 277.2 104.33 T
+( 99) 364.11 104.33 T
+(= TR) 385.2 104.33 T
+(W+A) 406.96 104.33 T
+( 33) 148.11 93.33 T
+(= BD+) 169.2 93.33 T
+FMENDPAGE
+%%EndPage: "16" 17
+%%Page: "17" 17
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-17) 304.17 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(W) 108 712 T
+(ASH) 117.99 712 T
+(-) 153.36 712 T
+(Asheville surface data weather code) 162 712 T
+(R) 108 684 T
+(WSH) 115.34 684 T
+(-) 153.36 684 T
+(Numeric Asheville surface data) 162 684 T
+2 10 Q
+0.58 (The data are stored using 7-digits as 1234.567.  The column digits have the) 180 656 P
+(following translation:) 180 642 T
+1 12 Q
+(PWTH) 108 398 T
+(-) 153.36 398 T
+(Character past weather WMO code or graphics symbol for it) 162 398 T
+(PWWM) 108 370 T
+(-) 153.36 370 T
+(Numeric past weather WMO code) 162 370 T
+2 10 Q
+( The past weather WMO numeric codes are:) 129.6 343.33 T
+( 0 = Cloud covering less than 1/2 sky) 153 317.33 T
+( 1 = Cloud covering more than 1/2 during part of) 153 305.33 T
+(period and less than 1/2 sky during part) 198 293.33 T
+( 2 = Cloud covering more than 1/2 sky) 153 281.33 T
+( 3 = Sandstorm, duststorm or blowing snow) 153 269.33 T
+( 4 = Fog, ice fog, thick haze or thick smoke) 153 257.33 T
+( 5 = Drizzle) 153 245.33 T
+( 6 = Rain) 153 233.33 T
+( 7 = Snow) 153 221.33 T
+(, rain and snow mixed or ice pellets) 197.18 221.33 T
+( 8 = Showers) 153 209.33 T
+( 9 = Thunderstorm with or without precipitation) 153 197.33 T
+( The translation is:) 129.6 171.33 T
+(0) 216 147.33 T
+(=) 234 147.33 T
+(5) 342 147.33 T
+(=) 360 147.33 T
+(L) 378 147.33 T
+(1) 216 135.33 T
+(=) 234 135.33 T
+(6) 342 135.33 T
+(=) 360 135.33 T
+(R) 378 135.33 T
+(2) 216 123.33 T
+(=) 234 123.33 T
+(7) 342 123.33 T
+(=) 360 123.33 T
+(S) 378 123.33 T
+(3) 216 111.33 T
+(=) 234 111.33 T
+(BD) 252 111.33 T
+(8) 342 111.33 T
+(=) 360 111.33 T
+(R) 378 111.33 T
+(W) 385.04 111.33 T
+(4) 216 99.33 T
+(=) 234 99.33 T
+(F) 252 99.33 T
+(9) 342 99.33 T
+(=) 360 99.33 T
+(T) 378 99.33 T
+0 F
+(Column 1) 119.43 611.33 T
+(Column 2) 177.03 611.33 T
+(Column 3) 234.63 611.33 T
+(Column 4) 292.23 611.33 T
+(Column 5) 349.83 611.33 T
+(Column) 407.43 611.33 T
+( 6) 444.63 611.33 T
+(Column 7) 465.03 611.33 T
+2 9 Q
+(0 = None) 123.84 592 T
+(0 = None) 181.44 592 T
+(0 = None) 239.04 592 T
+(0 = None) 296.64 592 T
+(0 = None) 354.24 592 T
+(0 = None) 411.84 592 T
+(0 = None) 469.44 592 T
+(1 = R-) 129.84 575 T
+(1 = None) 181.44 575 T
+(1 = S-) 245.29 575 T
+(1 = SW) 298.72 575 T
+(-) 328.28 575 T
+(1 = IP-) 359.24 575 T
+(1 = F) 419.83 575 T
+(1 = K) 477.18 575 T
+(2 = R) 131.33 558 T
+(2 = None) 181.44 558 T
+(2 = S) 246.78 558 T
+(2 = SW) 300.14 558 T
+(2 = IP) 360.73 558 T
+(2 = IF) 418.58 558 T
+(2 = H) 476.93 558 T
+(3 = R+) 128.71 541 T
+(3 = None) 181.44 541 T
+(3 = S+) 244.16 541 T
+(3 = SW+) 297.52 541 T
+(3 = IP+) 358.11 541 T
+(3 = GF) 416.34 541 T
+(3 = KH) 473.94 541 T
+(4 = R) 125.76 524 T
+(W) 147.33 524 T
+(-) 155.65 524 T
+(4 = L-) 188.18 524 T
+(4 = SP-) 242.29 524 T
+(4 = None) 296.64 524 T
+(4 = None) 354.24 524 T
+(4 = BD) 416.34 524 T
+(4 = D) 476.93 524 T
+(5 = R) 127.17 507 T
+(W) 148.74 507 T
+(5 = L) 189.68 507 T
+(5 = SP) 243.78 507 T
+(5 = None) 296.64 507 T
+(5 = A) 361.98 507 T
+(5 = BN) 416.34 507 T
+(5 = BS) 474.18 507 T
+(6 = R) 124.55 490 T
+(W+) 146.12 490 T
+(6 = L+) 187.06 490 T
+(6 = SP+) 241.16 490 T
+(6 = None) 296.64 490 T
+(6 = None) 354.24 490 T
+(6 = T) 477.43 490 T
+(7 = ZR-) 127.09 473 T
+(7 = ZL-) 185.44 473 T
+(7 = none) 239.79 473 T
+(7 = SG-) 299.39 473 T
+(7 = None) 354.24 473 T
+(7 = T+) 474.81 473 T
+(8 = ZR) 128.59 456 T
+(8 = ZL) 186.93 456 T
+(8 = IC) 245.29 456 T
+(8 = SG) 300.89 456 T
+(8 = AP) 358.98 456 T
+(8 = T) 470.77 456 T
+(OR) 491.35 456 T
+(9 = ZR+) 125.96 439 T
+(9 = ZL+) 184.31 439 T
+(9 = SG+) 298.26 439 T
+(9 = Q) 476.68 439 T
+113.4 625 113.4 435 2 L
+V
+2 H
+0 Z
+N
+171 627 171 433 2 L
+V
+0.5 H
+N
+228.6 627 228.6 433 2 L
+V
+N
+286.2 627 286.2 433 2 L
+V
+N
+343.8 627 343.8 433 2 L
+V
+N
+401.4 627 401.4 433 2 L
+V
+N
+459 627 459 433 2 L
+V
+N
+516.6 625 516.6 435 2 L
+V
+2 H
+N
+112.4 626 517.6 626 2 L
+V
+N
+112.4 604 517.6 604 2 L
+V
+N
+112.4 587 517.6 587 2 L
+V
+0.5 H
+N
+112.4 570 517.6 570 2 L
+V
+N
+112.4 553 517.6 553 2 L
+V
+N
+112.4 536 517.6 536 2 L
+V
+N
+112.4 519 517.6 519 2 L
+V
+N
+112.4 502 517.6 502 2 L
+V
+N
+112.4 485 517.6 485 2 L
+V
+N
+112.4 468 517.6 468 2 L
+V
+N
+112.4 451 517.6 451 2 L
+V
+N
+112.4 434 517.6 434 2 L
+V
+2 H
+N
+FMENDPAGE
+%%EndPage: "17" 18
+%%Page: "18" 18
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-18) 286.17 36 T
+(October 1996) 440.67 36 T
+2.78 (STATION PARAMETERS) 153 713.33 P
+1 12 Q
+(STID) 90 688 T
+(-) 135.36 688 T
+(Character station identi\336er) 144 688 T
+(STNM) 90 662 T
+(-) 135.36 662 T
+(Station number) 144 662 T
+2 10 Q
+-0.19 (STNM is the 5-digit WMO identi\336er for upper air data; 6 digits for surface data, usually the) 111.6 637.33 P
+(WMO identi\336er with a zero appended.) 111.6 626.33 T
+1 12 Q
+(SLA) 90 601 T
+(T) 111.32 601 T
+(-) 135.36 601 T
+(Station latitude in degrees) 144 601 T
+(SLON) 90 575 T
+(-) 135.36 575 T
+(Station longitude in degrees; W) 144 575 T
+(est longitude is negative) 294.95 575 T
+(SEL) 90 549 T
+(V) 110.22 549 T
+(-) 135.36 549 T
+(Station elevation in meters) 144 549 T
+(RANG) 90 523 T
+(-) 135.36 523 T
+(Range in kilometers \050specialized use\051) 144 523 T
+(AZIM) 90 497 T
+(-) 135.36 497 T
+(Azimuth in kilometers \050specialized use\051) 144 497 T
+(LA) 90 471 T
+(TI) 104.66 471 T
+(-) 135.36 471 T
+(Latitude in degrees from range/azimuth) 144 471 T
+(LONG) 90 445 T
+(-) 135.36 445 T
+(Longitude in degrees from range/azimuth) 144 445 T
+2 10 Q
+0.24 (LA) 111.6 420.33 P
+0.24 (TI and LONG are calculated from the RANG and AZIM using equations developed for) 123.08 420.33 P
+(AOIPS/RADP) 111.6 409.33 T
+(AK.) 171.96 409.33 T
+1 12 Q
+(DEL) 90 384 T
+(T) 112.21 384 T
+(-) 135.36 384 T
+(Delta time in seconds \050specialized use\051) 144 384 T
+0 10 Q
+2.78 (MODEL OUTPUT STATISTICS) 153 336.33 P
+1 12 Q
+(MXMN) 90 311 T
+(-) 135.36 311 T
+(Maximum or minimum temperature in Fahrenheit) 144 311 T
+(PP06) 90 285 T
+(-) 135.36 285 T
+(Probability of precipitation fcst in a 6-hr period) 144 285 T
+(PP12) 90 259 T
+(-) 135.36 259 T
+(Probability of precipitation fcst in a 12-hr period) 144 259 T
+(QP06) 90 233 T
+(-) 135.36 233 T
+(Quantitative precipitation fcst in a 6-hr period) 144 233 T
+2 10 Q
+(1 = 0.01 - 0.09 inches) 162 210.33 T
+(2 = 0.10 - 0.24 inches) 162 199.33 T
+(3 = 0.25 - 0.49 inches) 162 188.33 T
+(4 = 0.50 - 0.99 inches) 162 177.33 T
+(5 = 1.00 - 1.99 inches) 162 166.33 T
+1 12 Q
+(QP12) 90 141 T
+(-) 135.36 141 T
+(Quantitative precipitation fcst in a 12-hr period) 144 141 T
+2 10 Q
+(1 through 5 same as QP06) 162 118.33 T
+(6 = greater than or equal to 2.00 inches) 162 107.33 T
+1 12 Q
+(TS06) 90 82 T
+(-) 135.36 82 T
+(Unconditional probability of thunderstorms occurring in a 6-hr period) 144 82 T
+FMENDPAGE
+%%EndPage: "18" 19
+%%Page: "19" 19
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 254.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 108 36 T
+(A-19) 304.17 36 T
+(October 1996) 458.67 36 T
+1 12 Q
+(TS12) 108 699 T
+(-) 153.36 699 T
+(Unconditional probability of thunderstorms occurring in a 12-hr period) 162 699 T
+(TC06) 108 673 T
+(-) 153.36 673 T
+(Unconditional probability of severe weather occurring in a 6-hr period) 162 673 T
+(TC12) 108 647 T
+(-) 153.36 647 T
+(Unconditional probability of severe weather occurring in a 12-hr period) 162 647 T
+(PCPT) 108 621 T
+(-) 153.36 621 T
+(Categorical forecast of precipitation) 162 621 T
+2 10 Q
+(0 = R = rain) 180 598.63 T
+(1 = S = snow) 180 587.93 T
+(2 = Z = freezing) 180 577.23 T
+1 12 Q
+(POZP) 108 552.2 T
+(-) 153.36 552.2 T
+1.28 (Conditional probability of freezing precipitation \050not included during the) 162 552.2 P
+(warm season\051) 180 539.2 T
+(POSN) 108 513.2 T
+(-) 153.36 513.2 T
+(Conditional probability of snow \050not included during the warm season\051) 162 513.2 T
+(SN06) 108 487.2 T
+(-) 153.36 487.2 T
+(Categorical forecast of snow amount falling in a 6-hr period) 162 487.2 T
+2 10 Q
+(0 = no snow) 180 464.83 T
+(1 = trace - less than 2 inches) 180 454.13 T
+(2 = greater than or equal to 2 inches) 180 443.43 T
+1 12 Q
+(SN12) 108 418.4 T
+(-) 153.36 418.4 T
+-0.07 (Categorical forecast of snow amount falling in a 12-hr period \050not included) 162 418.4 P
+(during the warm season\051) 180 405.4 T
+2 10 Q
+(0 and 1 same as SN06) 180 383.03 T
+(2 = 2 to less than 4 inches) 180 372.33 T
+(4 = 4 to less than 6 inches) 180 361.63 T
+(6 = greater than 6 inches) 180 350.93 T
+1 12 Q
+(FCIG) 108 325.9 T
+(-) 153.36 325.9 T
+(Categorical forecast of ceiling height conditions) 162 325.9 T
+2 10 Q
+(1 = less than 200 feet) 180 303.53 T
+(2 = 200 - 400 feet) 180 292.83 T
+(3 = 500 - 900 feet) 180 282.13 T
+(4 = 1000 - 3000 feet) 180 271.43 T
+(5 = 3100 - 6500 feet) 180 260.73 T
+(6 = 6600 - 12,000 feet) 180 250.03 T
+(7 = greater than 12,000 feet) 180 239.33 T
+1 12 Q
+(FVIS) 108 214.3 T
+(-) 153.36 214.3 T
+(Categorical forecast of visibility conditions) 162 214.3 T
+2 10 Q
+(1 = less than 0.5 miles) 180 191.93 T
+(2 = 0.5 - 0.875 miles) 180 181.23 T
+(3 = 1.0 - 2.75 miles) 180 170.53 T
+(4 = 3.0 - 5.0 miles) 180 159.83 T
+(5 = greater than 5.0 miles) 180 149.13 T
+1 12 Q
+(OVIS) 108 124.1 T
+(-) 153.36 124.1 T
+(Categorical forecast in plain language of obstructions to vision) 162 124.1 T
+2 10 Q
+(0 = N = neither fog or haze) 180 101.73 T
+(1 = F = fog) 180 91.03 T
+(2 = H = haze) 180 80.33 T
+FMENDPAGE
+%%EndPage: "19" 20
+%%Page: "20" 20
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(GEMPAK Parameters) 236.35 748 T
+0 10 Q
+(N-AWIPS 5.4 User\325s Guide) 90 36 T
+(A-20) 286.17 36 T
+(October 1996) 440.67 36 T
+2.78 ( MISCELLANEOUS PARAMETERS) 153 713.33 P
+1 12 Q
+(VSBY) 90 688 T
+(-) 135.36 688 T
+(V) 144 688 T
+(isibility in statute miles) 151.94 688 T
+(VSBK) 90 662 T
+(-) 135.36 662 T
+(V) 144 662 T
+(isibility in kilometers) 151.94 662 T
+(PnnI) 90 636 T
+(-) 135.36 636 T
+(Precipitation over last nn hours in inches) 144 636 T
+2 10 Q
+( nn = 03, 06, 09, 12, 18 or 24) 111.6 611.33 T
+1 12 Q
+(PnnM) 90 586 T
+(-) 135.36 586 T
+(Precipitation over last nn hours in millimeters) 144 586 T
+2 10 Q
+( nn = 03, 06, 09, 12, 18 or 24) 111.6 561.33 T
+1 12 Q
+(SNOW) 90 536 T
+(-) 135.36 536 T
+(Snow depth in inches) 144 536 T
+(HAIL) 90 510 T
+(-) 135.36 510 T
+(Hail \337ag) 144 510 T
+(HLSZ) 90 484 T
+(-) 135.36 484 T
+(Hail size in centimeters) 144 484 T
+(WHGT) 90 458 T
+(-) 135.36 458 T
+(W) 144 458 T
+(ave height in meters) 154.36 458 T
+(WPER) 90 432 T
+(-) 135.36 432 T
+(W) 144 432 T
+(ave period in seconds) 154.36 432 T
+(DDEN) 90 406 T
+(-) 135.36 406 T
+(Density of dry air in kg/\050m**3\051) 144 406 T
+(PSYM) 90 380 T
+(-) 135.36 380 T
+(Montgomery stream function in m**2/\050100*s**2\051) 144 380 T
+(HEA) 90 354 T
+(T) 113.32 354 T
+(-) 135.36 354 T
+(Heat index in Fahrenheit) 144 354 T
+(HMTR) 90 328 T
+(-) 135.36 328 T
+(Humiture \050apparent temperature\051 in Fahrenheit) 144 328 T
+(WCEQ) 90 302 T
+(-) 135.36 302 T
+(W) 144 302 T
+(ind chill equivalent temperature in Fahrenheit) 154.84 302 T
+(TEXT) 90 276 T
+(-) 135.36 276 T
+(Undecoded data) 144 276 T
+0 10 Q
+2.78 (SPACING PARAMETERS) 153 228.33 P
+1 12 Q
+(BLNK) 90 203 T
+(-) 135.36 203 T
+(Plot a blank, not accounted for in FIL) 144 203 T
+(TER) 323.45 203 T
+(SP) 90 177 T
+(AC) 102.23 177 T
+(-) 135.36 177 T
+(Plot a space, accounted for in FIL) 144 177 T
+(TER) 305.11 177 T
+FMENDPAGE
+%%EndPage: "20" 21
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%Pages: 20 1
+%%DocumentFonts: Helvetica-Bold
+%%+ Times-Roman
+%%+ Helvetica
+%%+ Helvetica-Oblique

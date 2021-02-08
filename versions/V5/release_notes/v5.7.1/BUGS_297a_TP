@@ -1,0 +1,5 @@
+Track 297:  Small (400x320) GIF images hang the GF device driver
+
+The HPC discovered that small (400x320) GIF images hang the GF device driver on
+Linux platforms.  It was found, with the help of Purify, that we were releasing 
+some dynamic memory too soon.  This is now fixed.

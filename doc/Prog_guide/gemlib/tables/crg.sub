@@ -1,0 +1,51 @@
+#------------------------------------------------------------------------
+# crg.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		 9/97	Original
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Added crgsetcir.c
+#------------------------------------------------------------------------
+
+crgclear.c	- Clear Range Record
+crgclroffst.c	- Clear File Position 
+crgdeselect.c	- Turn Off Selected Flag
+crgget.c	- Get Range For One Element
+crggetinx.c	- Get Index Of One Element
+crggettxtbox.c	- Get Text Box Coordinates
+crgggbnd.c	- Get Boundary of Group
+crggginx.c	- Get Range Record Index for Group
+crgggnel.c	- Get Total Number Of Elements In Group
+crgggnxt.c	- Get Next Group Number
+crgggrp.c	- Get Group Type And Number
+crggoffset.c	- Get File Position Of Element
+crggrfrsh.c	- Get Refresh Area
+crggsel.c	- Get Selected Flag
+crggtyp.c	- Get Group Type And Number
+crginit.c	- Initialize CRG Library
+crgnewinx.c	- Get Index Of Empty Range Record
+crgrngpt.c	- Get Range Coordinates for a Point
+crgsave.c	- Put Range Into File
+crgset.c	- Set Range In Screen Coordinates
+crgsetcir.c	- Set Range For Circle
+crgsetltln.c	- Set Range In Lat/Lon
+crgsetsym.c	- Set Range For Symbol
+crgsettxt.c	- Set Range For Text
+crgsetwnd.c	- Set Range For Wind
+crgsgrp.c	- Set Group Type And Number
+crgsoffset.c	- Update Location Of Record
+crgssel.c	- Set Selected Flag For Element
+crgstyp.c	- Set VG Class And Type
+# testcrg.c	- CRG Library Test Program
+
+#------------------------------------------------------------------------

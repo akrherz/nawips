@@ -1,0 +1,56 @@
+#!/bin/sh
+#------------------------------------------------------------------------
+# build
+#
+# This script builds dxmain and dxtext.
+#
+# Input parameters:
+#	$1	directory where custom routines reside.
+##
+# Log:
+# M. Linda/GSC		12/97	Original
+#------------------------------------------------------------------------
+
+$RM dxmain
+$RM dxtext
+$RM dx.a
+$RM *.o
+
+#------------------------------------------------------------------------
+
+if  [ "$1" = "" ] ; then
+    echo "ERROR: directory path to custom source is needed."
+    exit
+fi
+
+#------------------------------------------------------------------------
+# Program uses GETARG() so the +U77 option is required under HPUX.
+
+if  [ "$OS" = "HPUX" ] ; then
+    getArgLib="+U77"
+else
+    getArgLib=""
+fi
+
+#------------------------------------------------------------------------
+
+$RM dx.a
+$FC $FFLAGS -c *.f
+$AR $ARFLAGS dx.a *.o
+$RM *.o
+
+#------------------------------------------------------------------------
+
+$FC $FFLAGS $getArgLib $LDFLAGS -o dxmain dxmain.f $1/dxfoot.f dx.a $GEMLIB
+
+$FC $FFLAGS $getArgLib $LDFLAGS -o dxtext dxtext.f $1/dxfoot.f dx.a $GEMLIB
+
+$RM *.o
+$RM dx.a
+
+#------------------------------------------------------------------------
+
+mv dxmain $1
+mv dxtext $1
+
+#------------------------------------------------------------------------

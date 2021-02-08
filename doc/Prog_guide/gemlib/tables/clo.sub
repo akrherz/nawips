@@ -1,0 +1,53 @@
+#------------------------------------------------------------------------
+# clo.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		10/97	Original
+# I. Durham/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Updated
+#------------------------------------------------------------------------
+
+clocitygall.c	- Return All Parameter Info Indexed By City Hot list
+cloclosest.c	- Return Index To Lat/Lon of Closest Geo-Location
+clocntybgall.c	- Return All Parameter Info Indexed By County Hot
+ list
+clocntybinply.c	- Determine Counties Contained Within A Ploygon
+clocntygall.c	- Return Parameter Info Indexed By County Hotlist
+clocntyghot.c	- Get County Hotlist Pointers Into County Structure
+clocntygpoly.c	- Same As CLO_CNTYGPLOY With Appropriate String Length
+clocntyphot.c	- Put County Info Into County Hotlist
+clocntyrhot.c	- Remove County From Hotlist
+clocompass.c	- Compute 16-Point Compass Direction 
+clodirect.c	- Compute Nearest Station, Distance, Direction 
+clodist.c	- Calculate Great-Circle Distance Between Two Earth Points
+clodltln.c	- Compute Lat/Lon From Distance, Direction, From Lat/Lon
+clofindcity.c	- Find City Information Based Upon City Name
+clofindcnty.c	- Find County Information Based Upon County Name
+clofindmatch.c	- Find Information Based Upon Type and Name
+clofindstn.c	- Find Station Information Based Upon Station Name
+cloinit.c	- Initialize "CLO" Values
+clolonin.c	- Extract Integer Array Into Longitude Array
+cloqcounty.c	- Determine County That Contains Point
+clordcity.c	- Load City Location Table Into Structures
+clordcnty.c	- Load County Location Table Into Structures
+clordcntyb.c	- Load County Bounds Information Into Structures
+clordstn.c	- Load Station Table Into Structures
+clotclosest.c	- Return Index To Lat/Lon of Closest Geo-Location
+clotdirect.c	- Compute Nearest Station to Lat/Lon 
+clotgid.c	- Return Parameter Info In County Hotlist With String Length
+clotgltln.c	- Return Parameter info In County Hotlist
+clotinltln.c	- Return Lat/Lons Within Lat/Lon Bounds
+clotinpoly.c	- Return Lat/Lons Within Polygon
+clovorgall.c	- Return Parameter Info In VOR Hotlist With String Length
+#testclo.c	- CLO Library Test Program
+#------------------------------------------------------------------------

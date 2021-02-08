@@ -1,0 +1,20 @@
+BUGS
+
+	A. Watch lock/resize marine zone and CW error (SPC)
+
+	Fixed a bug reported by the SPC. With inclusion of marine zones 
+	turned on, if a watch originally included a marine zone and then 
+	was resized and the marine zone counties were deleted from the 
+	watch, "CW" was included in the watch text products when it 
+	should not have been.
+
+	Also corrected, if ADD_MARZON in prefs.tbl is set to FALSE, 
+	"CW" and Great Lake information was not being added to the 
+	watch text files.
+
+	B. NMAP2 seg. faulted with out marine zones on the SEV product
+
+	Fixed a bug in which if marine zones did not exist, NMAP2 would
+	crash when trying to create the SEV watch text product. 
+
+

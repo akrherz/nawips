@@ -1,0 +1,66 @@
+#------------------------------------------------------------------------
+# pc.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 9/97	Updated
+#------------------------------------------------------------------------
+
+# pccing.f	- 
+# pcckpm.f	- 
+# pcclcd.f	- 
+# pcclyr.f	- 
+# pccmdt.f	- 
+pccmlv.f	- Compute Station And Level Parameters
+pccmst.f	- Compute Station Data
+pccmvr.f	- Compute Data For Vertical Level
+pccmvs.f	- Compute Data For Level Number
+# pccomp.f	- 
+# pccscd.f	- 
+# pccstb.f	- 
+pcdfls.f	- Define Station And Level Parameters
+pcdflv.f	- Define Computed Level Parameters
+pcdfst.f	- Define Computed Station Parameters
+# pcdhgt.f	- 
+# pcdpth.f	- 
+# pcdset.f	- 
+pcflvl.f	- Find Levels In A Coordinate System
+# pcfndl.f	- 
+# pcftop.f	- 
+# pcfunc.f	- 
+# pcgcnd.f	- 
+# pcglev.f	- 
+# pcinid.f	- 
+pcinit.f	- Initialize PC Subroutines
+# pcinth.f	- 
+pcintp.f	- Interpolate Between Two Levels
+# pclyrd.f	- 
+# pcmeth.f	- 
+# pcmhgt.f	- 
+# pcmvrt.f	- 
+# pcphgt.f	- 
+# pcpsym.f	- 
+# pcpval.f	- 
+# pcpwtr.f	- 
+# pcsfcz.f	- 
+# pcsing.f	- 
+# pcsint.f	- 
+pcslcd.f	- Define Level Conditions
+# pcslyr.f	- 
+pcsscd.f	- Define Station Conditions
+pcsstn.f	- Define Station Information
+pcstim.f	- Set Date/Time
+# pcsvrt.f	- 
+# testpc.f	- PC Library Test Program
+
+#------------------------------------------------------------------------

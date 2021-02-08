@@ -1,0 +1,20 @@
+TRACK 249:  QSCT
+TASK NAME:  QuikScat data--Allow plotting as arrows and directional arrows
+
+The capability to plot QuikScat data as directional and regular arrows has been
+added to NMAP2 and GPMAP.  A type attribute, which specifies the type of wind
+vector has been added to the ARRW attribute line in miscset.tbl read by NMAP2:
+ARRW size/head_size/width/type.  The value of type determines which of three
+buttons in the NMAP2 user interface will pop up when the "Edit Source" button
+is clicked.  The three buttons have the labels:  (a) "Barb"--only wind barbs
+can be plotted,  (b) "Arrw"--only directional arrows can be plotted, and (c)
+"Arrw/Barb"--the type of wind vectors (directional arrow, regular arrow, or wind
+barb) is selectable.  If type is 1, then the button will be labeled "Arrw".  If
+type is 2, then the button will be labeled "Barb".  If type is 3, 4, or 5, then
+the button will be labeled "Arrw/Barb", with the initial selection being 
+directional arrow, regular arrow, and wind barb respectively.  If type is
+missing or 0, then if the arrow head size is greater than 0, then type is set
+to 1 for directional arrows, otherwise it is set to 2 for wind barbs.  All
+other values of type are considered invalid and will be set to 5 for user
+selectable wind vector with wind barb set initially.  The value of type has
+been set to 5 for QSCT and QSCT_HI in miscset.tbl. 

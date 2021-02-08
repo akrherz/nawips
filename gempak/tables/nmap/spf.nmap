@@ -1,0 +1,37 @@
+!* SPF.nmap
+!************************************************************************
+!*                                                                      *
+!*                 SPF user table in NMAP (spf.nmap)			*
+!*                                                                      *
+!* This table is used for setting up the SPF user information in NMAP. 	*
+!*                                                                      *
+!* title:  title name shown in the data source selection box   		*
+!*                                                                      *
+!* user_login:  user login name   					*
+!*                                                                      *
+!* spf_dir:  SPF file directory full path name for that user     	*
+!*                                                                      *
+!* LOG:                                                                 *
+!* J. Wu/GSC          06/01   copy from vgf.nmap     			*
+!************************************************************************
+!
+!
+!title		spf_dir 
+!------------------------------------------------------------------------
+test_data	$GEMDATA/spf
+Pac_HS          /export/opcph/pachs
+Atl_HS          /export/opcah/atlhs
+Pac_Reg         /export/opcpr/pacreg
+Atl_Reg         /export/opcar/atlreg
+OPC_Outlook     /export/opcol/outlook
+bawx		/export/hbawx1/bawx
+eff1		/export/heff1/eff1
+eff2		/export/hww1/eff2
+eff3		/export/lnx159/eff3
+eff4		/export/lnx162/eff4
+nppu2		/export/hqpf1/nppu2
+nppu3		/export/hqpf2/nppu3
+medr		/export/hmedr2/medr
+medr3		/export/hmedr1/medr3
+sfc1		/export/hsfc1/sfc1
+dwm		/export/hdwm/dwm

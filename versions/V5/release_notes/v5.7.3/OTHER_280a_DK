@@ -1,0 +1,8 @@
+GFS MOS Changes for Sky Cover, Ceiling Height, Visibility (ALL)
+
+On May 18, 2004 the GFS MOS content was modified for the above
+3 types of data, per Technical Implementation Notice (TIN) 04-09.
+GEMPAK parameter documentation has been updated accordingly for
+parameters FCIG and FVSA.  (Required code changes, transparent to 
+the user, were made in release 5.7.2)
+

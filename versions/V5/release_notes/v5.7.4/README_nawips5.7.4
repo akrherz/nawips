@@ -1,0 +1,657 @@
+               N-AWIPS 5.7.4 Release Notes
+                   	09/14/04 
+
+Version 5.7.4 covers development from June 17, 2004 to September 13th.  
+
+******************************************************************************
+
+I.  Product Generation Changes
+	
+    A.	NMAP2 Product Generation Improvements 
+
+	1. Added "All On"/Off" button to the Layer Control (ALL)
+
+   	A new button, "All On"/All Off" has been added to toggle all layers
+	on or off for display.   This button turns on/off all layer display
+	check boxes.  Note that the active layer is always displayed 
+        regardless of the status of its corresponding check box.
+
+	2. Added Filter Control to Support GFA (AWC)
+
+        A time filter mechanism has been added to PGEN.  This provides a 
+        means to selectively display GFA, AIRMET, and non-convective SIGMET
+        elements based upon their forecast time.
+        
+        The "Filter Control" GUI is started from the PGEN palette by clicking 
+        the "Filter" button under the Actions (2nd group from the top).  The 
+        "Filter Control" GUI displays all the specified times in the filter.tbl 
+        (located in $GEMTBL/pgen/).
+
+        The "Filter Control" GUI starts with no times selected.  If there are 
+        any GFA elements drawn, they disappear when the filter control is  
+        invoked.  The elements still exist, however they are not displayed.  
+        The user can select one or more display times by checking one or more 
+        check boxes.  As soon as a check box is turned on, all GFA AIRMETs 
+        and SIGMETs which have a forecast hour that exactly matches one of the 
+        selected times are displayed.  Please note this is an exact match.
+        The "0" time matches the "0" forecast hour, while the "0-6" time (a 
+        smear time) matches the forecast time of "0-6", and does not match "0",
+        "3", or "6".
+
+        The "Filter Control" GUI allows hot keys to enable the user to step 
+        from one time to the next.  These are the "[" and "]" keys.  The "[" 
+        key steps the control from right to left and the the "]" steps from
+        left to right.  The "Filter Control" also includes an 
+        "All On"/"All Off" button to simplify operation.
+
+	3. Graphical Forecast for Aviation (GFA) GUI Enhancements (AWC)
+
+	Linkages have been created between the GFA GUI, the "Layer Control",
+	the "Filter Control" GUIs, and the data loop.  These linkages, which are
+        described below, facilitate the access of GFA hazards and forecast 
+        times.
+
+	Each GFA hazard is accessed in a separate product generation layer.
+	Hazard attributes are controlled by the GFA GUI and linked to the 
+        product generation layer name.  Forecast times are accessed using the 
+        "Filter Control" GUI and are linked to the "Forecast Hour" selections
+	in the GFA GUI.
+
+	    a)  GFA Type to Layer Control Linkage.  
+
+	    When the GFA (or AIRMET/SIGMET) GUI starts, an effort is made to 
+            match the current layer name to the hazard listed in the "Type" 
+            pop up list.  If an exact match can be made between the layer 
+            name and the "Type" pop up list, then that entry is automatically 
+            selected in the GFA GUI.  
+
+            If the user changes the "Type" pop up selection in the GFA GUI, 
+            and if there is a matching layer by the same name, it 
+            automatically becomes the active layer.  This means that if the 
+            user changes the "Type" for a GFA from Turb to Ice, the layer 
+            control changes the active layer to the layer named Ice (if there 
+            is one).  The layer names can be set in an .lpf file or manually 
+            edited.  The "Type" pop up entries are defined in the gfa.tbl, 
+            airmet.tbl, and sigmet.tbl tables located in $GEMTBL/pgen.  Note 
+            that the active layer and thus the GFA hazard can be quickly 
+            selected using the number hot keys to switch the active layer. 
+            (See item 5 below for details on the hot keys).
+	
+            b)  GFA/AIRMET/SIGMET Forecast Hour to Filter Control Linkage.  
+
+            When the GFA (or AIRMET/SIGMET) GUI starts, an effort is made to 
+            match the forecast hour with the first selected time in the "Filter 
+            Control" GUI.  If an exact match of the first filter time string 
+            with one of the forecast hour menu entries can be made, then that 
+            menu entry is the selected forecast time in the GFA GUI.  Note 
+            that an exact string match is required.  The 0-3, 3-6, and 0-6 
+            filter times are for smears and do not match individual hour(s).
+
+            If the user selects a new forecast hour in the GFA GUI, and that 
+            time has not already been selected in the filter control, it is 
+            turned on.  No other times are turned off, however.
+
+	    A hazard number has been added to the GFA element.  This gives the
+            user the means to link GFA elements depicting the same phenomena at
+            different forecast times.  The linkage enables the auto select 
+            for edit feature (described below).  It also allows the "smear all"
+            capability that will be added in a future release.  The hazard 
+            number is displayed in the GFA label on the first line at the 
+            right.
+ 
+            An automatic selection for edit capability has been added using the 
+            hazard number.  It works in concert with the "Filter Control" GUI.  
+            Assume there are GFAs with the same hazard number drawn at hours 0, 
+            3, and 6.  Select the 0 time in the filter, and select the 0 hour 
+            GFA element for editing.  The GFA GUI is started and allows the GFA 
+            element to be edited.  Now, with the 0 hour element still selected, 
+            step to hour 3 in the filter using the "]" hotkey.  The filter 
+            turns off hour 0 and turns on hour 3.  The GFA element at hour 3 
+            is automatically selected for editing.  Stepping once more with 
+            the "]" key selects the 6 hour GFA element.
+
+            c)  GFA/AIRMET/SIGMET GUI to Data Loop Linkage.	 
+
+	    If GFA GUI is displayed for drawing new elements, and the user 
+            steps to a different data loop, the GFA GUI is automatically 
+            restarted.  Any GFA element that was only partially drawn is lost.  
+            However, if all the points were drawn but the text was not yet 
+            placed, the text is positioned in the center of the GFA.
+
+ 	4. Smear Improvements for GFA (AWC)
+
+  	A small GUI has been added to the Smear action.  This GUI provides
+	the means to control the color of the resulting new element
+	generated by the smear.  Additional element attribute controls will be
+	added in later releases.
+
+	The new smeared element now has the worst case flight levels 
+	(highest top and lowest bottom) of all the selected snapshot elements.
+	For the GFA element the smear also includes the worst case description
+	value.  Worst case is determined from the order listed in the 
+        table $GEMTBL/pgen/gfa.tbl, where the order goes from least to 
+        most "severe" conditions. 
+
+        5.  Hot Keys Added to the Layer GUI (AWC, ALL)
+
+	Hot keys have been added to control which layer is active.  Keys 
+        1...0 switch the active layer to layers 1 - 10, respectively.  The 
+        key combination of Shift and 1...0 change the active layer to layers 
+        11 - 20, respectively.
+
+  	6.  Interpolation Enhancements for GFA (AWC)
+
+	Interpolation is now restricted to work only on GFA/AIRMET/SIGMET 
+	elements of the same Area/Type.  Thus GFA/Turb elements can only be
+	interpolated with other GFA/Turb elements.  
+
+	The interpolation tool now provides linear interpolation of the flight 
+	levels.  It also uses the worst case description value for GFA 
+        elements.  Worst case is determined from the order listed in the 
+        table $GEMTBL/pgen/gfa.tbl, where the order goes from least to 
+        most "severe" conditions.
+
+        7. Use SFC in GFA (AWC) 
+  
+	The string "SFC", meaning surface, is now available for use in the 
+	bottom flight level of the GFA/AIRMET/SIGMET GUI.  The user can type in
+	"SFC" or some portion thereof (case does not matter), and the "SFC" 
+	is automatically completed (and converted to upper case).  SFC is
+	assumed to be a value of 0 with regards to the interpolation and smear
+	tools.
+
+	8. Enhanced Symbol Labeling (HPC)
+
+        Symbols now support text label attributes based on 
+        $GEMPAK/pgen/grptyp.tbl entries.  This capability is similar to the 
+        functionality that lines support.  When the user clicks the label 
+        button in the symbol GUI to On, the label menu is made available.  
+        The list of labels is taken from the grptyp.tbl.  Each label is now 
+        linked to an attribute string (also in the grptyp.tbl) that can be 
+        used to set default label attributes.  So for example, the first 
+        label, say "1006", for a specific group can default to a color of 
+        cyan and a font of Courier, while the next label, "1008", could 
+        default to green and a font of Helvetica.
+
+	9.  VAA (Volcanic Ash Advisory) Updates  (NESDIS, AR)
+
+	The following enhancements were made at the request of NESDIS:
+
+           a. Corrected the zero prefix in volcano longitude.
+           b. Removed "OTHERS" choices from VAA ash cloud GUI.
+           c. Allowed editing of the 6, 12 and 18 hour forecast information.  
+              Users may now change the information presented in the "Observed 
+              and Forecast Ash Cloud Information..." popup labeled 
+              "VAA Ash Cloud Info".  These changes are reflected in the final 
+              text product.
+
+	10. Added Checks on Watch Format GUI entries (SPC)
+
+	The following checks were added to the Watch Format GUI to 
+	improve quality control:
+	
+            a. Check the current watch number against the list of watch
+               replacement numbers.  If the current watch number is in
+               the replacement watch number list, a warning message
+               appears.
+            b. Check whether the current number has already been used. If
+               it has been used, the user is prompted to overwrite the files.
+            c. Check that the WSM check box for reference mesoscale
+               discussion is toggled off when the GUI pops up.
+
+	11. Updated the Enhanced WSM and Status Message Display (SPC)
+
+        A line containing the watch type and watch number 
+        ("STATUS REPORT FOR W? ####") has been added to the enhanced watch 
+        status message.  This line can be optionally added by setting the 
+        variable ADD_WSM_WS_WT to TRUE in the table, $GEMTBL/config/prefs.tbl.
+
+        Also, the old WSM text has been replaced with the enhanced WSM text 
+        in the "Watch Status Save" GUI.  Both WSM text files are still 
+        saved to the local directory.
+
+	12. NMAP Breakpoint GUI and Text Product Enhancements (TPC)
+
+    	Breakpoint selection for non-special geographies (meaning standard
+    	breakpoint pairs, not islands and water) can now be either from the 
+    	official breakpoints or from official and supplemental points.  The 
+    	"Breakpoint Type" menu is used to make this selection.  By selecting 
+    	"Official" only the official breakpoints can be selected.  By selecting 
+    	"All" the user can choose from both official and supplemental 
+        breakpoints.
+    
+        Special geographies are now functional.  These include islands and 
+        bodies of water.  In order to use either of these categories, 
+        click on the TCA icon on the palette to start the TCA window.  
+        Select "Islands" or "Water" in the Special Geography menu.  Now 
+        click on New Segment.  The displayed breakpoints correspond to 
+        the selected geography.  Use the left mouse button to select points 
+        for the segment.  The left mouse button selects both new points and 
+        switches off those points that are already selected (toggle action).  
+        To complete the segment, click on the middle mouse button.  The segment 
+        is displayed in the TCA window as either ISLANDS_# or WATER_#.  The # 
+        is just a sequentially assigned number.  It has no other meaning.  The
+        # is used to identify the group of points, since the special 
+        geography segment may contain more than two breakpoints.
+    
+    	Multiple selection of special geography points is also available.  
+        After clicking on New Segment, click and hold mouse button 1 down.  
+        Now drag the mouse and a temporary box is displayed.  All 
+        breakpoints within the box are selected when the left mouse 
+        button is released.  An alternate method is to use the shift button 
+        and the left mouse click at the same time.  This action creates a 
+        temporary closed figure.  Click with the left mouse button to define 
+        its points.  When finished, click the middle mouse button 
+        and all breakpoints within the defined figure are selected.  If 
+        unwanted points are inadvertently selected they may be de-selected 
+        using single clicks of the left mouse button.  
+
+	The breakpoint text message may now be created using the TCA element in
+    	PGEN.  After a TCA has been created, select it and click on the "Create
+    	Text" button.  The text message is created and displayed.  The message 
+    	is saved into a local file (the file name is displayed below the text 
+    	message).  Click the "Cancel" button and the text is not saved.
+
+	Note that the text message expects to find a VG file containing the 
+        previous TCA element (earlier advisory number) for the storm.  If 
+        that file is not present in the local directory, then the text message 
+        is created as if the storm is new.  Also note that in this release
+	the text message can only be generated with U.S. Mainland breakpoints.
+	Other breakpoint processing will be added in future releases.
+
+	Also, corrected a problem where selection of breakpoint segments
+	was not working properly when roaming.
+  
+	*** Important Please Note ***
+
+        Please note that in this release the internal structure of the TCA was 
+        modified.  As a result, TCAs in 5.7.4 are incompatible with all 
+        previous releases.  VG files from earlier NMAP2 versions should not 
+        be used.  The NMAP breakpoint GUI is for TPC testing and evaluation
+	purposes only, in preparation for the 2005 Hurricane season.
+
+    B.  Product Generation Pre/Post-Processing Programs
+
+	1. SIGMET output file location (AR, AWC)
+
+	A new option, SIG_FILE_DIR, has been added to the preferences table, 
+        $GEMTBL/config/prefs.tbl, that specifies the location of the 
+        directory where the SIGMET text product are saved.
+
+	2. Implement Time Filter in GPMAP for GFA (AWC)
+
+        The VGFILE parameter now includes a filter parameter.  The filter 
+        parameter can be used to selectively display the GFA/AIRMET/SIGMET 
+        elements in a VG file based upon element forecast time.  
+
+        The filter string is a series of times separated by ";".  So a filter 
+        string of "0;3;6" would display only GFA elements that have a forecast 
+        time of 0, 3, or 6.  Note that this time match must be exact -- "0-6" 
+        would display a smeared GFA but not the snapshot GFAs at 0, 3, and 6.  
+
+        Elements that do not have a forecast time (meaning all elements 
+        except for the GFA, AIRMET, and non-convective SIGMET) are unaffected
+        by the filter.  They are always displayed.  
+
+	3. Rename FROM line text file for AIRMETS (AWC)  
+
+        The From Line for the new AIRMETs (class MET, not class SIGMET) has
+        been changed.  The From Line is now saved into a file with this naming
+        convention:
+
+                ZULU_#.frm      (for icing areas)
+                TANGO_#.frm     (for turbulence areas)
+                SIERRA_#.frm    (for all other AIRMET area types)
+
+        The # is the AIRMET's sequence number.
+
+	4.  Changed Hash Mark Speed and Flight Level Assignment for Jets (AWC)
+
+	Program VG2UKA, which converts high-level SigWx data from a VG file 
+        to the UKMET ASCII format, has been modified to conform to 
+        revised specifications for the assignment of wind speed and flight 
+        level values to hash marks.
+
+	The way in which wind speeds are defined for hash marks has been 
+        changed in the WAFC (World Area Forecast Center) documentation.
+	The hash mark wind speeds are now "maximum speed relative as opposed 
+        to minimum wind (80 KT) relative."  Ideally, each hash mark represents 
+        a 20 knot change (decrease) moving away from the nearest maximum wind 
+        speed defined for a barb.  Error handling for miscoded hash marks is 
+        now done in accordance with specifications received from the AWC.  
+        The WAFC documentation also indicates that each hash mark is assigned a 
+        flight level.  The flight level is equal to the level assigned to 
+        the nearest wind barb.
+
+	5.  Converted New Jet Element from ASCII to VGF (AWC)
+
+	Program SIGAVGF, which converts SIGWX data from the UKMET browsable
+	ASCII format to a VG file, now creates jet elements instead of
+	grouped jets.  This means that flight level deltas can now be
+	included as part of the output VG file.  For any given jet, the
+	VG file includes all maximum winds and all winds with flight
+	level deltas as barbs, and alternates barbs and hash marks for
+	the remaining wind points.
+
+	6.  Added More Control for Jet Element Attributes (AWC)
+
+	Jet element attribute settings for line, wind barbs, text and 
+	hash marks may now be specified in $GEMTBL/pgen/setting.tbl and
+	$GEMTBL/pgen/uattribd.tbl, for NMAP display and post-processing,
+	respectively.  Note that "TEXT TYPE" has been added to these tables.
+	Also note that the barb and text always use the same color.
+	
+	7.  Added 'TEST' Wording to the WOU Update Text Product (SPC)
+
+	Added logic so that if a test watch is issued, the WOU update text
+        product has the following string in the MND line:
+ 
+               "TEST...TORNADO WATCH OUTLINE UPDATE FOR WT 138...TEST"
+
+        Also, the product code in the VTEC line is changed from the 
+        current setting in $GEMTBL/txtprd/woudef.tbl to the character 'T'.
+
+        If the watch is not a test watch, then the MND line has the following
+	string:
+
+               "EXPERIMENTAL...TORNADO WATCH OUTLINE UPDATE FOR WT 138"
+
+        and the product code for the VTEC is obtained from the woudef.tbl
+        table as in previous versions of the program.
+
+	8.  Final WOU Update State Zone String and VTEC Change (SPC)
+
+	The State Zone and VTEC strings were placed above the No Active
+	County and Marine Zone strings.  This change was done at the
+	request of the SPC to make the Final WOU consistent with the
+	initial WOU.
+
+	9.  Experimental Hurricane Graphics Program (TPC)
+
+	Program GPTCWW, introduced in release 5.7.3, has been improved to
+	allow the plotting of watches and warnings for the smaller
+	Caribbean islands and for certain small bodies of water (sounds,
+	bays and lakes).  It also allows supplemental breakpoints
+	(non-official breakpoints which appear in the breakpoint table) to
+	be plotted as the endpoint(s) of a watch or warning segment.
+
+	Please note:  GPTCWW is for test and evaluation purposes only.
+	GPKGRF continues to be the operational program for creating the
+	watch/warning graphic.
+
+II.  NMAP2 Display Improvements 
+
+    A.  Filter display of HRCN data by forecast hour (OPC, ALL)
+
+	Added the ability to display HRCN output based on forecast valid time
+	instead of bulletin time in NMAP2 and GPMAP.  Seven new flags for each
+	of the forecast positions have replaced the flag to plot all the
+	forecast positions in the table $GEMTBL/config/miscset.tbl.  See this
+	table for additional details.  Based on the setting of the flag, 
+	the corresponding wind/sea quadrant arc is plotted.  To set the 
+        flags in NMAP2, see the HRCN Attributes window that pops up when 
+        the "Edit Source" button is clicked in NMAP2.  For instructions to 
+        use the new flags in GPMAP, type "help hrcn".
+
+	**** Important Please Note ****
+
+	Since miscset.tbl was modified, old SPF files with HRCN data must 
+        be recreated to use the new flags.
+
+    B.	Added Plotting of Ambiguity QuikScat Data (TPC, OPC)
+
+	NMAP2 and GPMAP have been enhanced to allow plotting of the four 
+        QuikScat ambiguity files.  Each ambiguity file is treated as a 
+        separate miscellaneous data type:  AMBG1, AMBG2, AMBG3, and AMBG4.  
+        Each ambiguity is defaulted to a different color in NMAP2 to allow
+	the ambiguities to be distinguished if they are displayed together. 
+        Select each file using the the "MISC" data category in the NMAP 
+        "Data Selection Window".  Desired attribute settings can be saved to 
+        SPFs and easily restored for future displays. 
+
+	The table $GEMTBL/config/miscset.tbl has been modified to include
+	default attribute settings for each ambiguity data type.  See
+	this table for additional information.  Also, the table
+	$GEMTBL/config/datatype.tbl has been modified to add entries
+	for each ambiguity data type.  See this table for additional
+	details.
+
+III. Decoder Improvements
+
+    A.  AIRMET Valid Time Decoding (AWC)
+
+	The AIRMET decoder DCAIRM has been modified to provide three times 
+        instead of two: the issue time, actual beginning valid time, and 
+        actual ending valid time.  See dcairm.hlp for the new format of the 
+        decoded file.  
+
+	NMAP2 and GPMAP have been modified to process the new decoded AIRMET 
+        files as well as files in the old format.  A new flag has been added 
+        to allow the user to select whether to plot AIRMETs based on the 
+        issue time or the beginning valid time.  Type "help airm" in GPMAP 
+        for instructions on using the new flag.  To use the flag in NMAP2 
+        see the AIRM Attributes window that pops up when the "Edit Source" 
+        button is clicked in the "Data Selection Window" of NMAP2 for 
+        MISC/AIRM data.  
+
+	The flag "Using Issue Time" has been added to the AIRM section of the 
+        table $GEMTBL/config/miscset.tbl to specify whether the issue time
+	is used for NMAP AIRMET plotting.  Set the flag to 1, to use 
+	the issue time.
+
+	***** Important Please Note ****
+
+	Since miscset.tbl was modified, old SPF files using AIRMET data should 
+        be recreated.
+
+IV.  General Improvements
+
+    A.  GD programs use the CPF file points (ALL)
+
+	GD programs have been enhanced to use lat/lon points from NMAP 
+        cursor point files (CPFs).  The CPF name has been added to the GEMPAK 
+        parameters GPOINT and CXSTNS for use by the GD programs gdcross, 
+        gdprof, gdthgt, and gdtser.  This feature allows the exact latitude 
+        and longitude of a point specified within the NMAP seek function to 
+        be used by these programs.  The CPF is created by clicking the 
+        "Save CPF" button from within seek.
+
+	For more information, view the help files for GPOINT and CXSTNS at 
+        $GEMHLP/hlx/<name>.hl2 or enter help on these parameters when 
+        running GEMPAK programs.  
+
+	**** Important Please Note ****
+
+	Each CPF must be saved with the correct number of lat/lon pairs,
+	i.e., one or two in order for the GD programs to properly execute.
+	For example, a CPF must contain two lat/lon pairs, for a program
+	that requires two points, e.g., gdcross; and one pair for a program
+	that requires one lat/lon pair, e.g., gdprof.
+
+    B.	Added Vector Information to Graph-to-Grid Info File (ALL)
+
+        Wind barb and vector information (speed, direction, location, etc.) has 
+        been added to the information file, '*.info'.  This information is in 
+        preparation for later development of generating U and V grids from 
+        randomly placed wind barbs/vectors.  The vector information should 
+        not impact the current graph-to-grid performance or capabilities.
+
+    C.  Added Meteorological Impact Statements to NWX (AWC)
+	
+	Added Meteorological Impact Statements to NWX.  Click on 
+	"Met Impact Statements" under the "Aviation Forecasts" data category 
+	to display these messages.
+
+	These statements are located in $TEXT_DATA/aviation/mis/ in the
+	text data base.  The LDM pqact.conf and scour.conf have been 
+	modified to parse and delete these data, respectively.  In addition,
+        a new NWX table, $GEMTBL/nwx/mis.bull has been added to allow NWX to 
+        display the statements and the table, $GEMTBL/nwx/master.tbl has
+	been updated, accordingly.
+
+    D.  Increased Maximum Grid Access Size on AIX (NCO)
+
+	The maximum number of grid points that GEMPAK can access has been
+	increased to 750,000 to match the other platforms.  This limit
+	had been less on AIX because of AIX4 workstation limitations.  AIX5
+	does not pose this limitation and AIX4 is no longer supported.
+
+    E.	Increased Maximum Number of Reports for NWX (SPC)
+
+	The maximum number of reports that can be displayed in NWX was 
+        increased from 300 to 1000 at the request of the SPC.
+
+V.  Bug Corrections 
+
+    A.  Corrected NWX Iconification Problem (ALL)
+
+	NWX can now be iconified.  In version 5.7.3, this capability was
+	inadvertently removed.
+
+    B.  Corrected GIF Image Generation Problem (AWC)
+
+	A problem where the GIF driver did not create output for image
+	data was corrected. 
+
+    C.  Corrected Marine Zone Centroids for WBC (SPC)
+
+	Fixed a problem where some centroids were not located in the
+        correct county or marine zone. Added checks when creating the
+        maps and bounds files to check if the centroid is properly
+        located.
+
+    D.  Fixed Handling of St. Lawrence River in WBC Products (SPC)
+
+	Corrected a bug with the WBC text products where the St. Lawrence 
+        River was listed as a state in SAW, SEL and the WOU initial.  It is 
+        now treated as a marine zone and only appears in the 'COASTAL WATERS' 
+        marine zone listings in the WCL, WOU initial, and enhanced WSM.
+
+    E.  Watch lock/resize marine zone and CW error (SPC)
+
+	Corrected a problem where the string "CW" was erroneously included
+	in watch products if the watch originally included marine zones and 
+        then was resized not to include marine zones.
+
+        Also corrected the problem where if ADD_MARZON was set to FALSE in 
+        the prefs.tbl, "CW" and Great Lake information was not properly added 
+        to the watch text files.
+
+    F.  NMAP Print Problem (TPC, ALL)
+
+	Corrected a problem where NMAP would not print out data that included
+	images.
+
+    G.  NMAP Lat/Lon Display Problem (TPC)
+
+	Corrected the problem where latitude-longitude lines were not being  
+        plotted correctly on unremapped satellite imagery.
+
+VI. Known Bugs  
+
+    A.  Default Button In Custom Map Definition GUI (ALL)
+
+        The "DEF Content" button in the "Custom Map Definition" GUI
+        does not work.  It is supposed to list the default map
+        projection for selected geographic regions.
+
+VII. Map and Table File Updates
+
+    The following summarizes significant table changes.  See 
+    $NAWIPS/versions/tables.log and nawips.log for a complete list of all 
+    table and map file changes. 
+
+    A.  Updated Regional Temp and Precip Table for NWX (ALL)
+
+        Updated the regional temperature/precipitation table, rgtmpc.stn,
+        to include new and modified stations and to add the state IDs.
+        This table is located in $GEMTBL/nwx.
+
+    B.  Updated the Marine Zones Map and Table Files (ALL) 
+
+	Updated the marine zones map and table files in accordance with 
+        SCN 04-31 and with SCN 04-17.  The Marine Zones in WFO HFO 
+        (Honolulu, HI) have been reconfigured.  Also, the wording of ANZ070 in 
+        CAR was modified and marine zone AMZ435 in WFO JAX was removed.
+
+    C.  Added Map and Bounds Files for Six AIRMET Regions (AWC)
+
+	Map and bounds files have been added for the six AIRMET regions.
+	The map file is $GEMMAPS/airmet.ncp and the bounds file is
+	$GEMTBL/bounds/airmet_bnds.tbl.
+
+    D.  Added Marianas Islands to Volcano Tabe (AWC)
+
+        The Marianas Islands were added to the volcano table, 
+        $GEMTBL/stns/volcano.tbl at the request of the AWC.
+
+    E.	Added Svrwx.bull to NWX Tables (HPC, ALL)
+
+        Added the severe weather summary table, svrwx.bull, to NWX directory
+        of tables.  It is located in $GEMTBL/nwx.
+
+    E.  Corrected Entries in Synoptic Station Tale for NWX (HPC, ALL)
+
+	Several entries in the synoptic station table, $GEMTBL/stns/lsfstns.tbl
+	were corrected to allow NWX access.  NWX should now be able to access
+	all stations listed in the table.  Station IDs and state codes were 
+        added if they were missing.  These changes do not affect the synoptic 
+        data decoder.	
+
+    F.  Added 1000 Fathom Map File (OPC)
+
+	A map file depicting the 1000 fathom contour off the East Coast of the
+	United States and southern Canada has been added.  This file is
+	$GEMMAPS/hikfwa.ncp.  The alias, "1000fthm" has been added to the
+	table $GEMTBL/config/mapfil.tbl to reference the map.  The map appears 
+        as "1000_Fathom" in the NMAP "Overlays" scroll list.
+
+    G.  Updated station tables (SPC, ALL)
+
+        Updated the surface station table, sfstns.tbl, for the SPC by adding 
+        78 new stations and removing 25 inactive stations.  Also updated the
+        xrainsort.tbl with 35 new stations and change the ID for 8 stations.
+
+VIII.   Calling Sequence Changes
+
+    A.  $GEMPAK/source/cgemlib/clo/clordstn.c
+    B.  $GEMPAK/source/textlib/uka/ukajtsp.c
+    C.  $GEMPAK/source/programs/util/sigavgf/sigajet.c
+    D.  $GEMPAK/source/cgemlib/crg/crgget.c
+    E.  $GEMPAK/source/programs/gd/grphgd/grginp.f
+    F.  $GEMPAK/source/bridge/am/amout.f
+    G.  $GEMPAK/source/programs/gp/gpmap/gpminp.f
+    H.  $GEMPAK/source/programs/na/gd2ndfd/ndfdpds.f
+    I.  $GEMPAK/source/gemlib/gh/ghbkrv.c, ghbkgb.f, ghbkpl.f
+    J.  $GEMPAK/source/gemlib/gg/ggwact.f, ggwwtp.f
+
+See the nawips.log and changes.log for additional details concerning
+these routines.
+
+IX. Configuration Management Changes 
+
+    None for this release.
+
+X.  Supported Platform Changes
+
+    Linux version 2.2 is no longer supported.  
+ 
+*****************************************************************************
+
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+     release_build_5.7.4 
+
+To execute the script and save its output in a file type:
+
+     cd $GEMPAK/build
+     release_build_5.7.4 >&! RELEASE_$NA_OS & ; tail -f RELEASE_$NA_OS
+
+The output of the script will be written to RELEASE_$NA_OS.
+
+Note that the build script removes files that have been eliminated in
+this version.  These files must be removed by hand if the build script
+is not executed.  A list of removed files for each release always appears
+in the file: $NAWIPS/versions/remove.log.

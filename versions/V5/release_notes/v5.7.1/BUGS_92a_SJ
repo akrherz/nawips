@@ -1,0 +1,8 @@
+Slow refresh of TPC VG files, with offset text, on MER proj (tpc)
+
+The TPC reported a problem where VG files were loading and refreshing
+slowly. After further investigation, the problem was traced to 
+specifically text objects with X and Y offsets displayed on a 
+cylindrical projection, e.g. Mercator. This problem has now been fixed
+and all TPC VG files load much more quickly.
+

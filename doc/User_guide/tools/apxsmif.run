@@ -1,0 +1,54 @@
+#!/bin/sh
+#------------------------------------------------------------------------------
+#
+#  apxsmif.run
+#
+#  Runs the 'apxsmif' utility.
+#
+#  10/17/96 -- M. Linda
+#
+#------------------------------------------------------------------------------
+
+outPath=../mif
+tplPath=../templates
+
+# Create the destination directory if it does not exist.
+if [ ! -d $outPath ]
+then
+    mkdir $outPath
+fi
+
+# Test to insure that all pertinent environment variables are set.
+envVars="'$GEMHLP'"
+for oneVar in $envVars
+do
+   if [ "$oneVar" = "''" ]
+   then
+      echo "ERROR: One of the environment variables is not set."
+      exit
+   fi
+done
+
+# Get a list of the source names.
+list=`cat ../lists/apx.list`
+
+# Determine the numer of names in the list.
+listLen=`echo $list | wc | awk '{print $2}'`
+
+# Step through all names in the list.
+for oneItem in $list
+do
+   chapter=`echo $oneItem | cut -d"/" -f1`
+   srcName=`echo $oneItem | cut -d"/" -f2`
+
+   optvar="$chapter+$srcName+h+$tplPath+$outPath"
+
+   # Execute the utility.
+#   echo apxsmif.exe $optvar
+   apxsmif.exe $optvar
+
+   # Rename output file.
+   mv $outPath/$srcName.apxmif $outPath/apx$chapter.mif
+done
+
+#------------------------------------------------------------------------------

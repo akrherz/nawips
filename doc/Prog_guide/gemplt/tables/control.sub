@@ -1,0 +1,39 @@
+#------------------------------------------------------------------------
+# control.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+#------------------------------------------------------------------------
+
+gclear.f	- Clear Plot Frame
+gclosp.f	- Close Plot File
+gclpnl.f	- Clear View Region
+gegrp.f		- End Current Drawing Element Group
+genanm.f	- Close Animation Frame Sequence
+geplot.f	- End Current Plot Frame
+ggtpnt.f	- Get Points From Mouse Cursor
+gloopc.f	- Process Animation Commands
+gmesg.f		- Set Frame Title
+goutp.f		- Output Plot
+gqdev.f		- Query Plot Device
+groam.f		- Reposition Device Visible Region
+gsctbl.f	- Set Graphics Color Table
+gsdeva.f	- Set Plot Device
+gsgrp.f		- Start New Drawing Element Group
+gslwin.f	- Make Specified Window Current
+gsplot.f	- Start New Plot Frame
+gsroam.f	- Set Device Visible Region Attributes
+gstanm.f	- Open Animation Frame Sequence
+
+#------------------------------------------------------------------------

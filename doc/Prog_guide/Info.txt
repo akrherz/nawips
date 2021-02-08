@@ -1,0 +1,579 @@
+
+                                                              M. Linda/GSC
+                                                              8 December 1997
+
+
+			Automated Book Builders
+			-----------------------
+
+
+
+This guide describes how to install, build, and run the automated book 
+builders.  The current version generates three books, GEMPLT, GEMLIB, and 
+BRIDGE.  The current method relies on fixed-size fonts for its output (as 
+opposed to proportional-sized fonts).
+
+The book builder software is written in FORTRAN and Bourne shell script.  
+The FORTRAN uses GEMPAK subroutines (only FL, ST, and ER libraries).
+
+The book builder software also uses MPAGE to format the final output into 
+a PostScript form so that identical results can be obtained on different 
+printers, but MPAGE is not essential.  The final output are simple ASCII 
+text files (one file per chapter) that include a form-feed at the end of 
+each page.  Sending the output files (*.out files) directly to a line 
+printer (via the lp or lpr commands) produces acceptable results in most 
+cases.
+
+
+
+Known Bugs
+----------
+
+On 12/97 the book builder software was tested on the following platforms:
+
+        sgi31   =  IRIX   4.0.4
+        sgi69   =  IRIX   5.3
+        sgi10   =  IRIX   6.3
+        sun21   =  SunOS  4.1.3
+        sun17   =  SunOS  5.6
+        hp5     =  HPUX   9 (A.09.01)
+        hp11    =  HPUX  10 (B.10.20)
+
+The following bugs were noted:
+
+    1.  The LISTS script on sun21 does not produce clean results because
+        the ECHO command works differently on SunOS 4 compared to other 
+	platforms.  If the *.list files are generated on another platform, 
+	or cleaned up manually, then the rest can be done on sun21 with no 
+	problems.
+
+    2.  The CHECKSRC script does not work on sun21.
+
+    3.  When the books are generated, some entries in the Tables Of Contents 
+	do not reflect the correct page numbers.  This is the case for 
+	subroutines that span more than one page.  The page number entered 
+	into the Table Of Contents is the page number where the subroutine 
+	description ends (instead of where the subroutine description begins).
+
+
+
+
+Installation
+------------
+
+It is recommended that the book building software be built and executed in 
+a directory other than where the baseline of this software is stored.  
+Parts of the books are generated iteratively and it is useful to have the 
+previous version of the support files unchanged.
+
+The following is a step-by-step procedure for installing the software from 
+the baseline directories to a work area.
+
+
+1.  Create a directory where the book(s) will be built.
+
+	mkdir $HOME/books
+
+
+2.  Copy the software and support files from the baseline to the work 
+    directory.
+
+	cd ~nawdv/doc/Prog_guide
+	tar cvf - . | ( cd $HOME/books ; tar xvf - )
+
+
+3.  Remove the previous version's output files, executables, and temporary 
+    files (if present).
+
+	cd $HOME/books/gemplt/tools
+	clean_all
+
+	cd ../../gemlib/tools
+	clean_all
+
+	cd ../../bridge/tools
+	clean_all
+
+
+4.  Check the result of the cleanup.  The directories should contain only 
+    the following files:
+
+
+		$HOME/books/bridge/tables/af.sub
+		$HOME/books/bridge/tables/av.sub
+			:
+			:
+		$HOME/books/bridge/tables/sc.sub
+
+		$HOME/books/bridge/toc/Chap1.toc
+
+		$HOME/books/bridge/tools/build
+		$HOME/books/bridge/tools/clean_all
+		$HOME/books/bridge/tools/clean_exe
+		$HOME/books/bridge/tools/dxfoot.f
+		$HOME/books/bridge/tools/lists
+		$HOME/books/bridge/tools/lprint
+		$HOME/books/bridge/tools/run
+
+		$HOME/books/gemlib/tables/cds.sub
+			:
+			:
+		$HOME/books/gemlib/tables/utf.sub
+
+		$HOME/books/gemlib/toc/Chap1.toc
+		$HOME/books/gemlib/toc/ChapN.toc
+
+		$HOME/books/gemlib/tools/build
+		$HOME/books/gemlib/tools/clean_all
+		$HOME/books/gemlib/tools/clean_exe
+		$HOME/books/gemlib/tools/dxfoot.f
+		$HOME/books/gemlib/tools/lists
+		$HOME/books/gemlib/tools/lprint
+		$HOME/books/gemlib/tools/run
+
+		$HOME/books/gemplt/tables/access.sub
+			:
+			:
+		$HOME/books/gemplt/tables/utility.sub
+
+		$HOME/books/gemplt/toc/Chap1.toc
+		$HOME/books/gemplt/toc/ChapN.toc
+
+		$HOME/books/gemplt/tools/build
+		$HOME/books/gemplt/tools/clean_all
+		$HOME/books/gemplt/tools/clean_exe
+		$HOME/books/gemplt/tools/dxfoot.f
+		$HOME/books/gemplt/tools/lists
+		$HOME/books/gemplt/tools/lprint
+		$HOME/books/gemplt/tools/run
+
+		$HOME/books/shared/dx/build
+		$HOME/books/shared/dx/clean_exe
+		$HOME/books/shared/dx/dx.err
+		$HOME/books/shared/dx/dxcbod.f
+		$HOME/books/shared/dx/dxcbr1.f
+		$HOME/books/shared/dx/dxccvr.f
+		$HOME/books/shared/dx/dxcerr.f
+		$HOME/books/shared/dx/dxchsb.f
+		$HOME/books/shared/dx/dxcint.f
+		$HOME/books/shared/dx/dxclst.f
+		$HOME/books/shared/dx/dxcmn.cmn
+		$HOME/books/shared/dx/dxfter.f
+		$HOME/books/shared/dx/dxgetf.f
+		$HOME/books/shared/dx/dxgln1.f
+		$HOME/books/shared/dx/dxgtnm.f
+		$HOME/books/shared/dx/dxhdft.f
+		$HOME/books/shared/dx/dxmain.f
+		$HOME/books/shared/dx/dxnewp.f
+		$HOME/books/shared/dx/dxptxt.f
+		$HOME/books/shared/dx/dxstrp.f
+		$HOME/books/shared/dx/dxtext.f
+		$HOME/books/shared/dx/dxtoc.cmn
+		$HOME/books/shared/dx/dxtoce.f
+		$HOME/books/shared/dx/dxtocs.f
+		$HOME/books/shared/dx/dxw1ln.f
+		$HOME/books/shared/dx/dxwanm.f
+		$HOME/books/shared/dx/dxwblk.f
+		$HOME/books/shared/dx/dxwbln.f
+		$HOME/books/shared/dx/dxwcnm.f
+		$HOME/books/shared/dx/dxwctr.f
+		$HOME/books/shared/dx/dxwfin.f
+		$HOME/books/shared/dx/dxwpro.f
+		$HOME/books/shared/dx/dxwtoc.f
+
+		$HOME/books/shared/tools/checkSrc.sh
+		$HOME/books/shared/tools/chkList.sh
+		$HOME/books/shared/tools/chkSub.sh
+		$HOME/books/shared/tools/cmpprolo.sh
+		$HOME/books/shared/tools/lprint
+		$HOME/books/shared/tools/makelist.sh
+		$HOME/books/shared/tools/paramcmp.sh
+		$HOME/books/shared/tools/pcode
+		$HOME/books/shared/tools/phead
+		$HOME/books/shared/tools/prolocmp.sh
+		$HOME/books/shared/tools/ptypcmpc.sh
+		$HOME/books/shared/tools/ptypcmpf.sh
+		$HOME/books/shared/tools/unisub.sh
+
+
+
+
+
+Build (Part 1)
+--------------
+
+1.  Check that the *.sub files have unique descriptions for the GEMPAK 
+    subroutines in any one library.
+
+	cd $HOME/books/gemplt/tables
+	../../shared/tools/unisub.sh  *.sub
+
+	cd ../../gemlib/tables
+	../../shared/tools/unisub.sh  *.sub
+
+	cd ../../bridge/tables
+	../../shared/tools/unisub.sh  *.sub
+
+
+2.  Build the *.list files from *.sub files in the .../tables directories.  
+    During the execution of the script, it is sometime the case that there are 
+    error messages indicating some names either missing from the *.sub files, 
+    or names that can be removed from the *.sub files.  Make a note of these 
+    errors.
+
+	cd $HOME/books/gemplt/tools
+	lists
+
+	cd ../../gemlib/tools
+	lists
+
+	cd ../../bridge/tools
+	lists
+
+
+3.  Check that there are *.list files in the tables directories.  There 
+    should be one '.list' file for every '.sub' file.
+
+	cd $HOME/books/gemplt/tools
+	ls -l ../tables/*.list
+	ls -l ../tables/*
+
+	cd ../../gemlib/tools
+	ls -l ../tables/*.list
+	ls -l ../tables/*
+
+	cd ../../bridge/tools
+	ls -l ../tables/*.list
+	ls -l ../tables/*
+
+
+4.  If step 1 or step 2 indicated any discrepancies, update the *.sub files 
+    at this time.
+
+        For example:	cd $HOME/books/gemlib/tables
+			vi er.sub
+
+
+
+More Checking
+-------------
+
+Before generating the books, run checks against the GEMPAK source codes as 
+follows.
+
+1.  For the GEMPLT book, prologues of subroutines in the APPL and GPLT 
+    directories should match.  Any differences may indicate that the 
+    prologue in one or the other set is not up to date.  The book builders 
+    use prologues in the APPL directories.
+
+    Compare the prologues using the CMPPROLO utility.  The CMPPROLO utility 
+    produces a brief report that indicates whether or not there are 
+    differences in the prologues (but it does not show the differences).
+    Use DIFF or some similar utility to see the differences.
+
+	cd $HOME/books/shared/tools
+	cmpprolo.sh  $GEMPAK/source/appl  $GEMPAK/source/gplt
+
+
+	NOTE:   The CMPPROLO utility can also be used on the device driver 
+		prologues.  Although the device driver routines are not 
+		included in any book currently generated, the prologues 
+		of subroutines in the GPLT and DEVICE directories should
+		also match.
+
+	    cmpprolo.sh  $GEMPAK/source/gplt/device  $GEMPAK/source/device
+
+
+2.  Check calling sequences in all of the FORTRAN and C code, one library
+    at a time.  Following are a few examples.  The utility produces a
+    brief report that shows mismatches between subroutine names, I/O
+    parameter names, and I/O parameter types.
+
+	cd $HOME/books/shared/tools
+
+	checkSrc.sh  $GEMPAK/source/appl/access
+	checkSrc.sh  $GEMPAK/source/gemlib/er
+	checkSrc.sh  $GEMPAK/source/cgemlib/cfl
+
+
+
+Build (Part 2)
+--------------
+
+1.  Edit the date that reflects the version of the book to be generated.  
+    This is the date that appears in the footer on every page of each book.  
+    The date is located in the source code file DXFOOT.F that can be found 
+    in each book's tools directory.
+
+	cd $HOME/books/gemplt/tools
+	vi dxfoot.f
+
+	cd ../../gemlib/tools
+	vi dxfoot.f
+
+	cd ../../bridge/tools
+	vi dxfoot.f
+
+
+2.  Build the executables.
+
+	cd $HOME/books/gemplt/tools
+	build
+
+	cd ../../gemlib/tools
+	build
+
+	cd ../../bridge/tools
+	build
+
+
+3.  Check that the build was successful.  There should be two executable 
+    files, DXMAIN and DXTEXT, in each book's tools directory.
+
+	cd $HOME/books/gemplt/tools
+	ls -l dxmain dxtext
+
+	cd ../../gemlib/tools
+	ls -l dxmain dxtext
+
+	cd ../../bridge/tools
+	ls -l dxmain dxtext
+
+
+
+
+Run The Book Building Process
+-----------------------------
+
+1.  If desired, modify entries in the *.list files at this time.  The entries
+    in the *.list files may be reordered, or the paths to the GEMPAK source
+    code may be changed.
+
+    The main chapters of the Programmer's Guides will have subroutines 
+    documented in the same order as they appear in the *.list file.  The order 
+    of the subroutines can be changed by hand-editing the *.list file.
+
+    The *.list files contain full paths to the GEMPAK source code.  Changing 
+    the paths will point to a different version of the GEMPAK subroutines.  
+    This may be useful if preparing special versions of the books that
+    reflect some other source code than the standard.
+
+        For example:	cd $HOME/books/gemlib/tables
+			vi er.list
+
+
+
+2.  Run the book builders.
+
+    During the execution of the book builders, there may be errors of two 
+    types.  The first type are errors that indicate missing files or files 
+    that cannot be opened.  Such errors indicates that the software was not 
+    installed, built, or configured correctly.  The other type of errors 
+    indicate that the GEMPAK subroutines, that are being documented, do not 
+    follow the standard format.  These are errors like "bad right border, 
+    and "end of prologue reached prematurely."
+
+	cd $HOME/books/gemplt/tools
+	run
+
+	cd ../../gemlib/tools
+	run
+
+	cd ../../bridge/tools
+	run
+
+
+3.  Check that there are files in the OUT directories.
+
+	cd $HOME/books/gemplt/tools
+	ls -l ../out
+
+	cd ../../gemlib/tools
+	ls -l ../out
+
+	cd ../../bridge/tools
+	ls -l ../out
+
+
+4.  Print the files.  The LPRINT utility can print one, several, or all of 
+    the output files to a printer.  The LPRINT utility uses MPAGE.  The 
+    printer can be chosen by name.  The default printer is $NPRINTER.  It 
+    is recommended to first print out the Table Of Contents and one chapter 
+    at a time (rather than all of the chapters at once).
+
+    The single quotes (') must be included when using the wild card (*) 
+    characters as shown in the following examples.
+
+    Examples:
+
+	cd $HOME/books/gemplt/tools
+
+	lprint  TOC.out  ch01.out
+
+	lprint  ch02.out 'ch07*' 'appx*'
+
+	lprint  -P qms1700d  'ch02*'
+
+	lprint  '*'
+
+
+5.  Update the Table Of Contents (TOC) for the introductory and trailing 
+    chapters.  Some chapters and appendices are fixed text files.  The
+    Table Of Contents is not generated automatically for these fixed text 
+    files.  Instead, the portions of the TOC for the fixed text chapters 
+    are retrieved from files in the 'toc' directory.  
+
+    It is best to first generate a version of the books (knowing the TOC 
+    will be wrong), edit the TOC files in the 'toc' directory, and regenerate 
+    the books.  Do not edit TOC.out in the 'out' directory.
+
+	cd $HOME/books/gemplt/toc
+	vi *.toc
+
+	cd $HOME/books/gemlib/toc
+	vi *.toc
+
+	cd $HOME/books/bridge/toc
+	vi *.toc
+
+
+6.  Re-run the book generation process by repeating steps 2 and on.
+
+
+
+
+Clean Up
+--------
+
+Each book's tools directory includes two clean-up utilities, CLEAN_EXE and
+CLEAN_ALL.  Executing CLEAN_EXE deletes the built software (executables, 
+object code, and so on).  Executing CLEAN_ALL, on the other hand, deletes 
+everything that CLEAN_EXE removes, plus all of the *.out files and all of 
+the *.list files.
+
+It is suggested that the *.out and *.list files be kept until the next 
+version of the books is produced.  Even though the *.out and *.list files 
+are easily reproduced, keeping them provides a baseline against which to 
+compare the next version of each book.
+
+
+
+
+
+
+------------------------------------------------------------------------------
+
+
+                                 REFERENCE
+                                 ---------
+
+
+
+This section provides various miscellaneous information about the generation 
+software and how it is structured.
+
+
+
+.../shared/tools
+----------------
+
+The shared tools directory contains several shell scripts that are either 
+called upon by the individual book builder software, or that are used 
+stand-alone while generating any of the books.  The following scripts are 
+included:
+
+	checkSrc.sh   - CHECKSRC checks a GEMPAK source code file (FORTRAN 
+			or C) to insure that the calling sequence matches 
+			between the prologue and the compiled one.
+	chkList.sh    - CHKLIST is called by MAKELIST.
+	chkSub.sh     - CHKSUB is called by MAKELIST.
+	cmpprolo.sh   - CMPPROLO compares prologues between files of the same 
+			name in two directories.
+	lprint	      - LPRINT is called by LPRINT (from each book's tools 
+			directory).
+	makelist.sh   - MAKELIST is called by LISTS (from each book's tools 
+			directory).
+	paramcmp.sh   - PARAMCMP is called by CHECKSRC.
+	pcode	      - PCODE displays all of the non-blank comments in a 
+			FORTRAN or C file thereby generating a form of 
+			pseudo-code for the file.
+	phead	      - PHEAD displays the prologue (less the revision 
+			history) in a FORTRAN or C file.  The result is the 
+			same information that appears in the Programmer's 
+			Guides.
+	prolocmp.sh   - PROLOCMP is called by CMPPROLO.
+	ptypcmpc.sh   - PTYPCMPC is called by CHECKSRC.
+	ptypcmpf.sh   - PTYPCMPF is called by CHECKSRC.
+	unisub.sh     - UNISUB checks *.sub files to make sure that field 2 
+			(the GEMPAK subroutine description) is unique in the 
+			file. 
+
+
+
+.../shared/dx
+-------------
+
+The shared DX directory contains all of the code that is shared by the book 
+builder software.  Notice that the two main programs (DXMAIN and DXTEXT) are 
+also located here.  The main programs are also common to all of the books.
+
+The shared DX directory also includes a BUILD script.  This build script is 
+executed as a part of each book's software build.  It should not be executed 
+stand-alone.
+
+Only a single subroutine is unique to each book, DXFOOT (see each book's 
+tools directory).  This single routine defines the footer for each book.
+The footer displays the book's name and revision date at the bottom of each 
+page.
+
+
+
+Subroutine Hierarchy
+--------------------
+
+The following is a sketch of the subroutine hierarchy for the two main 
+programs.  There are several subroutines that are called in a lot of places 
+and they are listed as "utility subroutines."
+
+
+    DXMAIN --+-- DXCCVR --+-- DXCHSB --+-- DXHDFT ----- DXFOOT ----- DXFTER
+             |            |            |
+             |            +-- DXWANM   +-- DXTOCE
+             |            |
+             |            +-- DXWCNM
+             |
+             |
+             +-- DXCLST --+-- DXGTNM --+
+             |            |            |
+             |            \            \
+             +-- DXCINT    -- DXGETF    -- DXSTRP
+             |            /            /
+             +-- DXCERR   |            |
+             |            |            |
+             +-- DXCBOD --+-- DXCBR1 --+-- DXTOCS
+             |                         |
+             |                         +-- DXWPRO ----- DXWBLK
+             |
+             +-- DXWTOC
+             |
+             +-- DXWFIN
+
+
+
+    DXTEXT --+-- DXCCVR --... (see above)
+             |
+             +-- DXPTXT
+             |
+             +-- DXWFIN
+
+
+
+    Utility Subroutines:
+
+       DXNEWP
+       DXWCTR
+       DXWBLN
+       DXTOCS
+       DXGLN1
+       DXW1LN
+

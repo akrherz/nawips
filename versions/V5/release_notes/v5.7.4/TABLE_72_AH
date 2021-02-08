@@ -1,0 +1,19 @@
+Table Updates
+
+	A. Add svrwx.bull to NWX tables (HPC, ALL)
+
+	Added the severe weather summary table, svrwx.bull, to NWX directory
+	of tables. It can be found at $GEMTBL/nwx/.	
+
+	B. Updated regional temp and precip table for NWX (ALL)
+
+	Updated the regional temperature/precipitation table, rgtmpc.stn,
+	to include new and modified stations and to add the state ids.
+	This table can be found at $GEMTBL/nwx/.	
+
+	C. Updated station tables (SPC, ALL)
+
+	Updated the surface station table, sfstns.tbl, for the SPC by adding 
+	78 new station and removing 25 inactive stations. Also updated the
+	xrainsort.tbl with 35 new stations and change the id for 8 stations.
+

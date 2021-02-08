@@ -1,0 +1,6 @@
+Remove data type ATCO from tables and code (HPC, TPC)
+
+Miscellaneous data type ATCO, the ATCF tropical cyclone forecast tracks
+in the old format, has been removed from NMAP2 and GPMAP.  This old
+format was replaced by a new format in 2001, and had been kept for
+backward compatibility only.

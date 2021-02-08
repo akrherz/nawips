@@ -1,0 +1,43 @@
+C************************************************************************
+C* DXCMN.CMN								*
+C*									*
+C* This include file holds common storage for general variables and	*
+C* definitions of common parameters.					*
+C*									*
+C* Variables:								*
+C*	LUNOUT		INTEGER		Output file logical unit number	*
+C*	CHNUMB		CHAR*		Chapter or appendix number	*
+C*	ICHAP		INTEGER		Chapter number			*
+C*	IPGNM		INTEGER		Current page number		*
+C*	LNCUR		INTEGER		Current line number on a page	*
+C*	HEADER		CHAR*		Text for the page headers	*
+C*	FOOTER		CHAR*		Text for the page footers	*
+C*	PAGE ( MAXLNP )	CHAR*		Current page text		*
+C**									*
+C* Log:									*
+C* M. Linda/GSC		12/97	Original				*
+C************************************************************************
+C*
+	PARAMETER	( LNPAGE =  59 )
+C!						Lines on a printed page
+	PARAMETER	( CLPAGE =  81 )
+C!						Columns on printed page
+	PARAMETER	( LMARGN =   5 )
+C!						Left margin
+	PARAMETER	( RMARGN =   5 )
+C!						Right margin
+	PARAMETER	( LNHEAD =   4 )
+C!						Top margin (header)
+	PARAMETER	( LNFOOT =   3 )
+C!						Bottom margin (footer)
+	PARAMETER	( MAXLNP = 200 )
+C!						Max lines in PAGE
+	PARAMETER	( ISEPLN =   8 )
+C!						Mid-page separator lines
+C
+	CHARACTER	chnumb*128, header*128, footer*128
+	CHARACTER	page ( MAXLNP )*128
+C
+	COMMON  / DXCMN / lunout, chnumb, ichap, ipgnm, lncur,
+     +			  header, footer, page
+C

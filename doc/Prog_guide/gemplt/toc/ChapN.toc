@@ -1,0 +1,52 @@
+
+
+CHAPTER 17    Writing Device Drivers   .  .  .  .  .  .  .  .  .   17-1
+
+  Overview  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-1
+  Planning  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-1
+  Testing   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-2
+  Device Driver Structure  .  .  .  .  .  .  .  .  .  .  .  .  .   17-4
+  How To Begin .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-5
+  FORTRAN Versus C   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-5
+  Initialization Subroutines  .  .  .  .  .  .  .  .  .  .  .  .   17-6
+  Device Control Subroutines  .  .  .  .  .  .  .  .  .  .  .  .   17-7
+  Required Subroutine To Draw Lines .  .  .  .  .  .  .  .  .  .   17-8
+  Other Drawing Subroutines   .  .  .  .  .  .  .  .  .  .  .  .   17-8
+  Hardware Symbols   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-8
+  Pass-Thru Subroutines .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-8
+  Attribute Subroutines .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-9
+  Color Subroutines  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   17-9
+  Termination Subroutines  .  .  .  .  .  .  .  .  .  .  .  .  .  17-10
+
+
+CHAPTER 18    ATEST Tutorial  .  .  .  .  .  .  .  .  .  .  .  .   18-1
+
+
+APPENDIX A    Software Libraries .  .  .  .  .  .  .  .  .  .  .    A-1
+
+  Traditional Topology   .  .  .  .  .  .  .  .  .  .  .  .  .  .   A-1
+  Alternate Topology  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .   A-2
+
+
+APPENDIX B    Creating GEMPAK Map Files   .  .  .  .  .  .  .  .    B-1
+
+  SSF File Format .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    B-1
+  GSF File Format .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    B-2
+  Naming Conventions For GEMPAK Map Files .  .  .  .  .  .  .  .    B-3
+  Converting GSF To SSF .  .  .  .  .  .  .  .  .  .  .  .  .  .    B-3
+  Converting SSF To GSF .  .  .  .  .  .  .  .  .  .  .  .  .  .    B-3
+  Other Utilities .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    B-4
+  CIA Map File With Names  .  .  .  .  .  .  .  .  .  .  .  .  .    B-4
+
+
+APPENDIX C    GEMPLT Error Messages .  .  .  .  .  .  .  .  .  .    C-1
+
+
+APPENDIX D    Examples  .  .  .  .  .  .  .  .  .  .  .  .  .  .    E-1
+
+  MAP .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    E-2
+  GRAPH  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    E-4
+  LOOP   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .    E-7
+
+
+APPENDIX E    Changes Since Previous Version .  .  .  .  .  .  .    D-1

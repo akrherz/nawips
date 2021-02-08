@@ -1,0 +1,9 @@
+Track 281:  Looping delay after going to the end of loop with
+		LOOP_STOP=current
+
+The SPC observed a looping delay after going to the end of loop with LOOP_STOP=current
+and then starting looping.  This delay was caused by the delay value set for the last
+frame.  Since the last frame need not be in the "new" loop, the looping in this case
+will start with the first frame and use its delay value.
+
+

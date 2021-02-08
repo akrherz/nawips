@@ -1,0 +1,7 @@
+OTHER
+
+	A. Remove duplicate reports in DCACFT (AWC, Unidata)
+
+	   Modified the aircraft decoder, DCACFT, to check for and
+	   eliminate duplicate reports. The duplicates are decoded, but
+	   are not written to the output GEMPAK file.

@@ -1,0 +1,117 @@
+#!/bin/csh -f
+#-------------------------------------------------------------------------------
+# SYMPLOT
+#
+# This script plots symbols, lines, and markers for inclusion in the
+# appendix of the GEMPAK User's Guide.
+#
+# Two runs are made, one using the PS driver, and the other using the XW
+# driver.  The result from the PS driver can be printed and used for manual 
+# cut-and-paste.  The result from the XW driver, with black and white colors 
+# reversed, is intended for electronic cut-and-paste using FrameMaker's 
+# "capture" and "import" functions.
+#
+## Log:
+# M. Linda/GSC		 8/96	Original
+# M. Linda/GSC		 9/96	Added provision for frames around symbols
+# M. Linda/GSC		 3/97	Added fronts
+#-------------------------------------------------------------------------------
+
+set symbol = (   1   2   3   4   5   6   7   8   9  10  11 "" )
+set color  = (   1   1   1   1   1   1   1   1   1   1   1    )
+set size   = (   2   3 1.5   3   3   3   3   3 1.8   3   4    )
+set lwid   = (   3   3   3   3   3   3   3   3   3   3   3    )
+set filnam = (  "markers" \
+                    "lineTypes" \
+                        "weather" \
+                            "cloud" \
+                                "pastWeather" \
+                                    "pressureTendency" \
+                                        "skyCover" \
+                                            "icing" \
+                                                "special" \
+                                                    "turbulence" \
+                                                        "fronts" )
+set framec = 0
+
+#-------------------------------------------------------------------------------
+
+$RM gemglb.nts
+$RM last.nts
+
+#-------------------------------------------------------------------------------
+
+foreach driver ( xw ps )
+
+    if ( $driver == xw ) then
+	gpcolor << EOF > /dev/null
+		colors = 1=black ; 101=white
+	    run
+	    exit
+EOF
+    else
+	gpcolor << EOF > /dev/null
+		colors = 1=white; 101=black
+	    run
+	    exit
+EOF
+    endif
+
+    set cnt = 1
+    while ( $symbol[$cnt] != "" )
+
+	echo "Plotting item $cnt using driver $driver..."
+
+	if  ( $driver == xw ) then
+	    if  ( "$symbol[$cnt]" == "11" ) then
+		set ssize = 1.5
+	    else
+		set ssize = $size[$cnt]
+	    endif
+	    set width = 2
+	else
+	    set ssize = $size[$cnt]
+	    set width = $lwid[$cnt]
+	endif
+
+	if  ( ( "$symbol[$cnt]" == "2" ) || ( "$symbol[$cnt]" == "11" ) ) then
+	    plotsyms << EOF > /dev/null
+		$driver
+		$symbol[$cnt]
+		$color[$cnt]
+		$ssize
+		$width
+	    exit
+EOF
+	else
+	    plotsyms << EOF > /dev/null
+	      	$driver
+		$symbol[$cnt]
+		$color[$cnt]
+		$ssize
+		$width
+		$framec
+	    exit
+EOF
+	endif
+
+	if ( $driver == ps ) then
+	    gpend
+	    mv ps.plt $filnam[$cnt].ps
+	else
+	    echo "Press RETURN to continue . . .\c"
+	    set response = $<
+	endif
+
+	set cnt = `expr $cnt + 1`
+    end
+end
+
+#-------------------------------------------------------------------------------
+
+gpend
+
+$RM gemglb.nts
+$RM last.nts
+
+#-------------------------------------------------------------------------------

@@ -1,0 +1,22 @@
+               N-AWIPS Patch 5.6.l.2 Release Notes
+                    	8/25/03
+
+Patch 5.6.l.2 adds a new line "Potential Day 4-5 Track Area" to the 
+TPC Kelly graphic legend box.
+
+******************************************************************************
+
+The necessary compiling and linking instructions are contained in
+the following file:
+
+     build_patch_5.6.l.2
+
+To execute the script and save its output in a file type:
+
+     cd $GEMPAK/build
+     build_patch_5.6.l.2 >&! PATCH_$NA_OS & ; tail -f PATCH_$NA_OS
+
+The output of the script will be written to PATCH_$NA_OS.
+
+Note, also, that version 5.6.l must have been delivered before installing
+version 5.6.l.2.

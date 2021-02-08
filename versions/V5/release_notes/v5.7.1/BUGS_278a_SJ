@@ -1,0 +1,7 @@
+Zoom does not work until mouse is moved  (hpc)
+
+The HPC found that a previous fix to the Zoom action caused a new
+problem. After starting the zoom action, expanding the rubber-band
+box, and releasing the mouse button, the zoom would not take effect
+until the mouse was moved. This problem has now been fixed.
+

@@ -1,0 +1,109 @@
+		NAWIPS 5.4.2 Tables Changes Description Log
+
+
+t1.	Updated RAOB reports table for AFOS text display program.  Done,
+	GG, SJ, (SS), 12/24/96.
+
+	tables/afos/text/RABMAN
+
+t2.	Added 44 new stations to the surface tables and edited the
+	station lat/lon/elev for a few others.  Done, KT, (SS),
+	12/27/96.
+
+	gempak/tables/stns/sfstns.tbl, metar.tbl
+
+t3.	Fixed a few formatting problems in the NWX table for now-casts.
+	A few stations were missing underscores and there was a duplicate
+	station.  Done, SJ, (SS), 1/16/97.
+
+	tables/nwx/now.bull
+
+t4.	Created county and zone tables that include the corresponding
+	responsible WFO.  Also updated flash flood guidance table.
+	Done, GK, (SS), 1/17/97
+
+	NEW:gempak/tables/stns/county.tbl, zones.tbl
+
+	gempak/tables/stns/ffgzon.stn
+
+t5.	Updated image scale table, IMGTYP.TBL, to include the
+	GMS satellite images.  Done, SJ, (SS), 1/23/97.
+
+	gempak/tables/sat/imgtyp.tbl
+
+t6.	Made changes to zones.bull to match new WMO headers for
+	the Zone forecast products.  Made corresponding changes
+	to the LDM pattern action table.  Done, SJ, (SS), 1/23/97.
+
+	tables/nwx/master.tbl, zone.bull
+
+t7.	Adjusted the Alaska area in the geography table to include all
+	of the Barrow Alaska area.  Done, GK, (SS), 1/24/97.  Testing 
+	complete, SS, 1/24/97.
+
+	gempak/tables/stns/geog.tbl
+
+t8.	Changed priority levels in METAR station table for stations that
+	appear in the Daily Weather Map.  Done, SM, (SS), 1/27/97.
+
+	gempak/tables/stns/sfstns.tbl, metar.tbl
+
+t9.	Made minor corrections to county, zones and flash flood tables.
+	Done, GK, (SS), 1/27/97.
+
+	gempak/tables/stns/county.tbl, zones.tbl, ffgzon.stn
+
+t10.	Updated NMAP data table for GMS data.  Done, SS, (SS), 1/28/97.
+
+        gempak/tables/nmap/master.nmap
+
+t11.	Corrected the station ID for North Carolina zone forecasts
+	from KRAX to KRAH.  Deleted hemispheric discussion and
+	correlation products from NWX since these products are no
+	longer issued.  Done, KT, (SS), 2/11/97.
+
+	tables/nwx/guidata.tbl, master.tbl, zone.bull
+
+t12.	Corrected spelling of station name for PASK from SALANIK to SALAWIK.
+	Done, SJ, (SS), 2/20/97.
+
+t13.	Added agricultural observations product to the NWX and LDM tables.
+	Done, SJ, (SS), 2/21/97.
+
+	NEW:tables/nwx/ago.bull
+
+	tables/nwx/guidata.tbl, master.tbl
+	ldm/etc/pqact.tbl, scour.tbl
+
+t14.	Added new Nevada FFG zones, NV015-NV022.  Done, GK, (SS),
+	2/28/97.
+
+	gempak/tables/stns/ffgzon.stn
+
+t15.	Replaced soft links for NMAP restore files with a table.
+	Also corrected NMAP restore file problems found as a result
+	of testing.  Done, DP, (SS), 3/4/97.
+
+	NEW:gempak/tables/nmap/mod_res.tbl
+
+	.cshrc
+
+	gempak/nts/nmap/restore/*
+
+t16.	Added SPC status report product to NWX and LDM tables.  Done,
+	SM, (SS), 3/06/97.  Testing Complete, SS, 3/06/97.
+
+	NEW:tables/nwx/status.tbl
+
+	tables/nwx/guidata.tbl, master.tbl
+	ldm/etc/pqact.conf, scour.conf
+
+t17.	Updated IMGTYP.tbl for METEOSAT6.  Done, DP, (SS), 3/07/97.
+
+	gempak/tables/sat/imgtyp.tbl
+
+		
+t18.	Removed ECMWF references from NMAP table.  Done, DP,
+	SS, 3/11/97.
+
+	gempak/tables/nmap/mod_res.tbl

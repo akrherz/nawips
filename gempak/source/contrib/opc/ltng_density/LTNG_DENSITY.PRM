@@ -1,0 +1,8 @@
+C!-----------------------LIGHTNING DENSITY GRID DIMENSIONS--------------------------------
+      PARAMETER       ( IDENSX = 3476 )
+      PARAMETER       ( IDENSY = 1460 )
+C!-----------------------LIGHTNING DENSITY CORNER POINTS----------------------------------
+      PARAMETER       ( LLLAT_COR = -25.0 )
+      PARAMETER       ( LLLON_COR = 110.0 )
+      PARAMETER       ( URLAT_COR =  80.0 )
+      PARAMETER       ( URLON_COR =   0.0 )

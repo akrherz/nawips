@@ -1,0 +1,1645 @@
+%!
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%DocumentFonts: (atend)
+%%EndComments
+%
+% FrameMaker PostScript Prolog 3.0, for use with FrameMaker 3.0
+% Copyright (c) 1986,87,89,90,91 by Frame Technology Corporation.
+% All rights reserved.
+%
+% Known Problems:
+%	Due to bugs in Transcript, the 'PS-Adobe-' is omitted from line 1
+/FMversion (3.0) def 
+% Set up Color vs. Black-and-White
+	/FMPrintInColor systemdict /colorimage known
+		systemdict /currentcolortransfer known or def
+% Uncomment this line to force b&w on color printer
+%   /FMPrintInColor false def
+/FrameDict 295 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} def
+	} if
+/FMVERSION {
+	FMversion ne {
+		/Times-Roman findfont 18 scalefont setfont
+		100 100 moveto
+		(FrameMaker version does not match postscript_prolog!)
+		dup =
+		show showpage
+		} if
+	} def 
+/FMLOCAL {
+	FrameDict begin
+	0 def 
+	end 
+	} def 
+	/gstring FMLOCAL
+	/gfile FMLOCAL
+	/gindex FMLOCAL
+	/orgxfer FMLOCAL
+	/orgproc FMLOCAL
+	/organgle FMLOCAL
+	/orgfreq FMLOCAL
+	/yscale FMLOCAL
+	/xscale FMLOCAL
+	/manualfeed FMLOCAL
+	/paperheight FMLOCAL
+	/paperwidth FMLOCAL
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne dup {setmanualfeed} if
+	/manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	/yscale exch def
+	/xscale exch def
+	currenttransfer cvlit /orgxfer exch def
+	currentscreen cvlit /orgproc exch def
+	/organgle exch def /orgfreq exch def
+	setpapername 
+	manualfeed {true} {papersize} ifelse 
+	{manualpapersize} {false} ifelse 
+	{desperatepapersize} if
+	end 
+	} def 
+	/pagesave FMLOCAL
+	/orgmatrix FMLOCAL
+	/landscape FMLOCAL
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch neg translate pop 
+		}
+		{pop pop}
+		ifelse
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+	} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin
+	array /fillvals exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	0.0 0.0 moveto
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+	/fx FMLOCAL
+	/fy FMLOCAL
+	/fh FMLOCAL
+	/fw FMLOCAL
+	/llx FMLOCAL
+	/lly FMLOCAL
+	/urx FMLOCAL
+	/ury FMLOCAL
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fy translate 
+	rotate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	} bind def
+/FMENDEPSF {
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} def
+	/papersizedict FMLOCAL
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	/FMdicttop countdictstack 1 add def 
+	statusdict begin stopped end 
+	countdictstack -1 FMdicttop {pop end} for 
+	} def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped pop 
+		end
+		} if
+	} def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/dmatrix matrix def
+/dpi    72 0 dmatrix defaultmatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+/freq dpi 18.75 div 8 div round dup 0 eq {pop 1} if 8 mul dpi exch div def
+/sangle 1 0 dmatrix defaultmatrix dtransform exch atan def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+/graymode true def
+	/bwidth FMLOCAL
+	/bpside FMLOCAL
+	/bstring FMLOCAL
+	/onbits FMLOCAL
+	/offbits FMLOCAL
+	/xindex FMLOCAL
+	/yindex FMLOCAL
+	/x FMLOCAL
+	/y FMLOCAL
+/setpattern {
+	 /bwidth  exch def
+	 /bpside  exch def
+	 /bstring exch def
+	 /onbits 0 def  /offbits 0 def
+	 freq sangle landscape {90 add} if 
+		{/y exch def
+		 /x exch def
+		 /xindex x 1 add 2 div bpside mul cvi def
+		 /yindex y 1 add 2 div bpside mul cvi def
+		 bstring yindex bwidth mul xindex 8 idiv add get
+		 1 7 xindex 8 mod sub bitshift and 0 ne
+		 {/onbits  onbits  1 add def 1}
+		 {/offbits offbits 1 add def 0}
+		 ifelse
+		}
+		setscreen
+	 {} settransfer
+	 offbits offbits onbits add div FMsetgray
+	/graymode false def
+	} bind def
+/grayness {
+	FMsetgray
+	graymode not {
+		/graymode true def
+		orgxfer cvx settransfer
+		orgfreq organgle orgproc cvx setscreen
+		} if
+	} bind def
+	/HUE FMLOCAL
+	/SAT FMLOCAL
+	/BRIGHT FMLOCAL
+	/Colors FMLOCAL
+FMPrintInColor 
+	
+	{
+	/HUE 0 def
+	/SAT 0 def
+	/BRIGHT 0 def
+	% array of arrays Hue and Sat values for the separations [HUE BRIGHT]
+	/Colors   
+	[[0    0  ]    % black
+	 [0    0  ]    % white
+	 [0.00 1.0]    % red
+	 [0.37 1.0]    % green
+	 [0.60 1.0]    % blue
+	 [0.50 1.0]    % cyan
+	 [0.83 1.0]    % magenta
+	 [0.16 1.0]    % comment / yellow
+	 ] def
+      
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	/K { 
+		Colors exch get dup
+		0 get /HUE exch store 
+		1 get /BRIGHT exch store
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} def
+	/FMsetgray { 
+		/SAT exch 1.0 exch sub store 
+		  HUE 0 eq BRIGHT 0 eq and
+			{1.0 SAT sub setgray}
+			{HUE SAT BRIGHT sethsbcolor} 
+		  ifelse
+		} bind def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	/FMsetgray {setgray} bind def
+	/K { 
+		pop
+		} def
+	}
+ifelse
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	/fillvals FMLOCAL
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setpattern} 
+	{grayness}
+	ifelse
+	} bind def
+/V { 
+	gsave eofill grestore
+	} bind def
+/N { 
+	stroke
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+	/n FMLOCAL
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+	/x1 FMLOCAL
+	/x2 FMLOCAL
+	/y1 FMLOCAL
+	/y2 FMLOCAL
+	/rad FMLOCAL
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+% The following commented out code did not work for tangent lines of zero
+% length.  The code following it was provided by Frame to patch this error.
+%
+%/RR { 
+%	/rad exch def
+%	normalize
+%	/y2 exch def
+%	/x2 exch def
+%	normalize
+%	/y1 exch def
+%	/x1 exch def
+%	newpath
+%	x1 y1 rad add moveto
+%	x1 y2 x2 y2 rad arcto
+%	x2 y2 x2 y1 rad arcto
+%	x2 y1 x1 y1 rad arcto
+%	x1 y1 x1 y2 rad arcto
+%	closepath
+%	16 {pop} repeat
+%	} bind def
+/rarc
+    {rad
+     {arcto} stopped
+    } bind def
+/RR {
+    /rad exch def
+    normalize
+    /y2 exch def
+    /x2 exch def
+    normalize
+    /y1 exch def
+    /x1 exch def
+    mark
+    newpath
+    x1 y1 rad add moveto
+    x1 y2 x2 y2 rarc
+    x2 y2 x2 y1 rarc
+    x2 y1 x1 y1 rarc
+    x2 y1 x1 y1 rarc
+    x1 y1 x1 y2 rarc
+    closepath
+    cleartomark
+    } bind def
+
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	} bind def
+	/FMpointsize FMLOCAL
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath fill
+	grestore
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	stroke
+	grestore
+	} bind def
+	/x FMLOCAL
+	/y FMLOCAL
+	/w FMLOCAL
+	/h FMLOCAL
+	/xx FMLOCAL
+	/yy FMLOCAL
+	/ww FMLOCAL
+	/hh FMLOCAL
+	/FMsaveobject FMLOCAL
+	/FMoptop FMLOCAL
+	/FMdicttop FMLOCAL
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 4 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+	/str FMLOCAL
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+	/sl FMLOCAL
+	/val FMLOCAL
+	/ws FMLOCAL
+	/im FMLOCAL
+	/bs FMLOCAL
+	/cs FMLOCAL
+	/len FMLOCAL
+	/pos FMLOCAL
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/cip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        cris indx placer 255 mul cvi put
+        cgis indx placeg 255 mul cvi put
+        cbis indx placeb 255 mul cvi put
+    } for pop cris
+
+	
+	} bind def
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+
+	} bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+	/h FMLOCAL
+	/w FMLOCAL
+	/d FMLOCAL
+	/lb FMLOCAL
+	/bitmapsave FMLOCAL
+	/is FMLOCAL
+	/cf FMLOCAL
+/wbytes { 
+	dup 
+	8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	r                    
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/r exch def
+	/d exch def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	r                    
+	/is w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+	/proc1 FMLOCAL
+	/proc2 FMLOCAL
+	/newproc FMLOCAL
+/Fmcc {
+    /proc2 exch cvlit def
+    /proc1 exch cvlit def
+    /newproc proc1 length proc2 length add array def
+    newproc 0 proc1 putinterval
+    newproc proc1 length proc2 putinterval
+    newproc cvx
+} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+	/gryt FMLOCAL
+	/blut FMLOCAL
+	/grnt FMLOCAL
+	/redt FMLOCAL
+	/indx FMLOCAL
+	/cynu FMLOCAL
+	/magu FMLOCAL
+	/yelu FMLOCAL
+	/k FMLOCAL
+	/u FMLOCAL
+/colorsetup {
+    currentcolortransfer
+    /gryt exch def
+    /blut exch def
+    /grnt exch def
+    /redt exch def
+    0 1 255 {
+        /indx exch def
+        /cynu 1 red indx get 255 div sub def
+        /magu 1 green indx get 255 div sub def
+        /yelu 1 blue indx get 255 div sub def
+        /k cynu magu min yelu min def
+        nredt indx 1 0 cynu max sub redt exec put
+        ngreent indx 1 0 magu max sub grnt exec put
+        nbluet indx 1 0 yelu max sub blut exec put
+        ngrayt indx 1 k sub gryt exec put
+    } for
+	} bind def
+	/tran FMLOCAL
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch Fmcc settransfer
+} bind def
+/BITMAPCOLOR { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/bitmapsave save def 
+	colorsetup
+	/is w d wbytes string def
+    /ris w d wbytes string def
+    /gis w d wbytes string def
+    /bis w d wbytes string def
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cf is readhexstring pop
+    /tot w 1 sub def
+    0 1 tot {
+        /indx exch def
+        /indxa is indx get def
+        /placer nredt indxa get def
+        /placeg ngreent indxa get def
+        /placeb nbluet indxa get def
+        ris indx placer 255 mul cvi put
+        gis indx placeg 255 mul cvi put
+        bis indx placeb 255 mul cvi put
+    } for pop ris}
+	{gis} {bis} true 3 colorimage 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/d 8 def
+	gsave
+	translate rotate scale /h exch def /w exch def
+	/lb w d wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	colorsetup
+	/is im 0 lb getinterval def 
+    /cris lb string def
+    /cgis lb string def
+    /cbis lb string def
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	w h d [w 0 0 h neg 0 h] 
+	{cip} {cgis} {cbis} true 3 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip} {gip} {bip} true 3 colorimage
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUECOLOR { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        
+        /is w string def
+        
+        ws 0 w getinterval is copy pop 
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        {ip gip bip w gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/ww FMLOCAL
+/r FMLOCAL
+/g FMLOCAL
+/b FMLOCAL
+/i FMLOCAL
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+        translate rotate scale /h exch def /w exch def
+        /bitmapsave save def 
+        /is w string def
+        /gis w string def
+        /bis w string def
+        /cf currentfile def 
+        w h 8 [w 0 0 h neg 0 h] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop w gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDsave FMLOCAL
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+%%EndProlog
+%%BeginSetup
+(3.0) FMVERSION
+1 1 612 792 0 1 12 FMDOCUMENT
+0 0 /Helvetica-Bold FMFONTDEFINE
+1 0 /Times-Roman FMFONTDEFINE
+2 0 /Times-Bold FMFONTDEFINE
+3 0 /Times-BoldItalic FMFONTDEFINE
+4 0 /Times-Italic FMFONTDEFINE
+5 0 /Courier FMFONTDEFINE
+6 0 /Courier-Oblique FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(N-AWIPS Installation and Maintenance) 205.37 748 T
+0 10 Q
+(N-AWIPS Installation and Maintenance) 108 36 T
+(IM-1) 332.01 36 T
+(December 1996) 448.67 36 T
+0 18 Q
+(N-AWIPS Installation and Maintenance) 150.56 652 T
+1 12 Q
+4.36 (This guide contains general directions for installation and maintenance of the) 108 612 P
+2.36 (N-) 108 598.5 P
+2.36 (A) 120.65 598.5 P
+2.36 (WIPS software on a UNIX workstation. The software runs on various UNIX) 128.35 598.5 P
+(platforms including Silicon Graphics, Hewlett-Packard, SUN, IBM, and DEC.) 108 585 T
+0 14 Q
+(IM.1) 108 546.17 T
+(Preparation) 151.2 546.17 T
+1 18 Q
+(\245) 108 519.5 T
+1 12 Q
+1.21 (Create an) 126 519.5 P
+2 F
+1.21 (nawips) 177.05 519.5 P
+1 F
+1.21 ( account and an) 213.04 519.5 P
+2 F
+1.21 (nadata) 295.83 519.5 P
+1 F
+1.21 ( account.) 331.15 519.5 P
+3 F
+1.21 (Note) 379.88 519.5 P
+1 F
+1.21 (:) 403.19 519.5 P
+4 F
+1.21 (This step r) 410.74 519.5 P
+1.21 (equir) 463.37 519.5 P
+1.21 (es r) 488.25 519.5 P
+1.21 (oot) 506.67 519.5 P
+(privilege. Make sur) 108 505.5 T
+(e that the accounts use the C shell by default.) 201.15 505.5 T
+1 F
+0.33 (Do not use the) 108 485.5 P
+2 F
+0.33 (nawips) 181.93 485.5 P
+1 F
+0.33 ( and) 217.92 485.5 P
+2 F
+0.33 (nadata) 241.9 485.5 P
+1 F
+0.33 ( accounts to run the software. The) 277.22 485.5 P
+2 F
+0.33 (nawips) 445.38 485.5 P
+1 F
+0.33 ( account) 481.37 485.5 P
+2.02 (should only be used to store the software and create the executables. The) 108 472 P
+2 F
+2.02 (nadata) 486.68 472 P
+1 F
+1 (account should only be used to store and process the data for all users. Users of the) 108 458.5 P
+0.27 (software should have their own user accounts, and should customize them as outlined) 108 445 P
+(later in this document.) 108 431.5 T
+0.05 (The N-A) 108 412 P
+0.05 (WIPS distribution comes as a compressed tar \336le containing either the source) 150.05 412 P
+0.88 (or executables. The source tar \336le is about 32 Megabytes in size. The executable tar) 108 398.5 P
+1.82 (\336le contains about 40-45 Megabytes. When unpacked and compiled the N-A) 108 385 P
+1.82 (WIPS) 493.35 385 P
+2.42 (system requires approximately 100-1) 108 371.5 P
+2.42 (10 Megabytes. Therefore, make sure that the) 293.01 371.5 P
+5.36 (home disk for the) 108 358 P
+2 F
+5.36 (nawips) 216.7 358 P
+1 F
+5.36 ( account has enough space available. Disk space) 252.7 358 P
+0.82 (requirements for the) 108 344.5 P
+2 F
+0.82 (nadata) 210.7 344.5 P
+1 F
+0.82 ( account will vary depending on the type and amount of) 246.02 344.5 P
+0.28 (data stored. This space is in addition to the space required by the) 108 331 P
+2 F
+0.28 (nawips) 424.82 331 P
+1 F
+0.28 ( account and) 460.81 331 P
+(is measured in Gigabytes.) 108 317.5 T
+0 F
+(IM.1.1) 108 286 T
+( The NAWIPS Account) 162 286 T
+3 F
+(Log into the) 108 266 T
+2 F
+( nawips) 167.98 266 T
+3 F
+(account for this set of directions) 209.97 266 T
+1 F
+(.) 368.89 266 T
+1 18 Q
+(\245) 108 240.5 T
+1 12 Q
+(Unpack the source distribution from the compressed tar \336le.) 126 240.5 T
+5 F
+(% zcat source_YYMMDD.tar.Z | tar xvf -) 126 220.5 T
+1 F
+(or unpack the executable distribution from its compressed tar \336le.) 108 201 T
+5 F
+(% zcat execs_MACH_YYMMDD.tar.Z | tar xvf -) 126 181.5 T
+1 F
+0.65 (Where YYMMDD is the year) 108 162 P
+0.65 (, month and day the tar \336le was created, and MACH is) 253.34 162 P
+(the workstation type from the list of) 108 148.5 T
+2 F
+(hpux, sunos,) 283.56 148.5 T
+1 F
+( or) 347.22 148.5 T
+2 F
+( irix) 360.21 148.5 T
+1 F
+(.) 381.2 148.5 T
+1 18 Q
+(\245) 108 123 T
+1 12 Q
+0.29 (Edit the .) 126 123 P
+2 F
+0.29 (cshr) 170.23 123 P
+0.29 (c) 191.99 123 P
+1 F
+0.29 ( \336le. Change the value of the NA) 197.32 123 P
+0.29 (WIPS environment variable to the) 356.95 123 P
+(explicit pathname of the home directory of the) 108 109 T
+2 F
+(nawips) 333.84 109 T
+1 F
+( account.) 369.83 109 T
+FMENDPAGE
+%%EndPage: "1" 2
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(N-AWIPS Installation and Maintenance) 187.37 748 T
+0 10 Q
+(N-AWIPS Installation and Maintenance) 90 36 T
+(IM-2) 314.01 36 T
+(December 1996) 430.67 36 T
+1 18 Q
+(\245) 90 712 T
+1 12 Q
+(Source the .) 108 712 T
+2 F
+(login) 164.96 712 T
+1 F
+( and .) 190.29 712 T
+2 F
+(cshr) 216.6 712 T
+(c) 238.37 712 T
+1 F
+( \336les after you have made the changes.) 243.69 712 T
+5 F
+(% source .login) 108 692 T
+(% source .cshrc) 108 672.5 T
+1 F
+0.69 (These commands change the command-line prompt from the standard C shell \324%\325 to) 90 653 P
+(\324nawips@machine>\325.) 90 639.5 T
+2 F
+0.07 (Note) 90 620 P
+1 F
+0.07 (: In order for users to access the N-A) 113.97 620 P
+0.07 (WIPS system of software, they must replace) 290.74 620 P
+0.69 (their .) 90 606.5 P
+2 F
+0.69 (cshr) 118.67 606.5 P
+0.69 (c) 140.44 606.5 P
+1 F
+0.69 ( and .) 145.77 606.5 P
+2 F
+0.69 (login) 173.47 606.5 P
+1 F
+0.69 ( \336les with the .) 198.8 606.5 P
+2 F
+0.69 (cshr) 272.53 606.5 P
+0.69 (c) 294.3 606.5 P
+1 F
+0.69 (.) 299.62 606.5 P
+2 F
+0.69 (user) 302.62 606.5 P
+1 F
+0.69 ( and) 324.61 606.5 P
+2 F
+0.69 (.login.user) 349.31 606.5 P
+1 F
+0.69 ( \336les provided in the) 402.62 606.5 P
+2 F
+(nawips) 90 593 T
+1 F
+( home directory) 125.99 593 T
+(.) 201.15 593 T
+0 F
+(IM.1.2) 90 561.5 T
+( The NADATA Account) 144 561.5 T
+3 F
+(Log into the) 90 541.5 T
+2 F
+(nadata) 152.98 541.5 T
+3 F
+(account for this set of directions) 191.3 541.5 T
+1 F
+(.) 350.22 541.5 T
+1 18 Q
+(\245) 90 516 T
+1 12 Q
+1.4 (Copy the) 108 516 P
+2 F
+1.4 (.cshr) 157.45 516 P
+1.4 (c.user) 182.22 516 P
+1 F
+1.4 ( and) 212.52 516 P
+2 F
+1.4 (.login.user) 238.65 516 P
+1 F
+1.4 ( \336les from the) 291.96 516 P
+2 F
+1.4 (nawips) 367.54 516 P
+1 F
+1.4 ( home directory and) 403.53 516 P
+(execute them.) 90 502 T
+5 F
+(% cp ~nawips/.cshrc.user .cshrc) 108 482 T
+(% cp ~nawips/.login.user .login) 108 460.5 T
+(% source .login) 108 439 T
+(% source .cshrc) 108 417.5 T
+1 18 Q
+(\245) 90 392 T
+1 12 Q
+-0.19 (Create the necessary subdirectories in the) 108 392 P
+2 F
+-0.19 (nadata) 308.73 392 P
+1 F
+-0.19 ( home directory for the collection) 344.05 392 P
+1.24 (of real-time data. The data will be accessed by the environment variables set in the) 90 378 P
+(.) 90 364 T
+2 F
+(cshr) 93 364 T
+(c_data) 114.77 364 T
+1 F
+( \336le.) 148.74 364 T
+5 F
+(nadata@machine> cd) 108 342 T
+(nadata@machine> mkdir model/grid/MDL) 108 320.5 T
+(nadata@machine> mkdir meta/model/MDL) 108 299 T
+(nadata@machine> mkdir images/satellite/SAT_AREA/CHAN) 108 277.5 T
+(nadata@machine> mkdir observations) 108 256 T
+(nadata@machine> mkdir text) 108 234.5 T
+(nadata@machine> mkdir afos/afos_data) 108 213 T
+(nadata@machine> mkdir afos/afos_alarms) 108 191.5 T
+1 F
+4.02 (Where MDL is replaced by each model name, e.g., eta, ngm, mrf, etc. And,) 90 172 P
+0.51 (SA) 90 158.5 P
+0.51 (T_AREA is replaced by the satellite name and the image area and resolution, e.g.,) 104 158.5 P
+5.4 (GOES-7/NAmerica_8km, GOES-8/US_4km, Meteosat/NAtlantc_16km, etc.; and) 90 145 P
+0.05 (CHAN is the channel identi\336er) 90 131.5 P
+0.05 (, such as IR, VIS, and WV) 238.95 131.5 P
+0.05 (. The) 365.28 131.5 P
+2 F
+0.05 (observations) 393.02 131.5 P
+1 F
+0.05 ( directory) 457.66 131.5 P
+2 (is for the decoded observed data from the Family of Services data feed. The) 90 118 P
+2 F
+2 (text) 484.69 118 P
+1 F
+0.44 (directory will contain the raw text data from the Family of Services for the use in the) 90 104.5 P
+(NWX program.) 90 91 T
+FMENDPAGE
+%%EndPage: "2" 3
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(N-AWIPS Installation and Maintenance) 205.37 748 T
+0 10 Q
+(N-AWIPS Installation and Maintenance) 108 36 T
+(IM-3) 332.01 36 T
+(December 1996) 448.67 36 T
+0 14 Q
+(IM.2) 108 710.67 T
+(Build the Executables) 151.2 710.67 T
+1 12 Q
+0.51 (Follow the procedure in this section only if you received the source code. Otherwise,) 108 690 P
+(skip to the next section.) 108 676.5 T
+1 18 Q
+(\245) 108 651 T
+1 12 Q
+(Log into the) 126 651 T
+2 F
+(nawips) 187.63 651 T
+1 F
+( account.) 223.63 651 T
+1 18 Q
+(\245) 108 625 T
+1 12 Q
+1.27 (Create two subdirectories for the libraries and program executables in the home) 126 625 P
+(directory) 108 611 T
+(.) 150.52 611 T
+5 F
+(nawips@machine> cd) 126 589 T
+(nawips@machine> mkdir lib/$NA_OS) 126 567.5 T
+(nawips@machine> mkdir exe/$NA_OS) 126 546 T
+0 F
+(IM.2.1) 108 514.5 T
+( GEMPAK) 162 514.5 T
+1 F
+(Go to the build subdirectory and compile and link the GEMP) 108 494.5 T
+(AK code.) 400.05 494.5 T
+5 9 Q
+(nawips@machine> cd $GEMPAK/build) 126 477 T
+(nawips@machine> all_compile >&! ALL_COMP_$OS & ; tail -f ALL_COMP_$OS) 126 460.5 T
+(nawips@machine> all_link >&! ALL_LINK_$OS & ; tail -f ALL_LINK_$OS) 126 444 T
+1 12 Q
+0.75 (These commands save the standard output and the standard error of the compile/link) 108 425.5 P
+0.97 (scripts to \336les. They also put the execution of the script in the background. The) 108 412 P
+2 F
+0.97 (tail) 505.34 412 P
+1 F
+(command allows you to watch the progress of each script.) 108 398.5 T
+2 F
+-0.19 (All_compile) 108 379 P
+1 F
+-0.19 ( and) 169.3 379 P
+2 F
+-0.19 (all_link) 192.24 379 P
+1 F
+-0.19 ( each take about 40-80 minutes to run, depending on the type) 230.91 379 P
+(and model of workstation and how many other processes are running on the system.) 108 365.5 T
+1 18 Q
+(\245) 108 340 T
+1 12 Q
+0.39 (GEMP) 126 340 P
+0.39 (AK binary map \336les are delivered in) 158.21 340 P
+2 F
+0.39 ($GEMP) 339.16 340 P
+0.39 (AK/maps.) 380.25 340 P
+1 F
+0.39 ( These binary map) 431.89 340 P
+1.14 (\336les were created on a UNIX system and can be used directly on HP) 108 326 P
+1.14 (, SGI, SUN or) 450.28 326 P
+2.36 (IBM machines. For any other workstation, create the map \336les from their ASCII) 108 312 P
+0.38 (format by going to the directory) 108 298 P
+2 F
+0.38 ($GEMP) 266.84 298 P
+0.38 (AK/maps/ascii) 307.93 298 P
+1 F
+0.38 ( and following the directions) 382.57 298 P
+3.99 (in) 108 284 P
+2 F
+3.99 (map\336les.doc.) 124.32 284 P
+1 F
+3.99 ( After usable binary map \336les have been created, the \336les in) 190.96 284 P
+2 F
+($GEMP) 108 270 T
+(AK/maps/ascii) 149.09 270 T
+1 F
+( may be deleted.) 223.72 270 T
+0 F
+(IM.2.2) 108 238 T
+( NTL) 162 238 T
+1 18 Q
+(\245) 108 212 T
+1 12 Q
+(Build NTL as follows:) 126 212 T
+5 F
+(nawips@machine> cd $NTL/source) 126 190 T
+(nawips@machine> make all clean) 126 168.5 T
+0 F
+(IM.2.3) 108 137 T
+( NTRANS) 162 137 T
+1 18 Q
+(\245) 108 111 T
+1 12 Q
+(Build NTRANS as follows:) 126 111 T
+5 F
+(nawips@machine> cd $NTRANS/source) 126 89 T
+FMENDPAGE
+%%EndPage: "3" 4
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(N-AWIPS Installation and Maintenance) 187.37 748 T
+0 10 Q
+(N-AWIPS Installation and Maintenance) 90 36 T
+(IM-4) 314.01 36 T
+(December 1996) 430.67 36 T
+5 12 Q
+(nawips@machine> make all clean) 108 712 T
+0 F
+(IM.2.4) 90 680.5 T
+( NSAT) 144 680.5 T
+1 18 Q
+(\245) 90 654.5 T
+1 12 Q
+(T) 108 654.5 T
+(o build NSA) 114.49 654.5 T
+(T execute the following:) 173.8 654.5 T
+5 F
+(nawips@machine> cd $NSAT/source) 108 632.5 T
+(nawips@machine> make all clean) 108 611 T
+0 F
+(IM.2.5) 90 579.5 T
+( NWX) 144 579.5 T
+1 18 Q
+(\245) 90 553.5 T
+1 12 Q
+(Build NWX by executing the following:) 108 553.5 T
+5 F
+(nawips@machine> cd $NWX/source) 108 531.5 T
+(nawips@machine> make all clean) 108 510 T
+0 F
+(IM.2.6) 90 478.5 T
+( NMAP) 144 478.5 T
+1 18 Q
+(\245) 90 452.5 T
+1 12 Q
+(T) 108 452.5 T
+(o build NMAP execute the following:) 114.49 452.5 T
+5 F
+(nawips@machine> cd nmap/source) 108 430.5 T
+(nawips@machine> make all clean) 108 409 T
+0 F
+(IM.2.7) 90 377.5 T
+( VIEWFAX) 144 377.5 T
+1 18 Q
+(\245) 90 351.5 T
+1 12 Q
+(T) 108 351.5 T
+(o build VIEWF) 114.49 351.5 T
+(AX execute the following:) 188.22 351.5 T
+5 F
+(nawips@machine> cd viewfax) 108 329.5 T
+(nawips@machine> make all clean) 108 308 T
+0 14 Q
+(IM.3) 90 269.17 T
+(Maintenance) 133.2 269.17 T
+1 12 Q
+0.41 (V) 90 248.5 P
+0.41 (ery little maintenance is needed for the N-A) 97.33 248.5 P
+0.41 (WIPS software. The necessary tasks are) 310.1 248.5 P
+(of three types, updates to the software, system cleaning and data cleanup.) 90 235 T
+0 F
+(IM.3.1) 90 203.5 T
+( Updates) 144 203.5 T
+1 F
+0.39 (Periodically the development team will release bug \336xes, additions and modi\336cations) 90 183.5 P
+0.12 (to the software. These code changes must be installed and compiled by the designated) 90 170 P
+-0.1 (software administrator) 90 156.5 P
+-0.1 (. Speci\336c instructions for the updates will be included with each) 197.5 156.5 P
+(release.) 90 143 T
+0 F
+(IM.3.2) 90 111.5 T
+( System Cleaning) 144 111.5 T
+1 F
+0.8 (The other main function of the software administrator is to monitor the workstations) 90 91.5 P
+0.78 (for orphaned processes and message queues. When a GEMP) 90 78 P
+0.78 (AK graphics application) 385.2 78 P
+FMENDPAGE
+%%EndPage: "4" 5
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(N-AWIPS Installation and Maintenance) 205.37 748 T
+0 10 Q
+(N-AWIPS Installation and Maintenance) 108 36 T
+(IM-5) 332.01 36 T
+(December 1996) 448.67 36 T
+1 12 Q
+-0.29 (siren, a second process called) 108 712 P
+3 F
+-0.29 (gplt) 251.11 712 P
+1 F
+-0.29 ( is executed and a message queue connecting the two) 269.77 712 P
+-0.1 (is opened. After an output device is selected by the user) 108 698.5 P
+-0.1 (, a third process is forked \050e.g.,) 374.02 698.5 P
+3 F
+0.59 (xw) 108 685 P
+0.59 (, ps, nc) 121.55 685 P
+1 F
+0.59 (\051 and a second message queue is opened. It is important for the user to run) 157.38 685 P
+1.25 (the program) 108 671.5 P
+2 F
+1.25 (gpend) 171.79 671.5 P
+1 F
+1.25 ( at the end of his/her session. For devices which produce output) 203.12 671.5 P
+0.92 (\336les, this command closes the \336les; and for devices which plot to the screen,) 108 658 P
+2 F
+0.92 (gpend) 490.67 658 P
+1 F
+0.9 (closes the output window\050s\051. If the user does not run) 108 644.5 P
+2 F
+0.9 (gpend) 371.81 644.5 P
+1 F
+0.9 ( when \336nished,) 403.14 644.5 P
+3 F
+0.9 (gplt) 481.79 644.5 P
+1 F
+0.9 (, the) 500.45 644.5 P
+1.74 (device driver and the message queues will remain active in the process and queue) 108 631 P
+0.91 (tables. Therefore, it is necessary for the software administrator to check periodically) 108 617.5 P
+1.93 (for orphaned processes and message queues using the following commands as the) 108 604 P
+(super) 108 590.5 T
+(-user:) 133.74 590.5 T
+(For BSD UNIX workstations) 108 571 T
+5 F
+(# /bin/ps -gauwx | grep gplt) 126 549.5 T
+1 F
+(or for System V UNIX workstations) 108 530 T
+5 F
+(# /bin/ps -elf | grep gplt) 126 508.5 T
+3 F
+0.07 (gplt) 108 489 P
+1 F
+0.07 ( in the above may be replaced with) 126.66 489 P
+3 F
+0.07 (xw) 297.73 489 P
+0.07 (, ps, nc.) 311.28 489 P
+1 F
+0.07 ( The orphaned process must then be) 349.06 489 P
+(killed:) 108 475.5 T
+5 F
+(# kill -9) 126 454 T
+4 F
+(PID_of_pr) 197.96 454 T
+(ocess) 249.48 454 T
+1 F
+0.38 (The message queues correspond to the killed process must then be removed. A list of) 108 434.5 P
+(current message queues can be generated from the command:) 108 421 T
+5 F
+(# ipcs -q) 126 399.5 T
+1 F
+(Then any orphaned queues can be closed using:) 108 380 T
+5 F
+(# ipcrm -q) 126 358.5 T
+6 F
+(MQ_ID) 205.16 358.5 T
+1 F
+2.46 (As the super) 108 339 P
+2.46 (-user) 172.63 339 P
+2.46 (, the administrator may clean up processes and message queues) 196.12 339 P
+0.17 (belonging to any user) 108 325.5 P
+0.17 (. However) 211.46 325.5 P
+0.17 (, individual users may clean up after themselves using) 261.11 325.5 P
+(the same procedure above.) 108 312 T
+0 F
+(IM.3.3) 108 280.5 T
+( Data Cleanup) 162 280.5 T
+1 F
+1 (UNIX scripts suitable as entries for the) 108 260.5 P
+2 F
+1 (cr) 305.22 260.5 P
+1 (ontab) 315.65 260.5 P
+1 F
+1 ( should be run periodically to pur) 344.98 260.5 P
+1 (ge) 510.68 260.5 P
+1.12 (old data from the real-time data collection system. The) 108 247 P
+2 F
+1.12 (cr) 383.85 247 P
+1.12 (on) 394.28 247 P
+1 F
+1.12 ( entries must be owned) 406.95 247 P
+0.75 (and run by the) 108 233.5 P
+2 F
+0.75 (nadata) 182.93 233.5 P
+1 F
+0.75 ( account. It is left to the data administrator to review the) 218.25 233.5 P
+2 F
+0.75 (man) 499.34 233.5 P
+1 F
+(pages on) 108 220 T
+2 F
+(cr) 153.3 220 T
+(ontab) 163.73 220 T
+1 F
+( and construct a set of cleanup routine.) 193.06 220 T
+FMENDPAGE
+%%EndPage: "5" 6
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+0 12 Q
+0 X
+0 K
+(N-AWIPS Installation and Maintenance) 187.37 748 T
+0 10 Q
+(N-AWIPS Installation and Maintenance) 90 36 T
+(IM-6) 314.01 36 T
+(December 1996) 430.67 36 T
+FMENDPAGE
+%%EndPage: "6" 7
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%Pages: 6 1
+%%DocumentFonts: Helvetica-Bold
+%%+ Times-Roman
+%%+ Times-Bold
+%%+ Times-BoldItalic
+%%+ Times-Italic
+%%+ Courier
+%%+ Courier-Oblique

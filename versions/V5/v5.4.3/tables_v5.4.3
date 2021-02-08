@@ -1,0 +1,332 @@
+		NAWIPS 5.4.2+ Tables Changes Description Log
+
+
+t1.	Updated NWX Flash Flood Guidance tables.  Also added
+	Also added station KEPZ to SFD.BULL.  Done, KT, (SS),
+	03/17/97.
+
+	NEW:tables/nwx/ffg.stn
+
+	tables/nwx/master.tbl, sfd.bull
+
+============================ Patch 5.4.2.a ============================
+
+t2.	Simplified some of the country names in the geography table.
+	Also made some corrections and added remaining Canadian
+	provinces.  Done, GK, (SS), 3/26/97.
+
+	gempak/tables/stns/geog.tbl
+
+============================ Patch 5.4.2.b ============================
+
+t3.	Added several hundred new stations to SFSTNS.TBL.  Most of
+	them are foreign stations.  Removed 881 stations from the
+	table that have not been reporting observations.  They have
+	been saved in a new table called INACTIVE.TBL.  Done,
+	KT, (SS), 4/7/97.
+
+	NEW:gempak/tables/stns/inactive.tbl
+
+	gempak/tables/stns/sfstns.tbl
+
+t4.	Added Tropical Atlantic and Tropical Pacific areas to 
+	GEMPAK and NMAP tables.  Done, JYC, (SS), 4/7/97.
+
+	gempak/tables/stns/geog.tbl
+	gempak/tables/nmap/mapinfo.tbl
+
+t5.	Replaced a few AFOS text products in MARTXT and fixed a typo
+	in COAOFF product group.  Updated LDM pattern action table
+	for new products.  Done, SJ, (SS), 4/10/97.
+
+	tables/afos/text/MARTXT, COAOFF
+
+t6.	Added Marine Pacific and removed North Pacific areas from
+	the GEMPAK and NMAP tables.  Done, JYC, (SS), 4/16/97.
+
+	gempak/tables/stns/geog.tbl
+	gempak/tables/nmap/mapinfo.tbl
+
+t7.	Added a new AFOS text product, ANCPLSANC to AFOS and LDM
+	tables.  Done, JP, (SS), 4/16/97.
+
+	tables/afos/text/MARTXT
+
+t8.	Changed the HRLY station model in the alias table to use
+	SKYK instead of SKYC and BRBK.  Done, SJ, (SS), 4/17/97.
+
+	gempak/tables/config/prmlst.tbl
+
+t9.  	Revised active and inactive surface station tables adding
+	some inactive and new stations to SFSTNS.TBL.  Done, 
+	KT, (SS), 4/18/97.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl
+
+============================ Patch 5.4.2.c ============================
+
+t10.	Added SALT parameter to nmap station parameter list.  Done,
+	SS, (SS), 4/25/97.
+
+	gempak/tables/nmap/gemparms.tbl
+
+t11.	Updated flash flood guidance station tables to include new
+	California, Arkansas, and Louisiana zones.  Also updated
+	the zones table for new California stations.  Also updated
+	teh SCD station table to include only stations that report
+	SCD's.  Done, KT, (SS), 4/28/97.
+
+	gempak/tables/stns/ffgzon.tbl, scdstn.tbl, zones.tbl
+
+t12.	Made several updates to the AFOS text product tables.  Removed
+	Avaiation_Hourlies, Local_Forecast, Short_Range_FC and
+	WFB_Txt_Files.  Added STP_Tables and HPC_Bulletins.  Done,
+	JYC, (SS), 4/28/97.
+
+	NEW:tables/afos/text/STPTBL
+
+	tables/afos/text/text.tbl, WFBTXT, CLIALL, TRPALL
+
+t13.	Updated NWX table to include Scaramento FFG bulletins.  Done,
+	KT, (SS), 4/28/97.
+
+	tables/nwx/ffg.stn
+
+t14.	Updated flash flood guidance station table.  Done, KT, (SS),
+	5/2/97.
+
+	gempak/tables/stns/ffgzon.tbl
+
+t15.	Updated NWX tables for daily, monthly climate discussions.
+	Also updated state forecast discussion table.  Done, KT,
+	(SS), 5/6/97.
+
+	tables/nwx/dclim.bull, mclim.bull, sfd.bull
+
+t16.	Updated an AFOS table for text product.  Added LBBADPELP.
+	Done, JYC, (SS), 5/6/97.
+
+	tables/afos/text/STPTBL
+
+=========================== Patch 5.4.2.d ==============================
+
+t17.	Commented the Symbol class in classbtn.tbl in order to avoid
+	a core dump associated with it. Done, SJ, (SJ), 5/22/97.
+	(Operational accounts only.)
+
+	gempak/tables/parms/classbtn.tbl
+
+=========================== Patch 5.4.2.e ==============================
+
+t18.	Added several new marine products to the NWX tables.  Also
+	renamed one of the map areas in the NMAP mapinfo.nmp file
+	for consistentcy.  Done, JP, (SS), 5/27/97.
+
+	NEW:tables/nwx/cgdata.bull, mrp.bull, omrdata.bull,
+	plship.bull
+
+	tables/nwx/master.tbl, guidata.tbl, coastal/bull,
+	hseas.bull, mapinfo.nwx, offsh.bull
+	gempak/tables/nmap/mapinfo.nmap
+
+t19.	Added upper-air station ALY (Albany NY) to SNSTNS.TBL.
+	Kept prior station, ALB in table but changed its WMO
+	id to 99999.  Done, KT, (SS), 5/30/97.
+
+	gempak/tables/stns/snstns.tbl
+
+t20.	Made corrections to NWX tables and LDM pattern action table
+	for San Juan.  Corrections made to San Juan International
+	Airport Header and location.  Done, GK, (SS), 6/2/97.
+
+	tables/nwx/tstrm.bull, stsum.bull, stf.bull, sfd.bull,
+	now.bull, local.bull, ffa.bull, coastal.bull
+
+=========================== Patch 5.4.2.f ==============================
+
+t21.	Added another station model type (WAVES) and added more
+	marine parameters to the edit station plot GUI in NMAP.
+	Done, JP, (SS), 6/6/97.
+
+	gempak/tables/nmap/gemparms.tbl
+	gempak/tables/nmap/ship_stn.tbl
+	gempak/tables/config/prmlst.tbl
+
+t22.	Revised active and inactive surface station tables, adding
+	some inactive and new stations to SFSTNS.TBL.  Also,
+	added three new stations to SCDSTN.TBL,  Done, KT, (SS),
+	6/9/97.
+
+	gempak/tables/stns/scdstn.tbl, sfstns.tbl, inactive.tbl
+
+t23.	Updated zone and agricultural forecast tables for NWX.
+	Added new stations.  Done, SM, (SS), 6/9/97.
+
+	table/nwx/zone.bull, ago.bull
+
+t24.	Added several marine stations to NWX coastal and offshore
+	tables.  Done, JP, (SS), 6/9/97.
+
+	tables/nwx/coastal.bull, offsh.bull
+
+t25.	GRIB decoding tables have been modified to accomodate 
+	changes to the eta post-processing.  Done, DP, (SS),
+	6/11/97.
+
+	gempak/tables/grid/vcrdgrib1.tbl, wmogrib2.tbl
+
+t26.	Updated NWX and AFTEXT tables to remove SEA/BOS/WBC/SFO
+	offshore forecasts that are now being produced by the MPC.
+	Done, JP, (SS), 6/12/97.
+
+	tables/nwx/offsh.bull
+	tables/afos/text/COAOFF
+
+t27.	Corrected errors in loop speed table that was recently delivered.
+	Done, SM, (SS), 6/16/97.
+
+	gempak/tables/loop/loop_speed.tbl
+
+t28.	Corrected the longitude of station RKTU.  Done, SJ, (SS),
+	6/20/97.
+
+	gempak/tables/stns/sfstns.tbl
+
+=========================== Patch 5.4.2.g ==============================
+
+t29.	Corrected NWX table name from status.tbl to status.bull.
+	Done, SS, (SS), 6/24/97.
+
+	NEW:tables/nwx/status.bull
+
+t30.	Added a few stations to the AFTEXT program tables. Stations 
+	were added to the coded cities and STP categories. Done,
+	JC, (SS), 6/25/97.
+
+	tables/afos/text/CCFALL, STPTBL
+
+t31.	Added 3 new areas to geog.tbl and grdnav.tbl for AFOS areas
+	covering the tropics.  They are AFWH, AFEH, and AFPC.  Done,
+	SJ, (SS), 6/30/97.
+
+	gempak/tables/stns/geog.tbl
+	gempak/tables/grid/grdnav.tbl
+
+t32.	Added San Juan's forecast discussion to AFTEXT.  Done, JC, (SS),
+	6/30/97.
+
+	tables/afos/text/SFDALL
+
+t33.	Removed Haxardous Weather Update because the product is no
+	longer issued by the SPC.  Done, SM, (SS), 7/3/97.
+
+	tables/nwx/master.tbl, guidata.tbl
+
+t34.	Deleted TPC entry for High Seas Bulletin because they are appended to
+	the MPC-issued forecast.  Also, added MPC AFOS graphics products entries
+	to the product table.  Done, JP, (SS), 7/7/97.
+
+	tables/nwx/hseas.bull
+	gempak/tables/parms/product.tbl
+
+t35.	Added some additional upper-air stations in OK, KS, and AZ.
+	Done, GG, (SS), 7/8/97.
+
+	gempak/tables/stns/snstns.tbl
+
+t36.	Added AWC areas to geog.tbl and AWC AFOS products to the product table.
+	Done, EW, (SS), 7/9/97.
+
+	gempak/tables/stns/geog.tbl
+	gempak/tables/parms/product.tbl
+
+t37.	Two station ids are changed to reflect change effective 7/17/97.
+	They are NED to SFD and D97 to SGS in the surface station table.
+	Done, DKW, (SS), 7/16/97.
+
+	gempak/tables/stns/sfstns.tbl
+
+=========================== Patch 5.4.2.h ==============================
+
+t38.	Created new station table that contains centroids for highh
+	level significant weather boxes.  Done, GK, (SS),
+	7/21/97.
+
+	NEW:gempak/tables/stns/sigwx.tbl
+
+t39.	Corrected 3 entries in the FAX product tables.  Done, ML, (SS),
+	7/24/97.
+
+	gempak/tables/pgen/faxprod.tbl, product.tbl
+
+=========================== Patch 5.4.2.i ==============================
+
+t40.	Updated the fax product table and geog table for fax products
+	542-549.  Done, SJ, (SS), 8/4/97.
+
+	gempak/tables/pgen/faxprod.tbl
+	gempak/tables/stns/geog.tbl
+
+=========================== Patch 5.4.2.j ==============================
+
+=========================== Patch 5.4.2.k ==============================
+
+t43.	Added HPC storm summaries (ACUS41-45) to the NWX and LDM tables.
+	Done, SJ, (SS), 9/3/97.
+
+	tables/nwx/guidata.tbl, master.tbl
+
+t44.	Added Marine verification forecasts to AFTEXT.  Also, added 
+	Special Marine Warning and Marine Weather Statement from all
+	coastal and Great Lake offices to NWX.  Done, JP, (SS), 9/3/97.
+
+	NEW:tables/nwx/smw.bull, mws.bull
+
+	tables/nwx/guidata.tbl, master.tbl
+	tables/afos/text/MARTXT
+
+t45.	Revised the active and inactive surface stations tables, adding
+	25 stations and moving some non-reporting stations to the
+	inactive table.  Also, corrected several typos in the station
+	locations.  Done, DKW, (SS), 9/3/97.
+
+	gempak/tables/stns/sfstns.tbl, inactive.tbl
+
+t41.	Added the centroids to the map overlay list.
+	Done, CL, (SJ), 8/12/97.
+
+	gempak/tables/nmap/mapovl.nmap
+
+t42.	Added the CPC verification stations to the map overlay list.
+	Done, JH, (SJ), 8/12/97.
+
+	gempak/tables/stns/cpcstns.tbl
+	gempak/tables/nmap/mapovl.nmap
+
+t43.	Created header and updated some entries in the grid navigation
+	table.  Done, SJ, (SS), 9/10/97.
+
+	gempak/tables/grid/grdnav.tbl
+
+t44.	Added marine zones to the end of the zones table.  Done, GK,
+	(SS), 9/10/97.
+
+	gempak/tables/stns/zones.tbl
+
+t45.	Added Puerto Rico and Virgin Islands entries to the end of
+	the county table.  Done, GK, (SS), 9/11/97.
+
+	gempak/tables/stns/county.tbl
+
+t46.	Added Texas zones 027 through 030 to the FFG zone table.
+	Done, GK, (SS), 9/11/97.
+
+	gempak/tables/stns/ffgzon.stn
+
+t47.	Added the capability to display visibility in nautical
+	miles for ship data in the NMAP table.  Done, DKW, (SS),
+	9/23/97.
+
+	gempak/tables/nmap/gemparms.tbl
+
+=========================== Patch 5.4.2.l ==============================

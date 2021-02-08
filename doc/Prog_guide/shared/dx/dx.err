@@ -1,0 +1,11 @@
+!
+!	This is the DX error file.
+!
+ -1	! End of prologue reached prematurely in file !AS
+ -2	! Bad right border in prologue of file !AS
+ -3	! Routine name is missing in file !AS
+ -4	! End of file reached prematurely in !AS
+ -5	! Skipping module since there is no description for file !AS
+ -6	! Line truncated in file !AS
+ -7	! Prologue too long, truncated in file !AS
+ -8	! Table Of Contents overflow for chapter !AS.

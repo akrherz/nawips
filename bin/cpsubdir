@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+#  cpsubdir
+#
+for dir in `find . -type d`
+do
+    cp -f $GEMPAK/build/GNUmakefile_subdir ./${dir}/GNUmakefile
+done
+cp -f $GEMPAK/build/GNUmakefile_subdir GNUmakefile

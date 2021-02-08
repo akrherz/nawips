@@ -1,0 +1,33 @@
+#------------------------------------------------------------------------
+# jb.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# T. Piper/GSC		 3/99	Original
+#------------------------------------------------------------------------
+
+jbclos.f   - Close a Jack Woollen BUFR Data File
+jbnext.f   - Search for the Next BUFR Report
+jbopen.f   - Open a Jack Woollen BUFR Data File
+jbread.f   - Read a Jack Woollen BUFR Data File
+jbwerr.f   - Write a JB Library Error Message
+#jtb.cmn    - Common Area for a Jack Woollen BUFR Table
+jtbinit.f  - Initialize the BUFR Table
+jtbldsq.f  - Scan Table to Get Sequence Associated With Table D Entry
+jtbpdmp.f  - Write Information About Each Parameter in PARMS
+jtbqprm.f  - Query Information About Parameters in PARMS
+jtbsplt.f  - Return Parameter Names Associated with Sequence Mnemonic
+jtbtbla.f  - Scan Table to Get List of Table A Entries Found
+jtbtblb.f  - Scan Table to Get List of Table B Entries Found
+jwbufr.f   - Modified Jack Woollen BUFR Encoder/Decoder
+
+#------------------------------------------------------------------------

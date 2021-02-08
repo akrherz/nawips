@@ -1,0 +1,4 @@
+BUG FIX
+
+	A. Corrected the problem where NMAP2 would not print imagery.
+

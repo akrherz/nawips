@@ -1,0 +1,7 @@
+BUGS
+
+	A. Problem with DCCSIG error checking ( AWC )
+
+	   Improved the error checking when searching for convective sigmets 
+	   and the outlook sigmets. Previously, if a bad outlook was found, 
+	   incorrect errors were written to the dccsig.log files.

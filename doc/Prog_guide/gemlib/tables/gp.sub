@@ -1,0 +1,21 @@
+#------------------------------------------------------------------------
+# gp.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# T. Piper/GSC		10/98	Original
+#------------------------------------------------------------------------
+
+gpazdr.f	-	Transform Direction From M To N Coordinates
+gpdraz.f	-	Transform Direction From N To M Coordinates
+
+#------------------------------------------------------------------------

@@ -1,0 +1,412 @@
+
+                           NAWIPS 5.3 Change Description Log
+
+   000. Miscellaneous
+
+	a. Added checks for missing values when drawing latitude and
+	   longitude lines in GDRGRD. Done, SJ (SJ), 7/20/95.
+
+	b. Renamed routine dc_hilo to dg_hilo and modified calling
+	   routines, make, and compile scripts to reflect this.
+
+	c. Added the LDM directories to the NAWIPS directory tree.
+	   Done, SJ (SJ), 8/2/95.
+
+	d. Corrected GDSTAT for missing data for average grid
+	   calculation.  Done DK (SS), 8/22/95.
+
+	e. Changed calling sequence to cfdate to allow it to
+	   get local or GMT time.  Done DK (SS), 8/22/95.
+
+	f. Added stations MPX, MFL, LKN, FGZ, RIW to upper-air stations
+	   table.  Done SS (SS), 8/31/95.
+
+	g. Added stations EPZ and CUN to upper-air stations table.  Done
+	   SS (SS), 9/11/95.
+
+	h. Added new routine to obtain version number. Done, SJ 
+	   (SS), 9/15/95.
+
+	i. Removed version numbers from nprog subdirectory names.
+	   Done, SS, (SS), 9/19/95
+
+	j. Added station OTX to upper-air stations table. Also fixed
+	   entries for EPZ and CUN to remove tabs.
+	   Done, SJ, (SJ), 9/25/95.
+
+	k. Fix to contour fill algorithm for ragged edge problem.
+	   Done, GK, (SS), 10/10/95.
+
+	l. Fix to GDMOD error processing that allows the program
+	   to continue with error code of -7.  Done, JC, (SS), 
+	   10/10/95.
+
+	m. Fixes to errors which occur on AIX at compilation time.
+	   Done, SJ, (SS), 10/10/95.
+
+	n. Fixes to objective analysis programs to properly check
+	   for and open grid and guess files.  Done, SJ, (SS), 
+	   10/26/95.
+
+	o. Added LDFLAGS to GUI Makefiles for static loading of 
+	   libraries on SUNOS.  Also, replaced f77 by $FC. Done, SJ, 
+	   SJ, 10/30/95.
+
+	p. Corrected Alaska grid #203 lat and lon in grdnav.tbl.  Done,
+	   PB, (SS), 11/01/95
+
+	q. Seven additional upper-air stations were added.  Sources include
+	   AWC, the NWS-Changes mailing list, and the SDM.  Done, KT, (SS),
+	   11/01/95.
+
+	r. Increased LLMXGD parameter in gemprm.SunOS to 72000.  Done, SS,
+	   (SS), 11/8/95.
+
+	s. Added and edited stations to surface and upper air station tables.
+	   Done, SS, (SS), 11/29/95.
+
+	t. Fix to st_crnm to properly handle "e" string.  Done, KT, (SS), 
+	   12/04/95.
+
+	u. Added the addition and subtraction of minutes to ti library.  Done,
+	   KT, (SS), 12/04/95.
+
+	v. Enhancements to y-axis scaling for SFGRAM.  Done, KB, (SS), 12/11/95.
+
+	w. Correction to TI_FORM for contructing GEMPAK time from partial input
+	   time and ensure proper execution on SUN machines.  Done, KT, (SS),
+	   12/11/95.
+
+	x. Enhanced GDDELT to allow the deletion of a grid by specifying GDATTIM,
+	   GVCORD, and GLEVEL.  Done, KT, (SS), 12/11/95.
+
+	y. A new generic table opening routine has been added called FL_TBOP to
+	   replace FL_TOPN.  This routine searches for tables in the following
+	   order: local, path/filename, $GEMTBL/type/filename, and 
+	   $GEMTBL/filename.  All table opening routines have been modified to
+	   call the new routine.  Done, DK, (SS), 12/12/95.
+
+	z. Added animation capability to GDPLOT.  Done, PB, (SS), 12/26/95.
+
+	aa. Removed all references to AOIPS and NPGS satellite navigation.
+	    Done, ML, (SS), 12/26/95.
+
+	bb. Added capability to plot station markers and IDs using a GEMPAK station
+	    table.  This capability was added to all GEMPAK horizontal display programs.
+	    Done, DK, (SS), 12/27/95.
+
+	cc. Correction to routin OABOX to not reference GGSMAP.  Also, remove GGSMAP.
+	    Done, ML, (SS), 12/27/95.
+
+	dd. Removed extraneous lines from HICOWO.CIA map file.  Created new map file
+	    that has country borders but no state borders called HICYWO.CIA.
+	    Fixed incorrect record numbers in NAMPLT.  Cleaned up documentation.
+	    Done, SJ, (SS), 01/02/96.
+
+	ee. Fix to ggsplt to call FL_CLOS.  Done, DK, (SS), 01/02/96.
+
+	ff. Changed motif routines to call application context explicitly.  Changed
+	    _UNDERSCORE_ to UNDERSCORE in all GUI applications.  Done, CL, (SS),
+	    01/04/96.
+
+	gg. Added new routine CADJST to adjust grid values so that contours
+	    do not pass exactly through any grid points.  This routine corrects
+	    the problem of "holes" in contour fills and some bad contour lines
+	    with fields like relative humidity which tend to have grid values
+	    equal to contour values.  Done, SJ, (SS), 01/05/96.
+
+	hh. Various miscellaneous changes.  Updated GEMPAK version number and added to
+	    NOTAE help.  Modified HL1 and HL2 files for PROJ for better description of
+	    drop flag.  Updated file ALTERNATESE.DOC to reflect current state of
+	    alternative source code.  Removed the error table TAE.err since TAE is no
+	    longer used by GEMPAK.  Moved directories GEMSTN and WXPSTN into STNS 
+	    directory in $GEMTBL.  Moved DA library in GEMLIB to CFL library in
+	    CGEMLIB.  Done, SJ, (SS), 01/17/96.
+
+	ii. Updated helps for NSAT and NWX.  Done, DP, (SS), 01/18/96.
+
+	jj. Corrected problem in pslfcv.f to limit the number of passes through
+	    an iteration loop.  This corrects an infinite looping condition
+	    that can occur with some soundings.  Done, KB, (SS), 01/22/96.
+
+	kk. Updates to sample pqact.conf and scour.conf for the LDM.  Done,
+	    SJ, (SS), 01/23/96.
+
+	ll. Corrected NxmColorBlink.c to call application context explicitly.  
+	    This correction allows the blinking function on the color bar to
+	    work again.  Done, CL, (SS), 01/23/96.
+
+   001.	Grid Diagnostics
+
+	a. Added new subroutines that calculate stability indices
+	   from gridded data.  Modified the calculation of DRCT
+	   and SPED to now use grid relative as well as north 
+	   relative winds.  Done, DK (SS), 7/21/95.
+
+	b. Updated precipitation routine to compute 3-hour 
+	   major interval.  Done, KB (SS), 8/14/95.
+
+	c. Increased Coriolis parameter to avoid unrealistic 
+	   geostrophic wind calculations near equator (+/- 4
+	   degrees).  Done, DK (SS), 8/22/95.
+
+	d. Enhanced Poisson equation solver to perform calculations
+	   over a subset of the grid domain.  Done, KB (SS), 9/13/95.
+
+	e. Added new diagnostics to smooth vector and scalar fields
+	   using a Gaussian low pass filter.  Done, KB (SS), 9/13/95.
+
+	f. Corrected problems with radial and tangential winds
+	   where grid point is near storm center.  Done, KT,KB (SS),
+	   9/13/95.
+
+	g. Enhanced grid naming in GDDIAG.  Done, KB (SS), 9/13/95.
+
+	h. Added checks for UWND and VWND to DG_CHCK.  This fix was added to
+	   accomodate using these fields as a first guess for OA programs where
+	   grid guess file contained only grid relative winds.  Done, SJ, (SS),
+	   11/06/95.
+
+	i. New version of dg_hilo which has improved algorithms for finding highs
+	   and lows.  Also corrected rounding bug in GAZMML.  Done, DK, (SS),
+	   11/29/95.
+
+	j. Added various AWC developed grid diagnostics including, moist adiabatic
+	   temperature, wind shear, layer Brunt-Vaisala, sat equiv geos pot
+	   vorticity, microburst potential, sat equiv pot temp.  Done, KT, (SS),
+	   12/04/95.
+
+	k. Modified GDVINT to assign heights to underground pressure surfaces
+	   for thickness calculations.  Several bugs were corrected for
+	   high resolution eta grid files.  Done, KB, (SS),  12/04/95.
+
+	l. Corrected the SWEAT index to check the wind speed in knots against the
+	   threshold value of 15.
+
+   002.	Image Processing
+
+	a. Fix small memory leak problems for NSAT.  Done, CL
+	   (SS), 7/25/95.
+
+	b. Fix additional problems associated with memory leaks
+	   and handling of compound strings.  Done, CL (SS), 
+           7/26/95.
+
+	c. Added new image processing library.  Done, JC, CL, 
+	   SJ, (SS), 9/15/95.
+
+	d. Fix additional small memory leak problems and modify 
+	   to use new image processing library. Done, CL (SS),
+	   9/18/95.
+
+	e. New version of NTL that handles user input for number of
+	   colors reserved for satellite and radar images.  Error
+	   checking enhanced in GUI programs and GEMPAK to account
+	   for invalid color entries.  Done, CL (SS), 10/10/95.
+
+	f. Fix to GPMAP bug when not plotting images.  Done, SJ
+	   (SS), 10/10/95
+
+	g. Fix for GG_MAPS to check for and set the drop flag after
+	   the projection has been set to SAT or RAD.  Otherwise,
+	   the drop flag is set to 2 (no drop).  Done, SJ (SS),
+	   10/10/95
+
+	h. Various changes to IM library to better handle radar data.
+	   Also some bugs found by COMET.  Done, JC, (SS), 11/02/95.
+
+	i. Fixes to NSAT bugs found by COMET including call back bug on
+	   SUNOS and other minor bugs.  Done, JC, (SS), 11/02/95.
+
+	j. Added the parameter LUTFIL to GEMPAK display programs to allow
+	   user to input color lookup table.  Done, DP, (SS), 11/06/95.
+
+	k. Fixes to image drop flag bug.  Done, CL, (SS), 12/04/95.
+
+	l. Various changes to better handle LUT and color specifications.
+	   These changes include moving LUT file setting capability into the
+	   IM library; querying the number of colors from the application layer;
+	   the capability to create a grey scale in the range of the available
+	   colors; adding new error messages for invalid color bank ID;removed
+	   GSLUTF sequence of routines.  Done, JC, (SS), 12/12/95.
+
+	m. Corrected error in lat/lon drawing where some lines went off the screen.
+	   Done, LS, (SS), 01/02/96.
+
+	n. New version of NTL.  Fix to bug where number of satellite colors is set 
+	   to 1.  Code documentation has been updated.  Done, CL, (SS), 01/02/96.
+
+	o. New version of NSAT.  Added zoom/unzoom, data selection popup, reorganized
+	   code, moved color allocation to XW driver, modified enhancement popup.
+	   Done CL, (SS), 01/02/96.
+
+	p. Some corrections to problems with color allocation for radar in the NTL 
+	   program.  Also use icbank in the XW driver.  Fix color bar problems in
+	   NSAT.  Done, CL, (SS), 01/16/96.
+
+	r. Updated IMGTYP.TBL to contain entries for GOES-9.  Done, DP, (SS), 01/16/96.
+
+	s. Fixed NTL/NSAT problems when setting number of colors to zero.  Also
+	   corrected autoupdate problem.  Made some user interface label names
+	   more consistent.  Done, CL, (SS), 01/22/96.
+
+	t. Another correction to the problem of setting radar or satellite colors
+	   to zero.  Done, CL, (SS), 01/23/96.
+
+	u. Corrected error in assigning image time after autoupdate and zoom.  Done,
+           CL, (SS), 01/24/96.
+
+   003. AFOS Emulator
+
+	a. Fix for skipping the correct amount of bytes for
+	   the product definition header.  Done, SJ (SS), 7/25/95.
+
+	b. Added new products to the WFBTXT table.
+		NFDSCS11; NFDSCS12; NFDSCS13; NFDSCS14;
+		NFDTAV10; NFDTAV12; NFDTAV13; NFDSCCNSS;
+		NFDHOLNMC
+	   Done, SJ, (SJ), 10/27/95.
+
+
+   004. NWX 
+
+	a. New version of NWX (2.1).  Done, CL, LW (SS), 8/18/95.
+
+	b. Minor bug fixes to NWX2.1. Done, CL, LW (SS), 8/23/95.
+
+	c. Fix bug for product selection when new group is 
+	   selected.  Done, LW (SS), 8/24/95.
+
+	d. Fix additional minor bugs.  Done, LW (SS), 9/13/95
+
+	e. New version of NWX.  The code has been made more 
+	   modular.  Done, CL (SS), 10/18/95.
+
+	f. Updated table for state forecast discussion.  Done, KT,
+	   (SS), 11/06/95.
+
+	g. New version of NWX.  The program has been modified to 
+	   search for stations that issue watch/warnings.  Done,
+	   DP, (SS), 12/20/95.
+
+	h. Added check for number of contour lines and points exceeding a
+	   maximum.  Done, DP, (SS), 12/26/95.
+
+	i. Added many new NWX tables and updated existing tables for several
+	   new products.  Done, SJ, DK, (SS), 12/28/95.
+
+	j. Warning type data can now be searched using one global station table.
+	   Also added new type, S, whereby bulletin searching is done by station
+	   ID only.  Also added binary search algorithm for W type searching.
+	   Done, DP, (SS), 01/02/96.
+
+	k. Updated stations.tbl to include more complete set of stations. 
+	   Also updated master.tbl to have W types point to
+	   stations.tbl.
+
+	l. Fixes to correct bugs with max number of reports for warning category,
+	   search failure with record type, and incomplete searching for S type.
+	   Done, DP, (SS), 01/04/96.
+
+	m. Changed zone forecast to S type in master.tbl.  Done, SS, (SS), 01/04/96.
+
+	n. Use variable MAX_REPORTS in gui.h instead of MAX_SCAN_STN.  Done, DP, 
+	   (SS), 01/16/96.
+
+	o. Corrected QPF plotting problem that was plotting the wrong color for the
+	   first contour of the day 2 set.  Done, DP, (SS), 01/19/96.
+
+	p. Updated and added various tables for new and existing products.  Done,
+	   LS, DK, (SS), 01/19/96.
+
+	q. Updated and added tables for the Marine Forecasts group.  Done,
+	   LS, (SS), 01/24/96.
+
+   005. Device Drivers
+
+	a. Fix to zoom box color problem for XW.  Done, CL (SS),
+	   8/23/95.
+
+	b. Changed RGB specification to 0-255 in GPLT and device drivers.
+	   Removed, Hue/Lightness/Satuaration specification.  Retrieve
+	   X color name.  Done, GK, (SS), 12/12/95.
+
+	c. Changed XW driver to allow image applications to allocate their
+	   own colors when ntl has set the number of image colors to zero.
+	   Done, CL, (SS), 01/02/96.
+
+   006. Decoders
+
+	a. Corrections to NAGRIB for 1) memory leak problems, 2)
+	   subsetting problems accross grid boundaries, 3) non-
+	   standard lat/lons handling.  Done, LS (SS) 9/13/95.
+
+	b. Added a new library for decoder bridge source code.
+	   Also added two new decoders, DCTEXT and DCUAIR.
+	   Done, SJ (SS) 9/15/95.
+
+	c. Copied ru directory to bridge directory.  Done SS (SS),
+	   9/19/95.
+
+	d. New SAO decoder using new decoder bridge software.  Also
+	   updated DC_GHDR to return product sequence number.  Also
+	   copied RA library to the source/bridge directory. Done,
+	   SJ (SS) 10/18/95.
+
+	e. Added ability to output strings longer than 132 characters
+	   to the decoder log file.  Done, JA (SS), 10/26/95.
+
+	f. Fixed decoding of the weather information in the SAO decoder.
+	   Done, SJ, (SS), 11/29/95.
+
+	g. Updated the grib decoder to allow proper decoding of precipitation
+	   type grids, which are packed as one bit grids.  Done, KB, (SS),
+	   11/29/95
+
+	h. Changes to allow the DC library and programs to compile and link
+	   on SUN.  Done, SJ, (SS), 12/04/95.
+
+	i. Removed unused routines naghdr.f and naglvl.f from grib decoder.
+	   Done, ML, (SS), 12/12/95
+
+	j. Modified DC_GHDR to parse WMO bulletin header in better way to handle
+	   corrections, amendments, retransmissions or segments.  The calling
+	   sequence was modified.  Done, SJ, (SS), 1/2/96.
+
+	k. Added correction to properly decode one bit grids.  Also added a routine
+	   to decode BDS header information to query the number of bits in the grid.
+	   Also added logic to determine whether grid needs to be unpacked or not.
+	   Before this logic was added, some grids were being unpacked unnecessarily.
+	   Done, KB, (SS), 1/2/96.
+
+	l. Fixed RA_GRPT and RA_GMIL to properly find military SAOs which do not have
+	   record separators.  Done, SJ, (SS), 01/02/96.
+
+	m. Move the RS library from GEMLIB to Bridge and remove the RA, RS and RU 
+	   libraries form GEMLIB.  Done, SJ, (SS), 01/02/96.
+
+	n. Various fixes to the SAO decoder.  Added check for maximum number of 
+	   characters in WMO header.  Fixed check for continuation line in military
+	   SAOs.  Changed checks in RA_RTIM for the minutes of the bulletin and report
+	   times from greater than to greater than or equal to 45.  Added more error
+	   messages.  Done, SJ, (SS), 01/17/96.
+
+   007. NTRANS
+
+	a. Corrected printing problem for color 1. Done, CL (SS),
+	   9/20/95.
+
+	b. Corrected problem writing error message using er_wmsg.  Done,
+	   JC, (SS), 11/02/95.
+
+   008. Documentation
+
+	a. Misc documentation corrections.  Done, ML (SS), 10/18/95.
+
+	b. Removed error lists from GEMLIB txt files.  Done, ML (SS),
+	   11/01/95.
+
+	c. Correction to GDVINT.txt.  Done, ML (SS), 12/11/95.	
+
+	d. Updated documentation relating to geostrophic potential vorticity in a layer.
+	   Done, TL, (SS), 12/28/95.

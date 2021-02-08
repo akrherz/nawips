@@ -1,0 +1,46 @@
+#------------------------------------------------------------------------
+# dc.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# M. Linda/GSC		12/97	Original
+#------------------------------------------------------------------------
+
+dcb.c		- ?
+dcbsrc.f	- ?
+dcbsrh.f	- ?
+dccrid.f	- ?
+dcdlog.c	- ?
+dcexit.c	- ?
+dcfcls.f	- ?
+dcfcyl.f	- ?
+dcfint.f	- ?
+dcgbul.c	- ?
+dcghdr.f	- ?
+dcgopt.c	- ?
+dcgpil.f	- ?
+dciffp.f	- ?
+dcifmp.f	- ?
+dcinit.c	- ?
+dcosfc.f	- ?
+dcosfr.f	- ?
+dcoshp.f	- ?
+dcosnd.f	- ?
+dcosnm.f	- ?
+dcrtim.f	- ?
+dcsgnl.c	- ?
+dcstns.f	- ?
+dcwbuf.c	- ?
+dcwclg.c	- ?
+dcwlog.f	- ?
+
+#------------------------------------------------------------------------

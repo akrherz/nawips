@@ -1,0 +1,5 @@
+cp $GEMPAK/source/device/device/device.f .
+$FC $FFLAGS $LDFLAGS -o XBM device.f \
+		libxbm.a -lgemlib -lcgemlib -ldevice \
+		-lgn -lgemlib -lcgemlib -lgemlib -lsyslib
+$RM *.o device.f libxbm.a

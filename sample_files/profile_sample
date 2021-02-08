@@ -1,0 +1,195 @@
+#!/bin/sh
+#########################################################################
+#
+#  profile_sample
+#
+#  .profile
+#
+#  The .profile script is executed each time a new 'sh' shell is started.
+#
+##
+# Log:
+# S. Jacobs/NCEP	 4/01	Started log
+# S. Jacobs/NCEP	 4/01	Removed flags from IRIX5 compile
+# D. Kidwell/NCEP	 1/02	Added -DNO_MSG_IPC to BUFRFLAGS for Linux
+# T. Piper/SAIC		 7/02	Removed CFLAGS
+# S. Jacobs/NCEP	 9/02	Added check for Linux release number
+# T. Piper/SAIC		 7/03	Removed NAWIPS_INC
+# T. Piper/SAIC		11/03	Removed references to NSAT
+# T. Piper/SAIC		11/03	Removed NAWIPS_EXE and NAWIPS_LIB
+# T. Piper/SAIC		11/03	Added -L$GEMOLB to LDFLAGS
+# T. Piper/SAIC		12/03	Added NCOLOR, NFAX, NSHARP
+# T. Piper/SAIC		12/03	Modified NTL, NTRANS, NWX
+# T. Piper/SAIC		01/04	Removed CC, NAWIPS_HELP, & NAWIPS_TABLES
+# S. Jacobs/NCEP	 3/04	Removed references to old OS's
+# T. Piper/SAIC		05/04	Added -I$GEMPAK/source/aodtlib
+# T. Piper/SAIC		09/04	Added LPAODT and LPAODTFLAG
+# T. Piper/SAIC		10/04	Added support for elsmp processor type
+# T. Piper/SAIC		10/04	Removed '-o32' IRIX compiler flags
+# T. Piper/SAIC		12/04	Fixed if statement for el or elsmp
+# B. Yin/SAIC		01/05	Added xml2 and xslt into linux XLIBS
+# T. Piper/SAIC		01/05	Added Motif 2.1 reference to IRIX
+# T. Piper/SAIC		02/05	Added XML switch
+# T. Piper/SAIC		06/05	Changed GEMEXE, GEMOLB; added CC & CFLAGS
+# T. Piper/SAIC		06/05	Added OS_ROOT, OS_BIN, OS_INC, and OS_LIB
+# T. Piper/SAIC		06/05	Removed $GEMPAK/source/aodtlib from INCLUDES
+# T. Piper/SAIC		09/05	Add support for 64-bit architectures
+# H. Zeng/SAIC		03/06	Set new CFLAGS when $MACHTYPE = "x86_64"
+# T. Piper/SAIC		09/06	Removed AC, ANSI_CFLAGS, and GEM_OS
+# T. Piper/SAIC		10/07	Moved root NAWIPS variables to the top 
+# T. Piper/SAIC		10/07	AIX only:  Changed 'C' compiler to
+#				cc -qlanglvl=extc99; defined OBJECT_MODE=32;
+#				and added MANPATH definition
+# T. Piper/SAIC		10/07	SunOS only:  Added $OS_ROOT man
+#				directories to MANPATH definition
+# T. Piper/SAIC		10/07	All:  Cleaned up path variable definition
+# T. Piper/SAIC		01/08	Removed NAWIPS environment specific items
+#############################################################################
+#
+#  IMPORTANT:  PATH must be set BEFORE setting up the N-AWIPS environment,
+#		because gemenv.sh adds items relative to $PATH.
+#
+#  Set the PATH.
+#
+PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11
+PATH=$PATH:/usr/local/etc:/usr/etc:/etc
+export PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin
+
+######################################################################
+#
+#  CRITICAL:  The next three (3) commands are REQUIRED to
+#		establish the N-AWIPS environment.
+#
+#  Set the site-specific N-AWIPS NAWIPS system environment variable.
+#
+export NAWIPS=<NAWIPS_PATH>
+
+#
+#  Setup the N-AWIPS environment.
+#
+. $NAWIPS/environ/gemenv.sh
+
+#
+#  NOTE:  Any file name may be used for the site-specific data file.
+#
+#  Set the site-specific N-AWIPS data system envirnoment variables.
+#
+. $NAWIPS/site/your_gemdat.sh
+
+######################################################################
+
+
+######################################################################
+#							|
+#  NOTE:  The remainder of this script is OPTIONAL.	|
+#							V
+#  Set convenience aliases for N-AWIPS developers.
+#
+alias a=alias
+alias ua=unalias
+
+alias ccompile='$CC $CFLAGS'
+alias fcompile='$FC $FFLAGS'
+alias library='$AR $ARFLAGS'
+
+alias cd='cd "$@";pwd'
+alias go='cd "$@";pwd'
+
+alias fd='find . -type d -print | more'
+alias ff='find . -type f -print | more'
+alias fk='find . -type f -print | grep gempak | more'
+alias fr='find . -type f -print | grep extlibs | more'
+alias fn='find . -newer \!* -type f -print'
+
+alias gb='cd $GEMPAK/build'
+alias ge='cd $GEMERR'
+alias gf='cd $GEMPDF'
+alias gh='cd $GEMHLP'
+alias gi='cd $GEMINC'
+alias gm='cd $GEMMAPS'
+alias gp='cd $GEMPARM'
+alias gt='cd $GEMTBL'
+alias na='cd $NAWIPS'
+
+alias h=history
+
+alias la="ls -a"
+alias lb='ll -rt $OS_BIN'
+alias ls="ls -CF"
+alias ll="ls -l"
+
+alias mkdir="/bin/mkdir -p"
+alias x="chmod +x"
+
+if [ ${NPRINTER} !=  ]
+then
+    alias print='$LP $LPFLAG$NPRINTER'
+else
+    alias print=$LP
+fi
+
+#
+#  Set convenience environmental variables for N-AWIPS developers.
+#
+export NCOLOR=$GEMPAK/source/programs/gui/ncolor
+export NFAX=$GEMPAK/source/programs/gui/nfax
+export NMAP=$GEMPAK/source/programs/gui/nmap2
+export NSHARP=$GEMPAK/source/programs/gui/nsharp
+export NTL=$GEMPAK/source/programs/gui/ntl
+export NTRANS=$GEMPAK/source/programs/gui/ntrans
+export NWX=$GEMPAK/source/programs/gui/nwx
+export NXM=$GEMPAK/source/nxmlib
+
+#
+#  Do not create core dump files when a program blows up.
+#
+export coredumpsize=0
+
+#
+#  Set default permissions for newly created files.
+#
+umask 022
+
+#
+#========================================================================
+#  Skip remaining setup if not an interactive shell.
+
+if [ -t 0 ]
+then
+#  Set the interrupt character to Ctrl-c and do clean backspacing.
+case $OS in
+    AIX )
+#  IBM
+#	stty echoe erase "^H" intr "^C"
+	;;
+    HPUX )
+#  Hewlett-Packard
+#	stty echoe erase "^H" intr "^C"
+#	stty kill "^U" eof "^D" susp "^Z" hupcl ixon ixoff tostop
+	;;
+    IRIX )
+#  Silicon Graphics
+#	stty echoe erase "^?" intr "^C"
+	;;
+    Linux )
+#  Linux - PC
+#	stty echoe erase "^H" intr "^C"
+	;;
+    SunOS )
+#  Sun Micro Systems
+#	stty echoe erase "^H" intr "^C"
+	;;
+    * )
+	echo
+	echo "WARNING..."
+	echo
+	echo "The erase command has not been set properly."
+	echo
+	;;
+    esac
+
+#
+#  Set the prompt.
+#
+    export PS1="`whoami`@`hostname|cut -d. -f1`: "
+fi

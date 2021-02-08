@@ -1,0 +1,25 @@
+export GEMPARM=$GEMPAK/parm
+
+pdfbld $GEMPDF GPBOX
+##########################
+pdfbld $GEMPDF GPCLEAR
+##########################
+pdfbld $GEMPDF GPCLOSE
+##########################
+pdfbld $GEMPDF GPCOLOR
+##########################
+pdfbld $GEMPDF GPEND
+##########################
+pdfbld $GEMPDF GPFAX
+##########################
+pdfbld $GEMPDF GPMAP
+##########################
+pdfbld $GEMPDF GPRCM
+##########################
+pdfbld $GEMPDF GPTCWW
+##########################
+pdfbld $GEMPDF GPTEXT
+##########################
+pdfbld $GEMPDF GPTPC
+##########################
+echo ALL THE GP PDFs ARE BUILT.

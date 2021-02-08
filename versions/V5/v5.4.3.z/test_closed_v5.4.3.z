@@ -1,0 +1,3520 @@
+
+			NAWIPS 5.4.3+  Closed Test Log
+
+							Delivery
+Log #	Description					Date	Tester	Status
+-----	----------------------------------------------	----	------	------
+021ii	Line object modification tool modified to not	1/21/98	SS	closed
+	close to the nearest vertex if the last vertex
+	of the modified line is not near by.
+	
+021jj	Corrected problem where changing the line dash	1/21/98	SS	closed
+	pattern caused a core dump.
+		
+011g	Increased color buffer size from 11 to 12 for	1/21/98	SS	closed
+	surface plots.
+		
+018m	Changed calling sequences in surface and upper	1/22/98	SS	closed
+ 	air plotting routines.  Selected files to open
+ 	is now based on the data type and time.  Files 
+ 	are now closed each time data are plotted.
+ 		   
+021kk	Changed the line modification tool so that if	1/22/98	SS	closed
+	the last vertex is the starting point, it will
+	add to the line.
+	
+007k	Added capability to change the default colors	1/23/98	GK	closed
+	for printing by using a new table 				2/10/98
+	$GEMTBL/colors/cvtclr.psc.
+	
+007l	Corrected problem with wrong directory name in	1/27/98	SS	closed
+	open statement for the table cvtclr.psc.
+	
+018n	Fixed the problems associated with displaying	1/27/98	SS	closed
+	dashed lines after zooming, moving, etc. 
+	Also cleaned up NMAP code to remove unnecessary 
+	extra VG file loading.  Removed the saving to
+	common of dash line pattern in idash.f.
+	
+021ll	Fixes connection of contour ends.		1/27/98	AH	closed
+									2/24/98
+010dd	FL enhancements for grids.			1/27/98 TL	closed
+
+010l	Marine decoder date handling correction.	1/27/98 DK	closed
+
+021mm	When modifying the existing segment, the user 	1/28/98	AH	closed
+	may change the direction of transversal.			2/24/98
+
+018o	Fixed the problems with loading radar look-up 	1/28/98	GK	closed
+	tables.
+
+007m    Text background fill enhancements		1/28/98	TP	closed	
+									2/11/98
+	
+007n	Changed dots in IDRAW to be circular.  Added	2/2/98	TP	closed 
+	FAX driver to PLOTSYMS.  Changed lpscal in 			2/11/98
+	HINIT for the FAX driver to add more space in 
+	the line patterns.  Modified hardware dot 
+	software for FAX driver.						
+
+010ee	Corrected a bug in DG_CLOS and DG_CLAL.		2/2/98	TL	closed
+									2/9/98
+001m	Wrote new decoder for land synoptic data	2/3/98	ID	closed
+	(headers: SI, SM, SN).						2/13/98
+	
+018p	Fixed the problem with radar time matching.	2/3/98	AH	closed
+	Also fixed problems with setting projection 			2/9/98
+	when unzooming image and model data.
+		
+021nn	Changed the color of the product generation 	2/3/98	SS	closed
+	palette to black text with the vanilla 
+	background.
+		
+010ff	Fixed bug associated with FL_MFLS.  Also	2/3/98	TL	closed
+	modified GDGTMF to process file names with
+	templates containing forecast times, fFF.	
+	Wrote a new routine, GDGCYC.f to determine       
+	which cycles are available given a filename 
+	or template.
+	
+021oo	Fixed fatal error when VG element length 	2/4/98	ID	closed
+	exceeds the maximum, 500.					2/10/98
+	
+021pp	Changed cds_line to always draw a bounding 	2/4/98	TP	closed
+	polygon around the filled area with a regular 			2/12/98
+	line.
+		
+011h	Created a new program GPTEXT to display ASCII 	2/4/98	SJ	closed
+	text files.							2/5/98
+	
+001n	Corrected limits for CBAS in the marine packing	2/4/98	ID	closed
+	table to correspond with the WMO Code Table 1600.  		2/24/98
+	Also, allowed the character '/' to be recognized 
+	as a valid category for CBAS.
+	
+011i	imsimg.f updated for new radar products.	2/4/98	SJ	closed
+									3/3/98
+022a	Fixed the display of product number in the	2/4/98	SJ	closed
+	VIEWFAX title bar.						2/5/98
+
+020b	Modified HLPBLD and PDFBLD to find input files	2/4/98	SS	closed
+	locally before searching in the $GEMPAK tree.		
+
+001o	Corrected a problem with the synoptic decoder	2/5/98	DK	closed
+	where the snow depth was not being written to 			2/6/98
+	the GEMPAK file.
+			
+021qq	Added undo function for line and front		2/5/98	AH	closed
+	operations and a redo which reverses the undo.			2/24/98
+
+010gg	Corrected the calling sequence in cst_nocc to	2/5/98	ID	closed
+	return the string position as an integer.			2/17/98
+
+007o	Fixed error in setting of ntxhw in the FAX	2/5/98	ID	closed
+	driver in the HINIT function that was 				2/26/98
+	preventing text print out.
+
+021rr	Improved the text editing tool by separating	2/9/98	ES	closed 
+	the mouse and keyboard inputs.  Also, fixed 			2/13/98
+	the ghost/temporary color problem.
+			
+021ss	Updated Watch-By-County capabilities to allow	2/9/98	AH	closed
+	polygon drawing and formatting to a GEMPAK county 		2/13/98
+	file.  Made several enhancements to the WBC functions.
+	
+021tt	Major clean-up of the crg library.		2/17/98	AH	closed	
+									2/23/98
+021uu	Corrected problem where the text input was not	2/17/98	ID	closed
+ 	properly activated when entering NMAP product 			2/19/98
+ 	generation for the first time and editing text 
+ 	after opening a VG file.  Also, corrected problem
+	where title strings could not be edited because the NMAP code
+	was not decoding text justification codes of 11, 12, 13, which
+	are for the no clipping case of left, center, and right 
+	justification, respectively.	
+
+011i	Added color coding capability to sfmap program.	2/17/98	GK	closed
+	Updated nmap to reflect sfmap calling sequences.  		3/3/98
+			
+007p	Fixed several bugs found as a result of CDB 	2/17/98	TP	closed
+	testing for updated DTEXT changes (007m).			2/19/98
+
+021vv	Added check to ensure that the size of lines	2/18/98	ID	closed
+	and fronts do not exceed the maximum number of 			2/19/98
+	points, (500).  Also, corrected two problems 
+	with the modify tool.  First, the transversal
+	direction was sometimes incorrect for the case 
+	when the start and end points are the same vertex.  
+	Second, corrected problem where the highlighted 
+	line was not correct in the roam mode.
+	    	
+018q	Fixed the problem with radar lut when switching	2/18/98	ID	closed
+	back and forth to satellite images.				2/18/98
+
+010hh	Corrected problems with new functions to handle	2/18/98	TL	closed*	
+	forecast hours in the file template as a result 		2/24/98
+	of CDB testing, 010dd.      * Problem w/testgd from 010ff not yet fixed.
+
+007r	Changed the calculation in the UTF driver to	2/18/98	AWC	closed	
+	include minutes.						2/18/98
+
+007s	Added the ability to plot radar/satellite	2/18/98	TP	closed
+	colors for the color bar, in the PS driver.
+	
+007t	Fixed bug created by delivery of 007p. where	2/18/98	TP	closed	
+	title was not positioned properly.				3/4/98
+	
+021ww	Fixed a problem with the flip function where 	2/18/98	AH	closed
+	if solid or dashed lines are flipped, the line 			2/23/98
+	disappears.
+
+021xx	Created a new function pgobj_getID which	2/18/98	N/A	not 
+	returns element ID, gempak type, and sub-type 			directly
+	to calling function according to class and object 		testable
+	ID.  Modified NMAP routines, appropriately.
+
+
+018r	Added Flash Flood Guidance display capability	2/19/98	N/A	closed	
+	to NMAP.  							obe
+
+007u	Fixed fatal bug in printing from GUI programs	2/20/98	TP	closed
+	(007s).								2/21/98
+	
+018s	Improved the color-coded display of surface 	2/23/98	SS	closed
+	data in NMAP.							3/19/98
+
+018t	Fixed problem where NMAP was not printing	2/23/98	TP	closed
+	radar images properly (007s).					2/25/98
+	  	
+008n	Documentation update in gempak/help/txtloc.hl2	2/23/98	N/A	help
+									update
+
+001p	Decreased the value used to check for minimum	2/24/98	AH	closed
+	bulletin length in the synoptic decoder, dclsfc.		3/20/98
+
+015a	Fixed NSAT segmentation fault.  Also, modified	2/24/98	SS	closed 
+	the Make file to use a compile script and nsat 			3/19/98
+	object library similar to NMAP.
+	
+=========================== End Patch 5.4.3.g =================================
+
+010ii	Updated nawips version number to 5.4.3.h.	2/27/98	SS	closed  
+
+021yy	Added text_labeling help for icons in tool	2/27/98	ID	closed
+	palette of product generation.					2/27/98
+	
+018u	Fixed problem with lat/lon labels between	2/27/98 ID	closed
+	frames in a loop.  						2/27/98
+
+021zz	Fixed some user-interface problems on IRIX4.	2/27/98	ID	closed
+									2/27/98
+									
+010jj	Updated testcrg for new crg function names.	2/27/98	AH	closed	
+									3/5/98
+									
+006e	Added smooth function.				3/2/98	SL	closed	
+									3/5/98
+									
+021aaa	Added partial delete tool and corrected some	3/3/98	ID	closed
+	problems with the undo tool and extends it to			3/5/98
+	flip operations.  
+
+010kk	Updated DG library routines to accommodate	3/3/98	TL	closed
+	model data in multiple forecast files.				3/11/98
+
+010ll	Simplified logic of cfl_trln routine.		3/4/98	N/A	obe *
+						    		* (See 010nn)
+						    
+010mm	Corrected typo in write statement in TESTSN	3/5/98	TL	closed
+	that caused a fatal error.					3/20/98
+
+010nn	Corrected a bug created when cfl_trln 		3/5/98	ID	closed
+	was simplified.  Also updated error codes.  			3/10/98
+	
+007v	Fixed pips not being drawn in UTF driver.	3/5/98	ID	closed
+									3/10/98
+									
+021bbb	Extended the undo function to all element 	3/9/98	AH	closed
+	types and operations except file actions. 			3/10/98
+	Also, correct a bug associated with moving 
+	symbols and winds and then undoing the move.  
+	    
+021ccc	Changed the turbulence pulldown buttons in 	3/9/98	N/A	obe
+	NMAP from text labels to symbol pixmaps.		     see 021ddd
+
+011j	Corrected bug in handling zero in color coding.	3/10/98	GK	closed
+									3/13/98
+									
+001q	Created two new routines in the DC library to 	3/10/98	AH	closed
+	write all character and real interface array 			3/20/98
+	values that are not missing to the decoder log 
+	at user-specified verbosity levels. 
+	
+021ddd	Corrected fatal bug with turbulence pixmaps.	3/10/98 ID	closed
+									3/10/98
+									
+010oo	Corrected a bug in DG_UFIL.			3/10/98	TL	closed
+									3/11/98
+									
+021eee	Corrected a save/save as bug.			3/10/98	AWC	N/A
+
+016a	Created nwx_compile and modified NWX Make file.	3/11/98	SS	closed
+									3/19/98
+	
+002b	Added capability to decode TDL ensemble grids.	3/11/98	Jack	N/A	
+								@TDL
+021fff	Modified line attribute pop-up so that user	3/12/98	TP	closed
+	changes will be saved during the session.			3/13/98
+
+021ggg	Corrected some bugs in the modification tool	3/12/98	AH	closed
+	and undo.							3/16/98
+	     
+010pp	Added new CTB routines which read the GEMPAK	3/12/98	GK	closed 
+	parameter list table, prmlst.tbl, and store  			3/16/98
+	the information in an internal structure.		
+
+021hhh	Added attribute scaling capability to VG files.	3/12/98	AH	closed
+									3/20/98
+
+006f	Added a new set of functions to allow the user	3/16/98	TP	closed 
+	to set a scaling factor for the line dash 			3/17/98
+	patterns.
+
+006g	Added bold font for software fonts.		3/16/98	TP	closed
+									3/19/98
+									
+021iii	Updated nmap to use new software bold font 	3/16/98	TP	closed
+	for text editing.						3/19/98
+	
+008i	Updated help for device to reflect AFOS		3/16/98	N/A	help
+	base time includes minutes.					update
+	
+021jjj	Modified VG save functions so that lines	3/16/98	SS	closed
+	> MAXPTS (500) vertices, are divided into			3/30/98
+	pieces.  This prevents truncation of long lines.
+
+001r	Modified the synoptic decoder.			3/16/98	AH	closed
+									3/20/98
+
+021kkk	Added symbol attribute editing capability;	3/17/98	TP	closed
+	color, size, and width to NMAP.					3/19/98
+
+010rr	Updated new CTB routines that read the GEMPAK	3/17/98	GK	closed
+	parameter list table, prmlst.tbl.				3/26/98
+
+006h	Added light and heavy forms of the icing	3/18/98	AH	closed
+	symbols.  Also, added heavy rain, heavy snow, 			3/25/98
+	and snow with thunderstorm icons.
+
+001s	Added DMQA Branch core code for the upper air	3/18/98	N/A	not
+	decoder into the bridge library.				testable
+
+021lll	Added capability to edit wind color in NMAP.	3/18/98	TP	closed
+									3/23/98
+
+007w	Added ability to change the pattern for filled	3/23/98 TP	closed
+	areas in the device drivers.					3/25/98
+
+007x 	Corrected bug in PS driver.			3/24/98	TP	closed
+									3/25/98
+
+001t	Updated aircraft decoder for ids within RECCCO.	3/25/98	AH	closed
+									3/26/98
+
+010ss	Added new CTB routines to handle access to	3/25/98	GK	closed
+	data.tbl table.							3/30/98
+
+021mmm	Added capability to select multiple objects	3/26/98	TP	closed
+	(multiselect) for editing purposes.				3/31/98
+
+021nnn	Added capability to edit the type of lines	3/26/98 TP	closed
+	and fronts after they are drawn.				3/30/98
+
+021ooo	Added capability to edit symbol attributes.	3/26/98	TP/AH	closed
+									3/27/98
+
+006i	Created routines to plot directional arrows,	3/30/98	AH	closed
+	hash mark attributes, and two color setting 			4/6/98
+	attribute routines.
+
+021ppp	Added light/heavy icing, heavy rain and snow,	3/30/98 AH	closed
+	and moderate tstmsnw symbols to NMAP. 				3/31/98
+
+001u	Added a check to DC_FCYL for files that fail	3/31/98	AH	closed
+	to open	properly.	[verified via code inspection only]	4/3/98
+
+010tt	Added 925mb label on the vertical axis for	3/31/98	AH	closed
+	sounding and cross-section plots.  				4/2/98
+
+010uu	Fixed a leap year problem in tiitoc.f.		3/31/98	ID	closed
+									4/2/98
+
+010vv	Added a new CTB function to reset the default	3/31/98 GK	closed
+	for datatype alias parameter combinations.			4/6/98
+
+018v	Redesigned the station model editing module.	3/31/98	TP	closed
+									4/2/98
+
+021qqq	Corrected some problems with the wind editor 	4/1/98	TL	closed
+	function.							4/3/98
+
+021rrr	Added a new class 'ALL' which allows the	4/1/98	ID	closed
+	selection of any object.  Extended multi-select 		4/3/98
+	to WINDS, TEXT, and SYMBOLS.  Fixed bug that
+	prevented selection of icing symbols.
+	
+021sss	Created new combination weather symbol icons.	4/1/98	AH	closed
+									4/24/98
+
+021ttt	Added group type and group number to range	4/2/98	AH	closed
+	records in CRG library.						4/6/98
+	
+010ww	Corrected bug where parameter tplate was not	4/3/98	ID	closed
+	defined as LOGICAL in FL_TMPL.					4/27/98
+
+001v	Made some corrections to the aircraft decoder.	4/3/98	AH	closed
+									4/6/98
+
+021uuu	Fixed some problems associated with class 	4/3/98	ID	closed
+	ANY (All).							4/6/98
+
+021vvv	Redesigned grouping in NMAP.			4/3/98	AH	closed
+									4/6/98
+
+007y	Changed ITXSY routine to use the text border	4/6/98	ID	closed
+	and background attributes for types 1-6 and 			4/7/98
+	new type 10 (underline text).
+
+007z 	Changed ITBOX to always set the background 	4/6/98	ID	closed
+	fill to solid.							4/7/98
+
+007aa	Completed the DHASH routine to draw the hash	4/6/98	AH	closed
+	marks orthogonal to a given angle.				4/8/98
+
+021www	Added new combination weather symbol ICON that	4/6/98	AH	closed
+	will be used for these symbols.					4/24/98
+
+001w	Modified an Aircraft Decoder routine so that	4/6/98	AH	closed
+	certain types of reports won't be misidentified.		4/13/98
+	
+010xx	Removed working buffer array from the calling	4/7/98	N/A	closed
+	sequence of CFL_TBNR function.					4/28/98
+
+010yy	Corrected several bugs that caused the AIX	4/7/98	N/A	not
+	compiler to fail.						testable
+
+018w	Corrected error in the calling sequence to	4/7/98	N/A	not
+	SN_CLOS in nmap_snmap.f routine.				testable
+
+018x	Corrected problems found with station model	4/7/98	TP	closed
+	editing.							4/8/98
+
+021xxx	Corrected some bugs with the handle bar		4/7/98	AH	closed
+	display.							4/8/98
+
+021yyy	Added interface to smoothing into NMAP.		4/7/98	TL	closed
+									4/13/98
+
+021zzz  Fixed the problem where exiting from NMAP with	4/8/98	AH	closed
+	another NMAP session active would clear out the 		4/20/98
+	working file '.DEFAULT.vgf'.  Also, now prevent 
+	more than one session of product generation to be
+	active when NMAP is run from the same directory.  
+	Also, fixed a bug associated with smoothing.
+			
+010zz	Added new CLO functions and a test program.	4/8/98	ID	closed
+									4/13/98
+		
+005d	Modified imcbar.f and ggcbar.f so that color	4/8/98	TP	closed
+	bars are filled with the solid pattern.				4/9/98
+			
+006j	Modified smoothing function to not call dcgaus,	4/9/98	TL	closed
+	which does not work properly for lines with			4/13/98
+	> 32 points.
+			
+021a1a	Fixed the byte count at the end of a FAX	4/9/98	AH	closed
+	product schedule information for use in the 			4/23/98
+	VIEWFAX program.
+
+021a1b	Various corrections to problems with the wind	4/9/98	TP	closed
+	editor.								4/10/98
+	
+021a1c	Added DARR_ELM and HASH_ELM to the list of	4/10/98	AH	closed
+	available drawable elements for directional 			5/1/98
+	arrows and front hash marks.
+	
+021a1d	Added selection of fill pattern to NMAP.	4/14/98	TP	4/14/98
+									
+010aaa	Corrected bugs in testclo test program.		4/14/98	ID	4/15/98
+									
+001x	Modified the synoptic decoder to NOT decode	4/14/98	AH	closed
+	relative humidity directly from the raw data.			4/15/98
+			
+010bbb	Added capability to convert surface visibility	4/15/98	ID	closed
+	from KM to statute miles and wind gust speed 			4/22/98
+	from m/s to knots.	
+	
+010ccc	Added checks in DM library for swapping bytes	4/15/98	N/A	not
+	for the key STD2.						testable
+	
+021a1e	Made necessary changes to save hash mark to VG	4/16/98	AH	closed
+	and AFOS file.  Also, added appropriate scaling 		4/20/98
+	for hash mark in device drivers.  Also, added 
+	case for directional arrows in vswind and vwind 
+	VG driver routines.		
+
+021a1f	Made additional necessary changes to properly	4/16/98	??	OPEN
+	account for objects containing more than the 
+	maximum allowed.
+	
+006k	Replaced the routines that draw fronts and	4/20/98	AH	closed 
+	special lines.							4/23/98
+	
+018y	Added capability to display synoptic and	4/21/98	TL	closed
+	aircraft data.							4/24/98
+ 
+021a1g	Added underlined text to NMAP.			4/21/98	TP	closed
+									4/22/98
+
+021a1h	Increased the range size for wind barbs and	4/21/98	ID	closed	
+	arrows.								4/23/98
+	
+021a1i	Corrected bug where the color editor will not	4/21/98	TP	closed
+	recall the color of the selected object if the 			4/22/98
+	user clicks OK without selecting the color.  
+	Also, set the line width and stroke size scale 
+	increments to unity.  Also added proper borders 
+	to line attribute popup window.		
+
+010ddd	Corrected problem in DG_CLOS found by the AWC.	4/21/98	GK	closed 
+	Also, corrected problem where dgset should not 			4/30/98
+	be set to false.		
+
+018z	Corrected various bugs / pop-up warning.	4/22/98	TP	closed
+									4/22/98	
+
+006l	Updated dshash and ddarr for necessary changes	4/22/98	AH	closed
+	for VG driver.							4/24/98
+
+021a1j	Fixed cvg_cp to compute the record size before	4/22/98	TP	closed
+	the check for a delete flag.					4/28/98
+			
+001y	The METAR decoder has been modified to use the	4/22/98	AH	closed 
+	new common interface format.					4/29/98
+
+021a1k	Created new icons for new special lines.	4/22/98	AH	closed
+									4/24/98		
+
+021a1l	Added VG type to the range record.		4/22/98	N/A	not	
+									testable
+									
+021a1m	General cleanup of group and multiselect	4/23/98	AH	closed
+	functions.  Also, added ungroup function.			4/29/98
+
+006m	Corrected equations in DCGAUS to allow 		4/23/98	N/A	obe *
+	smoothing of lines with greater than 32 points.  	    * withdrawn
+
+011k	Increased array sizes to 12 in SFMCOF and 	4/23/98	TP	closed
+	SNMCOF to allow for 12 parameters to be 			4/24/98
+	plotted at a station model.		
+
+006n	Corrected bug in setting colors for the 	4/23/98	TP	closed
+	special lines.  This was causing a problem when 		4/24/98
+	smoothing.  Fixed bug in the calculation of the 
+	end points of a text string for clipping purposes.		
+			
+021a1n	Added new special lines to NMAP.  Also added	4/23/98	AH	closed
+	combination weather symbols to NMAP.  With this 		4/24/98
+	delivery, combo symbols cannot be edited or moved 
+	yet.  Gray out stroke attribute in front and line
+	editing windows.  Fixed a bug where the front 
+	attribute did not popup with single select function.
+	
+019a	Updated some maps and tables based on latest	4/24/98	ID	closed
+	information from NWS HQ.  Also added city tables 		5/1/98
+	that are generated from the HQ information.		
+
+021a1o	Corrected several bugs found during testing.	4/24/98	TP	closed
+									4/28/98	
+
+021a1p	Created a new LABEL icon.			4/24/98	AH	closed		
+									4/28/98
+									
+001z	Modified the land synoptic decoder, to remove	4/24/98	AH	closed
+	wet bulb temperature (TMWC) from the packing 			4/30/98
+	table.  Added PRES to dcacft packing table.		
+
+001aa	Modified aircraft decoder to call new time	4/24/98	AH	closed
+	checking routine.						4/27/98
+
+018aa	Corrected problem where local radar data could	4/27/98	TL	closed 
+	not be overlaid onto observational data when it 		4/27/98
+	was dominant.
+
+021a1q	Cleaned up CES library.				4/27/98	ID	closed
+									4/28/98
+									
+006o	Corrected bug with drawing of directional	4/27/98	AH	closed
+	arrows.								4/28/98
+	
+006p	Fixed problems found with new special lines.	4/28/98	ID	closed
+									4/28/98
+		
+021a1r	Enhanced combo symbols.				4/28/98	ID	closed
+									4/28/98
+		
+021a1s	Added capability to delete groups and bug	4/28/98	ID	closed
+	fixes.								4/28/98
+
+021a1t	Added the copy function to NMAP.		4/28/98	AH	closed
+						    			4/29/98		
+
+021a1u	Added ability to draw stationary fronts in	4/28/98	AH	closed
+	2 colors in NMAP.						4/28/98
+	
+021a1v	Added a LABEL function into NMAP.		4/28/98	AH	closed
+						    			4/29/98
+						    
+021a1w	Corrected the combination symbol icon for Ice	4/29/98	TP	closed
+	Pellets/Slight Freezing rain.					4/29/98
+	
+021a1x	Corrected problem with wind head size.  Also,	4/29/98	ID	closed
+	cleared Vg_type in the range record properly.			4/29/98
+
+021a1y	Added capability to generate SPC outlook	4/29/98	ID	closed
+	product.							4/30/98
+
+006r	Added a reset to the first color at the end of	4/29/98	ID	closed
+	the special line drawing routine.				4/30/98
+
+021a1z	Added directional arrow and hash line to range	4/29/98	AH	closed
+	elements.							5/1/98
+
+006s	Added a new smoothing function based on a	4/29/98	TP	closed
+	parametric curve fit.						4/30/98
+
+021a2a	Fixed a fatal error when changing line types	4/29/98	ID	closed	
+	that occurs on HPUX9/10.					4/30/98
+	
+006t	Fixed two problems with smoothing.		4/30/98	TP	closed		
+									4/30/98
+									
+021a2b	Added directional arrow and hash mark to NMAP.	4/30/98	AH	closed		
+									5/1/98
+									
+018bb 	Fixed NMAP hang when model data is missing.	4/30/98	TL	closed
+									5/5/98		
+
+021a2c	Fixed several bugs found by CDB testing.	4/30/98	AH	closed
+									5/1/98		
+
+006u	Fixed a problem with common block in ddarr.f	4/30/98	ID	closed
+	routine.							5/1/98
+
+021a2d	Fixed refresh of arrow bug.			5/1/98	AH	closed
+									5/1/98		
+
+010eee	Corrected a typo in TESTDG.			5/1/98	TP	closed
+									5/1/98
+									
+021a2e	Cleaned up the MOVE/COPY drag function and 	5/1/98	ID	closed
+	added a group "ghost" box when moving/copying.			5/4/98
+	
+010fff	Fixed a small error in TESTCFL with CFL_RDIR.	5/4/98	ID	closed		
+									5/4/98
+									
+021a2f	Removed line stroke size from CLASS_LINE.	5/4/98	ID	closed
+									5/4/98
+									
+021a2g	Removed pip stroke size from the VG fronts	5/4/98	ID	closed
+	editor box.							5/5/98
+
+021a2h	Fixed angle problem with pgevt_rotateDrop.	5/4/98	AH	closed
+	Cleaned up deselect all elements process.			5/5/98
+
+006v	Fixed a problem with common block in dhash.f.	5/4/98	ID	closed
+									5/5/98		
+
+021a2i	Changed prod gen palette from 2 columns to 3.	5/4/98	AH	closed
+	Renamed the "wind" class to "vector".				5/5/98
+	Changed all default front pip sizes to 1.		
+
+011l	Modified code and tables to use directional	5/5/98	ID	closed
+	arrow routines to plot wind direction parameter			5/6/98
+	"DARR" and new swell wave dir. parameter "DAWV".
+
+021a2j	Reorganized the SPC outlook code and corrected	5/5/98	AH	closed
+	several problems.  Added capability to generate			5/6/98
+	HPC basic weather product.
+									
+021a2k	Renamed newdraw.tbl to setting.tbl.		5/5/98	all	closed
+									5/6/98
+
+018cc	Fixed problems relating to missing model data.	5/6/98	TL	closed
+									5/6/98
+									
+021a2l	Fixed two bugs.					5/6/98	AH	closed
+									5/6/98
+									
+ =========================== Patch 5.4.3.h ==================================
+
+010ggg	Updated to NAWIPS version 5.4.3.i.		5/11/98	SS	closed	
+									5/11/98
+									
+021a2m	Fixed problems with drawing of fat arrows.	5/11/98	AH	closed
+	Also, fixed the problem with filled areas 			5/13/98
+	covering other objects.					
+
+021a2n	Reduced the number of calls to ces_get/set	5/11/98	AH	closed
+	during popup events for fronts, lines, and 			5/14/98
+	vectors.		
+
+021a2o	Combined various operation functions into a	5/11/98	AH	closed
+	single function and cleanup.					5/13/98
+
+010hhh	Added Directional arrow and hash mark to	5/11/98	AH	closed
+	testcvg, testces, and dumpvgf test programs.			5/13/98
+
+011m	Added directional arrow plotting to GDPLOT2.	5/11/98	AH	closed
+									5/13/98		
+							
+007bb	Modified FAX processing to handle multiple	5/13/98	TP	closed
+	subsets for a given FAX product wheel number.  			5/14/98
+	Also, updated FAX product table for Basic 
+	Weather products.
+	
+021a2p	Overhaul of Undo function.			5/13/98	AH	closed	
+									5/14/98
+									
+012g	Created a file undscr.h to handle underscore	5/13/98	SS	closed
+	declarations.  Removed underscore declarations 			5/13/98
+	from NSAT and GUITST routines.		
+
+021a2q	Fixed segmentation fault problem associated	5/13/98	AH	closed
+	with DELETE.  Corrected problem associated with 		5/14/98
+	chopped fat arrows.		
+
+012h	Removed underscore declarations from NTL and 	5/13/98	SS	closed
+	NTRANS routines and added them to undscr.h.			5/13/98
+
+012i	Removed underscore declarations from NWX 	5/14/98	SS	closed
+	routines and added them to undscr.h.				5/14/98
+
+010iii	Removed underscore declarations from cfl, cpg 	5/14/98	SS	closed
+	and cgr libraries and added them to undscr.h.			5/14/98
+
+021a2r	Fixed some problems with the attribute editing	5/14/98	AH	closed
+	for vectors and cleaned up nmap_pgpwndw.			5/14/98
+
+010jjj	Removed underscore declarations from ctb 	5/14/98	SS	closed
+	library.							5/14/98
+	
+021a2s	Cleaned up the palette structure, added		5/14/98	AH	closed
+	highlighting, and fixed the wind and group 			5/14/98
+	messages.		
+
+011n	Modified the calculations of the text start	5/14/98	TP	closed
+	location, the number of lines per column and			5/15/98
+	the text line spacing for the program GPTEXT.
+	
+021a2t	Increased the range size for wind elements.	5/14/98	AH	5/15/98
+
+010kkk	Removed underscore declarations from cds lib.	5/18/98	SJ	5/18/98
+
+010lll	Removed underscore declarations from utf lib.	5/18/98	SJ	5/18/98	
+
+010mmm	Removed underscore declarations from cvq, crg,	5/18/98	SJ	closed
+	ces and clo library.						5/18/98
+
+010nnn	Removed underscore dclrtns from the utf driver.	5/18/98	SJ	5/18/98
+
+010ooo	Removed underscore declarations from im library	5/18/98	SJ	closed	
+	and NAFOS.							5/18/98
+	
+021a2u	Fixed line attribute value settings. Set 	5/18/98	AH	closed
+	initial	position of vector attribute popup.			5/19/98
+
+021a2v	Fixed a bug when displaying radar images and 	5/18/98	TP	closed
+	observations, when roaming and zooming.				5/20/98
+
+001bb	Modified PIREP portion of aircraft decoder.	5/18/98	AH	5/21/98
+
+001cc	The METAR decoder, DCMETR, has been modified.	5/18/98	AH	closed	
+	Decoders DCLSFC (land synoptic) and DCMSFC 			5/20/98
+	(marine) have been changed to use dc library routines.		
+	
+021a2w	Refined palette structure.  			5/18/98	AH	5/21/98
+
+002c	Fixed grid packed integer array length		5/18/98	ID	closed
+	determination.							5/21/98
+
+002d	Modified gblamb.c to better handle longitudes	5/18/98	ID	closed
+	in GRIB.							5/21/98
+
+010ppp	Removed underscore declarations from dc_init	5/19/98	SJ	closed
+	and decoder main programs.					5/19/98
+
+010qqq	Removed underscore declarations from avnbul	5/19/98	SJ	closed
+	routines.							5/19/98
+
+001dd	Modified the aircraft decoder to accept the	5/19/98	AH	closed
+	new phase of aircraft flight value UNS 				5/22/98
+	(unsteady) within AMDAR reports.
+
+010rrr	Removed underscore declarations from the	5/19/98	SJ	closed
+	Nxmlib routines.						5/19/98
+
+010sss	Removed underscore declarations from cvg lib.	5/19/98	SJ	closed
+
+008j	Corrected prologs in APPL routines.		5/19/98	TP	5/22/98
+
+011o	Fixed bugs with the calculations of the start	5/20/98	TP	closed
+	location.							5/20/98
+
+018dd	Added mandatory levels above 100 mb to the NMAP	5/20/98	ID	closed
+	station model edit popup for upper air data.			5/21/98
+
+021a2x	Fixed two bugs.					5/20/98	AH	5/21/98
+
+021a2y	Fixed various bugs with the group/ungroup	5/20/98	AH	closed
+	and CLASS_ANY.							5/22/98
+
+021a2z	Fixed problems with moving objects and		5/21/98	AH	closed
+	locating objects.						5/22/98
+
+021a3a	Changed the string "Line Size" to "Pattern	5/21/98	AH	closed
+	Size" in the line attributes popup.				5/21/98
+
+018ee	Removed underscore declarations from NMAP.	5/21/98	SJ	closed
+
+007cc	Removed underscore declarat'ns from xpgsvfrm.c.	5/21/98	SJ	closed
+
+007dd	Fixed some problems with the special line type	5/26/98	ID	closed
+	drawing routine.						5/26/98
+
+010ttt	Created a new routine (CLO_DLTLN) to compute a	5/26/98	ID	closed
+	lat-lon position given lat-lon, dist. and dir.			5/26/98
+	
+018ff	Modified satellite data access method.  Fixed	5/26/98	TP	closed
+	a bug associated with moving an object close			5/27/98
+	to a fill area.
+	
+010uuu	Fixed bugs in CLO_DLTLN.    * problem found	5/26/98	ID	closed *
+
+001ee	Cleaned up afpnbd.f routine. Corrected		5/26/98	AH	closed
+	afalon.f routine.						5/29/98
+
+021a3b	Adjusted some array sizes and removed		5/27/98	ID	closed
+	unnecessary '\0's.						5/27/98
+
+021a3c	Cleaned up cvg_scan and corrected problem with	5/27/98	ID	closed
+	changing front and line types.					5/27/98
+
+021a3d	Added parameters w_orient and w_hafwid to watch	5/27/98	AH	closed
+	information in the vg structure.				6/17/98
+
+001ff	Some clean up of the SCD decoder was done.	5/27/98	AH	5/28/98
+
+010vvv	Removed cgrtangent.c, cgrintrsct.c and devcmn.h	5/27/98	TP	5/27/98	
+
+010www	Reorganized uscore.h and undscr.h		5/27/98	N/A	internal	
+
+018gg	Modified NMAP to display the last frame when	5/27/98	TP	closed
+	loading.  Rearranged ROAM window to save space.			5/27/98
+	
+018hh	Removed 00 and 12z time checking in NMAP that	5/28/98	ID	closed
+	was preventing the proper extraction of sounding 		5/28/98
+	times from datasets with finer increments.
+	
+021a3e	Cleaned up the CDS library.			5/28/98	ID	5/28/98
+
+018ii	Fixed problems with displaying the last frame.	5/28/98	TP	5/29/98
+
+015b	Fixed problem in NSAT where time string did not	6/02/98	TP	closed
+	clear when images were updated.  Added state 			6/02/98
+	boundary to county map display.  Removed
+	"check New File" from print out.
+	
+018jj	Added displaying of time information of the	6/04/98	ID	closed
+	current frame to next to the current frame 			6/5/98
+	number in the data window border.
+	
+021a3f	Modified and cleaned up text processing.	6/5/98	all	6/8/98	
+
+021a3g	Fixed problem with outlook and srfc. products.	6/8/98	ID	6/8/98
+
+018kk	Added text size selection (GUI part only) for	6/8/98	ID	closed
+	station plot map overlay in nmap.				6/15/98
+
+021a3h	Restructured the nmap_pgevt.c module. *PROBLEMS	6/9/98	all	6/10/98
+
+021a3i	Changed the pip size from an integer to a real	6/9/98	TP	closed
+	variable in the underlying software.				6/17/98
+
+021a3j	Made several bug fixes detected by the AWC.	6/9/98	TP	6/23/98
+
+011p	Added text attributes to STNPLT so that text	6/10/98	AH	closed
+	size, and other text attributes can be changed.			6/11/98
+
+021a3k	Fixed bugs found as a result of CDB testing.	6/10/98	AH	6/11/98	
+
+021a3l	Fixed label not working and various other bugs.	6/10/98	TP	6/12/98
+
+021a3m	Added line dashing pattern icons to NMAP.	6/11/98	ID	6/11/98
+
+021a3n	Added capability to draw new line dashing 	6/11/98	ID	closed 
+	patterns.							6/11/98
+
+006w	Cleaned up and rearranged some GPLT routines.	6/11/98	TP	6/15/98
+
+018ll	Implemented text size selection for station	6/12/98	ID	closed
+	plot map overlay.						6/15/98
+			
+021a3o	Added check for arrow drawing at the end of	6/12/98	TP	closed	
+	lines.								6/15/98
+	
+021a3p	Updated SPC outlook product capabilities.	6/12/98	AH	6/15/98	
+
+021a3q	Move and copy have been streamlined.  Software	6/15/98	TP	closed 
+	text may now be rotated on initial placement.			6/16/98
+
+021a3r	Added new routine to generate the QPF text	6/15/98	AH	closed
+	product.							6/17/98
+	
+001gg	Corrected METAR decoder for minor bugs.  SCD	6/15/98	AH	closed
+	decoder has been cleaned up and a bug fixed.			6/16/98
+
+014e	Corrected an error message; changed reference	6/15/98	??	OPEN
+	from GTEXTC to GTEXT.
+	
+021a3s	Corrected one of the dashed line icons to	6/15/98	ID	closed
+	match line type.						6/15/98
+
+008k	Updated prologues and help information for	6/15/98	N/A	docs.
+	map projection updates.		
+
+018mm	Made the border time label bigger.		6/15/98	TP	6/15/98
+
+021a3t	Added ability to flip the arrow head from the	6/15/98	TP	closed
+	end to the beginning of the line.  Added a 			6/15/98
+	check to ITXSY to not rotate the dividing line
+	in the text for high-level turbulence symbols.		
+
+021a3u	Made some minor corrections to the surface	6/15/98	AH	closed
+	text product generator.						6/16/98
+	
+021a3v	Corrected label text for outlook product.	6/15/98	AH	6/16/98
+
+021a3w	Corrected problems found as a result of		6/15/98	TP	closed
+	CDB testing.							6/16/98
+	
+021a3x	Removed w_havwid from watch information in	6/15/98	AH	closed	
+	the VG structure.						6/17/98
+	
+021a3y	Added interface to generate QPF text product.	6/16/98	AH	6/17/98
+
+021a3z	Corrected problem that was causing a compiler	6/16/98	SS	closed
+	error on IRIX4 for a NMAP routine.				6/16/98
+
+011q	Fixed the objective analysis to properly use	6/16/98	ID	closed
+	the first guess field.						6/17/98
+
+018nn	Removed unnecessary calls to GG_SPLT from	6/16/98	ID	closed	
+	NMAP routines.							6/16/98
+	
+010xxx	Added a check to FL_TBOP for a blank		6/16/98	ID	closed
+	table name.							6/16/98
+	
+010yyy	Added a new function, cgr_lindist.		6/16/98	AH	6/17/98
+
+021a4a	Added capability to generate a parallelogram	6/16/98	AH	closed
+	watch area in product generation.				6/17/98
+	
+010zzz	Created a new function, TG_CRINC.		6/16/98	ID	6/22/98
+
+018oo	Added capability to access earlier model	6/17/98	TL	closed
+	runs in NMAP.				* issues noted		6/17/98
+	
+011r	Corrected a calling sequence parameter error	6/17/98	ID	closed
+	in a gdcross routine.						6/23/98
+	
+021a4b	Changed the pip size of fronts from integer	6/17/98	TP	closed
+	to float.							6/17/98
+	
+021a4c	Corrected bugs found as a result of 		6/17/98	TP	closed 
+	CDB testing.							6/17/98
+	
+007ee	Improve performance of special line patterns.	6/17/98	ID	6/22/98
+
+008l	Update to GEMPLT documentation.			6/17/98	N/A	docs.	
+
+021a4d	Corrected bugs as a result of CDB testing.	6/18/98	TP	6/17/98
+
+018pp	Corrected problems found as a result of 	6/18/98	ID	closed
+	CDB testing.							6/18/98
+	
+021a4e	Modify cvg_cpy routine to allow opening of a	6/18/98	ID	closed
+	VG file with read-only permission.				6/19/98
+
+021a4f	Correct problem where symbol attributes where	6/18/98	ID	closed
+	not updated as the slider bar is being used.			6/18/98
+
+021a4g	Modified the function crg_settxt to make the	6/18/98	ID	closed 
+	range area smaller for text objects.				6/18/98
+
+021a4h	Corrected several bugs found as a result of	6/18/98	TP	closed
+	CDB testing.							6/19/98
+
+021a4i	Added ability to open VG files for editing	6/18/98	ID	closed
+	from other directories.						6/19/98
+
+021a4j	Wrote a VG convert program to convert 5.4.3.i	6/18/98	ID	closed
+	VG files to 5.4.3.h VG files.         				6/19/98
+	
+021a4k	Changed the pip size range to 0.4 -- 5.0.	6/22/98	TP	closed
+	Fixed real value setting problem in testces.c.			6/22/98
+
+021a4l	Fixed text problems with changing attributes	6/22/98	TP	closed
+	for different box types without popping down 			6/22/98
+	the text window and having the settings forgotten.
+	
+021a4m	Corrected a problem found in the VG convert 	6/22/98	ID	closed
+	program. 							6/22/98
+
+021a4n	Changed the text box buttons from text labels	6/22/98	TP	closed 
+	to icons.  Fixed front editing. 				6/22/98
+			
+009c	Added CONVCVG to cgemlib_link script.		6/22/98	SS	6/22/98	
+		
+018qq	Corrected problems found as a result of CDB	6/23/98	ID	closed
+	testing.							6/23/98
+
+021a4o	Added special lines that were missing to	6/23/98	TP	closed
+	testces program.						6/23/98
+
+021a4p	Bug fixes as a result of CDB testing.		6/23/98	TP	6/23/98
+
+021a4q	Changed cds_symb to read the correct value	6/23/98	ID	closed
+	for the marker code.						6/23/98
+
+021a4r	Modified the avnbul program to properly handle	6/23/98	ID	closed
+	the special text type of 0.					8/18/98
+
+021a4s	Repositioned dashed lines and renumbered	6/23/98	N/A	internal
+	classes of objects in drwids.h.		
+
+021a4t	Fixed problem when copying/moving text that	6/23/98	ID	closed
+	sits on top of huge combination symbols.			6/24/98
+
+021a4u	Added check to account for pip size scaling	6/23/98	ID	closed	
+	difference between i and h.  					6/24/98
+			
+021a4v	Cleaned up file selection functions.		6/23/98	AH	6/24/98
+ 
+023a	Refined the icons for the text types.		6/24/98	TP	6/24/98
+
+021a4w	Made the convert program, concvg more robust.	6/24/98	ID	6/24/98
+
+021a4x	Fixed problem with saving a VGF file.		6/24/98	ID	6/24/98
+	      		
+008m	Added a What's New help to NMAP.		6/24/98	ID	6/25/98	
+
+021a4y	Fixed a bug with the surface prog generation	6/24/98	ID	closed
+	code when saving the text file.					6/25/98
+
+010a1a	Corrected bug where monocolor display of VG	6/25/98	ID	closed
+	files was not working properly.					6/25/98
+	
+010a1b	Corrected bug where loading VG files in the	6/25/98	ID	closed
+	background caused fill to fail.					6/25/98
+
+021a4z	Fixed a bug with the version i to version h	6/25/98	ID	closed
+	convert program for symbols.					6/25/98
+
+021a5a	Fixed another bug with conversion program	6/25/98	ID	closed
+	where text was not being properly converted.			6/25/98
+
+=========================== Patch 5.4.3.i ==================================
+
+021a5b	Fixed problems that sometimes occur with screen	7/6/98	TP	closed
+	refresh when moving grouped and combination 			7/6/98
+	symbol objects.		
+
+021a5c	Fixed problem where use of group after move 	7/6/98	TP	closed
+	placed duplicate elements instead of grouping 			7/6/98
+	them.  Also, fixed problem where dashed line 
+	patterns other than type 5 were not properly 
+	saving line attributes.		
+
+021a5d	Added capability to clear text window by using 	7/6/98	TP	closed
+	the control backspace keys.					7/6/98
+
+021a5e	Fixed problem with fill pattern was not being 	7/6/98	AH	closed
+	set properly after it was changed.				7/6/98
+	
+010a1c	Fixed check for identical levels above 100 mb	7/6/98	TL	closed
+	to insert previous data for the correct	level.			7/8/98
+
+021a5f	Improved the bottom window hints.		7/7/98	TP	obe
+
+010a1d	Added land/sea mask arrays to the dg common.	7/7/98	N/A	internal
+
+006x	Added the ability to rotate cylindrical maps	7/7/98	TL	closed
+	and grids to accommodate ICAO map projections.			7/20/98
+	
+006y	Fixed a typo from the earlier delivery of map	7/7/98	TL	closed	
+	rotations.							7/20/98
+	
+006z	Modified calling sequence for dprmtc.f.		7/9/98	ID	7/10/98
+
+021a5g	Corrected problem where model generated 	7/9/98	TP	closed
+	contours cannot sometimes be selected.				7/10/98
+
+021a5h	Documentation changes in testces.c & testcvg.c	7/9/98	TP	7/10/98
+
+001hh	Added ability to decode visibilities reported	7/9/98	ID	closed
+	in km in the METAR decoder.					7/14/98
+	
+021a5i	Improved the format of the hints in NMAP.	7/13/98	TP	7/13/98
+
+011s	Corrected problem in GDPLOT2 where the skip	7/14/98	ID	closed
+	parameter was not working properly.				7/14/98
+
+021a5j	Added capability to undo delete all function.	7/14/98	ID	7/15/98
+
+021a5k	Corrected bug in the outlook product generation	7/14/98	TP	closed
+	for GENERAL THUNDERSTORM groups.  				8/18/98
+	      
+021a5l	Improved the ghosting of closed lines.		7/15/98	ID	7/15/98
+
+021a5m	Text strings, <20 characters, for particular	7/15/98	ID	closed
+	text types are now preserved when switching 			7/20/98
+	from one type to another.  		
+
+011t	Changed the parameter NDVCHR from 27 to 28, in	7/16/98	N/A	internal
+	devchr.cmn.		
+
+010a1e	Added two new grid diagnostics to make use of 	7/16/98	TL	closed
+	a land/sea mask.						7/31/98
+
+018rr	Fixed conversions between two and four digit	7/16/98	ID	closed
+	years for the year 2000.					7/20/98
+				
+011u	Changed the parameter NDVCHR from 28 to 27.	7/20/98	N/A	internal
+
+008n	Improved the projection help file description	7/21/98	N/A	docs.
+	of the new capability to rotate cylindrical 
+	maps and grids.
+	
+021a5n	Added capability to edit front color.		7/22/98	TP	7/23/98
+
+006aa	Added a new routine, GQCVSC, that returns the	7/22/98	ID	closed
+	curve smoothing scale factor, CRVSCL.				7/23/98
+	
+023b	Created a past weather thunderstorm icon and 	7/23/98	AH	closed
+	updated the icon generation script.				7/29/98
+
+001ii	Updated decoder and gemlib routines for change 	7/23/98	ID	closed
+	from PE to PL for ice pellets for METAR code.			7/23/98
+
+021a5o	Added a ghost box when placing and moving text.	7/24/98	ID	closed
+	Fixed the problem with disappearing combo 			7/27/98
+	symbols during moves and copies.
+	
+007ff	Cleanup of text handling with new capabilities. 7/27/98	TP/TL	8/21/98
+
+006bb	Moved the curve smoothing routine from the	7/28/98	ID	closed
+	device to a new GEMLIB library, cv.				7/30/98
+
+021a5p	Added past weather thunderstorm symbol.		7/29/98	AH	7/29/98
+
+006cc	Added the slash symbol to special symbols.	7/29/98	AH	7/29/98
+
+006dd	Added GTEXTC to the undscr.h file.		7/29/98	N/A	internal
+
+007gg	Fixed two problems associated with text		7/29/98	TL	closed
+	cleanup delivery, (007ff).					7/31/98
+	
+007hh	Corrected text plotting for XW driver.		7/30/98	TP	8/18/98
+
+021a5q	Enabled symbol width editing for combo symbols.	8/4/98	ID	closed
+	Corrected problems with clicking on the symbol 			8/4/98
+	size or width slider bars and value not updating 
+	properly.		
+
+008o	Finished documenting the prolog for tb_font	8/4/98	N/A	docs.
+	routine that was recently delivered.		
+
+010a1f	Modified how the function fl_mfls handles a	8/5/98	ID	closed
+	blank GDDATIM.							8/19/98
+
+010a1g	Wrote new function to determine whether a	8/5/98	ID	closed
+	given GDDATIM is a range.					8/19/98
+
+016b	NWX now plots active SPC watch boxes.		8/6/98	ID	8/24/98
+
+018ss	Updated NMAP and supporting routines to read	8/6/98	ID	closed
+	the text size table, fontsz.tbl.				8/25/98
+
+021a5r	Ghosting now takes into account smooth lines.	8/6/98	AH	8/7/98
+
+021a5s	Changed the slash line in combo symbols to a	8/6/98	ID	closed
+	special symbol.							8/7/98
+
+021a5t	Updated a text product generation routine to	8/7/98	ID	closed
+	read the text size table.					8/25/98
+
+021a5u	Added capability to generate hurricane track 	8/10/98	ID	closed
+	text product.				* Major problems found	8/19/98
+			
+021a5v	Made some corrections to nmap as a result of 	8/10/98	TL	closed
+	problems found by the AWC.					8/11/98
+
+021a5w	Corrected the outlook product for cases when 	8/11/98	AH	closed
+	the outlook line is flipped.					8/11/98
+
+021a5x	Added first step for graph to grid processing.	8/11/98	AH	8/18/98
+
+018tt	Model data access was re-engineered to 		8/11/98	TL	obe
+	properly handle previous cycle times.		(Major problems - redo)
+
+021a5y	Fixed a problem with product generation 	8/11/98	ID	closed
+	exiting, re-entering with object windows.			8/11/98
+
+007ii	Changed the margin for the PostScript 		8/13/98	ID	closed
+	device driver.							8/19/98
+	
+021a5z	Fixed some problems with product generation.	8/24/98	ID	8/25/98	
+
+021a6a	Removed the checking for close vertices for	8/24/98	ID	closed
+	the special lines with the arrow head.				8/25/98
+
+007jj	Changed the scaling parameter for past weather	8/25/98	ID	closed
+	symbols and cloud types.					8/25/98
+
+021a6b	Added 3 new symbols:  storm center, tropical 	8/25/98	ID	closed
+	depression, and tropical cyclone.				8/27/98
+
+007kk	Added capability to draw a background filled	8/25/98	ID	closed
+	box around a wind barb or arrow.				8/27/98
+
+014f	Added logging of metafile usage to NTRANS.	8/27/98	ID	8/27/98	
+
+021a6c	Fixed problem with ungroup.			8/27/98	ID	8/27/98	
+
+010a1h	Added new ST functions to parse long strings 	8/27/98	TL	closed
+	into sub-strings.  Added new FL functions to 			9/10/98
+	scan a directory and find the latest file in 
+	that directory. 		
+
+007ll	Fixed the special text with turbulence symbols	8/27/98	ID	closed
+	to change size of the symbols when the text size 		8/27/98
+	is changed.		
+
+010a1i	Fixed CTB_ASTN to make sure that a NULL is	8/27/98	ID	closed
+	placed at the end of the state string.				8/27/98
+
+021a6d	Cleaned up hints and made them more consistent.	8/27/98	ID	8/28/98
+
+021a6e	Created two new icons, dashed open arrow and	8/27/98	AH	closed
+	dashed closed arrow for NMAP.					9/10/98
+
+010a1j	Added GD_FLTM to testgd test program.		8/27/98	ID	8/28/98	
+
+010a1k	Created TESTCV for testing the parametric	8/27/98	ID	closed
+	curve smoothing routine.					8/28/98
+		
+006ee	Added changes to the GVAR projection requested	8/27/98	ID	closed
+	by AWC.								9/21/98
+
+006ff	Added special line 21 to the special line	8/28/98	ID	closed
+	patterns table.  Also, reformatted special			9/21/98
+	line display in the plotsyms program.		
+
+018uu	Rewrote the time line function for NMAP.	8/28/98	TP	9/3/98
+
+021a6f	Added check for closed curves to the graph to	9/1/98	AH	closed
+	grid product generation text output.				9/2/98
+
+021a6g	Added function to delete a single point from a	9/2/98	TP	closed
+	line or front.							9/3/98
+
+021a6h	Improved the group and ungroup operations.	9/2/98	TP	9/9/98	
+
+006gg	Removed the check for multiple end points when	9/2/98	TP	closed
+	drawing special lines with arrow heads.				9/4/98
+	
+011v	Wrote new GEMPAK program, GRPHGD for 		9/3/98	TL	closed
+	graphics-to-grid conversion.					9/17/98
+
+006hh	Changed the calling sequence to CV_PRMT.	9/3/98	TP	9/3/98
+
+021a6i	Improved the ghosting of smoothed lines and 	9/3/98	TP	closed
+	fronts.								9/3/98
+
+010a1l	Created a new string routine, ST_ATOE, to 	9/3/98	TP	closed
+	convert from ASCII to EBCDIC.					9/4/98
+
+010a1m	Updated TESTCST to include csttime.c.		9/3/98	TP	9/3/98
+
+021a6j	Added capability to generate the HPC excessive	9/8/98	AH	closed
+	rainfall potential outlook product.				9/10/98
+
+021a6k	Fixed a bug in the partial delete.		9/8/98	TP	9/8/98
+
+021a6l	Updated undo/redo operation.			9/8/98	TP	9/9/98
+
+010a1n	Fixed a problem in the calculation of CAPE.	9/8/98	TP	9/21/98
+
+010a1o	Added SPLN20 and SPLN21 to testces.  Added 	9/8/98	TP	closed
+	SPLN5 - SPLN21 to dumpvgf.					9/8/98
+
+021a6m	Added north relative rotation option to text 	9/9/98	TP	closed
+	and turbulence.							9/10/98
+
+021a6n	Added a new function to connect two line or	9/9/98	TP	closed
+	front elements into one element.				9/10/98
+	
+001jj	Rewrote the decoder for the MRF MOS bulletins.	9/10/98	AH	9/18/98
+
+021a6o	Corrected problem where line and front types	9/10/98	TP	closed
+	could not be changed.						9/11/98
+	
+021a6p	Middle mouse button added to grouping function.	9/10/98	TP	9/11/98	
+
+006ii	Corrected problem in GTXSY.			9/10/98	TP	9/11/98	
+
+010a1p	Increased array size in FL_FFIL.		9/11/98	TL	9/11/98	
+
+006jj	Corrected the special line routine, IPATLN.	9/11/98	TP	9/11/98
+
+006kk	Corrected another typo in GTXSY.		9/11/98	TP	9/14/98
+
+021a6q	Added ghost veiling to NMAP text and symbol	9/14/98	TP	closed
+	objects.  Also corrected the problem of 			9/15/98
+	lagging text ghost.
+
+021a6r	Added function to ungroup all grouped elements.	9/14/98	TP	9/15/98
+
+010a1q	Cleaned up the TI library.			9/14/98	TP	9/14/98
+
+010a1r	Corrected a problem with routine CV_PRMT.	9/14/98	TP	9/15/98
+
+010a1s	Corrected problems with ST_ETOA.		9/14/98	TP	9/15/98
+
+001kk	Updated a bridge routine to accept "TS",	9/14/98	AH	closed
+	thunderstorm without precipitation.				9/18/98
+
+010a1t	Changed long int to int for all GRIB decoding	9/14/98	ID	closed
+	functions and for any C function called by Fortran.		9/22/98
+
+021a6s	Added the smoothing level to the setting.tbl.	9/14/98	TP	9/15/98
+
+021a6t	Fixed problem with improper ghosting after	9/15/98	TP	closed
+	objects are moved.						9/15/98
+	
+021a6u Added the option to fill behind vector objects.	9/15/98	TP	9/16/98
+
+010a1u	Added error checking for negative minute	9/15/98	TP	closed
+	input in TI_ADDM and TI_SUBM.					9/16/98
+
+021a6v	Fixed problems with ungroup all function.	9/15/98	TP	9/16/98
+021a6w	Greyed out rotation for turbulence symbol.	9/15/98	TP	9/16/98
+
+010a1v	Reordered subroutines in the TESTTI program.	9/15/98	TP	9/16/98
+
+018vv	Changes to the time line.			9/17/98	TP	9/17/98
+
+010a1w	Fixed the curve fitting routine, CV_PRMT.	9/17/98	TP	9/18/98	
+
+001ll	Corrections made to bridge routines, RA_RTIM,	9/17/98	ID	closed
+	FF_RTIM, and RS_RTIM.						9/21/98
+
+021a6x	Corrected some problems with the speed and	9/17/98	TP	closed
+	direction processing for vectors.				9/18/98
+
+021a6y	Added ability to edit objects within a group.	9/17/98	ID	9/18/98
+
+010a1x	Added routines to allow plotting the current	9/22/98	AH	closed
+	severe thunderstorm and tornado watches.			9/29/98
+
+010a1y	Corrected FL_MFLS to return only the number	9/22/98	AH	closed
+	of files requested.						9/29/98
+
+011w	Created a new library to decode AWIPS file to	9/22/98	ID	closed
+	be used by GPMAP.						9/24/98
+
+021a6z	Corrected problem with connect function where	9/22/98	TP	closed
+	flip direction was lost during connections.			9/23/98
+
+021a7a	Corrected some problems.			9/22/98	TP	9/23/98
+
+007mm	Fixed problem with color 1 was not being 	9/22/98	ID	closed
+	properly set in the XWP driver for Postscript.			9/24/98
+
+006ll	Added blank out feature to directional arrow.	9/22/98	TP	9/23/98	
+
+010a1z	Corrected problem in time processing routine 	9/22/98	ID	closed
+	where model analysis loop times were not being 			9/23/98
+	setup properly.		
+
+021a7b	Corrected fatal error for hurricane track 	9/22/98	AH	closed
+	product.							9/23/98
+
+021a7c	Corrected minor problems in graph to grid 	9/22/98	TL	closed
+	program.							9/23/98
+			
+010a2a	Made various corrections in the GD library.	9/23/98	ID	9/23/98
+
+021a7d	Wrote new program, SFCSPLT, that splits a 	9/23/98	AH	closed
+	surface analysis VG file into  front VG and 			9/23/98
+	pressure VG files.
+	
+021a7e	Corrected some problems found.			9/23/98	TP	9/23/98
+
+008p	Corrected parameter name in awpsfl.hl1.		9/23/98	TP	9/23/98
+
+018ww 	Additional correction of problems and		9/23/98	TP/TL	closed
+	improvements to the time line.					9/24/98
+
+021a7f 	Made fixes to multiple watches operations.	9/23/98	AH	9/24/98
+
+007nn	Created new driver, rbk, that creates a		9/23/98	ID	closed
+	graphics file in AWIPS or OSO AWIPS format.			9/24/98
+
+021a7g	Fixed problem found as a result of testing.	9/24/98	TP	9/25/98
+
+010a2b	Corrected a declaration in GR_TLST.		9/24/98	ID	10/7/98
+
+021a7h	Fixed some errors in the hint messages.		9/24/98	TP	9/25/98
+
+002e	Added capability to handle new way the EMC 	9/24/98	ID	closed
+	will put out native grids.					9/30/98
+	
+021a7i  Fixed problem where combination symbols		9/24/98	TP	closed
+	could be labeled and thus ungrouped.				9/25/98
+	
+021a7j	Fixed problem found in watch generation.	9/24/98	AH	9/25/98
+
+021a7k	Fixed problems in graph to grid program.	9/24/98	TL	9/28/98
+
+006mm	Force number of subboxes in contouring to be 	9/24/98	ID	closed
+	zero, when CONTUR = 1.						10/7/98
+	
+007oo	Corrected bugs in the Redbook driver.		9/25/98	ID	9/25/98
+
+018xx	More improvements to the time line.		9/25/98	TP	9/25/98
+
+007pp	Corrected bug found.				9/25/98	ID	9/25/98
+
+021a7l	Modified the excessive rainfall outlook	prod.	9/28/98	AH	closed
+	to include endpoints when the line is open.			9/29/98
+	
+011x	Fixed problems in plotting watches in GPMAP.	9/29/98	AH	9/29/98
+
+011y	Fixed problems in plotting watches in GPMAP.	9/30/98	AH	9/30/98
+
+001mm	Corrections made to bridge routine, WW_RTIM.	9/30/98	N/A	not
+									testable
+
+008q	Updated pg help and the What's New help.	9/30/98	N/A	docs.
+	
+=========================== Patch 5.4.3.j ==================================
+
+010a2c	Updated to N-AWIPS version 5.4.3.k.		10/5/98	SS	10/5/98
+
+001nn	Added latitude, longitude, elevation and	10/5/98	ID	closed
+	corrected report indicator for the scd decoder.			10/6/98
+
+021a7m	Added ghost box for north relative text.	10/5/98	TP	10/6/98
+
+021a7n	Modified GROUP action so that the cancel 	10/6/98	TP	closed
+	button works properly.						10/6/98
+
+021a7o	Removed "OK" button on the color palette in 	10/6/98	TP	closed
+	nmap product generation.					10/6/98
+
+021a7p	Corrected problem with ghost box rotation with 	10/6/98	TP	closed
+	north relative text.						10/6/98
+
+021a7q	Corrected some problems with the file handling.	10/7/98	All	10/9/98
+
+021a7r	Corrected problems with color editing.		10/8/98	TP	10/9/98
+
+021a7s	Renamed the functions pgdel_eraseAll and	10/13/98 N/A	internal
+	pgdel_erase to pgdel_deletAll and pgdel_delet.
+	
+010a2d	Fixed fatal error in TI_DIFD.			10/16/98 AH	10/19/98
+
+010a2e	Report handling enhancements.			10/16/98 AH	10/20/98
+
+001oo	Changed initialization in decoder routines.	10/16/98 AH	10/21/98
+
+001pp	Corrected minor bug in the MRF MOS decoder.	10/16/98 N/A	not	
+									testable
+									
+021a7t	Fixed problem with text rotation angle.		10/19/98 TP	10/19/98
+
+01qq	Rewrote the AVN MOS decoder.			10/19/98 AH	10/20/98
+
+021a7u	Fixed problem in handling selection of text 	10/19/98 ID	closed
+	with offsets.							10/20/98
+
+021a7v	Added new element for the combination weather	10/19/98 N/A	internal
+	symbol to the VG file structure.	
+
+021a7w	Fixed a problem with entering pip/line size.	10/21/98 ID	10/21/98
+
+021a7x	Fixed problem selecting north relative text.	10/21/98 ID	10/21/98
+
+021a7y	Fixed problem of moving text with offsets.	10/22/98 ID	10/30/98
+
+010a2f	Added two new GEMLIB functions which are copies	10/22/98 AH	closed
+	of GPLT functions GAZDRM and GDRAZM.  				10/28/98
+
+021a7z	Fixed problem with the data pop-up.		10/26/98 ID	10/27/98
+
+021a8a	First stage of clean up of the cvg library.	10/26/98 ID	10/27/98
+
+001rr	Updated METAR decoder to eliminate duplicates.	10/26/98 AH	10/27/98
+
+006nn	Changed all calls to GAZDRM and GDRAZM to 	10/26/98 AH	closed
+	GP_AZDR and GP_DRAZ throughout N-AWIPS.				10/28/98
+			
+006oo	Combinations symbols now one entity.		10/28/98 ID	10/28/98
+	
+001ss	Corrected a problem with the upper-air decoder.	10/28/98 AH	10/30/98
+
+011z	Added NOAA logo in GPTEXT.			10/29/98 ID	10/29/98
+
+008r	Updated prolog doc. in CGEMLIB routines.	10/29/98 N/A	docs.
+
+010a2g	Corrected problem in GD_GCYC.			10/29/98 SPC	10/30/98
+
+021a8b	Fixed problem with outlook text product.	10/29/98 AH	11/3/98
+
+007qq 	Corrected a problem with the centered string 	11/2/98	ID	closed
+	location calculation in the y direction.			11/2/98
+	
+006pp	Removed subbox code from the contour algorithm.	11/2/98	ID	11/3/98	
+
+021a8c	Changes in nmap_pgwndw.c.			11/2/98	ID	11/3/98	
+
+010a2h	Added BUFR file handling routines.		11/2/98	N/A	internal
+
+021a8d	Cleaned up cvg open routines.			11/2/98	ID	11/3/98	
+
+021a8e	Corrected selection and move problems 		11/4/98	ID	closed
+	associated with the offset text.				11/4/98
+
+021a8f	Added flame symbol to GEMPAK and NMAP.		11/4/98	ID	11/4/98	
+
+021a8g	Modified hint software.				11/4/98	ID	11/4/98	
+
+001tt	Rewrote the NGM MOS decoder.			11/4/98	AH	11/5/98	
+
+021a8h	Product generation now uses new GEMPAK 		11/4/98	TP	closed	
+	combination symbols.						11/5/98
+	
+008s	Updated documentation book table files for 	11/4/98	N/A	docs.
+	Programmers Guide.		
+
+006qq 	Added new entries to FUNCCODE.PRM and a new 	11/5/98	N/A	internal
+	common CFCMN.CMN.
+	
+006rr	Changed the way circles are drawn.		11/5/98	ID	11/5/98	
+
+007rr	Changed the XsetFillRule in the XW driver.	11/5/98	N/A	internal
+
+001uu	Minor cleanup and documentation corrections	11/5/98	AH	closed
+	to the AVN MOS decoder.						11/5/98
+
+008t	Updated prolog documentation in GEMLIB routines.11/5/98	N/A	docs.
+
+001vv	Corrected a couple of problems found in the	11/5/98	AH	closed
+	upper-air decoder.						11/6/98
+	
+021a8i	Corrected improper selection error of offset	11/6/98	ID	closed
+	text introduced in delivery 021a8e.				11/9/98
+
+018yy	Clean up of NMAP data display routines.		11/12/98 ID	11/12/98
+
+006ss	Correct problem when contouring fields with	11/12/98 ID	closed
+	missing data.							11/12/98
+
+021a8j	Updated parallelogram watch box for editing.	11/12/98 AH	11/13/98
+
+007ss	Fixed a typo in DINIT.				11/16/98 ID	11/17/98
+
+017c	Increased the size of arrays in NAFOS.		11/16/98 ID	11/17/98
+
+005e	Fixed IM_UnHD for display of regional radar.	11/16/98 ID	11/17/98
+
+021a8k	Added capability to select text and increment	11/16/98 TP	closed
+	or decrement its value.						11/17/98
+
+011aa	Removed TAE references from all PDF files.	11/17/98 TP	11/23/98
+
+001ww	Wrote a new program, SNMODL.			11/17/98 TL	12/7/98
+
+018zz	Added capability to display MOS data to NMAP.	11/18/98 ID	11/18/98
+
+021a8l	Watch product generation enhancements.		11/18/98 AH	11/19/98
+
+008u	Removed tabs from 3 PRM files.			11/18/98 N/A	docs.
+
+005f	Added check in IM_ISUB for MER projections.	11/18/98 ID	11/19/98
+
+018a1a	Added checks when accessing data files.		11/19/98 ID	11/19/98
+
+018a1b	Removed a debug statement in nmap_mapw.c.	11/19/98 N/A	internal
+
+001xx	Updated SNMODL.					11/19/98 TL	12/7/98
+
+021a8m	Added multi-selection by drag capability.	11/19/98 TP	11/19/98
+
+001zz	Corrected an error in SNMODEL regarding the	11/23/98 TL	closed
+	AVN and MRF packing tables.					12/7/98
+
+021a8n	Made watch box color selection a single button	11/23/98 AH	closed
+	to pop up color palette.					11/23/98
+
+021a8o	Inc/Dec function handlebar change & fix.	11/23/98 TP	11/23/98
+
+021a8p	Corrected problems with group mode editing.	11/24/98 TP	11/23/98
+
+010a2i	Cleaned up the CPG library.			11/30/98 TP/AH	11/30/98
+
+006tt	Added logic to IPATLN.				11/30/98 TP	11/30/98
+
+001a1a	Modified decoders, dcamos, dcmmos, and dcnmos.	11/30/98 TP	12/01/98
+
+018a1c	Added include Xm/Label.h to nmap_dslw.c.	11/30/98 N/A	compile
+
+011bb	Fixed a gdplot2 routine.			11/30/98 N/A	compile
+
+011cc	Declared two logical variables in grphgd.f.	12/1/98	N/A	compile
+
+001a1b	SNMODL moved to NAMSND.				12/2/98	TL	12/7/98
+
+010a2j	AW library changes for AIX.			12/2/98	??	OPEN
+
+021a8q	Watch by county updates.			12/3/98	AH	12/4/98
+
+018a1d	Add toggling on/off of the background data.	12/3/98	N/A	018a1f
+
+021a8r	Added virtual line extensions for labelled	12/3/98	AH	closed	
+	lines for graph-to-grid product generation.			12/4/98
+	
+010a2k	Fix to array dimensions in GDPLOT2.		12/7/98	TP	12/7/98	
+
+018a1e	Time line information enhancements.		12/7/98	TL	defer	
+
+010a2l	Fix to GDPLOT2 for AIX compile.			12/8/98	N/A	compile	
+
+001a1c	Modified MOS decoder.				12/10/98 AH	12/11/98
+
+021a8s	Enhancements to inrement/decrement function.	12/14/98 TP	12/15/98
+
+021a8t	Added a button to the watch box popup to	12/15/98 AH	closed
+	show/hide the county list.					12/16/98
+	
+018a1f	Fix some problems with frame refreshing for	12/16/98 TP	closed
+	the data loop.							12/17/98
+
+007tt	Added checks for duplicate endpoints for	12/16/98 TL	closed
+	closed line in the VG driver.					12/28/98
+	
+021a8u	Increment/decrement enhancements.		12/17/98 TP	12/18/98
+
+021a8v	Bug fix to product generation.			12/18/98 TP	12/18/98
+
+020c	New utility programs to process/scan the city	12/18/98 TP	closed
+	information tables and create parallel 				12/23/98
+	information tables.	
+
+007uu	Created and modified routines that draw circles.12/18/98 TP	1/4/99	
+
+001a1d	Enhancements to the model sounding program.	12/21/98 TL	12/22/98
+
+021a8w	Renamed clo_direct to clo_tdirect.		12/21/98 N/A	internal
+
+001a1e	Updated LDM header file for AIX.		12/21/98 ??	OPEN	
+
+021a8x	Added city table read to clo library.		12/21/98 TP	12/23/98
+
+021a8y	Bug fixes to increment/decrement function.	12/22/98 TP	12/22/98
+
+021a8z	Excessive Rainfall Potential enhancements.	12/22/98 TP	12/31/98
+
+001a1f	Marine decoder enhancements per TPC.		12/23/98 AH	1/4/99	
+
+021a9a	Corrected problem w/text edit window.		12/23/98 N/A	obe	
+
+017d	Increased the string size in NAFOS for reading	12/23/98 SJ	closed
+	the overlay attribute table.					12/23/98
+	
+010a2m	Fixed various problems in the GEMLIB and	12/24/98 N/A	compile
+	programs code found by the LINUX compiler.
+
+010a2n	Removed AIX subdirectories from st, mv, and 	12/28/98 N/A	removal
+	syslib directories.
+
+018a1g	Corrected some bugs concerning remembering	12/28/98 TL	closed
+	previously selected times for different data 			1/4/99
+	types.
+
+011dd	Fixed various problems throughout the system in	12/28/98 N/A	compile
+	response to compile failures and warnings on 
+	LINUX platform.
+
+007vv	Corrected the regular text alignment value to	12/29/98 TP	closed
+	the range for special text when writing to the 			12/30/98
+	VG file.
+
+013b	Removed tabs from the string displayed in the	12/29/98 TP	closed
+	EXIT dialog box.						12/30/98
+
+001a1g	Forced the year to always be "00" when reading	12/29/98 AH	closed
+	the climatology data for MRF MOS decoder.			12/31/98
+
+018a1h	Corrected fatal problems with NMAP on AIX.	12/30/98 TP	12/30/98
+
+011ee	Created a new GEMPRM.PRM for Linux.		12/31/98 N/A	internal
+
+021a9b	Enhancements to some of the CLO routines.	12/31/98 TP	1/6/99
+
+018a1i	Corrected a fatal NMAP bug on Linux.		1/4/99	TP	1/4/99
+
+016c	Fixed fatal Linux errors in NWX.		1/4/99	TP	1/4/99
+
+001a1h	Fixed a fatal error in the METAR decoder.	1/4/99	AH	1/4/99
+
+018a1j	Added logic to get latest times from a surface 	1/6/99	TP	closed
+	or upper-air file if the number of times in the 		1/6/99
+	file exceeds 30.
+
+011ff	Added automatic grouping of station model data 	1/6/99	TP	closed
+	to SFMAP and SNMAP.						1/12/99
+
+021a9c	Selective edit of text attributes when in 	1/6/99	TP	closed
+	multiple select mode.						1/12/99
+
+020d	Corrected and simplified map creation program.	1/6/99	??	OPEN
+
+011gg	Increased MAXDIM dimension in program GRPHGD 	1/6/99	TL	closed
+	from 542 to 626 to accomodate larger grids.			1/29/99
+
+021a9d	Added dashed arrow line to outlook product.	1/6/99	AH	1/6/99
+
+018a1k	Fixed bug on AIX with the Undo/Redo button.	1/6/99	TP	1/8/99	
+
+021a9e	Watch county list enhancements.			1/8/99	AH	1/11/99	
+
+006uu	Added underlined text with a fill box to the 	1/8/99	TP	closed
+	possible types for special text.				1/11/99
+
+013c	Added new program Ncolor to NTL suite.		1/8/99	TP	1/8/99
+
+021a9f	Fixes to selective multi-text edit.		1/11/99	TP	1/12/99	
+
+021a9g	Fixed watch box problems.			1/12/99	AH	1/14/99
+
+013d	Fixed some problems with the Ncolor program.	1/12/99	TP	1/13/99
+
+014g	Changed the order of the header files in a	1/13/99	N/A	internal
+	NTRANS routine.
+	
+010a2o	Major modifications to the CLO library.		1/13/99	TP	1/20/99	
+
+021a9h	Moved #defines for text edit in NMAP.		1/13/99	TP	1/19/99	
+
+010a2p	CBF_READ change due to Linux.			1/13/99	AH	2/23/99	
+
+006vv	Updated WRITE statement in ATEST to take into 	1/13/99	TP	closed
+	account all special text types (1-11).				1/15/99
+
+010a2q	Modified bufr code for use on Linux.		1/14/99	AH	2/23/99	
+
+021a9i	Added filled underlined text to NMAP.		1/14/99	TP	1/15/99	
+
+011hh	Added smoothing to GDCNTR, GDPLOT, and GDPLOT2.	1/19/99	TL	1/27/99
+
+021a9j	Added new symbols to GEMPAK and NMAP.		1/19/99	TP	1/20/99
+
+001a1i	Several changes to the aircraft decoder DCACFT.	1/20/99	AH	1/21/99
+
+002f    Increased maximum grid size allowable.          1/20/99 TL      OPEN
+
+011ii   Changed the grid time dimension in time arrays  1/21/99 ??      OPEN
+        in GRID programs from LLMXTM to LLMXGT.
+
+021a9k	Fixed problems in text attribute editing.	1/21/99	TP	1/27/99	
+
+011jj	Plotsyms now works with gf device driver.	1/21/99	TP	1/22/99
+
+010a2r	Bug fix in clo_lonin.c & added to testclo.c.	1/21/99	TP	1/22/99
+
+021a9l	Added front and tropical cyclone text to	1/22/99	AH	closed
+	the Weather Depiction Chart.					1/27/99
+	
+001a1j	Metar decoder now decodes hourly precip data.	1/22/99	AH	1/26/99
+
+010a2s	Updated FL_MFLS routine to handle model data	1/25/99	TL	closed
+	stored in separate model forecast times.			2/12/99
+
+018a1l	Added capability of auto update of imagery.	1/26/99	AH	1/29/99	
+
+011kk	GRPHGD modified to write out a grid with 	1/26/99	TL	closed
+	missing values when no input contour lines.			1/29/99
+	
+021a9m	Cleaned up surface prog.			1/27/99	AH	1/28/99
+
+021a9n	Fixed problems with text editing.		1/27/99	TP	1/28/99
+
+001a1k	Fixed the state in DC_GBUL when third carriage	1/28/99	N/A	tested by
+	return is encountered.						UNIDATA
+
+018a1m	Fixed two auto update of image problems.	1/29/99	AH	2/1/99
+
+007ww	Created a device driver for TIFF files that	2/2/99	AH	closed
+	use Group 4 Fax compression.					2/3/99
+
+010a2t	Updated GG_SDEV to have default product name	2/2/99	AH	closed
+	for the TIFF driver.						2/3/99
+
+021a9o	New function - 'Show All Groups'.		2/2/99	AH	closed
+	Fixes to auto update.						2/3/99
+
+011ll	Fixed bug where gdplot2 crashed on AIX4.	2/3/99	TP	2/5/99	
+
+011mm	Fixed line smoothing problems in gdplot		2/3/99	TL	closed
+	and gdplot2.							2/5/99
+
+020e	Replaced FORTRAN code checking script, 		2/3/99	TP	closed
+	ptypcmpf.sh.  Modified ndirect utility to 			2/3/99
+	display each command line when desired.		
+
+018a1n	Added a function to seek the nearest		2/3/99	AH	closed
+	city/station/VOR/anchor/county.					2/4/99
+
+010a2u	Bug fix in clo_lonin.c from 010a2r.		2/3/99	TP	2/11/99	
+
+011nn	Added parameter 'datout' so users can specify	2/4/99	TP	closed
+	different dates and times in the output.			2/19/99
+
+021a9p	Removed the check for the LINE_ELM types from	2/4/99	TP	closed
+	nmap_pgsfp.							2/5/99
+
+021a9q	Response to bug report 010a2o.			2/4/99	AH	2/8/99
+
+009d	Added sfmap_nc_link to sf_link and added	2/5/99	TP	closed
+	gdplot2_vg_link to gd_link.					2/5/99
+
+010a2v	Fixed bug with multiple forecast hour files.	2/5/99	AH	3/17/99
+
+021a9r	Bug fix in nmap_pqwlst.c.			2/5/99	AH	2/8/99
+	
+010a2w	Fixed error code in tijtoi.  Corrected wording	2/5/99	AH	closed
+	from julian day to "days since 1 January."			2/10/99
+
+007xx	Reduced y-offset for individual symbols for 	2/8/99	TP	closed
+	combined symbols.						2/9/99
+
+018a1o	Added a check for mandatory level data in NMAP.	2/8/99	AH	2/10/99	
+
+011oo	Added a check for <= 10 lines of text so that 	2/8/99	AH	closed
+	the text attributes for the border or background 		2/10/99
+	fill can be applied to the entire file as a 
+	single string.	
+
+007yy	Fixed reported problem with the TIFF driver.	2/8/99	AH	2/8/99
+
+021a9s	Switch default file operation from open to 	2/8/99	TP	closed
+	append.								2/9/99
+
+021a9t	Added new front type for squall lines.  Added	2/8/99	TP	closed
+	new combo symbols and changed the names and 			2/9/99
+	order of the icons.  Updated include files, 
+	tables, and icon files for the above changes.  
+	Updated PLOTSYMS for new items.
+
+001a1l	Fixed the decoding of the mean sea level 	2/8/99	AH	OPEN
+	pressure for METAR reports in MT_SLP.  PMSL is 
+	compared to the altimeter setting for consistency. 
+
+005g	Fixed line widths on the color bar for radar 	2/8/99	TP	closed
+	images.								2/9/99
+
+011pp	Updated sntdat to call ti_find so that all 	2/8/99	TL	closed
+	possible user input for dattim will work.			2/10/99
+
+021a9u	Various work on partial delete.			2/9/99	AH	2/9/99
+
+021a9v	Updated Weather Depiction text product to 	2/9/99	AH	closed
+	include new squall line front type.				2/9/99
+
+021a9w	Fixed problem 125.1, changed default for 	2/9/99	TP	closed
+	auto-update to off, and changed appearance of 			2/9/99
+	HIDE/SHOW button.	
+
+010a2x	Bug fix, dgmfil failing for gdfiles with true 	2/10/99	TL	closed
+	filenames.							2/12/99
+
+010a2y	Bug fix in flmfls with a range of times.	2/10/99	TL	2/12/99	
+
+007zz	Increased tchar variable in dtext.f to 400.	2/10/99	AH	2/10/99	
+
+021a9x	Change default .info filename for the graph-	2/10/99	TP	closed
+	to-grid text product to reflect vgfile name.			2/10/99
+
+021a9y	Inc/Dec function allows values in station model 2/10/99	TP	closed
+	to be toggled on/off together.					2/10/99
+
+006ww	Undo delivery 006pp in version 5.4.3.k.		2/10/99	N/A	undo
+
+021a9z	Made changes to appending files.		2/11/99	AH	2/18/99	
+			
+010a2z	Added conversion program to convert version 	2/11/99	AH	closed
+	5.4.3.k VGF files to 5.4.3.j.					2/11/99
+
+008v	Updated NMAP help files for patch K.		2/11/99	AH	2/18/99
+
+009e	Added ncolor program to nprog build scripts.	2/12/99	SS	2/12/99
+
+010a3a	Fixed a problem with the input and output 	2/12/99	AH	2/18/99
+	record sizes.
+
+021b1a	Changed default vgf file open to replace.  	2/16/99	TP	closed
+	Fixed bug with a bad error message associated 			2/19/99
+	with the data load window.	
+	    
+================================== end of patch 'k' ============================
+	    
+010a	Updated N-AWIPS to version 5.4.3.l.		2/18/99	SS	2/18/99	
+
+018a	Next generation auto-update.			2/18/99	AH	2/18/99
+
+018b	Locator box in bottom right corner now displays 2/18/99	AH	closed
+	various information based upon choices in 			2/18/99
+	options menu.	
+
+021a	Changed the pop-up for partial delete of arrow 	2/18/99	AH	closed
+	heads to be a radio box.					2/18/99
+
+010b	Additions to clocmn.h for future county 	2/18/99	N/A	internal
+	boundaries information.	
+
+010c	Added parameter conversion routines to generate 2/18/99	AH	closed
+	the 5- and 6-digit ship codes containg assorted 		2/19/99
+	wave data.  Three new parameters:  WPHM, WVSW, 
+	and SWEL were added.	
+
+020a	New code to scan the new countybnds.tbl and 	2/18/99	DP	closed
+	create an associated countybnds.tbl.info file.			2/18/99
+	
+010d	Added two new routines for accessing the new 	2/19/99	TP	closed
+	county bounds table.						2/19/99
+
+010e	Changed the default border type from 0 to 111 	2/19/99	TP	closed
+	in cds_text.							2/19/99
+	
+018c	Update timeline during auto update.		2/19/99	TP	2/22/99
+
+021b	Added label & label type selections for lines,	2/19/99	TP	closed
+	fronts, and symbols.  						2/22/99
+
+012a	Changed dwell rate pop-up to be sensitive even 	2/19/99	TP	closed
+	when frames are looping.					2/22/99
+	    
+018d	Modified to use new county bounds table instead 2/22/99	AH	closed
+	of centroid when determining county.				2/23/99
+
+010f	Fixes bug where users could select deleted	2/22/99	AH	closed	
+	elements.							2/23/99
+		
+011a	Allow multiple files to be processed by 	2/22/99	AH	closed
+	surface OA program.						3/17/99
+
+011b	Added 14 more paramters to the surface station	2/22/99	MLI	closed	
+	model.								2/3/00
+	
+021c	Added keyboard focus to "wind speed" text field 2/23/99	AH	closed
+	in "wind barb" and "wind arrow" editor.				2/24/99
+
+021d	Fixed 139:P1, arrow line width preserved during 2/23/99	AH	closed
+	partial delete.							2/24/99
+
+021e	Removed header line from the coded message for 	2/23/99	AH	closed
+	QPF prog.  Changed the coded message filename to 		2/24/99
+	reflect the first 3 chars. of the VG filename.		
+
+021f	Fixed 142:P1&2 and added several new label 	2/23/99	AH	closed
+	types in lines & fronts.					2/24/99
+
+010g	New routines to sort and access county bounds 	2/24/99	AH	closed	
+	info.								3/1/99
+	
+021g	Append/replace toggle has been replaced with 	2/24/99	TP	closed
+	an append button and a replace button.  A 			2/24/99
+	toggle at the top now allows vgf files to be 
+	displayed chronologically or nmae.		
+
+011c	Fixed a bug when trying to print to the 	2/24/99 MLI	closed
+	"DEFAULT" printer from the printer dialog box 			2/3/00	
+	in any NPROG program.		
+
+021h	Change the way counties are determined for the 	2/24/99	AH	closed
+	watch box elements.  They are now determined by 		3/1/99
+	the county outline as opposed to using the centroid.	
+
+010h	Fix to report 145, problem #1.			2/24/99	AH	2/25/99	
+
+021i	Fixed a bug caused by users using partial 	2/24/99	AH	closed
+	delete to delete an element (see report 144).			2/25/99
+
+010i	Made corrections to codes for problems 		2/24/99	AH	closed
+	discovered during Y2K testing.					2/25/99
+
+007a	Created a form-fitting blank background fill 	2/24/99	AH	closed
+	for arrows and barbs.  Changed all software 			2/25/99
+	lines to have rounded ends the same as hardware 
+	lines in the XW and PS drivers.  Added the TIFF 
+	driver to PLOTSYMS.	
+
+021j	Perform G_NINT on label locations.		2/24/99	TP	2/26/99	
+
+011d	Allow grphgd to consider a contour's color when 2/24/99	TL	closed
+	   processing.  Minor bug fixes: prevent 			2/26/99
+	   consideration of intersections off the grid, 
+	   smooth only those points which are not assigned 
+	   an exact contour value, prohibit radial search 
+	   assignment if all gradients are zero.	
+
+009a	Updated pdfbld and helpbld scripts so they work 2/24/99	SS	closed
+	on HPUX.							2/25/99
+
+018e	Corrected auto-update problem where auto-update 2/25/99	TP	closed
+	did not work properly with max number of frames.		2/26/99
+
+008a	Updated documentation for oabsfc for multiple 	2/25/99	N/A	closed	
+	files.								docs
+	
+021k	Made the blankout behind the vector the 	2/25/99	TP	closed
+	default for vectors in NMAP product generation.			2/26/99
+
+021l	Modified SFCSPLT program to handle the group 	2/25/99	AH	closed
+	type label.  Added squall lines.  Removed the 			3/2/99
+	creation of the pressure VGF.		
+
+001a	Added a new routine which conducts quality 	2/25/99	??	OPEN
+	checks on synoptic pressure data.		
+
+010j	clo_cntybinply.c was considering too many 	2/25/99	AH	closed
+	counties, hence	affecting performance.				3/1/99
+
+021m	This change allows users to open 0 size .vgf 	2/25/99	AH	closed
+	files without notification of error.				2/25/99
+
+021n	Updated the VG convert program to convert 	2/25/99	AH	closed
+	patch l files to patch j files.					2/26/99
+
+018f	Fix auto-update roam bug.			2/26/99	TP	2/26/99	
+
+============================= End of Patch 5.4.3.l =============================
+010k	Updated to Patch5.4.3.m.			3/2/99	TP	3/2/99	
+
+021o	Fixed problem with increment/decrement within 	3/2/99	TP	closed
+	roam and zoom.							3/5/99
+
+016a	Modified srchw.c to display a slightly more 	3/2/99	TP	closed
+	informative message when the user attempts to 			3/4/99
+	display too much data.	
+
+020b	Replaced the C language code checking script.	3/2/99	TP	3/2/99	
+
+010l	Fixed group problem with file copy operation.	3/2/99	TP	3/3/99	
+
+007b	Fixed a bug in the postscript driver to 	3/2/99	TP	closed
+	maintain the use of the background color for 			3/4/99
+	drawing when the user has requested the 
+	monochrome option.  Fixed cds_wind to change
+	any wind type theat ends in "4" to the new 
+	form-fitting background blank.	
+
+018g	Fix the seek function when in zoom or roam.	3/3/99	TP	3/3/99	
+
+021p	Added two new label types in fronts and 	3/3/99	TP	closed
+	changed label value setting.					3/3/99
+
+011e	Added an option to apply the break values for 	3/3/99	AH	closed
+	color coding in sfmap to the lower range of 			3/5/99
+	data values or the upper range of data values.	
+
+019a	Created new Surface Analysis overlay map files 	3/3/99	N/A	maps
+	for the MPC.	
+
+019b	Marine zones for the Great Lakes, St. Lawrence 	3/4/99	N/A	maps
+	Seaway, and the Atlantic & Pacific coasts have 
+	been reconfigured effective 12/1/98.	
+
+018h	Fixed nmap_sfmap to call sfmprm and sfmplt 	3/4/99	AH	closed
+	properly.							3/5/99
+
+007c	Added background blank-out to symbol plotting.	3/4/99	AH	3/5/99	
+
+011f	Added a new parameter, qcntl, in surface OA 	3/4/99	AH	closed
+	program to check data quality.					3/17/99
+
+010m	Changed the calling sequence of pc_sstn by 	3/5/99	N/A	internal
+	adding a priority parameter, ispri.	
+
+011g	Parameter sfparm was added to sfmod to allow 	3/5/99	AH	closed
+	only some of the surface file output to be 			3/11/99
+	written.
+			
+011h	Created a new program, SFVGSF, to read a VG 	3/8/99	TP	closed
+	file and write the data values to a GEMPAK 			3/9/99
+	surface file.
+
+011i	Modified sfcsplt to create fronts2.vgf.		3/8/99	AH	3/9/99
+
+021q	Cleaned up the modify function so that it now 	3/8/99	TP	closed
+	deletes the smaller portion of a closed figure.  		3/10/99
+	Also, it now modify's the first point so that 
+	it ties directly to the line if there is not a 
+	vertex close by.
+
+011j	Changed plotsyms.f for linux compiler.		3/8/99	TP	3/8/99
+
+011k	Fixed bugs found in SFVGSF.			3/9/99	TP	3/9/99
+
+021r	Fixed partial delete problem with nearly closed 3/9/99	TP	closed
+	line.								3/11/99
+
+021s	Added symbol's lat/lon position editing in 	3/9/99	TP	closed
+	symbol editor.  Added symbol's background fill 			3/12/99
+	option in symbol editor.  Added ghosting lat/lon 
+	under action "place symbol," "move symbol," and 
+	"copy symbol."
+
+016b	Bug fix for NWX... for text data of type "B".	3/10/99	GK	3/11/99
+	    
+010n	Added parameter conversion routine to generate 	3/10/99	TP	closed
+	a character string containing 24 hour precip. 			3/11/99
+
+018i	For NMAP cursor locator types ANCHOR and VOR, 	3/10/99	TP	closed
+	add distance and direction information. 			3/11/99
+
+011l	Corrected bug where nskp not initialized. 	3/11/99	TL	3/16/99
+
+021t	Fixed modify problems from report #156.		3/11/99	TP	3/11/99
+
+021u	Added symbol's lat/lon editing to single select 3/12/99	TP	closed
+	section.  Added table setting symbol's "clear 			3/15/99
+	type" and lat/lon initial value.
+
+011m	Change the calling sequences of SF_QSTN, 	3/12/99	N/A	internal
+	SF_SNXT, SF_SSTN, and SF_USTN by adding a 
+	priority paramter, ispri.
+	
+021v	Added code and an associated table for 		3/15/99	N/A	internal
+	managing severe weather watch formatting.
+
+015a	Fixed a bug in NSAT when creating the date and 	3/15/99	TP	closed	
+	time labels in the product ID line of the 			3/15/99
+	user interface.
+
+018j	Fixed current time and set time buttons on the 	3/15/99	TP	closed
+	time line.  Also, changed file open default to 			3/15/99
+	"by name."
+
+021w	Added a new special line type, 22, for drawing	3/15/99	TP	closed
+	streamlines.							3/15/99
+
+008c	Corrected prologs in gemlib routines.		3/16/99	N/A	docs
+
+011n	Made several enhancements to the surface OA 	3/16/99	AH	closed
+	routines.							3/17/99
+
+021x	Fixed problem with different line types 	3/16/99	AH	closed
+	remembering previous settings (#150:P2).			3/22/99
+
+021y	Correct bug where product save window 		3/16/99	AH	closed
+	sometimes did not pop up.					3/18/99
+
+011o	Changed call to SF_SSTN to add priority value.	3/16/99	??	OPEN
+
+001b	Changed calling sequence of dc_stns and sf_ldta 3/17/99	N/A	internal
+	to add priority parameter, ispri.
+
+021z	Changed file names of text products.		3/17/99	AH	3/18/99
+
+021aa	Increment/Decrement enhancements.		3/17/99	AH	3/18/99
+
+010o	Made corrections to codes for problems 		3/17/99	AH	closed
+	discovered during Y2K testing.					3/22/99
+
+021bb	Fixed garbage in lat/lon ghost and ghost not 	3/17/99	AH	closed
+	working on Sun (#203).						3/18/99
+
+010p	Added new surface parameters for the medium 	3/17/99	AH	closed
+	range desk.							3/23/99
+
+010q	Added a format statement for the output of 	3/18/99	AH	closed
+	PR_TPFR in TESTPR.						3/22/99
+
+016c	Corrected duplicate bulletin problem.		3/18/99	AH	3/22/99
+
+010r	Added Version 5.4.3.m to the CVG conversion 	3/18/99	N/A	No j S/W
+	program.
+	
+008d	Updated SFPARM and AREA help files for the 	3/18/99	N/A	docs
+	new priority value.
+
+007d	Added plotting markers as hardware symbols in 	3/19/99	??	OPEN
+	the UTF and RBK device drivers.
+
+=========================== End of Patch 5.4.3.m ===============================
+
+021cc	Increased selected element size from 500 to 	3/23/99	??	OPEN
+	2000.  Increased selecting speed for increment/
+	decrement editing function.
+
+021dd	Always write to end of .DEFAULT.vgf.  Generate 	3/23/99	??	OPEN
+	incremental backups if .DO_BACKUP file exists. 
+
+007e	Fixed the calculation of the number of bytes in	3/24/99	??	OPEN
+	the last block of data for the UTF driver.	
+
+010s	Changes to allow searching for counties and 	3/24/99	AH	closed
+	stations in the CLO structures. 				3/25/99
+	
+010t	Updated N-AWIPS to version 5.4.3.n.		3/24/99	TP	3/24/99	
+
+018k	Changed the seek function to display county 	3/24/99	AH	closed
+	names rather than the county ids.  Also fixed 			3/24/99
+	the vector refresh sizes to fix 150:P1.	
+
+011p	Change length of time string.			3/25/99	TP	3/25/99	
+
+010u	Added a check for the width values that 	3/25/99	AH	closed
+	indicate using the blank background for symbols 		3/25/99
+	to CDS_SYMB when applying the scale factor.  
+	Added symbols to the display level that includes 
+	text and vectors in CVG_LOAD.  Reduced the size of
+	the rounded end points when drawing a line in IDRAW.	
+
+019c	Maps and tables that accompany the new county 	3/25/99	N/A	maps
+	bounds table as well as utilities that 
+	processed the new maps and tables.	
+
+008f	Corrected prologs in cgemlib routines.		3/25/99	N/A	docs	
+
+008g	Updated book generation files.			3/25/99	N/A	docs	
+
+007f	Added the ability to construct a single UTF 	3/26/99	??	OPEN
+	string consisting of all station model data 
+	for the Medium Range Temp/POP products.	
+
+008h	Added text files for new gemlib/cgemlib libs.	3/29/99	N/A	docs	
+
+008i	Corrected prologs in the AW library.		3/29/99	N/A	docs	
+
+008j	Corrected more prologs in gemlib/cgemlib.	3/29/99	N/A	docs	
+
+010v	Eliminated IRIX6.5 warning messages.		3/30/99	N/A	compiler
+
+010w	Eliminated IRIX6.5 warning messages.		3/30/99	N/A	compiler
+
+021ee	Removed symbol's lat/lon editing scale bars	3/30/99	AH	closed
+	and added text field input value exclusions.  			3/31/99
+	Removed ghosting lat/lon position for symbols.  
+	Removed initial value table setting of lat/lon 
+	for symbols.	
+
+012b	Corrected compile warnings from IRIX6.5.	3/30/99	N/A	compiler
+
+011q	Added a new parameter, QCNTL, to oabsnd for 	3/31/99	??	OPEN
+	data quality check.  Enabled opening multiple 
+	upper-air files.  Write station IDs discarded 
+	by QC to the terminal.	
+
+012c	Corrected compile warnings from IRIX6.5.	3/31/99	N/A	compiler
+
+018l	Various NMAP enhancements.			3/31/99	AH	4/1/99	
+
+021ff	Eliminated the half-way traversal problem for 	3/31/99	AH	closed
+	closed lines.  Also corrected an error on 			4/2/99
+	modifications that began at the last point on 
+	a non-closed line.	
+
+010x	Made corrections to grid lib routines for Y2K.  3/31/99	AH	closed
+	Upper air decoder changed to prevent decoding 			4/5/99
+	erroneously encoded mandatory levels.  Marine 
+	decoder changed to limit number of stations read.	
+
+008k	Corrected prologs in bridge libraries.		4/1/99	N/A	docs	
+
+021gg	Modified the watch format window.		4/1/99	AH	4/2/99	
+
+016d	Fixed NWX for Y2K.				4/2/99	TP	4/2/99	
+
+007g	Allow flipping of streamlines.			4/2/99	TP	4/2/99	
+
+018m	Moved auto-update control to the main window.	4/5/99	TP	4/5/99	
+
+010y	Y2K corrections to the ti library routines.	4/6/99	N/A	obe	
+
+010z	Added uppercase month and day-of-week abbrev.	4/6/99	AH	closed
+	to FL_MNAM and CFL_MNAM.					4/12/99
+
+021hh	IRIX6.5 compiler updates.			4/6/99	AH	4/8/99	
+
+018n	Disabled the auto-update button when the data	4/6/99	TP	closed
+	clear button is selected.  Also the handlebar 			4/8/99
+	for the Inc/Dec function is enhanced.	
+
+018o	Added to the seek function the ability to find 	4/7/99	TP	closed
+	the distance between two points. 				4/8/99
+
+001c	Add check for invalid report identifier in 	4/7/99	AH	closed
+	marine decoder.	 						4/8/99
+
+021ii	Watch format text generation to SPC specs.  	4/7/99	AH	4/8/99	
+
+018p	Fixed the problem with being unable to select 	4/7/99	TP	closed
+	   some or all vgf elements after performing a 			4/8/99
+	   restore.  Fixed problem where pushbuttons 
+	   created with more than one pixmap collapsed 
+	   on some OSes when made insensitive.  	
+
+021jj	Minor fix for Linux.  See 161:P1.		4/7/99	AH	4/8/99	
+
+018q	Capitalize name of program and remove NAWIPS 	4/7/99	TP	closed
+	from title bar.  Have the base map overlay 			4/8/99
+	last on user selected overlays.	
+
+021kk	Improve speed of the watch box editing.		4/7/99	AH	4/8/99	
+
+021ll	Fixed a problem with non-current buttons 	4/8/99	TP	closed
+	being depressed.						4/9/99
+
+021mm	Minor fix to make Linux even happier.		4/8/99	TP	4/9/99	
+
+018r	Add reload button to main nmap window.		4/8/99	TP	4/9/99	
+
+021nn	Bug fixes for recent watch deliveries.		4/8/99	TP	4/9/99	
+
+010aa	Update 'j' conversion program to accept 	4/8/99	N/A	no 'j' 
+	version 5.4.3.n.						S/W
+
+018s	Add locator selection button at bottom frame 	4/8/99	TP	closed
+	of main window.							4/9/99
+
+018t	Change default for auto-update to ON.		4/8/99	TP	4/9/99	
+
+021oo	Fixed fatal vertex drag/drop bug.		4/9/99	AH	4/14/99	
+
+021pp	Fixed modify so that initial point is 		4/12/99	AH	closed
+	correctly located on smoothed lines.				4/14/99
+
+008l	Updated What's New Help for version n.		4/12/99	N/A	docs	
+
+=========================== End of Patch 5.4.3.n ===============================
+
+010bb	Updated N-AWIPS to Patch5.4.3.o.		4/14/99	TP	4/14/99	
+
+018u	Fixed #171.O2 -- single frame loops are not 	4/14/99	TP	closed	
+	looped any longer.  Skip is considered during 			4/15/99
+	auto-update.	
+
+001d	Created subroutine affarp.f to handle reports 	4/14/99	AH	closed
+	from UAXX10 EGRR aircraft bulletins.				4/15/99
+
+
+010cc	Changed NEXP for the # of expected times in 	4/14/99	??	OPEN
+	TI_FIND to the maximum # of times in a file.
+	
+010dd	Modified the decoding of the grid time from 	4/15/99	TL	closed
+	GRIB files created by the RFC observed precip			4/20/99
+	analysis. 
+	 	
+018v	Fixed #174.P1 -- timeline now properly updated 	4/15/99	TP	closed
+	for auto-update on local radar images.				4/19/99
+
+020c	Improved the paramcmp function.			4/15/99	TP	4/15/99	
+
+010ee	Made corrections to ensure that time axis 	4/16/99	N/A	obe
+	(TAXIS) will plot correctly for Y2K.	
+
+007h	Added the routing information "ALL" to the PIL 	4/16/99	AH	closed
+	header for AFOS graphics products created with 			5/6/99
+	the "||c" option for the DEVICE parameter.	
+
+010ff	Renamed FL_FFIL to FL_MFIL.			4/19/99	AH	2/18/00
+
+010gg	Modified SCANDIR to allow Linux to read dirs.	4/19/99	TP	4/20/99	
+
+018w	Changed satellite and radar imagery title 	4/20/99	TP	closed
+	location and format.						4/20/99
+
+007i	Fixed the size of the background arrow head 	4/21/99	AH	closed
+	for clearing data behind an arrow.				4/29/99
+
+010hh	Changed NEXP for the # of expected times in 	4/21/99 AH	closed
+	tg_find to the maximum # of times in a file.			12/1/99
+
+021qq	Changes to the SPC severe weather watch 	4/21/99	AH	closed
+	generation per fax received on 20 April 1999.  			4/29/99
+
+001e	Fix to process watch cancellation time 		4/23/99	AH	closed
+	correctly, improve positioning of labels, Y2K.			5/4/99
+
+018x	Corrected title placements for imagery data and	4/27/99	TP	closed
+	surface data when overlayed onto model data.			5/5/99
+
+021rr	Restructured the _palInfo and general cleanup 	4/27/99	SS	closed
+	of nmap_pgpalw.c and associated files.				4/27/99
+
+010ii	Added a new character visibility parameter.	4/27/99	AH	closed
+	Modified the calculation for DPRC.				5/6/99
+
+018y	Added a button to the seek widget to toggle 	4/27/99	AH	closed
+	between statute miles and nautical miles.			4/29/99
+
+019d	New Aviation boundaries map.			4/27/99	N/A	maps	
+
+001f	Modified watch box decode to allow issue time 	4/27/99	N/A	obe
+	for a correction to be up to 30 minutes after 			001p &
+	watch start time, and to remove trailing 			016f
+	blanks from time labels.	
+
+010jj	Added marine and coastal location tables.	4/27/99	AH	4/30/99	
+
+021ss	Undo 021rr.					4/28/99	N/A	undo
+
+009b	Added link scripts for gdplot_ps and gdplot2_ps.4/28/99	TP	4/28/99	
+		
+018z	Added Marine and Coastal types to the SEEK and 	4/29/99	AH	closed
+	LOCATOR functions at the request of the MPC.			4/30/99
+
+018aa	Fixed memory leak in auto-update.		4/30/99	N/A	obe
+
+010kk	Added new marine and coastal types.		4/30/99	AH	5/4/99	
+
+021tt	Added states included to the watch format.	4/30/99	AH	5/4/99	
+
+021uu	Change marker color of station models if 	4/30/99	AH	closed
+	values modified via inc/dec function.				5/4/99
+
+021vv	Added a confirmation box to the product 	5/3/99	AH	closed
+	generation exit.						5/4/99
+
+021ww	Added states included to the watch format.	5/4/99	AH	5/4/99	
+
+019e	Converted NWS Shapefiles into GEMPAK map and 	5/4/99	N/A	maps
+	table files.	
+
+021xx	Fix endpoint anchor and vor values for watch 	5/4/99	AH	closed
+	format text.							5/4/99
+
+021yy	Fix bug for distance calculations.		5/4/99	AH	5/4/99	
+
+018bb	Fixed the seek function's ghosting problem.	5/4/99	AH	5/4/99	
+
+008m	Updated What's New Help for version o.		5/5/99	N/A	docs	
+
+========================= End of Patch 5.4.3.o =================================
+
+006a	Modified the check for possible directions in 	5/11/99 ??	OPEN
+	the contouring algorithm routine CCBOXT.  
+
+010ll	Initialized month/date on the template to be 	5/11/99 AH	closed
+	first of January to rationalize the Gempak time 		2/18/00
+	for climo data.
+		
+007j	Increased value of MXRWCL to fix problem with 	5/12/99	AH	closed
+	roam of US 1km VIS in 'image size' case. 			5/19/99
+
+010mm	Created CLO_TRACK function which accepts two 	5/12/99	AH	closed
+	points in space/time and computes future points.		5/20/99
+
+010nn	Updated N-AWIPS to Patch5.4.3.p.		5/12/99	TP	5/12/99	
+
+018cc	Fixed auto update bug with 'clear data' button.	5/12/99	AH	5/17/99	
+
+018dd	Removed offsets from seek distance popup so 	5/12/99	AH	closed
+	that it works in roam.						5/19/99
+
+018ee	Fixed problems with the Look-up Tables. 	5/12/99	AH	5/26/99	
+
+021zz	Bug fix to outlook product generation.  	5/12/99	AH	5/20/99	
+
+021aaa	Bug fix - VOR point distances must be 		5/12/99	AH	closed
+	nautical miles, not statute miles.				8/31/99
+
+021bbb	Added unmanagement for CLASS_PROD's "message 	5/12/99	AH	closed
+	window" after file being saved in CLASS_PROD. 			5/20/99
+
+021ccc	Added label initial value setting by object 	5/12/99	AH	closed
+	type for CLASS_FRONT.						5/20/99
+
+010oo	Removed IRIX6.5 compiler warnings.		5/12/99	N/A	compiler
+
+010pp	Added a new routine (CV_RDUC) to reduce the 	5/13/99	N/A	internal
+	number of points on a line.  			
+
+001g	Modified watch box decode to allow issue time 	5/13/99	AH	closed
+	for a watch to be up to 9 minutes after watch 			7/16/99
+	start time.
+
+023a	New Storm Track icons.  			5/13/99	AH	5/21/99
+
+018ff	Bug fix -- the locator had VOR and Anchor 	5/13/99	AH	closed
+	points reversed. 						5/19/99
+
+021ddd 	Per HPC request, the station reference points 	5/13/99	AH	closed
+	in the excessive rainfall product have been 			5/19/99
+	augmented to include distance (rounded to the 
+	nearest 5 statute miles) and a 16-point compass 
+	direction information. 
+
+021eee 	Correction to 021zz, VOR should be ANCHOR.	5/13/99	AH	5/20/99 
+
+010qq	Interpretation of the /MAN flag in the GEMPAK 	5/14/99	TL	closed
+	variable LEVELS has been changed so that when 			6/9/99
+	/MAN is specified, any application will use 
+	only mandatory level data with NO interpolation.  			
+
+019f	New map overlays and background definitions.	5/14/99	N/A	MPC	
+
+009c	Modified and created modl/global restore files.	5/14/99	N/A	HPC	
+
+001h	Wrote decoder driver for real-time or batch 	5/17/99	AH	closed
+	mode processing for tornado and severe 				5/21/99
+	thunderstorm watch box reports (WWUS9 bulletins).  
+
+011r	Added CLRBAR to SFMAP to control the appearance	5/17/99	AH	closed
+	of the color bar displayed for color-coded 			5/19/99
+	parameters.	
+
+021fff	Added deletion by object.			5/17/99	AH	5/19/99	
+
+010rr	Modified GG_WTCH to read the files created by 	5/18/99	AH	closed
+	the decoder (DCWTCH) instead of the Family of 			5/20/99
+	Services raw file.  Created GG_WARN to read the 
+	output of the decoder DCWARN.  	
+
+018gg	Fixed problems with images with century in the 	5/18/99	AH	closed
+	file name.							6/10/99
+
+018hh	Added the ability to plot current watches and 	5/18/99	AH	closed
+	warnings.							5/20/99
+
+001i	Created a new decoder that decodes the severe 	5/19/99	AH	closed
+	thunderstorm warning, tornado warning, and 			5/21/99
+	flash flood warning text reports.	
+
+010ss	Moved the color bar labels for radar images 	5/19/99	AH	closed
+	to the center of each color box.				5/20/99
+
+018ii	Allow model data to be non-dominant.		5/19/99	AH	5/21/99	
+
+010tt	Increased the array size for the number of 	5/20/99	AH	closed
+	file names possible in GG_WARN to 500.				5/20/99
+
+001j	Modified the warning decoder subroutines.	5/20/99	MLI	2/4/00
+
+021ggg	Added CLASS_TRACK.				5/21/99	AH	5/21/99	
+
+021hhh	Change format of hurricane track product to 	5/21/99	AH	closed
+	conform to ACTF requirement.					5/26/99
+
+018jj	This release treats (not cures) a fatal bug in 	5/21/99	AH	closed
+	Nmap on HPUX platforms.  					5/26/99
+
+018kk	Removed unnecessary logic as a result of 	5/21/99	AH	closed
+	loading all images via image_loadData. 				5/26/99
+
+011s	Bug fix for GDPLTB to stop a crash when 	5/21/99	AH	closed
+	loading streamlines.						5/21/99
+
+010uu	Added CLASS_TRACKS and TRKSTORM_ELM to the 	5/21/99	AH	closed
+	appropriate CGEMLIB test programs.				5/26/99
+
+001k	Modified the warning decoder subroutines.	5/24/99	MLI	2/4/00 
+
+008n	Updated What's New Help for version p.		5/24/99	N/A	docs	
+
+018ll	Correct model title.				5/25/99	N/A	obe
+
+========================= End of Patch 5.4.3.p =================================
+
+010vv	Fixed print statements in TESTCES. 		5/28/99	AH	6/7/99
+
+010ww	Added OUTLOOK, LABEL, TROPICL, STNMDL and 	5/28/99	AH	closed
+	MRFSTN to Key to Types - Group Type in dumpvgf.  		6/7/99
+
+007k	Added the AFOS end-of-file string "NNNN" to 	5/28/99	AH	closed
+	the format is readable by NAFOS and GPMAP.			6/7/99
+
+006b	Y2K fix for MCIDAS code.			5/28/99	N/A	obe	
+
+001l	Fixed watch box decoder dcwtch to treat 	5/28/99	AH	closed
+	replaced watches as watch cancellations.  			7/22/99
+
+021iii	Added circle draw function.			5/28/99	AH	6/8/99
+
+018mm	Fixed MODEL title when more than one GDFILE 	5/28/99	TP	closed
+	present in restore file.					6/7/99
+
+021jjj	Changed the hurricane product to always produce 5/28/99	TP	closed
+	5 lat/lon pairs, with mising set to 0.				6/7/99
+
+010xx	Fixed the calculation of the number of 		5/28/99 ??	OPEN
+	intermediate points on a line segment.	
+
+010yy	Added byte swapping to the functions for 	5/28/99	TP	closed
+	displaying radar imagery.  					6/7/99
+
+010zz	Changed maximum number of stations in file 	5/28/99	TL	closed
+	from 3800 to 4800, and maximum number of 			6/23/99
+	headers from 4000 to 5000.  Added 635 European 
+	stations to the surface synoptic station table.  	
+		
+011t	Changes to program NAMSND.			6/1/99	TL	6/23/99	
+
+018nn	Fixed some LUT problems.  			6/1/99	TP	6/7/99	
+
+010aaa	Implemented changes to DM_RFLT and DM_WFLT 	6/1/99	N/A	external
+	suggested by users in the field.  	
+
+018oo	This release fixes two print bugs in nmap.  	6/1/99	TL	6/23/99	
+
+021kkk	Added select, move, copy, delete, and group to	6/3/99	TP	closed
+	the new track class.	     					6/8/99
+
+021lll	Added group type in symbol, front, and line 	6/3/99	TP	closed
+	editors.  Fixed delete object bugs.				6/8/99
+
+011u	Added IN_SKIP to GDPLOT.			6/3/99	TL	6/8/99	
+
+001m	Corrected Linux compiler errors.		6/3/99	N/A	obe by
+									001n
+									
+018pp	Some clean up to the auto-update.  		6/4/99	N/A	obe	
+
+021mmm	Made several refinements to watch formatting 	6/4/99	TP	closed
+	at the request of the SPC.  					6/7/99
+
+010bbb	Modified display of watch and warnings to have 	6/4/99	TL	closed
+	the option to not label them.  					7/30/99
+
+021nnn	Corrected doubled circle problem in NMAP's VGF 	6/7/99	AH	closed
+	files.  							6/8/99
+
+006c	Fixed drawing lat/lon lines for satellite 	6/7/99	TL	closed
+	projection (un-remapped) images.  Fixed drawing 		6/9/99
+	lon lines for the MCD (McIDAS RECT) projection.  	
+
+010ccc	Updated N-AWIPS to Patch5.4.3.q.		5/28/99	TP	6/2/99	
+
+018qq	Created a title for WATCH_WARN.  		6/7/99	TP	6/8/99	
+
+021ooo	Watch # now defaults based upon files already 	6/7/99	TP	closed
+	existing.							6/8/99
+
+011v	Removed y-direction offset for map coordinates 	6/8/99	TP	closed
+	in GPTEXT.							7/26/99
+
+010ddd	Fixed problems of inconsistent contour plotting 6/8/99	MLI	closed
+	when the contour level is out of the data range.		11/15/99
+
+021ppp	Fixes to track function from report #192.	6/8/99	AH	6/9/99	
+
+001n	Reworked and simplified the warning decoder.  	6/8/99	MLI	2/4/00
+
+018rr	Fix watch/warn title plot from delivery 018qq.	6/8/99	TP	6/11/99	
+
+019g	New Quantitative Precipitation Forecast 	6/8/99	N/A	maps
+	Verification boundary map.	
+
+019h	Updated highways map files to the latest 	6/8/99	N/A	maps
+	Shapefiles from the NWS/MISG.  Improved the
+	map reduction and map processing code.  	
+
+010eee	Increased array sizes for plotting watches and 	6/9/99	N/A	internal
+	warnings.  Added a suggested fix from the AWC 
+	for setting the longitude range of the satellite 
+	navigation.  	
+
+016e	Changed color of severe thunderstorm watch box 	6/9/99	N/A	obe
+	in NWX from yellow to cyan.	
+
+010fff	Added edge checking and setting of incoming 	6/9/99	AH	closed
+	points and polygons in M coordinates to a 			6/10/99
+	precision of 1/100th of a degree in CGR_INPOLY.	
+
+021qqq	The mouse 2 button an exit from delete object.  6/9/99	TP	closed
+	Auto-update enhanced for when radar images do 			6/23/99
+	not arrive in chronological order.	
+
+021rrr	Bug fix for snapping of parallelogram watch 	6/9/99	AH	closed
+	box while editing.						11/17/99
+
+008o	Updated the product generation help in NMAP.  	6/10/99	N/A	docs 
+
+021sss	Several additions/fixes to parallelogram watch 	6/10/99	AH	closed
+	box editing and processing.					11/17/99
+	     
+021ttt	Fixed problem with getting next watch number.	6/10/99	AH	6/14/99	
+
+008p	Updated What's New Help for version q.		6/11/99	N/A	docs
+
+021uuu	Fix crash when replacement watch number blank.	6/14/99	N/A	obe	
+
+021vvv	Fix grouping problems introduced by recent 	6/16/99	AH	closed
+	additions to label.						7/2/99
+
+========================= End of Patch 5.4.3.q =================================
+
+010ggg	Updated N-AWIPS to Patch5.4.3.r.		6/18/99	TP	6/18/99	
+
+021www	Removed duplicate selection for inc/dec.	6/18/99	TP	6/23/99	
+
+018ss	Added a table for the roam function to allow 	6/18/99	TP	closed
+	the user to set the multiplier.					6/23/99
+
+021xxx	Fixed problem (196:P1) with times in the track 	6/18/99	TP	closed
+	results window.							6/23/99
+
+021yyy	Responses to report #193:P1-3.			6/18/99	TP	6/23/99	
+
+018tt	Fixed fatal bug in auto-update with map window.	6/18/99	TP	6/18/99	
+
+018uu	Fixed bug (197:P1) with watch/warn title.	6/18/99	AH	7/1/99	
+
+019i	Corrected the SWAPPED highway map files.	6/18/99	N/A	maps	
+
+021zzz	Changed the default group type for symbols 	6/22/99	AH	closed
+	and lines.  							7/2/99
+
+011w	Corrected aix4 compiler warnings.		6/23/99	TP	6/23/99
+
+009d	Modified Makefiles or link scripts to 		6/23/99 TP	closed
+	eliminate link warnings on aix4.				6/23/99
+
+021a1a	Changed the watch snap feature to only be on 	6/23/99	AH	closed
+	after releasing the mouse button during select.			11/17/99
+
+021a1b	Fixed problem with changing multiselected 	6/23/99	AH	closed
+	tracks (200:P2).						7/16/99
+
+009e	Made several corrections to NMAP restore 	6/23/99	N/A	obe
+	files per users' requests.
+	
+021a1c	Fixed circle problems.				6/24/99	N/A	obe
+									010hhh
+
+021a1d	Changed track direction and speed to knots.	6/25/99	N/A	obe
+
+001o	Modified the metar decoder to decode off-time	6/25/99	AH	closed
+	reports.							7/19/99
+
+021a1e	Increased # of data sources, MAX_OVL_LAYER, 	6/25/99	AH	closed
+	to 8.  Increased # of entiries in roam popup, 			7/2/99
+	MAX_ROAMVAL, to 22.	
+
+018vv	Changed reading the roam table to allow roam 	6/28/99	AH	closed
+	levels to be in any order.					7/2/99
+
+021a1f	Modified label function to allow only 1 label 	6/28/99	AH	closed
+	per object.  Added a new set of label menus for 		7/2/99
+	the outlook line.	
+
+010hhh	Undo part of circle delivery, 021a1c.		6/29/99	N/A	undo	
+
+========================== End of Patch 5.4.3.r ================================
+
+010iii	Updated to version 5.4.3.s.			7/6/99	SS	7/6/99	
+
+018ww	Added a button to the MAP pop-up to toggle on 	7/6/99	AH	closed
+	and off the display of the image.  				7/16/99
+
+021a1g	 Modified the outlook product generation to add 7/6/99	AH	closed
+	connecting line segments between grouped arrow 			7/19/99
+	lines.	
+
+021a1h	Corrected problem where track labels would 	7/6/99	AH	closed
+	double after labeling a line or circle.				7/16/99
+
+018xx	Added ability to edit the attributes of the 	7/6/99	AH	closed
+	Watch/Warn data type.  						7/22/99
+
+011x	Corrected grid spacing calculation in program 	7/6/99	TP	closed
+	GDCFIL for CED grid.						7/26/99
+
+010jjj	Modified GPMAP to save text attributes and 	7/6/99	TP	closed
+	reset them after a VG file is displayed.  			7/27/99
+
+018yy	Increased max # of groups from 25 to 50 and the 7/12/99	N/A	internal
+	max # of products from 50 to 75 for NMAP model 
+	display access.	
+
+001p	Modified watch box decoder dcwtch to decode 	7/12/99	AH	closed
+	WWUS40 bulletins instead of WWUS9 bulletins.  			7/22/99
+	
+001q	Modified aircraft decoder dcacft to handle more 7/13/99	N/A	internal
+	groups of PIREP data (pilot reports).  	
+
+008q	Updated What's New Help for version s.		7/15/99	N/A	docs	
+
+============================ End of Patch 5.4.3.s ==============================
+
+010kkk	Updated N-AWIPS to Patch5.4.3.t.		7/19/99	TP	7/19/99
+
+010lll	Made numerous enhancements to gdplot2.		7/20/99	AH/TP	7/28/99	
+
+016f	Modified watch box decode and display in NWX to 7/22/99	AH	closed
+	use WWUS40 bulletins instead of WWUS9, and to 			1/3/00
+	treat replaced watches as watch cancellations.	
+
+010mmm	Added the start of the SIGMET class functions.	7/23/99	AH	7/27/99	
+
+021a1i	Added zero value for line label.		7/27/99	TP	9/9/99	
+
+001r	Modified aircraft decoder, dcacft. 		7/28/99	AH	11/17/99
+
+010nnn	Added new routine, clo_from.			7/28/99	AH	9/2/99	
+
+021a1j	Reworked minimum scale value checks in pgline.	7/29/99	N/A	internal
+
+011y	Improved logic with cpyfil.			7/29/99	AH	12/1/99
+
+010ooo	Added a new aircraft character parameters.	7/30/99	MLI	11/15/99
+
+010ppp	Added function to calculate flight conditions	7/30/99	AH	closed
+	from ceiling and visibility.					8/31/99
+
+019j	New Flight Information Region boundary map.	8/2/99	N/A	maps	
+
+010qqq	Add functionality to CLO_FROM.			8/9/99	AH	9/2/99	
+
+009f	Modified a large group of restore files.	8/10/99	N/A	external
+
+021a1k	Added the formatting of international SIGMETs.	8/11/99	AH	8/11/99	
+
+010rrr	Changed calculation in CLO_DIRECT.		8/11/99	TP	9/21/99
+
+010sss	Modifications to the sigmet display code. 	8/13/99	AH	9/2/99
+
+011z	Added latitudinal thinning of vector plots.	8/13/99	MLI	11/15/99
+
+021a1l	New northern and southern hemisphere tropical 	8/13/99	AH	closed
+	storm symbols for use by the Pacific Region.			8/17/99
+
+021a1m	Clean up of SIGMETs.				8/13/99	AH	8/16/99
+
+021a1n	Fixes to International SIGMETs.			8/16/99	AH	8/17/99	
+
+021a1o	Fixed a crashing bug in SIGMETs.		8/17/99	AH	8/17/99	
+
+========================== End of Patch 5.4.3.t ================================
+
+007l	Fixed RBK driver.				8/24/99	AH	9/14/99	
+
+021a1p	Fixed fatal bug with labeling symbols.		8/24/99	AH	8/27/99	
+
+019k	New 30 JUL Zone maps and tables.		8/24/99	N/A	maps	
+
+001s	Replaced RA_RTIM with DC_GTIM in decoders.	8/24/99	AH	11/1/99	
+
+010ttt	Updated N-AWIPS to Patch5.4.3.u.		8/25/99	TP	8/25/99	
+
+001t	Modified watch box decoder, dcwtch.		8/25/99	AH	9/13/99
+
+001u	Modified the marine surface decoder, DCMSFC, 	8/27/99	N/A	obe
+	and the land surface decoder, DCLSFC.	
+
+021a1q	Fixed a fatal label bug.			8/30/99	AH	8/31/99	
+
+010uuu	Added several new routines which compute the 	8/30/99	MLI	closed
+	pressures and heights of specific temperatures 			11/15/99
+	from a sounding station.	
+
+012d	Make "Exit" button insensitive when "New 	8/31/99	AH	closed
+	Product" button is clicked in NALARM.				9/3/99
+
+010vvv	Added watch status lines to GG_WTCH. 		8/31/99	N/A	obe/
+									010zzz	
+
+010www	Changed calling sequence to CGR_SEGINT.c.	8/31/99	AH	9/2/99	
+
+021a1r	Clean up of SIGMET process.			8/31/99	AH	9/2/99	
+
+020d	Created program, spctxt, for the SPC.		9/1/99	MLI	11/15/99
+
+010xxx	Changes for international sigmets.		9/1/99	AH	9/2/99	
+
+018zz	Change "ovlflag" to "ovlflag[2]". 		9/2/99	AH	9/10/99	
+
+010yyy	Fixed problems reported by SPC in the data 	9/2/99	AH	closed
+	file search routine.						2/18/00
+
+021a1s	Changes to the SIGMETs.				9/2/99	AH	9/7/99	
+
+018aaa	Set the icon tips to off by default.		9/2/99	AH	9/3/99	
+
+010zzz	Corrected problems when reading watch status 	9/3/99	N/A	obe	
+	lines when no other reports have been processed 
+	yet in GG_WTCH.	
+
+019l	Corrected boundaries on our maps that include 	9/3/99	N/A	maps
+	the Saudi Arabian peninsula.	
+
+018bbb	Fixed the bug that occurs when no map file is 	9/3/99	TP	closed
+	selected in the nmap map window.				9/9/99
+
+020e	Modified how the latitudes and longitudes are 	9/3/99	MLI	closed
+	converted in spctxt.						11/15/99
+
+019m	Replaced non-swapped map files in the SWAPPED 	9/3/99	N/A	maps
+	map file directory.	
+
+001v	Modified aircraft decoder, dcacft. 		9/3/99	AH	9/13/99
+
+021a1t	Various fixes and additions to SIGMETs.		9/3/99	AH	9/7/99	
+
+021a1u	Made a couple of quick fixes to SIGMETs.	9/7/99	AH	9/8/99	
+
+021a1v	Minor bug fixes/changes for SIGMETs.		9/7/99	AH	9/8/99	
+
+008r	Updated What's New Help for version u.		9/9/99	N/A	docs	
+
+021a1w	Put hurricane track file name back to original.	9/9/99	N/A	obe/ops	
+
+========================== End of Patch 5.4.3.u ================================
+
+010a1a	Updated N-AWIPS to Patch5.4.3.v.		9/13/99	TP	9/13/99	
+
+007m	Changed the PostScript commands to select the 	9/13/99 N/A	obe
+	paper size to use the Level 3 syntax. Changed 		operational
+	the large page size from 24x36 to 20x32. Added 
+	a new larger page size, 32x42.	
+
+010a1b	Changed the calling sequence of FL_MDAT and 	9/13/99	AH	closed
+	CFL_MDAT to pass in a default date/time string.  		2/18/00
+
+010a1c	Increased length of mapfil and mparr strings in	9/13/99	AH	closed
+	ggmap.f to be consistent with increased size of 		9/14/99
+	these strings in ipcmn.
+
+010a1d	Fixed bug which was causing watch status line 	9/13/99	AH	closed
+	labels to be plotted in wrong loc., if at all.			1/3/00
+
+018ccc	Increased the number of models allowed in the 	9/13/99	N/A	internal
+	user interface for NMAP from 30 to 60.	
+
+018ddd	Modified the plot order of data sources to 	9/13/99	AH	closed
+	ensure that model data is always plotted first, 		9/30/99
+	or immediately after any image source.  	
+
+011aa	Increased max. # of lines to 200 in grphgd.cmn.	9/13/99	TL	11/3/99	
+
+010a1e	Changed fmodf to fmod and added check to solve 	9/14/99	AH	closed
+	Greenwich Meridian problem. 					9/14/99
+
+011bb	GRPHGD changes per HPC.				9/14/99	TL	11/3/99	
+
+019n	30 JUL County maps and tables.			9/14/99	N/A	maps
+
+021a1x	Fixed SIGMET functions: modify, partial delete, 9/14/99	AH	closed
+	multi-select, delete object, and connect.			9/29/99
+
+001w	Modified aircraft decoder, dcacft, to allow 	9/16/99	AH	closed
+	decoding of PIREP temps that are reported as a 			11/1/99
+	single digit.	
+
+010a1f	Yet another change to CDSSIG.c.			9/16/99	AH	9/29/99	
+
+010a1g	Fix in CLO_DIRECT.c. 				9/16/99	TP	9/21/99	
+
+021a1y	Built format outlook window for product gen.	9/17/99	TP	9/21/99	
+
+021a1z	Cleaned up cursor changes.  Changed the seek 	9/17/99	TP	closed
+	function to use a cross cursor.  Cleaned the 			9/21/99
+	middle mouse click in prod. gen. so that it is 
+	more consistent with changing to select mode.	
+
+021a2a	Changed the order of operation when opening the	9/22/99  TP	closed
+	product generation palette in NMAP.  				10/29/99
+
+005a	Added new routines to get the pixel value on an 9/22/99	ML/TP	closed
+	image file.							9/28/99
+
+021a2b	Added more details to the Intern'l SIGMETs.	9/23/99	AH	9/29/99
+
+021a2c	Add more formatting to the Intern'l SIGMETs.	9/23/99	AH	9/29/99	
+	
+007n	Added a check for parts of a circle outside of 	9/23/99	TP	closed
+	the clip area.  						11/5/99
+
+021a2d	Fixes to the International SIGMETs.		9/24/99	AH	9/29/99 
+
+019o	Convective Sigmet boundary map (WST Regions).	9/24/99	N/A	maps	
+
+005b	Checked image bounds for the pixel retrieval 	9/24/99	ML/TP	closed
+	algorithm.  							9/28/99
+
+018eee	Added cloud height button in nmap main window.  9/24/99	ML/TP	9/28/99	
+
+018fff	Clean-up of cloud height delivery 018eee.	9/27/99	ML/TP	9/28/99	
+
+021a2e	Minor changes to the International SIGMETs.	9/27/99	TP	9/28/99	
+
+021a2f	Fixed problem with connecting two SIGMETs whose 9/27/99	AH	closed
+	total points exceeded the maximum.				9/29/99
+
+021a2g	Fixed core dumps from saving a SIGMET with many 9/28/99	AH	closed
+	points and ID dist. memory of values (220:P1-3).		9/30/99
+
+010a1h	Improved the robustness of sounding temperature 9/28/99	AH	closed
+	interpolation.							11/30/99
+	     	
+009g	Added two new RUC2 CAPEs.			9/28/99	N/A	obe	
+
+008s	Updated What's New Help for version v.		9/29/99	N/A	docs	
+
+=========================== End of Patch 5.4.3.v ===============================
+
+010a1i.	Updated N-AWIPS to Patch5.4.3.w.		10/4/99	TP	10/4/99	
+
+010a1j.	Fixed problem 221.2.				10/4/99	TP	10/5/99	
+
+010a1k.	Corrected the VG element display functions so	10/4/99	AH	closed
+	that they do not propagate attribute settings 			11/29/99
+	to other parts of NMAP.	
+
+001x.	Modified aircraft decoder to explicitly 	10/4/99	AH	closed
+	initialize several interface "counter" variables 		11/1/99
+	to zero.	
+
+001y.	Modfied watch decoder to handle variations in 	10/4/99	AH	closed
+	status message format.						2/18/00
+
+001z.	Created a new decoder that decodes forecast and	10/4/99	AH	closed
+	advisory reports for tropical depressions, 			11/2/99
+	tropical storms and hurricanes.	
+
+011cc.	Added calls to GSTANM and GENANM to sfgram so 	10/4/99	TP	closed
+	that the 'gf' driver can be used as a device.			10/18/99
+
+012e.	Fixed AFTEXT to recognize files with the	10/4/99	TP	closed
+	4-digit year in the file name.					10/7/99
+
+018ggg.	Added setting of $MAPFILE in IP common for	10/4/99	TP	closed
+	Model display.							10/7/99
+	     	
+019p.	W 15 SEP 1999 County Warning Area map update.	10/4/99	N/A	maps
+	   	
+010a1l.	Added the ability to change the sizes of the 	10/4/99	TP	closed
+	icing and the turbulence symbols.				11/5/99
+
+010a1m.	Fixed NAGRIB bug.				10/5/99	TL	10/5/99	
+
+001aa.	Made corrections to the hurricane decoder and	10/6/99	AH	closed
+	display in GPMAP.  						11/2/99
+
+007o.	New xw driver routines for nmap2.		10/6/99 N/A	internal
+
+010a1n.	Added new libraries of routines to set and 	10/6/99	N/A	obe/
+	store the attributes for data types accessed 			internal
+	by NMAP.  	
+		
+019q.	W 15 JUL 1999 Marine Zone map update.		10/7/99	N/A	map	
+
+001bb.	The synoptic decoder and the marine decoder are 10/7/99 AH	closed
+	being modified to fix a bug which prevented 			11/1/99
+	weather symbols from being plotted when the 
+	observation came from an automated station.  	
+
+001cc.	In DCHRCN decoder, check for missing central 	10/8/99	AH	closed
+	pressure values and position accuracy distances.		11/2/99
+	
+001dd.	Corrected the watch status message format for	10/8/99	AH	closed
+	change scheduled to take effect on Oct. 18.			1/3/00
+
+010a1o.	Added capability to change the attributes of 	10/14/99  MLI	closed
+	the elements of a VG file in GPMAP using a 			11/30/99
+		user attribute table. 
+
+018hhh.	Added new routines to perform the time match 	10/14/99  N/A	internal
+	for image data and return the resulting file name. 
+
+001ee.	Created a new decoder, DCISIG, that decodes 	10/14/99  N/A	closed
+	international SIGMET reports. 					11/1/99
+	
+018iii.	Added a check for optionally executing a program10/14/99  TP	closed
+	specific function when choosing a LUT from the 			10/29/99
+		enhancement selection window.  
+
+011dd.	Added parameter option HISTGRD to control 	10/14/99  TL	closed
+	writing history grid in GRPHGD.   				11/3/99
+	
+011ee.	Modified GPMAP to allow for a single selection	10/14/99  MLI	closed
+	of a tropical storm.  						11/5/99
+	
+018jjj.	Reorganized the two control buttons in cloud	10/14/99  MLI	closed
+	height window.  Fixed Problem 221.S1. 				11/5/99
+	
+010a1p.	Made clo routines FORTRAN callable.		10/15/99  AH	11/29/99
+
+012f.	Added function to the NxmLabel package to 	10/15/99  N/A	internal
+	return the displayed string from a created label. 
+
+019r.	Zones Shapefile update from 06 OCT 1999.  	10/18/99  N/A	maps 
+
+018kkk.	Added a new function to the NMS library to get	10/19/99  TP	closed
+	all of the storm names from the decoded 			10/29/99
+	hurricane advisory data files. 
+
+010a1q.	Made an enhancement to the cloud height display	10/19/99  TP	closed
+	algorithm.   							11/15/99
+
+018lll.	NMAP2.						10/19/99  TL	10/21/99
+		
+010a1r.	Replaced reading of default user attribute 	10/19/99  TP	closed
+	table with hard coded values in the CDS global 			10/29/99
+	attribute structure.   
+
+010a1s.	Created a new function, CSS_GTIM, to return a	10/19/99  TP	closed
+	GEMPAK date/time string for the current time. 			10/29/99
+	
+018mmm.	Added cloud height to nmap2.			10/19/99  TP	10/20/99
+
+019s.	New Western Region boundary map file.		10/20/99  N/A	map
+
+011ff.	Added option to GRPHGD program to allow user 	10/20/99  TL	closed
+	to specify a default grid value if no contours 			11/3/99
+	are in the info file. 
+
+010a1t.	Updated help file, vgfile.hl1, for gpmap.	10/21/99  TP	10/21/99
+
+010a1u.	Added sigmets to dumpvgf.			10/21/99  TP	10/21/99
+
+018nnn.	Fixed bugs in NMAP2 and NGD_DSPL to better 	10/21/99  TP	closed
+	load the grid data. 						10/29/99
+	
+011gg.	Modified output format of spctxt.c per the SPC.	10/21/99  TP	10/21/99
+
+018ooo.	Fixed a bug in map widget for nmap2 when trying 10/21/99  TP	closed
+	to use the "Custom" map garea/proj window. 			10/29/99
+
+008t.	Updated gpmap.txt.				10/21/99  N/A	docs 
+
+001ff.	Modified DCISIG with several minor improvements,10/22/99  N/A	closed
+	bug fixes, and output format changes.   			11/1/99
+
+010a1v.	Fixed a problem in PC table setup for stability 10/22/99  MLI	closed
+	computation.							11/10/99
+		      
+010a1w.	Adjusted the size of the middle panel when the	10/22/99  MLI	closed
+	device is split into thirds.   					11/8/99
+	
+019t.	6 OCT 1999 update to County Warning Area maps.  10/22/99  N/A	map 
+
+008u.	Updated gpmap.txt for the new ISIG variable.	10/25/99  N/A	docs
+
+007p.	Fixed bugs affecting nmap in XW driver.  	10/25/99  TP	10/29/99
+
+011hh.	Removed user response code from ggdriv.f.	10/25/99  TL	11/3/99 
+
+022a.	Fixed compiler warnings.			10/26/99  TP	10/26/99
+
+010a1x.	Fixed a bug in IM_GPIX encountered in nmap2.	10/26/99  TP	10/29/99
+
+012g.	Modified progWait in prog.c and its prototype	10/27/99  TP	closed
+	in prog.h to eliminate compiler warnings. 			10/27/99
+
+012h.	Fixed initialization bug in busy.c.		10/27/99  TP	10/27/99
+
+019u.	5 Oct 1999 Marine Zone Shapefile update.	10/27/99  N/A	maps 
+
+019v.	Boundary map files for the TPC.			10/27/99  N/A	maps 
+
+010a1y.	Modified clodist.c to calculate distances 	10/28/99  AH	closed
+	between multiple points. 					11/26/99
+
+010a1z.	Changed table designation for SFSTN type in 	10/28/99  N/A	internal
+	CLO common from xrainsort.tbl to sfstns.tbl. 
+
+021a2h.	Fixed core dump on AIX.				10/29/99  TP	10/29/99
+
+012i.	Fixed bug in LUT enhancement popup when loading 11/2/99	AH	closed
+	only radar images in NMAP2.					11/12/99
+
+010a2a.	Added BRBS (barb in miles/hour) and SMPH to the 11/2/99	TP	closed
+	available parameters for the surface data conversions.		11/5/99
+
+001gg.	Moved "field" declaration out of afcmn.cmn.	11/2/99	N/A	internal
+
+011ii.	Created a new appl. program which computes grid 11/2/99	MLI	closed
+	data and interpolates to stations in an existing 		11/16/99
+	GEMPAK surface field.	
+
+011jj.	Changed the call to GSMPRJ to GSGPRJ in GGDRIV. 11/2/99	N/A	internal
+
+018ppp.	Fixed the SEEK function in NMAP when using the 	11/2/99	TP	closed
+	marine and coastal station tables.				11/5/99
+	
+001hh.	Bug fix to watch decoder dcwtch to handle case	11/3/99	AH	closed
+	where status line definition is the last item 			2/18/00
+	in the bulletin.	
+
+018qqq.	Visually enhanced pgpalette window for Motif2.1 11/3/99	TP	closed
+	on Linux and AIX.  						11/5/99
+
+007q.	Made extensive changes to the xwdriver to 	11/3/99	AH	closed
+	accomplish seperate roaming in each loop.  			11/16/99
+	Added auto-update to nmap2.	
+
+020f.	Modified SPCTXT so that the independent cities 	11/4/99	MLI	closed
+	would be list after the counties for any given 			11/9/99
+	state in the SEV product.  	
+
+019w.	Added more caribbean islands to the HIPOWO.CIA 	11/4/99	N/A	maps
+	map file.  Existing caribbean islands improved.	
+
+010a2b.	Removed a check for a requested future time in 	11/4/99	AH	closed
+	FL_MFIL.  The HPC has started creating grid 			2/18/00
+	files with a future base time.	
+
+019x.	Correction for Caribbean map delivery.		11/4/99	N/A	maps
+
+011kk.	Added loop specific reloads to speed roam/zoom 	11/5/99	AH	closed
+	loading.  Fixed lost roam values when loading 			11/16/99
+	from data window; only 9 satellite images at 
+	start; and auto update not updating the first 
+	frame (oldest) in sequence.	
+
+001ii.	Modified DCISIG to decode reports from KNHC and 11/5/99	AH	closed
+	to decode tropical storms and tropical depressions.  		11/18/99
+	Modified GG_ISIG to include tropical storm and 
+	tropical depression symbols.  Fixed bug in symbol 
+	position when SIGMET crosses the dateline.	
+
+010a2c.	Fixed a problem in the sfc. objective analysis 	11/5/99	MLI	closed
+	(OA) routine.							11/16/99
+
+010a2d.	Modified calling sequence for GG_ISIG in TESTGG 11/8/99	MLI	closed
+	to add color specification for tropical storms 			11/9/99
+	and tropical depressions.	
+
+001jj.	Made several changes to the display of aircraft 11/8/99	AH	closed
+	obs in NMAP.							11/10/99
+	
+018rrr.	Added timeline updating to auto-update.  Fixed 	11/9/99	AH	closed
+	a bug in the timeline that resulted in unselected 		11/16/99
+	frame times being displayed on some platforms.	
+
+018sss.	Fixed bug in Nmap2 when roaming with no data.	11/10/99  AH	11/16/99
+
+011ll.	Fixed use of MAXGRD in GGDRIV.f.		11/10/99  ??	OPEN 
+
+021a2i.	Built graph-to-grid popup.			11/10/99  AH	11/15/99
+
+018ttt.	Built graph-to-grid popup window for nmap2.	11/10/99  AH	11/15/99
+
+018uuu.	Added roam value option menu to NMAP.		11/10/99  AH	11/12/99
+
+018vvv.	Added OBS and MOS parameter editing to nmap2.	11/15/99  AH	11/17/99
+
+001kk.	Modified hurricane decoder, DCHCRN, to find the 11/15/99  MLI	closed 
+	advisory number if the word 'SPECIAL' is in the 		2/4/00
+	storm name line. 
+
+012j.	Fixed bug in LUT enhancement popup when loading 11/15/99  AH	closed
+	only radar images in NMAP2.					11/17/99
+	   
+010a2e.	Increased the directory file number size to 	11/15/99  TP	closed
+	allow reading of a greater number of files in 			11/15/99
+	the $OBS/isig directory. 
+
+018www.	Added new display type into Watch/Warn Parm 	11/16/99  MLI	closed
+	Edit window. 							11/16/99
+
+010a2f.	Improved the sorting algorithm in station 	11/17/99  MLI	closed
+	searching routines. 						11/17/99
+
+010a2g.	Added another check for a valid second 		11/17/99  N/A	unidata
+	standard latitude within the aw library.   
+
+020g.	Added to SPCTXT the ability to create canceled 	11/17/99  MLI	closed
+	SAWs and SELs.							11/18/99
+
+010a2h.	Added a new function, NMS_RTBL, to read a table 11/17/99  AH	closed
+	of attributes for plotting MISC data types in 			11/18/99
+	NMAP2.  Changed GG_WTCH to allow plotting of 
+	watches up to one hour before they are valid. 
+
+018xxx.	Improved loading in NMAP2. 			11/17/99  AH	11/19/99
+
+010a2i.	Created a new function, css_mtyp, to determine 	11/18/99  MLI	closed
+	the byte order for integers and floating point 			11/18/99
+	numbers on the current workstation. 
+
+008v.	Corrected the default colors for trop. storms. 	11/18/99  AH	11/19/99
+
+021a2j.	Miscellaneous changes to Sigmet Edit Window. 	11/18/99  AH	11/19/99
+
+021a2k.	Added the first step in the watch warn 		11/18/99  N/A	internal
+	advisory popup. 
+
+010a2j.	Modified (C)FL_MDAT to return error code if 	11/18/99  AH	closed
+	date/time cannot be decoded from the filename.   		11/26/99
+
+021a2l.	Graph to grid enhancements.			11/19/99  AH	11/22/99
+
+021a2m.	Cleaned up the track results display.		11/19/99  AH	11/19/99
+
+008w.	Added SMPH and BRBS to the documentation.	11/19/99  AH	11/19/99
+
+010a2k.	Added 12h backward data searching for cloud 	11/19/99  MLI	closed
+	height function. 						11/22/99
+	
+021a2n.	More graph-to-grid functionality.		11/22/99  AH	11/22/99
+
+007r.	Modified mtext.c in the nc driver to correct 	11/22/99  AH	closed
+	problem with plotting neg. lats. in NTRANS.			11/26/99
+
+009h.	New restore files per MPC's request.		11/22/99  N/A	external
+
+021a2o.	Added "FROM" to the output "from line" text 	11/22/99  MLI	closed
+	strings of all sigmets, except the internat. 			11/23/99
+
+021a2p.	Added checks to tracking to keep the number of 	11/22/99  MLI	closed
+	points from over-running the array bounds.  			11/23/99
+
+018yyy.	Added degrees Celsius to the display for the 	11/22/99  MLI	closed
+	cloud height function in NMAP/NMAP2.				11/23/99
+	      
+018zzz.	Reactivated the print functionality in NMAP2.   11/23/99  AH	closed
+	Also, reactivated the reload frame function.  			11/26/99
+
+008x.   Update to WhatsNew.hlp for patch 5.4.3.w.	11/23/99  N/A	docs 
+
+021a2q.	Fixed SIGMET bugs.				11/24/99  MLI	11/24/99
+
+019y.   New Marine Prediction Center Forecast Boundary	11/24/99  N/A	maps 
+	map files for the Atlantic and the Pacific.
+
+============================ End of Patch 5.4.3.w ==============================
+
+010a2l.	Updated N-AWIPS to version 5.4.3.x.		11/30/99  TP	11/30/99
+
+021a2r.	Added auto save feature into "Save VG File." 	11/30/99  MLI	11/30/99
+
+021a2s.	Fixed a bug reported by the HPC with the 	11/30/99  MLI	closed
+	graph-to-grid.  The internal map projection was 		12/13/99
+	being reset to the graph-to-grid projection, 
+	yet the displayed map did not change. 
+
+009i.	Modified the 5-day precip restore file so that 	11/30/99  N/A	external
+	anytime after 120 hours could be viewed, not 
+	just f144.   
+
+010a2m.	Simplified the calculation of the day of the 	11/30/99  MLI	closed 
+	week in TI_DAYW.						2/3/00
+	     
+020h.	Rename VIEWFAX to NFAX.				11/30/99  AH	12/1/99
+
+001ll.	Replaced the error code group argument 'RA' 	 12/1/99  N/A	internal
+	with 'DC' in call to dc_wlog. 	
+
+001mm.	Modified DCISIG to decode reports from PHNL and	 12/1/99  ??	OPEN
+	PGUM.  Bug fix for decoding areas on "either side 
+	of line", and minor improvements and clean-up 
+	of code.  	
+
+018a1a.	Replaced references to the dcatg, dsrc, and 	 12/1/99  N/A	obe/
+	master tables with the datatype table in NMAP2.  		internal
+	
+019z.	17 NOV 1999 update for offshore marine zones.  	 12/2/99  N/A	maps
+
+010a2n.	Used TMCK to convert temperature from Celsius 	 12/2/99 MLI	closed
+	to Kelvin.  Added a routine to TESTPR.				2/3/00
+
+009j.	Modified the pcpn type restore file for the 	 12/2/99  N/A	external
+	global model.	
+
+021a2t.	Added popup to select expiration time of watch 	 12/2/99  AH	closed
+	(00-23).  Modified the watch duration error 			12/8/99
+	check messasge to display the actual number of 
+	hours the watch would be in effect.
+	     	
+010a2o.	Added more information to the VG watch element.	 12/2/99  AH	12/9/99	
+
+010a2p.	Created a new string function for cst library 	 12/3/99  AH	closed
+	to wrap long strings.						12/8/99
+
+021a2u.	If VGF filename can be parsed for parameter 	 12/7/99  ??	OPEN
+	information, put the paramter name into the 
+	GPARM input field.	
+
+021a2v.	Per AWC: limit SIGMET chars/line to 65 and 	 12/7/99  AH	12/8/99
+	display the SIGMET sequence number when 
+	plotting a SIGMET.	
+
+021a2w.	Old_watches can now be read in and converted 	 12/7/99  AH	closed
+	to the current element description, albeit w/o 			12/9/99
+	much of the new information.	
+
+018a1b.	Added '-1' to index into _sTime.mon since this 	 12/7/99  MLI	closed	
+	array indexes months beginning at zero.				2/3/00
+
+019aa.	Added various islands to maps.  		 12/7/99  N/A	maps	
+
+019bb.	Correction for Tropical Prediction Center High 	 12/7/99  N/A	maps
+	Seas Forecast boundaries.  	
+
+001nn.	Modified decoder dcisig to handle case when 	 12/7/99  MLI	closed
+	there is no keyword to start an area definition.		2/7/00
+
+019cc.	Continental Divide Map file set.  		 12/8/99  N/A	maps	
+
+018a1c.	Added a sounding table flag to cloud-to-height 	 12/8/99  MLI	closed
+	function.  							12/17/99
+	
+021a2x.	Additions to the watch status message.		 12/8/99  MLI	12/21/99
+
+010a2q.	Refixed a problem in FL_MFLS where spaces were 	 12/8/99  AH	closed
+	included in a string for comparison with the 			2/18/00
+	file template. (SPC)  Fixed a problem in FL_MFIL 
+	where the model cycle was not being checked 
+	when the data is in "forecast files".	
+
+021a2y.	Added the ability to display the lat/lon of the	12/8/99	TP	closed
+	international SIGMETs in either degrees-decimals 		12/21/99
+		or degrees-minutes in NMAP and NMAP2.  	
+
+010a2r.	Updated necessary routines to standardize the 	 12/8/99  AH	closed
+	size of the extra information string in station 		12/9/99
+	tables at 20 characters.	
+
+019dd.	New AWIPS High Seas Marine Zones.  		 12/9/99  N/A	maps
+
+010a2s.	Added watch status message "from" line 		 12/9/99  AH	closed
+	processing to CLO_FROM.						12/9/99
+		
+018a1d.	Added lat. and long. in degrees:minutes to the 	 12/9/99  AH	closed
+	locator menu in NMAP.						12/9/99
+
+021a2z.	Added haze to nmap.				 12/9/99  AH	12/13/99
+
+021a3a.	Fixed Y2K problem in pgwfmt_getTime.		 12/9/99  MLI	12/21/99
+
+018a1e.	Removed 100sm check from locator code and 	 12/9/99  MLI	closed
+	added check for valid lat/lon.					12/21/99
+	
+019ee.	30 NOV 1999 County Warning Area update.		 12/9/99  N/A	maps	
+
+010a2t.	Fixed time range check in GG_WTCH.		12/10/99  AH	12/15/99
+
+010a2u.	Modify the dumpvgf program to print the new 	12/10/99  AH	closed
+	watch format and watch status information. 			12/13/99
+
+007s.	Fixed the time in the short header for AWIPS 	12/13/99  ??	OPEN
+	Red Book graphics files.   
+
+018a1f.	Augemented the seek function to use two points.	12/13/99  AH	12/15/99
+
+010a2v.	Removed the macro THETA from the distance and 	12/13/99  MLI	closed
+	direction functions in the CLO library. 			1/31/00
+
+007t.	Modified xwcmn.h for NMAP2.  Fixed image jump 	12/13/99  AH	closed
+	problem and product generation refresh problems 		1/19/00
+	on zoom/roamed frames.   
+
+007u.	Restore mtext.c back to original.  		12/14/99  N/A	undo
+
+021a3b.	Fixed a fatal bug that occurred when any 	12/14/99  AH	closed
+	vertex drag operation was begun. 				12/15/99
+	
+019ff.	North America outline map contained in a VGF 	12/14/99  N/A	maps
+	file for use by the Tropical Prediction Center.   
+
+019gg.	New MPC offshore zones maps from NWS Shapefiles.12/14/99  N/A	maps 
+
+018a1g.	Added the lat/lon type to the seek function 	12/15/99  AH	closed
+	along with fixing a problem with the search list 		12/15/99
+	form resizing itself on irix5.
+	      
+018a1h.	Added pixel area and mode retrievals to the 	12/15/99  MLI	closed
+	cloud-to-height function. 					12/17/99
+	
+018a1i.	Modified the cloud height dialog box in NMAP 	12/15/99  MLI	closed
+	to allow the user to select options about the 			12/17/99
+		data display.   
+
+010a2w.	For CDS_WBOX.c:  removed code to plot counties 	12/15/99  AH	closed
+	from GEMPAK surface file.   					12/16/99
+
+021a3c.	Added more watch format information into watch 	12/15/99  AH	closed
+	element structure.     						12/16/99
+
+010a2x.	Wrote new routine GG_LTNG to be used to display	12/15/99  ??	OPEN
+	lightning data in GPMAP using the new GEMPAK 
+	variable LTNG.   
+
+021a3d.	Correct "State Included" button problem.	12/16/99  AH	12/16/99
+
+021a3e.	In cdswbox.c, made sure markers are plotted 	12/16/99  AH	closed
+	w/ width 1.							12/16/99
+	
+018a1j.	Fixed 256:P1&P2 in the seek function.  		12/16/99  TL	12/27/99
+
+021a3f.	Save "w_file" and "issued" info. of the watch 	12/16/99  AH	closed
+	element back into WORK_FILE before "ww****.vgf" 		12/16/99
+	gets created in nmap_pgprd.c. 
+	
+018a1k.	Added a color bar to GG_LTNG.  			12/16/99  ??	OPEN
+
+018a1l.	Added feature to popdown the seek window when 	12/16/99  TL	closed
+	changing the map or data set. 					12/27/99
+	
+021a3g.	Correct "State Included" button problem.	12/16/99  MLI	12/17/99
+
+008y.	Updated seek help and added cloud height help.	12/16/99  N/A	docs
+
+019hh.	Reduced the North American outline map VGF.	12/16/99  N/A	maps 
+
+010a2y.	Bug fix in cvgcp.c for wbox_elm processing.	12/16/99  MLI	12/17/99
+
+018a1m.	Fixed the length of the title string for 	12/16/99  MLI	closed
+	watch/warn/sigmet/lightning data. 				12/17/99
+	
+018a1n.	Changed lightning data default to off in NMAP.	12/17/99  TP	12/21/99
+
+018a1o.	Removed functionality that set the state when 	12/17/99  N/A	obe
+	a user used click point or selected from the 
+	search list. 
+
+021a3h.	This release adds the watch status line.	12/17/99  MLI	12/21/99
+
+021a3i.	Added watch status popup.			12/17/99 
+
+021a3j.	Increase "from" line string size & add text 	12/20/99
+	when WSM lines are associated. 
+
+021a3k.	Fixed watch attribute popup bug.		12/20/99 
+
+
+008z.	Update to WhatsNew.hlp for patch 5.4.3.x.	12/20/99  N/A	docs 
+
+021a3l.	Fixed the bug that prevented the use of the 	12/21/99
+	LABEL function in nmap. 
+
+============================ End of Patch 5.4.3.x ==============================
+
+

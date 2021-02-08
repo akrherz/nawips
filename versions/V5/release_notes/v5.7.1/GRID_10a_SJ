@@ -1,0 +1,11 @@
+1-hour Precipitation Accumulation (awc,all)
+
+The precipitation accumulation grid diagnostic was modified to 
+accomodate data from the ETA at 1-hour intervals. The ETA model will 
+be changed to output 1-hour time steps out to F36, in the near future.
+The precipitation grids from this output are named with the forecast
+hours for the grids from F01 to F12 -- P01M, P02M ... P11M, P12M. Then
+at F13, the naming convention repeats starting again with P01M. The 
+accumulation algorithm was changed to account for the new precipitation
+grids.
+

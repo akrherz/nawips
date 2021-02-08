@@ -1,0 +1,7 @@
+#!/bin/sh
+
+$RM dxmain
+$RM dxtext
+$RM dx.a
+$RM *.o
+$RM core

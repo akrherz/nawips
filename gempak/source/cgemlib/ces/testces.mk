@@ -1,0 +1,1 @@
+$(BINDIR)/testces: -lcgemlib -lgemlib

@@ -1,0 +1,13 @@
+Experimental Hurricane Graphics Program (TPC)
+
+Program GPTCWW, introduced in release 5.7.3, has been improved to
+allow the plotting of watches and warnings for the smaller
+Caribbean islands and for certain small bodies of water (sounds,
+bays and lakes).  It also allows supplemental breakpoints
+(non-official breakpoints which appear in the breakpoint table) to
+be plotted as the endpoint(s) of a watch or warning segment.
+
+Please note:  GPTCWW is for test and evaluation purposes only.
+GPKGRF continues to be the operational program for creating the
+watch/warning graphic.
+

@@ -1,0 +1,39 @@
+#------------------------------------------------------------------------
+# pt.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+# T. Piper/GSC		 3/99	Updated
+#------------------------------------------------------------------------
+
+ptccnm.f	- Compute Numeric Cloud Coverage
+ptcldn.f	- Compute Character Cloud Coverage
+ptclds.f	- Compute Cloud Cover For 3 Levels
+ptcmcl.f	- Compute Combined Character Code
+ptcnvr.f	- Convert Real To Charatcer Data
+ptdprc.f	- Convert Precip Amount To Character String
+ptfunc.f	- Convert Real Data To Character String
+ptpwth.f	- Compute Character Past Weather
+ptsalt.f	- Compute 3-Character Pressure Code
+ptswel.f	- Convert Integral Part Of Real To Character
+pttpfc.f	- Convert Real Min/Max/POP to Character 
+ptwcod.f	- Compute Character Weather Code
+ptwnmt.f	- METAR Code To GEMPAK Weather Number
+ptwnum.f	- Compute Numeric Weather Code
+ptwsym.f	- Compute Weather Symbol Code
+ptwtmo.f	- Compute WMO Character Weather
+# testpt.f	- PT Library Test Program
+
+#------------------------------------------------------------------------

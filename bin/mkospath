@@ -1,0 +1,12 @@
+#!/bin/csh
+if ( ! -e $HOME/os/$NA_OS ) then
+    mkdir $HOME/os/$NA_OS
+    cd $HOME/os/$NA_OS
+    mkdir bin include lib
+else if ( ! -e $HOME/os/$NA_OS/bin ) then
+    mkdir $HOME/os/$NA_OS/bin
+else if ( ! -e $HOME/os/$NA_OS/include ) then
+    mkdir $HOME/os/$NA_OS/include
+else if ( ! -e $HOME/os/$NA_OS/lib ) then
+    mkdir $HOME/os/$NA_OS/lib
+endif    

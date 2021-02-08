@@ -1,0 +1,3 @@
+GDFILE  $GEMDATA/HRCBOB.GRD                                                     
+LSTALL  YES                                                                     
+OUTPUT  tf/hrcbob.list                                                          

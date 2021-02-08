@@ -1,0 +1,39 @@
+#------------------------------------------------------------------------
+# tg.sub
+#
+# This table holds descriptive names associated with source code file
+# names.  The descriptive names are used in generating the GEMPAK
+# Programmer's Guide.
+#
+# File names without a description do not appear in the final book.
+# Subroutines that exist in the source code tree, but have no entries
+# in this table, are noted by the processing software.  Subroutines that
+# should NOT appear in the final book are listed here (with or without
+# a description) and commented out.
+##
+# Log:
+# P. Hall/GSC		 8/95	Original
+# M. Linda/GSC		 8/97	Updated
+# T. Piper/GSC		10/98	Updated
+#------------------------------------------------------------------------
+
+# testtg.f	- TG Library Test Program
+tgcftm.f	- Create Character Forecast Time
+tgcrinc.f	- Get Times Within Range & Increment
+tgctoi.f	- Grid Time To Integers
+tgdiff.f	- Grid Time Difference
+tgfind.f	- Convert DATTIM Into List Of Times
+tgflst.f	- Find Times In File
+tgftoi.f	- File Time To Integers
+tgfull.f	- Partial To Full Grid Time
+tgiftm.f	- Create Integer Forecast Time
+tgitoc.f	- Integer To Character Grid Time
+tgitof.f	- Integers To File Time
+tgqrng.f	- Determine Type Of GDATIM
+tgrang.f	- Get Range Of Times
+tgrinc.f	- Get Times Within Range & Increment
+tgrnoi.f	- Get Times Within Range Without Increment
+tgvald.f	- Compute Valid Time
+tgvtof.f	- Verification To Forecast Time
+
+#------------------------------------------------------------------------
