@@ -242,6 +242,8 @@ int _select_dir ( const struct dirent *check )
  * D. Kidwell/NCEP	 9/02   add check for SFC_HRLY data type        *
  * M. Mainelli/TPC	11/03   add check for SYN_DATA data type	*
  * T. Piper/SAIC	04/05	add check for SND_DATA data type	*
+ * B. Hebbard/NCEP	01/21	Changed century breakpoint from		*
+ *				2020/2021 to 2040/2041 (iyr)		*
  ***********************************************************************/
 {
 	int	len, lendat, idate, iyr, imn, idy, ihr, ier;
@@ -271,7 +273,7 @@ int _select_dir ( const struct dirent *check )
 	    idy = idate % 100;
 	    imn = ( idate / 100 ) % 100;
 	    iyr = idate / 10000;
-	    if  ( iyr <= 20 )  iyr += 2000;
+	    if  ( iyr <= 40 )  iyr += 2000;
 	    if  ( iyr < 100 )  iyr += 1900;
 	    sprintf ( tmpnam, "%04d%02d%02d", iyr, imn, idy );
 
@@ -282,7 +284,7 @@ int _select_dir ( const struct dirent *check )
 	    idy = ( idate / 100 ) % 100;
 	    imn = ( idate / 10000 ) % 100;
 	    iyr = idate / 1000000;
-	    if  ( iyr <= 20 )  iyr += 2000;
+	    if  ( iyr <= 40 )  iyr += 2000;
 	    if  ( iyr < 100 )  iyr += 1900;
 	    sprintf ( tmpnam, "%04d%02d%02d%02d", iyr, imn, idy, ihr );
 	}

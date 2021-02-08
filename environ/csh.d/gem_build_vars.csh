@@ -50,6 +50,12 @@ switch ( $OS )
 	setenv FFLAGS	"$INCLUDES -fno-second-underscore"
 # Uncomment the following for GFORTRAN
 #	setenv FFLAGS	"$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none"
+	setenv rhel  `uname -r | sed 's/^.*[.]el\([0-9][0-9]*\)[.].*$/\1/g'`
+# For RHEL6 or above
+	if ( $rhel > 5  )  then
+	  setenv FC       "gfortran"
+	  setenv FFLAGS   "$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none -ff2c -std=legacy"
+	endif 
 
 	setenv XLIBS	"-lXm -lXt -lX11 -lSM -lICE -lXp -lXext -lXmu -lXft -ljpeg -lpng -lz"
 

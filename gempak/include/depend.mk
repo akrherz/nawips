@@ -61,7 +61,9 @@ COMMAND := hp_sfmakedepend $(depinc)
 	@set -e; $(RM) $@; \
 	[[ -d $(OS_INC) ]] || mkdir -p $(OS_INC); \
 	[[ -e $(OS_INC)/MCHPRM.PRM ]] || \
-	ln -s $(GEMINC)/MCHPRM.$(OS) $(OS_INC)/MCHPRM.PRM ; \
+	ln -s $(GEMINC)/MCHPRM.$(OS).$(FC) $(OS_INC)/MCHPRM.PRM ; \
+	[[ -e $(GEMINC)/MCHPRM.$(OS).$(FC) ]] || \
+	ln -s $(GEMINC)/MCHPRM.$(OS) $(GEMINC)/MCHPRM.$(OS).$(FC) ; \
 	$(COMMAND) -f $@ $< ; mv $@ $@.$$$$ ; \
 	sed 's,\($*\)\.o[ :]*,\1.o $@ : ,g' < $@.$$$$ > $@; \
 	$(RM) $@.old $@.$$$$

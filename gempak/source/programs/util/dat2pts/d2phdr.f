@@ -26,6 +26,7 @@ C* G. Grosshans		03/06	Updated MND header for compliance with	*
 C*				10-512 directive			*
 C* F. J. Yen		10/07	Added Day 3-8 Fire Wx & Day 4-8 SVR Wx  *
 C* G. Grosshans/SPC	02/10	Added ENH-TSTM				*
+C* S. Guan/NCEP		07/20	Added tzone as an input of TI_DST	*  
 C************************************************************************
 	CHARACTER	systim*20, dattim*20, tzone*3, ampm*2,
      +			hdrtpl*40, hdrtim*40, wmotpl*8, wmotim*8
@@ -43,7 +44,9 @@ C
 C
 C*	Determine if this is Daylight Saving Time.
 C
-	CALL TI_DST  ( itarr, dst, ier )
+C       (Central Time zone assumed for this code specific to SPC.)
+        tzone = 'C'
+	CALL TI_DST  ( itarr, tzone, dst, ier )
 C
 C*	Set the appropriate time zone.
 C

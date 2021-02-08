@@ -134,6 +134,8 @@ C*                              Added WSPDA, WSPD2, WSPDC		*
 C* G. McFadden/IMSG	 1/14	Moved TRAK1, TRAKE, and TRAK2 into TRAK	*
 C*                              added TRAKC and TRAKS to TRAK   	*
 C* S. GUAN/NCEP         11/17   Change NN to NH for warn                *
+C* L. Hinson/AWC        11/18   Revised GPMAP to support EDR with       *
+C*                              conditional track plotting              *
 C************************************************************************
 	INCLUDE		'GEMPRM.PRM'
 C*
@@ -188,9 +190,9 @@ C*
      +			lclrof(NM), lclruf(NM), lclren (NM), tcolor,
      +                  tlimit, numf, ihtinc(LLCLEV), htclr(LLCLEV),
      +                  evclr(LLCLEV), symb1, symb2, esymb1(LLCLEV),
-     +                  esymb2(LLCLEV), enumc, aoa180int
+     +                  esymb2(LLCLEV), enumc, aoa180int, tracksint
 	LOGICAL		respnd, done, first, proces, found, scflag,
-     +                  aoa180fl
+     +                  aoa180fl, tracksfl
 	REAL		ppmark(3), pnmark(3), tminc(LLCLEV), ssize(NM),
      +			arwsiz(NM), ahdsiz(NM), wind(4), ewind(4),
      +                  esymbsz1(LLCLEV), esymbsz2(LLCLEV)
@@ -1386,7 +1388,7 @@ C
 			      END IF			      
 			    END IF
                             IF ( edr .ne. ' ' ) THEN
-                              CALL ST_CLST ( edr, '|', ' ', 7,
+                              CALL ST_CLST ( edr, '|', ' ', 8,
      +                                       warr, numw, ier)
                               CALL ST_LSTR ( warr(2), lens, ier )
                               IF (lens .gt. 0) THEN
@@ -1465,13 +1467,26 @@ C
                                     END IF
                                   ELSE
                                     aoa180fl = .false.
-                                  END IF                                  
+                                  END IF
+                                  CALL ST_LSTR(warr(8), lens, iret )
+                                  IF ( lens .gt. 0) THEN
+                                    CALL ST_NUMB(warr(8), tracksint, 
+     +                                           iret)
+                                    IF (tracksint .eq. 1) THEN
+                                      tracksfl = .true.
+                                    ELSE
+                                      tracksfl = .false.
+                                    END IF
+                                  ELSE
+                                    tracksfl = .false.
+                                  END IF                                      
                                   CALL GG_EDR ( warr (1),
      +                                          ihtinc, htclr, numc,
      +                                          tlimit, evinc, evclr,
      +                                          esymb1, esymb2,
      +                                          esymbsz1, esymbsz2, 
-     +                                          enumc, aoa180fl, iret)
+     +                                          enumc, aoa180fl,
+     +                                          tracksfl, iret)
                                 END IF
                               END IF
                             END IF

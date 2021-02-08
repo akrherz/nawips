@@ -9,5 +9,5 @@ $(BINDIR)/nmap2: $(OS_LIB)/ginitp_alt.o $(OS_LIB)/gendp_alt.o -lnmap2 \
 		 -loabsfc -loalib -lAODT_v64 -lAODT_v72 -ldiaglib -lgemlib \
 		 -lprmcnvlib -lgridlib -ltextlib -lcgemlib -lgplt -ldevice \
 		 -lxwp -lxw -lps -lgn -lcgemlib -lgemlib -lGPC -lnetcdf $(PYLIB) \
-		 $(XLIBS) -lxslt -lxml2 -liconv -lz -lm -lbz2 -lhdf5 -lhdf5_hl  \
-	         $(OS_LIB)/libhdf5_hl.so
+		 $(XLIBS) -lxslt -lxml2 -liconv -lbz2 \
+	         -lhdf5_hl -lhdf5 -lz -ldl -lm

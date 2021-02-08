@@ -112,6 +112,8 @@ void txtw_dttmSet ( char *filnme )
  * M. Mainelli/TPC	11/03	Added check for SYN_DATA data type	*
  * T. Piper/SAIC	04/05	Added check for SND_DATA data type      *
  * E. Safford/SAIC	12/07	moved func to nwxp_txtw.c		*
+ * B. Hebbard/NCEP	01/21	Changed century breakpoint from		*
+ *				2020/2021 to 2040/2041 (iyr)		*
  ***********************************************************************/
 {
 char *months[]={"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG",
@@ -133,7 +135,7 @@ int  iarr[2], num, ier, iyr, imn, idy, ihr;
 	    idy = iarr[0] % 100;
 	    imn = ( iarr[0] / 100 ) % 100;
 	    iyr = iarr[0] / 10000;
-	    if  ( iyr <= 20 )  iyr += 2000;
+	    if  ( iyr <= 40 )  iyr += 2000;
 	    if  ( iyr < 100 )  iyr += 1900;
 
   	    sprintf ( date, "%02d %s %04d", idy, months[imn-1], iyr );
@@ -145,7 +147,7 @@ int  iarr[2], num, ier, iyr, imn, idy, ihr;
 	    idy = ( iarr[0] / 100 ) % 100;
 	    imn = ( iarr[0] / 10000 ) % 100;
 	    iyr = iarr[0] / 1000000;
-	    if  ( iyr <= 20 )  iyr += 2000;
+	    if  ( iyr <= 40 )  iyr += 2000;
 	    if  ( iyr < 100 )  iyr += 1900;
 
   	    sprintf ( date, "%02d GMT %02d %s %04d",

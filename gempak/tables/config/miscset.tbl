@@ -205,6 +205,9 @@
 ! G.McFadden/IMSG	 07/13	Added SGWHA, WSPDA
 ! G.McFadden/IMSG	 01/14	Added WSPD2, WSPDC
 ! G.McFadden/IMSG	 01/14	Added TRAKS, TRAKC
+! L. Hinson/AWC          11/18  Updated EDR
+! B. Hebbard/NCEP        05/20  Enable fcst hour 60 for HRCN by default
+!                               consistent with SCN20-20 (60-hr in TCM)
 !
 !-------------------------------------------------------------------------
 !
@@ -428,7 +431,7 @@ FLAG  36 Hr Forecast Pos      1
 FLAG  42 Hr Forecast Pos      0
 FLAG  48 Hr Forecast Pos      1
 FLAG  54 Hr Forecast Pos      0
-FLAG  60 Hr Forecast Pos      0
+FLAG  60 Hr Forecast Pos      1
 FLAG  66 Hr Forecast Pos      0
 FLAG  72 Hr Forecast Pos      1
 FLAG  78 Hr Forecast Pos      0
@@ -601,6 +604,7 @@ TYPE EDR 5                    1/15/0.8
 SYM1 20/2.00/1
 SYM2 19/2.00/1
 FLAG PLOT EDR ABV FL180 ONLY  0
+FLAG PLOT TRACKS              0
 !
 ALIAS ATCF
 TYPE 01OHPC                   1/2

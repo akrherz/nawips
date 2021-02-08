@@ -12,12 +12,16 @@ then
 
 	cd $dir
 
-	BNFS=`./preproc.sh`
+#       Supplement NAWIPS compilation flags with BUFRLIB generated ones, 
+#       but override default DYNAMIC allocation with STATIC. 
+        cflags_for_ncepbufr="${CFLAGS} `./getdefflags_C.sh` -UDYNAMIC_ALLOCATION -DSTATIC_ALLOCATION"
+        fflags_for_ncepbufr="${FFLAGS} `./getdefflags_F.sh` -UDYNAMIC_ALLOCATION -DSTATIC_ALLOCATION"
 
-	$CC $CFLAGS -c *.c
-	$FC $FFLAGS -c *.f
+#       Compilation.  Note Fortran source files are sequenced for MODULE dependencies.
+	$CC $cflags_for_ncepbufr -c *.c
+	$FC $fflags_for_ncepbufr -c modv*.F moda*.F `ls -1 *.F *.f | grep -v "mod[av]_"`
+
 	$AR $ARFLAGS $OS_LIB/libncepBUFR_${ver}.a *.o
-	$RM *.o $BNFS
 
 	touch $OS_LIB/ncepBUFR_$ver
 	cd $OS_LIB
@@ -30,5 +34,5 @@ then
 	echo "Directory \"$dir\" does not exist!"
     fi
 else
-    echo "Please include a valid ncepBUFR library version; e.g., v10.2.3"
+    echo "Please include a valid ncepBUFR library version; e.g., v11.3.0"
 fi

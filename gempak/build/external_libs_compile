@@ -20,7 +20,7 @@ ndfd_compile
 melbufr_build		v5.2
 
 #  NCEP BUFR library used by bfr2gp, cwordsh, dctama, dcshef, dcigdr, and namsnd.
-ncepbufr_compile	v10.2.3
+ncepbufr_compile	v11.3.0
 
 # OHSHEF library used only by dcshef!
 ohshef_compile

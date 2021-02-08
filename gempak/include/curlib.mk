@@ -66,7 +66,9 @@ else
   %.o: %.f
 	@[[ -d $(OS_INC) ]] || mkdir -p $(OS_INC); \
 	[[ -e $(OS_INC)/MCHPRM.PRM ]] || \
-	ln -s $(GEMINC)/MCHPRM.$(OS) $(OS_INC)/MCHPRM.PRM
+	ln -s $(GEMINC)/MCHPRM.$(OS).$(FC) $(OS_INC)/MCHPRM.PRM ; \
+	[[ -e $(GEMINC)/MCHPRM.$(OS).$(FC) ]] || \
+	ln -s $(GEMINC)/MCHPRM.$(OS) $(GEMINC)/MCHPRM.$(OS).$(FC)
 	$(FC) $(FFLAGS) -c $<
 
 #

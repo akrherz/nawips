@@ -73,6 +73,7 @@
 ! M. Folmer/OPC		 4/13	Added VIIRS and other derived products
 ! T. Lee/NCEP		 1/18	Added GOES16 
 ! S. Guan/NCEP		 2/18	Added Himawari8 (GOES-H8) 
+! B. Hebbard/NCEP	 7/19	Added GOES17 entries (from WPC)
 !------------------------------------------------------------------------------
 !
 ! SATELLITE IMAGE TYPES
@@ -83,6 +84,42 @@
 !                   |        |      |      |      |      |      |              |
 !------------------------------------------------------------------------------
 ! Standard image products
+GOES17 CH01          VIS_0.47      0    255    188  65536      1 GRAY
+GOES17 CH02          VIS_0.64      0    255    188      2      1 GRAY
+GOES17 CH03          NIR_0.86      0    255    188      4      1 GRAY
+GOES17 CH04          NIR_1.38      0    255    188      8      1 GRAY
+GOES17 CH05          NIR_1.6       0    255    188     16      1 GRAY
+GOES17 CH06          NIR_2.3       0    255    188     32      1 GRAY
+GOES17 CH07          SWIR_3.9      0    255    188     64      1 GRAY
+GOES17 CH08          WV_6.2        0    255    188    128      1 WVCIMSS.tbl
+GOES17 CH09          WV_6.9        0    255    188    256      1 WVCIMSS.tbl
+GOES17 CH10          WV_7.3        0    255    188    512      1 WVCIMSS.tbl
+GOES17 CH11          IR_8.6        0    255    188   1024      1 GRAY
+GOES17 CH12          IR_9.6        0    255    188   2048      1 GRAY
+GOES17 CH13          IR_10.4       0    255    188   4096      1 GRAY
+GOES17 CH14          IR_11.2       0    255    188   8192      1 GRAY
+GOES17 CH15          IR_12.3       0    255    188  16384      1 GRAY
+GOES17 CH16          IR_13.3       0    255    188  32768      1 GRAY
+GOES17 RGB           AIRMASS       0     94    391   2**0      1 abiam.tbl
+GOES17 RGB           NTMICROA      0     94    391   2**1      1 abintmicadv.tbl
+GOES17 RGB           DAYLANDC      0     94    391   2**2      1 abidaylc.tbl
+GOES17 RGB           DUST          0     94    391   2**3      1 abidust.tbl
+GOES17 RGB           DAYCONV       0     94    391   2**4      1 abidayconv.tbl
+GOES17 RGB           DAYMICRO      0     94    391   2**5      1 abidaymicro.tbl
+GOES17 RGB           FIRETEMP      0     94    391   2**6      1 abifiretemp.tbl
+GOES17 RGB           ASH           0     94    391   2**7      1 abiash.tbl
+GOES17 RGB           DAYLNDCF      0     94    391   2**8      1 abidaylcf.tbl
+GOES17 RGB           DAYOCC        0     94    391   2**9      1 abidayocc.tbl
+GOES17 RGB           DAYSNOWF      0     94    391   2**10     1 abidaysnowf.tbl
+GOES17 RGB           SIMPLEWV      0     94    391   2**11     1 abisimplewv.tbl
+GOES17 RGB           SO2           0     94    391   2**12     1 abiso2.tbl
+GOES17 RGB           GEOCOLOR      0     95    391   2**13     1 geocolor_g16.tbl
+GOES17 RGB           DAYCLDPH      0     94    391   2**14     1 abidaycp.tbl
+GOES17 RGB           DIFFWV        0     94    391   2**15     1 abidiffwv.tbl
+GOES17 RGB           DAYCLDCN      0     94    391   2**16     1 abidayccon.tbl
+GOES17 RGB           PSEUDONC      0     94    391   2**17     1 abipsnatur.tbl
+GOES17 BandDiff      SAL           0    255    391   2**18     1 sal.tbl           
+!
 MTSAT1               VIS          30    220     84      1      1 GRAY
 MTSAT1               IR            0    255     84      2      1 GRAY
 MTSAT1               WV            0    255     84      8      1 wv_tpc.tbl

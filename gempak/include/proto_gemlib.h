@@ -115,6 +115,7 @@
  *                              da_getheader                            *
  * P. Moyer/NCEP     06/30/16   R17968  Added DA functions for new      *
  *                                      processing through EDEX         *
+ * S. Guan/NCEP	       07/20    Added tzone as an input of TI_DST       *  
  ************************************************************************/
 
 /* AW library */
@@ -594,7 +595,7 @@ void ti_dayw(int*, int*, int *iret);
 void ti_difd(char*, char*, float*, int *iret, size_t, size_t);
 void ti_diff(char*, char*, int*, int *iret, size_t, size_t);
 void ti_dspl(int*, char*, char*, int *iret, size_t, size_t);
-void ti_dst(int*, int*, int *iret);
+void ti_dst(int*,  char*, int*, int *iret);
 void ti_dtm4(char*, char*, int *iret, size_t, size_t);
 void ti_elcl(char*, char*, char*, int *iret, size_t, size_t, size_t);
 void ti_find(char*, int*, char*, char*, int*, char*, int *iret, size_t, size_t,
