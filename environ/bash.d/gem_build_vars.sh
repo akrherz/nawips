@@ -53,7 +53,7 @@ case $OS in
 #	export FFLAGS="$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none"
 
 # For RHEL6 or above
-	export rhel=`uname -r | sed 's/^.*[.]el\([0-9][0-9]*\)[.].*$/\1/g'`
+	export rhel=`uname -r | sed 's/^.*[.]el\([0-9][0-9]*\).*$/\1/g'`
 	if [ $rhel -gt 5  ]
 	  then
 	  export FC="gfortran"
