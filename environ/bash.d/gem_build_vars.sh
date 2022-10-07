@@ -11,7 +11,7 @@ export LD="ld"
 export RM="rm -f"
 export ARFLAGS="rv"
 export BUFRFLAGS="-O"
-export LDFLAGS="-L/awips2/python/lib -L$OS_LIB -s"
+export LDFLAGS="-L/awips2/python/lib -L$OS_LIB"
 export INCLUDES="-I$GEMINC -I$NAWIPS/os/$NA_OS/include"
 
 case $OS in
@@ -40,34 +40,35 @@ case $OS in
 	;;
 
     Linux )
-	export CC="gcc"
-	export FC="g77"
-# Uncomment the following for GFORTRAN
-#	export FC="gfortran"
-
-	export BUFRFLAGS="-DNO_MSG_IPC -ansi $BUFRFLAGS"
-	export CFLAGS="$INCLUDES -D$OS -DUNDERSCORE -I/usr/X11R6/include $PYINC $WITHPY"
-
-	export FFLAGS="$INCLUDES -fno-second-underscore"
-# Uncomment the following for GFORTRAN
-#	export FFLAGS="$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none"
-
-# For RHEL6 or above
-	export rhel=`uname -r | sed 's/^.*[.]el\([0-9][0-9]*\).*$/\1/g'`
-	if [ $rhel -gt 5  ]
-	  then
-	  export FC="gfortran"
-	  export FFLAGS="$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none -ff2c -std=legacy"
-	fi
-
-	export XLIBS="-lXm -lXt -lX11 -lSM -lICE -lXp -lXext -lXmu -lXft -ljpeg -lpng -lz"
-
-	if [ $bit == "i386" ]
-	then
-	    export LDFLAGS="$LDFLAGS -L/usr/X11R6/lib"
+	export RHEL=`uname -r | sed 's/^.*[.]el\([0-9][0-9]*\).*$/\1/g'`
+	if [[ $RHEL =~ ^[0-9]+$ ]]; then
+	    # $RHEL is a whole number
+            # echo "RHEL is '$RHEL', which is a whole number"
+            # Red Hat Enterprise Linux (RHEL) - all versions
+            export CC="gcc"
+            export FC="gfortran"
+            export BUFRFLAGS="-DNO_MSG_IPC -ansi $BUFRFLAGS"
+            export CFLAGS="$INCLUDES -D$OS -DUNDERSCORE -I/usr/X11R6/include $PYINC $WITHPY"
+            export FFLAGS="$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none -ff2c -std=legacy"
+            export XLIBS="-lXm -lXt -lX11 -lSM -lICE -lXp -lXext -lXmu -lXft -ljpeg -lpng -lz"
+            export LDFLAGS="-L/awips2/python/lib -L$OS_LIB -s"
 	else
-	    export CFLAGS="$CFLAGS -DG_64BIT"
-	    export LDFLAGS="$LDFLAGS -L/usr/X11R6/lib64"
+	    # $RHEL is not a whole number
+            # echo "RHEL is '$RHEL', which is NOT a whole number"
+            # WCOSS
+            export CC="icc"
+            export FC='ftn'
+            export BUFRFLAGS="-DNO_MSG_IPC -ansi $BUFRFLAGS"
+            export CFLAGS="$INCLUDES -g -O0 -D$OS -DUNDERSCORE -I/usr/X11R6/include $PYINC $WITHPY"
+            export FFLAGS="$INCLUDES -g -O0  -assume byterecl -extend-source -fpscomp logicals"
+            export XLIBS="-lXm -lXt -lX11 -lSM -lICE"
+            if [ $bit == "i386" ]
+            then
+                export LDFLAGS="$LDFLAGS -L/usr/X11R6/lib"
+            else
+                export CFLAGS="$CFLAGS -DG_64BIT"
+                export LDFLAGS="-nofor-main -assume byterecl $LDFLAGS -L/usr/X11R6/lib64"
+            fi
 	fi
 	;;
 

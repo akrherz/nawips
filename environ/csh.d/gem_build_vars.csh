@@ -15,6 +15,7 @@ setenv LDFLAGS	"-L/awips2/python/lib -L$OS_LIB -s"
 setenv INCLUDES	"-I$GEMINC -I$NAWIPS/os/$NA_OS/include"
 
 switch ( $OS )
+
     case "AIX":
 	setenv CC	"cc -qlanglvl=extc99"
 	setenv CFLAGS	"$INCLUDES -D$OS $WITHPY"
@@ -39,32 +40,39 @@ switch ( $OS )
 	setenv XLIBS	"-lXm -lXt -lX11 -lPW"
 	breaksw
 
-    case "Linux":
-	setenv CC	"gcc"
-	setenv FC	"g77"
-# Uncomment the following for GFORTRAN
-#	setenv FC	"gfortran"
-
-	setenv BUFRFLAGS "-DNO_MSG_IPC -ansi $BUFRFLAGS"
-	setenv CFLAGS	"$INCLUDES -D$OS -DUNDERSCORE -I/usr/X11R6/include $PYINC $WITHPY"
-	setenv FFLAGS	"$INCLUDES -fno-second-underscore"
-# Uncomment the following for GFORTRAN
-#	setenv FFLAGS	"$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none"
-	setenv rhel  `uname -r | sed 's/^.*[.]el\([0-9][0-9]*\)[.].*$/\1/g'`
-# For RHEL6 or above
-	if ( $rhel > 5  )  then
-	  setenv FC       "gfortran"
-	  setenv FFLAGS   "$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none -ff2c -std=legacy"
-	endif 
-
-	setenv XLIBS	"-lXm -lXt -lX11 -lSM -lICE -lXp -lXext -lXmu -lXft -ljpeg -lpng -lz"
-
-	if ( $bit == "i386" )  then
-	    setenv LDFLAGS  "$LDFLAGS -L/usr/X11R6/lib"
+    case "Linux"
+        setenv RHEL `uname -r | sed 's/^.*[.]el\([0-9][0-9]*\).*$/\1/g'`
+        if ( $RHEL =~ ^[0-9]+$ ) then
+            # $RHEL is a whole number
+            # echo "RHEL is '$RHEL', which is a whole number"
+            # Red Hat Enterprise Linux (RHEL) - all versions
+            setenv CC		"gcc"
+            setenv FC		"gfortran"
+            setenv BUFRFLAGS	"-DNO_MSG_IPC -ansi $BUFRFLAGS"
+            setenv CFLAGS	"$INCLUDES -D$OS -DG_64BIT -DUNDERSCORE -I/usr/X11R6/include $PYINC $WITHPY"
+            setenv FFLAGS	"$INCLUDES -fno-range-check -fno-second-underscore -ffixed-line-length-none -ff2c -std=legacy"
+            setenv XLIBS	"-lXm -lXt -lX11 -lSM -lICE -lXp -lXext -lXmu -lXft -ljpeg -lpng -lz"
+            setenv LDFLAGS	"-L/awips2/python/lib -L$OS_LIB -s -L/usr/X11R6/lib64"
 	else
-	    setenv CFLAGS   "$CFLAGS -DG_64BIT"
-	    setenv LDFLAGS  "$LDFLAGS -L/usr/X11R6/lib64"
-	endif
+            # $RHEL is not a whole number
+            # echo "RHEL is '$RHEL', which is NOT a whole number"
+            # WCOSS
+            setenv CC		"icc"
+            setenv FC		"ftn"
+            setenv BUFRFLAGS	"-DNO_MSG_IPC -ansi $BUFRFLAGS"
+            setenv CFLAGS	"$INCLUDES -g -O0 -D$OS -DUNDERSCORE -I/usr/X11R6/include $PYINC $WITHPY"
+            setenv FFLAGS	"$INCLUDES -g -O0  -assume byterecl -extend-source -fpscomp logicals"
+            setenv XLIBS	"-lXm -lXt -lX11 -lSM -lICE"
+            setenv LDFLAGS	"-L/awips2/python/lib -L$OS_LIB"
+        endif
+
+        if ( $bit == "i386" )  then
+            setenv LDFLAGS  "$LDFLAGS -L/usr/X11R6/lib"
+        else
+            setenv CFLAGS   "$CFLAGS -DG_64BIT"
+            setenv LDFLAGS  "$LDFLAGS -L/usr/X11R6/lib64"
+        endif
+
 	breaksw
 
     case "SunOS":
