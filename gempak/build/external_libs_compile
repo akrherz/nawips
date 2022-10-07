@@ -32,7 +32,7 @@ shape_compile		v1.2
 GNUmake_build		v3.81
 pkg-config_build	v0.23
 #zlib_compile		v1.2.3
-zlib_compile		v1.2.8
+zlib_compile		v1.2.11
 bzip2_compile		v1.0.5
 libiconv_build		v1.12
 if [ $OS != Linux ]

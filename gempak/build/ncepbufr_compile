@@ -13,9 +13,32 @@ then
 	cd $dir
 
 #       Supplement NAWIPS compilation flags with BUFRLIB generated ones, 
-#       but override default DYNAMIC allocation with STATIC. 
-        cflags_for_ncepbufr="${CFLAGS} `./getdefflags_C.sh` -UDYNAMIC_ALLOCATION -DSTATIC_ALLOCATION"
-        fflags_for_ncepbufr="${FFLAGS} `./getdefflags_F.sh` -UDYNAMIC_ALLOCATION -DSTATIC_ALLOCATION"
+#       but override default DYNAMIC allocation with STATIC -- unless we are
+#       on RHEL 8 or newer whose gfortran can only compile (v11.3-4) DYNAMIC.
+
+        echo "[RHEL   is  '$RHEL']"
+
+        re='^[0-9]+$'
+        if [[ $RHEL =~ $re ]] ; then
+            echo "RHEL is numeric"
+            if [ "$RHEL" -ge 8 ] ; then
+                echo "[RHEL >= 8 : Build ncepBUFR with DYNAMIC_ALLOCATION]"
+                cflags_for_ncepbufr="${CFLAGS} `./getdefflags_C.sh` -DDYNAMIC_ALLOCATION"
+                fflags_for_ncepbufr="${FFLAGS} `./getdefflags_F.sh` -DDYNAMIC_ALLOCATION"
+            else
+                echo "[RHEL <= 7 : Build ncepBUFR with STATIC_ALLOCATION]"
+                cflags_for_ncepbufr="${CFLAGS} `./getdefflags_C.sh` -UDYNAMIC_ALLOCATION -DSTATIC_ALLOCATION"
+                fflags_for_ncepbufr="${FFLAGS} `./getdefflags_F.sh` -UDYNAMIC_ALLOCATION -DSTATIC_ALLOCATION"
+            fi
+        else
+            echo "[Non-RHEL Linux : Build ncepBUFR with STATIC_ALLOCATION]"
+            cflags_for_ncepbufr="${CFLAGS} `./getdefflags_C.sh` -UDYNAMIC_ALLOCATION -DSTATIC_ALLOCATION"
+            fflags_for_ncepbufr="${FFLAGS} `./getdefflags_F.sh` -UDYNAMIC_ALLOCATION -DSTATIC_ALLOCATION"
+        fi
+
+	echo "[RHEL   is  '$RHEL']"
+        echo "[CFLAGS are '$cflags_for_ncepbufr']"
+	echo "[FFLAGS are '$fflags_for_ncepbufr']"
 
 #       Compilation.  Note Fortran source files are sequenced for MODULE dependencies.
 	$CC $cflags_for_ncepbufr -c *.c
