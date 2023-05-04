@@ -218,6 +218,8 @@
 !* J. Carr/NCO          06/14   Added HRW Conus;removed E/W             *
 !* P. O'Reilly/NCO      02/15   Added 0.5 deg GFS VAFTAD grids          *
 !* B. Hebbard/NCO       03/21   Chgd. $MODEL/gfs-->/gfsatmos for GFSv16 *
+!* B. Hebbard/NCO       10/22   Per SPA, added 4 HMON already on WCOSS  *
+!* S. Guan/NCEP         02/23   Changed $MODEL/gefs to $MODEL/gefsatmos *
 !************************************************************************
 !
 !           |                         |                                                |        |        |DEF |DEF   |DEF   |                     |TIME
@@ -389,6 +391,10 @@ HWRF         $MODEL/hwrf               hwrfc_YYYYMMDDHHfFFF_*                   
 HWRFNEST     $MODEL/hwrf               hwrfn_YYYYMMDDHHfFFF_*                           CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 HWRFP        $MODEL/hwrfp              hwrfc_YYYYMMDDHHfFFF_*                           CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 HWRFNESTP    $MODEL/hwrfp              hwrfn_YYYYMMDDHHfFFF_*                           CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
+HMON         $MODEL/hmon               hmonp_YYYYMMDDHHfFFF_*                           CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
+HMONNEST     $MODEL/hmon               hmonn_YYYYMMDDHHfFFF_*                           CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
+HMONP        $MODEL/hmonp              hmonp_YYYYMMDDHHfFFF_*                           CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
+HMONNESTP    $MODEL/hmonp              hmonn_YYYYMMDDHHfFFF_*                           CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 ICE          $MODEL/ice                ice_YYYYMMDDHH                                   CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 ICEACCR      $MODEL/iceaccr            iceaccr_YYYYMMDDHH                               CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 JMA          $MODEL/jmap               jma_YYYYMMDDHH            			CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
@@ -446,7 +452,7 @@ CMC          $MODEL/cmc                cmc_YYYYMMDDHHfFFF                       
 CMCP         $MODEL/cmcp               cmc_YYYYMMDDHHfFFF                               CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 CMCPRCP      $MODEL/cmc                cmc_YYYYMMDDHH_prcp                              CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 ! NCEP Global ensemble members
-GEFS         $MODEL/gefs               gep*_YYYYMMDDHHfFFF                              CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
+GEFS         $MODEL/gefsatmos          gep*_YYYYMMDDHHfFFF                              CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 ! NCEP Global ensemble control runs
 GEFC         $MODEL/gefs               gec*_YYYYMMDDHHfFFF                              CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 MREFSPC      $MODEL/mrefspc            spcmref_YYYYMMDDHHfFFF                           CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4

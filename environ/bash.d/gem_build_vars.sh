@@ -59,7 +59,7 @@ case $OS in
             export CC="icc"
             export FC='ftn'
             export BUFRFLAGS="-DNO_MSG_IPC -ansi $BUFRFLAGS"
-            export CFLAGS="$INCLUDES -g -O0 -D$OS -DUNDERSCORE -I/usr/X11R6/include $PYINC $WITHPY"
+            export CFLAGS="$INCLUDES -g -O0 -D$OS -DUNDERSCORE -I/usr/X11R6/include -I/usr/lib64/gcc/x86_64-suse-linux/7/include $PYINC $WITHPY"
             export FFLAGS="$INCLUDES -g -O0  -assume byterecl -extend-source -fpscomp logicals"
             export XLIBS="-lXm -lXt -lX11 -lSM -lICE"
             if [ $bit == "i386" ]

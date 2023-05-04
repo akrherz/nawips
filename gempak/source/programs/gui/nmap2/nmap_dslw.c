@@ -3727,6 +3727,7 @@ void dslw_setFirst (int mod, int mem,  char *list1, char *list2 )
  **                                                                     *
  * Log:                                                                 *
  * M. Li/SAIC           07/08                                           *
+ * S. Guan/NCEP         02/23   Fixed Nmap2 crashes.                    *
  ***********************************************************************/
 {
     int         ii, iflag = -1, nn, ipos1, ipos2, ier;
@@ -3793,11 +3794,6 @@ void dslw_setFirst (int mod, int mem,  char *list1, char *list2 )
     strcat ( list2, "}" );
     list2[strlen(list2)] = '\0';
 
-    for (  ii = 0; ii < 30; ii++) {
-	free(clist[ii]);
-    }
-    free(clist);
-    
     if ( strchr(clist[0], '/') ) {
         cst_ilst ( _cycIdx, ',', -1, 20, intattr, &intnum, &ier );
         itmp = intattr[0];
@@ -3815,6 +3811,11 @@ void dslw_setFirst (int mod, int mem,  char *list1, char *list2 )
         }
         _cycIdx[strlen(_cycIdx)] = '\0';
     }
+
+    for (  ii = 0; ii < 30; ii++) {
+        free(clist[ii]);
+    }
+    free(clist);
 
 }
 
