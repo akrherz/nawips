@@ -1,7 +1,8 @@
 #!/usr/bin/perl -w
 use strict;
 use POSIX qw(strftime);
-use Switch;
+use feature qw(switch);
+no if $] >= 5.018, warnings => qw( experimental::smartmatch );
 use Env;
 use File::Copy;
 use File::Basename;
@@ -64,8 +65,8 @@ $ofmt = "$ENV{'HOME'}/gairm/latest/%Y%m%d_%H.gairm";
 $statusflag = "NRML";
 
 while ($#ARGV+1) {
-  switch($ARGV[0]) {
-    case "-i" {
+  given($ARGV[0]) {
+    when ("-i") {
       if ($ARGV[1] ne "-") {
         $inputfile = $ARGV[1];
       } else {
@@ -74,22 +75,22 @@ while ($#ARGV+1) {
       }
       $inputsw = "-1";
     }
-    case "-bufrpath" {
+    when ("-bufrpath") {
       $bufrpath = $ARGV[1];
       $bufrpathsw = 1;
     }
-    case "-bufrexpr" {
+    when ("-bufrexpr") {
       $bufrexpr = $ARGV[1];
       $bufrexprsw = 1;
     }
-    case "-ofmt" {
+    when ("-ofmt") {
       $ofmt = $ARGV[1];
     }
-    case "-bulletin" {
+    when ("-bulletin") {
       $bulletin = $ARGV[1];
       $bulletinsw = 1;
     }
-    case "-h" {
+    when ("-h") {
       print $usageStatement;
       exit 1;
     }
@@ -166,9 +167,9 @@ if ( $xml_hhmm ne "0245" ) {
   $updatecount = 1;
 }
 # Now update the Airmet Text Database
-my $command = "xml2gairm4nmap.pl -i $xmlfiles[0] -ofmt \"$ofmt\" -updatenum $updatecount -outhour $hour -append`;";
+my $command = "xml2gairm4nmap.py -i $xmlfiles[0] --ofmt \"$ofmt\" --updatenum $updatecount --outhour $hour --append";
 print "command = $command\n";
-`xml2gairm4nmap.pl -i $xmlfiles[0] -ofmt "$ofmt" -updatenum $updatecount -outhour $hour -bulletin $bulletin -append`;
+`xml2gairm4nmap.py -i $xmlfiles[0] --ofmt "$ofmt" --updatenum $updatecount --outhour $hour --bulletin $bulletin --append`;
 
 chdir ($origdir);
 `rm -rf ${tmpdir}`;
