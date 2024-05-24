@@ -220,6 +220,8 @@
 !* B. Hebbard/NCO       03/21   Chgd. $MODEL/gfs-->/gfsatmos for GFSv16 *
 !* B. Hebbard/NCO       10/22   Per SPA, added 4 HMON already on WCOSS  *
 !* S. Guan/NCEP         02/23   Changed $MODEL/gefs to $MODEL/gefsatmos *
+!* B. Hebbard/NCO       02/24   Limit most surf obs to 1/station/frame  *
+!*                              via BIN HRS = ON/00:10/00:50/ON         *
 !************************************************************************
 !
 !           |                         |                                                |        |        |DEF |DEF   |DEF   |                     |TIME
@@ -234,10 +236,10 @@ A2GFS        AWIPSDB                   gfs.xml                                  
 A2NAM        AWIPSDB                   nam.xml                                          CAT_GRD  SCAT_FCT   -1     -1     -1 OFF/0/0                    4
 !
 ! Surface data
-METAR        $OBS/hrly                 YYYYMMDD.hrly                                    CAT_SFC  SCAT_SFC   10   2880     -1 OFF/0/0                    4
-SYNOP        $OBS/syn                  YYYYMMDD.syn                                     CAT_SFC  SCAT_SFC    8   2880     -1 OFF/0/0                    4
-SHIP         $OBS/ship                 YYYYMMDDHH.ship                                  CAT_SFC  SCAT_SHP   10   2880     -1 OFF/0/0                    4
-SHIP6HR      $OBS/ship6hr              YYYYMMDDHH.ship                                  CAT_SFC  SCAT_SHP    4   2880     -1 OFF/0/0                    4
+METAR        $OBS/hrly                 YYYYMMDD.hrly                                    CAT_SFC  SCAT_SFC   10   2880     -1 ON/00:10/00:50/ON          4
+SYNOP        $OBS/syn                  YYYYMMDD.syn                                     CAT_SFC  SCAT_SFC    8   2880     -1 ON/00:10/00:50/ON          4
+SHIP         $OBS/ship                 YYYYMMDDHH.ship                                  CAT_SFC  SCAT_SHP   10   2880     -1 ON/00:10/00:50/ON          4
+SHIP6HR      $OBS/ship6hr              YYYYMMDDHH.ship                                  CAT_SFC  SCAT_SHP    4   2880     -1 ON/00:10/00:50/ON          4
 SCD          $OBS/scd                  YYYYMMDD.scd                                     CAT_SFC  SCAT_SFC   10   2880     -1 OFF/0/0                    4
 FFG          $OBS/ffg                  YYYYMMDD.ffg                                     CAT_SFC  SCAT_FFG    1   2880     -1 OFF/0/0                    4
 !
