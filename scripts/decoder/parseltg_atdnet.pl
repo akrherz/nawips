@@ -1,6 +1,7 @@
 #!/usr/bin/perl -w
 use strict;
-use Switch;
+use feature qw(switch);
+no if $] >= 5.018, warnings => qw( experimental::smartmatch );
 use Env;
 ########################################################################
 #
@@ -30,8 +31,8 @@ if (($#ARGV+1) < 2) {
 }
 
 while ($#ARGV+1) {
-  switch($ARGV[0]) {
-    case "-i" {
+  given($ARGV[0]) {
+    when ("-i") {
       if ($ARGV[1] ne "-") {
         $inputfile = $ARGV[1];
       } else {
@@ -40,10 +41,10 @@ while ($#ARGV+1) {
       }
       $inputsw = "-1";
     }
-    case "-o" {
+    when ("-o") {
       $outputformat = $ARGV[1];
     }
-    case "-h" {
+    when ("-h") {
       print $usageStatement;
       exit 1;
     }
