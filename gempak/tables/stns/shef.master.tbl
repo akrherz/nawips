@@ -7556,7 +7556,7 @@ ADBN2           HENDERSON  (8 SW)                NV US  3594 -11508   768   ALER
 ADBN5           MAGDALENA  (54 SW)               NM US  3356 -10790  2261   COOPB          
 ADBN6           ALMOND  (2 NE)                   NY US  4236  -7770   405   OTHER          
 ADBT2           HOUSTON                          TX US  2976  -9561 -9999   GOES           
-ADC             WADENA, WADENA MUNICIPA          MN US  4645  -9521   395                  
+ADC             WADENA WADENA MUNICIPAL          MN US  4645  -9521   395                  
 ADCA4           ST JOE                           AR US  3605  -9280 -9999   ALERT          
 ADCN6           ALFRED  (1 NW)                   NY US  4227  -7780   625   OTHER          
 ADDA1           ADDISON                          AL US  3420  -8718   240   COOPB          
@@ -17868,7 +17868,7 @@ COKF1           LAKELAND  (5 W)                  FL US  2806  -8205 -9999   OTHE
 COKI2           COOKS MILLS                      IL US  3958  -8841 -9999   GOES           
 COKM5           COOK  (5 E)                      MN US  4789  -9253   429   COOPAB         
 COKM7           COOK STATION  (1 SSE)            MO US  3780  -9143   274   UCOOP          
-COKMB           COKELY, DAVE                     MO US  3897  -9460 -9999                  
+COKMB           COKELY DAVE                      MO US  3897  -9460 -9999                  
 COKN1           COOK                             NE US  4050  -9620 -9999   UCOOP          
 COKN7           HUNTERSVILLE                     NC US  3542  -8090 -9999   IFLOWS         
 COKP1           COOKSBURG                        PA US  4133  -7921   360                  
@@ -18228,7 +18228,7 @@ CPTR1           WARWICK  (10 NE)                 RI US  4172  -7134     0   MARI
 CPTR4           CP TANGO                         RK US  3585 -12857    23   WSR88D         
 CPTS2           CAPUTA  (1 SW)                   SD US  4398 -10300   887   UCOOP          
 CPTT2           HOUSTON  (12 E)                  TX US  2977  -9514 -9999   ALERT          
-CPUO3           CORNICOPIA, (CLSO)               OR US  4500 -11720  1433                  
+CPUO3           CORNICOPIA (CLSO)                OR US  4500 -11720  1433                  
 CPVA3           CAMP VERDE  (1 SSE)              AZ US  3455 -11198   943   COOPB          
 CPVC1           BLYTHE  (10 NE)                  CA US  3372 -11450    79   GOES           
 CPVN6           CAPE VINCENT                     NY US  4413  -7633    75   GOES           
@@ -23373,7 +23373,7 @@ FAIG1           FAIRMOUNT                        GA US  3445  -8471   224
 FAII4           FAIRPORT                         IA US  4143  -9088 -9999   GOES           
 FAII4G          FAIRPORT                         IA US  4143  -9088 -9999                  
 FAIM6           FAIRVIEW  (3 NW)                 MS US  3439  -8835    95   GOES           
-FAIMB           FAIMON, ADRI                     MO US  3937  -9455 -9999                  
+FAIMB           FAIMON ADRI                      MO US  3937  -9455 -9999                  
 FAIN7           FAIRFIELD  (5  W)                NC US  3553  -7631     2   COOPAB         
 FAIN8           FAIRFIELD                        ND US  4719 -10322   838   COOPAB         
 FAIO3           GRESHAM  (2 NW)                  OR US  4553 -12245    62                  
@@ -25077,7 +25077,7 @@ GBKA3           BUCKEYE  (4 SW)                  AZ US  3333 -11262   250
 GBKC2           MONTE VISTA  (25 SW)             CO US  3747 -10653  3536   WSF            
 GBKN2           GLENBROOK                        NV US  3909 -11994  1902   GOES           
 GBKT2           BERGHEIM  (7 N)                  TX US  2992  -9857 -9999   ALERT          
-GBKW2           GREEN BANK,                      WV US  3843  -7983 -9999                  
+GBKW2           GREEN BANK                       WV US  3843  -7983 -9999                  
 GBLA4           ELAINE  (14 SW)                  AR US  3418  -9107 -9999   GOES           
 GBLC1           SALINAS  (6 NE)                  CA US  3676 -12161    61   GOES           
 GBLC2           BOULDER  (6 NE)                  CO US  4007 -10518  1593   ALERT          
@@ -25380,7 +25380,7 @@ GETS2           GETTYSBURG                       SD US  4501  -9996   628   UCOO
 GETT2           GEORGETOWN  (2 NE)               TX US  3063  -9769 -9999                  
 GETW4           GILLETTE  (10 N)                 WY US  4445 -10553 -9999   UCOOP          
 GEU             GLENDALE                         AZ US  3353 -11229 -9999                  
-GEV             JEFFERSON, ASHE COUNTY           NC US  3643  -8142   916                  
+GEV             JEFFERSON ASHE COUNTY            NC US  3643  -8142   916                  
 GEVC2           GOLDEN  (4 SW)                   CO US  3970 -10526  2243   ALERT          
 GEWT2           GEORGE WEST  (2 SSW)             TX US  2830  -9812    80   COOPB          
 GEY             GREYBULL                         WY US  4452 -10808 -9999   ASOS           
@@ -26703,7 +26703,6 @@ GVTA4           GRAVETTE                         AR US  3643  -9445   384   COOP
 GVTT2           GALVESTON                        TX US  2791  -9536 -9999   BUOY           
 GVVN6           GRANVILLE                        NY US  4347  -7328    98   GOES           
 GVVT2           GIRVIN  (2 E)                    TX US  3108 -10236 -9999   GOES           
-GVW             KANSAS CITY                      MO US  3884  -9456 -9999                  
 GVYC1           BASS LAKE  (19 NE)               CA US  3747 -11927  2103   GOES           
 GVYI1           GARDEN VALLEY  (1 NW)            ID US  4410 -11597   945   COOPABC        
 GVYS2           GANN VALLEY  (8 SW)              SD US  4395  -9912 -9999   UCOOP          
@@ -27856,7 +27855,7 @@ HMTA1           HAMILTON  (2 S)                  AL US  3411  -8799   110   GOES
 HMTA3           KINGMAN  (12 SE)                 AZ US  3510 -11389  1987   ALERT          
 HMTC1           MOUNTAIN CENTER  (3 SSE)         CA US  3367 -11671 -9999   ALERT          
 HMTC3           HAMPTON                          CT US  4177  -7206   189   COOPAB         
-HMTG1           HAMILTON,GA                      GA US  3275  -8493 -9999                  
+HMTG1           HAMILTON GA                      GA US  3275  -8493 -9999                  
 HMTI2           HAMILTON PARK                    IL US  4177  -8763   183   UCOOP          
 HMTM4           HOUGHTON                         MI US  4712  -8855   259   COOPA          
 HMTM8           HAMILTON  (13 SSW)               MT US  4606 -11423  1295   GOES           
@@ -30115,7 +30114,7 @@ KACW4           KAYCEE                           WY US  4372 -10663  1455   NWR
 KADH1           KALAUPAPA                        HI US  2121 -15698     9   COOPAB         
 KADS2           KADOKA  (6 S)                    SD US  4375 -10152   655   UCOOP          
 KADW1           EASTON  (2 NE)                   WA US  4727 -12120   680                  
-KAEH1           WAIAMAI, OAHU                    HI US  2157 -15825   378   COOPB          
+KAEH1           WAIAMAI OAHU                     HI US  2157 -15825   378   COOPB          
 KAFH1           LANAI CITY                       HI US  2078 -15700     9   COOPB          
 KAGH1           LAHAINA                          HI US  2090 -15663   610   COOPB          
 KAGO3           KLAMATH FALLS  (5 SE)            OR US  4218 -12174  1247   COOPC          
@@ -38938,7 +38937,7 @@ OLS             NOGALES                          AZ US  3142 -11085 -9999   ASOS
 OLSC1           SOQUEL  (4 NNE)                  CA US  3705 -12193   146   ALERT          
 OLSF1           OLUSTEE  (2 NE)                  FL US  3021  -8239 -9999   GOES           
 OLSK2           OLYMPIA  (4 SE)                  KY US  3807  -8363   274   IFLOWS         
-OLSMB           OLSEN, BILL                      MO US  3885  -9438 -9999                  
+OLSMB           OLSEN BILL                       MO US  3885  -9438 -9999                  
 OLSN7           CHARLOTTE  (8 N)                 NC US  3533  -8083    74   IFLOWS         
 OLSO2           OILTON  (6 ESE)                  OK US  3603  -9650   257   OTHER          
 OLSQ2           OLIVER STP                       BC CN  4920 -11957   297                  
@@ -39127,7 +39126,7 @@ OPLC1           BARSTOW  (19 NNW)                CA US  3516 -11717   988   GOES
 OPLC2           TELLURIDE  (1 SW)                CO US  3792 -10783  3450   WSF            
 OPLH1           OPAEULA CAMP                     HI US  2157 -15803   323   COOPAB         
 OPLL1           OPELOUSAS                        LA US  3048  -9207    18   COOPB          
-OPLO2           OPTIMA DAM,                      OK US  3665 -10163 -9999                  
+OPLO2           OPTIMA DAM                       OK US  3665 -10163 -9999                  
 OPLP1           OHIOPYLE  (1 SSW)                PA US  3987  -7949   365   GOES           
 OPLT2           OPLIN                            TX US  3214  -9956   616   UCOOP          
 OPLV2           OPAL                             VA US  3862  -7781   146   UCOOP          
@@ -40589,7 +40588,7 @@ PINM4           PINCONNING                       MI US  4386  -8397   265   COOP
 PINM5           PINE CITY                        MN US  4583  -9293 -9999   UCOOP          
 PINM7           EDGAR SPRINGS  (10 SW)           MO US  3767  -9205 -9999   GOES           
 PINM8           FORT PECK  (15 W)                MT US  4784 -10664   727   OTHER          
-PINN2           BELMONT, NV                      NV US  3879 -11685 -9999   GOES           
+PINN2           BELMONT NV                       NV US  3879 -11685 -9999   GOES           
 PINN4           PINE BROOK                       NJ US  4087  -7432    45   GOES           
 PINN7           PINEVILLE                        NC US  3509  -8088   162   IFLOWS         
 PINO3           MAUPIN  (11 SW)                  OR US  4513 -12126   628                  
@@ -41925,7 +41924,7 @@ PTRN8           ELGIN  (16 S)                    ND US  4617 -10185   756   COOP
 PTRO3           PORT ORFORD  (22 W)              OR US  4273 -12483     0   BUOY           
 PTRP1           OGLETOWN  (3 NW)                 PA US  4023  -7873   853   IFLOWS         
 PTRS1           MONCKS CORNER  (4 N)             SC US  3324  -7999 -9999   GOES           
-PTRV2           PETERSBURG,                      VA US  3723  -7740 -9999                  
+PTRV2           PETERSBURG                       VA US  3723  -7740 -9999                  
 PTSA1           BRANTLEY  (11 NW)                AL US  3160  -8641 -9999   GOES           
 PTSC1           POINT SAL                        CA US  3488 -12087 -9999   BUOY           
 PTSF1           PORT SALERNO  (9 WSW)            FL US  2709  -8033     4   COOPA          
@@ -50846,7 +50845,7 @@ VNVC1           KYBURZ  (12 SSE)                 CA US  3895 -12031  2048   OTHE
 VNX             CHEROKEE                         OK US  3674  -9813   377   WSR88D         
 VNY             VAN NUYS                         CA US  3421 -11849   244                  
 VNZM7           VANZANT  (1 N)                   MO US  3698  -9230   360   COOPB          
-VOCMB           VOCHATZER, J                     MO US  3892  -9437 -9999                  
+VOCMB           VOCHATZER  J                     MO US  3892  -9437 -9999                  
 VOFN2           OVERTON  (9 SE)                  NV US  3643 -11451   610   COOPAC         
 VOK             CAMP DOUGLAS                     WI US  4394  -9026   276   UCOOP          
 VOLC1           MANTON  (2 N)                    CA US  4046 -12187   677   COOPB          
@@ -51048,7 +51047,7 @@ WABC2           MANITOU SPRINGS  (4 SW)          CO US  3883 -10497 -9999   GOES
 WABF1           WABASSO  (3 W)                   FL US  2775  -8049 -9999                  
 WABH1           WAHIAWA                          HI US  2150 -15805   260   COOPB          
 WABI3           WABASH                           IN US  4078  -8582   223                  
-WABM1           WASHBURN, ME  (2 N)              ME US  4682  -6917   180   COOPB          
+WABM1           WASHBURN ME  (2 N)               ME US  4682  -6917   180   COOPB          
 WABM5           WABASHA                          MN US  4439  -9205   213                  
 WABN2           WABUSKA  (6 SE)                  NV US  3908 -11912  1311   COOPAB         
 WABP1           WAYNESBURG  (1 E)                PA US  3990  -8017   287   UCOOP          

@@ -199,8 +199,7 @@ Example:  Create a map containing only Mexico borders
           AREA:    mexico
           REGION:  cn
 
-          Note that adding S will include "New Mexico" and I will 
-          include "Gulf of Mexico Islands".
+          Note that adding S will include "New Mexico".
 
 The program NAMPLT will plot individual records listing the record
 and waiting for a <CR> after each record.  This can be used for

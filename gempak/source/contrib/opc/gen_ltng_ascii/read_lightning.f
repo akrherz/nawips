@@ -25,12 +25,13 @@ C*									*
 C**									*
 C* Log:									*
 C* G. McFadden/IMSG	11/12	                                        *
+C* S. Guan/NCEP         10/25          Increase capacity: MAXSTK by x5  *      
 C************************************************************************
 	INCLUDE		'GEMPRM.PRM'
 C*
 	CHARACTER	lghtng_file*15, dattm2*20, datfil*20
 C*
-	PARAMETER	( MAXSTK = 5000 )
+	PARAMETER	( MAXSTK = LLMXPT * 10 )
 C*
 	CHARACTER	datmin*20, cmin*2
 	INTEGER		idata (LLMXPT*4), iptr (0:62), nstrk(0:60)
